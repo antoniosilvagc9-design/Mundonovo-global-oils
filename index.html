@@ -311,9 +311,7 @@ async function loadUsdIntradayHistory(){
 const commodityCharts={
  "Óleo de palma bruto (CPO)":{file:"data/cpo-history.json",unit:"MYR/t"},
  "Óleo de soja":{file:"data/soybean-oil-history.json",unit:"centavos USD/lb"},
- "Soja em grão":{file:"data/soybeans-history.json",unit:"R$/saca 60 kg"},
- "USD/MYR":{file:"data/usd-myr-history.json",unit:"MYR/USD"},
- "Petróleo Brent":{file:"data/brent-history.json",unit:"USD/barril"}
+ "USD/MYR":{file:"data/usd-myr-history.json",unit:"MYR/USD"}
 };
 const fmtMarket=(v)=>Number(v).toLocaleString("pt-BR",{maximumFractionDigits:4});
 function renderCompactMarketChart(name,points,unit,source){
