@@ -8,7 +8,7 @@ import urllib.request
 
 today = dt.datetime.now(dt.timezone.utc).date()
 start = today - dt.timedelta(days=14)
-base = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo"
+base = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)"
 params = {
     "@dataInicial": f"'{start.strftime('%m-%d-%Y')}'",
     "@dataFinalCotacao": f"'{today.strftime('%m-%d-%Y')}'",
