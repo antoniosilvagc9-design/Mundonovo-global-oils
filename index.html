@@ -24,17 +24,27 @@ async function loadMpobWeekly(){
  const target=document.getElementById("mpob-weekly");
  try{
   const response=await fetch("data/mpob-weekly-prices.json",{cache:"no-store"});
-  if(!response.ok)throw Error("Arquivo indisponível");
+  if(!response.ok)throw Error("Arquivo indisponível ("+response.status+")");
   const data=await response.json();
   const months=Array.isArray(data.months)?data.months:[];
   const records=months.flatMap(m=>Array.isArray(m.records)?m.records:[]);
-  const latest=records.filter(x=>x.region==="MALAYSIA"&&Number.isFinite(x.price_rm_per_tonne));
-  const products=["Crude Palm Oil (Local Delivered)","Palm Kernel (Ex-Mill)","Crude Palm Kernel Oil (Local Delivered)"];
-  const labels=["Óleo de palma bruto (CPO)","Palmiste","Óleo bruto de palmiste (CPKO)"];
-  const results=products.map((p,i)=>{const items=latest.filter(x=>x.product===p);const last=items.at(-1);return last?{label:labels[i],value:last.price_rm_per_tonne,period:last.month+" · "+last.week}:null}).filter(Boolean);
-  if(!results.length)throw Error("Nenhum preço nacional válido");
-  const fmt=v=>v.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
-  target.innerHTML="<strong>Malásia · preços semanais oficiais</strong>"+results.map(x=>'<div class="item"><div><strong>'+x.label+'</strong><div class="muted">'+x.period+'</div></div><div><strong>RM '+fmt(x.value)+'</strong><div class="muted">por tonelada</div></div></div>').join("")+'<div class="foot">Meses importados: '+months.length+' · Atualização do arquivo: '+new Date(data.fetched_at_utc).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo"})+' (Brasília)</div>';
+  const products=[
+   {key:"Crude Palm Oil (Local Delivered)",label:"Óleo de palma bruto (CPO)"},
+   {key:"Palm Kernel (Ex-Mill)",label:"Palmiste"},
+   {key:"Crude Palm Kernel Oil (Local Delivered)",label:"Óleo bruto de palmiste (CPKO)"}
+  ];
+  const fmt=v=>Number(v).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+  const rows=products.map(p=>{
+   const items=records.filter(x=>x.region==="MALAYSIA"&&x.product===p.key);
+   const valid=items.filter(x=>Number.isFinite(x.price_rm_per_tonne));
+   const last=valid.at(-1);
+   const latestRaw=items.at(-1);
+   return last
+    ? '<div class="item"><div><strong>'+p.label+'</strong><div class="muted">'+last.month+' · '+last.week+'</div></div><div><strong>RM '+fmt(last.price_rm_per_tonne)+'</strong><div class="muted">por tonelada</div></div></div>'
+    : '<div class="item"><div><strong>'+p.label+'</strong><div class="muted">Malásia · '+(latestRaw?latestRaw.month+' · '+latestRaw.week:'sem registro')+'</div></div><span class="pill">Sem preço publicado</span></div>';
+  }).join("");
+  const updated=data.fetched_at_utc?new Date(data.fetched_at_utc).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo"}):"não informado";
+  target.innerHTML="<strong>Malásia · preços semanais oficiais</strong>"+rows+'<div class="foot">Meses no arquivo: '+months.length+' · Última atualização do arquivo: '+updated+' (Brasília). Traços do relatório oficial são exibidos como “Sem preço publicado”, nunca como zero.</div>';
  }catch(e){target.textContent="Preços semanais indisponíveis: "+e.message}
 }
 loadMpobWeekly();setInterval(loadMpobWeekly,60*60*1000);
