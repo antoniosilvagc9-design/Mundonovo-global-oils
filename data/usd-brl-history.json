@@ -1,0 +1,24 @@
+{
+  "source": "Banco Central do Brasil — PTAX venda",
+  "source_url": "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/",
+  "unit": "BRL/USD",
+  "type": "Último boletim disponível em cada dia útil",
+  "updated_at_utc": "2026-11-21T20:47:45.395853+00:00",
+  "points": [
+    {
+      "time": "2026-11-17 13:07:26.01516",
+      "value": 5.7851,
+      "type": "Fechamento"
+    },
+    {
+      "time": "2026-11-18 13:08:44.271245",
+      "value": 5.8102,
+      "type": "Fechamento"
+    },
+    {
+      "time": "2026-11-19 13:04:18.325373",
+      "value": 5.8889,
+      "type": "Fechamento"
+    }
+  ]
+}
