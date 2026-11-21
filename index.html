@@ -19,13 +19,13 @@
 const quotes=[
  ["Óleo de palma bruto (CPO)","Bursa Malaysia · MYR/t","4.217,00","21/11/2026 · referência de mercado"],
  ["Óleo de soja","CBOT · centavos USD/lb","60,01","21/11/2026 · referência de mercado"],
- ["Soja em grão","CBOT · contrato Jan/2027 · US cents/bushel","1.220,75","Fechamento oficial · 20/11/2026"],
+ ["Soja em grão","CBOT · contrato Jan/2027 · R$/saca de 60 kg","158,49","Equivalente calculado sobre fechamento de 20/11/2026 · PTAX venda de 19/11/2026"],
  ["USD/BRL","Banco Central · BRL por USD","5,8889","PTAX venda · 19/11/2026"],
  ["USD/MYR","MYR por USD","4,1133","Referência cambial · 20/11/2026"],
  ["Petróleo Brent","USD/barril","92,57","20/11/2026 · referência de mercado"]
 ];
-const quoteCurrency={"Óleo de palma bruto (CPO)":"MYR ","Óleo de soja":"US¢ ","Soja em grão":"US¢ ","USD/BRL":"R$ ","USD/MYR":"MYR ","Petróleo Brent":"US$ "};
-const quoteSuffix={"Óleo de palma bruto (CPO)":"/t","Óleo de soja":"/lb","Soja em grão":"/bushel","USD/BRL":" por US$ 1","USD/MYR":" por US$ 1","Petróleo Brent":"/barril"};
+const quoteCurrency={"Óleo de palma bruto (CPO)":"MYR ","Óleo de soja":"US¢ ","Soja em grão":"R$ ","USD/BRL":"R$ ","USD/MYR":"MYR ","Petróleo Brent":"US$ "};
+const quoteSuffix={"Óleo de palma bruto (CPO)":"/t","Óleo de soja":"/lb","Soja em grão":"/saca 60 kg","USD/BRL":" por US$ 1","USD/MYR":" por US$ 1","Petróleo Brent":"/barril"};
 document.getElementById("quotes").innerHTML=quotes.map(([name,source,value,detail])=>'<div class="item"><div><strong>'+name+'</strong><div class="muted">'+source+' · '+detail+'</div></div><span class="pill">'+(value?(quoteCurrency[name]||"")+value+(quoteSuffix[name]||""):"Sem cotação verificada")+(name==="USD/BRL"?"": "")+'</span></div>').join("");
 async function loadDollar(){try{const response=await fetch("data/usd-brl.json",{cache:"no-store"});if(!response.ok)throw Error("Sem arquivo");const data=await response.json();const rows=[...document.querySelectorAll("#quotes .item")];const row=rows.find(el=>el.querySelector("strong")?.textContent==="USD/BRL");if(!row)return;row.querySelector(".pill").textContent="R$ "+Number(data.value).toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4})+" por US$ 1";row.querySelector(".pill").title="PTAX venda; não é cotação em tempo real";row.querySelector(".muted").textContent="Banco Central · PTAX venda · "+data.reference_datetime;}catch(e){console.info("PTAX ainda não disponível:",e.message)}}loadDollar();setInterval(loadDollar,15*60*1000);
 
