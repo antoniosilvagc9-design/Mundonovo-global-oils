@@ -33,7 +33,7 @@ a{color:#B7FF00!important}
 .intel-card summary{color:#B7FF00}
 .intel-level{border-left:3px solid #B7FF00}
 ::selection{background:#B7FF00;color:#050505}
-</style>
+.market-chart-panel{max-width:100%;overflow:hidden}.market-stats{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;font-size:12px}.market-stats b{color:#B7FF00}</style>
 </head>
 <body>
 <header><div><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="status"><div id="clock"></div><strong>Dados oficiais históricos • sem cotações em tempo real</strong></div></header>
@@ -156,6 +156,61 @@ async function loadUsdIntradayHistory(){
  function scheduleNextUsdRefresh(){const now=new Date(),slots=[[10,15],[14,15],[18,15]];let next=null;for(const [hour,minute] of slots){const candidate=new Date(now);candidate.setHours(hour,minute,0,0);if(candidate>now){next=candidate;break;}}if(!next){next=new Date(now);next.setDate(next.getDate()+1);next.setHours(10,15,0,0);}window.usdHistoryRefresh=setTimeout(async()=>{await refreshHistory();scheduleNextUsdRefresh();},next-now);}
  scheduleNextUsdRefresh();
 }
+
+/* Gráficos compactos de commodities: dados históricos auditáveis, sem valores inventados. */
+const commodityCharts={
+ "Óleo de palma bruto (CPO)":{file:"data/cpo-history.json",unit:"MYR/t"},
+ "Óleo de soja":{file:"data/soybean-oil-history.json",unit:"centavos USD/lb"},
+ "Soja em grão":{file:"data/soybeans-history.json",unit:"R$/saca 60 kg"},
+ "USD/MYR":{file:"data/usd-myr-history.json",unit:"MYR/USD"},
+ "Petróleo Brent":{file:"data/brent-history.json",unit:"USD/barril"}
+};
+const fmtMarket=(v)=>Number(v).toLocaleString("pt-BR",{maximumFractionDigits:4});
+function renderCompactMarketChart(name,points,unit,source){
+ const values=points.map(p=>p.value),lo=Math.min(...values),hi=Math.max(...values),spread=hi-lo||1;
+ const W=640,H=210,L=52,R=14,T=18,B=42;
+ const x=i=>L+i/Math.max(1,points.length-1)*(W-L-R);
+ const y=v=>T+(hi-v)/spread*(H-T-B);
+ const coords=points.map((p,i)=>x(i)+","+y(p.value)).join(" ");
+ const delta=values.at(-1)-values[0],pct=values[0]?100*delta/values[0]:null;
+ const dateLabel=p=>new Date(p.time).toLocaleString("pt-BR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit",timeZone:"America/Sao_Paulo"});
+ const ticks=[0,Math.floor((points.length-1)/2),points.length-1].filter((v,i,a)=>a.indexOf(v)===i);
+ return '<div class="market-stats"><span>Início: <b>'+fmtMarket(values[0])+'</b></span><span>Atual: <b>'+fmtMarket(values.at(-1))+'</b></span><span>Variação: <b>'+ (delta>0?"+":"")+fmtMarket(delta)+(pct===null?"":" ("+pct.toFixed(2)+"%)")+'</b></span></div>'+
+ '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Histórico de '+name+'" style="display:block;width:100%;height:auto;max-height:240px;overflow:visible"><line x1="'+L+'" y1="'+(H-B)+'" x2="'+(W-R)+'" y2="'+(H-B)+'" stroke="#666"/><text x="4" y="'+(T+8)+'" fill="#bbb" font-size="12">'+fmtMarket(hi)+'</text><text x="4" y="'+(H-B)+'" fill="#bbb" font-size="12">'+fmtMarket(lo)+'</text><polyline points="'+coords+'" fill="none" stroke="#B7FF00" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>'+
+ points.map((p,i)=>'<circle cx="'+x(i)+'" cy="'+y(p.value)+'" r="3" fill="#B7FF00"><title>'+dateLabel(p)+' · '+fmtMarket(p.value)+' '+unit+'</title></circle>').join("")+
+ ticks.map(i=>'<text x="'+x(i)+'" y="'+(H-12)+'" fill="#bbb" font-size="12" text-anchor="'+(i===0?"start":i===points.length-1?"end":"middle")+'">'+dateLabel(points[i])+'</text>').join("")+'</svg>'+
+ '<p class="foot">'+unit+' · Fonte: '+source+' · '+points.length+' observações verificadas. Fins de semana e feriados não geram novas negociações.</p>';
+}
+async function openCommodityChart(name,row){
+ const config=commodityCharts[name];if(!config)return;
+ let panel=row.nextElementSibling;
+ if(panel?.dataset?.commodityPanel===name){panel.remove();return;}
+ document.querySelectorAll("[data-commodity-panel]").forEach(el=>el.remove());
+ panel=document.createElement("div");panel.dataset.commodityPanel=name;panel.className="placeholder market-chart-panel";
+ row.insertAdjacentElement("afterend",panel);
+ panel.textContent="Carregando histórico de "+name+"...";
+ try{
+  const response=await fetch(config.file,{cache:"no-store"});
+  if(!response.ok)throw Error("Histórico ainda não conectado");
+  const data=await response.json();
+  if(!Array.isArray(data.points)||!data.source)throw Error("Arquivo sem fonte ou série histórica");
+  const valid=data.points.map(p=>({time:p.time,value:Number(p.value)})).filter(p=>Number.isFinite(p.value)&&!Number.isNaN(Date.parse(p.time))).sort((a,b)=>new Date(a.time)-new Date(b.time));
+  const days=[...new Set(valid.map(p=>new Date(p.time).toLocaleDateString("en-CA",{timeZone:"America/Sao_Paulo"})))].slice(-3);
+  const recent=valid.filter(p=>days.includes(new Date(p.time).toLocaleDateString("en-CA",{timeZone:"America/Sao_Paulo"})));
+  if(recent.length<2)throw Error("Aguardando pelo menos duas cotações verificadas");
+  panel.innerHTML='<div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><strong>'+name+' · Últimos 3 pregões</strong><button type="button" class="market-close">Fechar</button></div>'+renderCompactMarketChart(name,recent,config.unit,data.source);
+ }catch(e){panel.innerHTML='<strong>'+name+'</strong><p class="muted">'+e.message+'. O gráfico será exibido quando a série histórica com fonte e horários estiver disponível. Não serão simuladas cotações.</p><button type="button" class="market-close">Fechar</button>';}
+ panel.querySelector(".market-close").addEventListener("click",()=>panel.remove());
+}
+document.querySelectorAll("#quotes .item").forEach(row=>{
+ const name=row.querySelector("strong")?.textContent;
+ if(!commodityCharts[name])return;
+ row.classList.add("usd-clickable");row.setAttribute("role","button");row.setAttribute("tabindex","0");
+ row.setAttribute("aria-label","Abrir gráfico compacto de "+name);
+ row.addEventListener("click",()=>openCommodityChart(name,row));
+ row.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openCommodityChart(name,row);}});
+});
+
 async function loadDollar(){try{const response=await fetch("data/usd-brl.json",{cache:"no-store"});if(!response.ok)throw Error("Sem arquivo");const data=await response.json();const rows=[...document.querySelectorAll("#quotes .item")];const row=rows.find(el=>el.querySelector("strong")?.textContent==="USD/BRL");if(!row)return;row.querySelector(".pill").textContent="R$ "+Number(data.value).toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4})+" por US$ 1";row.querySelector(".pill").title="PTAX venda; não é cotação em tempo real";row.querySelector(".muted").textContent="Banco Central · PTAX venda · "+data.reference_datetime;}catch(e){console.info("PTAX ainda não disponível:",e.message)}}loadDollar();setInterval(loadDollar,15*60*1000);
 
 async function loadMpobWeekly(){
