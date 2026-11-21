@@ -1,0 +1,25 @@
+name: Atualizar histórico Brent
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 */3 * * *'
+permissions:
+  contents: write
+jobs:
+  brent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Consultar EIA via FRED
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python scripts/update_brent_history.py
+      - name: Publicar somente se houver mudança
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/brent-history.json
+          git diff --cached --quiet || (git commit -m "Atualiza histórico spot Brent EIA/FRED" && git push)
