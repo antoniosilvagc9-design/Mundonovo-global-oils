@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 """Trading Global: histórico oficial PTAX, sem preenchimento artificial."""
-import json, urllib.parse, urllib.request, datetime as dt, pathlib
+import json, urllib.parse, urllib.request, urllib.error, datetime as dt, pathlib
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 today=dt.datetime.now(dt.timezone(dt.timedelta(hours=-3))).date()
 start=today-dt.timedelta(days=15)
 fmt=lambda d:d.strftime("%m-%d-%Y")
-params={"@moeda":"'USD'","@dataInicial":f"'{fmt(start)}'","@dataFinalCotacao":f"'{fmt(today)}'","$format":"json","$select":"cotacaoVenda,dataHoraCotacao,tipoBoletim","$orderby":"dataHoraCotacao asc"}
-url="https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?"+urllib.parse.urlencode(params,safe="'")
-req=urllib.request.Request(url,headers={"User-Agent":"TradingGlobal/1.0","Accept":"application/json"})
-with urllib.request.urlopen(req,timeout=30) as response:
-    records=json.load(response)["value"]
+# A API OData do BCB aceita os aliases literais @moeda e @dataInicial.
+# Não enviar $orderby/$select na função: ordenar e validar localmente.
+base="https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)"
+url=(base+"?@moeda='USD'&@dataInicial='"+fmt(start)+"'&@dataFinalCotacao='"+fmt(today)+"'&%24format=json&%24top=1000")
+req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 TradingGlobal/1.0","Accept":"application/json"})
+try:
+    with urllib.request.urlopen(req,timeout=30) as response:
+        records=json.load(response)["value"]
+except urllib.error.HTTPError as exc:
+    body=exc.read(2000).decode("utf-8",errors="replace")
+    raise RuntimeError(f"Falha API PTAX HTTP {exc.code}: {body}") from exc
 days={}
 for r in records:
     when=r.get("dataHoraCotacao","")
