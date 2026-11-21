@@ -33,7 +33,20 @@ a{color:#B7FF00!important}
 .intel-card summary{color:#B7FF00}
 .intel-level{border-left:3px solid #B7FF00}
 ::selection{background:#B7FF00;color:#050505}
-.market-chart-panel{max-width:100%;overflow:hidden}.market-stats{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;font-size:12px}.market-stats b{color:#B7FF00}</style>
+.market-chart-panel{max-width:100%;overflow:hidden}.market-stats{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;font-size:12px}.market-stats b{color:#B7FF00}
+.news-radar{margin:12px 0;padding:12px;border:1px solid #333;border-radius:10px;font-size:12px}
+.news-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:12px 0}
+.news-filters select{background:#111;color:#fff;border:1px solid #444;border-radius:8px;min-width:0;padding:9px;font-size:12px}
+.news-feed{display:grid;gap:10px}.news-card{background:#101010;border:1px solid #343434;border-radius:12px;padding:13px;min-width:0}
+.news-card h3{font-size:15px;line-height:1.4;margin:8px 0;color:#fff;overflow-wrap:anywhere}
+.news-meta{font-size:11px;color:#bcbcbc;line-height:1.5}
+.news-top{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.news-impact{color:#B7FF00;font-size:11px;font-weight:700}
+.news-card details{border-top:1px solid #333;margin-top:10px;padding-top:8px;font-size:12px}
+.news-card summary{color:#B7FF00;cursor:pointer;font-weight:700}
+.news-card a{display:inline-block;margin-top:10px;font-size:12px}
+@media(max-width:500px){.news-filters{grid-template-columns:1fr 1fr}.news-card{padding:11px}}
+</style>
 </head>
 <body>
 <header><div><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="status"><div id="clock"></div><strong>Dados oficiais históricos • sem cotações em tempo real</strong></div></header>
@@ -46,7 +59,7 @@ a{color:#B7FF00!important}
 <article class="intel-card"><div class="intel-kicker">03 · DEMANDA E RISCO GLOBAL</div><h3>🌏 China, Índia e cenário mundial</h3><div class="intel-metrics"><div><strong>Índia</strong><small>Demanda importadora estratégica</small></div><div><strong>China</strong><small>Consumo e compras externas</small></div></div><p class="intel-summary">Demanda asiática, clima e políticas públicas podem alterar os fluxos comerciais.</p><details><summary>Ver detalhamento</summary><div class="intel-detail"><div class="intel-level"><b>Nível 2 · O que acompanhar</b><p>China: compras externas, estoques e substituição entre óleos vegetais. Índia: importações, mix entre palma, soja e girassol, tarifas e demanda alimentar.</p><small>Fontes de acompanhamento: USDA, FAO e estatísticas oficiais de comércio.</small><p><a href="https://www.usda.gov/" target="_blank" rel="noopener noreferrer">USDA</a> · <a href="https://www.fao.org/" target="_blank" rel="noopener noreferrer">FAO</a></p></div><details class="intel-analysis"><summary>Nível 3 · Inteligência comercial</summary><p>Alterações nas compras da Índia e da China podem redirecionar os fluxos de óleo de palma e soja entre exportadores. Eventos climáticos e mudanças em políticas de biocombustíveis também podem alterar a relação entre oferta disponível e demanda.</p><p><b>O que monitorar:</b> importações mensais, tarifas, estoques, clima e políticas de biocombustíveis. Não há número atualizado exibido neste quadro enquanto não houver série validada.</p></details></div></details></article>
 <article class="intel-card"><div class="intel-kicker">04 · PREÇOS E COMPETITIVIDADE</div><h3>📊 Palma, soja e óleos concorrentes</h3><div class="intel-metrics"><div><strong>Palma × soja</strong><small>Comparação de referências internacionais</small></div><div><strong>Spreads</strong><small>Diferenciais entre óleos e mercados</small></div></div><p class="intel-summary">Entenda quando um óleo ganha competitividade frente aos produtos concorrentes.</p><details><summary>Ver detalhamento</summary><div class="intel-detail"><div class="intel-level"><b>Nível 2 · Indicadores e contexto</b><p>Acompanhar preços de óleo de palma, óleo de soja, óleo de girassol e outros óleos relevantes; comparar unidades e moedas equivalentes; observar diferenciais de preço, custos logísticos e condições de acesso aos mercados.</p><small>Fontes previstas: Bursa Malaysia, CME Group/CBOT, USDA e fontes oficiais de comércio. Valores só serão exibidos quando houver referência, unidade e data verificadas.</small><p><a href="https://www.bursamalaysia.com/" target="_blank" rel="noopener noreferrer">Bursa Malaysia</a> · <a href="https://www.cmegroup.com/" target="_blank" rel="noopener noreferrer">CME Group</a> · <a href="https://www.usda.gov/" target="_blank" rel="noopener noreferrer">USDA</a></p></div><details class="intel-analysis"><summary>Nível 3 · Inteligência comercial</summary><p>Quando o óleo de palma fica relativamente mais caro, compradores podem buscar alternativas como óleo de soja ou girassol, dependendo de especificações, disponibilidade, frete, tarifas e aplicações. Quando fica mais competitivo, pode ganhar participação em mercados importadores.</p><p><b>O que monitorar:</b> spreads entre óleos, preços por tonelada, câmbio, fretes, tarifas e mudanças na composição das importações. A comparação deve usar unidades equivalentes e datas compatíveis.</p><p><b>Status:</b> quadro de análise estruturado; séries comparativas automáticas ainda serão integradas.</p></details></div></details></article>
 </div><div class="foot">Dados de períodos diferentes, conforme a última publicação identificada: Malásia · outubro/2026; Indonésia · setembro/2026. Os valores são históricos, não cotações em tempo real. As análises são interpretações comerciais e não previsões de preço.</div></section>
-<section><h2>03 · Preços semanais MPOB</h2><div id="mpob-weekly" class="placeholder">Carregando preços semanais oficiais...</div><div class="foot">Valores históricos publicados pelo MPOB, em ringgits malaios por tonelada. Não são cotações em tempo real.</div></section><section><h2>04 · Notícias e acontecimentos</h2><div class="placeholder">O feed automático ainda não está conectado. Futuras notícias serão exibidas com título, veículo, link e horário de publicação.</div><p class="muted">Temas: políticas de biodiesel, clima, fretes marítimos, tarifas e comércio internacional.</p></section>
+<section><h2>03 · Preços semanais MPOB</h2><div id="mpob-weekly" class="placeholder">Carregando preços semanais oficiais...</div><div class="foot">Valores históricos publicados pelo MPOB, em ringgits malaios por tonelada. Não são cotações em tempo real.</div></section><section id="news-section"><h2>04 · Notícias e acontecimentos</h2><div class="intel-kicker">NEWS INTELLIGENCE · RADAR GLOBAL</div><div id="news-radar" class="news-radar muted">Aguardando primeira coleta automática...</div><div class="news-filters"><select id="news-category" aria-label="Filtrar por mercado"><option value="">Todos os mercados</option><option>Óleo de palma</option><option>Soja</option><option>Câmbio</option><option>Petróleo</option><option>Logística</option><option>Biodiesel</option><option>Comércio exterior</option></select><select id="news-region" aria-label="Filtrar por região"><option value="">Todas as regiões</option><option>Global</option><option>Brasil</option><option>Malásia</option><option>Indonésia</option><option>China</option><option>Índia</option><option>Estados Unidos</option><option>Argentina</option><option>União Europeia</option></select><select id="news-impact" aria-label="Filtrar por impacto"><option value="">Todos os impactos</option><option>Alto</option><option>Médio</option><option>Baixo</option></select><select id="news-period" aria-label="Filtrar por período"><option value="24">24 horas</option><option value="48">48 horas</option><option value="168">7 dias</option></select></div><div id="news-feed" class="news-feed"><div class="placeholder">Aguardando a primeira execução da coleta de notícias.</div></div><p class="foot">Manchetes e metadados de fontes externas via RSS. Classificação automática indicativa, não confirmação de impacto. Resumos e análises só aparecem quando sustentados por conteúdo verificado.</p></section>
 <section><h2>05 · Inteligência de mercado</h2><div class="placeholder"><strong>Leitura analítica ainda não disponível.</strong> Quando houver dados verificáveis, este espaço mostrará movimentos relevantes, possíveis impactos e oportunidades, sempre com fontes e data.</div><p class="muted">Análises previstas: spreads, câmbio, custos de importação e sinais de oferta e demanda.</p><button onclick="location.reload()">Atualizar painel</button></section>
 </main>
 <script>
@@ -256,6 +269,48 @@ async function loadMpobWeekly(){
  }catch(e){target.textContent="Preços semanais indisponíveis: "+e.message}
 }
 loadMpobWeekly();setInterval(loadMpobWeekly,60*60*1000);
+
+
+/* NEWS INTELLIGENCE — texto externo sempre inserido como texto, nunca como HTML. */
+const newsState={items:[],updated:null,limitations:""};
+const newsSafe=(v)=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const newsDate=(v)=>new Date(v).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+function renderMarketNews(){
+ const category=document.getElementById("news-category").value,region=document.getElementById("news-region").value;
+ const impact=document.getElementById("news-impact").value,hours=Number(document.getElementById("news-period").value);
+ const now=Date.now(),recent=newsState.items.filter(n=>{
+  const age=(now-Date.parse(n.published_at))/3600000;
+  return age>=-0.2&&age<=hours&&(!category||n.category===category)&&(!region||(n.regions||[]).includes(region))&&(!impact||n.impact===impact);
+ }).slice(0,10);
+ const day=newsState.items.filter(n=>Date.now()-Date.parse(n.published_at)<=86400000);
+ const high=day.filter(n=>n.impact==="Alto").length;
+ document.getElementById("news-radar").textContent=day.length+" notícias nas últimas 24h · "+high+" classificadas como alto impacto potencial · Última coleta: "+(newsState.updated?newsDate(newsState.updated):"indisponível")+" (Brasília)";
+ const feed=document.getElementById("news-feed");
+ if(!recent.length){feed.innerHTML='<div class="placeholder">Nenhuma notícia verificada encontrada para estes filtros e período. Amplie o intervalo ou altere os filtros.</div>';return;}
+ feed.innerHTML=recent.map(n=>{
+  const original=/^https:\/\//.test(n.url||"")?n.url:"#";
+  const verified=n.verification||"Metadados RSS";
+  const context=n.context_confirmed||"O conteúdo integral não foi verificado. A manchete e a fonte são metadados do feed; não há detalhes adicionais confirmados.";
+  const analysis=n.commercial_analysis||"Análise comercial ainda não disponível: é necessário confirmar o conteúdo integral e os dados de mercado antes de inferir efeitos para a Mundo Novo.";
+  return '<article class="news-card"><div class="news-top"><span class="intel-kicker">'+newsSafe((n.regions||["Global"]).join(", "))+' · '+newsSafe(n.category)+'</span><span class="news-impact">'+newsSafe(n.impact)+' impacto potencial</span></div>'+
+   '<h3>'+newsSafe(n.title_pt||n.title_original)+'</h3><div class="news-meta">'+newsSafe(n.source)+' · '+newsSafe(newsDate(n.published_at))+' (Brasília) · '+newsSafe(verified)+'</div>'+
+   (n.summary_pt?'<p class="intel-summary">'+newsSafe(n.summary_pt)+'</p>':'')+
+   '<details><summary>Nível 2 · Contexto e consequências</summary><p>'+newsSafe(context)+'</p><p><b>Critério de classificação:</b> '+newsSafe(n.impact_reason)+'</p>'+
+   '<details><summary>Nível 3 · Inteligência comercial</summary><p>'+newsSafe(analysis)+'</p></details></details>'+
+   '<a href="'+newsSafe(original)+'" target="_blank" rel="noopener noreferrer">Ler publicação original</a></article>';
+ }).join("");
+}
+async function loadMarketNews(){
+ try{
+  const res=await fetch("data/market-news.json",{cache:"no-store"});if(!res.ok)throw Error("A primeira coleta ainda não foi publicada");
+  const data=await res.json();if(!Array.isArray(data.news))throw Error("Formato de notícias inválido");
+  newsState.items=data.news.filter(n=>n.title_original&&n.source&&/^https:\/\//.test(n.url||"")&&!Number.isNaN(Date.parse(n.published_at)));
+  newsState.updated=data.updated_at_utc;newsState.limitations=data.limitations;
+  renderMarketNews();
+ }catch(e){document.getElementById("news-radar").textContent="Feed aguardando dados";document.getElementById("news-feed").innerHTML='<div class="placeholder">Notícias indisponíveis: '+newsSafe(e.message)+'. A coleta automática está configurada; consulte o status no GitHub Actions.</div>';}
+}
+["news-category","news-region","news-impact","news-period"].forEach(id=>document.getElementById(id).addEventListener("change",renderMarketNews));
+loadMarketNews();setInterval(loadMarketNews,3*60*60*1000);
 
 function tick(){document.getElementById("clock").textContent=new Intl.DateTimeFormat("pt-BR",{dateStyle:"full",timeStyle:"medium",timeZone:"America/Sao_Paulo"}).format(new Date())+" · Brasília"}tick();setInterval(tick,1000);
 </script>
