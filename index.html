@@ -6,6 +6,11 @@
 <style>
 :root{font-family:Inter,Arial,sans-serif;color:#193b35;background:#f3f6f1}*{box-sizing:border-box}body{margin:0;padding:clamp(16px,2vw,34px)}header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}h1{font-size:clamp(24px,2.4vw,44px);margin:4px 0;color:#124d3c}h2{font-size:clamp(20px,1.5vw,30px);margin:0 0 18px}small,.muted{color:#687e74}.brand{font-size:14px;font-weight:800;letter-spacing:.16em;color:#a47b28}.status{background:#e2ece3;border-radius:14px;padding:12px 18px;font-size:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;min-height:calc(100vh - 150px)}section{background:#fff;border:1px solid #dce6db;border-radius:20px;padding:clamp(18px,2vw,30px);box-shadow:0 8px 28px #183c2810}.item{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid #e8eee8;padding:13px 0}.item:last-child{border:0}.item strong{font-size:clamp(17px,1.3vw,25px)}.pill{font-size:12px;background:#f6eecf;color:#866415;padding:6px 10px;border-radius:20px;white-space:nowrap}.placeholder{background:#f5f8f4;border-left:4px solid #b6c9b7;padding:16px;border-radius:10px;line-height:1.5;margin:12px 0}.countries{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.countries span{border:1px solid #d6e2d6;border-radius:24px;padding:9px 14px;font-weight:600}.foot{font-size:12px;margin-top:14px;color:#60766d}button{border:0;border-radius:10px;background:#145b45;color:#fff;padding:10px 16px;cursor:pointer}a{color:#145b45}@media(max-width:850px){.grid{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}}@media(min-width:1800px){body{padding:36px}.grid{gap:28px}section{padding:36px}.item{padding:22px 0}}
  .intel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}.intel-card{border:1px solid #dce6db;border-radius:14px;padding:16px;background:#fbfdfb;min-width:0}.intel-card h3{margin:7px 0 12px;font-size:19px}.intel-kicker{font-size:10px;font-weight:800;letter-spacing:.12em;color:#8b702c}.intel-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.intel-metrics>div{background:#f0f5ef;border-radius:10px;padding:10px}.intel-metrics strong{display:block;font-size:18px;color:#145b45}.intel-metrics small{display:block;font-size:11px;color:#687e74;margin-top:4px}.intel-summary{font-size:13px;line-height:1.5;color:#425b50;min-height:40px}.intel-card details{border-top:1px solid #e2eae1;padding-top:10px;margin-top:10px}.intel-card summary{cursor:pointer;font-weight:700;color:#145b45;font-size:13px}.intel-detail{padding-top:10px;font-size:13px;line-height:1.55}.intel-level{background:#f2f6f1;border-radius:10px;padding:12px}.intel-level p{margin:7px 0}.intel-level small{color:#687e74}.intel-analysis{margin-top:10px!important}.intel-analysis p{font-size:13px}@media(max-width:850px){.intel-grid{grid-template-columns:1fr}}
+
+.usd-clickable{cursor:pointer;border:1px solid transparent;border-radius:10px;padding-left:8px;padding-right:8px;transition:border-color .15s,background .15s}
+.usd-clickable:hover,.usd-clickable:focus{border-color:#B7FF00;background:#111;outline:none}
+#usd-intraday-panel{margin-top:12px;color:#fff}
+#usd-intraday-panel .item{padding:8px 4px}
 /* TRADING GLOBAL — tema preto, branco e verde-lima */ .mpob-price-highlight{display:inline-block;background:#B7FF00!important;color:#050505!important;padding:7px 11px;border-radius:9px;font-weight:800;line-height:1.25;margin:3px 0}
 :root{color-scheme:dark;background:#050505;color:#fff}
 html,body{background:#050505!important;color:#fff!important}
@@ -94,7 +99,50 @@ const quotes=[
 ];
 const quoteCurrency={"Óleo de palma bruto (CPO)":"MYR ","Óleo de soja":"US¢ ","Soja em grão":"R$ ","USD/BRL":"R$ ","USD/MYR":"MYR ","Petróleo Brent":"US$ "};
 const quoteSuffix={"Óleo de palma bruto (CPO)":"/t","Óleo de soja":"/lb","Soja em grão":"/saca 60 kg","USD/BRL":" por US$ 1","USD/MYR":" por US$ 1","Petróleo Brent":"/barril"};
-document.getElementById("quotes").innerHTML=quotes.map(([name,source,value,detail])=>'<div class="item"><div><strong>'+name+'</strong><div class="muted">'+source+' · '+detail+'</div></div><span class="pill">'+(value?(quoteCurrency[name]||"")+value+(quoteSuffix[name]||""):"Sem cotação verificada")+(name==="USD/BRL"?"": "")+'</span></div>').join("");
+document.getElementById("quotes").innerHTML=quotes.map(([name,source,value,detail])=>'<div class="item '+(name==="USD/BRL"?"usd-clickable":"")+'" '+(name==="USD/BRL"?'role="button" tabindex="0" aria-label="Abrir histórico intradiário do dólar"':"")+'><div><strong>'+name+'</strong><div class="muted">'+source+' · '+detail+(name==="USD/BRL"?' · Clique para ver histórico intradiário':"")+'</div></div><span class="pill">'+(value?(quoteCurrency[name]||"")+value+(quoteSuffix[name]||""):"Sem cotação verificada")+'</span></div>').join("");
+
+const usdRow = [...document.querySelectorAll("#quotes .item")].find(el=>el.querySelector("strong")?.textContent==="USD/BRL");
+if(usdRow){
+ const openUsdHistory=()=>loadUsdIntradayHistory();
+ usdRow.addEventListener("click",openUsdHistory);
+ usdRow.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openUsdHistory();}});
+}
+async function loadUsdIntradayHistory(){
+ let panel=document.getElementById("usd-intraday-panel");
+ if(!panel){
+  panel=document.createElement("div");
+  panel.id="usd-intraday-panel";
+  panel.className="placeholder";
+  usdRow.insertAdjacentElement("afterend",panel);
+ }
+ panel.innerHTML="<strong>Histórico intradiário do dólar</strong><p>Consultando os boletins oficiais do Banco Central...</p>";
+ try{
+  const end=new Date();
+  const start=new Date(end.getTime()-3*24*60*60*1000);
+  const fmtDate=d=>String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")+"-"+d.getFullYear();
+  const url="https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@moeda='USD'&@dataInicial='"+fmtDate(start)+"'&@dataFinalCotacao='"+fmtDate(end)+"'&$format=json&$select=cotacaoVenda,dataHoraCotacao,tipoBoletim&$orderby=dataHoraCotacao%20desc&$top=40";
+  const response=await fetch(url,{cache:"no-store"});
+  if(!response.ok)throw Error("Banco Central respondeu com HTTP "+response.status);
+  const json=await response.json();
+  const values=(json.value||[]).filter(x=>x.tipoBoletim!=="Fechamento PTAX"&&Number.isFinite(Number(x.cotacaoVenda))).sort((a,b)=>new Date(a.dataHoraCotacao)-new Date(b.dataHoraCotacao)).slice(-8);
+  if(!values.length)throw Error("Não há boletins intradiários disponíveis para o período consultado.");
+  const nums=values.map(x=>Number(x.cotacaoVenda));
+  const min=Math.min(...nums),max=Math.max(...nums),range=max-min||0.0001;
+  const W=720,H=230,pad=38;
+  const pts=nums.map((v,i)=>{const x=pad+i*(W-2*pad)/Math.max(1,nums.length-1);const y=H-pad-(v-min)/range*(H-2*pad);return [x,y];});
+  const poly=pts.map(p=>p.join(",")).join(" ");
+  const labels=values.map(x=>{const d=new Date(x.dataHoraCotacao);return d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})+" "+d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});});
+  const fmt=v=>v.toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4});
+  const rows=values.map((x,i)=>'<div class="item"><div><strong>'+labels[i]+'</strong><div class="muted">'+x.tipoBoletim+'</div></div><span class="pill">R$ '+fmt(Number(x.cotacaoVenda))+'</span></div>').join("");
+  const delta=nums[nums.length-1]-nums[0];
+  const direction=delta>0?"alta":delta<0?"queda":"estável";
+  panel.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><strong>USD/BRL · Boletins intradiários PTAX</strong><button type="button" id="close-usd-history">Fechar</button></div><p class="muted">Últimas consultas oficiais disponíveis · Banco Central do Brasil · valores de venda</p><div style="background:#080808;border:1px solid #333;border-radius:12px;padding:8px;overflow:hidden"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Gráfico das cotações de venda do dólar por boletim PTAX" style="width:100%;height:auto"><line x1="'+pad+'" y1="'+(H-pad)+'" x2="'+(W-pad)+'" y2="'+(H-pad)+'" stroke="#777"/><polyline points="'+poly+'" fill="none" stroke="#B7FF00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'+pts.map((p,i)=>'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="5" fill="#B7FF00"><title>'+labels[i]+' · R$ '+fmt(nums[i])+'</title></circle>').join("")+'<text x="'+pad+'" y="20" fill="#fff" font-size="14">R$ '+fmt(max)+'</text><text x="'+pad+'" y="'+(H-8)+'" fill="#fff" font-size="14">R$ '+fmt(min)+'</text></svg></div><p><strong>Variação entre a primeira e a última consulta:</strong> '+(delta>0?"+":"")+fmt(delta)+' · '+direction+'</p><div>'+rows+'</div><p class="foot">A PTAX do dólar tem quatro consultas em dias úteis, aproximadamente às 10h, 11h, 12h e 13h. Não é uma série horária contínua nem cotação em tempo real. Em fins de semana e feriados, o gráfico mostra os últimos boletins publicados. Fonte: Banco Central do Brasil · API PTAX.</p>';
+  document.getElementById("close-usd-history").addEventListener("click",()=>panel.remove());
+ }catch(e){
+  panel.innerHTML='<strong>Histórico do dólar indisponível neste momento</strong><p>'+e.message+'</p><p class="foot">Fonte prevista: API oficial PTAX do Banco Central. Tente novamente mais tarde.</p><button type="button" id="retry-usd-history">Tentar novamente</button>';
+  document.getElementById("retry-usd-history").addEventListener("click",loadUsdIntradayHistory);
+ }
+}
 async function loadDollar(){try{const response=await fetch("data/usd-brl.json",{cache:"no-store"});if(!response.ok)throw Error("Sem arquivo");const data=await response.json();const rows=[...document.querySelectorAll("#quotes .item")];const row=rows.find(el=>el.querySelector("strong")?.textContent==="USD/BRL");if(!row)return;row.querySelector(".pill").textContent="R$ "+Number(data.value).toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4})+" por US$ 1";row.querySelector(".pill").title="PTAX venda; não é cotação em tempo real";row.querySelector(".muted").textContent="Banco Central · PTAX venda · "+data.reference_datetime;}catch(e){console.info("PTAX ainda não disponível:",e.message)}}loadDollar();setInterval(loadDollar,15*60*1000);
 
 async function loadMpobWeekly(){
