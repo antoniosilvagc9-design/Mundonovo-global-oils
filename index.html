@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mundo Novo | Global Oils Intelligence</title>
+<style>
+:root{font-family:Inter,Arial,sans-serif;color:#193b35;background:#f3f6f1}*{box-sizing:border-box}body{margin:0;padding:clamp(16px,2vw,34px)}header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}h1{font-size:clamp(24px,2.4vw,44px);margin:4px 0;color:#124d3c}h2{font-size:clamp(20px,1.5vw,30px);margin:0 0 18px}small,.muted{color:#687e74}.brand{font-size:14px;font-weight:800;letter-spacing:.16em;color:#a47b28}.status{background:#e2ece3;border-radius:14px;padding:12px 18px;font-size:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;min-height:calc(100vh - 150px)}section{background:#fff;border:1px solid #dce6db;border-radius:20px;padding:clamp(18px,2vw,30px);box-shadow:0 8px 28px #183c2810}.item{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid #e8eee8;padding:13px 0}.item:last-child{border:0}.item strong{font-size:clamp(17px,1.3vw,25px)}.pill{font-size:12px;background:#f6eecf;color:#866415;padding:6px 10px;border-radius:20px;white-space:nowrap}.placeholder{background:#f5f8f4;border-left:4px solid #b6c9b7;padding:16px;border-radius:10px;line-height:1.5;margin:12px 0}.countries{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.countries span{border:1px solid #d6e2d6;border-radius:24px;padding:9px 14px;font-weight:600}.foot{font-size:12px;margin-top:14px;color:#60766d}button{border:0;border-radius:10px;background:#145b45;color:#fff;padding:10px 16px;cursor:pointer}a{color:#145b45}@media(max-width:850px){.grid{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}}@media(min-width:1800px){body{padding:36px}.grid{gap:28px}section{padding:36px}.item{padding:22px 0}}
+</style>
+</head>
+<body>
+<header><div><div class="brand">MUNDO NOVO</div><h1>Global Oils Intelligence</h1><div class="muted">Visão internacional • óleos vegetais • inteligência de mercado</div></div><div class="status"><div id="clock"></div><strong>Modo demonstração — sem dados ao vivo</strong></div></header>
+<main class="grid">
+<section><h2>01 · Cotações internacionais</h2><div id="quotes"></div><div class="foot">Fontes previstas: Bursa Malaysia, CME Group, Banco Central e EIA. Acesso em tempo real sujeito a licença e disponibilidade de API.</div></section>
+<section><h2>02 · Oferta e demanda global</h2><p class="muted">Mercados estratégicos monitorados</p><div class="countries"><span>🇲🇾 Malásia</span><span>🇮🇩 Indonésia</span><span>🇨🇳 China</span><span>🇮🇳 Índia</span><span>🇧🇷 Brasil</span></div><div class="placeholder">Indicadores planejados: produção, estoques, exportações, importações e consumo. Nenhum dado foi carregado nesta versão.</div><div class="foot">Fontes previstas: MPOB, USDA, Comex Stat e estatísticas oficiais.</div></section>
+<section><h2>03 · Notícias e acontecimentos</h2><div class="placeholder">O feed automático ainda não está conectado. Futuras notícias serão exibidas com título, veículo, link e horário de publicação.</div><p class="muted">Temas: políticas de biodiesel, clima, fretes marítimos, tarifas e comércio internacional.</p></section>
+<section><h2>04 · Inteligência de mercado</h2><div class="placeholder"><strong>Leitura analítica ainda não disponível.</strong> Quando houver dados verificáveis, este espaço mostrará movimentos relevantes, possíveis impactos e oportunidades, sempre com fontes e data.</div><p class="muted">Análises previstas: spreads, câmbio, custos de importação e sinais de oferta e demanda.</p><button onclick="location.reload()">Atualizar painel</button></section>
+</main>
+<script>
+const quotes=[["Óleo de palma","Bursa Malaysia • MYR/t"],["Óleo de soja","CBOT • USD/lb"],["Soja","CBOT • USD/bushel"],["USD/BRL","Banco Central • BRL"],["USD/MYR","Mercado cambial"],["Petróleo Brent","Mercado internacional • USD/barril"]];
+document.getElementById("quotes").innerHTML=quotes.map(([name,source])=>'<div class="item"><div><strong>'+name+'</strong><div class="muted">'+source+'</div></div><span class="pill">Aguardando fonte</span></div>').join("");
+function tick(){document.getElementById("clock").textContent=new Intl.DateTimeFormat("pt-BR",{dateStyle:"full",timeStyle:"medium",timeZone:"America/Sao_Paulo"}).format(new Date())+" · Brasília"}tick();setInterval(tick,1000);
+</script>
+</body></html>
