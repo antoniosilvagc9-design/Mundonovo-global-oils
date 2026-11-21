@@ -1,0 +1,35 @@
+{
+  "symbol": "ZS=F",
+  "source": "Yahoo Finance (provedor secundário, não CME oficial)",
+  "source_url": "https://finance.yahoo.com/quote/ZS=F/history/",
+  "market": "CBOT / CME Group",
+  "instrument": "Futuro contínuo de soja (vencimento pode mudar por rolagem)",
+  "price_type": "Fechamento diário indicativo; não settlement oficial",
+  "unit": "centavos de USD/bushel",
+  "updated_at_utc": "2026-11-21T21:27:47.044852+00:00",
+  "latest": {
+    "date": "2026-11-20",
+    "value": 1220.75
+  },
+  "baseline_30d": {
+    "date": "2026-10-22",
+    "value": 1253.0
+  },
+  "target_30d": "2026-10-22",
+  "change_30d_absolute": -32.25,
+  "change_30d_percent": -2.5738,
+  "last_three": [
+    {
+      "date": "2026-11-18",
+      "value": 1216.75
+    },
+    {
+      "date": "2026-11-19",
+      "value": 1207.5
+    },
+    {
+      "date": "2026-11-20",
+      "value": 1220.75
+    }
+  ]
+}
