@@ -16,9 +16,16 @@
 <section><h2>05 · Inteligência de mercado</h2><div class="placeholder"><strong>Leitura analítica ainda não disponível.</strong> Quando houver dados verificáveis, este espaço mostrará movimentos relevantes, possíveis impactos e oportunidades, sempre com fontes e data.</div><p class="muted">Análises previstas: spreads, câmbio, custos de importação e sinais de oferta e demanda.</p><button onclick="location.reload()">Atualizar painel</button></section>
 </main>
 <script>
-const quotes=[["Óleo de palma","Bursa Malaysia • MYR/t"],["Óleo de soja","CBOT • USD/lb"],["Soja","CBOT • USD/bushel"],["USD/BRL","Banco Central • BRL"],["USD/MYR","Mercado cambial"],["Petróleo Brent","Mercado internacional • USD/barril"]];
-document.getElementById("quotes").innerHTML=quotes.map(([name,source])=>'<div class="item"><div><strong>'+name+'</strong><div class="muted">'+source+'</div></div><span class="pill">Aguardando fonte</span></div>').join("");
-async function loadDollar(){try{const response=await fetch("data/usd-brl.json",{cache:"no-store"});if(!response.ok)throw Error("Sem arquivo");const data=await response.json();const rows=[...document.querySelectorAll("#quotes .item")];const row=rows.find(el=>el.querySelector("strong")?.textContent==="USD/BRL");if(!row)return;row.querySelector(".pill").textContent=Number(data.value).toLocaleString("pt-BR",{style:"currency",currency:"BRL",minimumFractionDigits:4,maximumFractionDigits:4});row.querySelector(".pill").title="PTAX venda; não é cotação em tempo real";row.querySelector(".muted").textContent="PTAX venda · "+data.reference_datetime+" · Banco Central";}catch(e){console.info("PTAX ainda não disponível:",e.message)}}loadDollar();setInterval(loadDollar,15*60*1000);
+const quotes=[
+ ["Óleo de palma","Bursa Malaysia • MYR/t","4.217,00","Referência 4º mês · 21/11/2026"],
+ ["Óleo de soja","CBOT • centavos USD/lb","60,01","Última observação disponível · 21/11/2026"],
+ ["Soja","CBOT • USD/bushel",null,"Cotação não verificada nesta atualização"],
+ ["USD/BRL","Banco Central • BRL",null,"PTAX venda · referência oficial"],
+ ["USD/MYR","Referência cambial • MYR por USD","4,1133","Referência diária · 21/11/2026"],
+ ["Petróleo Brent","USD/barril","92,57","Fechamento de 20/11/2026"]
+];
+document.getElementById("quotes").innerHTML=quotes.map(([name,source,value,detail])=>'<div class="item"><div><strong>'+name+'</strong><div class="muted">'+source+' · '+detail+'</div></div><span class="pill">'+(value??"Sem cotação verificada")+'</span></div>').join("");
+async function loadDollar(){try{const response=await fetch("data/usd-brl.json",{cache:"no-store"});if(!response.ok)throw Error("Sem arquivo");const data=await response.json();const rows=[...document.querySelectorAll("#quotes .item")];const row=rows.find(el=>el.querySelector("strong")?.textContent==="USD/BRL");if(!row)return;row.querySelector(".pill").textContent=Number(data.value).toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4})+" BRL";row.querySelector(".pill").title="PTAX venda; não é cotação em tempo real";row.querySelector(".muted").textContent="Banco Central · PTAX venda · "+data.reference_datetime;}catch(e){console.info("PTAX ainda não disponível:",e.message)}}loadDollar();setInterval(loadDollar,15*60*1000);
 
 async function loadMpobWeekly(){
  const target=document.getElementById("mpob-weekly");
