@@ -43,7 +43,7 @@ async function loadMpobWeekly(){
    const all=records.filter(x=>x.product===p.key);
    const latestRaw=all.at(-1);
    let last=null, method="preço oficial";
-   if(p.key==="Palm Kernel (Ex-Mill)"&&latestRaw){
+   if(["Palm Kernel (Ex-Mill)","Crude Palm Kernel Oil (Local Delivered)"].includes(p.key)&&latestRaw){
     const weekRows=all.filter(x=>x.month===latestRaw.month&&x.week===latestRaw.week&&Number.isFinite(x.price_rm_per_tonne)&&!["MALAYSIA","P. MALAYSIA"].includes(x.region));
     if(weekRows.length){
      const avg=weekRows.reduce((sum,x)=>sum+x.price_rm_per_tonne,0)/weekRows.length;
