@@ -115,7 +115,7 @@ async function loadUsdIntradayHistory(){
   panel.className="placeholder";
   usdRow.insertAdjacentElement("afterend",panel);
  }
- if(window.usdHistoryRefresh)clearInterval(window.usdHistoryRefresh);
+ if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);
  panel.innerHTML="<strong>Histórico intradiário do dólar</strong><p>Consultando os boletins oficiais do Banco Central...</p>";
  async function refreshHistory(){
  try{
@@ -149,15 +149,27 @@ async function loadUsdIntradayHistory(){
   const delta=nums[nums.length-1]-nums[0],direction=delta>0?"alta":delta<0?"queda":"estável";
   const updated=new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
   panel.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><strong>USD/BRL · Últimos 3 dias</strong><button type="button" id="close-usd-history">Fechar</button></div><p class="muted">Banco Central · PTAX venda · Escala horária · Atualização automática a cada 3 horas</p><div style="background:#080808;border:1px solid #333;border-radius:12px;padding:8px;overflow-x:auto"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Gráfico horário do dólar nas últimas 48 horas, com pontos oficiais de boletins PTAX" style="width:100%;min-width:900px;height:auto"><line x1="'+padL+'" y1="'+(H-padB)+'" x2="'+(W-padR)+'" y2="'+(H-padB)+'" stroke="#777"/>'+hourlyTicks.join("")+'<polyline points="'+poly+'" fill="none" stroke="#B7FF00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'+pts.map((p,i)=>'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="6" fill="#B7FF00" stroke="#050505" stroke-width="2"><title>'+labels[i]+' · R$ '+fmt(nums[i])+'</title></circle>').join("")+'<text x="'+padL+'" y="18" fill="#fff" font-size="14">R$ '+fmt(max)+'</text><text x="'+padL+'" y="'+(H-8)+'" fill="#fff" font-size="14">R$ '+fmt(min)+'</text></svg></div><p><strong>Variação entre o primeiro e o último boletim:</strong> '+(delta>0?"+":"")+fmt(delta)+' · '+direction+'</p><div>'+rows+'</div><p class="foot">Última consulta da tela: '+updated+'. A escala marca cada hora, mas os pontos representam somente os boletins efetivamente publicados pelo Banco Central — normalmente às 10h, 11h, 12h e 13h em dias úteis. Não há cotação PTAX horária durante a noite, fins de semana ou feriados. Fonte: Banco Central do Brasil · API PTAX.</p>';
-  document.getElementById("close-usd-history").addEventListener("click",()=>{if(window.usdHistoryRefresh)clearInterval(window.usdHistoryRefresh);panel.remove();});
+  document.getElementById("close-usd-history").addEventListener("click",()=>{if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);panel.remove();});
  }catch(e){
   panel.innerHTML='<strong>Histórico do dólar indisponível neste momento</strong><p>'+e.message+'</p><p class="foot">Fonte: API oficial PTAX do Banco Central. Tente novamente mais tarde.</p><button type="button" id="retry-usd-history">Tentar novamente</button><button type="button" id="close-usd-history">Fechar</button>';
   document.getElementById("retry-usd-history").addEventListener("click",refreshHistory);
-  document.getElementById("close-usd-history").addEventListener("click",()=>{if(window.usdHistoryRefresh)clearInterval(window.usdHistoryRefresh);panel.remove();});
+  document.getElementById("close-usd-history").addEventListener("click",()=>{if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);panel.remove();});
  }
  }
  await refreshHistory();
- window.usdHistoryRefresh=setInterval(refreshHistory,3*60*60*1000);
+ function scheduleNextUsdRefresh(){
+  const now=new Date();
+  const slots=[[10,15],[14,15],[18,15]];
+  let next=null;
+  for(const [hour,minute] of slots){
+   const candidate=new Date(now);
+   candidate.setHours(hour,minute,0,0);
+   if(candidate>now){next=candidate;break;}
+  }
+  if(!next){next=new Date(now);next.setDate(next.getDate()+1);next.setHours(10,15,0,0);}
+  window.usdHistoryRefresh=setTimeout(async()=>{await refreshHistory();scheduleNextUsdRefresh();},next-now);
+ }
+ scheduleNextUsdRefresh();
 }
 async function loadDollar(){try{const response=await fetch("data/usd-brl.json",{cache:"no-store"});if(!response.ok)throw Error("Sem arquivo");const data=await response.json();const rows=[...document.querySelectorAll("#quotes .item")];const row=rows.find(el=>el.querySelector("strong")?.textContent==="USD/BRL");if(!row)return;row.querySelector(".pill").textContent="R$ "+Number(data.value).toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4})+" por US$ 1";row.querySelector(".pill").title="PTAX venda; não é cotação em tempo real";row.querySelector(".muted").textContent="Banco Central · PTAX venda · "+data.reference_datetime;}catch(e){console.info("PTAX ainda não disponível:",e.message)}}loadDollar();setInterval(loadDollar,15*60*1000);
 
