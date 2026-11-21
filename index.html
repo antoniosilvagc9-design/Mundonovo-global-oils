@@ -142,7 +142,7 @@ async function loadUsdIntradayHistory(){
   for(let t=firstTick.getTime();t<=t1;t+=60*60*1000){
    const x=xAt(t),d=new Date(t),label=d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
    const day=d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"}); const dayColor=(d.toDateString()===new Date().toDateString())?"#FFFFFF":"#B7FF00";
-   hourlyTicks.push('<line x1="'+x+'" y1="'+padT+'" x2="'+x+'" y2="'+(H-padB)+'" stroke="#333" stroke-dasharray="3 5"/><text x="'+x+'" y="'+(H-padB+22)+'" fill="#ddd" font-size="12" text-anchor="middle">'+label+'</text><text x="'+x+'" y="'+(H-padB+42)+'" fill="" + dayColor + "" font-size="10" font-weight="700" text-anchor="middle">'+day+'</text>');
+   hourlyTicks.push('<line x1="'+x+'" y1="'+padT+'" x2="'+x+'" y2="'+(H-padB)+'" stroke="#333" stroke-dasharray="3 5"/><text x="'+x+'" y="'+(H-padB+22)+'" fill="#ddd" font-size="12" text-anchor="middle">'+label+'</text><text x="'+x+'" y="'+(H-padB+42)+'" fill="'+dayColor+'" font-size="10" font-weight="700" text-anchor="middle">'+day+'</text>');
   }
   const labels=values.map(x=>{const d=new Date(x.dataHoraCotacao);return d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})+" "+d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});});
   const rows=values.map((x,i)=>'<div class="item"><div><strong>'+labels[i]+'</strong><div class="muted">'+x.tipoBoletim+'</div></div><span class="pill">R$ '+fmt(nums[i])+'</span></div>').join("");
