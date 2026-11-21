@@ -30,3 +30,11 @@
 - fetched_at_utc
 
 Não confundir estoque total de óleo de palma com estoque de óleo de palma bruto.
+
+
+## Verificação prática — 21/11/2026
+
+- Página de estoques de 2026 informada pelo usuário: https://bepi.mpob.gov.my/index.php/stock/336-stocks-2026/1235-monthly-closing-stock-of-oil-palm-products-2026
+- Abertura sem sessão autenticada redirecionou para `https://bepi.mpob.gov.my/index.php/component/users/login?Itemid=482` (verificação externa). Portanto, **não configurar essa URL como feed público**.
+- Usuário conseguiu baixar manualmente uma planilha XLSX de estoques mensais de 2026. O arquivo prova que existe exportação manual, **não** que exista API, URL estável de download ou autorização para automação.
+- Próximo teste: inspecionar, na sessão do usuário, se o botão de download aponta para arquivo público estável ou exige cookies; não compartilhar cookies, senhas, tokens ou links privados. Verificar termos/licença antes de automatizar. Alternativa segura: ingestão periódica de XLSX exportado manualmente.
