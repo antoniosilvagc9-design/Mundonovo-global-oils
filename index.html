@@ -17,12 +17,12 @@
 </main>
 <script>
 const quotes=[
- ["Óleo de palma","Bursa Malaysia • MYR/t","4.217,00","Referência 4º mês · 21/11/2026"],
- ["Óleo de soja","CBOT • centavos USD/lb","60,01","Última observação disponível · 21/11/2026"],
- ["Soja","CBOT • USD/bushel",null,"Cotação não verificada nesta atualização"],
- ["USD/BRL","Banco Central • BRL",null,"PTAX venda · referência oficial"],
- ["USD/MYR","Referência cambial • MYR por USD","4,1133","Referência diária · 21/11/2026"],
- ["Petróleo Brent","USD/barril","92,57","Fechamento de 20/11/2026"]
+ ["Óleo de palma bruto (CPO)","Bursa Malaysia · MYR/t","4.217,00","21/11/2026 · referência de mercado"],
+ ["Óleo de soja","CBOT · centavos USD/lb","60,01","21/11/2026 · referência de mercado"],
+ ["Soja em grão","CBOT · USD/bushel",null,"Cotação não confirmada nesta atualização"],
+ ["USD/BRL","Banco Central · BRL por USD","5,8889","PTAX venda · 19/11/2026"],
+ ["USD/MYR","MYR por USD","4,1133","Referência cambial · 20/11/2026"],
+ ["Petróleo Brent","USD/barril","92,57","20/11/2026 · referência de mercado"]
 ];
 document.getElementById("quotes").innerHTML=quotes.map(([name,source,value,detail])=>'<div class="item"><div><strong>'+name+'</strong><div class="muted">'+source+' · '+detail+'</div></div><span class="pill">'+(value??"Sem cotação verificada")+'</span></div>').join("");
 async function loadDollar(){try{const response=await fetch("data/usd-brl.json",{cache:"no-store"});if(!response.ok)throw Error("Sem arquivo");const data=await response.json();const rows=[...document.querySelectorAll("#quotes .item")];const row=rows.find(el=>el.querySelector("strong")?.textContent==="USD/BRL");if(!row)return;row.querySelector(".pill").textContent=Number(data.value).toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4})+" BRL";row.querySelector(".pill").title="PTAX venda; não é cotação em tempo real";row.querySelector(".muted").textContent="Banco Central · PTAX venda · "+data.reference_datetime;}catch(e){console.info("PTAX ainda não disponível:",e.message)}}loadDollar();setInterval(loadDollar,15*60*1000);
