@@ -46,11 +46,40 @@ a{color:#B7FF00!important}
 .news-card summary{color:#B7FF00;cursor:pointer;font-weight:700}
 .news-card a{display:inline-block;margin-top:10px;font-size:12px}
 @media(max-width:500px){.news-filters{grid-template-columns:1fr 1fr}.news-card{padding:11px}}
+
+/* Executive trading UX: melhorias visuais sem modificar dados */
+html{scroll-behavior:smooth}
+body{max-width:1900px;margin-inline:auto}
+section{min-width:0;transition:border-color .22s ease,transform .22s ease}
+section:hover{border-color:#666!important}
+.intel-card,.news-card{transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.intel-card:hover,.news-card:hover{transform:translateY(-2px);border-color:#B7FF00!important;box-shadow:0 8px 25px #0008}
+button,select,a,summary{transition:filter .18s ease,background .18s ease,outline-color .18s ease}
+button:hover{filter:brightness(1.12)}
+:focus-visible{outline:2px solid #B7FF00!important;outline-offset:3px}
+details[open]>summary{color:#fff!important}
+details[open]>.intel-detail,details[open]>p,details[open]>details{animation:executiveReveal .22s ease-out}
+@keyframes executiveReveal{from{opacity:.45;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+.executive-nav{display:flex;gap:7px;overflow-x:auto;scrollbar-width:thin;padding:6px 0 14px;margin-bottom:12px}
+.executive-nav a{flex:0 0 auto;text-decoration:none;border:1px solid #3a3a3a;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:700;color:#fff!important;background:#111}
+.executive-nav a:hover,.executive-nav a:focus-visible{border-color:#B7FF00;background:#1b1b1b}
+.executive-toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.executive-toolbar button{padding:7px 12px;font-size:12px}
+.executive-note{color:#c7c7c7;font-size:12px}
+.executive-note b{color:#B7FF00}
+.executive-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:9px;font-size:11px;color:#c7c7c7}
+.executive-meta span{border:1px solid #333;border-radius:6px;padding:5px 8px}
+.intel-card summary,.news-card summary{padding:6px 0}
+.intel-metrics strong{font-variant-numeric:tabular-nums}
+#quotes .item{transition:background .18s ease,border-color .18s ease}
+#quotes .item:hover{background:#181818}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+@media(max-width:600px){.executive-nav a{font-size:11px;padding:7px 10px}.executive-toolbar{align-items:stretch}.executive-toolbar button{flex:1}}
 </style>
 </head>
 <body>
 <header><div><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="status"><div id="clock"></div><strong>Dados oficiais históricos • sem cotações em tempo real</strong></div></header>
-<main class="grid">
+<nav class="executive-nav" aria-label="Navegação executiva"><a href="#executive-section-1">Cotações</a><a href="#executive-section-2">Oferta e demanda</a><a href="#executive-section-3">MPOB</a><a href="#executive-section-4">Notícias</a><a href="#executive-section-5">Inteligência</a></nav><div class="executive-toolbar"><button type="button" id="executive-expand">Expandir análises</button><button type="button" id="executive-collapse">Recolher análises</button><span class="executive-note">Painel executivo · <b>dados com datas e fontes próprias</b> · sem recomendação automática de operação</span></div><main class="grid">
 <section><h2>01 · Cotações internacionais</h2><div id="quotes"></div><div class="foot">Fontes previstas: Bursa Malaysia, CME Group, Banco Central e EIA. Acesso em tempo real sujeito a licença e disponibilidade de API.</div></section>
 <section class="intel-section"><h2>02 · Oferta e demanda global</h2><p class="muted">Resumo executivo · clique em cada quadro para abrir os dados e a leitura comercial</p><div class="countries"><span>🇲🇾 Malásia</span><span>🇮🇩 Indonésia</span><span>🇨🇳 China</span><span>🇮🇳 Índia</span><span>🇧🇷 Brasil</span></div>
 <div class="intel-grid">
@@ -314,4 +343,19 @@ loadMarketNews();setInterval(loadMarketNews,3*60*60*1000);
 
 function tick(){document.getElementById("clock").textContent=new Intl.DateTimeFormat("pt-BR",{dateStyle:"full",timeStyle:"medium",timeZone:"America/Sao_Paulo"}).format(new Date())+" · Brasília"}tick();setInterval(tick,1000);
 </script>
-</body></html>
+<script>
+/* Navegação e transições executivas sem alterar fontes nem cotações. */
+document.querySelectorAll("main.grid > section").forEach((el,i)=>{el.id=el.id||"executive-section-"+(i+1);});
+document.getElementById("executive-expand").addEventListener("click",()=>{
+ document.querySelectorAll(".intel-section details").forEach(d=>d.open=true);
+});
+document.getElementById("executive-collapse").addEventListener("click",()=>{
+ document.querySelectorAll(".intel-section details").forEach(d=>d.open=false);
+});
+document.querySelectorAll(".intel-metrics").forEach(el=>{
+ const meta=document.createElement("div");meta.className="executive-meta";
+ const parent=el.closest(".intel-card");
+ const source=parent?.querySelector(".intel-level small")?.textContent||"";
+ if(source){const span=document.createElement("span");span.textContent=source;meta.appendChild(span);el.insertAdjacentElement("afterend",meta);}
+});
+</script></body></html>
