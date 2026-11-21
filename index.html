@@ -183,7 +183,7 @@ async function fetchBrentData(){
  const d=await r.json();
  if(d.series!=="DCOILBRENTEU"||!Array.isArray(d.last_three)||d.last_three.length<2||!(Number(d.latest?.value)>0)||!(Number(d.baseline_30d?.value)>0))throw Error("Dados Brent incompletos");
  const pts=d.last_three;
- if(pts.some(p=>!/^\\d{4}-\\d{2}-\\d{2}$/.test(p.date)||!(Number(p.value)>0)))throw Error("Observações inválidas");
+ if(pts.some(p=>!/^\d{4}-\d{2}-\d{2}$/.test(p.date)||!(Number(p.value)>0)))throw Error("Observações inválidas");
  return d;
 }
 if(brentRow){
