@@ -3,6 +3,7 @@
 import datetime as dt
 import json
 import pathlib
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -12,14 +13,16 @@ base = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDol
 params = {
     "@dataInicial": f"'{start.strftime('%m-%d-%Y')}'",
     "@dataFinalCotacao": f"'{today.strftime('%m-%d-%Y')}'",
-    "$top": "100",
     "$format": "json",
-    "$select": "cotacaoVenda,dataHoraCotacao",
 }
 url = base + "?" + urllib.parse.urlencode(params)
 req = urllib.request.Request(url, headers={"User-Agent": "MundoNovoGlobalOils/1.0"})
-with urllib.request.urlopen(req, timeout=30) as response:
-    payload = json.load(response)
+try:
+    with urllib.request.urlopen(req, timeout=30) as response:
+        payload = json.load(response)
+except urllib.error.HTTPError as exc:
+    detail = exc.read().decode("utf-8", errors="replace")[:2000]
+    raise RuntimeError(f"Banco Central retornou HTTP {exc.code}; URL: {url}; detalhes: {detail}") from exc
 rows = payload.get("value", [])
 if not rows:
     raise RuntimeError("BCB não retornou cotações; arquivo anterior será preservado")
