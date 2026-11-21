@@ -110,62 +110,79 @@ if(usdRow){
 async function loadUsdIntradayHistory(){
  let panel=document.getElementById("usd-intraday-panel");
  if(!panel){
-  panel=document.createElement("div");
-  panel.id="usd-intraday-panel";
-  panel.className="placeholder";
+  panel=document.createElement("div");panel.id="usd-intraday-panel";panel.className="placeholder";
   usdRow.insertAdjacentElement("afterend",panel);
  }
  if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);
- panel.innerHTML="<strong>Histórico intradiário do dólar</strong><p>Consultando os boletins oficiais do Banco Central...</p>";
- async function refreshHistory(){
- try{
-  const end=new Date();
-  const start=new Date(end.getTime()-72*60*60*1000);
-  const fmtDate=d=>String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")+"-"+d.getFullYear();
-  const url="https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@moeda='USD'&@dataInicial='"+fmtDate(start)+"'&@dataFinalCotacao='"+fmtDate(end)+"'&$format=json&$select=cotacaoVenda,dataHoraCotacao,tipoBoletim&$orderby=dataHoraCotacao%20asc&$top=40";
+ panel.innerHTML="<strong>USD/BRL · últimos três pregões</strong><p>Consultando o Banco Central...</p>";
+ const fmt=v=>Number(v).toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4});
+ const dateParam=d=>String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")+"-"+d.getFullYear();
+ async function fetchPtax(from,to){
+  const url="https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@moeda='USD'&@dataInicial='"+dateParam(from)+"'&@dataFinalCotacao='"+dateParam(to)+"'&$format=json&$select=cotacaoVenda,dataHoraCotacao,tipoBoletim&$orderby=dataHoraCotacao%20asc&$top=100";
   const response=await fetch(url,{cache:"no-store"});
   if(!response.ok)throw Error("Banco Central respondeu com HTTP "+response.status);
   const json=await response.json();
-  const values=(json.value||[]).filter(x=>x.tipoBoletim!=="Fechamento PTAX"&&Number.isFinite(Number(x.cotacaoVenda))).sort((a,b)=>new Date(a.dataHoraCotacao)-new Date(b.dataHoraCotacao));
-  if(!values.length)throw Error("Não há boletins intradiários disponíveis nas últimas 48 horas.");
-  const nums=values.map(x=>Number(x.cotacaoVenda));
-  const min=Math.min(...nums),max=Math.max(...nums),range=max-min||0.0001;
-  const W=1440,H=300,padL=68,padR=24,padT=28,padB=76;
-  const t0=start.getTime(),t1=end.getTime();
-  const xAt=t=>padL+(t-t0)/(t1-t0)*(W-padL-padR);
-  const yAt=v=>H-padB-(v-min)/(range||0.0001)*(H-padT-padB);
-  const pts=values.map(x=>[xAt(new Date(x.dataHoraCotacao).getTime()),yAt(Number(x.cotacaoVenda))]);
-  const poly=pts.map(p=>p.join(",")).join(" ");
-  const fmt=v=>v.toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4});
-  const hourlyTicks=[];
-  const firstTick=new Date(t0);firstTick.setMinutes(0,0,0);
-  for(let t=firstTick.getTime();t<=t1;t+=60*60*1000){
-   const x=xAt(t),d=new Date(t),label=d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
-   const day=d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"}); const dayColor=(d.toDateString()===new Date().toDateString())?"#FFFFFF":"#B7FF00";
-   hourlyTicks.push('<line x1="'+x+'" y1="'+padT+'" x2="'+x+'" y2="'+(H-padB)+'" stroke="#333" stroke-dasharray="3 5"/><text x="'+x+'" y="'+(H-padB+22)+'" fill="#ddd" font-size="12" text-anchor="middle">'+label+'</text><text x="'+x+'" y="'+(H-padB+42)+'" fill="'+dayColor+'" font-size="10" font-weight="700" text-anchor="middle">'+day+'</text>');
-  }
-  const labels=values.map(x=>{const d=new Date(x.dataHoraCotacao);return d.toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit"})+" "+d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});});
-  const rows=values.map((x,i)=>'<div class="item"><div><strong>'+labels[i]+'</strong><div class="muted">'+x.tipoBoletim+'</div></div><span class="pill">R$ '+fmt(nums[i])+'</span></div>').join("");
-  const delta=nums[nums.length-1]-nums[0],direction=delta>0?"alta":delta<0?"queda":"estável";
-  const updated=new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
-  panel.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><strong>USD/BRL · Últimos 3 dias</strong><button type="button" id="close-usd-history">Fechar</button></div><p class="muted">Banco Central · PTAX venda · Escala horária · Atualização automática a cada 3 horas</p><div style="background:#080808;border:1px solid #333;border-radius:12px;padding:8px;overflow-x:auto"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Gráfico horário do dólar nas últimas 48 horas, com pontos oficiais de boletins PTAX" style="width:100%;min-width:900px;height:auto"><line x1="'+padL+'" y1="'+(H-padB)+'" x2="'+(W-padR)+'" y2="'+(H-padB)+'" stroke="#777"/>'+hourlyTicks.join("")+'<polyline points="'+poly+'" fill="none" stroke="#B7FF00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'+pts.map((p,i)=>'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="6" fill="#B7FF00" stroke="#050505" stroke-width="2"><title>'+labels[i]+' · R$ '+fmt(nums[i])+'</title></circle>').join("")+'<text x="'+padL+'" y="18" fill="#fff" font-size="14">R$ '+fmt(max)+'</text><text x="'+padL+'" y="'+(H-8)+'" fill="#fff" font-size="14">R$ '+fmt(min)+'</text></svg></div><p><strong>Variação entre o primeiro e o último boletim:</strong> '+(delta>0?"+":"")+fmt(delta)+' · '+direction+'</p><div>'+rows+'</div><p class="foot">Última consulta da tela: '+updated+'. A escala marca cada hora, mas os pontos representam somente os boletins efetivamente publicados pelo Banco Central — normalmente às 10h, 11h, 12h e 13h em dias úteis. Não há cotação PTAX horária durante a noite, fins de semana ou feriados. Fonte: Banco Central do Brasil · API PTAX.</p>';
-  document.getElementById("close-usd-history").addEventListener("click",()=>{if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);panel.remove();});
- }catch(e){
-  panel.innerHTML='<strong>Histórico do dólar indisponível neste momento</strong><p>'+e.message+'</p><p class="foot">Fonte: API oficial PTAX do Banco Central. Tente novamente mais tarde.</p><button type="button" id="retry-usd-history">Tentar novamente</button><button type="button" id="close-usd-history">Fechar</button>';
-  document.getElementById("retry-usd-history").addEventListener("click",refreshHistory);
-  document.getElementById("close-usd-history").addEventListener("click",()=>{if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);panel.remove();});
+  return (json.value||[]).filter(x=>Number.isFinite(Number(x.cotacaoVenda))).sort((x,y)=>new Date(x.dataHoraCotacao)-new Date(y.dataHoraCotacao));
  }
+ async function refreshHistory(){
+  try{
+   const now=new Date();
+   const rangeStart=new Date(now.getTime()-14*24*60*60*1000);
+   const all=await fetchPtax(rangeStart,now);
+   const byDay=new Map();
+   for(const item of all){
+    const d=new Date(item.dataHoraCotacao);
+    const key=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+    if(!byDay.has(key))byDay.set(key,[]);
+    byDay.get(key).push(item);
+   }
+   const sessions=[...byDay.entries()].sort((a,b)=>a[0].localeCompare(b[0])).slice(-3);
+   if(!sessions.length)throw Error("Não há pregões com cotações PTAX disponíveis no período consultado.");
+   const points=sessions.flatMap(([day,items])=>items.map(item=>({day,item,time:new Date(item.dataHoraCotacao),value:Number(item.cotacaoVenda)})));
+   const values=points.map(p=>p.value),min=Math.min(...values),max=Math.max(...values),range=max-min||0.0001;
+   const W=1440,H=330,padL=78,padR=28,padT=36,padB=78;
+   const first=points[0].time.getTime(),last=points[points.length-1].time.getTime();
+   const dayGap=24*60*60*1000;
+   const xAt=p=>padL+((p.time.getTime()-first)/(Math.max(last-first,1)))*(W-padL-padR);
+   const yAt=v=>H-padB-(v-min)/(range)*(H-padT-padB);
+   const poly=points.map(p=>xAt(p)+","+yAt(p.value)).join(" ");
+   const peaks=sessions.map(([day,items])=>{
+    const peak=items.reduce((best,item)=>Number(item.cotacaoVenda)>Number(best.cotacaoVenda)?item:best,items[0]);
+    return {day,item:peak,time:new Date(peak.dataHoraCotacao),value:Number(peak.cotacaoVenda)};
+   });
+   const fmtDay=day=>{const [y,m,d]=day.split("-");return d+"/"+m;};
+   const peakMarks=peaks.map((p,i)=>{
+    const x=xAt(p),y=yAt(p.value),label="R$ "+fmt(p.value);
+    return '<line x1="'+x+'" y1="'+(y-8)+'" x2="'+x+'" y2="28" stroke="#B7FF00" stroke-dasharray="4 4"/><circle cx="'+x+'" cy="'+y+'" r="8" fill="#B7FF00" stroke="#050505" stroke-width="2"/><text x="'+x+'" y="'+Math.max(18,y-15)+'" fill="#B7FF00" font-size="15" font-weight="800" text-anchor="middle">'+label+'</text>';
+   }).join("");
+   const dayLabels=peaks.map(p=>{
+    const x=xAt(p),closed=p.day!==[...byDay.keys()].sort().slice(-1)[0];
+    return '<text x="'+x+'" y="'+(H-padB+28)+'" fill="'+(closed?"#B7FF00":"#FFFFFF")+'" font-size="15" font-weight="800" text-anchor="middle">'+fmtDay(p.day)+(closed?" · FECHADO":" · ATUAL")+'</text>';
+   }).join("");
+   const rows=peaks.map(p=>'<div class="item"><div><strong>'+fmtDay(p.day)+(p.day!==[...byDay.keys()].sort().slice(-1)[0]?" · pregão encerrado":" · pregão mais recente")+'</strong><div class="muted">Pico às '+p.time.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})+'</div></div><span class="pill">R$ '+fmt(p.value)+'</span></div>').join("");
+   const monthStart=new Date(now.getFullYear(),now.getMonth(),1);
+   const novemberStart=new Date(2026,10,1);
+   const monthFirst=await fetchPtax(novemberStart,now);
+   if(!monthFirst.length)throw Error("Não foi possível obter a primeira PTAX de novembro.");
+   const firstMonth=monthFirst[0],current=monthFirst[monthFirst.length-1];
+   const monthDelta=Number(current.cotacaoVenda)-Number(firstMonth.cotacaoVenda);
+   const currentDate=new Date(current.dataHoraCotacao);
+   const firstDate=new Date(firstMonth.dataHoraCotacao);
+   const monthCard='<div class="intel-metrics" style="margin:14px 0"><div><strong>R$ '+fmt(firstMonth.cotacaoVenda)+'</strong><small>Primeira PTAX de novembro · '+firstDate.toLocaleDateString("pt-BR")+'</small></div><div><strong>R$ '+fmt(current.cotacaoVenda)+'</strong><small>PTAX mais recente · '+currentDate.toLocaleDateString("pt-BR")+' '+currentDate.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})+'</small></div></div><p><strong>Variação no mês:</strong> '+(monthDelta>0?"+":"")+fmt(monthDelta)+' BRL por USD</p>';
+   const updated=now.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
+   panel.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><strong>USD/BRL · três últimos pregões</strong><button type="button" id="close-usd-history">Fechar</button></div><p class="muted">Banco Central · PTAX venda · Um ponto destacado por pregão: maior cotação publicada naquele dia</p>'+monthCard+'<div style="background:#080808;border:1px solid #333;border-radius:12px;padding:8px;overflow-x:auto"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Gráfico USD BRL dos três últimos pregões, com valor máximo destacado em cada dia" style="width:100%;min-width:900px;height:auto"><line x1="'+padL+'" y1="'+(H-padB)+'" x2="'+(W-padR)+'" y2="'+(H-padB)+'" stroke="#777"/><polyline points="'+poly+'" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'+peakMarks+dayLabels+'</svg></div><p><strong>Picos dos três pregões:</strong></p><div>'+rows+'</div><p class="foot">Última consulta: '+updated+' · Horários de Brasília. Os pontos são boletins oficiais publicados pelo Banco Central; o pico diário é o maior valor PTAX de venda observado entre os boletins daquele pregão. A cotação atual significa a última PTAX publicada, não preço em tempo real. Fonte: Banco Central do Brasil.</p>';
+   document.getElementById("close-usd-history").addEventListener("click",()=>{if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);panel.remove();});
+  }catch(e){
+   panel.innerHTML='<strong>Histórico do dólar indisponível</strong><p>'+e.message+'</p><button type="button" id="retry-usd-history">Tentar novamente</button><button type="button" id="close-usd-history">Fechar</button>';
+   document.getElementById("retry-usd-history").addEventListener("click",refreshHistory);
+   document.getElementById("close-usd-history").addEventListener("click",()=>{if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);panel.remove();});
+  }
  }
  await refreshHistory();
  function scheduleNextUsdRefresh(){
-  const now=new Date();
-  const slots=[[10,15],[14,15],[18,15]];
+  const now=new Date(),slots=[[10,15],[14,15],[18,15]];
   let next=null;
-  for(const [hour,minute] of slots){
-   const candidate=new Date(now);
-   candidate.setHours(hour,minute,0,0);
-   if(candidate>now){next=candidate;break;}
-  }
+  for(const [hour,minute] of slots){const candidate=new Date(now);candidate.setHours(hour,minute,0,0);if(candidate>now){next=candidate;break;}}
   if(!next){next=new Date(now);next.setDate(next.getDate()+1);next.setHours(10,15,0,0);}
   window.usdHistoryRefresh=setTimeout(async()=>{await refreshHistory();scheduleNextUsdRefresh();},next-now);
  }
