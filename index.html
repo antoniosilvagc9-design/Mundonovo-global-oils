@@ -109,83 +109,51 @@ if(usdRow){
 }
 async function loadUsdIntradayHistory(){
  let panel=document.getElementById("usd-intraday-panel");
- if(!panel){
-  panel=document.createElement("div");panel.id="usd-intraday-panel";panel.className="placeholder";
-  usdRow.insertAdjacentElement("afterend",panel);
- }
+ if(!panel){panel=document.createElement("div");panel.id="usd-intraday-panel";panel.className="placeholder";usdRow.insertAdjacentElement("afterend",panel);}
  if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);
- panel.innerHTML="<strong>USD/BRL · últimos três pregões</strong><p>Consultando o Banco Central...</p>";
+ panel.innerHTML="<strong>USD/BRL · três últimos pregões</strong><p>Consultando o Banco Central...</p>";
  const fmt=v=>Number(v).toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4});
  const dateParam=d=>String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")+"-"+d.getFullYear();
  async function fetchPtax(from,to){
-  const url="https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@moeda='USD'&@dataInicial='"+dateParam(from)+"'&@dataFinalCotacao='"+dateParam(to)+"'&$format=json&$select=cotacaoVenda,dataHoraCotacao,tipoBoletim&$orderby=dataHoraCotacao%20asc&$top=100";
-  const response=await fetch(url,{cache:"no-store"});
-  if(!response.ok)throw Error("Banco Central respondeu com HTTP "+response.status);
-  const json=await response.json();
-  return (json.value||[]).filter(x=>Number.isFinite(Number(x.cotacaoVenda))).sort((x,y)=>new Date(x.dataHoraCotacao)-new Date(y.dataHoraCotacao));
+  const url="https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@moeda='USD'&@dataInicial='"+dateParam(from)+"'&@dataFinalCotacao='"+dateParam(to)+"'&$format=json&$select=cotacaoVenda,dataHoraCotacao,tipoBoletim&$orderby=dataHoraCotacao%20asc&$top=200";
+  const response=await fetch(url,{cache:"no-store"});if(!response.ok)throw Error("Banco Central respondeu com HTTP "+response.status);
+  const json=await response.json();return (json.value||[]).filter(x=>Number.isFinite(Number(x.cotacaoVenda))).sort((x,y)=>new Date(x.dataHoraCotacao)-new Date(y.dataHoraCotacao));
  }
  async function refreshHistory(){
   try{
-   const now=new Date();
-   const rangeStart=new Date(now.getTime()-14*24*60*60*1000);
-   const all=await fetchPtax(rangeStart,now);
+   const now=new Date(),historyStart=new Date(now.getTime()-45*24*60*60*1000);
+   const all=await fetchPtax(historyStart,now);
    const byDay=new Map();
-   for(const item of all){
-    const d=new Date(item.dataHoraCotacao);
-    const key=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
-    if(!byDay.has(key))byDay.set(key,[]);
-    byDay.get(key).push(item);
-   }
-   const sessions=[...byDay.entries()].sort((a,b)=>a[0].localeCompare(b[0])).slice(-3);
+   for(const item of all){const d=new Date(item.dataHoraCotacao),key=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");if(!byDay.has(key))byDay.set(key,[]);byDay.get(key).push(item);}
+   const sessionEntries=[...byDay.entries()].sort((a,b)=>a[0].localeCompare(b[0]));
+   const sessions=sessionEntries.slice(-3);
    if(!sessions.length)throw Error("Não há pregões com cotações PTAX disponíveis no período consultado.");
    const points=sessions.flatMap(([day,items])=>items.map(item=>({day,item,time:new Date(item.dataHoraCotacao),value:Number(item.cotacaoVenda)})));
    const values=points.map(p=>p.value),min=Math.min(...values),max=Math.max(...values),range=max-min||0.0001;
-   const W=1440,H=330,padL=78,padR=28,padT=36,padB=78;
+   const W=960,H=340,padL=72,padR=28,padT=48,padB=78;
    const first=points[0].time.getTime(),last=points[points.length-1].time.getTime();
-   const dayGap=24*60*60*1000;
    const xAt=p=>padL+((p.time.getTime()-first)/(Math.max(last-first,1)))*(W-padL-padR);
-   const yAt=v=>H-padB-(v-min)/(range)*(H-padT-padB);
+   const yAt=v=>H-padB-(v-min)/range*(H-padT-padB);
    const poly=points.map(p=>xAt(p)+","+yAt(p.value)).join(" ");
-   const peaks=sessions.map(([day,items])=>{
-    const peak=items.reduce((best,item)=>Number(item.cotacaoVenda)>Number(best.cotacaoVenda)?item:best,items[0]);
-    return {day,item:peak,time:new Date(peak.dataHoraCotacao),value:Number(peak.cotacaoVenda)};
-   });
+   const peaks=sessions.map(([day,items])=>{const peak=items.reduce((best,item)=>Number(item.cotacaoVenda)>Number(best.cotacaoVenda)?item:best,items[0]);return {day,item:peak,time:new Date(peak.dataHoraCotacao),value:Number(peak.cotacaoVenda)};});
    const fmtDay=day=>{const [y,m,d]=day.split("-");return d+"/"+m;};
-   const peakMarks=peaks.map((p,i)=>{
-    const x=xAt(p),y=yAt(p.value),label="R$ "+fmt(p.value);
-    return '<line x1="'+x+'" y1="'+(y-8)+'" x2="'+x+'" y2="28" stroke="#B7FF00" stroke-dasharray="4 4"/><circle cx="'+x+'" cy="'+y+'" r="8" fill="#B7FF00" stroke="#050505" stroke-width="2"/><text x="'+x+'" y="'+Math.max(18,y-15)+'" fill="#B7FF00" font-size="15" font-weight="800" text-anchor="middle">'+label+'</text>';
-   }).join("");
-   const dayLabels=peaks.map(p=>{
-    const x=xAt(p),closed=p.day!==[...byDay.keys()].sort().slice(-1)[0];
-    return '<text x="'+x+'" y="'+(H-padB+28)+'" fill="'+(closed?"#B7FF00":"#FFFFFF")+'" font-size="15" font-weight="800" text-anchor="middle">'+fmtDay(p.day)+(closed?" · FECHADO":" · ATUAL")+'</text>';
-   }).join("");
-   const rows=peaks.map(p=>'<div class="item"><div><strong>'+fmtDay(p.day)+(p.day!==[...byDay.keys()].sort().slice(-1)[0]?" · pregão encerrado":" · pregão mais recente")+'</strong><div class="muted">Pico às '+p.time.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})+'</div></div><span class="pill">R$ '+fmt(p.value)+'</span></div>').join("");
-   const monthStart=new Date(now.getFullYear(),now.getMonth(),1);
-   const novemberStart=new Date(2026,10,1);
-   const monthFirst=await fetchPtax(novemberStart,now);
-   if(!monthFirst.length)throw Error("Não foi possível obter a primeira PTAX de novembro.");
-   const firstMonth=monthFirst[0],current=monthFirst[monthFirst.length-1];
-   const monthDelta=Number(current.cotacaoVenda)-Number(firstMonth.cotacaoVenda);
-   const currentDate=new Date(current.dataHoraCotacao);
-   const firstDate=new Date(firstMonth.dataHoraCotacao);
-   const monthCard='<div class="intel-metrics" style="margin:14px 0"><div><strong>R$ '+fmt(firstMonth.cotacaoVenda)+'</strong><small>Primeira PTAX de novembro · '+firstDate.toLocaleDateString("pt-BR")+'</small></div><div><strong>R$ '+fmt(current.cotacaoVenda)+'</strong><small>PTAX mais recente · '+currentDate.toLocaleDateString("pt-BR")+' '+currentDate.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})+'</small></div></div><p><strong>Variação no mês:</strong> '+(monthDelta>0?"+":"")+fmt(monthDelta)+' BRL por USD</p>';
+   const latestDay=sessions[sessions.length-1][0];
+   const peakMarks=peaks.map(p=>{const x=xAt(p),y=yAt(p.value);return '<line x1="'+x+'" y1="'+(y-8)+'" x2="'+x+'" y2="32" stroke="#B7FF00" stroke-dasharray="4 4"/><circle cx="'+x+'" cy="'+y+'" r="7" fill="#B7FF00" stroke="#050505" stroke-width="2"/><text x="'+x+'" y="'+Math.max(19,y-14)+'" fill="#B7FF00" font-size="13" font-weight="800" text-anchor="middle">R$ '+fmt(p.value)+'</text>';}).join("");
+   const dayLabels=peaks.map(p=>'<text x="'+xAt(p)+'" y="'+(H-padB+28)+'" fill="'+(p.day===latestDay?"#FFFFFF":"#B7FF00")+'" font-size="14" font-weight="800" text-anchor="middle">'+fmtDay(p.day)+(p.day===latestDay?" · ATUAL":" · FECHADO")+'</text>').join("");
+   const rows=peaks.map(p=>'<div class="item"><div><strong>'+fmtDay(p.day)+(p.day===latestDay?" · pregão mais recente":" · pregão encerrado")+'</strong><div class="muted">Pico às '+p.time.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})+'</div></div><span class="pill">R$ '+fmt(p.value)+'</span></div>').join("");
+   const targetDate=new Date(now.getTime()-30*24*60*60*1000);
+   const baseline=all.filter(x=>new Date(x.dataHoraCotacao)<=new Date(targetDate.getFullYear(),targetDate.getMonth(),targetDate.getDate(),23,59,59,999)).at(-1);
+   const latest=all.at(-1);
+   if(!baseline||!latest)throw Error("Não foi possível localizar a referência de 30 dias atrás e a cotação mais recente.");
+   const baseDate=new Date(baseline.dataHoraCotacao),latestDate=new Date(latest.dataHoraCotacao),change=Number(latest.cotacaoVenda)-Number(baseline.cotacaoVenda);
+   const comparison='<div class="intel-metrics" style="margin:14px 0"><div><strong>R$ '+fmt(baseline.cotacaoVenda)+'</strong><small>Referência de 30 dias atrás · '+baseDate.toLocaleDateString("pt-BR")+(baseDate.toDateString()!==targetDate.toDateString()?" · último pregão anterior":"")+'</small></div><div><strong>R$ '+fmt(latest.cotacaoVenda)+'</strong><small>PTAX mais recente · '+latestDate.toLocaleDateString("pt-BR")+' '+latestDate.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})+'</small></div></div><p><strong>Variação no período:</strong> '+(change>0?"+":"")+fmt(change)+' BRL por USD</p>';
    const updated=now.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
-   panel.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><strong>USD/BRL · três últimos pregões</strong><button type="button" id="close-usd-history">Fechar</button></div><p class="muted">Banco Central · PTAX venda · Um ponto destacado por pregão: maior cotação publicada naquele dia</p>'+monthCard+'<div style="background:#080808;border:1px solid #333;border-radius:12px;padding:8px;overflow-x:auto"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Gráfico USD BRL dos três últimos pregões, com valor máximo destacado em cada dia" style="width:100%;min-width:900px;height:auto"><line x1="'+padL+'" y1="'+(H-padB)+'" x2="'+(W-padR)+'" y2="'+(H-padB)+'" stroke="#777"/><polyline points="'+poly+'" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'+peakMarks+dayLabels+'</svg></div><p><strong>Picos dos três pregões:</strong></p><div>'+rows+'</div><p class="foot">Última consulta: '+updated+' · Horários de Brasília. Os pontos são boletins oficiais publicados pelo Banco Central; o pico diário é o maior valor PTAX de venda observado entre os boletins daquele pregão. A cotação atual significa a última PTAX publicada, não preço em tempo real. Fonte: Banco Central do Brasil.</p>';
+   panel.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><strong>USD/BRL · três últimos pregões</strong><button type="button" id="close-usd-history">Fechar</button></div><p class="muted">Banco Central · PTAX venda · Gráfico completo ajustado à tela · pico diário destacado</p>'+comparison+'<div style="background:#080808;border:1px solid #333;border-radius:12px;padding:8px;width:100%;overflow:hidden"><svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Gráfico USD BRL dos três últimos pregões, ajustado para caber inteiro na tela, com pico destacado em cada dia" style="display:block;width:100%;height:auto;max-width:100%"><line x1="'+padL+'" y1="'+(H-padB)+'" x2="'+(W-padR)+'" y2="'+(H-padB)+'" stroke="#777"/><polyline points="'+poly+'" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'+peakMarks+dayLabels+'</svg></div><p><strong>Picos dos três pregões:</strong></p><div>'+rows+'</div><p class="foot">Última consulta: '+updated+' · Horário de Brasília. A comparação usa a última PTAX publicada até a data de 30 dias atrás; se cair em fim de semana ou feriado, utiliza o pregão anterior. A cotação mais recente é a última PTAX publicada, não preço em tempo real. Fonte: Banco Central do Brasil.</p>';
    document.getElementById("close-usd-history").addEventListener("click",()=>{if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);panel.remove();});
-  }catch(e){
-   panel.innerHTML='<strong>Histórico do dólar indisponível</strong><p>'+e.message+'</p><button type="button" id="retry-usd-history">Tentar novamente</button><button type="button" id="close-usd-history">Fechar</button>';
-   document.getElementById("retry-usd-history").addEventListener("click",refreshHistory);
-   document.getElementById("close-usd-history").addEventListener("click",()=>{if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);panel.remove();});
-  }
+  }catch(e){panel.innerHTML='<strong>Histórico do dólar indisponível</strong><p>'+e.message+'</p><button type="button" id="retry-usd-history">Tentar novamente</button><button type="button" id="close-usd-history">Fechar</button>';document.getElementById("retry-usd-history").addEventListener("click",refreshHistory);document.getElementById("close-usd-history").addEventListener("click",()=>{if(window.usdHistoryRefresh)clearTimeout(window.usdHistoryRefresh);panel.remove();});}
  }
  await refreshHistory();
- function scheduleNextUsdRefresh(){
-  const now=new Date(),slots=[[10,15],[14,15],[18,15]];
-  let next=null;
-  for(const [hour,minute] of slots){const candidate=new Date(now);candidate.setHours(hour,minute,0,0);if(candidate>now){next=candidate;break;}}
-  if(!next){next=new Date(now);next.setDate(next.getDate()+1);next.setHours(10,15,0,0);}
-  window.usdHistoryRefresh=setTimeout(async()=>{await refreshHistory();scheduleNextUsdRefresh();},next-now);
- }
+ function scheduleNextUsdRefresh(){const now=new Date(),slots=[[10,15],[14,15],[18,15]];let next=null;for(const [hour,minute] of slots){const candidate=new Date(now);candidate.setHours(hour,minute,0,0);if(candidate>now){next=candidate;break;}}if(!next){next=new Date(now);next.setDate(next.getDate()+1);next.setHours(10,15,0,0);}window.usdHistoryRefresh=setTimeout(async()=>{await refreshHistory();scheduleNextUsdRefresh();},next-now);}
  scheduleNextUsdRefresh();
 }
 async function loadDollar(){try{const response=await fetch("data/usd-brl.json",{cache:"no-store"});if(!response.ok)throw Error("Sem arquivo");const data=await response.json();const rows=[...document.querySelectorAll("#quotes .item")];const row=rows.find(el=>el.querySelector("strong")?.textContent==="USD/BRL");if(!row)return;row.querySelector(".pill").textContent="R$ "+Number(data.value).toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4})+" por US$ 1";row.querySelector(".pill").title="PTAX venda; não é cotação em tempo real";row.querySelector(".muted").textContent="Banco Central · PTAX venda · "+data.reference_datetime;}catch(e){console.info("PTAX ainda não disponível:",e.message)}}loadDollar();setInterval(loadDollar,15*60*1000);
