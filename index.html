@@ -72,6 +72,18 @@ if (firstLevel3 && secondLevel3) {
   });
 }
 
+// Synchronize level 3 intelligence panels in cards 03 and 04
+const thirdLevel3 = pairedCards[2]?.querySelector(".intel-analysis");
+const fourthLevel3 = pairedCards[3]?.querySelector(".intel-analysis");
+if (thirdLevel3 && fourthLevel3) {
+  thirdLevel3.addEventListener("toggle", () => {
+    if (fourthLevel3.open !== thirdLevel3.open) fourthLevel3.open = thirdLevel3.open;
+  });
+  fourthLevel3.addEventListener("toggle", () => {
+    if (thirdLevel3.open !== fourthLevel3.open) thirdLevel3.open = fourthLevel3.open;
+  });
+}
+
 const quotes=[
  ["Óleo de palma bruto (CPO)","Bursa Malaysia · MYR/t","4.217,00","21/11/2026 · referência de mercado"],
  ["Óleo de soja","CBOT · centavos USD/lb","60,01","21/11/2026 · referência de mercado"],
