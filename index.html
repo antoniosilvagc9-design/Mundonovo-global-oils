@@ -34,17 +34,22 @@ async function loadMpobWeekly(){
    {key:"Crude Palm Kernel Oil (Local Delivered)",label:"Óleo bruto de palmiste (CPKO)"}
   ];
   const fmt=v=>Number(v).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+  let usdPerMyr=null, fxDate=null;
+  try{
+   const fx=await fetch("https://open.er-api.com/v6/latest/MYR",{cache:"no-store"});
+   if(fx.ok){const q=await fx.json();if(q.result==="success"&&Number.isFinite(q.rates?.USD)){usdPerMyr=q.rates.USD;fxDate=q.time_last_update_utc;}}
+  }catch(e){console.info("Conversão MYR/USD indisponível:",e.message)}
   const rows=products.map(p=>{
    const items=records.filter(x=>x.region==="MALAYSIA"&&x.product===p.key);
    const valid=items.filter(x=>Number.isFinite(x.price_rm_per_tonne));
    const last=valid.at(-1);
    const latestRaw=items.at(-1);
    return last
-    ? '<div class="item"><div><strong>'+p.label+'</strong><div class="muted">'+last.month+' · '+last.week+'</div></div><div><strong>RM '+fmt(last.price_rm_per_tonne)+'</strong><div class="muted">por tonelada</div></div></div>'
+    ? '<div class="item"><div><strong>'+p.label+'</strong><div class="muted">'+last.month+' · '+last.week+'</div></div><div><strong>RM '+fmt(last.price_rm_per_tonne)+'</strong><div class="muted">por tonelada</div>'+(usdPerMyr!==null?'<div class="muted">≈ US$ '+fmt(last.price_rm_per_tonne*usdPerMyr)+'/t</div>':'<div class="muted">Conversão USD indisponível</div>')+'</div></div>'
     : '<div class="item"><div><strong>'+p.label+'</strong><div class="muted">Malásia · '+(latestRaw?latestRaw.month+' · '+latestRaw.week:'sem registro')+'</div></div><span class="pill">Sem preço publicado</span></div>';
   }).join("");
   const updated=data.fetched_at_utc?new Date(data.fetched_at_utc).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo"}):"não informado";
-  target.innerHTML="<strong>Malásia · preços semanais oficiais</strong>"+rows+'<div class="foot">Meses no arquivo: '+months.length+' · Última atualização do arquivo: '+updated+' (Brasília). Traços do relatório oficial são exibidos como “Sem preço publicado”, nunca como zero.</div>';
+  target.innerHTML="<strong>Malásia · preços semanais oficiais</strong>"+rows+'<div class="foot">Meses no arquivo: '+months.length+' · Última atualização do arquivo: '+updated+' (Brasília). Conversão USD indicativa via taxa cambial de referência, quando disponível (taxa consultada no carregamento). Traços do relatório oficial são exibidos como “Sem preço publicado”, nunca como zero.</div>';
  }catch(e){target.textContent="Preços semanais indisponíveis: "+e.message}
 }
 loadMpobWeekly();setInterval(loadMpobWeekly,60*60*1000);
