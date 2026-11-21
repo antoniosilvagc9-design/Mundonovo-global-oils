@@ -175,52 +175,46 @@ if(usdRow){
 }
 
 
-/* Soja em grão: série contínua indicativa; não confundir com settlement de contrato fixo. */
+/* Soja em grão: conversão histórica para R$/saca de 60 kg, com PTAX por pregão. */
 const soyRow=[...document.querySelectorAll("#quotes .item")].find(el=>el.querySelector("strong")?.textContent==="Soja em grão");
+const fmtSoy=n=>Number(n).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+const soyDate=d=>String(d).slice(8,10)+"/"+String(d).slice(5,7)+"/"+String(d).slice(0,4);
 async function getSoyHistory(){
  const r=await fetch("data/soybean-history.json",{cache:"no-store"});
- if(!r.ok)throw Error("Aguardando primeira coleta do GitHub Actions");
+ if(!r.ok)throw Error("Aguardando coleta da soja");
  const d=await r.json();
- if(d.symbol!=="ZS=F"||!Array.isArray(d.last_three)||d.last_three.length<2||!(Number(d.latest?.value)>0)||!(Number(d.baseline_30d?.value)>0))throw Error("Histórico incompleto");
- if(d.last_three.some(p=>!/^\d{4}-\d{2}-\d{2}$/.test(p.date)||!(Number(p.value)>0)))throw Error("Datas ou preços inválidos");
+ if(d.symbol!=="ZS=F"||!Array.isArray(d.converted_last_three)||d.converted_last_three.length!==3||!(Number(d.converted_baseline_30d?.brl_per_60kg_bag)>0))throw Error("Aguardando conversão histórica PTAX por pregão");
+ if(d.converted_last_three.some(p=>!/^\d{4}-\d{2}-\d{2}$/.test(p.date)||!(Number(p.brl_per_60kg_bag)>0)||!(Number(p.ptax_brl_usd)>0)))throw Error("Dados convertidos inválidos");
  return d;
 }
 if(soyRow){
- const fmtSoy=n=>Number(n).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
- const soyDate=d=>String(d).slice(8,10)+"/"+String(d).slice(5,7)+"/"+String(d).slice(0,4);
  const showSoy=async()=>{
   let el=document.getElementById("soy-history-panel");
   if(el){el.remove();return;}
   el=document.createElement("div");el.id="soy-history-panel";el.className="placeholder";soyRow.insertAdjacentElement("afterend",el);
-  el.textContent="Consultando histórico de soja...";
+  el.textContent="Consultando soja em R$/saca de 60 kg...";
   try{
-   const d=await getSoyHistory(),pts=d.last_three,vals=pts.map(p=>Number(p.value));
-   const lo=Math.min(...vals),hi=Math.max(...vals),span=Math.max(0.1,hi-lo),W=660,H=230,L=64,R=64,T=37,B=48;
+   const d=await getSoyHistory(),pts=d.converted_last_three,vals=pts.map(p=>Number(p.brl_per_60kg_bag));
+   const lo=Math.min(...vals),hi=Math.max(...vals),span=Math.max(.01,hi-lo),W=660,H=230,L=64,R=64,T=37,B=48;
    const x=i=>L+i*(W-L-R)/(pts.length-1),y=v=>H-B-(v-lo)/span*(H-T-B);
-   const line=pts.map((p,i)=>x(i)+","+y(p.value)).join(" ");
-   const labels=pts.map((p,i)=>'<g><circle cx="'+x(i)+'" cy="'+y(p.value)+'" r="3" fill="#B7FF00"/><text x="'+x(i)+'" y="'+Math.max(16,y(p.value)-13)+'" fill="#B7FF00" font-size="12" text-anchor="middle">'+fmtSoy(p.value)+'</text><text x="'+x(i)+'" y="'+(H-15)+'" fill="#FFFFFF" font-size="12" text-anchor="middle">'+soyDate(p.date).slice(0,5)+'</text><title>'+soyDate(p.date)+' · '+fmtSoy(p.value)+' US¢/bu</title></g>').join("");
-   const delta=Number(d.latest.value)-Number(d.baseline_30d.value),pct=delta/Number(d.baseline_30d.value)*100;
-   let conversion='<p class="foot">Conversão R$/saca indisponível: PTAX não validada.</p>';
-   try{
-    const r=await fetch("data/usd-brl.json",{cache:"no-store"}),fx=await r.json(),rate=Number(fx.value);
-    if(r.ok&&fx.pair==="USD/BRL"&&rate>0){
-      const brl=(Number(d.latest.value)/100)*(60/27.2155)*rate;
-      conversion='<p><strong>Equivalente indicativo:</strong> R$ '+fmtSoy(brl)+'/saca de 60 kg</p><p class="foot">Conversão com PTAX venda '+String(fx.reference_datetime||"data não informada").slice(0,16)+' · R$ '+rate.toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4})+'/USD. Não representa preço físico no Brasil; datas de soja e câmbio podem diferir.</p>';
-    }
-   }catch(e){}
+   const line=pts.map((p,i)=>x(i)+","+y(p.brl_per_60kg_bag)).join(" ");
+   const labels=pts.map((p,i)=>'<g><circle cx="'+x(i)+'" cy="'+y(p.brl_per_60kg_bag)+'" r="3" fill="#B7FF00"/><text x="'+x(i)+'" y="'+Math.max(16,y(p.brl_per_60kg_bag)-13)+'" fill="#B7FF00" font-size="12" text-anchor="middle">R$ '+fmtSoy(p.brl_per_60kg_bag)+'</text><text x="'+x(i)+'" y="'+(H-15)+'" fill="#FFFFFF" font-size="12" text-anchor="middle">'+soyDate(p.date).slice(0,5)+'</text><title>'+soyDate(p.date)+' · R$ '+fmtSoy(p.brl_per_60kg_bag)+'/saca · PTAX '+soyDate(p.ptax_date)+'</title></g>').join("");
+   const baseline=Number(d.converted_baseline_30d.brl_per_60kg_bag),latest=vals.at(-1),avg=vals.reduce((a,b)=>a+b,0)/vals.length,delta=latest-baseline,pct=delta/baseline*100;
    const stale=Date.now()-Date.parse(d.latest.date+"T00:00:00Z")>5*86400000;
-   el.innerHTML='<div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><strong>Soja CBOT · últimos três pregões</strong><button type="button" id="close-soy">Fechar</button></div>'+
-    '<p class="muted">Futuro contínuo ZS=F · fechamento indicativo · US¢/bushel · Yahoo Finance (não oficial CME)'+(stale?' · dados defasados':'')+'</p>'+
-    '<div class="intel-metrics" style="margin:12px 0"><div><strong>'+fmtSoy(d.baseline_30d.value)+' US¢</strong><small>30 dias · '+soyDate(d.baseline_30d.date)+'</small></div><div><strong>'+fmtSoy(d.latest.value)+' US¢</strong><small>Último · '+soyDate(d.latest.date)+'</small></div></div>'+
-    '<p><strong>Variação 30 dias:</strong> '+(delta>=0?'+':'')+fmtSoy(delta)+' US¢/bu ('+(pct>=0?'+':'')+pct.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})+'%)</p>'+
-    '<div style="width:100%;overflow:hidden;background:#080808;border:1px solid #333;border-radius:12px;padding:8px"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Três últimos preços diários de soja" style="width:100%;height:auto;display:block"><line x1="'+L+'" y1="'+(H-B)+'" x2="'+(W-R)+'" y2="'+(H-B)+'" stroke="#666"/><polyline points="'+line+'" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>'+labels+'</svg></div>'+
-    '<p class="foot">Máximo: '+fmtSoy(hi)+' · mínimo: '+fmtSoy(lo)+' US¢/bushel. Série contínua pode mudar de vencimento; não equivale ao ajuste oficial de um contrato específico.</p>'+conversion;
+   el.innerHTML='<div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><strong>Soja CBOT · R$/saca de 60 kg</strong><button type="button" id="close-soy">Fechar</button></div>'+
+    '<p class="muted">Futuro contínuo ZS=F · equivalente cambial indicativo'+(stale?' · dados defasados':'')+'</p>'+
+    '<div class="intel-metrics" style="margin:12px 0"><div><strong>R$ '+fmtSoy(baseline)+'</strong><small>30 dias · '+soyDate(d.converted_baseline_30d.date)+'</small></div><div><strong>R$ '+fmtSoy(latest)+'</strong><small>Último pregão · '+soyDate(pts.at(-1).date)+'</small></div><div><strong>R$ '+fmtSoy(avg)+'</strong><small>Média dos três pregões</small></div></div>'+
+    '<p><strong>Variação em 30 dias:</strong> '+(delta>=0?'+':'')+'R$ '+fmtSoy(delta)+'/saca ('+(pct>=0?'+':'')+pct.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})+'%)</p>'+
+    '<div style="width:100%;overflow:hidden;background:#080808;border:1px solid #333;border-radius:12px;padding:8px"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Soja em reais por saca nos últimos três pregões" style="width:100%;height:auto;display:block"><line x1="'+L+'" y1="'+(H-B)+'" x2="'+(W-R)+'" y2="'+(H-B)+'" stroke="#666"/><polyline points="'+line+'" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>'+labels+'</svg></div>'+
+    '<p class="foot">Mínimo: R$ '+fmtSoy(lo)+' · máximo: R$ '+fmtSoy(hi)+'/saca. Média aritmética dos três pregões efetivos.</p>'+
+    '<p class="foot">Cálculo: (US¢/bushel ÷ 100) × (60 ÷ 27,2155422 kg) × PTAX venda de cada data ou último pregão cambial anterior. Fonte soja: Yahoo Finance, não CME oficial. Equivalente cambial, não preço físico de soja no Brasil; sem frete, impostos e prêmio.</p>'+
+    '<p class="foot">PTAX das três observações: '+pts.map(p=>soyDate(p.date)+' → '+soyDate(p.ptax_date)+' (R$ '+Number(p.ptax_brl_usd).toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4})+')').join(' · ')+'</p>';
    el.querySelector("#close-soy").addEventListener("click",()=>el.remove());
-  }catch(e){el.textContent="Soja: histórico indisponível — "+String(e.message);}
+  }catch(e){el.textContent="Soja: "+String(e.message);}
  };
  soyRow.addEventListener("click",showSoy);
  soyRow.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();showSoy();}});
- (async()=>{try{const d=await getSoyHistory();soyRow.querySelector(".pill").textContent=fmtSoy(d.latest.value)+" US¢/bu";soyRow.querySelector(".muted").textContent="CBOT · ZS=F contínuo · "+soyDate(d.latest.date)+" · fechamento indicativo";}catch(e){soyRow.querySelector(".muted").textContent="Aguardando primeira coleta de soja";}})();
+ (async()=>{try{const d=await getSoyHistory();soyRow.querySelector(".pill").textContent="R$ "+fmtSoy(d.converted_latest.brl_per_60kg_bag)+"/saca 60 kg";soyRow.querySelector(".muted").textContent="CBOT · equivalente PTAX · "+soyDate(d.converted_latest.date)+" · clique para média dos 3 pregões";}catch(e){soyRow.querySelector(".pill").textContent="Aguardando conversão PTAX";soyRow.querySelector(".muted").textContent="Soja · R$/saca 60 kg · aguardando atualização";}})();
 }
 
 const brentRow=[...document.querySelectorAll("#quotes .item")].find(el=>el.querySelector("strong")?.textContent==="Petróleo Brent");
