@@ -7,8 +7,8 @@
 :root{font-family:Inter,Arial,sans-serif;color:#193b35;background:#f3f6f1}*{box-sizing:border-box}body{margin:0;padding:clamp(16px,2vw,34px)}header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}h1{font-size:clamp(24px,2.4vw,44px);margin:4px 0;color:#124d3c}h2{font-size:clamp(20px,1.5vw,30px);margin:0 0 18px}small,.muted{color:#687e74}.brand{font-size:14px;font-weight:800;letter-spacing:.16em;color:#a47b28}.status{background:#e2ece3;border-radius:14px;padding:12px 18px;font-size:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;min-height:calc(100vh - 150px)}section{background:#fff;border:1px solid #dce6db;border-radius:20px;padding:clamp(18px,2vw,30px);box-shadow:0 8px 28px #183c2810}.item{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid #e8eee8;padding:13px 0}.item:last-child{border:0}.item strong{font-size:clamp(17px,1.3vw,25px)}.pill{font-size:12px;background:#f6eecf;color:#866415;padding:6px 10px;border-radius:20px;white-space:nowrap}.placeholder{background:#f5f8f4;border-left:4px solid #b6c9b7;padding:16px;border-radius:10px;line-height:1.5;margin:12px 0}.countries{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.countries span{border:1px solid #d6e2d6;border-radius:24px;padding:9px 14px;font-weight:600}.foot{font-size:12px;margin-top:14px;color:#60766d}button{border:0;border-radius:10px;background:#145b45;color:#fff;padding:10px 16px;cursor:pointer}a{color:#145b45}@media(max-width:850px){.grid{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}}@media(min-width:1800px){body{padding:36px}.grid{gap:28px}section{padding:36px}.item{padding:22px 0}}
  .intel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}.intel-card{border:1px solid #dce6db;border-radius:14px;padding:16px;background:#fbfdfb;min-width:0}.intel-card h3{margin:7px 0 12px;font-size:19px}.intel-kicker{font-size:10px;font-weight:800;letter-spacing:.12em;color:#8b702c}.intel-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.intel-metrics>div{background:#f0f5ef;border-radius:10px;padding:10px}.intel-metrics strong{display:block;font-size:18px;color:#145b45}.intel-metrics small{display:block;font-size:11px;color:#687e74;margin-top:4px}.intel-summary{font-size:13px;line-height:1.5;color:#425b50;min-height:40px}.intel-card details{border-top:1px solid #e2eae1;padding-top:10px;margin-top:10px}.intel-card summary{cursor:pointer;font-weight:700;color:#145b45;font-size:13px}.intel-detail{padding-top:10px;font-size:13px;line-height:1.55}.intel-level{background:#f2f6f1;border-radius:10px;padding:12px}.intel-level p{margin:7px 0}.intel-level small{color:#687e74}.intel-analysis{margin-top:10px!important}.intel-analysis p{font-size:13px}@media(max-width:850px){.intel-grid{grid-template-columns:1fr}}
 
-.usd-clickable{cursor:pointer;border:1px solid transparent;border-radius:10px;padding-left:8px;padding-right:8px;transition:border-color .15s,background .15s}
-.usd-clickable:hover,.usd-clickable:focus{border-color:#B7FF00;background:#111;outline:none}
+.usd-clickable,.brent-clickable{cursor:pointer;border:1px solid transparent;border-radius:10px;padding-left:8px;padding-right:8px;transition:border-color .15s,background .15s}
+.usd-clickable:hover,.usd-clickable:focus,.brent-clickable:hover,.brent-clickable:focus{border-color:#B7FF00;background:#111;outline:none}
 #usd-intraday-panel{margin-top:12px;color:#fff}
 #usd-intraday-panel .item{padding:8px 4px}
 /* TRADING GLOBAL — tema preto, branco e verde-lima */ .mpob-price-highlight{display:inline-block;background:#B7FF00!important;color:#050505!important;padding:7px 11px;border-radius:9px;font-weight:800;line-height:1.25;margin:3px 0}
@@ -161,11 +161,11 @@ const quotes=[
  ["Soja em grão","CBOT · contrato Jan/2027 · R$/saca de 60 kg","158,49","Equivalente calculado sobre fechamento de 20/11/2026 · PTAX venda de 19/11/2026"],
  ["USD/BRL","Banco Central · BRL por USD","5,8889","PTAX venda · 19/11/2026"],
  ["USD/MYR","MYR por USD","4,1133","Referência cambial · 20/11/2026"],
- ["Petróleo Brent","USD/barril","92,57","20/11/2026 · referência de mercado"]
+ ["Petróleo Brent","EIA/FRED · Brent spot · USD/barril",null,"Aguardando histórico oficial verificado"]
 ];
 const quoteCurrency={"Óleo de palma bruto (CPO)":"MYR ","Óleo de soja":"US¢ ","Soja em grão":"R$ ","USD/BRL":"R$ ","USD/MYR":"MYR ","Petróleo Brent":"US$ "};
 const quoteSuffix={"Óleo de palma bruto (CPO)":"/t","Óleo de soja":"/lb","Soja em grão":"/saca 60 kg","USD/BRL":" por US$ 1","USD/MYR":" por US$ 1","Petróleo Brent":"/barril"};
-document.getElementById("quotes").innerHTML=quotes.map(([name,source,value,detail])=>'<div class="item '+(name==="USD/BRL"?"usd-clickable":"")+'" '+(name==="USD/BRL"?'role="button" tabindex="0" aria-label="Abrir histórico intradiário do dólar"':"")+'><div><strong>'+name+'</strong><div class="muted">'+source+' · '+detail+(name==="USD/BRL"?' · Clique para ver histórico intradiário':"")+'</div></div><span class="pill">'+(value?(quoteCurrency[name]||"")+value+(quoteSuffix[name]||""):"Sem cotação verificada")+'</span></div>').join("");
+document.getElementById("quotes").innerHTML=quotes.map(([name,source,value,detail])=>'<div class="item '+(name==="USD/BRL"?"usd-clickable":name==="Petróleo Brent"?"brent-clickable":"")+'" '+(name==="USD/BRL"?'role="button" tabindex="0" aria-label="Abrir histórico intradiário do dólar"':name==="Petróleo Brent"?'role="button" tabindex="0" aria-label="Abrir histórico diário do petróleo Brent"':"")+'><div><strong>'+name+'</strong><div class="muted">'+source+' · '+detail+(name==="USD/BRL"?' · Clique para ver histórico intradiário':name==="Petróleo Brent"?' · Clique para ver histórico diário':"")+'</div></div><span class="pill">'+(value?(quoteCurrency[name]||"")+value+(quoteSuffix[name]||""):"Sem cotação verificada")+'</span></div>').join("");
 
 const usdRow = [...document.querySelectorAll("#quotes .item")].find(el=>el.querySelector("strong")?.textContent==="USD/BRL");
 if(usdRow){
@@ -173,6 +173,47 @@ if(usdRow){
  usdRow.addEventListener("click",openUsdHistory);
  usdRow.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openUsdHistory();}});
 }
+
+const brentRow=[...document.querySelectorAll("#quotes .item")].find(el=>el.querySelector("strong")?.textContent==="Petróleo Brent");
+const brentFmt=v=>Number(v).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+const brentDate=s=>String(s).slice(8,10)+"/"+String(s).slice(5,7)+"/"+String(s).slice(0,4);
+async function fetchBrentData(){
+ const r=await fetch("data/brent-history.json",{cache:"no-store"});
+ if(!r.ok)throw Error("Histórico ainda não publicado pelo GitHub Actions");
+ const d=await r.json();
+ if(d.series!=="DCOILBRENTEU"||!Array.isArray(d.last_three)||d.last_three.length<2||!(Number(d.latest?.value)>0)||!(Number(d.baseline_30d?.value)>0))throw Error("Dados Brent incompletos");
+ const pts=d.last_three;
+ if(pts.some(p=>!/^\\d{4}-\\d{2}-\\d{2}$/.test(p.date)||!(Number(p.value)>0)))throw Error("Observações inválidas");
+ return d;
+}
+if(brentRow){
+ const openBrent=async()=>{
+  let panel=document.getElementById("brent-history-panel");
+  if(panel){panel.remove();return;}
+  panel=document.createElement("div");panel.id="brent-history-panel";panel.className="placeholder";brentRow.insertAdjacentElement("afterend",panel);
+  panel.textContent="Consultando histórico Brent...";
+  try{
+   const d=await fetchBrentData(),pts=d.last_three,values=pts.map(p=>Number(p.value));
+   const low=Math.min(...values),high=Math.max(...values),range=Math.max(0.01,high-low),W=660,H=235,L=65,R=60,T=35,B=52;
+   const x=i=>L+i*(W-L-R)/(pts.length-1),y=v=>H-B-(v-low)/range*(H-T-B);
+   const line=pts.map((p,i)=>x(i)+","+y(p.value)).join(" ");
+   const marks=pts.map((p,i)=>'<g><circle cx="'+x(i)+'" cy="'+y(p.value)+'" r="3" fill="#B7FF00" stroke="#050505" stroke-width="1"/><text x="'+x(i)+'" y="'+Math.max(17,y(p.value)-13)+'" fill="#B7FF00" text-anchor="middle" font-size="13">US$ '+brentFmt(p.value)+'</text><text x="'+x(i)+'" y="'+(H-17)+'" fill="#FFFFFF" text-anchor="middle" font-size="13">'+brentDate(p.date).slice(0,5)+'</text><title>'+brentDate(p.date)+' · US$ '+brentFmt(p.value)+'/barril</title></g>').join("");
+   const delta=Number(d.latest.value)-Number(d.baseline_30d.value),pct=(Number(d.latest.value)/Number(d.baseline_30d.value)-1)*100;
+   const stale=(Date.now()-Date.parse(d.latest.date+"T00:00:00Z"))>5*86400000;
+   panel.innerHTML='<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><strong>Brent spot · três últimas observações</strong><button type="button" id="close-brent">Fechar</button></div>'+
+    '<p class="muted">EIA via FRED · USD/barril · referência diária, não cotação em tempo real'+(stale?' · publicação defasada':'')+'</p>'+
+    '<div class="intel-metrics" style="margin:12px 0"><div><strong>US$ '+brentFmt(d.baseline_30d.value)+'</strong><small>30 dias · '+brentDate(d.baseline_30d.date)+'</small></div><div><strong>US$ '+brentFmt(d.latest.value)+'</strong><small>Última observação · '+brentDate(d.latest.date)+'</small></div></div>'+
+    '<p><strong>Variação em 30 dias:</strong> '+(delta>=0?'+':'')+brentFmt(delta)+' USD/barril ('+(pct>=0?'+':'')+pct.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})+'%)</p>'+
+    '<div style="width:100%;overflow:hidden;background:#080808;border:1px solid #333;border-radius:12px;padding:8px"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Brent nos últimos três dias com dados disponíveis" style="width:100%;height:auto;display:block"><line x1="'+L+'" y1="'+(H-B)+'" x2="'+(W-R)+'" y2="'+(H-B)+'" stroke="#666"/><polyline points="'+line+'" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>'+marks+'</svg></div>'+
+    '<p class="foot">Máximo: US$ '+brentFmt(high)+' · mínimo: US$ '+brentFmt(low)+' · variação entre três observações: '+(values.at(-1)-values[0]).toLocaleString("pt-BR",{maximumFractionDigits:2})+' USD/barril. Fonte: EIA/FRED (DCOILBRENTEU). Coleta: '+String(d.updated_at_utc||"não informada").slice(0,16)+' UTC.</p>';
+   panel.querySelector("#close-brent").addEventListener("click",()=>panel.remove());
+  }catch(e){panel.innerHTML='<strong>Brent · histórico indisponível</strong><p>'+String(e.message).replace(/[<>]/g,"")+'</p><button type="button" id="close-brent">Fechar</button>';panel.querySelector("#close-brent").addEventListener("click",()=>panel.remove());}
+ };
+ brentRow.addEventListener("click",openBrent);
+ brentRow.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openBrent();}});
+ (async()=>{try{const d=await fetchBrentData();const meta=brentRow.querySelector(".muted"),pill=brentRow.querySelector(".pill");meta.textContent="EIA/FRED · Brent spot · "+brentDate(d.latest.date)+" · referência diária";pill.textContent="US$ "+brentFmt(d.latest.value)+"/barril";}catch(e){brentRow.querySelector(".muted").textContent="EIA/FRED · aguardando primeira coleta verificada";}})();
+}
+
 async function loadUsdIntradayHistory(){
  let panel=document.getElementById("usd-intraday-panel");
  if(!panel){panel=document.createElement("div");panel.id="usd-intraday-panel";panel.className="placeholder";usdRow.insertAdjacentElement("afterend",panel);}
