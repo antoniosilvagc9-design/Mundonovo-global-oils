@@ -1,0 +1,48 @@
+name: Testar download semanal MPOB
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  testar-download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Baixar e validar Excel de setembro de 2026
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request, zipfile, os
+          from pathlib import Path
+          url = "https://price.mpob.gov.my/excel/weekly/weekly_report/20260901"
+          output = Path("mpob_semanal_2026_09.xlsx")
+          req = urllib.request.Request(url, headers={"User-Agent": "MundoNovo-MPOB-validation/1.0", "Accept": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/octet-stream"})
+          try:
+              with urllib.request.urlopen(req, timeout=35) as response:
+                  content_type = response.headers.get("Content-Type", "desconhecido")
+                  data = response.read(15 * 1024 * 1024 + 1)
+                  print(f"HTTP: {response.status}; Content-Type: {content_type}; bytes: {len(data)}")
+                  if len(data) > 15 * 1024 * 1024:
+                      raise ValueError("Arquivo maior que 15 MB; download interrompido")
+                  output.write_bytes(data)
+              if not zipfile.is_zipfile(output):
+                  raise ValueError("Resposta nao e um arquivo XLSX (ZIP) valido; pode ser HTML/login")
+              with zipfile.ZipFile(output) as z:
+                  names = z.namelist()
+                  if "[Content_Types].xml" not in names or not any(n.startswith("xl/workbook") for n in names):
+                      raise ValueError("ZIP nao contem estrutura de workbook Excel")
+                  print("SUCESSO: XLSX valido; entradas internas:", len(names))
+          except Exception as e:
+              print(f"FALHA no teste MPOB: {type(e).__name__}: {e}")
+              raise
+          PY
+      - name: Disponibilizar planilha validada
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mpob-semanal-setembro-2026
+          path: mpob_semanal_2026_09.xlsx
+          retention-days: 7
