@@ -75,11 +75,22 @@ details[open]>.intel-detail,details[open]>p,details[open]>details{animation:exec
 #quotes .item:hover{background:#181818}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 @media(max-width:600px){.executive-nav a{font-size:11px;padding:7px 10px}.executive-toolbar{align-items:stretch}.executive-toolbar button{flex:1}}
+
+/* Painel de síntese executiva baseado apenas em fontes disponíveis */
+.executive-brief{border:1px solid #3b3b3b;background:#0e0e0e;border-radius:16px;padding:clamp(14px,2vw,22px);margin-bottom:18px}
+.executive-brief h2{font-size:clamp(17px,1.5vw,23px);margin:4px 0 8px}
+.executive-brief-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+.executive-brief-card{background:#151515;border:1px solid #333;border-radius:12px;padding:13px;min-width:0}
+.executive-brief-card .metric{font-size:clamp(19px,2vw,27px);font-weight:800;color:#B7FF00;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.executive-brief-card .caption{font-size:12px;color:#c7c7c7;margin-top:6px;line-height:1.5}
+.executive-brief-card .label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.executive-brief .executive-warning{font-size:12px;color:#ccc;margin:12px 0 0}
+@media(max-width:700px){.executive-brief-grid{grid-template-columns:1fr}.executive-brief-card{padding:11px}}
 </style>
 </head>
 <body>
 <header><div><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="status"><div id="clock"></div><strong>Dados oficiais históricos • sem cotações em tempo real</strong></div></header>
-<nav class="executive-nav" aria-label="Navegação executiva"><a href="#executive-section-1">Cotações</a><a href="#executive-section-2">Oferta e demanda</a><a href="#executive-section-3">MPOB</a><a href="#news-section">Notícias</a><a href="#executive-section-5">Inteligência</a></nav><div class="executive-toolbar"><button type="button" id="executive-expand">Expandir análises</button><button type="button" id="executive-collapse">Recolher análises</button><span class="executive-note">Painel executivo · <b>dados com datas e fontes próprias</b> · sem recomendação automática de operação</span></div><main class="grid">
+<nav class="executive-nav" aria-label="Navegação executiva"><a href="#executive-section-1">Cotações</a><a href="#executive-section-2">Oferta e demanda</a><a href="#executive-section-3">MPOB</a><a href="#news-section">Notícias</a><a href="#executive-section-5">Inteligência</a></nav><div class="executive-toolbar"><button type="button" id="executive-expand">Expandir análises</button><button type="button" id="executive-collapse">Recolher análises</button><span class="executive-note">Painel executivo · <b>dados com datas e fontes próprias</b> · sem recomendação automática de operação</span></div><aside class="executive-brief" aria-label="Resumo executivo do mercado"><div class="intel-kicker">MUNDO NOVO · EXECUTIVE MARKET BRIEF</div><h2>Visão do diretor</h2><div class="muted">Síntese automática de indicadores disponíveis · sem recomendação de negociação</div><div class="executive-brief-grid"><div class="executive-brief-card"><div class="label">USD/BRL · PTAX venda</div><div class="metric" id="exec-usd">Aguardando dados</div><div class="caption" id="exec-usd-meta">Fonte: Banco Central do Brasil</div></div><div class="executive-brief-card"><div class="label">Variação · 3 pregões</div><div class="metric" id="exec-variation">Aguardando dados</div><div class="caption" id="exec-variation-meta">Comparação entre os dois pontos extremos disponíveis; não é cotação em tempo real</div></div><div class="executive-brief-card"><div class="label">Radar de notícias · 24h</div><div class="metric" id="exec-news">Aguardando dados</div><div class="caption" id="exec-news-meta">Somente manchetes RSS com data e fonte; impacto preliminar</div></div></div><p class="executive-warning">Atenção: cotações, notícias e indicadores podem ter horários de referência diferentes. Confira a fonte antes de qualquer decisão comercial.</p></aside><main class="grid">
 <section><h2>01 · Cotações internacionais</h2><div id="quotes"></div><div class="foot">Fontes previstas: Bursa Malaysia, CME Group, Banco Central e EIA. Acesso em tempo real sujeito a licença e disponibilidade de API.</div></section>
 <section class="intel-section"><h2>02 · Oferta e demanda global</h2><p class="muted">Resumo executivo · clique em cada quadro para abrir os dados e a leitura comercial</p><div class="countries"><span>🇲🇾 Malásia</span><span>🇮🇩 Indonésia</span><span>🇨🇳 China</span><span>🇮🇳 Índia</span><span>🇧🇷 Brasil</span></div>
 <div class="intel-grid">
@@ -358,4 +369,32 @@ document.querySelectorAll(".intel-metrics").forEach(el=>{
  const source=parent?.querySelector(".intel-level small")?.textContent||"";
  if(source){const span=document.createElement("span");span.textContent=source;meta.appendChild(span);el.insertAdjacentElement("afterend",meta);}
 });
+</script><script>
+/* Resumo executivo: calcula apenas a partir dos arquivos oficiais existentes. */
+(async function loadExecutiveBrief(){
+ const byId=id=>document.getElementById(id);
+ const dateBR=v=>{const d=new Date(v);return Number.isNaN(d.getTime())?String(v):d.toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo",day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"});};
+ const load=async file=>{const response=await fetch("data/"+file,{cache:"no-store"});if(!response.ok)throw Error("Arquivo indisponível");return response.json();};
+ try{
+  const usd=await load("usd-brl.json");
+  const val=Number(usd.value);
+  if(!(val>0))throw Error("Valor inválido");
+  byId("exec-usd").textContent="R$ "+val.toLocaleString("pt-BR",{minimumFractionDigits:4,maximumFractionDigits:4});
+  byId("exec-usd-meta").textContent="PTAX venda · referência "+(usd.reference_datetime||"não informada")+" · coleta "+dateBR(usd.fetched_at_utc);
+ }catch(e){byId("exec-usd").textContent="Indisponível";byId("exec-usd-meta").textContent="Não foi possível validar a cotação PTAX.";}
+ try{
+  const hist=await load("usd-brl-history.json");
+  const pts=(hist.points||[]).filter(p=>Number(p.value)>0&&p.time).sort((a,b)=>String(a.time).localeCompare(String(b.time)));
+  if(pts.length<2)throw Error("Histórico insuficiente");
+  const first=Number(pts[0].value),last=Number(pts[pts.length-1].value),delta=(last/first-1)*100;
+  byId("exec-variation").textContent=(delta>=0?"+":"")+delta.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})+"%";
+  byId("exec-variation-meta").textContent=pts[0].time.slice(0,10)+" → "+pts[pts.length-1].time.slice(0,10)+" · PTAX venda · "+pts.length+" pregões";
+ }catch(e){byId("exec-variation").textContent="Indisponível";byId("exec-variation-meta").textContent="Histórico oficial insuficiente ou indisponível.";}
+ try{
+  const news=await load("market-news.json");
+  const recent=(news.news||[]).filter(n=>{const t=Date.parse(n.published_at);return Number.isFinite(t)&&t<=Date.now()&&Date.now()-t<=86400000;});
+  byId("exec-news").textContent=recent.length+" notícias";
+  byId("exec-news-meta").textContent=recent.filter(n=>n.impact==="Alto").length+" classificadas como alto impacto potencial · coleta "+dateBR(news.updated_at_utc);
+ }catch(e){byId("exec-news").textContent="Indisponível";byId("exec-news-meta").textContent="Feed de notícias não validado.";}
+})();
 </script></body></html>
