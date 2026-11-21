@@ -8,17 +8,37 @@
 </style>
 </head>
 <body>
-<header><div><div class="brand">MUNDO NOVO</div><h1>Global Oils Intelligence</h1><div class="muted">Visão internacional • óleos vegetais • inteligência de mercado</div></div><div class="status"><div id="clock"></div><strong>Modo demonstração — sem dados ao vivo</strong></div></header>
+<header><div><div class="brand">MUNDO NOVO</div><h1>Global Oils Intelligence</h1><div class="muted">Visão internacional • óleos vegetais • inteligência de mercado</div></div><div class="status"><div id="clock"></div><strong>Dados oficiais históricos • sem cotações em tempo real</strong></div></header>
 <main class="grid">
 <section><h2>01 · Cotações internacionais</h2><div id="quotes"></div><div class="foot">Fontes previstas: Bursa Malaysia, CME Group, Banco Central e EIA. Acesso em tempo real sujeito a licença e disponibilidade de API.</div></section>
 <section><h2>02 · Oferta e demanda global</h2><p class="muted">Mercados estratégicos monitorados</p><div class="countries"><span>🇲🇾 Malásia</span><span>🇮🇩 Indonésia</span><span>🇨🇳 China</span><span>🇮🇳 Índia</span><span>🇧🇷 Brasil</span></div><div class="placeholder"><strong>MPOB · Malásia</strong><br>Produção de óleo de palma bruto, estoques finais e exportações mensais.<br><span class="muted">Status: aguardando integração de dados oficiais; nenhum número exibido sem validação.</span></div><p><a href="https://bepi.mpob.gov.my/" target="_blank" rel="noopener noreferrer">Consultar estatísticas oficiais do MPOB</a></p><p><a href="https://www.mpob.gov.my/" target="_blank" rel="noopener noreferrer">Portal oficial Malaysian Palm Oil Board</a></p><div class="foot">Fontes previstas: MPOB, USDA, Comex Stat e estatísticas oficiais.</div></section>
-<section><h2>03 · Notícias e acontecimentos</h2><div class="placeholder">O feed automático ainda não está conectado. Futuras notícias serão exibidas com título, veículo, link e horário de publicação.</div><p class="muted">Temas: políticas de biodiesel, clima, fretes marítimos, tarifas e comércio internacional.</p></section>
-<section><h2>04 · Inteligência de mercado</h2><div class="placeholder"><strong>Leitura analítica ainda não disponível.</strong> Quando houver dados verificáveis, este espaço mostrará movimentos relevantes, possíveis impactos e oportunidades, sempre com fontes e data.</div><p class="muted">Análises previstas: spreads, câmbio, custos de importação e sinais de oferta e demanda.</p><button onclick="location.reload()">Atualizar painel</button></section>
+<section><h2>03 · Preços semanais MPOB</h2><div id="mpob-weekly" class="placeholder">Carregando preços semanais oficiais...</div><div class="foot">Valores históricos publicados pelo MPOB, em ringgits malaios por tonelada. Não são cotações em tempo real.</div></section><section><h2>04 · Notícias e acontecimentos</h2><div class="placeholder">O feed automático ainda não está conectado. Futuras notícias serão exibidas com título, veículo, link e horário de publicação.</div><p class="muted">Temas: políticas de biodiesel, clima, fretes marítimos, tarifas e comércio internacional.</p></section>
+<section><h2>05 · Inteligência de mercado</h2><div class="placeholder"><strong>Leitura analítica ainda não disponível.</strong> Quando houver dados verificáveis, este espaço mostrará movimentos relevantes, possíveis impactos e oportunidades, sempre com fontes e data.</div><p class="muted">Análises previstas: spreads, câmbio, custos de importação e sinais de oferta e demanda.</p><button onclick="location.reload()">Atualizar painel</button></section>
 </main>
 <script>
 const quotes=[["Óleo de palma","Bursa Malaysia • MYR/t"],["Óleo de soja","CBOT • USD/lb"],["Soja","CBOT • USD/bushel"],["USD/BRL","Banco Central • BRL"],["USD/MYR","Mercado cambial"],["Petróleo Brent","Mercado internacional • USD/barril"]];
 document.getElementById("quotes").innerHTML=quotes.map(([name,source])=>'<div class="item"><div><strong>'+name+'</strong><div class="muted">'+source+'</div></div><span class="pill">Aguardando fonte</span></div>').join("");
 async function loadDollar(){try{const response=await fetch("data/usd-brl.json",{cache:"no-store"});if(!response.ok)throw Error("Sem arquivo");const data=await response.json();const rows=[...document.querySelectorAll("#quotes .item")];const row=rows.find(el=>el.querySelector("strong")?.textContent==="USD/BRL");if(!row)return;row.querySelector(".pill").textContent=Number(data.value).toLocaleString("pt-BR",{style:"currency",currency:"BRL",minimumFractionDigits:4,maximumFractionDigits:4});row.querySelector(".pill").title="PTAX venda; não é cotação em tempo real";row.querySelector(".muted").textContent="PTAX venda · "+data.reference_datetime+" · Banco Central";}catch(e){console.info("PTAX ainda não disponível:",e.message)}}loadDollar();setInterval(loadDollar,15*60*1000);
+
+async function loadMpobWeekly(){
+ const target=document.getElementById("mpob-weekly");
+ try{
+  const response=await fetch("data/mpob-weekly-prices.json",{cache:"no-store"});
+  if(!response.ok)throw Error("Arquivo indisponível");
+  const data=await response.json();
+  const months=Array.isArray(data.months)?data.months:[];
+  const records=months.flatMap(m=>Array.isArray(m.records)?m.records:[]);
+  const latest=records.filter(x=>x.region==="MALAYSIA"&&Number.isFinite(x.price_rm_per_tonne));
+  const products=["Crude Palm Oil (Local Delivered)","Palm Kernel (Ex-Mill)","Crude Palm Kernel Oil (Local Delivered)"];
+  const labels=["Óleo de palma bruto (CPO)","Palmiste","Óleo bruto de palmiste (CPKO)"];
+  const results=products.map((p,i)=>{const items=latest.filter(x=>x.product===p);const last=items.at(-1);return last?{label:labels[i],value:last.price_rm_per_tonne,period:last.month+" · "+last.week}:null}).filter(Boolean);
+  if(!results.length)throw Error("Nenhum preço nacional válido");
+  const fmt=v=>v.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+  target.innerHTML="<strong>Malásia · preços semanais oficiais</strong>"+results.map(x=>'<div class="item"><div><strong>'+x.label+'</strong><div class="muted">'+x.period+'</div></div><div><strong>RM '+fmt(x.value)+'</strong><div class="muted">por tonelada</div></div></div>').join("")+'<div class="foot">Meses importados: '+months.length+' · Atualização do arquivo: '+new Date(data.fetched_at_utc).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo"})+' (Brasília)</div>';
+ }catch(e){target.textContent="Preços semanais indisponíveis: "+e.message}
+}
+loadMpobWeekly();setInterval(loadMpobWeekly,60*60*1000);
+
 function tick(){document.getElementById("clock").textContent=new Intl.DateTimeFormat("pt-BR",{dateStyle:"full",timeStyle:"medium",timeZone:"America/Sao_Paulo"}).format(new Date())+" · Brasília"}tick();setInterval(tick,1000);
 </script>
 </body></html>
