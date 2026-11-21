@@ -45,6 +45,21 @@ a{color:#B7FF00!important}
 <section><h2>05 · Inteligência de mercado</h2><div class="placeholder"><strong>Leitura analítica ainda não disponível.</strong> Quando houver dados verificáveis, este espaço mostrará movimentos relevantes, possíveis impactos e oportunidades, sempre com fontes e data.</div><p class="muted">Análises previstas: spreads, câmbio, custos de importação e sinais de oferta e demanda.</p><button onclick="location.reload()">Atualizar painel</button></section>
 </main>
 <script>
+// Mantém os detalhamentos dos quadros 01 e 02 alinhados
+const pairedCards = document.querySelectorAll(".intel-card");
+if (pairedCards.length >= 2) {
+  const firstDetail = pairedCards[0].querySelector(":scope > details");
+  const secondDetail = pairedCards[1].querySelector(":scope > details");
+  if (firstDetail && secondDetail) {
+    firstDetail.addEventListener("toggle", () => {
+      if (secondDetail.open !== firstDetail.open) secondDetail.open = firstDetail.open;
+    });
+    secondDetail.addEventListener("toggle", () => {
+      if (firstDetail.open !== secondDetail.open) firstDetail.open = secondDetail.open;
+    });
+  }
+}
+
 const quotes=[
  ["Óleo de palma bruto (CPO)","Bursa Malaysia · MYR/t","4.217,00","21/11/2026 · referência de mercado"],
  ["Óleo de soja","CBOT · centavos USD/lb","60,01","21/11/2026 · referência de mercado"],
