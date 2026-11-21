@@ -18,6 +18,7 @@
 <script>
 const quotes=[["Óleo de palma","Bursa Malaysia • MYR/t"],["Óleo de soja","CBOT • USD/lb"],["Soja","CBOT • USD/bushel"],["USD/BRL","Banco Central • BRL"],["USD/MYR","Mercado cambial"],["Petróleo Brent","Mercado internacional • USD/barril"]];
 document.getElementById("quotes").innerHTML=quotes.map(([name,source])=>'<div class="item"><div><strong>'+name+'</strong><div class="muted">'+source+'</div></div><span class="pill">Aguardando fonte</span></div>').join("");
+async function loadDollar(){try{const response=await fetch("data/usd-brl.json",{cache:"no-store"});if(!response.ok)throw Error("Sem arquivo");const data=await response.json();const rows=[...document.querySelectorAll("#quotes .item")];const row=rows.find(el=>el.querySelector("strong")?.textContent==="USD/BRL");if(!row)return;row.querySelector(".pill").textContent=Number(data.value).toLocaleString("pt-BR",{style:"currency",currency:"BRL",minimumFractionDigits:4,maximumFractionDigits:4});row.querySelector(".pill").title="PTAX venda; não é cotação em tempo real";row.querySelector(".muted").textContent="PTAX venda · "+data.reference_datetime+" · Banco Central";}catch(e){console.info("PTAX ainda não disponível:",e.message)}}loadDollar();setInterval(loadDollar,15*60*1000);
 function tick(){document.getElementById("clock").textContent=new Intl.DateTimeFormat("pt-BR",{dateStyle:"full",timeStyle:"medium",timeZone:"America/Sao_Paulo"}).format(new Date())+" · Brasília"}tick();setInterval(tick,1000);
 </script>
 </body></html>
