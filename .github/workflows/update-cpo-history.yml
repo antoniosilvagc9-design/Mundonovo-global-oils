@@ -1,8 +1,6 @@
 name: Atualizar CPO MPOB
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '26 */3 * * *'
 permissions:
   contents: write
 jobs:
