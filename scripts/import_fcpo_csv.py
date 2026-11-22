@@ -30,7 +30,11 @@ def parse(path):
     dates={r['date'] for r in records}
     if len(dates)!=1:raise ValueError('Datas diferentes no CSV')
     day=next(iter(dates))
-    if path.name.startswith('derivative_trading_statistic_') and path.name!='derivative_trading_statistic_'+day.replace('-','')+'.csv':
+    # Downloaders may append a numeric copy suffix, e.g. ' (1)', to the official filename.
+    # Preserve the date check for canonical filenames while accepting such copies.
+    import re
+    match=re.fullmatch(r'derivative_trading_statistic_(\d{8})(?: \(\d+\))?\.csv',path.name)
+    if match and match.group(1)!=day.replace('-',''):
         raise ValueError('Data no nome difere da data no CSV')
     traded=[r for r in records if r['volume']>0]
     if not traded:raise ValueError('Sem contratos negociados')
