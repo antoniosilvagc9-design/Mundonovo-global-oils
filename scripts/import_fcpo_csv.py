@@ -41,11 +41,19 @@ def parse(path):
     selected=max(traded,key=lambda r:(r['volume'],r['open_interest'],r['contract_month']))
     return {'date':day,'source_file':path.name,'source_url':BASE+day.replace('-','')+'.csv',
       'selected':selected,'total_fcpo_volume':sum(r['volume'] for r in records),'contracts_count':len(records)}
-def build(paths):
+def build(paths, existing=None):
     records={}
+    if existing and Path(existing).is_file():
+        old=json.loads(Path(existing).read_text(encoding='utf-8'))
+        if old.get('instrument')!='FCPO' or old.get('contract_policy')!='highest_daily_volume':
+            raise ValueError('Histórico existente incompatível')
+        for item in old.get('observations',[]):
+            if item.get('date') and item.get('selected',{}).get('settlement_myr_per_tonne',0)>0:
+                records[item['date']]=item
     for p in paths:
         x=parse(p)
-        if x['date'] in records:raise ValueError('Data duplicada')
+        if x['date'] in records and records[x['date']]['selected']!=x['selected']:
+            raise ValueError('Conflito entre dados existentes e CSV para '+x['date'])
         records[x['date']]=x
     ordered=[records[k] for k in sorted(records)]
     latest=ordered[-1];three=ordered[-3:]
@@ -62,7 +70,7 @@ def build(paths):
       'note':'Rolling most-liquid contract: changes of contract may affect comparisons. Offline import only.'}
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('files',nargs='+');ap.add_argument('--output')
-    args=ap.parse_args();out=build(args.files)
+    ap.add_argument('--existing');args=ap.parse_args();out=build(args.files,args.existing)
     if args.output:
         p=Path(args.output);p.parent.mkdir(parents=True,exist_ok=True)
         p.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
