@@ -50,7 +50,7 @@ def parse_daily(payload, market_id, symbol):
         raise ValueError("Provider currency missing")
     # Market status is not inferred from weekdays: exchange calendars vary.
     return {"id": market_id, "price": latest[1], "previous_close": previous[1],
-            "currency": currency, "as_of": latest[0].isoformat()+"T23:59:59Z",
+            "currency": currency, "as_of": latest[0].isoformat(),
             "market_status": "STATUS NÃO CONFIRMADO",
             "source": "Twelve Data · fechamento diário", "delayed": True,
             "source_url": "https://twelvedata.com/"}
