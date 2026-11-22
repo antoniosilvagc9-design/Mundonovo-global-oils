@@ -41,7 +41,7 @@ jobs:
               print("::error::Nenhum CSV de estatísticas FCPO com campo set_price encontrado em data/fcpo-inbox/. Faça upload do derivative_trading_statistic, mesmo que o celular renomeie o arquivo.")
               sys.exit(1)
           print(f"Arquivos com estrutura de preços: {len(valid)}")
-          subprocess.run([sys.executable, "scripts/import_fcpo_csv.py", *valid, "--output", "data/cpo-history.json"], check=True)
+          subprocess.run([sys.executable, "scripts/import_fcpo_csv.py", *valid, "--output", "data/cpo-history.json", "--existing", "data/cpo-history.json"], check=True)
           PY
       - name: Publicar somente se JSON mudou
         shell: bash
