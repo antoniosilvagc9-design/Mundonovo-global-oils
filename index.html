@@ -249,35 +249,7 @@ if(cpoRow){
    const summary='<div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><strong>FCPO · Bursa Malaysia · MYR/t</strong><button type="button" id="close-cpo">Fechar</button></div>'+
     '<p class="muted">Liquidação oficial · '+cpoDate(d.latest.date)+' · vencimento '+latest.contract_month+' · contrato mais líquido'+(stale?' · DADO DEFASADO':'')+'</p>'+
     '<div class="intel-metrics" style="margin:12px 0"><div><strong>MYR '+cpoFmt(latest.settlement_myr_per_tonne)+'</strong><small>Última liquidação validada</small></div><div><strong>'+Number(latest.volume).toLocaleString("pt-BR")+'</strong><small>Volume do vencimento</small></div><div><strong>'+Number(latest.open_interest).toLocaleString("pt-BR")+'</strong><small>Contratos em aberto</small></div></div>';
-   if(!valid){
-    panel.innerHTML=summary+'<p class="muted">Histórico oficial parcial: somente '+pts.length+' pregão(ões) validado(s). Abaixo, série de fechamentos reportados pela imprensa, sem classificação de settlement oficial.</p>';
-    panel.querySelector("#close-cpo").onclick=()=>panel.remove();
-    const mediaBox=document.createElement("div");mediaBox.style.cssText="margin-top:14px;border-top:1px solid #444;padding-top:12px";panel.appendChild(mediaBox);
-    try{
-     const mr=await fetch("data/fcpo-media-history.json",{cache:"no-store"});if(!mr.ok)throw Error("Arquivo secundário indisponível");
-     const md=await mr.json();if(md.price_type!=="reported_media_close"||!Array.isArray(md.observations))throw Error("Tipo de fonte inválido");
-     const m=md.observations.filter(p=>Number(p.close_myr_per_tonne)>0&&/^\\d{4}-\\d{2}-\\d{2}$/.test(p.date)).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3);
-     if(m.length!==3)throw Error("Menos de três fechamentos disponíveis");
-     const title=document.createElement("strong");title.textContent="Últimos 3 pregões · fechamento reportado (não oficial)";title.style.color="#B7FF00";mediaBox.appendChild(title);
-     const avg=m.reduce((a,p)=>a+Number(p.close_myr_per_tonne),0)/3;
-     const avgLabel=document.createElement("p");avgLabel.textContent="Média de 3 pregões: MYR "+cpoFmt(avg)+"/t";mediaBox.appendChild(avgLabel);
-     const ordered=m.slice().reverse(),min=Math.min(...ordered.map(p=>p.close_myr_per_tonne)),max=Math.max(...ordered.map(p=>p.close_myr_per_tonne)),range=Math.max(1,max-min);
-     const graph=document.createElement("div");graph.style.cssText="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px";mediaBox.appendChild(graph);
-     ordered.forEach(p=>{
-      const col=document.createElement("div");col.style.cssText="background:#161616;border:1px solid #333;border-radius:10px;padding:10px;min-width:0";
-      const day=document.createElement("div");day.textContent=cpoDate(p.date).slice(0,5);day.style.cssText="font-size:12px;color:#ccc";
-      const value=document.createElement("strong");value.textContent="MYR "+cpoFmt(p.close_myr_per_tonne);value.style.cssText="display:block;margin:8px 0;color:#fff;font-size:clamp(12px,1.6vw,17px)";
-      const track=document.createElement("div");track.style.cssText="height:7px;background:#333;border-radius:6px;overflow:hidden";
-      const bar=document.createElement("div");bar.style.cssText="height:100%;background:#B7FF00;width:"+(15+85*(p.close_myr_per_tonne-min)/range)+"%";track.appendChild(bar);
-      const contract=document.createElement("small");contract.textContent=p.contract_month?"Venc. "+p.contract_month.slice(4)+"/"+p.contract_month.slice(0,4):"Vencimento não informado";contract.style.cssText="display:block;margin-top:8px;color:#aaa";
-      col.append(day,value,track,contract);
-      if(/^https:\\/\\//.test(p.source_url)){const a=document.createElement("a");a.href=p.source_url;a.target="_blank";a.rel="noopener noreferrer";a.textContent="Fonte";a.style.cssText="display:block;margin-top:7px;color:#B7FF00;font-size:12px";col.appendChild(a);}
-      graph.appendChild(col);
-     });
-     const notice=document.createElement("p");notice.style.cssText="font-size:12px;color:#aaa";notice.textContent="Série secundária do CSV Media Biodiesel, importada manualmente. Volume e contratos em aberto indisponíveis para esses dois pregões adicionais. Liquidação oficial permanece separada.";mediaBox.appendChild(notice);
-    }catch(err){mediaBox.textContent="Série secundária indisponível: "+err.message;}
-    return;
-   }
+   if(!valid){panel.innerHTML=summary+'<p class="muted">Histórico parcial: aguardando três pregões reais. Média e gráfico indisponíveis.</p>';panel.querySelector("#close-cpo").onclick=()=>panel.remove();return;}
    const vals=pts.map(p=>Number(p.selected.settlement_myr_per_tonne)),lo=Math.min(...vals),hi=Math.max(...vals),span=Math.max(1,hi-lo),W=660,H=210,L=75,R=75,T=35,B=45;
    const x=i=>L+i*(W-L-R)/2,y=v=>H-B-(v-lo)/span*(H-T-B);
    const marks=pts.map((p,i)=>'<circle cx="'+x(i)+'" cy="'+y(vals[i])+'" r="4" fill="#B7FF00"/><text x="'+x(i)+'" y="'+Math.max(15,y(vals[i])-13)+'" text-anchor="middle" fill="#B7FF00" font-size="12">'+cpoFmt(vals[i])+'</text><text x="'+x(i)+'" y="'+(H-14)+'" text-anchor="middle" fill="#FFFFFF" font-size="12">'+cpoDate(p.date).slice(0,5)+'</text>').join("");
