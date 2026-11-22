@@ -1,0 +1,42 @@
+name: Testar download FCPO Bursa Malaysia
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  testar-download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Testar CSV oficial (20-11-2026)
+        shell: bash
+        run: |
+          set -euo pipefail
+          url="https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261120.csv"
+          echo "Testando URL oficial: $url"
+          status=$(curl --location --silent --show-error --max-time 45 --retry 2 --retry-delay 3 --output /tmp/fcpo.csv --write-out '%{http_code}' -H 'Accept: text/csv,*/*' -A 'TradingGlobal-MundoNovo/1.0 (+GitHub Actions; public-data verification)' "$url")
+          echo "HTTP status: $status"
+          test "$status" = "200" || { echo "::error::Download não retornou HTTP 200"; exit 1; }
+          python - <<'PY'
+          import csv, pathlib
+          p=pathlib.Path('/tmp/fcpo.csv')
+          raw=p.read_bytes()
+          print('Tamanho:',len(raw),'bytes')
+          if len(raw)<100:
+              raise SystemExit('Arquivo muito pequeno')
+          sample=raw[:8192].decode('utf-8-sig',errors='replace')
+          print('Primeiras linhas:',repr(sample[:500]))
+          dialect=csv.Sniffer().sniff(sample,delimiters=',;|\t')
+          with p.open(encoding='utf-8-sig',newline='',errors='replace') as f:
+              reader=csv.DictReader(f,dialect=dialect)
+              print('Colunas:',reader.fieldnames)
+              if not reader.fieldnames or 'set_price' not in [x.strip().lower() for x in reader.fieldnames]:
+                  raise SystemExit('Campo set_price não encontrado; verificar formato')
+              matches=[row for row in reader if 'FCPO' in str(row).upper()]
+          print('Linhas FCPO:',len(matches))
+          for row in matches[:12]:
+              print(row)
+          if not matches:
+              raise SystemExit('Nenhum registro FCPO encontrado')
+          print('TESTE APROVADO: download HTTP 200, CSV legível, set_price e FCPO presentes')
+          PY
