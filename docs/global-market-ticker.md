@@ -23,3 +23,36 @@ O coletor preserva valores validados em caso de falha e só publica novas observ
 `python -m unittest discover -s tests -p 'test_market_ticker.py'`
 
 Os testes verificam parser e falhas, mas não comprovam conectividade/licença. O feed real permanece pendente até configuração e execução autorizada.
+
+
+## Auditoria de fontes gratuitas — 21/11/2026
+
+**Twelve Data Basic:** plano gratuito com 8 créditos por minuto e 800 por dia, destinado a uso interno, testes e desenvolvimento. Os termos exigem autorização específica para redistribuição ou exibição externa; não autorizar publicação pública somente porque a API responde. Fontes:
+- https://twelvedata.com/pricing
+- https://support.twelvedata.com/en/articles/5332349-commercial-and-personal-usage
+- https://twelvedata.com/terms
+
+**Stooq:** há CSVs de fechamento de índices como S&P 500, Nikkei e DAX, porém não foi comprovada licença de redistribuição no dashboard público, nem robustez de coleta não assistida. Não ativar como substituto automático sem permissão explícita.
+
+**Outros candidatos:** B3, CME, Bursa Malaysia, NSE, IDX, SSE, JPX, HKEX, Deutsche Börse, Nasdaq Data Link e FMP exigem avaliação individual de instrumento, API e direitos de exibição. Nenhum foi validado neste ciclo para todos os 12 mercados.
+
+### Matriz de cobertura (status comprovado)
+
+| ID | Instrumento | Coleta autorizada e testada | Último preço publicado |
+|---|---|---|---|
+| dow | Dow Jones Industrial Average | Pendente | Indisponível |
+| sp500 | S&P 500 | Pendente | Indisponível |
+| nasdaq | Nasdaq Composite | Pendente | Indisponível |
+| ibov | Ibovespa | Pendente | Indisponível |
+| cme | E-mini S&P 500 Futures | Pendente | Indisponível |
+| klci | FTSE Bursa Malaysia KLCI | Pendente | Indisponível |
+| nifty | Nifty 50 | Pendente | Indisponível |
+| idx | IDX Composite | Pendente | Indisponível |
+| shcomp | Shanghai Composite | Pendente | Indisponível |
+| nikkei | Nikkei 225 | Pendente | Indisponível |
+| hsi | Hang Seng | Pendente | Indisponível |
+| dax | DAX | Pendente | Indisponível |
+
+O ticker já mostra os 12 nomes e a animação, mas não confunde a interface pronta com uma alimentação de preços funcionando. O arquivo `data/global-market-ticker.json` continua vazio intencionalmente. A automação permanece protegida por `MARKET_DATA_PUBLICATION_AUTHORIZED`.
+
+**Próxima etapa:** obter autorização escrita de exibição pública de dados de fechamento, ou integrar um widget incorporável que tenha termos explícitos de exibição pública e cubra os instrumentos. Um widget não substitui uma API para o JSON e precisa ser identificado como tal.
