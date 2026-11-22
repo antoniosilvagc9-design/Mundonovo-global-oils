@@ -1,0 +1,260 @@
+{
+  "instrument": "FCPO",
+  "market": "Bursa Malaysia Derivatives",
+  "currency": "MYR",
+  "unit": "metric_tonne",
+  "price_type": "reported_media_close",
+  "source_name": "Media Biodiesel",
+  "source_dataset_url": "https://mediabiodiesel.com/harga/bmd-fcpo.csv",
+  "source_file": "bmd-fcpo-mediabiodiesel.csv",
+  "collection_method": "user_supplied_csv_manual_import",
+  "automated": false,
+  "official_settlement": false,
+  "redistribution_license": "not_verified",
+  "notes": [
+    "Historical media-reported close, not an official settlement feed.",
+    "Contracts roll between December 2026, January 2027 and February 2027; earlier contract months unspecified.",
+    "Source CSV records media discrepancies on some dates; consult original CSV and linked reports.",
+    "No volume or open interest in this source."
+  ],
+  "observations": [
+    {
+      "date": "2026-11-20",
+      "close_myr_per_tonne": 4217,
+      "contract_month": "202702",
+      "source_url": "https://www.brecorder.com/news/40449987",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-19",
+      "close_myr_per_tonne": 4333,
+      "contract_month": "202702",
+      "source_url": "https://www.bernama.com/en/market/news.php?id=2636862",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-18",
+      "close_myr_per_tonne": 4387,
+      "contract_month": "202702",
+      "source_url": "https://www.brecorder.com/news/40449549/palm-falls-over-1-on-high-stocks-soft-demand-weak-rival-oils",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-17",
+      "close_myr_per_tonne": 4436,
+      "contract_month": "202702",
+      "source_url": "https://www.bernamabiz.com/news.php?id=2635799",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-16",
+      "close_myr_per_tonne": 4547,
+      "contract_month": "202702",
+      "source_url": "https://www.brecorder.com/news/40449183/palm-falls-on-high-stockpiles-lower-output-expectations-caps-decline",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-13",
+      "close_myr_per_tonne": 4462,
+      "contract_month": "202701",
+      "source_url": "https://www.brecorder.com/news/40448763/palm-oil-post-first-weekly-gain-in-three-weeks",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-12",
+      "close_myr_per_tonne": 4439,
+      "contract_month": "202701",
+      "source_url": "https://www.brecorder.com/news/40448586/palm-extends-gains-on-firmer-rival-dalian",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-11",
+      "close_myr_per_tonne": 4407,
+      "contract_month": "202701",
+      "source_url": "https://www.brecorder.com/news/40448427/palm-climbs-over-3-on-firmer-soyoil-softer-stock-build",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-10",
+      "close_myr_per_tonne": 4260,
+      "contract_month": "202701",
+      "source_url": "https://www.brecorder.com/news/40448259/palm-gains-marginally-after-stocks-rise-below-forecast",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-06",
+      "close_myr_per_tonne": 4258,
+      "contract_month": "202701",
+      "source_url": "https://www.bernamabiz.com/news.php?id=2631133",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-05",
+      "close_myr_per_tonne": 4377,
+      "contract_month": "202701",
+      "source_url": "https://www.bernamabiz.com/news.php?id=2630655",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-04",
+      "close_myr_per_tonne": 4494,
+      "contract_month": "202701",
+      "source_url": "https://commodity-board.com/palm-oil-futures-ease-as-biofuel-demand-softens-and-stocks-stay-heavy",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-03",
+      "close_myr_per_tonne": 4551,
+      "contract_month": "202701",
+      "source_url": "https://bernamabiz.com/news.php?id=2629681",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-11-02",
+      "close_myr_per_tonne": 4650,
+      "contract_month": "202701",
+      "source_url": "https://www.brecorder.com/news/40447044",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-30",
+      "close_myr_per_tonne": 4682,
+      "contract_month": "202701",
+      "source_url": "https://www.brecorder.com/news/40446686/palm-gains-over-1-on-bargain-buying-posts-fourth-monthly-rise-in-5-months",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-29",
+      "close_myr_per_tonne": 4616,
+      "contract_month": "202701",
+      "source_url": "https://www.brecorder.com/news/40446502/palm-falls-to-near-three-week-low-on-weaker-rival-oils-higher-stocks",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-28",
+      "close_myr_per_tonne": 4685,
+      "contract_month": "202701",
+      "source_url": "https://www.bernamabiz.com/news.php?id=2627006",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-27",
+      "close_myr_per_tonne": 4701,
+      "contract_month": "202701",
+      "source_url": "https://www.bernamabiz.com/news.php?id=2626531",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-26",
+      "close_myr_per_tonne": 4789,
+      "contract_month": "202701",
+      "source_url": "https://www.bernamabiz.com/news.php?id=2625964",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-23",
+      "close_myr_per_tonne": 4818,
+      "contract_month": "202701",
+      "source_url": "https://bernamabiz.com/news.php?id=2624772",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-22",
+      "close_myr_per_tonne": 4792,
+      "contract_month": "202701",
+      "source_url": "https://www.bernamabiz.com/news.php?id=2624292",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-21",
+      "close_myr_per_tonne": 4768,
+      "contract_month": "202701",
+      "source_url": "https://www.infosawit.com/2026/10/22/harga-cpo-kpbn-inacom-turun-pada-rabu-21-10-2026-perdagangan-cpo-di-bursa-malaysia-melemah/",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-20",
+      "close_myr_per_tonne": 4817,
+      "contract_month": "202701",
+      "source_url": "https://www.bernamabiz.com/news.php?id=2623229",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-19",
+      "close_myr_per_tonne": 4766,
+      "contract_month": "202701",
+      "source_url": "https://web26.bernama.com/en/market/news.php?id=2622683",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-16",
+      "close_myr_per_tonne": 4769,
+      "contract_month": "202701",
+      "source_url": "https://web26.bernama.com/en/market/news.php?id=2621485",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-15",
+      "close_myr_per_tonne": 4619,
+      "contract_month": "202612",
+      "source_url": "https://web26.bernama.com/en/market/news.php?id=2621001",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-14",
+      "close_myr_per_tonne": 4700,
+      "contract_month": "202612",
+      "source_url": "https://www.infosawit.com/2026/10/15/harga-cpo-kpbn-inacom-naik-pada-rabu-14-10-2026-perdagangan-cpo-di-bursa-malaysia-masih-menguat/",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-13",
+      "close_myr_per_tonne": 4682,
+      "contract_month": "202612",
+      "source_url": "https://www.brecorder.com/news/40444001/palm-climbs-to-two-week-high-as-el-nino-supply-fears-outweigh-stocks",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-12",
+      "close_myr_per_tonne": 4637,
+      "contract_month": "202612",
+      "source_url": "https://www.infosawit.com/2026/10/13/harga-cpo-kpbn-inacom-withdraw-pada-senin-12-10-perdagangan-cpo-di-bursa-malaysia-ditutup-mayoritas-menguat/",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-09",
+      "close_myr_per_tonne": 4592,
+      "contract_month": null,
+      "source_url": "https://www.infosawit.com/2026/10/10/harga-cpo-kpbn-inacom-tetap-pada-jumat-9-10-perdagangan-cpo-di-bursa-malaysia-ditutup-melemah/",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-08",
+      "close_myr_per_tonne": 4661,
+      "contract_month": null,
+      "source_url": "https://www.infosawit.com/2026/10/09/harga-cpo-kpbn-inacom-naik-pada-kamis-8-10-perdagangan-cpo-di-bursa-malaysia-ditutup-menguat/",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-07",
+      "close_myr_per_tonne": 4524,
+      "contract_month": null,
+      "source_url": "https://www.infosawit.com/2026/10/08/harga-cpo-kpbn-inacom-turun-pada-rabu-7-10-perdagangan-cpo-di-bursa-malaysia-masih-melemah/",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-06",
+      "close_myr_per_tonne": 4560,
+      "contract_month": null,
+      "source_url": "https://www.infosawit.com/2026/10/07/harga-cpo-kpbn-inacom-naik-pada-selasa-6-10-perdagangan-cpo-di-bursa-malaysia-melemah/",
+      "confidence": "media-single"
+    },
+    {
+      "date": "2026-10-05",
+      "close_myr_per_tonne": 4578,
+      "contract_month": null,
+      "source_url": "https://www.infosawit.com/2026/10/06/harga-cpo-kpbn-inacom-cenderung-tetap-pada-senin-5-10-perdagangan-cpo-di-bursa-malaysia-menguat/",
+      "confidence": "media-single"
+    }
+  ]
+}
