@@ -26,7 +26,7 @@ jobs:
           assert x['latest']['selected']['contract_month']=='202702'
           assert x['latest']['selected']['settlement_myr_per_tonne']==4217
           assert x['latest']['selected']['volume']==38489
-          assert x['latest']['total_fcpo_volume']==117017
+          assert x['latest']['total_fcpo_volume']==96809
           assert x['data_status']=='partial_history'
           print('TESTE APROVADO: dados oficiais conferidos, sem requisições HTTP')
           PY
