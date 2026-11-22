@@ -239,6 +239,66 @@ body>header .header-quotes{display:block!important;min-width:0!important;padding
 .header-quote:focus-visible{outline:2px solid var(--tg-lime)!important;outline-offset:-2px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}section,.intel-card,.news-card,button,select,a,summary{transition:none!important}.intel-card:hover,.news-card:hover{transform:none!important}}
 @media(max-width:850px){.header-quotes-window{overflow-x:auto;scrollbar-width:thin;scrollbar-color:var(--tg-lime) var(--tg-surface)}.header-quotes-track{animation:none!important}.header-quote-set:nth-child(2){display:none}}
+
+/* Trading Global 12.1 — Executive Terminal visual refinement */
+:root{--tg-bg:#050505;--tg-surface:#111111;--tg-raised:#151815;--tg-lime:#B7FF00;--tg-white:#FFFFFF;--tg-muted:#B8B8B8;--tg-border:#303830}
+body{background:var(--tg-bg)!important;color:var(--tg-white)!important}
+body>header.quotes-header{background:linear-gradient(110deg,#0b0f0b,#070807 75%)!important;border:1px solid #293527;border-radius:16px;padding:clamp(10px,1vw,18px)!important;box-shadow:0 12px 32px #0006;grid-template-columns:minmax(200px,22%) minmax(0,1fr) auto!important}
+.quotes-header .header-brand{min-width:0;padding-left:12px;border-left:3px solid var(--tg-lime)}
+.quotes-header .header-brand .brand{font-size:clamp(11px,.82vw,14px)!important;letter-spacing:.16em}
+.quotes-header .header-brand h1{font-size:clamp(19px,1.65vw,29px)!important;line-height:1.13!important;color:#fff!important;font-weight:850;letter-spacing:-.025em}
+.quotes-header .header-brand .muted{font-size:clamp(9px,.7vw,12px)!important;color:#a6b4a6!important}
+body>header .header-quotes{background:#090d09!important;border:1px solid #34432c!important;border-radius:12px!important;padding:8px 0!important}
+.header-quotes-heading{padding:0 14px 7px!important}
+.header-quotes-heading strong{font-size:11px!important;letter-spacing:.12em}
+.header-quotes-heading small{color:#aeb9ab!important;font-size:10px!important}
+.header-quote{min-width:170px;max-width:230px;padding:5px 15px!important;gap:4px!important}
+.header-quote-name{font-size:11px!important;letter-spacing:.055em!important}
+.header-quote-value{font-size:clamp(16px,1.35vw,22px)!important;letter-spacing:-.02em}
+.header-quote-meta{font-size:10px!important;color:#b8c1b5!important}
+.header-quote:hover,.header-quote:focus-visible{background:#1b2515!important}
+.header-clock{min-width:82px;gap:5px!important}
+.header-clock #clock{font-size:clamp(14px,1.15vw,20px);font-weight:800;font-variant-numeric:tabular-nums;color:#fff}
+.header-clock small{color:var(--tg-lime)!important;font-size:10px!important}
+body>.executive-nav{display:flex;gap:7px;flex-wrap:wrap}
+body>.executive-nav a{border:1px solid #343d31!important;border-radius:9px!important;background:#111711!important;color:#dce6d9!important;font-weight:700}
+body>.executive-nav a:hover,body>.executive-nav a:focus-visible{border-color:var(--tg-lime)!important;color:var(--tg-lime)!important}
+body>.executive-toolbar{align-items:center}
+body>.executive-toolbar button{border-radius:9px!important}
+body>.executive-toolbar .executive-note{color:#adb9aa!important}
+body>section#global-market-ticker{background:#0c100c!important;border:1px solid #35402f!important;border-radius:14px!important;overflow:hidden}
+#global-market-ticker .market-ticker-head{background:#111811!important;border-bottom:1px solid #303c2c!important}
+#global-market-ticker .market-ticker-head strong{color:var(--tg-lime)!important;letter-spacing:.09em}
+body>main.grid{gap:clamp(10px,1vw,18px)!important}
+body>main.grid>section{background:#101310!important;border:1px solid #303830!important;border-radius:16px!important;box-shadow:0 8px 22px #0004!important}
+body>main.grid>section h2{font-weight:800;letter-spacing:-.02em;border-left:3px solid var(--tg-lime);padding-left:11px;color:#fff!important}
+body>main.grid>section .item{gap:14px;border-bottom:1px solid #2d352c!important}
+body>main.grid>section .item .muted{line-height:1.45}
+body>main.grid>section .pill{font-variant-numeric:tabular-nums;max-width:100%;white-space:normal;text-align:right;border-radius:8px!important;padding:7px 10px!important}
+body>main.grid>section .intel-card{background:#151a15!important;border:1px solid #364033!important;border-radius:12px!important;box-shadow:none!important}
+body>main.grid>section .intel-card h3{letter-spacing:-.02em}
+body>main.grid>section .intel-metrics>div{background:#0c100c!important;border:1px solid #303a2e!important;border-radius:9px!important}
+body>main.grid>section .placeholder{background:#151a15!important;border-color:#4b6c30!important}
+body>main.grid>section .foot{color:#a8b3a6!important}
+body>main.grid>section .news-card{background:#151a15!important;border-color:#364033!important}
+@media(min-width:1200px) and (min-aspect-ratio:3/2) and (max-height:1400px){
+ body>header.quotes-header{grid-template-columns:minmax(200px,22%) minmax(0,1fr) auto!important;padding:8px 12px!important;gap:12px!important}
+ .quotes-header .header-brand h1{font-size:clamp(18px,1.5vw,26px)!important}
+ .header-quote{min-width:156px;padding:3px 12px!important}
+ .header-quote-value{font-size:clamp(15px,1.22vw,20px)!important}
+ body>main.grid>section{padding:clamp(10px,1vw,17px)!important}
+ body>main.grid>section .intel-card{padding:10px!important}
+}
+@media(max-width:850px){
+ body>header.quotes-header{grid-template-columns:minmax(0,1fr)!important;padding:12px!important}
+ .quotes-header .header-brand h1{font-size:24px!important}
+ .header-quotes-heading{padding:0 10px 6px!important}
+ .header-quote{min-width:154px;padding:5px 11px!important}
+ .header-quote-value{font-size:17px!important}
+ body>main.grid>section .item{flex-wrap:wrap}
+ body>main.grid>section .pill{text-align:left}
+}
+@media(prefers-reduced-motion:reduce){.header-quotes-track{animation:none!important}.header-quotes-window{overflow-x:auto!important}}
 </style>
 </head>
 <body>
