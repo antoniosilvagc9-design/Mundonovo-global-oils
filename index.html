@@ -574,7 +574,7 @@ const num=n=>Number(n).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFr
 const allowedStates=new Set(["ABERTO","FECHADO","STATUS NÃO CONFIRMADO"]);
 let quotes={};
 function verified(q){
- if(!q||typeof q!=="object"||typeof q.source_url!=="string"||!q.source_url.startsWith("https://")||typeof q.as_of!=="string"||!Number.isFinite(Date.parse(q.as_of)))return false;
+ if(!q||typeof q!=="object"||typeof q.source_url!=="string"||!q.source_url.startsWith("https://")||typeof q.as_of!=="string"||!/^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))?$/.test(q.as_of)||!Number.isFinite(Date.parse(q.as_of)))return false;
  if(typeof q.price!=="number"||!Number.isFinite(q.price)||q.price<=0)return false;
  if(typeof q.previous_close!=="number"||!Number.isFinite(q.previous_close)||q.previous_close<=0)return false;
  if(typeof q.currency!=="string"||!q.currency.trim()||typeof q.source!=="string"||!q.source.trim())return false;
@@ -582,7 +582,6 @@ function verified(q){
 }
 function display(m){
  const q=quotes[m.id],ok=verified(q),pct=ok?(q.price/q.previous_close-1)*100:null;
- const change=ok?(pct>0?"▲ +":pct<0?"▼ ":"")+"":null;
  const state=ok&&allowedStates.has(q.market_status)?q.market_status:"STATUS NÃO CONFIRMADO";
  return {q,ok,pct,state};
 }
