@@ -246,10 +246,10 @@ if(cpoRow){
   try{
    const d=await getCpoHistory(),pts=d.last_three,valid=pts.length===3&&pts.every(p=>Number(p.selected?.settlement_myr_per_tonne)>0);
    const latest=d.latest.selected,stale=(Date.now()-Date.parse(d.latest.date+"T00:00:00Z"))>5*86400000;
-   const summary='<div style="display:flex;justify-content:flex-end;gap:8px;align-items:center"><button type="button" id="close-cpo">Fechar</button></div>';
+   const summary='';
    if(!valid){
     panel.innerHTML=summary;
-    panel.querySelector("#close-cpo").onclick=()=>panel.remove();
+    
     const box=document.createElement("div");box.style.cssText="border-top:1px solid #444;padding-top:14px;margin-top:12px";panel.appendChild(box);
     try{
      const resp=await fetch("data/fcpo-media-history.json",{cache:"no-store"});
@@ -309,7 +309,7 @@ if(cpoRow){
     (hasBase?'<p><strong>Referência 30 dias ('+cpoDate(base.date)+'):</strong> MYR '+cpoFmt(basePrice)+'/t · variação '+(delta>=0?'+':'')+cpoFmt(delta)+' MYR/t ('+(delta/basePrice*100).toLocaleString("pt-BR",{maximumFractionDigits:2})+'%)</p>':'<p class="muted">Referência de 30 dias indisponível: falta CSV histórico.</p>')+
     '<div style="width:100%;overflow:hidden;background:#080808;border:1px solid #333;border-radius:12px;padding:8px"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="FCPO três últimos pregões" style="width:100%;height:auto;display:block"><polyline points="'+pts.map((p,i)=>x(i)+","+y(vals[i])).join(" ")+'" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>'+marks+'</svg></div>'+
     '<p class="foot">Fonte: relatórios de estatísticas de derivativos Bursa Malaysia. Contrato selecionado por maior volume em cada pregão; mudanças de vencimento podem distorcer comparações. Não é cotação em tempo real.</p>';
-   panel.querySelector("#close-cpo").onclick=()=>panel.remove();
+   
   }catch(e){panel.textContent="FCPO: "+String(e.message);}
  };
  cpoRow.setAttribute("role","button");cpoRow.setAttribute("tabindex","0");
