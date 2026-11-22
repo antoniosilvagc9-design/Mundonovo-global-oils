@@ -96,6 +96,23 @@ details[open]>.intel-detail,details[open]>p,details[open]>details{animation:exec
 @media(max-width:700px){.fx-grid{grid-template-columns:minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.fx-card{transition:none}.fx-card:hover{transform:none}}
 
+/* Resumo brasileiro: cartão no espaço livre do cabeçalho */
+header .header-right{display:flex;flex-direction:column;gap:10px;align-items:stretch;width:min(420px,100%);flex-shrink:0}
+header .header-right .status{text-align:right}
+.br-market-card{background:#111!important;border:1px solid #383f36;border-radius:16px;padding:13px 15px;color:#fff;box-shadow:0 6px 20px #0005}
+.br-market-title{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#B7FF00;font-weight:800;font-size:11px;letter-spacing:.09em}
+.br-market-title span{font-weight:500;letter-spacing:0;color:#aeb9a8;font-size:10px;text-align:right}
+.br-market-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:11px}
+.br-market-metric{display:flex;flex-direction:column;gap:5px;min-width:0}
+.br-market-metric+ .br-market-metric{border-left:1px solid #353b33;padding-left:15px}
+.br-market-metric>span{font-size:11px;color:#d1d8cd;font-weight:700}
+.br-market-metric>strong{font-size:clamp(18px,1.55vw,24px);color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
+.br-market-metric>strong small{font-size:11px;color:#b7ff00}
+.br-market-metric>small{font-size:11px;color:#bfc8bb}
+.br-market-metric>a{color:#B7FF00!important;font-size:10px;text-decoration:underline;text-underline-offset:3px}
+.br-market-foot{font-size:10px;color:#aeb9a8;border-top:1px solid #2d342c;margin-top:11px;padding-top:8px;line-height:1.4}
+@media(max-width:850px){header .header-right{width:100%;max-width:460px}header .header-right .status{text-align:left}}
+@media(max-width:420px){.br-market-card{padding:11px}.br-market-metric>strong{font-size:18px}.br-market-metric+.br-market-metric{padding-left:10px}}
 /* Global Market Ticker Premium White — alteração visual isolada */
 /* Escopo reforçado: tema global usa section/button com !important. */
 section#global-market-ticker{background:#FFFFFF!important;color:#183E25!important;border:1px solid #DDE5D9!important;border-radius:19px!important;padding:0!important;box-shadow:0 5px 22px rgba(24,62,37,.075)!important}
@@ -131,7 +148,7 @@ section#global-market-ticker{background:#FFFFFF!important;color:#183E25!importan
 </style>
 </head>
 <body>
-<header><div><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="status"><div id="clock"></div><strong>Dados oficiais históricos • sem cotações em tempo real</strong></div></header>
+<header><div><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="header-right"><div class="status"><div id="clock"></div><strong>Dados oficiais históricos • sem cotações em tempo real</strong></div><aside class="br-market-card" aria-label="Indicadores brasileiros, últimos fechamentos disponíveis"><div class="br-market-title">MERCADO BRASILEIRO <span>Últimos fechamentos consultados</span></div><div class="br-market-metrics"><div class="br-market-metric"><span>IBOVESPA · B3</span><strong id="br-market-ibov">166.376,43 <small>pts</small></strong><small>19/11/2026 · -0,69%</small><a href="https://dadosb3.com/indices/IBOV" target="_blank" rel="noopener noreferrer">Fonte: Dados B3</a></div><div class="br-market-metric"><span>DÓLAR · USD/BRL</span><strong id="br-market-usd">R$ 5,9491</strong><small>20/11/2026 · +0,24%</small><a href="https://br.investing.com/currencies/usd-brl-historical-data" target="_blank" rel="noopener noreferrer">Fonte: Investing.com</a></div></div><div class="br-market-foot">Valores de referência, não em tempo real · atualização automática pendente</div></aside></div></header>
 <nav class="executive-nav" aria-label="Navegação executiva"><a href="#executive-section-1">Cotações</a><a href="#executive-section-2">Oferta e demanda</a><a href="#news-section">Notícias</a><a href="#executive-section-4">Inteligência</a></nav><div class="executive-toolbar"><button type="button" id="executive-expand">Expandir análises</button><button type="button" id="executive-collapse">Recolher análises</button><span class="executive-note">Painel executivo · <b>dados com datas e fontes próprias</b> · sem recomendação automática de operação</span></div><section class="market-ticker" aria-label="Mercados financeiros internacionais" id="global-market-ticker">
 <div class="market-ticker-head"><strong>BOLSA DE VALORES</strong><small id="market-ticker-updated">Últimos dados disponíveis · sem tempo real confirmado</small></div>
 <div class="market-ticker-window"><div class="market-ticker-track" id="market-ticker-track"></div></div>
