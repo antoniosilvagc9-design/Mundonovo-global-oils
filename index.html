@@ -218,14 +218,16 @@ if(soyRow){
 }
 
 
-/* CPO Commodities-API: apenas valores reais, sem mostrar valor fixo como cotação atual. */
+/* FCPO Bursa Malaysia: apenas JSON de fonte autorizada, sem cotação fictícia. */
 const cpoRow=[...document.querySelectorAll("#quotes .item")].find(el=>el.querySelector("strong")?.textContent==="Óleo de palma bruto (CPO)");
 const cpoFmt=v=>Number(v).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
 const cpoDate=s=>String(s).slice(8,10)+"/"+String(s).slice(5,7)+"/"+String(s).slice(0,4);
 async function getCpoHistory(){
- const r=await fetch("data/cpo-history.json",{cache:"no-store"});if(!r.ok)throw Error("Fonte Commodities-API ainda não validada");
+ const r=await fetch("data/cpo-history.json",{cache:"no-store"});
+ if(!r.ok)throw Error("Nenhum histórico FCPO autorizado foi publicado");
  const d=await r.json();
- if(d.symbol!=="FCPO"||d.currency!=="MYR"||d.unit!=="MYR/tonelada métrica"||!Array.isArray(d.last_three)||d.last_three.length!==3||!d.baseline_30d||d.last_three.some(p=>!(Number(p.value)>0)||!/^\d{4}-\d{2}-\d{2}$/.test(p.date)))throw Error("Histórico Commodities-API inválido");
+ if(d.instrument!=="FCPO"||d.currency!=="MYR"||d.unit!=="metric_tonne"||d.price_type!=="official_settlement"||!d.latest?.selected||!Array.isArray(d.last_three)||!Array.isArray(d.observations))throw Error("Formato FCPO inválido");
+ if(!(Number(d.latest.selected.settlement_myr_per_tonne)>0)||!/^\d{4}-\d{2}-\d{2}$/.test(d.latest.date))throw Error("Cotação FCPO inválida");
  return d;
 }
 if(cpoRow){
@@ -233,20 +235,28 @@ if(cpoRow){
   let panel=document.getElementById("cpo-history-panel");if(panel){panel.remove();return;}
   panel=document.createElement("div");panel.id="cpo-history-panel";panel.className="placeholder";cpoRow.insertAdjacentElement("afterend",panel);
   try{
-   const d=await getCpoHistory(),pts=d.last_three,vals=pts.map(p=>Number(p.value)),lo=Math.min(...vals),hi=Math.max(...vals),span=Math.max(1,hi-lo);
-   const W=660,H=230,L=64,R=64,T=37,B=48,x=i=>L+i*(W-L-R)/2,y=v=>H-B-(v-lo)/span*(H-T-B);
-   const marks=pts.map((p,i)=>'<circle cx="'+x(i)+'" cy="'+y(p.value)+'" r="4" fill="#B7FF00"><title>'+cpoDate(p.date)+' · MYR '+cpoFmt(p.value)+'/t</title></circle><text x="'+x(i)+'" y="'+Math.max(16,y(p.value)-12)+'" text-anchor="middle" fill="#B7FF00" font-size="12">'+cpoFmt(p.value)+'</text><text x="'+x(i)+'" y="'+(H-14)+'" text-anchor="middle" fill="#FFFFFF" font-size="12">'+cpoDate(p.date).slice(0,5)+'</text>').join("");
-   const avg=vals.reduce((a,b)=>a+b,0)/3,base=Number(d.baseline_30d.value),delta=vals[2]-base,pct=100*delta/base;
-   panel.innerHTML='<div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><strong>CPO · MYR/tonelada</strong><button type="button" id="close-cpo">Fechar</button></div><p class="muted">Commodities-API · futuro FCPO · Bursa Malaysia Derivatives · não é preço físico</p>'+
-   '<div class="intel-metrics" style="margin:12px 0"><div><strong>MYR '+cpoFmt(base)+'</strong><small>30 dias · '+cpoDate(d.baseline_30d.date)+'</small></div><div><strong>MYR '+cpoFmt(vals[2])+'</strong><small>Último · '+cpoDate(pts[2].date)+'</small></div><div><strong>MYR '+cpoFmt(avg)+'</strong><small>Média dos três pregões</small></div></div>'+
-   '<p><strong>Variação 30 dias:</strong> '+(delta>=0?'+':'')+cpoFmt(delta)+' MYR/t ('+(pct>=0?'+':'')+pct.toLocaleString("pt-BR",{maximumFractionDigits:2})+'%)</p>'+
-   '<div style="width:100%;overflow:hidden;background:#080808;border:1px solid #333;border-radius:12px;padding:8px"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Histórico CPO três pregões" style="width:100%;height:auto;display:block"><polyline points="'+pts.map((p,i)=>x(i)+","+y(p.value)).join(" ")+'" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>'+marks+'</svg></div><p class="foot">Fonte: '+String(d.source||"Commodities-API")+' · mínimo MYR '+cpoFmt(lo)+' · máximo MYR '+cpoFmt(hi)+'</p>';
-   panel.querySelector("#close-cpo").addEventListener("click",()=>panel.remove());
-  }catch(e){panel.innerHTML='<strong>Histórico CPO ainda não validado</strong><p class="muted">Aguardando preços FCPO validados pela Commodities-API. Nenhuma cotação foi simulada.</p><button type="button" id="close-cpo">Fechar</button>';panel.querySelector("#close-cpo").addEventListener("click",()=>panel.remove());}
+   const d=await getCpoHistory(),pts=d.last_three,valid=pts.length===3&&pts.every(p=>Number(p.selected?.settlement_myr_per_tonne)>0);
+   const latest=d.latest.selected,stale=(Date.now()-Date.parse(d.latest.date+"T00:00:00Z"))>5*86400000;
+   const summary='<div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><strong>FCPO · Bursa Malaysia · MYR/t</strong><button type="button" id="close-cpo">Fechar</button></div>'+
+    '<p class="muted">Liquidação oficial · '+cpoDate(d.latest.date)+' · vencimento '+latest.contract_month+' · contrato mais líquido'+(stale?' · DADO DEFASADO':'')+'</p>'+
+    '<div class="intel-metrics" style="margin:12px 0"><div><strong>MYR '+cpoFmt(latest.settlement_myr_per_tonne)+'</strong><small>Última liquidação validada</small></div><div><strong>'+Number(latest.volume).toLocaleString("pt-BR")+'</strong><small>Volume do vencimento</small></div><div><strong>'+Number(latest.open_interest).toLocaleString("pt-BR")+'</strong><small>Contratos em aberto</small></div></div>';
+   if(!valid){panel.innerHTML=summary+'<p class="muted">Histórico parcial: aguardando três pregões reais. Média e gráfico indisponíveis.</p>';panel.querySelector("#close-cpo").onclick=()=>panel.remove();return;}
+   const vals=pts.map(p=>Number(p.selected.settlement_myr_per_tonne)),lo=Math.min(...vals),hi=Math.max(...vals),span=Math.max(1,hi-lo),W=660,H=210,L=75,R=75,T=35,B=45;
+   const x=i=>L+i*(W-L-R)/2,y=v=>H-B-(v-lo)/span*(H-T-B);
+   const marks=pts.map((p,i)=>'<circle cx="'+x(i)+'" cy="'+y(vals[i])+'" r="4" fill="#B7FF00"/><text x="'+x(i)+'" y="'+Math.max(15,y(vals[i])-13)+'" text-anchor="middle" fill="#B7FF00" font-size="12">'+cpoFmt(vals[i])+'</text><text x="'+x(i)+'" y="'+(H-14)+'" text-anchor="middle" fill="#FFFFFF" font-size="12">'+cpoDate(p.date).slice(0,5)+'</text>').join("");
+   const base=d.reference_30d?.session,basePrice=Number(base?.selected?.settlement_myr_per_tonne),hasBase=basePrice>0;
+   const avg=vals.reduce((a,b)=>a+b,0)/3,delta=vals[2]-basePrice;
+   panel.innerHTML=summary+'<p><strong>Média 3 pregões:</strong> MYR '+cpoFmt(avg)+'/t</p>'+
+    (hasBase?'<p><strong>Referência 30 dias ('+cpoDate(base.date)+'):</strong> MYR '+cpoFmt(basePrice)+'/t · variação '+(delta>=0?'+':'')+cpoFmt(delta)+' MYR/t ('+(delta/basePrice*100).toLocaleString("pt-BR",{maximumFractionDigits:2})+'%)</p>':'<p class="muted">Referência de 30 dias indisponível: falta CSV histórico.</p>')+
+    '<div style="width:100%;overflow:hidden;background:#080808;border:1px solid #333;border-radius:12px;padding:8px"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="FCPO três últimos pregões" style="width:100%;height:auto;display:block"><polyline points="'+pts.map((p,i)=>x(i)+","+y(vals[i])).join(" ")+'" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>'+marks+'</svg></div>'+
+    '<p class="foot">Fonte: relatórios de estatísticas de derivativos Bursa Malaysia. Contrato selecionado por maior volume em cada pregão; mudanças de vencimento podem distorcer comparações. Não é cotação em tempo real.</p>';
+   panel.querySelector("#close-cpo").onclick=()=>panel.remove();
+  }catch(e){panel.textContent="FCPO: "+String(e.message);}
  };
+ cpoRow.setAttribute("role","button");cpoRow.setAttribute("tabindex","0");
  cpoRow.addEventListener("click",toggleCpo);
  cpoRow.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggleCpo();}});
- (async()=>{try{const d=await getCpoHistory();cpoRow.querySelector(".pill").textContent="MYR "+cpoFmt(d.latest.value)+"/t";cpoRow.querySelector(".muted").textContent="Commodities-API · FCPO futuro · "+cpoDate(d.latest.date);}catch(e){cpoRow.querySelector(".pill").textContent="Aguardando dados Commodities-API";}})();
+ (async()=>{try{const d=await getCpoHistory();cpoRow.querySelector(".pill").textContent="MYR "+cpoFmt(d.latest.selected.settlement_myr_per_tonne)+"/t";cpoRow.querySelector(".muted").textContent="Bursa Malaysia · liquidação "+cpoDate(d.latest.date)+" · venc. "+d.latest.selected.contract_month+(Date.now()-Date.parse(d.latest.date+"T00:00:00Z")>5*86400000?" · defasado":"");}catch(e){cpoRow.querySelector(".pill").textContent="Sem FCPO publicado";cpoRow.querySelector(".muted").textContent="Bursa Malaysia · aguardando histórico autorizado";}})();
 }
 
 const brentRow=[...document.querySelectorAll("#quotes .item")].find(el=>el.querySelector("strong")?.textContent==="Petróleo Brent");
