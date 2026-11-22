@@ -248,7 +248,7 @@ if(cpoRow){
    const latest=d.latest.selected,stale=(Date.now()-Date.parse(d.latest.date+"T00:00:00Z"))>5*86400000;
    const summary='<div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><strong>FCPO · Bursa Malaysia · MYR/t</strong><button type="button" id="close-cpo">Fechar</button></div>'+
     '<p class="muted">Liquidação oficial · '+cpoDate(d.latest.date)+' · vencimento '+latest.contract_month+' · contrato mais líquido'+(stale?' · DADO DEFASADO':'')+'</p>'+
-    '<div class="intel-metrics" style="margin:12px 0"><div><strong>MYR '+cpoFmt(latest.settlement_myr_per_tonne)+'</strong><small>Última liquidação validada</small></div><div><strong>'+Number(latest.volume).toLocaleString("pt-BR")+'</strong><small>Volume do vencimento</small></div><div><strong>'+Number(latest.open_interest).toLocaleString("pt-BR")+'</strong><small>Contratos em aberto</small></div></div>';
+    '<p class="muted">Última liquidação oficial validada: MYR '+cpoFmt(latest.settlement_myr_per_tonne)+'/t · volume do vencimento: '+Number(latest.volume).toLocaleString("pt-BR")+'</p>';
    if(!valid){
     panel.innerHTML=summary+'<p class="muted">Histórico oficial parcial: 1 pregão validado. Abaixo, últimos 3 fechamentos reportados pela imprensa (fonte secundária).</p>';
     panel.querySelector("#close-cpo").onclick=()=>panel.remove();
@@ -260,9 +260,8 @@ if(cpoRow){
      if(secondary.price_type!=="reported_media_close"||!Array.isArray(secondary.observations))throw Error("Tipo de dados incompatível");
      const recent=secondary.observations.filter(p=>Number(p.close_myr_per_tonne)>0&&p.date).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3);
      if(recent.length!==3)throw Error("Três pregões não disponíveis");
-     const heading=document.createElement("strong");heading.textContent="Últimos três pregões · fonte secundária";heading.style.color="#B7FF00";box.appendChild(heading);
+     const heading=document.createElement("strong");heading.textContent="FCPO · três últimos fechamentos reportados";box.appendChild(heading);
      const mean=recent.reduce((sum,p)=>sum+Number(p.close_myr_per_tonne),0)/3;
-     const avgText=document.createElement("p");avgText.textContent="Média 3 pregões: MYR "+cpoFmt(mean)+"/t";box.appendChild(avgText);
      const ordered=recent.slice().reverse(),values=ordered.map(p=>Number(p.close_myr_per_tonne));
      const W=640,H=210,L=60,R=60,T=35,B=38;
      const minValue=Math.min(...values),maxValue=Math.max(...values),pad=Math.max(18,(maxValue-minValue)*0.18);
@@ -290,10 +289,15 @@ if(cpoRow){
      const foot=document.createElement("p");foot.className="foot";foot.textContent="Máximo: RM "+cpoFmt(maxValue)+" · mínimo: RM "+cpoFmt(minValue)+" · variação nos três pregões: "+(swing>=0?"+":"")+cpoFmt(swing)+" MYR/t. Fonte: Media Biodiesel (fechamentos reportados).";box.appendChild(foot);
      const latest=recent[0],target=new Date(latest.date+"T00:00:00Z");target.setUTCDate(target.getUTCDate()-30);
      const reference=secondary.observations.filter(p=>p.date<=target.toISOString().slice(0,10)&&Number(p.close_myr_per_tonne)>0).sort((a,b)=>b.date.localeCompare(a.date))[0];
-     const refText=document.createElement("p");refText.style.cssText="font-size:13px;color:#ddd;margin-top:14px";
-     if(reference){const pct=(latest.close_myr_per_tonne/reference.close_myr_per_tonne-1)*100;refText.textContent="Atual ("+cpoDate(latest.date)+"): RM "+cpoFmt(latest.close_myr_per_tonne)+"/t · Há 30 dias ("+cpoDate(reference.date)+"): RM "+cpoFmt(reference.close_myr_per_tonne)+"/t · Variação indicativa: "+(pct>=0?"+":"")+pct.toLocaleString("pt-BR",{maximumFractionDigits:2})+"%.";}
-     else refText.textContent="Referência de 30 dias indisponível.";
-     box.appendChild(refText);
+     const metrics=document.createElement("div");metrics.className="intel-metrics";metrics.style.margin="12px 0";
+     const metric=(value,label)=>{const wrap=document.createElement("div"),strong=document.createElement("strong"),small=document.createElement("small");strong.textContent=value;small.textContent=label;wrap.append(strong,small);metrics.appendChild(wrap);};
+     if(reference){const pct=(latest.close_myr_per_tonne/reference.close_myr_per_tonne-1)*100,delta=latest.close_myr_per_tonne-reference.close_myr_per_tonne;
+      metric("RM "+cpoFmt(reference.close_myr_per_tonne),"30 dias · "+cpoDate(reference.date));
+      metric("RM "+cpoFmt(latest.close_myr_per_tonne),"Último pregão · "+cpoDate(latest.date));
+      box.insertBefore(metrics,frame);
+      const variation=document.createElement("p");variation.innerHTML="<strong>Variação em 30 dias:</strong> "+(delta>=0?"+":"")+cpoFmt(delta)+" MYR/t ("+(pct>=0?"+":"")+pct.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})+"%)";box.insertBefore(variation,frame);
+     }else{metric("RM "+cpoFmt(latest.close_myr_per_tonne),"Último pregão · "+cpoDate(latest.date));box.insertBefore(metrics,frame);}
+     const avgText=document.createElement("p");avgText.className="foot";avgText.textContent="Média dos três pregões: RM "+cpoFmt(mean)+"/t";box.appendChild(avgText);
      const disclaimer=document.createElement("small");disclaimer.textContent="Fechamentos jornalísticos, não settlements oficiais. A comparação de 30 dias pode envolver vencimentos diferentes. Dados importados manualmente; sem atualização automática.";box.appendChild(disclaimer);
     }catch(err){box.textContent="Histórico secundário indisponível: "+err.message;}
     return;
