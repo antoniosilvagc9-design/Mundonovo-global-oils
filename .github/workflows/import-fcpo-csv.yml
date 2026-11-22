@@ -25,8 +25,8 @@ jobs:
           shopt -s nullglob
           files=(data/fcpo-inbox/derivative_trading_statistic_*.csv)
           if (( ${#files[@]} == 0 )); then
-            echo "::notice::Nenhum CSV autorizado na pasta data/fcpo-inbox; sem publicação"
-            exit 0
+            echo "::error::Nenhum CSV FCPO encontrado em data/fcpo-inbox/. Envie arquivos derivative_trading_statistic_YYYYMMDD.csv para essa pasta antes de executar."
+            exit 1
           fi
           python scripts/import_fcpo_csv.py "${files[@]}" --output data/cpo-history.json
       - name: Publicar somente se JSON mudou
