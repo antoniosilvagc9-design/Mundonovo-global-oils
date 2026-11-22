@@ -223,10 +223,33 @@ body>header .commodity-entry small{font-size:9px;color:#aaa;white-space:nowrap}
 @media(min-width:851px){body>header{display:grid;grid-template-columns:minmax(220px,25%) minmax(0,1fr);gap:14px}body>header .header-right{width:100%;max-width:none;min-width:0;display:flex;flex-direction:column;gap:2px}body>header .header-right .status{order:2;background:transparent!important;padding:0!important;text-align:right;font-size:9px!important}body>header .header-right .status strong{font-size:9px!important}}
 @media(min-width:1200px) and (min-aspect-ratio:3/2) and (max-height:1400px){body>header{grid-template-columns:minmax(245px,25%) minmax(0,1fr)!important}body>header .header-right{display:flex!important;width:100%!important;min-width:0}}
 @media(max-width:850px){body>header .header-right{max-width:none!important}}
+
+body>header.quotes-header{display:grid!important;grid-template-columns:minmax(180px,255px) minmax(0,1fr) auto!important;gap:clamp(10px,1vw,18px)!important;align-items:center!important;margin-bottom:10px!important;min-width:0}
+.quotes-header .header-brand h1{font-size:clamp(17px,1.5vw,26px)!important;line-height:1.13!important;margin:2px 0!important}
+.quotes-header .header-brand .brand{font-size:11px!important;color:#b7ff00!important}
+.quotes-header .header-brand .muted{font-size:10px!important;color:#aeb5aa!important}
+body>header .header-quotes{display:block!important;min-width:0!important;padding:6px 0!important;border:1px solid #333d2c!important;border-radius:12px!important;background:#080a08!important;box-shadow:none!important;overflow:hidden!important}
+.header-quotes-heading{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:0 12px 4px}
+.header-quotes-heading strong{font-size:10px;letter-spacing:.09em;color:#b7ff00!important}
+.header-quotes-heading small{font-size:9px;color:#a7b4a4!important}
+.header-quotes-window{overflow:hidden;width:100%;mask-image:linear-gradient(to right,transparent,#000 2%,#000 98%,transparent)}
+.header-quotes-track{display:flex;align-items:stretch;width:max-content;animation:headerQuotesMove 43s linear infinite}
+.header-quotes-track:hover,.header-quotes-track:focus-within{animation-play-state:paused}
+.header-quote-set{display:flex;flex:none;align-items:stretch}
+.header-quote{display:flex;flex-direction:column;gap:2px;min-width:165px;max-width:235px;padding:4px 15px;border-right:1px solid #293126;text-decoration:none!important;color:#fff!important;background:transparent!important}
+.header-quote-name{font-size:10px;font-weight:800;letter-spacing:.03em;color:#b7ff00!important;white-space:nowrap}
+.header-quote-value{font-size:clamp(13px,1.2vw,19px);font-weight:800;color:#fff!important;font-variant-numeric:tabular-nums;white-space:nowrap}
+.header-quote-meta{font-size:9px;color:#b3bdb0!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.header-clock{display:flex;flex-direction:column;align-items:flex-end;gap:3px;white-space:nowrap;font-size:11px;color:#fff}
+.header-clock small{font-size:9px;color:#aab7a4}
+@keyframes headerQuotesMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.header-quotes-track{animation:none}.header-quotes-window{overflow-x:auto}}
+@media(max-width:850px){body>header.quotes-header{grid-template-columns:minmax(0,1fr)!important;gap:8px!important}.header-clock{display:none}.header-quotes-heading small{display:none}.header-quote{min-width:145px}}
+@media(min-width:1200px) and (min-aspect-ratio:3/2) and (max-height:1400px){body>header.quotes-header{grid-template-columns:minmax(180px,235px) minmax(0,1fr) auto!important;margin:0!important;gap:10px!important}.quotes-header .header-brand h1{font-size:clamp(16px,1.4vw,23px)!important}.header-quote{padding:3px 12px}.header-quotes-heading{padding-bottom:2px}}
 </style>
 </head>
 <body>
-<header><div><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="header-right"><div class="status"><div id="clock"></div><strong>Dados oficiais históricos • sem cotações em tempo real</strong></div><aside class="commodity-head"><div class="commodity-caption">COTAÇÕES <small>Últimos fechamentos · não é tempo real</small></div><div class="commodity-strip" id="commodity-strip" aria-label="Cotações de produtos e câmbio"></div></aside></div></header>
+<header class="quotes-header"><div class="header-brand"><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><section class="header-quotes" aria-label="Cotações de produtos e moedas"><div class="header-quotes-heading"><strong>COTAÇÕES · PRODUTOS & CÂMBIO</strong><small>Últimas referências · não é tempo real</small></div><div class="header-quotes-window"><div class="header-quotes-track" id="header-quotes-track"></div></div></section><div class="header-clock"><div id="clock"></div><small>Dados históricos</small></div></header>
 <nav class="executive-nav" aria-label="Navegação executiva"><a href="#executive-section-1">Cotações</a><a href="#executive-section-2">Oferta e demanda</a><a href="#news-section">Notícias</a><a href="#executive-section-4">Inteligência</a></nav><div class="executive-toolbar"><button type="button" id="executive-expand">Expandir análises</button><button type="button" id="executive-collapse">Recolher análises</button><span class="executive-note">Painel executivo · <b>dados com datas e fontes próprias</b> · sem recomendação automática de operação</span></div><section class="market-ticker" aria-label="Mercados financeiros internacionais" id="global-market-ticker">
 <div class="market-ticker-head"><strong>BOLSA DE VALORES</strong><small id="market-ticker-updated">Últimos dados disponíveis · sem tempo real confirmado</small></div>
 <div class="market-ticker-window"><div class="market-ticker-track" id="market-ticker-track"></div></div>
@@ -780,4 +803,31 @@ function draw(){root.replaceChildren();q.forEach(x=>{const a=document.createElem
 async function refresh(){await Promise.all(q.filter(x=>x[3]).map(async x=>{try{const r=await fetch(x[3],{cache:"no-store"});if(!r.ok)return;const v=x[4](await r.json());if(v){x[1]=v[0];x[2]=v[1]}}catch(e){}}));draw()}
 draw();refresh();document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh()});
 })();</script><script defer src="tv-auto-update.js"></script>
-</body></html>
+<script>
+(function(){
+"use strict";
+const track=document.getElementById("header-quotes-track"),source=document.getElementById("quotes");
+if(!track||!source)return;
+const labels={"Óleo de palma bruto (CPO)":"ÓLEO DE PALMA · CPO","Óleo de soja":"ÓLEO DE SOJA","Soja em grão":"SOJA EM GRÃO","USD/BRL":"DÓLAR · USD/BRL","USD/MYR":"DÓLAR · USD/MYR","Petróleo Brent":"PETRÓLEO · BRENT"};
+let pending=false;
+function render(){
+ pending=false;
+ const rows=Array.from(source.querySelectorAll(".item"));if(!rows.length)return;
+ const items=rows.map(row=>({name:row.querySelector("strong")?.textContent?.trim()||"Produto",value:row.querySelector(".pill")?.textContent?.trim()||"Sem cotação verificada",meta:row.querySelector(".muted")?.textContent?.trim()||"Referência indisponível"}));
+ track.replaceChildren();
+ for(let i=0;i<2;i++){
+  const group=document.createElement("div");group.className="header-quote-set";
+  for(const item of items){
+   const card=document.createElement("a");card.className="header-quote";card.href="#executive-section-1";card.title=item.name+" · "+item.meta;
+   const name=document.createElement("span");name.className="header-quote-name";name.textContent=labels[item.name]||item.name;
+   const value=document.createElement("span");value.className="header-quote-value";value.textContent=item.value;
+   const meta=document.createElement("span");meta.className="header-quote-meta";meta.textContent=item.meta;
+   card.append(name,value,meta);group.appendChild(card);
+  }
+  track.appendChild(group);
+ }
+}
+const observer=new MutationObserver(()=>{if(!pending){pending=true;requestAnimationFrame(render)}});
+observer.observe(source,{childList:true,subtree:true,characterData:true});render();
+})();
+</script></body></html>
