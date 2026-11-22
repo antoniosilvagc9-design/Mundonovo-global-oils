@@ -156,7 +156,7 @@ if (thirdLevel3 && fourthLevel3) {
 }
 
 const quotes=[
- ["Óleo de palma bruto (CPO)","MPOB · preço físico local · MYR/t",null,"Aguardando série diária oficial validada"],
+ ["Óleo de palma bruto (CPO)","Bursa Malaysia · futuro FCPO · MYR/t",null,"Aguardando primeira coleta validada"],
  ["Óleo de soja","CBOT · centavos USD/lb","60,01","21/11/2026 · referência de mercado"],
  ["Soja em grão","CBOT · futuro contínuo · US¢/bushel",null,"Aguardando histórico diário verificado"],
  ["USD/BRL","Banco Central · BRL por USD","5,8889","PTAX venda · 19/11/2026"],
@@ -218,14 +218,14 @@ if(soyRow){
 }
 
 
-/* CPO MPOB: apenas valores reais, sem mostrar valor fixo como cotação atual. */
+/* CPO Commodities-API: apenas valores reais, sem mostrar valor fixo como cotação atual. */
 const cpoRow=[...document.querySelectorAll("#quotes .item")].find(el=>el.querySelector("strong")?.textContent==="Óleo de palma bruto (CPO)");
 const cpoFmt=v=>Number(v).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
 const cpoDate=s=>String(s).slice(8,10)+"/"+String(s).slice(5,7)+"/"+String(s).slice(0,4);
 async function getCpoHistory(){
- const r=await fetch("data/cpo-history.json",{cache:"no-store"});if(!r.ok)throw Error("Fonte MPOB ainda não validada");
+ const r=await fetch("data/cpo-history.json",{cache:"no-store"});if(!r.ok)throw Error("Fonte Commodities-API ainda não validada");
  const d=await r.json();
- if(!Array.isArray(d.last_three)||d.last_three.length!==3||!d.baseline_30d||d.last_three.some(p=>!(Number(p.value)>0)||!/^\d{4}-\d{2}-\d{2}$/.test(p.date)))throw Error("Histórico MPOB inválido");
+ if(d.symbol!=="FCPO"||d.currency!=="MYR"||d.unit!=="MYR/tonelada métrica"||!Array.isArray(d.last_three)||d.last_three.length!==3||!d.baseline_30d||d.last_three.some(p=>!(Number(p.value)>0)||!/^\d{4}-\d{2}-\d{2}$/.test(p.date)))throw Error("Histórico Commodities-API inválido");
  return d;
 }
 if(cpoRow){
@@ -237,16 +237,16 @@ if(cpoRow){
    const W=660,H=230,L=64,R=64,T=37,B=48,x=i=>L+i*(W-L-R)/2,y=v=>H-B-(v-lo)/span*(H-T-B);
    const marks=pts.map((p,i)=>'<circle cx="'+x(i)+'" cy="'+y(p.value)+'" r="4" fill="#B7FF00"><title>'+cpoDate(p.date)+' · MYR '+cpoFmt(p.value)+'/t</title></circle><text x="'+x(i)+'" y="'+Math.max(16,y(p.value)-12)+'" text-anchor="middle" fill="#B7FF00" font-size="12">'+cpoFmt(p.value)+'</text><text x="'+x(i)+'" y="'+(H-14)+'" text-anchor="middle" fill="#FFFFFF" font-size="12">'+cpoDate(p.date).slice(0,5)+'</text>').join("");
    const avg=vals.reduce((a,b)=>a+b,0)/3,base=Number(d.baseline_30d.value),delta=vals[2]-base,pct=100*delta/base;
-   panel.innerHTML='<div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><strong>CPO · MYR/tonelada</strong><button type="button" id="close-cpo">Fechar</button></div><p class="muted">MPOB · preço físico local da Malásia · não é futuro FCPO</p>'+
+   panel.innerHTML='<div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><strong>CPO · MYR/tonelada</strong><button type="button" id="close-cpo">Fechar</button></div><p class="muted">Commodities-API · futuro FCPO · Bursa Malaysia Derivatives · não é preço físico</p>'+
    '<div class="intel-metrics" style="margin:12px 0"><div><strong>MYR '+cpoFmt(base)+'</strong><small>30 dias · '+cpoDate(d.baseline_30d.date)+'</small></div><div><strong>MYR '+cpoFmt(vals[2])+'</strong><small>Último · '+cpoDate(pts[2].date)+'</small></div><div><strong>MYR '+cpoFmt(avg)+'</strong><small>Média dos três pregões</small></div></div>'+
    '<p><strong>Variação 30 dias:</strong> '+(delta>=0?'+':'')+cpoFmt(delta)+' MYR/t ('+(pct>=0?'+':'')+pct.toLocaleString("pt-BR",{maximumFractionDigits:2})+'%)</p>'+
-   '<div style="width:100%;overflow:hidden;background:#080808;border:1px solid #333;border-radius:12px;padding:8px"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Histórico CPO três pregões" style="width:100%;height:auto;display:block"><polyline points="'+pts.map((p,i)=>x(i)+","+y(p.value)).join(" ")+'" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>'+marks+'</svg></div><p class="foot">Fonte: '+String(d.source||"MPOB")+' · mínimo MYR '+cpoFmt(lo)+' · máximo MYR '+cpoFmt(hi)+'</p>';
+   '<div style="width:100%;overflow:hidden;background:#080808;border:1px solid #333;border-radius:12px;padding:8px"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Histórico CPO três pregões" style="width:100%;height:auto;display:block"><polyline points="'+pts.map((p,i)=>x(i)+","+y(p.value)).join(" ")+'" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>'+marks+'</svg></div><p class="foot">Fonte: '+String(d.source||"Commodities-API")+' · mínimo MYR '+cpoFmt(lo)+' · máximo MYR '+cpoFmt(hi)+'</p>';
    panel.querySelector("#close-cpo").addEventListener("click",()=>panel.remove());
-  }catch(e){panel.innerHTML='<strong>Histórico CPO ainda não validado</strong><p class="muted">Aguardando preços oficiais da MPOB. Nenhuma cotação foi simulada.</p><button type="button" id="close-cpo">Fechar</button>';panel.querySelector("#close-cpo").addEventListener("click",()=>panel.remove());}
+  }catch(e){panel.innerHTML='<strong>Histórico CPO ainda não validado</strong><p class="muted">Aguardando preços FCPO validados pela Commodities-API. Nenhuma cotação foi simulada.</p><button type="button" id="close-cpo">Fechar</button>';panel.querySelector("#close-cpo").addEventListener("click",()=>panel.remove());}
  };
  cpoRow.addEventListener("click",toggleCpo);
  cpoRow.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggleCpo();}});
- (async()=>{try{const d=await getCpoHistory();cpoRow.querySelector(".pill").textContent="MYR "+cpoFmt(d.latest.value)+"/t";cpoRow.querySelector(".muted").textContent="MPOB · CPO físico local · "+cpoDate(d.latest.date);}catch(e){cpoRow.querySelector(".pill").textContent="Aguardando dados MPOB";}})();
+ (async()=>{try{const d=await getCpoHistory();cpoRow.querySelector(".pill").textContent="MYR "+cpoFmt(d.latest.value)+"/t";cpoRow.querySelector(".muted").textContent="Commodities-API · FCPO futuro · "+cpoDate(d.latest.date);}catch(e){cpoRow.querySelector(".pill").textContent="Aguardando dados Commodities-API";}})();
 }
 
 const brentRow=[...document.querySelectorAll("#quotes .item")].find(el=>el.querySelector("strong")?.textContent==="Petróleo Brent");
