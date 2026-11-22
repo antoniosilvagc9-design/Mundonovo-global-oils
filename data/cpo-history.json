@@ -1,0 +1,67 @@
+{
+  "instrument": "FCPO",
+  "market": "Bursa Malaysia Derivatives",
+  "currency": "MYR",
+  "unit": "metric_tonne",
+  "price_type": "official_settlement",
+  "contract_policy": "highest_daily_volume",
+  "data_status": "partial_history",
+  "latest": {
+    "date": "2026-11-20",
+    "source_file": "derivative_trading_statistic_20261120 (1).csv",
+    "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261120.csv",
+    "selected": {
+      "date": "2026-11-20",
+      "contract_month": "202702",
+      "settlement_myr_per_tonne": 4217.0,
+      "previous_myr_per_tonne": 4333.0,
+      "change_myr_per_tonne": -116.0,
+      "volume": 38489,
+      "open_interest": 63969.0
+    },
+    "total_fcpo_volume": 117017,
+    "contracts_count": 24
+  },
+  "last_three": [
+    {
+      "date": "2026-11-20",
+      "source_file": "derivative_trading_statistic_20261120 (1).csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261120.csv",
+      "selected": {
+        "date": "2026-11-20",
+        "contract_month": "202702",
+        "settlement_myr_per_tonne": 4217.0,
+        "previous_myr_per_tonne": 4333.0,
+        "change_myr_per_tonne": -116.0,
+        "volume": 38489,
+        "open_interest": 63969.0
+      },
+      "total_fcpo_volume": 117017,
+      "contracts_count": 24
+    }
+  ],
+  "three_day_average": null,
+  "reference_30d": {
+    "target_date": "2026-10-21",
+    "session": null
+  },
+  "observations": [
+    {
+      "date": "2026-11-20",
+      "source_file": "derivative_trading_statistic_20261120 (1).csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261120.csv",
+      "selected": {
+        "date": "2026-11-20",
+        "contract_month": "202702",
+        "settlement_myr_per_tonne": 4217.0,
+        "previous_myr_per_tonne": 4333.0,
+        "change_myr_per_tonne": -116.0,
+        "volume": 38489,
+        "open_interest": 63969.0
+      },
+      "total_fcpo_volume": 117017,
+      "contracts_count": 24
+    }
+  ],
+  "note": "Rolling most-liquid contract: changes of contract may affect comparisons. Offline import only."
+}
