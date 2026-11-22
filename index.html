@@ -114,6 +114,15 @@ details[open]>.intel-detail,details[open]>p,details[open]>details{animation:exec
 <article class="fx-card"><div class="fx-label">02 · MALÁSIA E INDONÉSIA — OFERTA GLOBAL</div><h3>Oferta asiática e competitividade</h3><div class="fx-number">3,621 mi t</div><div class="fx-caption">Estoques finais da Malásia · outubro/2026 · MPOB, conforme quadro de oferta existente</div><p>Maior oferta pode favorecer negociações de palma.</p><p><strong>Favorece:</strong> disponibilidade exportável e concorrência entre fornecedores. <strong>Risco:</strong> restrições de oferta, biodiesel mais intenso e frete elevado.</p><p><strong>Acompanhar:</strong> MPOB, GAPKI, preços de palma e soja, USD/MYR, Índia, China e fretes.</p><details><summary>Ver análise · Nível 2</summary><p>Malásia: exportações 1,709 mi t e estoques 3,621 mi t (outubro/2026, MPOB). Indonésia: exportações 3,920 mi t e estoques 2,006 mi t (setembro/2026, GAPKI). Períodos distintos.</p><p>Fontes institucionais: <a href="https://bepi.mpob.gov.my/" target="_blank" rel="noopener noreferrer">MPOB</a> · <a href="https://gapki.id/" target="_blank" rel="noopener noreferrer">GAPKI</a>.</p><details><summary>Inteligência Mundo Novo · Nível 3</summary><p>Uma redução no preço FOB em USD pode melhorar a compra, mas a vantagem precisa ser recalculada com USD/BRL, frete, tributos e prazo. A oferta malaia não determina isoladamente o câmbio brasileiro.</p></details></details></article>
 <article class="fx-card"><div class="fx-label">03 · MUNDO NOVO — OPORTUNIDADES E RISCOS</div><h3>Quanto custa importar em reais?</h3><div class="fx-number">Preço × câmbio</div><div class="fx-caption">Modelo direcional · preço × câmbio × logística</div><p>O melhor preço em USD nem sempre é o menor custo em reais.</p><p><strong>Favorece:</strong> queda simultânea de commodity e dólar. <strong>Risco:</strong> alta simultânea de ambos.</p><p><strong>Acompanhar:</strong> preço por tonelada na mesma base, taxa cambial negociável, frete, impostos, lead time e margem.</p><details><summary>Ver análise · Nível 2</summary><div class="fx-matrix"><div><b>A · USD ↑ / commodity ↓</b> Efeito líquido indeterminado; depende das magnitudes.</div><div><b>B · USD ↓ / commodity ↑</b> Efeito líquido indeterminado; depende das magnitudes.</div><div><b>C · USD ↓ / commodity ↓</b> Tende a reduzir custo em reais, demais fatores constantes.</div><div><b>D · USD ↑ / commodity ↑</b> Tende a elevar custo em reais, demais fatores constantes.</div></div><p>Modelo simplificado: custo BRL = preço USD por unidade × BRL/USD, antes de frete, tributos e demais despesas.</p><details><summary>Inteligência Mundo Novo · Nível 3</summary><p>Priorizar cotações comparáveis de fornecedores e cenários de sensibilidade. Decisões de hedge ou compra exigem conhecer contratos, volumes, prazos, custos e política de risco da Mundo Novo.</p></details></details></article>
 </div><div class="fx-disclaimer">Fontes e períodos identificados em cada cartão. Interpretações condicionais, não recomendações de operação. Indicadores não validados permanecem como fatores a monitorar.</div></section></section>
+
+<section id="fcpo-media-panel" style="grid-column:1/-1;border:1px solid #333;border-radius:18px;padding:20px;background:#111;color:#fff">
+  <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center"><div><small style="color:#b7ff00;font-weight:800;letter-spacing:.08em">FONTE SECUNDÁRIA · NÃO OFICIAL</small><h2 style="margin:8px 0;color:#fff">FCPO — fechamento reportado pela imprensa</h2></div><span style="background:#252525;color:#eee;padding:8px 12px;border-radius:20px;font-size:12px">Importação manual · sem atualização automática</span></div>
+  <p style="color:#c7c7c7;font-size:13px">Histórico Media Biodiesel separado do settlement oficial. Comparações entre vencimentos diferentes são indicativas.</p>
+  <div id="fcpo-media-summary" style="font-size:15px;margin:14px 0;color:#b7ff00">Carregando histórico secundário…</div>
+  <div id="fcpo-media-bars" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0"></div>
+  <div id="fcpo-media-reference" style="font-size:13px;color:#ccc;margin:12px 0"></div>
+  <div id="fcpo-media-sources" style="font-size:12px;color:#bbb"></div>
+</section>
 </main>
 <script>
 // Mantém os detalhamentos dos quadros 01 e 02 alinhados
@@ -430,4 +439,38 @@ document.querySelectorAll(".intel-metrics").forEach(el=>{
   context.textContent="Últimos "+pts.length+" registros do histórico PTAX: "+String(a.time).slice(0,10)+" → "+String(b.time).slice(0,10)+". Variação entre referências: "+(pct>=0?"+":"")+pct.toLocaleString("pt-BR",{maximumFractionDigits:2,minimumFractionDigits:2})+"%. Não representa oscilação intradiária nem prevê o próximo pregão.";
  }catch(e){context.textContent="Histórico PTAX indisponível ou insuficiente; não é possível calcular variação.";}
 })();
-</script></body></html>
+</script>
+<script>
+/* Série secundária isolada: nunca substitui data/cpo-history.json. */
+(async function(){
+ const summary=document.getElementById('fcpo-media-summary');if(!summary)return;
+ const brl=n=>Number(n).toLocaleString('pt-BR',{maximumFractionDigits:2});
+ const short=d=>d.slice(8,10)+'/'+d.slice(5,7);
+ try{
+  const r=await fetch('data/fcpo-media-history.json',{cache:'no-store'});if(!r.ok)throw Error('Histórico secundário indisponível');
+  const data=await r.json();if(data.price_type!=='reported_media_close'||!Array.isArray(data.observations))throw Error('Fonte não validada');
+  const rows=data.observations.filter(x=>/^\\d{4}-\\d{2}-\\d{2}$/.test(x.date)&&Number(x.close_myr_per_tonne)>0&&/^https:\\/\\//.test(x.source_url)).sort((a,b)=>b.date.localeCompare(a.date));
+  if(rows.length<3)throw Error('Histórico insuficiente');
+  const three=rows.slice(0,3),avg=three.reduce((s,x)=>s+x.close_myr_per_tonne,0)/3;
+  summary.textContent='Último fechamento: RM '+brl(three[0].close_myr_per_tonne)+'/t ('+short(three[0].date)+') · Média 3 pregões: RM '+brl(avg)+'/t · '+rows.length+' registros';
+  const low=Math.min(...three.map(x=>x.close_myr_per_tonne))-70,high=Math.max(...three.map(x=>x.close_myr_per_tonne))+40;
+  const bars=document.getElementById('fcpo-media-bars');
+  three.slice().reverse().forEach(x=>{
+   const box=document.createElement('div');box.style.cssText='background:#1d1d1d;border-radius:12px;padding:12px;min-width:0';
+   const label=document.createElement('div');label.textContent=short(x.date);label.style.cssText='color:#bbb;font-size:12px';
+   const price=document.createElement('strong');price.textContent='RM '+brl(x.close_myr_per_tonne);price.style.cssText='display:block;color:#fff;font-size:clamp(13px,2vw,20px);margin:8px 0';
+   const track=document.createElement('div');track.style.cssText='height:7px;background:#333;border-radius:6px;overflow:hidden';
+   const fill=document.createElement('div');fill.style.cssText='height:100%;background:#b7ff00;width:'+Math.max(5,100*(x.close_myr_per_tonne-low)/(high-low))+'%';track.appendChild(fill);
+   const contract=document.createElement('small');contract.textContent=x.contract_month?'Contrato '+x.contract_month.slice(4)+'/'+x.contract_month.slice(0,4):'Vencimento não confirmado';contract.style.cssText='display:block;margin-top:9px;color:#aaa';
+   box.append(label,price,track,contract);bars.appendChild(box);
+  });
+  const target=new Date(three[0].date+'T00:00:00Z');target.setUTCDate(target.getUTCDate()-30);const day=target.toISOString().slice(0,10);
+  const ref=rows.find(x=>x.date<=day);const line=document.getElementById('fcpo-media-reference');
+  if(ref){const pct=(three[0].close_myr_per_tonne/ref.close_myr_per_tonne-1)*100;line.textContent='Referência de 30 dias ('+short(ref.date)+'): RM '+brl(ref.close_myr_per_tonne)+'/t · Variação indicativa: '+(pct>=0?'+':'')+brl(pct)+'%. Atenção: '+(ref.contract_month!==three[0].contract_month?'vencimentos diferentes; não representa variação de um mesmo contrato.':'mesmo vencimento informado.');}
+  const links=document.getElementById('fcpo-media-sources');links.append('Fontes dos três últimos pregões: ');
+  three.forEach((x,i)=>{const a=document.createElement('a');a.href=x.source_url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=short(x.date);a.style.cssText='color:#b7ff00;margin-right:12px';links.appendChild(a);});
+  const note=document.createElement('p');note.textContent='Fonte: CSV Media Biodiesel enviado pelo usuário. Preços jornalísticos, sem volume/open interest; licença de redistribuição não verificada. Atualização manual.';links.appendChild(note);
+ }catch(e){summary.textContent='Série secundária indisponível: '+e.message;}
+})();
+</script>
+</body></html>
