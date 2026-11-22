@@ -1,0 +1,38 @@
+name: Global Market Ticker - fechamento diario autorizado
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */3 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: global-market-ticker
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
+      MARKET_SYMBOLS_JSON: ${{ secrets.MARKET_SYMBOLS_JSON }}
+      MARKET_DATA_PUBLICATION_AUTHORIZED: ${{ vars.MARKET_DATA_PUBLICATION_AUTHORIZED }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Testar parser antes de consultar API
+        run: python -m unittest discover -s tests -p 'test_market_ticker.py'
+      - name: Atualizar somente com licenca e credenciais configuradas
+        run: python scripts/collect_market_ticker.py
+      - name: Publicar somente se houve novos dados validados
+        run: |
+          if [ -n "$(git status --porcelain -- data/global-market-ticker.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/global-market-ticker.json
+            git commit -m "Atualiza fechamento validado dos indices globais"
+            git push
+          else
+            echo "Sem novos dados autorizados."
+          fi
