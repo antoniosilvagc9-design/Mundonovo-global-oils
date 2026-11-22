@@ -97,6 +97,14 @@ details[open]>.intel-detail,details[open]>p,details[open]>details{animation:exec
 @media(prefers-reduced-motion:reduce){.fx-card{transition:none}.fx-card:hover{transform:none}}
 
 /* Global Market Ticker Premium White — alteração visual isolada */
+/* Escopo reforçado: tema global usa section/button com !important. */
+section#global-market-ticker{background:#FFFFFF!important;color:#183E25!important;border:1px solid #DDE5D9!important;border-radius:19px!important;padding:0!important;box-shadow:0 5px 22px rgba(24,62,37,.075)!important}
+#global-market-ticker .market-ticker-window,#global-market-ticker .market-ticker-track,#global-market-ticker .market-ticker-set{background:#FFFFFF!important}
+#global-market-ticker button.market-ticker-entry{background:#FFFFFF!important;color:#183E25!important;border:0!important;border-right:1px solid #E1E8DD!important;border-radius:0!important;padding:12px 18px!important;filter:none}
+#global-market-ticker button.market-ticker-entry:hover,#global-market-ticker button.market-ticker-entry:focus-visible{background:#F3F8F0!important;outline:2px solid #86B817;outline-offset:-2px}
+#global-market-ticker .market-ticker-detail button{background:#F3F8F0!important;color:#235F31!important;border:1px solid #DDE5D9!important;border-radius:9px!important}
+@media(max-width:600px){#global-market-ticker button.market-ticker-entry{padding:11px 13px!important}}
+
 .market-ticker{margin:0 0 18px;border:1px solid #DDE5D9;border-radius:19px;background:#FFFFFF;color:#183E25;overflow:hidden;box-shadow:0 5px 22px rgba(24,62,37,.075)}
 .market-ticker-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 18px;border-bottom:1px solid #E8EEE6;background:#FFFFFF}
 .market-ticker-head strong{color:#235F31;font-size:11px;letter-spacing:.12em;font-weight:800}
