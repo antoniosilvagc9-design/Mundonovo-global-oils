@@ -146,6 +146,26 @@ section#global-market-ticker{background:#FFFFFF!important;color:#183E25!importan
 @media(max-width:600px){.market-ticker-entry{min-width:150px;padding:11px 13px}.market-ticker-head{padding:10px 13px}.market-ticker-head small{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.market-ticker-track{animation:none;max-width:100%;width:auto;overflow-x:auto}.market-ticker-set:nth-child(2){display:none}}
 
+/* TV header horizontal compacto: título, Ibovespa e dólar na mesma linha */
+@media (min-width:1200px) and (min-aspect-ratio:3/2) and (max-height:1400px){
+ body>header{grid-template-columns:minmax(0,1fr) minmax(520px,55%);gap:clamp(10px,1.5vw,25px);align-items:center}
+ body>header>div:first-child{min-width:0}
+ body>header h1{font-size:clamp(19px,1.65vw,27px)!important;line-height:1.08;white-space:nowrap;letter-spacing:-.025em}
+ body>header .brand{font-size:10px}
+ body>header .muted{font-size:10px}
+ body>header .header-right{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;align-items:center}
+ body>header .status{display:flex;justify-content:flex-end;align-items:center;gap:8px;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;font-size:9px!important;white-space:nowrap}
+ body>header .status strong{font-size:9px!important;font-weight:500}
+ body>header .br-market-card{display:grid;grid-template-columns:105px minmax(0,1fr);align-items:center;column-gap:12px;padding:7px 11px!important}
+ body>header .br-market-title{display:block;font-size:9px;letter-spacing:.06em}
+ body>header .br-market-title span{display:block;text-align:left;font-size:9px;margin-top:3px}
+ body>header .br-market-metrics{margin:0;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center}
+ body>header .br-market-metric{gap:2px}
+ body>header .br-market-metric>span{font-size:9px}
+ body>header .br-market-metric>strong{font-size:clamp(15px,1.35vw,21px);line-height:1.12}
+ body>header .br-market-metric>small,body>header .br-market-metric>a{font-size:9px}
+ body>header .br-market-foot{grid-column:1/-1;margin-top:4px;padding-top:3px;font-size:8px;text-align:right}
+}
 /* Executive TV Fit 11.0: fixed viewport, readable panels and automatic content rotation.
    All original sections remain in the DOM; mobile and tablet layouts stay unchanged. */
 @media (min-width:1200px) and (min-aspect-ratio:3/2) and (max-height:1400px){
