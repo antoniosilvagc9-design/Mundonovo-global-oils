@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'data/fcpo-inbox/derivative_trading_statistic_*.csv'
+      - 'data/fcpo-inbox/*.csv'
 permissions:
   contents: write
 concurrency:
@@ -22,13 +22,27 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          shopt -s nullglob
-          files=(data/fcpo-inbox/derivative_trading_statistic_*.csv)
-          if (( ${#files[@]} == 0 )); then
-            echo "::error::Nenhum CSV FCPO encontrado em data/fcpo-inbox/. Envie arquivos derivative_trading_statistic_YYYYMMDD.csv para essa pasta antes de executar."
-            exit 1
-          fi
-          python scripts/import_fcpo_csv.py "${files[@]}" --output data/cpo-history.json
+          python - <<'PY'
+          import csv, pathlib, subprocess, sys
+          folder = pathlib.Path("data/fcpo-inbox")
+          required = {"day_id", "prod_id", "contract_month", "set_price", "previous", "change", "volume", "open_interest"}
+          valid = []
+          for path in sorted(folder.glob("*.csv")):
+              try:
+                  with path.open(encoding="utf-8-sig", newline="") as stream:
+                      columns = set((csv.reader(stream, delimiter="|").__next__()))
+                  if required.issubset(columns):
+                      valid.append(str(path))
+                  else:
+                      print(f"Ignorando CSV sem preços FCPO: {path.name}")
+              except (UnicodeError, OSError, StopIteration) as exc:
+                  print(f"Ignorando arquivo ilegível {path.name}: {exc}")
+          if not valid:
+              print("::error::Nenhum CSV de estatísticas FCPO com campo set_price encontrado em data/fcpo-inbox/. Faça upload do derivative_trading_statistic, mesmo que o celular renomeie o arquivo.")
+              sys.exit(1)
+          print(f"Arquivos com estrutura de preços: {len(valid)}")
+          subprocess.run([sys.executable, "scripts/import_fcpo_csv.py", *valid, "--output", "data/cpo-history.json"], check=True)
+          PY
       - name: Publicar somente se JSON mudou
         shell: bash
         run: |
