@@ -95,11 +95,39 @@ details[open]>.intel-detail,details[open]>p,details[open]>details{animation:exec
 .fx-matrix b{color:#B7FF00}.fx-disclaimer{font-size:11px;color:#aaa;margin-top:12px}
 @media(max-width:700px){.fx-grid{grid-template-columns:minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.fx-card{transition:none}.fx-card:hover{transform:none}}
+
+/* Global Market Ticker — dados verificáveis, sem números fictícios */
+.market-ticker{margin:0 0 18px;border:1px solid #353535;border-radius:15px;background:#101010;color:#fff;overflow:hidden}
+.market-ticker-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid #292929}
+.market-ticker-head strong{color:#B7FF00;font-size:11px;letter-spacing:.12em}
+.market-ticker-head small{font-size:11px;color:#aaa}
+.market-ticker-window{overflow:hidden;max-width:100%}
+.market-ticker-track{display:flex;width:max-content;animation:global-ticker-scroll 85s linear infinite;will-change:transform}
+.market-ticker-window:hover .market-ticker-track,.market-ticker-window:focus-within .market-ticker-track{animation-play-state:paused}
+.market-ticker-set{display:flex;flex:none;align-items:center;gap:0}
+.market-ticker-entry{display:flex;flex-direction:column;gap:4px;min-width:170px;max-width:210px;padding:11px 18px;background:transparent;color:#fff;border:0;border-right:1px solid #343434;border-radius:0;text-align:left;cursor:pointer;font:inherit}
+.market-ticker-entry:hover,.market-ticker-entry:focus-visible{background:#202020;outline:1px solid #B7FF00;outline-offset:-1px}
+.market-ticker-name{font-size:11px;color:#c9c9c9;font-weight:700;white-space:nowrap}
+.market-ticker-value{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.market-ticker-change{font-size:11px;font-weight:700;white-space:nowrap}
+.market-ticker-change.up{color:#B7FF00}.market-ticker-change.down{color:#ff666e}.market-ticker-change.neutral{color:#aaa}
+.market-ticker-state{font-size:10px;color:#aaa;white-space:nowrap}
+@keyframes global-ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.market-ticker-detail{padding:13px 16px;border-top:1px solid #343434;color:#ddd;font-size:13px;line-height:1.65}
+.market-ticker-detail[hidden]{display:none}
+.market-ticker-detail strong{color:#fff}.market-ticker-detail a{color:#B7FF00}
+.market-ticker-detail button{float:right;border:1px solid #555;border-radius:8px;background:#222;color:#fff;padding:5px 10px;cursor:pointer}
+@media(max-width:600px){.market-ticker-entry{min-width:150px;padding:10px 13px}.market-ticker-head{padding:9px 12px}}
+@media(prefers-reduced-motion:reduce){.market-ticker-track{animation:none;max-width:100%;width:auto;overflow-x:auto}.market-ticker-set:nth-child(2){display:none}}
 </style>
 </head>
 <body>
 <header><div><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="status"><div id="clock"></div><strong>Dados oficiais históricos • sem cotações em tempo real</strong></div></header>
-<nav class="executive-nav" aria-label="Navegação executiva"><a href="#executive-section-1">Cotações</a><a href="#executive-section-2">Oferta e demanda</a><a href="#news-section">Notícias</a><a href="#executive-section-4">Inteligência</a></nav><div class="executive-toolbar"><button type="button" id="executive-expand">Expandir análises</button><button type="button" id="executive-collapse">Recolher análises</button><span class="executive-note">Painel executivo · <b>dados com datas e fontes próprias</b> · sem recomendação automática de operação</span></div><main class="grid">
+<nav class="executive-nav" aria-label="Navegação executiva"><a href="#executive-section-1">Cotações</a><a href="#executive-section-2">Oferta e demanda</a><a href="#news-section">Notícias</a><a href="#executive-section-4">Inteligência</a></nav><div class="executive-toolbar"><button type="button" id="executive-expand">Expandir análises</button><button type="button" id="executive-collapse">Recolher análises</button><span class="executive-note">Painel executivo · <b>dados com datas e fontes próprias</b> · sem recomendação automática de operação</span></div><section class="market-ticker" aria-label="Mercados financeiros internacionais" id="global-market-ticker">
+<div class="market-ticker-head"><strong>GLOBAL MARKET TICKER</strong><small id="market-ticker-updated">Últimos dados disponíveis · sem tempo real confirmado</small></div>
+<div class="market-ticker-window"><div class="market-ticker-track" id="market-ticker-track"></div></div>
+<div class="market-ticker-detail" id="market-ticker-detail" hidden aria-live="polite"></div>
+</section><main class="grid">
 <section id="executive-section-1"><h2>01 · Cotações internacionais</h2><div id="quotes"></div><div class="foot">Fontes previstas: Bursa Malaysia, CME Group, Banco Central e EIA. Acesso em tempo real sujeito a licença e disponibilidade de API.</div></section>
 <section class="intel-section" id="executive-section-2"><h2>02 · Oferta e demanda global</h2><p class="muted">Resumo executivo · clique em cada quadro para abrir os dados e a leitura comercial</p><div class="countries"><span>🇲🇾 Malásia</span><span>🇮🇩 Indonésia</span><span>🇨🇳 China</span><span>🇮🇳 Índia</span><span>🇧🇷 Brasil</span></div>
 <div class="intel-grid">
@@ -521,6 +549,87 @@ document.querySelectorAll(".intel-metrics").forEach(el=>{
   three.forEach((x,i)=>{const a=document.createElement('a');a.href=x.source_url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=short(x.date);a.style.cssText='color:#b7ff00;margin-right:12px';links.appendChild(a);});
   const note=document.createElement('p');note.textContent='Fonte: CSV Media Biodiesel enviado pelo usuário. Preços jornalísticos, sem volume/open interest; licença de redistribuição não verificada. Atualização manual.';links.appendChild(note);
  }catch(e){summary.textContent='Série secundária indisponível: '+e.message;}
+})();
+</script>
+<script>
+(function(){
+"use strict";
+const markets=[
+{id:"dow",name:"DOW JONES",full:"Dow Jones Industrial Average",exchange:"NYSE / Nasdaq",zone:"America/New_York"},
+{id:"sp500",name:"S&P 500",full:"S&P 500 Index",exchange:"Mercado acionário dos EUA",zone:"America/New_York"},
+{id:"nasdaq",name:"NASDAQ",full:"Nasdaq Composite",exchange:"Nasdaq",zone:"America/New_York"},
+{id:"ibov",name:"IBOVESPA",full:"Ibovespa",exchange:"B3",zone:"America/Sao_Paulo"},
+{id:"cme",name:"CME E-MINI S&P",full:"E-mini S&P 500 Futures",exchange:"CME Group",zone:"America/Chicago"},
+{id:"klci",name:"BURSA KLCI",full:"FTSE Bursa Malaysia KLCI",exchange:"Bursa Malaysia",zone:"Asia/Kuala_Lumpur"},
+{id:"nifty",name:"NIFTY 50",full:"Nifty 50",exchange:"NSE India",zone:"Asia/Kolkata"},
+{id:"idx",name:"IDX COMPOSITE",full:"Jakarta Composite Index",exchange:"Indonesia Stock Exchange",zone:"Asia/Jakarta"},
+{id:"shcomp",name:"SHANGHAI",full:"Shanghai Composite",exchange:"Shanghai Stock Exchange",zone:"Asia/Shanghai"},
+{id:"nikkei",name:"NIKKEI 225",full:"Nikkei 225",exchange:"Tokyo Stock Exchange",zone:"Asia/Tokyo"},
+{id:"hsi",name:"HANG SENG",full:"Hang Seng Index",exchange:"Hong Kong Stock Exchange",zone:"Asia/Hong_Kong"},
+{id:"dax",name:"DAX",full:"DAX Index",exchange:"Frankfurt / Xetra",zone:"Europe/Berlin"}
+];
+const track=document.getElementById("market-ticker-track"),detail=document.getElementById("market-ticker-detail");
+if(!track||!detail)return;
+const num=n=>Number(n).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+const allowedStates=new Set(["ABERTO","FECHADO","STATUS NÃO CONFIRMADO"]);
+let quotes={};
+function verified(q){
+ if(!q||typeof q!=="object"||typeof q.source_url!=="string"||!q.source_url.startsWith("https://")||typeof q.as_of!=="string"||!Number.isFinite(Date.parse(q.as_of)))return false;
+ if(typeof q.price!=="number"||!Number.isFinite(q.price)||q.price<=0)return false;
+ if(typeof q.previous_close!=="number"||!Number.isFinite(q.previous_close)||q.previous_close<=0)return false;
+ if(typeof q.currency!=="string"||!q.currency.trim()||typeof q.source!=="string"||!q.source.trim())return false;
+ return true;
+}
+function display(m){
+ const q=quotes[m.id],ok=verified(q),pct=ok?(q.price/q.previous_close-1)*100:null;
+ const change=ok?(pct>0?"▲ +":pct<0?"▼ ":"")+"":null;
+ const state=ok&&allowedStates.has(q.market_status)?q.market_status:"STATUS NÃO CONFIRMADO";
+ return {q,ok,pct,state};
+}
+function entry(m){
+ const d=display(m),button=document.createElement("button");button.type="button";button.className="market-ticker-entry";
+ const name=document.createElement("span");name.className="market-ticker-name";name.textContent=m.name;
+ const price=document.createElement("span");price.className="market-ticker-value";price.textContent=d.ok?num(d.q.price)+" "+d.q.currency:"Dado indisponível";
+ const variation=document.createElement("span");variation.className="market-ticker-change "+(!d.ok||d.pct===0?"neutral":d.pct>0?"up":"down");
+ variation.textContent=d.ok?(d.pct>0?"▲ +":d.pct<0?"▼ ":"")+num(d.pct)+"%":"Sem variação confirmada";
+ const state=document.createElement("span");state.className="market-ticker-state";state.textContent=d.ok?d.state:"AGUARDANDO FONTE";
+ button.append(name,price,variation,state);button.addEventListener("click",()=>show(m));return button;
+}
+function show(m){
+ const d=display(m);detail.replaceChildren();
+ const close=document.createElement("button");close.type="button";close.textContent="Fechar";close.addEventListener("click",()=>{detail.hidden=true;detail.replaceChildren()});
+ const title=document.createElement("strong");title.textContent=m.full+" · "+m.exchange;
+ const info=document.createElement("div");
+ if(d.ok){
+  const absolute=d.q.price-d.q.previous_close;
+  info.textContent="Último valor: "+num(d.q.price)+" "+d.q.currency+" · Variação: "+(absolute>=0?"+":"")+num(absolute)+" ("+(d.pct>=0?"+":"")+num(d.pct)+"%) · Estado: "+d.state+" · Observação: "+d.q.as_of+" · Fonte: "+d.q.source+(d.q.delayed?" · Dados atrasados":"");
+ }else info.textContent="Dado indisponível. Nenhuma cotação verificável foi integrada para este índice. Fuso: "+m.zone+".";
+ detail.append(close,title,info);
+ if(d.ok){const link=document.createElement("a");link.href=d.q.source_url;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Consultar fonte";detail.append(link)}
+ detail.hidden=false;
+}
+function render(){
+ track.replaceChildren();
+ for(let i=0;i<2;i++){const set=document.createElement("div");set.className="market-ticker-set";if(i===1)set.setAttribute("aria-hidden","true");markets.forEach(m=>set.append(entry(m)));track.append(set)}
+}
+async function load(){
+ try{
+  const response=await fetch("data/global-market-ticker.json",{cache:"no-store"});
+  if(!response.ok)throw Error("Arquivo de cotações ainda não publicado");
+  const data=await response.json();
+  if(!data||!Array.isArray(data.quotes))throw Error("Formato de cotações inválido");
+  const next={};
+  for(const q of data.quotes){if(markets.some(m=>m.id===q.id)&&verified(q))next[q.id]=q}
+  quotes=next;
+  const updated=document.getElementById("market-ticker-updated");
+  if(updated)updated.textContent=Object.keys(quotes).length+" índices com fonte identificada · dados podem estar atrasados";
+ }catch(e){
+  const updated=document.getElementById("market-ticker-updated");
+  if(updated)updated.textContent="Fontes em integração · sem cotações fictícias";
+ }
+ render();
+}
+render();load();
 })();
 </script>
 </body></html>
