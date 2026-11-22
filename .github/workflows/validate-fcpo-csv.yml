@@ -1,0 +1,32 @@
+name: Validar CSV FCPO offline (sem download bloqueado)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/import_fcpo_csv.py'
+      - 'tests/fixtures/derivative_trading_statistic_20261120.csv'
+      - '.github/workflows/validate-fcpo-csv.yml'
+permissions:
+  contents: read
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validar CSV real e dados do contrato FCPO
+        run: |
+          python scripts/import_fcpo_csv.py tests/fixtures/derivative_trading_statistic_20261120.csv --output /tmp/fcpo-validation.json
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/fcpo-validation.json'))
+          assert x['latest']['date']=='2026-11-20'
+          assert x['latest']['selected']['contract_month']=='202702'
+          assert x['latest']['selected']['settlement_myr_per_tonne']==4217
+          assert x['latest']['selected']['volume']==38489
+          assert x['latest']['total_fcpo_volume']==117017
+          assert x['data_status']=='partial_history'
+          print('TESTE APROVADO: dados oficiais conferidos, sem requisições HTTP')
+          PY
