@@ -4,18 +4,18 @@
   "source_url": "https://fred.stlouisfed.org/series/DCOILBRENTEU",
   "unit": "USD/barril",
   "price_type": "Spot Brent Europe (referência diária; não é futuro ICE)",
-  "updated_at_utc": "2026-11-21T21:24:36.996700+00:00",
+  "updated_at_utc": "2026-11-22T01:35:10.582942+00:00",
   "latest": {
     "date": "2026-11-17",
     "value": 92.94
   },
   "baseline_30d": {
-    "date": "2026-10-22",
-    "value": 125.39
+    "date": "2026-10-23",
+    "value": 128.3
   },
-  "target_30d": "2026-10-22",
-  "change_30d_absolute": -32.45,
-  "change_30d_percent": -25.8793,
+  "target_30d": "2026-10-23",
+  "change_30d_absolute": -35.36,
+  "change_30d_percent": -27.5604,
   "last_three": [
     {
       "date": "2026-11-13",
