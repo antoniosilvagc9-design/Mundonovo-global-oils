@@ -246,11 +246,9 @@ if(cpoRow){
   try{
    const d=await getCpoHistory(),pts=d.last_three,valid=pts.length===3&&pts.every(p=>Number(p.selected?.settlement_myr_per_tonne)>0);
    const latest=d.latest.selected,stale=(Date.now()-Date.parse(d.latest.date+"T00:00:00Z"))>5*86400000;
-   const summary='<div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><strong>FCPO · Bursa Malaysia · MYR/t</strong><button type="button" id="close-cpo">Fechar</button></div>'+
-    '<p class="muted">Liquidação oficial · '+cpoDate(d.latest.date)+' · vencimento '+latest.contract_month+' · contrato mais líquido'+(stale?' · DADO DEFASADO':'')+'</p>'+
-    '<p class="muted">Última liquidação oficial validada: MYR '+cpoFmt(latest.settlement_myr_per_tonne)+'/t · volume do vencimento: '+Number(latest.volume).toLocaleString("pt-BR")+'</p>';
+   const summary='<div style="display:flex;justify-content:flex-end;gap:8px;align-items:center"><button type="button" id="close-cpo">Fechar</button></div>';
    if(!valid){
-    panel.innerHTML=summary+'<p class="muted">Histórico oficial parcial: 1 pregão validado. Abaixo, últimos 3 fechamentos reportados pela imprensa (fonte secundária).</p>';
+    panel.innerHTML=summary;
     panel.querySelector("#close-cpo").onclick=()=>panel.remove();
     const box=document.createElement("div");box.style.cssText="border-top:1px solid #444;padding-top:14px;margin-top:12px";panel.appendChild(box);
     try{
