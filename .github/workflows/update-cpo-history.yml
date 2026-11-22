@@ -1,4 +1,4 @@
-name: Atualizar CPO MPOB
+name: Atualizar CPO FCPO Commodities API
 on:
   workflow_dispatch:
 permissions:
@@ -11,7 +11,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Coletar CPO oficial MPOB
+      - name: Coletar futuro FCPO via Commodities-API
+        env:
+          COMMODITIES_API_KEY: ${{ secrets.COMMODITIES_API_KEY }}
         run: python scripts/update_cpo_history.py
       - name: Publicar dados validados
         run: |
