@@ -384,7 +384,7 @@ const quoteCurrency={"Óleo de palma bruto (CPO)":"MYR ","Óleo de soja":"US¢ "
 const quoteSuffix={"Óleo de palma bruto (CPO)":"/t","Óleo de soja":"/lb","Soja em grão":"/saca 60 kg","USD/BRL":" por US$ 1","USD/MYR":" por US$ 1","Petróleo Brent":"/barril"};
 document.getElementById("quotes").innerHTML=quotes.map(([name,source,value,detail])=>'<div class="item '+(name==="USD/BRL"?"usd-clickable":name==="Petróleo Brent"?"brent-clickable":name==="Soja em grão"?"soy-clickable":"")+'" '+(name==="USD/BRL"?'role="button" tabindex="0" aria-label="Abrir histórico intradiário do dólar"':name==="Petróleo Brent"?'role="button" tabindex="0" aria-label="Abrir histórico diário do petróleo Brent"':name==="Soja em grão"?'role="button" tabindex="0" aria-label="Abrir histórico diário da soja"':"")+'><div><strong>'+name+'</strong><div class="muted">'+source+' · '+detail+(name==="USD/BRL"?' · Clique para ver histórico intradiário':name==="Petróleo Brent"?' · Clique para ver histórico diário':name==="Soja em grão"?' · Clique para ver histórico diário':"")+'</div></div><span class="pill">'+(value?(quoteCurrency[name]||"")+value+(quoteSuffix[name]||""):"Sem cotação verificada")+'</span></div>').join("");
 
-/* PTAX automática — Banco Central, fechamento diário; não é dólar comercial em tempo real. */
+/* PTAX automática — consulta a cada 60 segundos; a fonte oficial publica boletins algumas vezes ao dia, não é cotação em tempo real. */
 (function(){
  "use strict";
  const row=[...document.querySelectorAll("#quotes .item")].find(el=>el.querySelector("strong")?.textContent==="USD/BRL");
@@ -421,7 +421,7 @@ document.getElementById("quotes").innerHTML=quotes.map(([name,source,value,detai
    else meta.textContent+=" · consulta temporariamente indisponível";
   }finally{busy=false;}
  }
- refresh();setInterval(refresh,15*60*1000);
+ refresh();setInterval(refresh,60*1000);
  document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh()});
 })();
 
