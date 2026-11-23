@@ -418,6 +418,30 @@ section#global-market-ticker,body>section#global-market-ticker{background:#08080
 #executive-section-1 #quotes .item:hover{background:#1A1812!important}
 #executive-section-1 #quotes .item:focus-visible{outline:2px solid #D4AF37!important;outline-offset:2px}
 @media(max-width:650px){#executive-section-1 #quotes .item{align-items:flex-start!important;gap:10px!important}#executive-section-1 #quotes .item .pill{white-space:normal;max-width:48%;overflow-wrap:anywhere;font-size:10px!important}}
+
+/* Uniform quote value boxes: width based on soybean 60 kg label */
+#executive-section-1 #quotes .item .pill{
+ box-sizing:border-box!important;
+ width:164px!important;
+ min-width:164px!important;
+ max-width:164px!important;
+ min-height:34px!important;
+ display:flex!important;
+ align-items:center!important;
+ justify-content:center!important;
+ text-align:center!important;
+ white-space:nowrap!important;
+ padding:8px 6px!important;
+ font-size:clamp(9px,.76vw,11px)!important;
+ line-height:1.15!important;
+ flex-shrink:0!important;
+}
+@media(max-width:650px){
+ #executive-section-1 #quotes .item .pill{
+  width:164px!important;min-width:164px!important;max-width:164px!important;
+  white-space:nowrap!important;overflow-wrap:normal!important;
+ }
+}
 </style>
 </head>
 <body>
