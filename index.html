@@ -383,6 +383,27 @@ section#global-market-ticker,body>section#global-market-ticker{background:#111!i
 :focus-visible{outline:2px solid #D4AF37!important;outline-offset:3px}
 ::selection{background:#D4AF37;color:#080808}
 @media(max-width:650px){body>header.quotes-header{background:#080808!important}}
+
+/* Bolsa de Valores — black, white and lime; isolated from Black & Gold theme */
+:root{--exchange-lime:#B7FF00;--exchange-black:#080808;--exchange-text:#FFFFFF;--exchange-muted:#B8B8B8}
+section#global-market-ticker,body>section#global-market-ticker{background:#080808!important;color:#fff!important;border:1px solid #333!important;border-radius:13px!important;box-shadow:none!important}
+#global-market-ticker .market-ticker-head{background:#101010!important;border-bottom:1px solid #333!important;color:#fff!important}
+#global-market-ticker .market-ticker-head strong{color:#B7FF00!important;font-size:12px!important}
+#global-market-ticker .market-ticker-head small{color:#B8B8B8!important}
+#global-market-ticker .market-ticker-window,#global-market-ticker .market-ticker-track,#global-market-ticker .market-ticker-set{background:#080808!important}
+#global-market-ticker button.market-ticker-entry{background:#080808!important;color:#fff!important;border:0!important;border-right:1px solid #333!important;border-radius:0!important;min-width:170px!important;padding:11px 15px!important;filter:none!important}
+#global-market-ticker button.market-ticker-entry:hover,#global-market-ticker button.market-ticker-entry:focus-visible{background:#192009!important;border-color:#B7FF00!important;outline:2px solid #B7FF00!important;outline-offset:-2px!important}
+#global-market-ticker .market-ticker-name{color:#B7FF00!important;font-size:11px!important;font-weight:800!important}
+#global-market-ticker .market-ticker-value{color:#FFFFFF!important;font-size:15px!important;font-weight:800!important}
+#global-market-ticker .market-ticker-change.up{color:#B7FF00!important}
+#global-market-ticker .market-ticker-change.down{color:#FF6464!important}
+#global-market-ticker .market-ticker-change.neutral{color:#B8B8B8!important}
+#global-market-ticker .market-ticker-state{color:#B8B8B8!important}
+#global-market-ticker .market-ticker-detail{background:#141414!important;color:#fff!important;border-top:1px solid #333!important}
+#global-market-ticker .market-ticker-detail strong,#global-market-ticker .market-ticker-detail a{color:#B7FF00!important}
+#global-market-ticker .market-ticker-detail button{background:#1A1A1A!important;color:#fff!important;border:1px solid #B7FF00!important}
+#global-market-ticker .market-ticker-detail button:hover{background:#263509!important}
+@media(max-width:600px){#global-market-ticker button.market-ticker-entry{min-width:155px!important;padding:10px 12px!important}}
 </style>
 </head>
 <body>
