@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mundo Novo | Apresentação Executiva</title>
+<style>body{font:16px system-ui;background:#090b0b;color:white;max-width:720px;margin:8vh auto;padding:24px}main{border:1px solid #333;border-radius:18px;padding:30px;background:#151818}h1{color:#b7ff00}button{background:#b7ff00;border:0;border-radius:10px;padding:16px 24px;font-weight:800;cursor:pointer}button:disabled{opacity:.5}small{color:#bbb}#status{margin-top:20px}</style></head>
+<body><main><small>MUNDO NOVO INTELLIGENCE • PROTÓTIPO</small><h1>Apresentação executiva</h1>
+<p>Gere um PowerPoint editável com dados fictícios. Nenhum dado do ERP será consultado.</p>
+<button id="generate">Gerar apresentação executiva</button><p id="status" role="status"></p>
+<small>Requer API local em http://127.0.0.1:8000 e frontend servido pela mesma origem ou proxy configurado. Não publica dados empresariais.</small>
+</main><script>
+const button=document.getElementById("generate"), status=document.getElementById("status");
+button.addEventListener("click",async()=>{
+ button.disabled=true;status.textContent="Gerando apresentação...";
+ try {
+ const response=await fetch("/api/executive-report/generate",{method:"POST"});
+ if(!response.ok)throw new Error("HTTP "+response.status);
+ const blob=await response.blob(), url=URL.createObjectURL(blob), a=document.createElement("a");
+ a.href=url;a.download="mundo_novo_relatorio_demo.pptx";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ status.textContent="Arquivo gerado. Confira os downloads.";
+ }catch(error){status.textContent="Não foi possível gerar: verifique se a API está ativa e se há proxy para /api. "+error.message;}
+ finally{button.disabled=false;}
+});
+</script></body></html>
