@@ -475,7 +475,7 @@ body[data-portal-page] .executive-nav a{font-size:12px!important}
 </head>
 <body>
 <header class="quotes-header"><div class="header-brand"><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="header-clock"><div id="clock"></div><small>Dados históricos</small></div></header>
-<nav class="executive-nav" aria-label="Navegação executiva"><a href="./">Início</a><a href="?page=quotes">01 · Cotações</a><a href="?page=supply">02 · Oferta e demanda</a><a href="?page=news">03 · Notícias</a><a href="?page=intelligence">04 · Inteligência</a></nav><div class="executive-toolbar"><button type="button" id="executive-expand">Expandir análises</button><button type="button" id="executive-collapse">Recolher análises</button><span class="executive-note">Painel executivo · <b>dados com datas e fontes próprias</b> · sem recomendação automática de operação</span></div><section class="market-ticker" aria-label="Mercados financeiros internacionais" id="global-market-ticker">
+<section class="market-ticker" aria-label="Mercados financeiros internacionais" id="global-market-ticker">
 <div class="market-ticker-head"><strong>BOLSA DE VALORES</strong><small id="market-ticker-updated">Últimos dados disponíveis · sem tempo real confirmado</small></div>
 <div class="market-ticker-window"><div class="market-ticker-track" id="market-ticker-track"></div></div>
 <div class="market-ticker-detail" id="market-ticker-detail" hidden aria-live="polite"></div>
@@ -886,12 +886,7 @@ function tick(){document.getElementById("clock").textContent=new Intl.DateTimeFo
 <script>
 /* Navegação e transições executivas sem alterar fontes nem cotações. */
 document.querySelectorAll("main.grid > section").forEach((el,i)=>{el.id=el.id||"executive-section-"+(i+1);});
-document.getElementById("executive-expand").addEventListener("click",()=>{
- document.querySelectorAll(".intel-section details").forEach(d=>d.open=true);
-});
-document.getElementById("executive-collapse").addEventListener("click",()=>{
- document.querySelectorAll(".intel-section details").forEach(d=>d.open=false);
-});
+
 document.querySelectorAll(".intel-metrics").forEach(el=>{
  const meta=document.createElement("div");meta.className="executive-meta";
  const parent=el.closest(".intel-card");
