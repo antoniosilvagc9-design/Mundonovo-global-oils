@@ -477,6 +477,38 @@ body[data-portal-page="quotes"] #global-market-ticker,
 body[data-portal-page="supply"] #global-market-ticker,
 body[data-portal-page="news"] #global-market-ticker,
 body[data-portal-page="intelligence"] #global-market-ticker{display:none!important}
+
+/* Executive Commodities Terminal 15.0 — scoped page 01 */
+body[data-portal-page="quotes"] #executive-section-1{max-width:none!important;background:#080808!important;border:0!important;padding:0!important}
+body[data-portal-page="quotes"] #executive-section-1>h2{font-size:clamp(20px,2vw,29px)!important;padding:10px 15px!important}
+body[data-portal-page="quotes"] #executive-section-1>#quotes{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important}
+body[data-portal-page="quotes"] #executive-section-1>.foot{margin:12px 0!important}
+.tg15{color:#fff;font-family:inherit}.tg15 *{box-sizing:border-box}
+.tg15-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:16px 0}
+.tg15-card{background:#111;border:1px solid #333;border-radius:14px;padding:17px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.tg15-card:focus-visible{outline:2px solid #D4AF37;outline-offset:2px}
+.tg15-top{display:flex;justify-content:space-between;gap:8px;align-items:start}
+.tg15-name{color:#D4AF37;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.tg15-state{font-size:10px;color:#B8B8B8;border:1px solid #444;padding:4px 6px;border-radius:6px;white-space:nowrap}
+.tg15-price{font-size:clamp(18px,1.9vw,29px);font-weight:850;line-height:1.15;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.tg15-meta{font-size:11px;line-height:1.45;color:#B8B8B8;text-transform:uppercase;min-height:30px;overflow-wrap:anywhere}
+.tg15-change{font-size:12px;font-weight:750;color:#B8B8B8}
+.tg15-change.up{color:#B7FF00}.tg15-change.down{color:#FF7777}
+.tg15-spark{height:47px;width:100%;display:block}
+.tg15-panel{background:#111;border:1px solid #333;border-radius:14px;padding:19px;margin:14px 0}
+.tg15-heading{font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px;color:#fff}
+.tg15-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.tg15-controls select,.tg15-controls button{background:#191919!important;border:1px solid #655527!important;border-radius:8px!important;color:#fff!important;font-size:12px!important;padding:9px 11px!important;min-height:36px}
+.tg15-controls button[aria-pressed="true"]{background:#D4AF37!important;color:#080808!important}
+.tg15-chart{width:100%;height:auto;min-height:150px;max-height:300px;display:block;background:#0c0c0c;border-radius:10px}
+.tg15-caption{color:#B8B8B8;font-size:11px;line-height:1.5;margin-top:9px}
+.tg15-table-wrap{overflow-x:auto}.tg15-table{width:100%;border-collapse:collapse;font-size:12px;min-width:740px}
+.tg15-table th{text-align:left;color:#D4AF37;font-size:11px;padding:12px 9px;border-bottom:1px solid #444;white-space:nowrap}
+.tg15-table td{color:#fff;padding:12px 9px;border-bottom:1px solid #303030;vertical-align:top}
+.tg15-table .secondary{color:#B8B8B8}.tg15-table .up{color:#B7FF00}.tg15-table .down{color:#FF7777}
+.tg15-export{margin-top:14px;background:#D4AF37!important;color:#080808!important;border:0!important;border-radius:8px;padding:10px 15px;font-weight:800;font-size:12px}
+@media(max-width:1000px){.tg15-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.tg15-grid{grid-template-columns:1fr}.tg15-card{padding:15px}.tg15-panel{padding:13px}.tg15-price{font-size:23px}}
 </style>
 </head>
 <body>
@@ -493,7 +525,12 @@ body[data-portal-page="intelligence"] #global-market-ticker{display:none!importa
 <a class="portal-card" href="?page=news"><span class="portal-card-num">03 / INFORMAÇÃO</span><span class="portal-card-title">NOTÍCIAS E ACONTECIMENTOS</span><span class="portal-card-description">Radar internacional, atualizações relevantes e acontecimentos do setor.</span><span class="portal-card-action">ACESSAR NOTÍCIAS →</span></a>
 <a class="portal-card" href="?page=intelligence"><span class="portal-card-num">04 / ESTRATÉGIA</span><span class="portal-card-title">INTELIGÊNCIA DE MERCADO</span><span class="portal-card-description">Câmbio Brasil/Ásia, competitividade, oferta asiática e custos de importação.</span><span class="portal-card-action">ACESSAR INTELIGÊNCIA →</span></a>
 </div></div><div class="portal-back"><a href="./" aria-label="Voltar à página inicial">← VOLTAR À CENTRAL DE INTELIGÊNCIA</a></div><main class="grid">
-<section id="executive-section-1"><h2>01 · Cotações internacionais</h2><div id="quotes"></div><div class="foot">Fontes previstas: Bursa Malaysia, CME Group, Banco Central e EIA. Acesso em tempo real sujeito a licença e disponibilidade de API.</div></section>
+<section id="executive-section-1"><h2>01 · Cotações internacionais</h2><div id="quotes"></div><div id="tg15" class="tg15" aria-label="Terminal executivo de cotações">
+<div class="tg15-grid" id="tg15-grid" aria-live="polite"></div>
+<section class="tg15-panel" aria-label="Gráfico histórico"><h3 class="tg15-heading">EVOLUÇÃO HISTÓRICA</h3>
+<div class="tg15-controls"><label for="tg15-asset" class="tg15-caption">ATIVO</label><select id="tg15-asset"></select><button type="button" data-days="7" aria-pressed="false">7 DIAS</button><button type="button" data-days="30" aria-pressed="true">30 DIAS</button><button type="button" data-days="90" aria-pressed="false">90 DIAS</button></div>
+<svg id="tg15-chart" class="tg15-chart" viewBox="0 0 800 260" role="img" aria-label="Gráfico histórico de preços"></svg><div class="tg15-caption" id="tg15-chart-caption">CARREGANDO HISTÓRICOS VERIFICADOS...</div></section>
+<section class="tg15-panel" aria-label="Tabela executiva"><h3 class="tg15-heading">COMPARATIVO DE COTAÇÕES</h3><div class="tg15-table-wrap"><table class="tg15-table"><thead><tr><th>ATIVO</th><th>ÚLTIMO PREÇO</th><th>ANTERIOR</th><th>VARIAÇÃO</th><th>DATA</th><th>FONTE</th><th>STATUS</th></tr></thead><tbody id="tg15-table-body"></tbody></table></div><button class="tg15-export" type="button" id="tg15-export">EXPORTAR CSV PARA EXCEL / POWER BI</button><p class="tg15-caption">PREÇOS E DATAS DE REFERÊNCIA NÃO REPRESENTAM COTAÇÕES EM TEMPO REAL. VARIAÇÕES EXIBIDAS APENAS QUANDO HÁ OBSERVAÇÕES COMPARÁVEIS.</p></section></div><div class="foot">Fontes previstas: Bursa Malaysia, CME Group, Banco Central e EIA. Acesso em tempo real sujeito a licença e disponibilidade de API.</div></section>
 <section class="intel-section" id="executive-section-2"><h2>02 · Oferta e demanda global</h2><p class="muted">Resumo executivo · clique em cada quadro para abrir os dados e a leitura comercial</p><div class="countries"><span>🇲🇾 Malásia</span><span>🇮🇩 Indonésia</span><span>🇨🇳 China</span><span>🇮🇳 Índia</span><span>🇧🇷 Brasil</span></div>
 <div class="intel-grid">
 <article class="intel-card"><div class="intel-kicker">01 · OFERTA E EXPORTAÇÃO</div><h3>🇲🇾 Malásia</h3><div class="intel-metrics"><div><strong>1,709 mi t</strong><small>Exportações · outubro</small></div><div><strong>3,621 mi t</strong><small>Estoques finais · outubro</small></div></div><p class="intel-summary">Exportações avançaram, mas os estoques também cresceram.</p><details><summary>Ver detalhamento</summary><div class="intel-detail"><div class="intel-level"><b>Nível 2 · Dados e contexto</b><p>Produção de CPO: 2,154 milhões de toneladas. Exportações: 1,709 milhão de toneladas, alta de 55,75% ante setembro. Estoques finais: 3,621 milhões de toneladas.</p><small>Referência: outubro de 2026 · Fonte: Malaysian Palm Oil Board (MPOB).</small><p><a href="https://bepi.mpob.gov.my/" target="_blank" rel="noopener noreferrer">Consultar estatísticas oficiais do MPOB</a></p></div><details class="intel-analysis"><summary>Nível 3 · Inteligência comercial</summary><p>A recuperação das exportações é um sinal de demanda externa mais forte. Porém, o aumento simultâneo dos estoques indica que a oferta disponível ainda merece atenção. Acompanhar o próximo relatório para verificar se as exportações sustentam o ritmo e se os estoques começam a recuar.</p><p><b>O que monitorar:</b> produção mensal, exportações, estoques finais e ritmo de embarques.</p></details></div></details></article>
@@ -1103,5 +1140,88 @@ observer.observe(source,{childList:true,subtree:true,characterData:true});render
   const target=u.searchParams.get("page")||"home";
   if(target===page){a.setAttribute("aria-current","page");a.style.borderColor="#D4AF37";a.style.color="#D4AF37";}
  });
+})();
+</script>
+<script>
+/* Terminal 15.0: read-only visual layer; existing quote renderers and PTAX polling remain unchanged. */
+(function(){
+ const root=document.getElementById("tg15");if(!root)return;
+ const defs=[
+  {id:"cpo",label:"ÓLEO DE PALMA BRUTO (CPO)",source:"BURSA MALAYSIA",unit:"MYR/T"},
+  {id:"soyoil",label:"ÓLEO DE SOJA (CBOT)",source:"CBOT · REFERÊNCIA INDICATIVA",unit:"US¢/LB"},
+  {id:"soy",label:"SOJA EM GRÃO (CBOT)",source:"CBOT · CONVERSÃO PTAX",unit:"BRL/SACA 60 KG"},
+  {id:"usdbrl",label:"USD/BRL",source:"BANCO CENTRAL · PTAX VENDA",unit:"BRL/USD"},
+  {id:"usdmyr",label:"USD/MYR",source:"REFERÊNCIA CAMBIAL",unit:"MYR/USD"},
+  {id:"brent",label:"PETRÓLEO BRENT",source:"EIA/FRED · BRENT SPOT",unit:"USD/BARRIL"}
+ ];
+ const state={series:{},days:30,selected:"cpo"};
+ const grid=document.getElementById("tg15-grid"),body=document.getElementById("tg15-table-body"),select=document.getElementById("tg15-asset");
+ const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+ const num=v=>Number.isFinite(v)?v.toLocaleString("pt-BR",{maximumFractionDigits:2}):"—";
+ const valid=v=>Number.isFinite(Number(v))&&Number(v)>0;
+ const dateBR=d=>/^\d{4}-\d{2}-\d{2}$/.test(String(d))?String(d).slice(8,10)+"/"+String(d).slice(5,7)+"/"+String(d).slice(0,4):"—";
+ const textOf=(el,selector)=>el.querySelector(selector)?.textContent?.trim()||"";
+ function sourceRows(){return [...document.querySelectorAll("#quotes .item")]}
+ function getQuote(def){
+  const index=defs.indexOf(def),row=sourceRows()[index];
+  const price=textOf(row||document.createElement("div"),".pill");
+  const meta=textOf(row||document.createElement("div"),".muted");
+  const unavailable=!price||/indispon.vel|aguardando|consultando|erro/i.test(price);
+  return {price:unavailable?"DADO INDISPONÍVEL":price,meta,status:unavailable?"INDISPONÍVEL":"REFERÊNCIA"};
+ }
+ function pts(def){return state.series[def.id]||[]}
+ function lastTwo(def){const a=pts(def);return a.length>=2?[a[a.length-2],a[a.length-1]]:null}
+ function change(def){const pair=lastTwo(def);if(!pair||!valid(pair[0].value)||!valid(pair[1].value))return null;
+  const delta=pair[1].value-pair[0].value;return {delta,pct:delta/pair[0].value*100}}
+ function spark(a){if(a.length<2)return '<text x="5" y="28" fill="#B8B8B8" font-size="10">HISTÓRICO INSUFICIENTE</text>';
+  const vals=a.map(x=>x.value),min=Math.min(...vals),max=Math.max(...vals),span=max-min||1;
+  const path=a.map((p,i)=>(i?"L":"M")+(5+i*290/(a.length-1)).toFixed(1)+" "+(37-(p.value-min)/span*28).toFixed(1)).join(" ");
+  return '<path d="'+path+'" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>'}
+ function draw(){
+  grid.innerHTML=defs.map(def=>{const q=getQuote(def),series=pts(def),c=change(def),last=series.at(-1),delta=c?(c.delta>0?"+":"")+num(c.delta)+" ("+(c.pct>0?"+":"")+num(c.pct)+"%)":"VARIAÇÃO NÃO DISPONÍVEL";
+   const cclass=c?(c.delta>0?"up":c.delta<0?"down":""):"";
+   const status=q.status==="INDISPONÍVEL"?"INDISPONÍVEL":series.length>0?"HISTÓRICO DISPONÍVEL":"REFERÊNCIA";
+   return '<article class="tg15-card"><div class="tg15-top"><span class="tg15-name">'+esc(def.label)+'</span><span class="tg15-state">'+status+'</span></div><div class="tg15-price">'+esc(q.price)+'</div><div class="tg15-meta">'+esc(q.meta||def.source)+'</div><div class="tg15-change '+cclass+'">'+esc(delta)+'</div><svg class="tg15-spark" viewBox="0 0 300 47" role="img" aria-label="Histórico de '+esc(def.label)+'">'+spark(series.slice(-30))+'</svg><div class="tg15-caption">'+esc(def.source)+' · '+esc(last?dateBR(last.date):"SEM HISTÓRICO")+'</div></article>'
+  }).join("");
+  body.innerHTML=defs.map(def=>{const q=getQuote(def),pair=lastTwo(def),c=change(def),last=pts(def).at(-1),delta=c?(c.pct>0?"+":"")+num(c.pct)+"%":"—";const cclass=c?(c.delta>0?"up":c.delta<0?"down":""):"";
+   return '<tr><td>'+esc(def.label)+'</td><td>'+esc(q.price)+'</td><td class="secondary">'+(pair?esc(num(pair[0].value)+" "+def.unit):"—")+'</td><td class="'+cclass+'">'+esc(delta)+'</td><td class="secondary">'+esc(last?dateBR(last.date):"VER DESCRIÇÃO")+'</td><td class="secondary">'+esc(def.source)+'</td><td>'+esc(q.status)+'</td></tr>'}).join("");
+  renderChart();
+ }
+ function filtered(){const a=pts(defs.find(d=>d.id===state.selected));if(!a.length)return [];
+  const end=a[a.length-1].date;const dt=new Date(end+"T12:00:00Z");dt.setUTCDate(dt.getUTCDate()-state.days);
+  return a.filter(p=>p.date>=dt.toISOString().slice(0,10))}
+ function renderChart(){
+  const svg=document.getElementById("tg15-chart"),caption=document.getElementById("tg15-chart-caption"),def=defs.find(d=>d.id===state.selected),a=filtered();
+  if(a.length<2){svg.innerHTML='<text x="400" y="130" text-anchor="middle" fill="#B8B8B8" font-size="18">HISTÓRICO INSUFICIENTE PARA ESTE PERÍODO</text>';caption.textContent=def.source+" · "+a.length+" OBSERVAÇÃO(ÕES) · SEM INTERPOLAÇÃO";return}
+  const min=Math.min(...a.map(p=>p.value)),max=Math.max(...a.map(p=>p.value)),span=max-min||1;
+  const xy=a.map((p,i)=>({x:60+i*710/(a.length-1),y:210-(p.value-min)/span*160,p}));
+  const path=xy.map((p,i)=>(i?"L":"M")+p.x.toFixed(2)+" "+p.y.toFixed(2)).join(" ");
+  svg.innerHTML='<path d="M60 50H770 M60 130H770 M60 210H770" stroke="#333" stroke-dasharray="4 6" fill="none"/><path d="'+path+'" stroke="#D4AF37" stroke-width="3" fill="none" stroke-linejoin="round"/>'+
+   xy.map(({x,y,p})=>'<circle cx="'+x+'" cy="'+y+'" r="5" fill="#fff"><title>'+esc(dateBR(p.date)+" · "+num(p.value)+" "+def.unit)+'</title></circle>').join("")+
+   '<text x="60" y="240" fill="#B8B8B8" font-size="14">'+dateBR(a[0].date)+'</text><text x="770" y="240" text-anchor="end" fill="#B8B8B8" font-size="14">'+dateBR(a.at(-1).date)+'</text><text x="65" y="38" fill="#D4AF37" font-size="14">'+esc(num(max)+" "+def.unit)+'</text><text x="65" y="202" fill="#B8B8B8" font-size="14">'+esc(num(min))+'</text>';
+  const c=(a.at(-1).value/a[0].value-1)*100;
+  caption.textContent=def.source+" · "+a.length+" OBSERVAÇÕES · INICIAL "+num(a[0].value)+" · FINAL "+num(a.at(-1).value)+" "+def.unit+" · VARIAÇÃO "+(c>0?"+":"")+num(c)+"%";
+ }
+ select.innerHTML=defs.map(d=>'<option value="'+d.id+'">'+esc(d.label)+'</option>').join("");
+ select.addEventListener("change",()=>{state.selected=select.value;renderChart()});
+ document.querySelectorAll("#tg15 .tg15-controls button[data-days]").forEach(btn=>btn.addEventListener("click",()=>{
+  state.days=Number(btn.dataset.days);document.querySelectorAll("#tg15 .tg15-controls button[data-days]").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));renderChart();
+ }));
+ async function load(path,id,extract){
+  try{const response=await fetch(path,{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const data=await response.json();
+   state.series[id]=extract(data).filter(p=>/^\d{4}-\d{2}-\d{2}$/.test(p.date)&&valid(p.value)).sort((a,b)=>a.date.localeCompare(b.date)).filter((p,i,a)=>i===0||p.date!==a[i-1].date);
+  }catch(e){state.series[id]=[];}draw();
+ }
+ const observe=new MutationObserver(()=>draw());const quotes=document.getElementById("quotes");observe.observe(quotes,{subtree:true,childList:true,characterData:true});
+ document.getElementById("tg15-export").addEventListener("click",()=>{
+  const rows=[["ATIVO","PRECO_EXIBIDO","PRECO_ANTERIOR_HISTORICO","VARIACAO_PERCENTUAL","DATA_HISTORICO","FONTE","STATUS","UNIDADE"]];
+  defs.forEach(d=>{const q=getQuote(d),pair=lastTwo(d),c=change(d),last=pts(d).at(-1);rows.push([d.label,q.price,pair?pair[0].value:"",c?c.pct.toFixed(4):"",last?.date||"",d.source,q.status,d.unit])});
+  const csv="\uFEFF"+rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(";")).join("\r\n");
+  const url=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download="mundo-novo-cotacoes.csv";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ });
+ draw();
+ load("data/cpo-history.json","cpo",d=>(d.observations||[]).map(p=>({date:p.date,value:Number(p.selected?.settlement_myr_per_tonne)})));
+ load("data/soybean-history.json","soy",d=>(d.converted_last_three||[]).map(p=>({date:p.date,value:Number(p.brl_per_60kg_bag)})));
+ load("data/brent-history.json","brent",d=>(d.last_three||[]).map(p=>({date:p.date,value:Number(p.value)})));
 })();
 </script></body></html>
