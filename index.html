@@ -654,6 +654,13 @@ body[data-portal-page="news"] #news-section{background:#080808!important;color:#
 @media(min-width:1100px){.news20 .news20-feed{grid-template-columns:1.25fr 1fr 1fr}.news20-card:first-child{grid-column:1;grid-row:span 2}.news20 .news20-card:not(:first-child) .news20-card-art{min-height:120px}.news20 .news20-card:nth-child(n+6){display:none}}
 @media(max-width:800px){.news20 .news20-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.news20 .news20-feed,.news20-lower{grid-template-columns:1fr}.news20-card:first-child{grid-row:auto}.news20-feature .news20-card-art{min-height:205px}}
 @media(max-width:480px){.news20-masthead{padding:13px}.news20-intel>div{grid-template-columns:1fr;gap:4px}.news20-event{grid-template-columns:1fr;gap:5px}.news20 .news20-filters{gap:6px}.news20-filters select{padding:10px 7px;font-size:11px}}
+
+/* Prompt 21.0: editorial photos only in page 03, preserving existing card dimensions */
+body[data-portal-page="news"] .news20-card .news21-photo{position:relative;background-image:none!important;background-color:#17140f!important;overflow:hidden}
+body[data-portal-page="news"] .news21-photo img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.82) contrast(1.08) saturate(.92)}
+body[data-portal-page="news"] .news21-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#080808a8,transparent 60%);pointer-events:none}
+body[data-portal-page="news"] .news21-photo span{z-index:2;max-width:calc(100% - 20px);font-size:9px}
+body[data-portal-page="news"] .news21-photo:before{display:none!important}
 </style>
 </head>
 <body>
@@ -1056,10 +1063,39 @@ function renderMarketNews(){
  const verifiedLabel=n=>n.verification||"Metadados RSS";
  const original=n=>/^https:\/\//.test(n.url||"")?n.url:null;
  const meta=n=>newsSafe(n.source)+" · "+newsSafe(newsDate(n.published_at))+" (Brasília) · "+newsSafe(verifiedLabel(n));
+ /* Biblioteca editorial: fotos temáticas de Unsplash, nunca fotografias documentais das notícias.
+    Fonte/licença: https://unsplash.com/license — imagens externas sujeitas à disponibilidade. */
+ const news21Photos={
+  logistics:"photo-1494412519320-aa613dfb7738",
+  shipping:"photo-1578575437130-527eed3abbec",
+  plantation:"photo-1500382017468-9049fed747ef",
+  harvest:"photo-1500530855697-b586d89ba3ee",
+  palm:"photo-1473448912268-2022ce9509d8",
+  industry:"photo-1516934024742-b461fba47600",
+  energy:"photo-1466611653911-95081537e5b7",
+  finance:"photo-1486406146926-c627a92ad1ab",
+  agriculture:"photo-1497436072909-60f362e1d4b1"
+ };
+ const news21Image=(n,i)=>{
+  const title=(n.title_pt||n.title_original||"").toLowerCase(),category=(n.category||"").toLowerCase(),regions=(n.regions||[]).join(" ").toLowerCase();
+  const has=(re)=>re.test(title);
+  let key="industry";
+  if(has(/freight|shipping|ship|cargo|port|vessel|container|frete|navio|porto|log[ií]stic/))key=i%2?"shipping":"logistics";
+  else if(has(/stock|storage|inventory|refiner|processing|tank|estoque|armazen|refin/))key="industry";
+  else if(has(/harvest|crop|plantation|plantio|colheita|fazenda|farm|weather|clima/))key="harvest";
+  else if(/biodiesel|energia|energy|petr[oó]leo/.test(category)||has(/biodiesel|biofuel|renewable|fuel/))key="energy";
+  else if(/c[aâ]mbio|currency|forex/.test(category)||has(/dollar|rupee|exchange rate|c[aâ]mbio/))key="finance";
+  else if(/soja|soy/.test(category)||has(/soybean|soy oil|soja/))key="agriculture";
+  else if(/palma|palm/.test(category)||has(/palm oil|cpo|palma/))key=i%3===0?"plantation":"palm";
+  else if(/log[ií]stica|com[eé]rcio exterior/.test(category))key="shipping";
+  else if(/china|[ií]ndia|indonesia|mal[aá]sia/.test(regions))key="logistics";
+  const photo=news21Photos[key];
+  return "https://images.unsplash.com/"+photo+"?auto=format&fit=crop&w="+(i===0?1400:850)+"&q=76";
+ };
  const card=(n,i)=>{
   const link=original(n),context=n.context_confirmed||"O conteúdo integral ainda não foi verificado; a manchete e a fonte são metadados do feed.";
   const analysis=n.commercial_analysis||"Sem análise comercial confirmada. Verificar o texto original e os dados oficiais antes de inferir efeitos para a Mundo Novo.";
-  return '<article class="news-card news20-card '+(i===0?'news20-feature':'')+'"><div class="news20-card-art news20-art-'+newsSafe((n.category||"").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().replace(/[^a-z]/g,""))+'"><span>IMAGEM TEMÁTICA ILUSTRATIVA · NÃO DOCUMENTAL</span></div><div class="news20-card-body"><div class="news-top"><span class="intel-kicker">'+newsSafe((n.regions||["Global"]).join(", "))+' · '+newsSafe(n.category)+'</span><span class="news-impact">'+newsSafe(n.impact||"Não definido")+' impacto potencial</span></div><h3>'+newsSafe(n.title_pt||n.title_original)+'</h3><div class="news-meta">'+meta(n)+'</div>'+(n.summary_pt?'<p class="intel-summary">'+newsSafe(n.summary_pt)+'</p>':'')+'<details><summary>Fato, contexto e inteligência comercial</summary><p><b>Fato disponível:</b> '+newsSafe(context)+'</p><p><b>Critério editorial:</b> '+newsSafe(n.impact_reason||"Não informado")+'</p><p><b>Leitura comercial:</b> '+newsSafe(analysis)+'</p></details>'+(link?'<a href="'+newsSafe(link)+'" target="_blank" rel="noopener noreferrer">Ler publicação original ↗</a>':'')+'</div></article>';
+  return '<article class="news-card news20-card '+(i===0?'news20-feature':'')+'"><div class="news20-card-art news21-photo"><img src="'+news21Image(n,i)+'" alt="Fotografia temática ilustrativa relacionada à editoria; não documenta o acontecimento" loading="'+(i===0?'eager':'lazy')+'" decoding="async" onerror="this.style.display=\'none\'"><span>IMAGEM TEMÁTICA ILUSTRATIVA · NÃO DOCUMENTAL</span></div><div class="news20-card-body"><div class="news-top"><span class="intel-kicker">'+newsSafe((n.regions||["Global"]).join(", "))+' · '+newsSafe(n.category)+'</span><span class="news-impact">'+newsSafe(n.impact||"Não definido")+' impacto potencial</span></div><h3>'+newsSafe(n.title_pt||n.title_original)+'</h3><div class="news-meta">'+meta(n)+'</div>'+(n.summary_pt?'<p class="intel-summary">'+newsSafe(n.summary_pt)+'</p>':'')+'<details><summary>Fato, contexto e inteligência comercial</summary><p><b>Fato disponível:</b> '+newsSafe(context)+'</p><p><b>Critério editorial:</b> '+newsSafe(n.impact_reason||"Não informado")+'</p><p><b>Leitura comercial:</b> '+newsSafe(analysis)+'</p></details>'+(link?'<a href="'+newsSafe(link)+'" target="_blank" rel="noopener noreferrer">Ler publicação original ↗</a>':'')+'</div></article>';
  };
  if(!recent.length){feed.innerHTML='<div class="placeholder">Nenhuma notícia disponível para estes filtros e período. Experimente ampliar o intervalo.</div>';}
  else{feed.innerHTML=ranked.slice(0,9).map(card).join("");}
