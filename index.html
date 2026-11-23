@@ -1068,20 +1068,20 @@ function renderMarketNews(){
  const news21Photos={
   logistics:"photo-1494412519320-aa613dfb7738",
   shipping:"photo-1578575437130-527eed3abbec",
-  plantation:"photo-1500382017468-9049fed747ef",
+  plantation:"photo-1500530855697-b586d89ba3ee",
   harvest:"photo-1500530855697-b586d89ba3ee",
   palm:"photo-1473448912268-2022ce9509d8",
   industry:"photo-1516934024742-b461fba47600",
   energy:"photo-1466611653911-95081537e5b7",
   finance:"photo-1486406146926-c627a92ad1ab",
-  agriculture:"photo-1497436072909-60f362e1d4b1"
+  agriculture:"photo-1500382017468-9049fed747ef"
  };
  const news21Image=(n,i)=>{
   const title=(n.title_pt||n.title_original||"").toLowerCase(),category=(n.category||"").toLowerCase(),regions=(n.regions||[]).join(" ").toLowerCase();
   const has=(re)=>re.test(title);
   let key="industry";
   if(has(/freight|shipping|ship|cargo|port|vessel|container|frete|navio|porto|log[ií]stic/))key=i%2?"shipping":"logistics";
-  else if(has(/stock|storage|inventory|refiner|processing|tank|estoque|armazen|refin/))key="industry";
+  else if(has(/stock|storage|inventory|refiner|processing|tank|estoque|armazen|refin/))key=/soja|soy/.test(category)?"agriculture":(/palma|palm/.test(category)?"plantation":"industry");
   else if(has(/harvest|crop|plantation|plantio|colheita|fazenda|farm|weather|clima/))key="harvest";
   else if(/biodiesel|energia|energy|petr[oó]leo/.test(category)||has(/biodiesel|biofuel|renewable|fuel/))key="energy";
   else if(/c[aâ]mbio|currency|forex/.test(category)||has(/dollar|rupee|exchange rate|c[aâ]mbio/))key="finance";
