@@ -1,10 +1,15 @@
 """API local para geração demonstrativa de PowerPoint."""
 from fastapi import FastAPI
-from fastapi.responses import Response
+from fastapi.responses import Response, FileResponse
+from pathlib import Path
 from demo_data import get_demo_data
 from generator import generate_presentation
 
 app = FastAPI(title="Mundo Novo Executive Report", version="0.1.0")
+
+@app.get("/")
+def dashboard():
+    return FileResponse(Path(__file__).with_name("dashboard-demo.html"))
 
 @app.get("/api/health")
 def health():
