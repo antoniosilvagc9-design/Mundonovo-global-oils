@@ -442,15 +442,51 @@ section#global-market-ticker,body>section#global-market-ticker{background:#08080
   white-space:nowrap!important;overflow-wrap:normal!important;
  }
 }
+
+/* Portal multi-page navigation — Mundo Novo */
+.portal-home{display:none;margin:14px 0 24px}
+.portal-home-title{font-size:clamp(19px,2.1vw,30px);color:#fff;margin:0 0 8px}
+.portal-home-subtitle{font-size:13px;color:#b8b8b8;margin:0 0 20px}
+.portal-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.portal-card{display:flex;flex-direction:column;gap:13px;min-height:175px;padding:25px;border:1px solid #36332b;border-radius:16px;background:linear-gradient(145deg,#1b1913,#101010 65%);color:#fff!important;text-decoration:none!important;transition:border-color .2s,transform .2s}
+.portal-card:hover,.portal-card:focus-visible{border-color:#D4AF37;transform:translateY(-2px);outline-offset:3px}
+.portal-card-num{font-size:13px;font-weight:800;letter-spacing:.15em;color:#D4AF37}
+.portal-card-title{font-size:clamp(17px,1.7vw,24px);font-weight:800;line-height:1.2;color:#fff}
+.portal-card-description{font-size:13px;line-height:1.5;color:#B8B8B8}
+.portal-card-action{margin-top:auto;color:#E8C65A;font-size:12px;font-weight:800;letter-spacing:.08em}
+.portal-back{display:none;margin:14px 0 16px}
+.portal-back a{display:inline-flex;align-items:center;gap:9px;color:#D4AF37!important;text-decoration:none;font-size:13px;font-weight:800}
+body[data-portal-page="home"] .portal-home{display:block}
+body[data-portal-page="home"] main.grid,body[data-portal-page="home"] #fcpo-media-panel{display:none!important}
+body[data-portal-page="home"] .portal-back{display:none!important}
+body[data-portal-page]:not([data-portal-page="home"]) .portal-back{display:block}
+body[data-portal-page]:not([data-portal-page="home"]) .portal-home{display:none!important}
+body[data-portal-page="quotes"] #executive-section-2,body[data-portal-page="quotes"] #news-section,body[data-portal-page="quotes"] #executive-section-4{display:none!important}
+body[data-portal-page="supply"] #executive-section-1,body[data-portal-page="supply"] #news-section,body[data-portal-page="supply"] #executive-section-4,body[data-portal-page="supply"] #fcpo-media-panel{display:none!important}
+body[data-portal-page="news"] #executive-section-1,body[data-portal-page="news"] #executive-section-2,body[data-portal-page="news"] #executive-section-4,body[data-portal-page="news"] #fcpo-media-panel{display:none!important}
+body[data-portal-page="intelligence"] #executive-section-1,body[data-portal-page="intelligence"] #executive-section-2,body[data-portal-page="intelligence"] #news-section,body[data-portal-page="intelligence"] #fcpo-media-panel{display:none!important}
+body[data-portal-page] main.grid{display:block!important}
+body[data-portal-page="home"] main.grid{display:none!important}
+body[data-portal-page] main.grid>section{margin-bottom:18px}
+body[data-portal-page] .executive-nav{display:flex!important;flex-wrap:wrap}
+body[data-portal-page] .executive-nav a{font-size:12px!important}
+@media(max-width:650px){.portal-card-grid{grid-template-columns:1fr}.portal-card{min-height:145px;padding:19px}}
 </style>
 </head>
 <body>
 <header class="quotes-header"><div class="header-brand"><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="header-clock"><div id="clock"></div><small>Dados históricos</small></div></header>
-<nav class="executive-nav" aria-label="Navegação executiva"><a href="#executive-section-1">Cotações</a><a href="#executive-section-2">Oferta e demanda</a><a href="#news-section">Notícias</a><a href="#executive-section-4">Inteligência</a></nav><div class="executive-toolbar"><button type="button" id="executive-expand">Expandir análises</button><button type="button" id="executive-collapse">Recolher análises</button><span class="executive-note">Painel executivo · <b>dados com datas e fontes próprias</b> · sem recomendação automática de operação</span></div><section class="market-ticker" aria-label="Mercados financeiros internacionais" id="global-market-ticker">
+<nav class="executive-nav" aria-label="Navegação executiva"><a href="./">Início</a><a href="?page=quotes">01 · Cotações</a><a href="?page=supply">02 · Oferta e demanda</a><a href="?page=news">03 · Notícias</a><a href="?page=intelligence">04 · Inteligência</a></nav><div class="executive-toolbar"><button type="button" id="executive-expand">Expandir análises</button><button type="button" id="executive-collapse">Recolher análises</button><span class="executive-note">Painel executivo · <b>dados com datas e fontes próprias</b> · sem recomendação automática de operação</span></div><section class="market-ticker" aria-label="Mercados financeiros internacionais" id="global-market-ticker">
 <div class="market-ticker-head"><strong>BOLSA DE VALORES</strong><small id="market-ticker-updated">Últimos dados disponíveis · sem tempo real confirmado</small></div>
 <div class="market-ticker-window"><div class="market-ticker-track" id="market-ticker-track"></div></div>
 <div class="market-ticker-detail" id="market-ticker-detail" hidden aria-live="polite"></div>
-</section><main class="grid">
+</section><div class="portal-home" id="portal-home" aria-label="Áreas do Trading Global">
+<h2 class="portal-home-title">CENTRAL DE INTELIGÊNCIA GLOBAL</h2><p class="portal-home-subtitle">Selecione uma área para acessar informações, análises e indicadores de mercado.</p>
+<div class="portal-card-grid">
+<a class="portal-card" href="?page=quotes"><span class="portal-card-num">01 / MERCADOS</span><span class="portal-card-title">COTAÇÕES INTERNACIONAIS</span><span class="portal-card-description">Óleo de palma, óleo de soja, soja em grão, câmbio, petróleo Brent e gráficos históricos.</span><span class="portal-card-action">ACESSAR COTAÇÕES →</span></a>
+<a class="portal-card" href="?page=supply"><span class="portal-card-num">02 / FUNDAMENTOS</span><span class="portal-card-title">OFERTA E DEMANDA GLOBAL</span><span class="portal-card-description">Malásia, Indonésia, China, Índia, produção, consumo e óleos concorrentes.</span><span class="portal-card-action">ACESSAR ANÁLISES →</span></a>
+<a class="portal-card" href="?page=news"><span class="portal-card-num">03 / INFORMAÇÃO</span><span class="portal-card-title">NOTÍCIAS E ACONTECIMENTOS</span><span class="portal-card-description">Radar internacional, atualizações relevantes e acontecimentos do setor.</span><span class="portal-card-action">ACESSAR NOTÍCIAS →</span></a>
+<a class="portal-card" href="?page=intelligence"><span class="portal-card-num">04 / ESTRATÉGIA</span><span class="portal-card-title">INTELIGÊNCIA DE MERCADO</span><span class="portal-card-description">Câmbio Brasil/Ásia, competitividade, oferta asiática e custos de importação.</span><span class="portal-card-action">ACESSAR INTELIGÊNCIA →</span></a>
+</div></div><div class="portal-back"><a href="./" aria-label="Voltar à página inicial">← VOLTAR À CENTRAL DE INTELIGÊNCIA</a></div><main class="grid">
 <section id="executive-section-1"><h2>01 · Cotações internacionais</h2><div id="quotes"></div><div class="foot">Fontes previstas: Bursa Malaysia, CME Group, Banco Central e EIA. Acesso em tempo real sujeito a licença e disponibilidade de API.</div></section>
 <section class="intel-section" id="executive-section-2"><h2>02 · Oferta e demanda global</h2><p class="muted">Resumo executivo · clique em cada quadro para abrir os dados e a leitura comercial</p><div class="countries"><span>🇲🇾 Malásia</span><span>🇮🇩 Indonésia</span><span>🇨🇳 China</span><span>🇮🇳 Índia</span><span>🇧🇷 Brasil</span></div>
 <div class="intel-grid">
@@ -1052,5 +1088,19 @@ function render(){
 }
 const observer=new MutationObserver(()=>{if(!pending){pending=true;requestAnimationFrame(render)}});
 observer.observe(source,{childList:true,subtree:true,characterData:true});render();
+})();
+</script><script>
+(function(){
+ const allowed=["quotes","supply","news","intelligence"];
+ const param=new URLSearchParams(location.search).get("page");
+ const page=allowed.includes(param)?param:"home";
+ document.body.setAttribute("data-portal-page",page);
+ const names={home:"Central de Inteligência",quotes:"Cotações Internacionais",supply:"Oferta e Demanda Global",news:"Notícias e Acontecimentos",intelligence:"Inteligência de Mercado"};
+ document.title=names[page]+" | Trading Global — Mundo Novo";
+ document.querySelectorAll(".executive-nav a").forEach(a=>{
+  const u=new URL(a.href,location.href);
+  const target=u.searchParams.get("page")||"home";
+  if(target===page){a.setAttribute("aria-current","page");a.style.borderColor="#D4AF37";a.style.color="#D4AF37";}
+ });
 })();
 </script></body></html>
