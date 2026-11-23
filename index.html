@@ -590,6 +590,9 @@ body[data-portal-page="supply"] #executive-section-2{background:#080808!importan
 @media(max-width:1050px){.sdi-module:first-child{grid-template-columns:1fr}.sdi-module:first-child .sdi-photo{height:240px;min-height:0}.sdi-indicators{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.sdi-overview{grid-template-columns:repeat(2,minmax(0,1fr))}.sdi-modules{grid-template-columns:1fr}.sdi-module:first-child{grid-column:auto}.sdi-photo{height:190px}.sdi-nav{top:0}.sdi-indicators{gap:6px}.sdi-indicators>div{padding:8px}.sdi-indicators strong{font-size:11px}}
 @media(max-width:420px){.sdi-indicators{grid-template-columns:1fr}.sdi-indicators>div{display:flex;align-items:center;gap:10px}.sdi-indicator-icon{margin:0}.sdi-indicators small{margin:0}.sdi-overview b{font-size:10px}}
+
+/* Hide global brand header on internal portal pages 01–04; retain on home only */
+body[data-portal-page="quotes"]>header.quotes-header,body[data-portal-page="supply"]>header.quotes-header,body[data-portal-page="news"]>header.quotes-header,body[data-portal-page="intelligence"]>header.quotes-header{display:none!important}
 </style>
 </head>
 <body>
