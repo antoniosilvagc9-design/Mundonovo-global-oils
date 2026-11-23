@@ -471,6 +471,12 @@ body[data-portal-page] main.grid>section{margin-bottom:18px}
 body[data-portal-page] .executive-nav{display:flex!important;flex-wrap:wrap}
 body[data-portal-page] .executive-nav a{font-size:12px!important}
 @media(max-width:650px){.portal-card-grid{grid-template-columns:1fr}.portal-card{min-height:145px;padding:19px}}
+
+/* Bolsa de Valores somente na página principal; páginas 01–04 sem ticker */
+body[data-portal-page="quotes"] #global-market-ticker,
+body[data-portal-page="supply"] #global-market-ticker,
+body[data-portal-page="news"] #global-market-ticker,
+body[data-portal-page="intelligence"] #global-market-ticker{display:none!important}
 </style>
 </head>
 <body>
