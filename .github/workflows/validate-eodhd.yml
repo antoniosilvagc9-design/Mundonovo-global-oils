@@ -1,0 +1,52 @@
+name: EODHD advanced market validation
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate quotes and historical fallback
+        env:
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os,json,urllib.request,urllib.parse,urllib.error,math,datetime
+          key=os.environ.get("EODHD_API_KEY")
+          if not key: raise SystemExit("Missing secret")
+          def get(path,**params):
+              url="https://eodhd.com/api/"+path+"?"+urllib.parse.urlencode(dict(api_token=key,fmt="json",**params))
+              try:
+                  with urllib.request.urlopen(url,timeout=25) as r: return json.load(r)
+              except urllib.error.HTTPError as e: print(path,"HTTP",e.code)
+              except Exception as e: print(path,type(e).__name__)
+          def num(v):
+              try:
+                  n=float(v)
+                  return n if math.isfinite(n) and n>0 else None
+              except (TypeError,ValueError): return None
+          now=datetime.datetime.now(datetime.timezone.utc)
+          start=(now.date()-datetime.timedelta(days=15)).isoformat()
+          symbols=["KLSE","JKSE","GSPC","BVSP","NSEI","N225","SSEC","N100","US500"]
+          for symbol in symbols:
+              code=symbol+".INDX"
+              d=get("real-time/"+code)
+              valid=False
+              if isinstance(d,dict):
+                  p=num(d.get("close")); prev=num(d.get("previousClose"))
+                  ts=num(d.get("timestamp"))
+                  if ts and ts<4102444800:
+                      dt=datetime.datetime.fromtimestamp(ts,datetime.timezone.utc)
+                      age=round((now-dt).total_seconds()/3600,1)
+                      valid=bool(p and prev and d.get("code")==code and -1<=age<=120)
+                      print(code,"LIVE fields valid:",bool(p and prev),"timestamp UTC:",dt.isoformat(),"age hours:",age,"usable:",valid)
+                  else: print(code,"LIVE timestamp invalid")
+              if not valid or symbol in ("KLSE","SSEC","US500"):
+                  rows=get("eod/"+code,**{"from":start,"to":now.date().isoformat(),"order":"d"})
+                  if isinstance(rows,list):
+                      bars=sorted({r["date"]:num(r.get("close")) for r in rows if isinstance(r,dict) and r.get("date") and num(r.get("close"))}.items(),reverse=True)
+                      print(code,"EOD valid sessions:",len(bars),"latest dates:",[x[0] for x in bars[:2]],"fallback usable:",len(bars)>=2)
+          print("US500 is a candidate proxy only; exact CME contract identity remains unverified.")
+          print("No quote prices published. Verify commercial display license before enabling publication.")
+          PY
