@@ -687,15 +687,18 @@ body[data-portal-page="home"] .portal-card-art{opacity:.08}
 #global-market-ticker .premium-tickers:focus-within{border-color:#F4D675}
 @media(max-width:600px){#global-market-ticker .premium-tickers{margin:6px;padding:2px}#global-market-ticker .market-ticker-head{flex-wrap:wrap}}
 </style>
-</head>
+<style>
+#global-market-ticker .market-directory{display:grid;grid-template-columns:repeat(9,minmax(125px,1fr));gap:6px;overflow-x:auto;padding:6px}
+#global-market-ticker .market-directory a{display:flex;flex-direction:column;justify-content:center;gap:5px;text-align:center;padding:10px 6px;border:1px solid #D4AF37;border-radius:10px;background:#000;text-decoration:none;white-space:normal}
+#global-market-ticker .market-directory a strong{color:#B6FF00;font-size:12px;font-weight:800}
+#global-market-ticker .market-directory a span{color:#fff;font-size:11px;font-weight:600}
+#global-market-ticker .market-directory a:hover,#global-market-ticker .market-directory a:focus-visible{background:#181508;border-color:#F4D675}
+</style></head>
 <body>
 <header class="quotes-header"><div class="header-brand"><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="header-clock"><div id="clock"></div><small>Dados históricos</small></div></header>
 <section class="market-ticker" aria-label="Mercados financeiros internacionais" id="global-market-ticker">
-<div class="market-ticker-head"><strong>BOLSA DE VALORES E COMMODITIES</strong><small>Fonte: <span class="ticker-source">TradingView</span> · Disponibilidade e atraso variam por mercado</small></div>
-<div class="premium-tickers">
-<script type="module" src="https://widgets.tradingview-widget.com/w/br/tv-tickers.js"></script>
-<tv-tickers symbols="DJ:DJI,SP:SPX,NASDAQ:IXIC,BMFBOVESPA:IBOV,CME_MINI:ES1!,FTSEMYX:FBMKLCI,NSE:NIFTY,IDX:COMPOSITE,SSE:000001,TVC:NI225,HSI:HSI,XETR:DAX,MYX:FCPO1!,CBOT:ZL1!,CBOT:ZS1!,TVC:UKOIL,FX_IDC:USDBRL" hide-chart theme="dark" style="display:block;color-scheme:dark"></tv-tickers>
-</div>
+<div class="market-ticker-head"><strong>BOLSA DE VALORES E COMMODITIES</strong><small>Mercados internacionais · <span class="ticker-source">Fontes oficiais</span></small></div>
+<div class="premium-tickers market-directory" aria-label="Bolsas internacionais — links oficiais"><a href="https://www.bursamalaysia.com/" target="_blank" rel="noopener noreferrer"><strong>Bolsa da Malásia</strong><span>Bursa Malaysia</span></a><a href="https://www.idx.co.id/" target="_blank" rel="noopener noreferrer"><strong>Bolsa da Indonésia</strong><span>Indonesia Stock Exchange</span></a><a href="https://www.cmegroup.com/" target="_blank" rel="noopener noreferrer"><strong>Bolsa de Chicago</strong><span>CME Group / CBOT</span></a><a href="https://www.nyse.com/" target="_blank" rel="noopener noreferrer"><strong>Bolsa dos EUA</strong><span>NYSE / Nasdaq</span></a><a href="https://www.b3.com.br/" target="_blank" rel="noopener noreferrer"><strong>Bolsa do Brasil</strong><span>B3</span></a><a href="https://www.nseindia.com/" target="_blank" rel="noopener noreferrer"><strong>Bolsa da Índia</strong><span>NSE India</span></a><a href="https://www.jpx.co.jp/english/" target="_blank" rel="noopener noreferrer"><strong>Bolsa do Japão</strong><span>Japan Exchange Group</span></a><a href="https://english.sse.com.cn/" target="_blank" rel="noopener noreferrer"><strong>Bolsa da China</strong><span>Shanghai Stock Exchange</span></a><a href="https://www.euronext.com/" target="_blank" rel="noopener noreferrer"><strong>Bolsa Europa</strong><span>Euronext</span></a></div>
 
 </section><div class="portal-home" id="portal-home" aria-label="Áreas do Trading Global">
 <h2 class="portal-home-title">CENTRAL DE INTELIGÊNCIA GLOBAL</h2>
