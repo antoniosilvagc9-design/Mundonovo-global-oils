@@ -22,6 +22,10 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Instalar tradutor Argos
+        continue-on-error: true
+        run: python -m pip install argostranslate
+
       - name: Coletar notícias e imagens
         env:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
