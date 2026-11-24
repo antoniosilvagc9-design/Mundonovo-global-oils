@@ -9,18 +9,22 @@ NOW=dt.datetime.now(dt.timezone.utc)
 TOPICS=[
  ("Óleo de palma","palm oil Malaysia Indonesia MPOB exports stocks"),
  ("Soja","soybean oil CBOT USDA Brazil Argentina exports"),
+ ("Soja","Argentina soybean oil soybean meal exports Rosario"),
+ ("Soja","Argentina soja aceite harina molienda exportaciones Rosario"),
+ ("Comércio exterior","Argentina exportaciones agroindustriales retenciones aceite soja"),
  ("Biodiesel","Indonesia biodiesel B40 B50 palm oil mandate"),
  ("Logística","shipping freight ports Red Sea trade commodities"),
  ("Câmbio","Federal Reserve dollar Brazilian real exchange rate"),
  ("Petróleo","Brent crude oil OPEC EIA supply"),
  ("Comércio exterior","India China vegetable oil imports tariffs")
 ]
-COUNTRIES={"malásia":["malaysia","malaysian","mpob"],"indonésia":["indonesia","indonesian","gapki"],"china":["china","chinese"],"índia":["india","indian"],"brasil":["brazil","brasil","brazilian"],"estados unidos":["united states","u.s.","usda","federal reserve"],"argentina":["argentina"],"união europeia":["european union","eu commission"]}
+COUNTRIES={"malásia":["malaysia","malaysian","mpob"],"indonésia":["indonesia","indonesian","gapki"],"china":["china","chinese"],"índia":["india","indian"],"brasil":["brazil","brasil","brazilian"],"estados unidos":["united states","u.s.","usda","federal reserve"],"argentina":["argentina","argentine","argentinian","rosario","ciara-cec","ciara cec","bolsa de cereales"],"união europeia":["european union","eu commission"]}
 HIGH=["export ban","tariff hike","supply disruption","port closure","biodiesel mandate","export tax","embargo","sanctions","production cut"]
 MED=["export","import","stock","harvest","demand","price","interest rate","freight","policy","forecast","tariff","crop","biodiesel"]
-def fetch(topic):
+def fetch(topic, spanish=False):
  q=urllib.parse.quote(topic+" when:7d")
- url=f"https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"
+ locale="hl=es-419&gl=AR&ceid=AR:es-419" if spanish else "hl=en-US&gl=US&ceid=US:en"
+ url=f"https://news.google.com/rss/search?q={q}&{locale}"
  req=urllib.request.Request(url,headers={"User-Agent":"TradingGlobalNews/1.0 (+https://github.com/antoniosilvagc9-design/Mundonovo-global-oils)"})
  with urllib.request.urlopen(req,timeout=22) as resp:
   return ET.fromstring(resp.read(2_000_000))
@@ -67,7 +71,7 @@ def translate_titles(items):
  pending=[]
  for item in items:
   item['title_pt']=previous.get(item['title_original'])
-  if not item['title_pt']: pending.append(item)
+  if not item['title_pt'] and item.get('language')=='en': pending.append(item)
  if pending:
   try:
    import argostranslate.package as pkg
@@ -99,7 +103,8 @@ def translate_titles(items):
 def main():
  items={};errors=[]
  for category,query in TOPICS:
-  try:root=fetch(query)
+  spanish=query.startswith("Argentina") and ("exportaciones" in query)
+  try:root=fetch(query,spanish)
   except Exception as exc:errors.append(category+": "+str(exc)[:140]);continue
   for node in root.findall("./channel/item"):
    title=(node.findtext("title") or "").strip()
@@ -123,9 +128,14 @@ def main():
     "source":source,"url":link,"published_at":pub.isoformat(),"collected_at":NOW.isoformat(),
     "regions":regions or ["Global"],"category":category,"commodities":[category] if category in ("Óleo de palma","Soja","Petróleo") else [],
     "impact":impact,"impact_reason":reason,"context_confirmed":None,"commercial_analysis":None,
-    "verification":"Metadados RSS; conteúdo integral não verificado","language":"en","source_type":"Google News RSS (agregador)"}
+    "verification":"Metadados RSS; conteúdo integral não verificado","language":"es" if spanish else "en","source_type":"Google News RSS (agregador)"}
    if key not in items or pub>dt.datetime.fromisoformat(items[key]["published_at"]):items[key]=obj
- ordered=sorted(items.values(),key=lambda x:({"Alto":2,"Médio":1,"Baixo":0}[x["impact"]],x["published_at"]),reverse=True)[:80]
+ ranked=sorted(items.values(),key=lambda x:({"Alto":2,"Médio":1,"Baixo":0}[x["impact"]],x["published_at"]),reverse=True)
+ argentina=[x for x in ranked if "Argentina" in x["regions"]][:12]
+ reserved={x["id"] for x in argentina}
+ ordered=argentina+[x for x in ranked if x["id"] not in reserved][:80-len(argentina)]
+ ordered.sort(key=lambda x:({"Alto":2,"Médio":1,"Baixo":0}[x["impact"]],x["published_at"]),reverse=True)
+ print("Argentina: notícias selecionadas",len(argentina))
  if not ordered:
   if OUT.exists():print("Nenhuma notícia nova; preservando último arquivo válido.");return
   raise RuntimeError("Nenhum RSS acessível com notícias verificáveis: "+"; ".join(errors))
