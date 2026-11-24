@@ -1,0 +1,53 @@
+name: Collect USDA meal and soybeans
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 21 * * 1-5'
+permissions:
+  contents: write
+concurrency:
+  group: usda-meal-beans
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Collect consistent physical market series
+        env:
+          USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os,json,base64,urllib.request,math
+          from datetime import datetime
+          from pathlib import Path
+          auth=base64.b64encode((os.environ["USDA_API_KEY"]+":").encode()).decode()
+          for slug,filename,filters in [
+              (3668,"usda-soybean-meal.json",{"commodity":"Soybean Meal","trade_Loc":"Illinois","protein":"46.5-48%","price_unit":"$ Per Ton","freight":"F.O.B.","trans_mode":"Rail","sale_type":"Ask"}),
+              (3878,"usda-soybeans.json",{"commodity":"Soybeans","trade_loc":"Central","grade":"US #2","price_unit":"$ Per Bushel","freight":"F.O.B.","trans_mode":"Truck","current":"Yes","conventional":"Conventional","delivery_point":"Country Elevators","quote_type":"Basis","sale Type":"Bid"})]:
+              req=urllib.request.Request(f"https://marsapi.ams.usda.gov/services/v1.2/reports/{slug}/Report%20Detail",headers={"Authorization":"Basic "+auth})
+              with urllib.request.urlopen(req,timeout=60) as res: d=json.load(res)
+              rows=d["results"] if isinstance(d,dict) else d
+              points={}
+              for r in rows:
+                  if not all(r.get(k)==v for k,v in filters.items()): continue
+                  p=r.get("avg_price")
+                  if not isinstance(p,(int,float)) or isinstance(p,bool) or not math.isfinite(p) or p<=0: continue
+                  day=datetime.strptime(r["report_end_date"],"%m/%d/%Y").date().isoformat()
+                  pub=datetime.strptime(r["published_date"],"%m/%d/%Y %H:%M:%S")
+                  if day not in points or pub>points[day][0]: points[day]=(pub,p)
+                  elif pub==points[day][0] and p!=points[day][1]: raise SystemExit(f"Ambiguous {slug} {day}")
+              if not points: raise SystemExit(f"No valid observations {slug}")
+              history=[{"date":day,"value":points[day][1]} for day in sorted(points)][-260:]
+              Path("data",filename).write_text(json.dumps({"source":"USDA AMS Market News","report_id":slug,"filters":filters,"history":history},indent=2)+"\n")
+              print(slug,len(history),history[-1])
+          PY
+      - name: Publish data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/usda-soybean-meal.json data/usda-soybeans.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update USDA physical meal and soybeans"
+            git push
+          fi
