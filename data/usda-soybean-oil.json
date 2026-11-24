@@ -1,0 +1,634 @@
+{
+  "source": "USDA AMS Market News",
+  "report_id": 3618,
+  "commodity": "Soybean Oil",
+  "region": "Illinois",
+  "unit": "US cents/lb",
+  "frequency": "weekly",
+  "history": [
+    {
+      "period_start": "2024-10-07",
+      "period_end": "2024-10-11",
+      "published_date": "10/17/2024 13:05:59",
+      "price": 44.09
+    },
+    {
+      "period_start": "2024-10-14",
+      "period_end": "2024-10-18",
+      "published_date": "10/21/2024 07:26:19",
+      "price": 42.92
+    },
+    {
+      "period_start": "2024-10-21",
+      "period_end": "2024-10-25",
+      "published_date": "10/28/2024 07:00:23",
+      "price": 44.66
+    },
+    {
+      "period_start": "2024-10-28",
+      "period_end": "2024-11-01",
+      "published_date": "11/04/2024 07:28:07",
+      "price": 45.47
+    },
+    {
+      "period_start": "2024-11-04",
+      "period_end": "2024-11-08",
+      "published_date": "11/12/2024 09:48:14",
+      "price": 48.99
+    },
+    {
+      "period_start": "2024-11-11",
+      "period_end": "2024-11-15",
+      "published_date": "11/18/2024 07:39:40",
+      "price": 45.11
+    },
+    {
+      "period_start": "2024-11-18",
+      "period_end": "2024-11-22",
+      "published_date": "11/25/2024 08:08:49",
+      "price": 42.85
+    },
+    {
+      "period_start": "2024-12-02",
+      "period_end": "2024-12-06",
+      "published_date": "12/09/2024 08:31:02",
+      "price": 42.98
+    },
+    {
+      "period_start": "2024-12-09",
+      "period_end": "2024-12-13",
+      "published_date": "12/23/2024 07:27:26",
+      "price": 43.28
+    },
+    {
+      "period_start": "2024-12-16",
+      "period_end": "2024-12-20",
+      "published_date": "12/23/2024 07:30:11",
+      "price": 40.51
+    },
+    {
+      "period_start": "2024-12-30",
+      "period_end": "2025-01-03",
+      "published_date": "01/06/2025 07:27:17",
+      "price": 40.22
+    },
+    {
+      "period_start": "2025-01-06",
+      "period_end": "2025-01-10",
+      "published_date": "01/13/2025 08:04:17",
+      "price": 42.51
+    },
+    {
+      "period_start": "2025-01-13",
+      "period_end": "2025-01-17",
+      "published_date": "01/21/2025 08:11:32",
+      "price": 44.78
+    },
+    {
+      "period_start": "2025-01-20",
+      "period_end": "2025-01-24",
+      "published_date": "01/27/2025 07:28:23",
+      "price": 44.54
+    },
+    {
+      "period_start": "2025-01-27",
+      "period_end": "2025-01-31",
+      "published_date": "02/03/2025 07:35:56",
+      "price": 44.48
+    },
+    {
+      "period_start": "2025-02-03",
+      "period_end": "2025-02-07",
+      "published_date": "02/10/2025 07:13:12",
+      "price": 44.4
+    },
+    {
+      "period_start": "2025-02-10",
+      "period_end": "2025-02-14",
+      "published_date": "02/18/2025 07:13:55",
+      "price": 45.25
+    },
+    {
+      "period_start": "2025-02-17",
+      "period_end": "2025-02-21",
+      "published_date": "02/24/2025 09:02:42",
+      "price": 45.81
+    },
+    {
+      "period_start": "2025-02-24",
+      "period_end": "2025-02-28",
+      "published_date": "03/03/2025 07:14:24",
+      "price": 42.53
+    },
+    {
+      "period_start": "2025-03-03",
+      "period_end": "2025-03-07",
+      "published_date": "03/10/2025 07:38:06",
+      "price": 42.05
+    },
+    {
+      "period_start": "2025-03-10",
+      "period_end": "2025-03-14",
+      "published_date": "03/17/2025 07:41:13",
+      "price": 40.59
+    },
+    {
+      "period_start": "2025-03-17",
+      "period_end": "2025-03-21",
+      "published_date": "03/24/2025 08:33:43",
+      "price": 41.01
+    },
+    {
+      "period_start": "2025-03-24",
+      "period_end": "2025-03-28",
+      "published_date": "04/02/2025 12:08:43",
+      "price": 44.33
+    },
+    {
+      "period_start": "2025-03-31",
+      "period_end": "2025-04-04",
+      "published_date": "04/07/2025 07:33:11",
+      "price": 45.13
+    },
+    {
+      "period_start": "2025-04-07",
+      "period_end": "2025-04-11",
+      "published_date": "04/14/2025 12:17:20",
+      "price": 46.97
+    },
+    {
+      "period_start": "2025-04-14",
+      "period_end": "2025-04-18",
+      "published_date": "04/21/2025 07:22:43",
+      "price": 47.15
+    },
+    {
+      "period_start": "2025-04-21",
+      "period_end": "2025-04-25",
+      "published_date": "04/28/2025 07:41:44",
+      "price": 49.32
+    },
+    {
+      "period_start": "2025-04-28",
+      "period_end": "2025-05-02",
+      "published_date": "05/05/2025 08:55:40",
+      "price": 49.03
+    },
+    {
+      "period_start": "2025-05-05",
+      "period_end": "2025-05-09",
+      "published_date": "05/12/2025 12:45:26",
+      "price": 47.98
+    },
+    {
+      "period_start": "2025-05-12",
+      "period_end": "2025-05-16",
+      "published_date": "05/19/2025 08:37:36",
+      "price": 48.9
+    },
+    {
+      "period_start": "2025-05-19",
+      "period_end": "2025-05-23",
+      "published_date": "05/27/2025 06:49:19",
+      "price": 48.69
+    },
+    {
+      "period_start": "2025-05-26",
+      "period_end": "2025-05-30",
+      "published_date": "06/02/2025 07:41:00",
+      "price": 47.97
+    },
+    {
+      "period_start": "2025-06-02",
+      "period_end": "2025-06-06",
+      "published_date": "06/09/2025 06:20:09",
+      "price": 46.23
+    },
+    {
+      "period_start": "2025-06-09",
+      "period_end": "2025-06-13",
+      "published_date": "06/16/2025 08:47:51",
+      "price": 47.36
+    },
+    {
+      "period_start": "2025-06-16",
+      "period_end": "2025-06-20",
+      "published_date": "06/26/2025 12:23:12",
+      "price": 55.8
+    },
+    {
+      "period_start": "2025-06-23",
+      "period_end": "2025-06-27",
+      "published_date": "06/30/2025 07:31:59",
+      "price": 53.78
+    },
+    {
+      "period_start": "2025-07-07",
+      "period_end": "2025-07-11",
+      "published_date": "07/14/2025 07:31:39",
+      "price": 55.32
+    },
+    {
+      "period_start": "2025-07-14",
+      "period_end": "2025-07-18",
+      "published_date": "07/21/2025 10:44:27",
+      "price": 56.15
+    },
+    {
+      "period_start": "2025-07-21",
+      "period_end": "2025-07-25",
+      "published_date": "07/28/2025 08:28:16",
+      "price": 58.09
+    },
+    {
+      "period_start": "2025-07-28",
+      "period_end": "2025-08-01",
+      "published_date": "08/04/2025 08:52:15",
+      "price": 57
+    },
+    {
+      "period_start": "2025-08-04",
+      "period_end": "2025-08-08",
+      "published_date": "08/11/2025 07:10:42",
+      "price": 55.01
+    },
+    {
+      "period_start": "2025-08-11",
+      "period_end": "2025-08-15",
+      "published_date": "08/18/2025 07:21:58",
+      "price": 53.49
+    },
+    {
+      "period_start": "2025-08-18",
+      "period_end": "2025-08-22",
+      "published_date": "08/25/2025 13:41:42",
+      "price": 55.22
+    },
+    {
+      "period_start": "2025-08-25",
+      "period_end": "2025-08-29",
+      "published_date": "09/02/2025 06:51:13",
+      "price": 53.25
+    },
+    {
+      "period_start": "2025-09-01",
+      "period_end": "2025-09-05",
+      "published_date": "09/08/2025 09:25:37",
+      "price": 52.73
+    },
+    {
+      "period_start": "2025-09-08",
+      "period_end": "2025-09-12",
+      "published_date": "09/15/2025 09:08:37",
+      "price": 52.32
+    },
+    {
+      "period_start": "2025-09-15",
+      "period_end": "2025-09-19",
+      "published_date": "09/22/2025 07:38:58",
+      "price": 49.78
+    },
+    {
+      "period_start": "2025-09-22",
+      "period_end": "2025-09-26",
+      "published_date": "09/29/2025 06:56:46",
+      "price": 49.49
+    },
+    {
+      "period_start": "2025-09-29",
+      "period_end": "2025-10-03",
+      "published_date": "10/06/2025 07:34:11",
+      "price": 50.48
+    },
+    {
+      "period_start": "2025-10-06",
+      "period_end": "2025-10-10",
+      "published_date": "10/14/2025 06:44:20",
+      "price": 50.84
+    },
+    {
+      "period_start": "2025-10-13",
+      "period_end": "2025-10-17",
+      "published_date": "10/20/2025 06:24:53",
+      "price": 49.37
+    },
+    {
+      "period_start": "2025-10-20",
+      "period_end": "2025-10-24",
+      "published_date": "10/27/2025 07:01:00",
+      "price": 49.54
+    },
+    {
+      "period_start": "2025-10-27",
+      "period_end": "2025-10-31",
+      "published_date": "11/03/2025 06:17:47",
+      "price": 48.32
+    },
+    {
+      "period_start": "2025-11-03",
+      "period_end": "2025-11-07",
+      "published_date": "11/10/2025 06:26:07",
+      "price": 48.02
+    },
+    {
+      "period_start": "2025-11-10",
+      "period_end": "2025-11-14",
+      "published_date": "11/17/2025 07:46:11",
+      "price": 51.58
+    },
+    {
+      "period_start": "2025-11-17",
+      "period_end": "2025-11-21",
+      "published_date": "11/24/2025 07:15:48",
+      "price": 51.99
+    },
+    {
+      "period_start": "2025-12-01",
+      "period_end": "2025-12-05",
+      "published_date": "12/08/2025 07:43:29",
+      "price": 50.37
+    },
+    {
+      "period_start": "2025-12-08",
+      "period_end": "2025-12-12",
+      "published_date": "12/15/2025 12:25:21",
+      "price": 49.67
+    },
+    {
+      "period_start": "2026-01-05",
+      "period_end": "2026-01-09",
+      "published_date": "01/12/2026 06:58:53",
+      "price": 47.78
+    },
+    {
+      "period_start": "2026-01-12",
+      "period_end": "2026-01-16",
+      "published_date": "01/20/2026 10:55:09",
+      "price": 52.14
+    },
+    {
+      "period_start": "2026-01-19",
+      "period_end": "2026-01-23",
+      "published_date": "01/26/2026 06:52:35",
+      "price": 52.96
+    },
+    {
+      "period_start": "2026-01-26",
+      "period_end": "2026-01-30",
+      "published_date": "02/02/2026 07:53:37",
+      "price": 53.21
+    },
+    {
+      "period_start": "2026-02-02",
+      "period_end": "2026-02-06",
+      "published_date": "02/09/2026 07:55:41",
+      "price": 54.82
+    },
+    {
+      "period_start": "2026-02-09",
+      "period_end": "2026-02-13",
+      "published_date": "02/17/2026 08:05:26",
+      "price": 56.66
+    },
+    {
+      "period_start": "2026-02-16",
+      "period_end": "2026-02-20",
+      "published_date": "02/23/2026 09:40:56",
+      "price": 58.98
+    },
+    {
+      "period_start": "2026-02-23",
+      "period_end": "2026-02-27",
+      "published_date": "03/02/2026 12:12:42",
+      "price": 60.61
+    },
+    {
+      "period_start": "2026-03-02",
+      "period_end": "2026-03-06",
+      "published_date": "03/09/2026 06:18:05",
+      "price": 64.61
+    },
+    {
+      "period_start": "2026-03-09",
+      "period_end": "2026-03-13",
+      "published_date": "03/16/2026 07:25:07",
+      "price": 66.64
+    },
+    {
+      "period_start": "2026-03-16",
+      "period_end": "2026-03-20",
+      "published_date": "03/23/2026 08:04:15",
+      "price": 64.76
+    },
+    {
+      "period_start": "2026-03-23",
+      "period_end": "2026-03-27",
+      "published_date": "03/31/2026 06:23:53",
+      "price": 67.35
+    },
+    {
+      "period_start": "2026-03-30",
+      "period_end": "2026-04-03",
+      "published_date": "04/06/2026 06:59:56",
+      "price": 68.44
+    },
+    {
+      "period_start": "2026-04-06",
+      "period_end": "2026-04-10",
+      "published_date": "04/13/2026 08:22:15",
+      "price": 67.2
+    },
+    {
+      "period_start": "2026-04-13",
+      "period_end": "2026-04-17",
+      "published_date": "04/20/2026 12:15:40",
+      "price": 68.83
+    },
+    {
+      "period_start": "2026-04-20",
+      "period_end": "2026-04-24",
+      "published_date": "04/27/2026 10:39:49",
+      "price": 71.91
+    },
+    {
+      "period_start": "2026-04-27",
+      "period_end": "2026-05-01",
+      "published_date": "05/04/2026 06:57:23",
+      "price": 76.61
+    },
+    {
+      "period_start": "2026-05-04",
+      "period_end": "2026-05-08",
+      "published_date": "05/11/2026 12:40:47",
+      "price": 75.34
+    },
+    {
+      "period_start": "2026-05-11",
+      "period_end": "2026-05-15",
+      "published_date": "05/18/2026 06:48:17",
+      "price": 74.16
+    },
+    {
+      "period_start": "2026-05-18",
+      "period_end": "2026-05-22",
+      "published_date": "05/26/2026 06:35:38",
+      "price": 74.37
+    },
+    {
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-29",
+      "published_date": "06/01/2026 09:53:31",
+      "price": 77.2
+    },
+    {
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-05",
+      "published_date": "06/08/2026 08:16:06",
+      "price": 78.54
+    },
+    {
+      "period_start": "2026-06-08",
+      "period_end": "2026-06-12",
+      "published_date": "06/15/2026 06:49:35",
+      "price": 76.7
+    },
+    {
+      "period_start": "2026-06-15",
+      "period_end": "2026-06-19",
+      "published_date": "06/22/2026 07:11:10",
+      "price": 71.94
+    },
+    {
+      "period_start": "2026-06-22",
+      "period_end": "2026-06-26",
+      "published_date": "06/29/2026 09:44:56",
+      "price": 74.43
+    },
+    {
+      "period_start": "2026-06-29",
+      "period_end": "2026-07-03",
+      "published_date": "07/06/2026 05:39:59",
+      "price": 69.86
+    },
+    {
+      "period_start": "2026-07-06",
+      "period_end": "2026-07-10",
+      "published_date": "07/13/2026 06:47:34",
+      "price": 73.19
+    },
+    {
+      "period_start": "2026-07-13",
+      "period_end": "2026-07-17",
+      "published_date": "07/20/2026 07:09:12",
+      "price": 72.43
+    },
+    {
+      "period_start": "2026-07-20",
+      "period_end": "2026-07-24",
+      "published_date": "07/27/2026 09:09:45",
+      "price": 75.59
+    },
+    {
+      "period_start": "2026-07-27",
+      "period_end": "2026-07-31",
+      "published_date": "08/03/2026 08:20:23",
+      "price": 70.85
+    },
+    {
+      "period_start": "2026-08-03",
+      "period_end": "2026-08-07",
+      "published_date": "08/10/2026 08:24:43",
+      "price": 70.22
+    },
+    {
+      "period_start": "2026-08-10",
+      "period_end": "2026-08-14",
+      "published_date": "08/24/2026 09:44:15",
+      "price": 71.29
+    },
+    {
+      "period_start": "2026-08-17",
+      "period_end": "2026-08-21",
+      "published_date": "08/27/2026 06:18:23",
+      "price": 71.85
+    },
+    {
+      "period_start": "2026-08-24",
+      "period_end": "2026-08-28",
+      "published_date": "08/31/2026 07:16:51",
+      "price": 73.09
+    },
+    {
+      "period_start": "2026-08-31",
+      "period_end": "2026-09-04",
+      "published_date": "09/08/2026 07:38:11",
+      "price": 72.01
+    },
+    {
+      "period_start": "2026-09-07",
+      "period_end": "2026-09-11",
+      "published_date": "09/14/2026 06:41:14",
+      "price": 73.79
+    },
+    {
+      "period_start": "2026-09-14",
+      "period_end": "2026-09-18",
+      "published_date": "09/21/2026 09:16:37",
+      "price": 71.06
+    },
+    {
+      "period_start": "2026-09-21",
+      "period_end": "2026-09-25",
+      "published_date": "09/28/2026 10:45:29",
+      "price": 69.68
+    },
+    {
+      "period_start": "2026-09-28",
+      "period_end": "2026-10-02",
+      "published_date": "10/05/2026 08:19:10",
+      "price": 69.72
+    },
+    {
+      "period_start": "2026-10-05",
+      "period_end": "2026-10-09",
+      "published_date": "10/13/2026 07:03:43",
+      "price": 70.52
+    },
+    {
+      "period_start": "2026-10-12",
+      "period_end": "2026-10-16",
+      "published_date": "10/22/2026 07:01:01",
+      "price": 69.65
+    },
+    {
+      "period_start": "2026-10-19",
+      "period_end": "2026-10-23",
+      "published_date": "10/26/2026 06:58:04",
+      "price": 69.24
+    },
+    {
+      "period_start": "2026-10-26",
+      "period_end": "2026-10-30",
+      "published_date": "11/02/2026 10:13:08",
+      "price": 68.14
+    },
+    {
+      "period_start": "2026-11-02",
+      "period_end": "2026-11-06",
+      "published_date": "11/12/2026 08:11:53",
+      "price": 64.62
+    },
+    {
+      "period_start": "2026-11-09",
+      "period_end": "2026-11-13",
+      "published_date": "11/16/2026 06:34:18",
+      "price": 65.8
+    },
+    {
+      "period_start": "2026-11-16",
+      "period_end": "2026-11-20",
+      "published_date": "11/23/2026 06:21:33",
+      "price": 62.47
+    }
+  ]
+}
