@@ -1,25 +1,49 @@
 {
-  "updated_at_utc": "2026-11-23T13:12:37.618287+00:00",
+  "updated_at_utc": "2026-11-24T02:20:48.144785+00:00",
   "feed": "Google News RSS — manchetes e metadados de terceiros",
   "limitations": "Título no idioma original; resumo e análise não gerados sem acesso ao texto. Classificação heurística, não avaliação factual do impacto.",
   "errors": [],
   "news": [
     {
-      "id": "34168474cdfc2c3909",
-      "title_original": "USD to INR Forecast: Dollar to Rupee Prediction for 2026, 2027, 2028–2030, 2040 and Beyond - LiteFinance",
+      "id": "231b779b523aede9b2",
+      "title_original": "Dollar Breaches 6.00 Per Real Intraday Before Retreating; Brazil Stocks Fall Further on Petrobras Drag - BigGo Finance",
       "title_pt": null,
       "summary_pt": null,
-      "source": "LiteFinance",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPQWJqTjMyMS03eXplQnZsQ09vYUhfdkxRS0lnSkF1RHJKRnNWaWdfT29XZ0ZxU3I0SHZfdHMtZzRRakt6T2hPa00zZDJ3YzZOQVRhaXhKMnU0RnhydG5haUc4b29vV0ZlMlczRkhKTkVjSFlOM252MWFxc0tYbVNxVEpMUFFmOUl3VUFxNk1fcTRCNTA?oc=5",
-      "published_at": "2026-11-23T10:14:25+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "source": "BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9sQ2M2Y2M3VE00dmRCN0VuSjRqR3RnU19kN082MXVoWDBaQ1lDUS1wQWJUVzQ1NF9SN05YemRWN0RfWktsWnZhaTlaUnhCOVJwczdFNjR4M3ZYRmVmWDRFXzRGQXQzcnJjeFVhZlN0OGNSUS1LZ3c?oc=5",
+      "published_at": "2026-11-23T19:55:00+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
-        "Global"
+        "Brasil"
       ],
       "category": "Câmbio",
       "commodities": [],
       "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: forecast",
+      "impact_reason": "A manchete menciona fatores de mercado: stock",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "0f1e955320e01a7cb9",
+      "title_original": "Oil Price Forecast: Can OPEC+ Prevent Brent From Falling Below $90? - Coinpaper",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "Coinpaper",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPZHJmeUNleDdraHd6ZnJjTWZuX09nOU5QV0dwdE9MX3hfN3N0cWNnQ0RqT1RKYUdxdzhtTzZhY3pqWFBwT3FCYlNqdDBUZ2hNeFR4VGNXWElXRnQ3Tjh5MDJVME5YaHhCUHdlaldYY3l2WHpTTHppaGlXS2ZDY01OX3E4d1dleVdzUW9UZTByRGF6Y1JseEE?oc=5",
+      "published_at": "2026-11-23T13:53:12+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Petróleo",
+      "commodities": [
+        "Petróleo"
+      ],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: price, forecast",
       "context_confirmed": null,
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
@@ -34,7 +58,7 @@
       "source": "cwibc.co.id",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE16cHNyOThCMmhBbS1PcU9neThWRDJ4b3FIV3F3Nzg0WkJXUkdyYmpuTGZ5OUdZWmxDNlFtd0U1ZHlZLXB0MVpwQzJuY25lZUJvRXZzLXBoRzBiTUFaUFFwa1ZueGhUR2FRS0lR?oc=5",
       "published_at": "2026-11-23T08:22:17+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -51,28 +75,6 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "03cb26288945f9d5d0",
-      "title_original": "Global commodity markets were awash in red, with silver and coffee prices plummeting. - Vietnam.vn",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMDNrT1A2NDlQQXZ3UDByUGRQbHlIUndBVVZsUDUweE9VRHB4UUNrbjROb0wyMUxDZjVQV1VKYjNFdXctd091LVM2eGN0cDNaXzRjUmtwel8wQnV0QS1wWE5oaEwxWGM0blpHZmU0emRXY2UxZVgyRmRzdHZkWC1LV0c1MkhJZmpqajFHdlN4VHhkSzlaNnRrX3o5S0I5U1dUeEE?oc=5",
-      "published_at": "2026-11-23T06:53:03+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: price",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
       "id": "5cd7b689eb7a994d15",
       "title_original": "Commodity markets experienced a week of sharp price drops this week. - Vietnam.vn",
       "title_pt": null,
@@ -80,7 +82,7 @@
       "source": "Vietnam.vn",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9sZVNhVkN1RUlGS1RPWk9DcVVUN2gwdFdob2djUC1JeThmQy10ZzJad0Ztd0ZzcE5aRlBnVGpWaTZmd1VBdXhLbnRiaDluVE1MT3JBSlcyY2o0U1NJZmRNWlNTX3otQjFQSHB2LVdzcjVTc3U5dzNV?oc=5",
       "published_at": "2026-11-23T06:26:59+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -102,7 +104,7 @@
       "source": "The Nation (Pakistan )",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNeWxLZDdOTWlWYWQtMVlpaWxZY2hRUWFZYmhpd01VV2pMT18tOUc4dndJdnhKUGRlclNqX0phaG1QV2Qzc00zSVVNS2wydnc1cUR3M0xSd2h4TWpRUUQtM3RmWUNPU25YQzNsYWk5VzkxT0d1Qmp5MVJLeXV1c0NQS0xVSzFmOS1sTWZ1cWJadkFtZi1MZmctNnZ4Sm1valk?oc=5",
       "published_at": "2026-11-23T05:19:48+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "China"
       ],
@@ -126,7 +128,7 @@
       "source": "Crude Oil Prices Today | OilPrice.com",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMWdsc2ZiQWNfZm1BcDFKRXp0X1JhRmRBd0hyTWRaNjBXcmRKbHJFYTJwbEhmNnhzM05NVFVWaVVPT3ZFc216S0lIc1dhemxsc3UyVV9USnZIeGNqc0d2TGFQOFotbElId1pRb2ZqcUJPb1p2bl9Jb2NNdFdHUGdnTFQ4NFBjQTl4U2tRcGprRXBWUUtyby1sZWtlQVU4U1lIYlZKVWlGMHQyOUXSAasBQVVfeXFMUDFnbHNmYkFjX2ZtQXAxSkV6dF9SYUZkQXdIck1kWjYwV3JkSmxyRWEycGxIZjZ4czNOTVRVVmlVT092RXNtektJSHNXYXpsbHN1MlVfVEp2SHhjanNHdkxhUDhaLWxJSHdaUW9manFCT29adm5fSW9jTXRXR1BnZ0xUODRQY0E5eFNrUXBqa0VwVlFLcm8tbGVrZUFVOFNZSGJWSlVpRjB0MjlF?oc=5",
       "published_at": "2026-11-23T00:00:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -150,7 +152,7 @@
       "source": "EnergyNow.com",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMmRubzFyVkR3TGxucVhZRDcxaUlfeHEwRk95QklBaDc3U3paQ2tCbWJpT2c4NnJLcnFWaHA3UnZuN2dndUJsS0h5bzdTMU1Jc1FZMUpDcVY3UDZ2Mkx6SXlzRUMwSmlOZzlvS2thS2trY1VkOVVXelFPd3czMDVVamotTFRYem1Mamhj?oc=5",
       "published_at": "2026-11-21T05:56:57+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -174,7 +176,7 @@
       "source": "Kitco",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPZ1FnbGMtajVDa2FNWUQ5eGVERmkxaUNRcjNIMUNDNUprbGlCajZ6dE8zSEdubFNjY0hwYlhxTTlQdmd6UzNIUnVGbGtnVzBXOTZPbTQ4NnRIS1ROaE1oN09HbXl6OXYwZnF2M1AzZVktbmZyTDRGRkV0emw3b1pBSDItQkk5dXJmODRIbi1wYTBsZFVuOXllTWJEWTVibXJkdlE?oc=5",
       "published_at": "2026-11-20T16:13:05+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -196,7 +198,7 @@
       "source": "Fibre2Fashion",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNOFl4bWVPekhWU1ZjelZ6NFFGRXZseFNTWEdoOTNNcTJOQjdtRWg5aW9sQllwakxvT004QldmR0k3TUMtaFNSUkVjSlJTaWh4aGdxODg4Rk5tSUc2SUF0MVBxYVFsMy1TMGdHeG81dUFTRzk1Ry1PR2pnTUlHUjBRbjhQY1BPN2xSOVNTSmF6VEh1bHNjNnRyQWh0ZGhEanhFeGZrZkN5d2pleFUyalBZUUxvSDA?oc=5",
       "published_at": "2026-11-20T15:48:39+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Índia"
       ],
@@ -218,7 +220,7 @@
       "source": "https://streamlinefeed.co.ke/",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQUdEWU5mZjRIZ2JtQXNGZ2hWaEo3ejI0SkpxeXBSLUJPTVJfYnhtUzNuaGlCVmdXT1FSZG55TS1QV1RSQUpVa0RoaFpzcHRxR0JONGhoTWlBOHpMWng3TDEtTzhmZ1FfckZRLTlJYUNBYUlqdnZwckhseGZkd1d5Q3labWF2bXBCYWFVWVVhVjZIY1UxS1E?oc=5",
       "published_at": "2026-11-20T10:13:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "China"
       ],
@@ -235,30 +237,6 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "f1870ef5668e81ab08",
-      "title_original": "Give thanks for this corn price trend - Farm Progress",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "Farm Progress",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9mZGpWUmdxczNpcjQyLWM1OTJzejQzajRseVh0LTlweUdLa3hPVGROdkJPeTZ1MUYzS1FvT1JaU2g4Y1JaVXVEZm44bE5meFFyeFlHVE9wWElRbExqLTEwOGRUMTBlcFVNaGk0dEM4YWEwcmtfZHJLd2dR?oc=5",
-      "published_at": "2026-11-20T08:00:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Soja",
-      "commodities": [
-        "Soja"
-      ],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: price",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
       "id": "7a59211e1d58644026",
       "title_original": "Soybean Market Update: Currency Pressure vs. Tightening Stocks — CMB News - CMB News",
       "title_pt": null,
@@ -266,7 +244,7 @@
       "source": "CMB News",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQSENtdjNZc0J3dlloT1dQb1EtemRWRHFJUDlIWGxWMG9BRUhVeGVZcGcwcGExdUJtcWhoem9pc0JLV0JoTEpMY3Y4dFdxY3JfcEQtTVgzNzMteHZ5MVJQMS1uTzRMNjNGaW9OQXotZnhYeS1mWmx2eGNBMEVpZEVHT2NyeDVPVEtFcXhJakVZNTJWQ0JFZHZfUg?oc=5",
       "published_at": "2026-11-20T07:35:12+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -290,7 +268,7 @@
       "source": "FinanceFeeds",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeTctX1ZZbmNoZVF6cXJDd0luZm4xRmVOeVF1T2dDSTZ2bTJmbUJLVFBYTkhqUFBQRmJ4VmJjSi1JRnlzZmJ0Y29iTE1HWlpGR2U4MmhFZXhqM3p2cjF0c0NiS3J3V05SYkE4Z3pDNzBvN2lnTlBCbEVsa1Vxd2FUY01aeUpjbmY3Qzg1bVUzZmNTMnEydmNEMUtRVlhyWV9rM3p6SFhWYnZPdXN3bWlfeQ?oc=5",
       "published_at": "2026-11-20T06:49:22+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -314,7 +292,7 @@
       "source": "Gulf News",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNb0FlbkZLTHZ5VFFTQ19tS1ZqNmFWaGhnbU9tME9OVVV5T01Pa1VadnB6VlltcGpuMGhSbzg3blRmdHpqS0ZwMEVQYTdlSHRBOUZwVHRXbVpmV2EyQjI4MW16TDlrTFJmc0ROWlJZa2RhVWZPMDhJWTBiMlFNNE42bTNEMGZsTkdwQmFLY1F3UzIxbWFNQ2tVd2JhR01EOGxBeWlmQ3RNaTdsRTJpc19pT2RFVDBUVWVRZkdad0laTjR6d9IB1AFBVV95cUxQaERNSDFxSWFpbVNVLTJCdXdVV2xFaFluQk9OOE1sNVp6OThEOWRtNmFDYXZETVJ3Q2RVRHpQblpNZEZXTjVLZ2ZSU2Z0SUFPenVTTTNDMzBlSDNKVDRiTGpGa0RkdnZfR2VHc2JCTExsSEFWUG5ZXzB5SkhEYXpNWFhFUTJqTmswaU5uUGlQSXRjMUtTcmRRSVRwTDI4Skk3YlU1bWM1a082U2NrRF9LOGJvaVlvVS1hM1BucUI0ZkFtMDRjRUVEUW9LZmY5OE5Sa1VybQ?oc=5",
       "published_at": "2026-11-20T04:02:15+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -338,7 +316,7 @@
       "source": "IntelliNews",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNR1dXR3pxMGNqWVU2ZW9NXzdhSmRlQ1VOVUJTTE43LU9nTC1PWXJwWVRfMGZ1M3I0cUsxbnJNSTR5cnFNUTREUFVlRzYzWGNMMmRmUngtcUFBYnY2a2dtSmJJaXdfT3ljakpUNXJHUkJmTTJ2bVRSOUJfMzZETGRGRy1HY0Fkd2NJaTV6d1JnMzcxZHdCRU83RnJZaVlfbHpuV296VjhYazAxc1Zwd2Jwb2oxSmVMeVpwX3FF?oc=5",
       "published_at": "2026-11-19T21:25:17+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Índia"
       ],
@@ -353,28 +331,6 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "30f80a4e290de3500e",
-      "title_original": "Gold Price Forecast Mexico 2026, 2027 and Next 5 Years (XAU/MXN) - LiteFinance",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "LiteFinance",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOaHFTeG1nazdGWFJhLWdMUGFfV2sxVWx5Y1V4Q3JBc2FkZGNHeGVVS3ZsM0MyWFVPR0lpX3FTeElCd04zc1VLaGxKSDUxTklobkExVXNwa2RrUUFEVW4xQ2RLQ0d4MzZaNGd4NUJ4bDV5b1dnRkYxMzlzLVNHRUNVWUlxa1YwSkdEN1FqbXFqaXIzNk0?oc=5",
-      "published_at": "2026-11-19T15:21:36+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: price, forecast",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
       "id": "5446f9f91e00ced0ca",
       "title_original": "Gold (XAU/BRL) Price Forecast in Brazil: 2026, 2027 and Next 5 Years Predictions (BRL per troy ounce and per gram) - LiteFinance",
       "title_pt": null,
@@ -382,7 +338,7 @@
       "source": "LiteFinance",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWHJSb0NkbGplanJMbl9yb3lEYm1FUVE1N0Nwck8wbUhqbnBhdHViN1A4cFc2clIxUVRzOHluZWtNVW5NV2xMUmVBcVFab1ZjSHJ3NkxzSHAwTWVqOW5vSWJNekhEV0s4UjhCS09zU0Ytc0lWTlRCMF9ZYnZBMUJNLXMtbzUyelNBMHlmQjY1MzB2a1k?oc=5",
       "published_at": "2026-11-19T11:18:05+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Brasil"
       ],
@@ -397,6 +353,54 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
+      "id": "fa7deb364e1072d78b",
+      "title_original": "Soybean market update: flat CBOT futures, firm oil, mixed regional prices — CMB News - CMB News",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "CMB News",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZWlRUTlNcF90RHFkWXFzXzRmbFVweXZEemtuX3huMVp1T2JtTmV0MjRmRWZ2UXRReU45Q2VseDJibUJzc2ZrLUJHM2NQc1p2NGt0Yy1BSUc0X0U4SGI5UkZib2hhOFh6UWd2dUdfSFhtR2JhbkhiV09wcHhVeVVqUHJ6ME4wTFdVX1U4bFk2MjZEUnpLcXltZ2NCU0I?oc=5",
+      "published_at": "2026-11-19T07:34:03+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Soja",
+      "commodities": [
+        "Soja"
+      ],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: price",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "79d21f3e42a92ee62e",
+      "title_original": "Palm Oil Market: High Stocks, Weak Energy and Vegoils Pressure Prices — CMB News - CMB News",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "CMB News",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMWM4bkRsOWwxM3JseWFOTlYzNFdfV0xINV9DU01mNHF5ZlhnbEsyQ0t6XzNEQnR4VVRkV1A1VjJ5RWlWdS1pVzdBRGRudUdlYkk3OW1SSE9NakJnOWxzdHZnclN3ZEtEMmlHUTRZNUczbWhib3lvemx3UmNJdDh1LS1tZWphbF83WXVjSzNNSkxicU5sTTFGMlhB?oc=5",
+      "published_at": "2026-11-19T07:31:41+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Óleo de palma",
+      "commodities": [
+        "Óleo de palma"
+      ],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: stock, price",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
       "id": "7edc3c2340142aff6d",
       "title_original": "Oil Prices Fall More Than 1% as US Inventories Exceed Expectations - Sada Elbalad English",
       "title_pt": null,
@@ -404,7 +408,7 @@
       "source": "Sada Elbalad English",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPVHp4QzNqYVhsem9HbDM4aHJVREZrRzNkTWVjZFFlZnRrTGRqSzVKTUlGZldadWJGWlZpZkpHSmFxb0gtZlViYmMtMHBjZmVzSzhITUIxeGlyZ1dLTmROZzl5Y09TT3JVN0cwRHp1UHVIZ1RzaFJ2Vm5JWWJySElnRkVvWVlvdG03S0E?oc=5",
       "published_at": "2026-11-19T01:13:21+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -428,7 +432,7 @@
       "source": "EnergyNow.com",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPTk1YUGdyTFdkYlBVNTM4VlhCOF9lT3FUUDhzSDlMZXU5cURLd2d2V3BINWxBcEk2cWs4SjlySzRNZDk0QWU1SGF0Q2dtdU9wRHNzUUlQS2ZkZ3hNZHJhRFRpSTdCblVsbFhGOG9KV1lRWlZpS1RtU2wyT0NSaTRaWG9xRU5ZQmtRRE0yZVg1U2RKOVllSDdsS0lGd25rZGMy?oc=5",
       "published_at": "2026-11-18T23:30:22+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -452,7 +456,7 @@
       "source": "AgroLatam",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOUG5FeHRYbGlnNUVfb0VUcDhBb1NleUUwYmtSMzJUY0w4ZVNYb1BMZHFaWXVtMzR1Qnh5SG1MRjV5Q0llOVM5aWdVWHNJVk5rMEQwZ0p1Mll2TW9HRUZDT0JlcVN1aHVLU2cyQXZxTFhLTlU2Sm5KaTlIVDFBUDZLY2s5YWVqRi1zbXRkZw?oc=5",
       "published_at": "2026-11-18T21:15:26+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Estados Unidos"
       ],
@@ -476,7 +480,7 @@
       "source": "India Business Trade",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNaFdEdC01clNJclZyXzlES2hwRHRxT0hrOWtSNUxkMDJaUGpSdmJQTVJVdGFLYllLd0oxaFQ1a29ZMjN1OWo2aU4xZEFHc0lVY2NFeU90eXZWWF9mSWNiR3pTNWNBMzhRWkM0MnUyV2NNTFA2aFpBZ2RDRWNZYjVVVTQ2a21MQmZjWkEwcmMtclBld2dUOFg4MWtZcDJBM3YtYnZMUzFxZTJxZkQ1VC1EM3VfOE1VMDBBd2NRSVRTTQ?oc=5",
       "published_at": "2026-11-18T16:48:01+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Índia"
       ],
@@ -498,7 +502,7 @@
       "source": "The Economic Times",
       "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOR1BraDBoem4yRS1wWVpudnhJZmRNYzR1eTBSUkNfaWdrM1FSRXgteEp4WVB2cUdDcjZxdzM1NE0tS2h0bmRPZmRUckUzbklqQlI4ejFkV245WWpjWTBMOEVGSGU2VXRKdVpoc1hvVG5FTGwwUUVfTS1LeDJDc01pQUtYNmNFTFlQTmZyMlQtU2JhRWVkWFQ0bWQ4M0JHaUJSYVZMUm5KWWlBWFFuM3hqSTJ6Y1pNeTBrdjlxUzF6VDR6N3JQemEzU2tjYnVKTFB1SWZTbE9mTkJhaGVncE1aMGkxMDgtVW04aVVmbnJOVXZJQWhoalYxZzc4MUJyZDNSbDVZZnRhbmhKTUNjWGhSdFE2X0fSAZoCQVVfeXFMUFpGWmFiQlNEa08tX0Q2MmFhOFE3X09iandmMVNhUXN0MGVUSXRtd1BqVkVJTDZOOHY4R0hLcUt5SzN5TGlleFFzdi1YTmV5TnF2aHBTSWV2d1hOSXdYc0FoSHlKemhZazZzTUN5SExfYWhqLVVvREVJbE84N1QwdFF2V3VkV2RUSjVUUlBaRk9CR3otWkVxS3VGUmlGNUkxSkRqSzAtTVI3cDZHTU5HbzZRSVF4VGZ5a05YYjJ3aTM2QlNUYm40UVNZcVhMckp6b09acVIwWlEzRWdheVU3WDVFSVFWVDdTalh1Z3kzSXhEdHJFTFhSUmNncnFZVzVaYkdXMlVfRW1WTG04QWg5VnU2X2hFbmtpNTZ3?oc=5",
       "published_at": "2026-11-18T09:03:32+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Índia"
       ],
@@ -513,23 +517,45 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "f1b109e63dbc21546a",
-      "title_original": "Brent Crude Oil Slips Towards $92 as Rising US Inventories Renew Pressure on Oil Prices - Investors King",
+      "id": "b95ab3efda20a4ebbe",
+      "title_original": "Low prices for Argentine wheat are increasing its competition with European wheat on the world market - електронна зернова біржа України",
       "title_pt": null,
       "summary_pt": null,
-      "source": "Investors King",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQczJGQ01KQ09HdDVadGZLVVlaek9NQXBTbmJmV1NnZ0hTeFd4V0FUTFp6VURRWVpDQ2JESEdaMW9pTmN6NjM3RmZrdmw2NmpmNllMSjB6ei1mQjlUMHZncnJJRnpnZ3dQNC04NTBjY3A5OWRMZFBVVTJEVVQtVGtobDdTSkNxNEplaExnM3JtenVxWjlVbEkyVTZYX2hRak9OcHlDcGFjeGlmUjFrNDRMVkU1bkdWVnJaQkh4dDZ6U09Hd9IBxwFBVV95cUxPSDEwZlZJdHJTakRZODVray1mZmRIZUg0cldGelo2azBSN2RBeTluQ1R4QkNKanEwVGlJb05Bd2V5ZGdKX1BZX0ROQ2RXTm8wa2JGRUtuUEJBLURyWVFCUXFkSXF0ZlhYTk5OS01BOE80bHRrTE9QSTR1dnZITDNfbnFlV2ZCYmVOc1NrZGJrTWhzMkx3aUNmOS1GWXpKZFotbDhVVzU1TGFiZjZYa1lIT3dTcEpoR3c2YVY0LXlja1lZeGxpWTc0?oc=5",
-      "published_at": "2026-11-18T07:32:12+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "source": "електронна зернова біржа України",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQkhIeGJ0OHNUQjRUQkdyY1ZuZlNHdnktejhtMlc4Y1B3WTFzb2hkRG80YTNqdFlsTmt6NV9NcU82bTMtU1ViWkFPbVBSaU9Id1UxcGF1Y0J0NnR0bW1MM2t1djEybWJPcXp2NGFsT19ZclFKUW9TUUM3UkpsYXFmWHBtd2pWME5IZkx4bGJ4ODR5QVZ5UGtBVTJUemstRzNMQ001X2xvRk9FMVBTQW14ZERRQ2xvakdyU3VXSnk0SXFoMXBOc21kTG80aHI?oc=5",
+      "published_at": "2026-11-18T07:18:38+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
-      "category": "Petróleo",
+      "category": "Soja",
       "commodities": [
-        "Petróleo"
+        "Soja"
       ],
       "impact": "Médio",
       "impact_reason": "A manchete menciona fatores de mercado: price",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "1fcee9817e25a62de2",
+      "title_original": "India's edible oil import bill jumps 24% to $21bn as rupee slides - IntelliNews",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "IntelliNews",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNdW5Ec3lfSU1NZl9zNUpPSWNQX2Z5UTJUWjVUV0JvR3p2NEtTeGQxRmJTdTZjOTFET3ViZGJMajdsZnJVR2pjamNlVXlCQ29tQUk0Ymgya21reW9OSkttajg3SWo2SWJtNkFfVWg1dElwc1VWeXU0VmEwRk9QZTd0cU94SlZRMFgyTmdoUEk3MDZUM2N3Rk5ZUjZfSTBId0lv?oc=5",
+      "published_at": "2026-11-18T00:54:14+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Índia"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: import",
       "context_confirmed": null,
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
@@ -544,7 +570,7 @@
       "source": "Gabungan Pengusaha Kelapa Sawit Indonesia (GAPKI)",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYklsS01QV2ZzWnJtcGxPbHo4WHBoSzNXUGxfX2xHVWFBWldGMDM0TnJiUnZPS3M5dzFhR3RYbTVsY3FjY1FZdklkNm1TMlhWMXo5endGdHdYSFYzNFUybnFfOF9KWHZpYVg1eUtyR00yRko2WjJfTjFEcnVnZmRqT3Y0TTR5UTFyNFRkZHNidkNxbUtSbW5taXBfNjgwZ05uWkdFNHNQbHJpZw?oc=5",
       "published_at": "2026-11-17T23:39:10+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Indonésia"
       ],
@@ -566,7 +592,7 @@
       "source": "AgroLatam",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNV0JvemN1QVQ2UUN6Mng5U2tsMXcwU3NjcnhDNHIxYXJUd1RsV3liU1RZa2FIQ1Nka0FseldmTWxZVElkVHpRcHJCLXhwR0dHVHp4c0FVaHpRQlh4Vmp5RHpoVnR6OFBMNjhJVGFhdWt0a0JoYU1QRE5Sbk1pNGJwYWpXYXN1SDk5TkE?oc=5",
       "published_at": "2026-11-17T20:52:52+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Estados Unidos"
       ],
@@ -590,7 +616,7 @@
       "source": "Ohio's Country Journal",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOdS1nNmxDNEk1cnk2NGZSUzZVcjlRRXo1SnBGZ1hxdG8xaThQV1VHSXMzUkZZTDJwOUUxTHpHanNqdGllRkpVZ3dJVmZxU0FzdjhwZGtQcjZuczFyT0tlb1ZTR0pNLWY2aWs3V1lNMEVoV1RZdDYtbmVmMUlvWHViXzU0NkpNYWM0RjlubldqcW85b0FuUUR4NDl0N2c2T0d2ekUyVlRyQ0tkdVU0Qy05SEZGazl5X3FveUg3MXJHMWRUMG8?oc=5",
       "published_at": "2026-11-17T20:03:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -614,7 +640,7 @@
       "source": "AgroLatam",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQlBQVm02ZjAyTllQRC1EX3U3NmswVkFYTnJtRzlxUGFnTVptQTB3MG5HWlNHc1ViU3EyZGVidEZZcDBMbjh6cU5MNFpleFNCY0JlV1AtM3dzTjdQTkRWTU5DS05MZkk5aXpsVDNhZk15aVI0VG1LM3BCa0FyYVNWalFwVXRwMnlIakRQaE1EREk2QkpC?oc=5",
       "published_at": "2026-11-17T19:07:53+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Brasil",
         "Estados Unidos"
@@ -632,6 +658,28 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
+      "id": "6b37bec6fca308f39c",
+      "title_original": "DP World has launched a dedicated export rail freight service for Ocean Network Express - Indian Transport & Logistics",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "Indian Transport & Logistics",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNU0tJMk44SkNna3I1UU1CdWN6R0x5Ni1EZG1OcFdaZHJHb1hhYjY1SmUwZ2VXOENZdmNhTGNnTmdYN1VDNkdMZmVyVWpYd0VNMFI5WC1xLThTY1EzRUdjYmwxM2oxdzNSUER4dzFkUWhMWFNhVDM2Z3V6ZmplNVVhbi1fUkQ3aTlBa3ROYU41cm9MclJTZ2Uwa0ZVNl90Nmd1VTFoek5CWnlDbzUwNFpzVjNqWDlzVnRHTE8tMUQ1UXTSAcYBQVVfeXFMTmR1Q25CYXpwMTVqMVN0VHY3MU01Mk9pZ2Y1bEhfQzFRT2tKaWZMcEZtZFVRdjY4eEVMTUtyOVNQNXRocWdyQkNxUGIyWm5vYkoxd3RBdDUzdTVOYndWUmpBam9HeUJNRzA4Vkc1aFk3aW1vUG40YU1GYnJJeU4wbWNDcVVMamF3MzZjdW1QVW53WWhjTVNwTWV6OGphdTdWcm5TeWhIa0xXZHpJdnM4aER0bVlMTDd5T1FqbS1KRV9nQlFqX3pR?oc=5",
+      "published_at": "2026-11-17T09:01:51+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Índia"
+      ],
+      "category": "Logística",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: export, freight",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
       "id": "cb5c9e2c875c5e9531",
       "title_original": "Palm Oil Market Update: Heavy Stocks Pressure Futures - CMB News",
       "title_pt": null,
@@ -639,7 +687,7 @@
       "source": "CMB News",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNOVAtTjlBdFRhR3Q1NFhaaEtjeWdtblJ6S0ZPWktKd2FJdFVsWWVCOTlUaGdITERiQkZIaTYyTEdwaEZ2WU5FS09BV08wR2RleTVUNDdvay1UOVctTVMwM1BOQlM3dEFsenVVcTZ5SlZ6QXRIdWgtX2Q0N29CbXA5UDQ4S21DOVVKMDZj?oc=5",
       "published_at": "2026-11-17T08:37:55+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -656,23 +704,199 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "3277573760b1e266fc",
-      "title_original": "U.S. Grain Markets Split as Corn Gains and Soybeans Defy Record Demand - AgroLatam",
+      "id": "a573211cc0089287df",
+      "title_original": "Official exchange rates on selected date | Bank of Russia - Центральный Банк России",
       "title_pt": null,
       "summary_pt": null,
-      "source": "AgroLatam",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNVlRPZlM0am9oLTkzMHpGWkZrRVBZQXRiUjVobG9PZ2R6dnNQb1NKZ2hfQVp2TC1NdWY4RVI4azNRU1lFdWxRTkF0M0tiNEU4RU9vZGM5NHllTUlJLXp6RzFVM3czaEJucS14VUlrcFlwdndzY0lzQzJSN1J5bUluTGFNaC1sMEJKMHp2ci1samJ5N2VRdjY3cF9oRzEyYkZlcFRiQ0hYQ2k?oc=5",
-      "published_at": "2026-11-16T23:55:05+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "source": "Центральный Банк России",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5YcldQcEpOMEd0OGVlTzFTZnlKM2lYZ1JxQ2FvLUVUMDI2WnQ0bnk2SzlEV01pb2RKNW40WVJTTzNUTTdDeFJmSDFJN3pnZE5tS3QtakRR?oc=5",
+      "published_at": "2026-11-23T21:23:26+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
-        "Estados Unidos"
+        "Global"
+      ],
+      "category": "Câmbio",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "8620f85bb33c04a829",
+      "title_original": "Brazilian Real Slides Past 6 Per Dollar as Fiscal Fears and Fed Bets Converge - BigGo Finance",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1LTmlmQ1lHejBWM01qel90b3Z0THNGOXJVOEE1dWlMaGVMR3hEalRBbnpiaHN5SXUtZm9YLV9JaFhEWTlCRkZJWUs5LXg1S05kNTBZQ0xFUXhLRFFyV04yei05aExRem9xR2tmdTV1b2xEMnlmOUE?oc=5",
+      "published_at": "2026-11-23T20:55:00+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Câmbio",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "785675ae5ef7db2829",
+      "title_original": "Brazil's currency crisis is back: the real fell sharply after Lula's surprise re-election - Latin Times",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "Latin Times",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdTA2MmVXdDE1M0lOeWtwTXQ2V0J5dFhPWk9OY05FTlJqRHhHRTVhQVRsRnN1TmhkckZFNkdFZlFtRVBTZmdXUGtYRXFjWVNGcXE1blNycDlJelFUV0FoZUZNMFluRHVoX0xBOWp1UFRZN2dRZXRiUzZhekFIYVZQVkVxNFp5X1pmclE?oc=5",
+      "published_at": "2026-11-23T19:21:08+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Câmbio",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "e9c3115479871341a3",
+      "title_original": "Daily Summary: Nvidia CEO's Return Restores Hope That the Bull Market Will Continue 💥 - XTB.com",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "XTB.com",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTjl4UHlnSlFna2Uwb0RPNWc1NlkwMUR0OFhoRkgzUFdQOFBhS1VPbEUteDM5R3RodzFxN0hUbUVOMkQyTXgwb1pUTnIxU0d6TVlrcXlQYVVLaDBGbE9WLXZ0dU5DTmQ3b0tCN3hhQ1V3VUREcjVzVng4a1lTNHlwY2FEOTRmWXFwcHJVWFVXMnE3SlpHY3RuOGJWUEQ4bWZyYVVjbTltLWV6N1owUThnMy14ckxHSUNDVzRLREpB?oc=5",
+      "published_at": "2026-11-23T19:07:27+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Câmbio",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "1a30d889d17dfcb246",
+      "title_original": "Gold's 37% Correction From Peak Driven by Bond Yield Competition and Dollar Strength - PravdaReport",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "PravdaReport",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPajRDTVkzYUpicE9ZVG56LUhTTDI3LWtGUkpxS2J2WXZHLVQtUFVPaVJfZTYyWUI1aUE5THpxS3NvLVJLdjVkOTk0bzU1OUlYaHdkMy1Oa21iSzFQaENKWTdXdHNibWI1U3JSRkxlQjl4N0NzcTZaRnB4dkxiNUJQX3NfOXZKblJEc002RUtTT2Ezc2J3ZFpRQlBYSVFRQQ?oc=5",
+      "published_at": "2026-11-23T19:06:00+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Câmbio",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "17088086fcc63c2125",
+      "title_original": "FX Weekly Overview (Brazil Issue) - StoneX",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "StoneX",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWl9aVHkyQ2F1TDIweWlHOE1aM2U5b3BQTnkzS0ZWV1VEZTgwYWxHZGtCN21HeGtkQ3A4czY5TUlHT19CT1V6eExwQ1NVNmpMaUI2eVVzd0hJVDlzZzNZUUltUnZWeFZncDl2VEVVVi10Uk1LalpGTjAwZTVhbnBsZk9ncXE?oc=5",
+      "published_at": "2026-11-23T17:04:09+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Câmbio",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "246cfdbf14d39cd482",
+      "title_original": "Stanislav Kondrashov Explores How a Maritime Blockade Can Disrupt Global Trade and Commercial Networks - Vocal",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "Vocal",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMjJGb2ZJaHZ5bHdfTkhPdWE1TWtJWWFNTFV0b2hxVFRjbGs0WVd5eHRYMnVJZE1iRVlGMzY0azJoaEZURmZOSXNJajF2a3JFLUI4Qk1ac0R6SldISy1MYzdyZnBzeGRYcTJQMlZjc2xhMjV2Q1JiUFVQenRYSnlhbnktR1JSRDlYa1VEZU9IQ1lxdjlLU3lwZ3VFQXh5WXRtaTFxVWRKa1NQel9kdVdJY0F0c1k1UkRnQUVGelRXd19kQUlTbDh6Vg?oc=5",
+      "published_at": "2026-11-23T14:16:38+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Logística",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "317f267f80ec1e7c6e",
+      "title_original": "Gulf tensions threaten global energy and shipping - News of Bahrain",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "News of Bahrain",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOa1JQN041Q3dseml3WHlNYjZpaVY0V3VSek1JOEdxN3pfN1hnWWRFbE85QVZPSnhZTzRCMElXNDFRN1hXcTlDRzg1S3hwTWZYdjNPYndwZU8yajJ0MlhVTHRGYUVvcWExbjBVM0VMMlZYYlJwMkNCb0tLU0oya3JYbjh1OHJKUFVJcFc2TkZ2ZWhXNVdD?oc=5",
+      "published_at": "2026-11-23T14:08:34+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Logística",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "dc37117830ff3795c5",
+      "title_original": "Soybeans Extending Gains Out of the Weekend Early on Monday - TradingView",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcFUwVE90S2lOS2J0U2xkX1FuRVNmRVZBS0Y5cnFWS2w3YWpURllGdThzOGtYeWR5NGNWT0NxRFNvekcxRzdxaHhZZ01uR0NoekJKLXNzQ19QMUR4c1FCVnZsNlJIb0xGNVNnRWtOclBCekpBR0hsc3dVVlFzam15TnFLb0dKSDBJTkxtejZIUGx6YUtOQXNyVEpKem42eXlMcVJuS0ttZ3hXQmVKV2tPYS0zTnVvakF4dkE?oc=5",
+      "published_at": "2026-11-23T13:33:41+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
       ],
       "category": "Soja",
       "commodities": [
         "Soja"
       ],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: demand",
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
       "context_confirmed": null,
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
@@ -680,21 +904,21 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "27b9f31600787ae866",
-      "title_original": "India’s Edible Oil Import Bill Jumps 24% to Nearly ₹2 Lakh Crore - India Business Trade",
+      "id": "29eea53aa0c3619b15",
+      "title_original": "Brazil’s Real Weakens Past 6 Per Dollar as Lula Selloff Extends - Bloomberg.com",
       "title_pt": null,
       "summary_pt": null,
-      "source": "India Business Trade",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQc3hodUxDLURXYnhraV91QXc1Qmp2dm52Y1JHYlRCQXFpX096WWE4N09sWUcyWEZWUjhWbFh3dWVLM2l4VWFpZE9YZDRNV0hSQXdQX0F1a3ZUSVMyRVNJSmhraU1BUkdfN0UwT3RVY053Zkd1VTBHMnU1MUJFeXF4TTN2T2tvY05tNXF6SmJKQ2E5c1ZrMFRaMUJMaHRxVXdPUzZ2Q2FLOA?oc=5",
-      "published_at": "2026-11-16T17:16:15+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "source": "Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNVjh3WUhpZjBWazE1RHZGUjhnWmtFNG1sbGo5SVRlQS0tYUl1X3hrZTJvMG5SWmN6V0ZEblhtSy1CNEZWRjA3TnZsemkwNGs4Y3hzdkN6VUZHYXRQakY4SFQ5YURRQmx5Wmo1bGl3WTdvY0hIc2htaDZRbFpRQmVMTmZYVWxnTWJHeTd4cmJsaGN0ME5VNFpJT3RkeHNhMXdROFlvaTJTWTBUZmhLYVN0TlpYNHJZMWkxVVdEV2loTFc2bVVQcEVQeTJPelhuMWZ4YlE?oc=5",
+      "published_at": "2026-11-23T13:11:14+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
-        "Índia"
+        "Brasil"
       ],
-      "category": "Comércio exterior",
+      "category": "Câmbio",
       "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: import",
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
       "context_confirmed": null,
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
@@ -702,67 +926,21 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "8f9297a874602c0fce",
-      "title_original": "EU sets tariffs on steel from India, Japan, Taiwan, Turkey, Vietnam - The Straits Times",
+      "id": "47e8c9ed00904979f3",
+      "title_original": "Shekel depreciation continues amid global market selloff - Globes - Israel Business News",
       "title_pt": null,
       "summary_pt": null,
-      "source": "The Straits Times",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdnJGQWJ2cFlmYXQwalRSa2xtWDhxeVh4TUlSSHRNZWVPbUFmcUpHLWplOG40Y0d3RFhFVUlYdndxdUR6d2ctTHZScVlOd3RUanZFXzE4clZacmlUSGJWclBCX2tGUFBRamdfbkdxTmRaTk5JdlZrOTgtY3h0S21GaUpuNldLY1ZHbUpFWVpEVk00bnYzOVg1cW5vX3ZNSHdqUlp4dmtfZXk?oc=5",
-      "published_at": "2026-11-16T17:08:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Índia"
-      ],
-      "category": "Comércio exterior",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: tariff",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "c36407826584ad6bc7",
-      "title_original": "IEA revises global oil demand forecast - https://www.engine.online/",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "https://www.engine.online/",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1wb0V2S2NVblFJN3NfdDlFTUZPNlp2alF4LUJCRmZIU2JEV250WFREYkdPZ2FZMEpWc21RWU5ucEl1LTlnRlRhQm44SkVfT25rOGpwVGVRcHh1Nk1td2JhU2F3eWpCTEY1VkZobHhxc0dBa29WUkJzcW9PM0RJcE0?oc=5",
-      "published_at": "2026-11-16T13:34:39+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "source": "Globes - Israel Business News",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNakNyUko1T2pGYml3RU1pLXktUWQ2ZXhCSEJHQ0pMVmVTXzk1Y1JmRUZJck90OTRjVHhGdTMtMEh4RHVkS01NcjVTc2xTX001eXdxSU9CYUpIczlTOUI3cGFudVhGSVduMmE3QUhSdHRuUUdwcWk4amtZTFQwU20ySnROMHVueDlJVXROd1N1cFZ6Zw?oc=5",
+      "published_at": "2026-11-23T12:41:04+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
-      "category": "Petróleo",
-      "commodities": [
-        "Petróleo"
-      ],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: demand, forecast",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "28296a2aa906132f81",
-      "title_original": "India: Edible oil tariff values cut, reducing import duty burden - BigMint",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "BigMint",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbjJrSUZYaGluVWN6UVc5blVtS3VvQ3dGSGo1WU1kVGt5UG44SmRNd2ZYSHU2cUhnc09JVkxISi1rU28xNDczSTZYZmVVS2lwS2Y0aDZJNHJRTzMxQi1BQ0hLT01wUl9VVm11anVYZ0FLeURheDRoQ3ZDMUkzY2lhNFZIOWZ0UzUyVFFwMEpkV1gwcFl3dm5kSU5XTU5rN1ZTWU1rSExoN1UwVEM5?oc=5",
-      "published_at": "2026-11-16T13:21:29+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Índia"
-      ],
-      "category": "Comércio exterior",
+      "category": "Câmbio",
       "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: import, tariff",
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
       "context_confirmed": null,
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
@@ -777,7 +955,7 @@
       "source": "Demokratis.co.id",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBKVFdsejRBZEEySTR5dHVFSWtJQzVkQk9CNm5NWURwcjl5QXM2VVdqT0Y5QmZPVXdqOU13cE5qVlpFWmVYeGppRlpKdjJ5UDVCSzlxTHp0dGdXVXpMLUpjRjVSWnRBdVlGeDB1WGY1X29ydw?oc=5",
       "published_at": "2026-11-23T12:38:14+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Brasil"
       ],
@@ -799,7 +977,7 @@
       "source": "India News Network",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQamhYT25LMlkxVEhfdlBlRE1HQ29KT1FQWDh2LUFQakp4elV5Q2NtNXRXTUtZQ0dqWEtYSmJTYnk3SHRTV3V1cy00Q3hQbXpNYU00R09ZbG1oNnJHU0VZTGtjVkhfRGNyaUF3OXFsQ0RDQmducjlIbnJaRmg2ci1LcG1rVnJ0VmN1VTlRSzdNa0xybkpVZDFTSXJ2enhINXdtQW0w?oc=5",
       "published_at": "2026-11-23T11:05:30+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Índia"
       ],
@@ -816,43 +994,19 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "61fbd774d91aebdae7",
-      "title_original": "Societe Generale maps out its 2027 investment strategy - TradingView",
+      "id": "e44c05a27f116eb157",
+      "title_original": "Latin America Supply Chains Shift from Risk Protection to Growth Driver - Global Trade Magazine",
       "title_pt": null,
       "summary_pt": null,
-      "source": "TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMzJ3Zl91TjFvZjFLR1R0NkNCWTlRRUh4ODJpd25SSm9Dc0doYlR6NUZ6VkxCUUlJdEwyRXRvMlJKMkhVT0U0Wmg2blg1VHI1dkJZRXlNTVUxempmTVFKYTJIdFdVTU1ZeDMyZHpnLVFrYkxEV1V4UkZxZkZ3dmNfTG52N2tTMDZOQjdyLWNTUEV0Nk5WZ0J6TVNibzlRMXVTdER2MWNIZFA0V1pVeVRsWWJiOXZKdy1r?oc=5",
-      "published_at": "2026-11-23T10:32:39+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "source": "Global Trade Magazine",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZTFEUVRFeUZKTmZSMTBuRi1iSlk4RUtJZ2Y4bHAxVk92MDFqWWhrY2stUGg1QnRxd2tEWkcxdXVZcENnczY2TGtURkxWVG5jdC1lWHEyeGFpN3Z3WURPd1J4OFhjMDNrRl9pSHVOd3RDbnBlZDk0ZGEtLXgxeG5IR1QtWkhKMDZMTmEyVmRXVkZUMFZlaFVMV3NOUFgzamZqbzFkTVBB?oc=5",
+      "published_at": "2026-11-23T09:03:05+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
-      "category": "Câmbio",
+      "category": "Logística",
       "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "64ae6010b61be8fb55",
-      "title_original": "Global Oil Output to Return to Pre-Iran War Level by Year’s End, US EIA Says - EnergyNow.com",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "EnergyNow.com",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNFA1a0JOZkNidjVKMUdMeFhSZ2dCTFpYbzlER0pmZGRWZUtjMkEtLVVTOUZHSkFwbFQ3cUV5WDNsSldBVVdBdlVqYXpzWllJSTJqNmNVTlpsRVZsU3lOdlNFaE9ZcDVDUHdvdkpjSTl1OFZhTEpmT2hZUGg5cVZ3blpSUFRsODROR3p0TmlnM0habkI3dHZsRm82VVoxY2NOQ20xYjNLTDY?oc=5",
-      "published_at": "2026-11-23T08:56:14+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Petróleo",
-      "commodities": [
-        "Petróleo"
-      ],
       "impact": "Baixo",
       "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
       "context_confirmed": null,
@@ -869,7 +1023,7 @@
       "source": "CMB News",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxON0Vxem9scGFEQ294clRqQmxYSWdKTEw5WUtFZl90Sk1OVDR3TlR2TWVQdzBlZUVHdzl6cXVRLWdBZDlzNE5hY01OR0pVTEZVUjE4ZlhPZ0RtY09uME5jM21yT1dTbDN4RG1sZUlmQTNTZm9NbjZ2cktFOXQxUERUZGxCX1g2SVBVV1VvTkRuSnpDM1JQRjhUeF90M01zZmUwQi04UHp0cEpNdw?oc=5",
       "published_at": "2026-11-23T07:44:30+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -893,7 +1047,7 @@
       "source": "CMB News",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMWl2dHBNSHNTRDY1RG83TllkdE1maW1vUzMxdHNyRHhxS05uQ253ekQxMDRrZnRJU2JFSjJKWGZ6VGJLZUlGME9XTkZWWTJub016QWduVTNBeWJWOWVhRUVMUmZMcnBBWHJiVVZPa0FxWTAtY3V1MmdwME5nMjRlel9EeWZUemgtMU9VUEw3S0M2V2s?oc=5",
       "published_at": "2026-11-23T07:41:03+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -917,7 +1071,7 @@
       "source": "Serrari Group",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTXNOdjdZTENWT1A5UUt5Nk5mUGx0OGxBNGtXYUE5dVBsdkY2UGdUV1NqTTRDejFpZHF4amptYmg5RjRCd2ZqSFFuQnVyN0VqcHhZMnFDS05GXzB2aXVwMlc0aGJjZnFJZm9veFRqekYxWWRrLUFWdFBaSHR0cVVQMFVNeWU?oc=5",
       "published_at": "2026-11-23T07:31:25+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -939,7 +1093,7 @@
       "source": "Nikkei Asia",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTV94RHdXWTQ4RWdWR2Vsakw0b05PZVByRDU1dWt4RGRmZnRIMXZLaWt0dmlyY3Q0S1k0UkNWdl8yZHlReFVjQ0hoNWROZUFEVkNBNDVRMkFIcmRoS2xMbUZPUVJCamRqazhMSVpTeW5Oc010cTFsXzJkZnZ5c3h6MDZhRGpBSHJPalBhd0QwSXBTaUpHVDgwTXp6U0dvT05HXzc2NUx5V24?oc=5",
       "published_at": "2026-11-23T02:40:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Índia"
       ],
@@ -961,7 +1115,7 @@
       "source": "SRN News",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNd0xPbVJWQVc0RVYwczNuWFptcXFUMGFxUWMzMDFnSzdvYnFhUDF4U2lXVWU2cUtKVGMxV3NOLXdLTzBYMGVqdEVqVjFPTlE0VW4wdFY5YVJvWEczd19kbGRLUDU5NVlINy1LWXpMMDFscXljcGkzZnl5WGpGamZXLUlpckp5MUNr?oc=5",
       "published_at": "2026-11-23T00:47:09+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -983,7 +1137,7 @@
       "source": "BLiTZ - Fears None But God",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPVE1ET29RS1BmdlVoSFNBaUZjNTJWdDZTN3RJY215WjFuOUpRNDh2VENGNEpOc2lqMVRCVFRPLWlnaTIwNUxYQkVLR25PREVtV3RoMHFINnByUS11M21zYlJ4TEh2QkZBMkloeEpUSzRMVWl5eUVMMGkyYWxLbUpUZkNqR3FCMnpTM3lHT1FJZDhKOHZDc3ZUcU5IWjB6YVVnanBhaUFrMmNsRHJfY1lPUU9Oa1FZUDNPSXdhSVRPSURoQXA4YWcw?oc=5",
       "published_at": "2026-11-22T18:23:50+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1005,7 +1159,7 @@
       "source": "The Economic Times",
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPVmd2bERlMnc3YTZzc3c3Q0RDRGZ0WG1NVzdNSGc5Z253WXNXZlN2UDRYdTMtM2ZwaE9lVHJncEtldVpzbDJmc2dFWC1RNlk3cWZXV3VwNldrQ29oZ1lrV3JWbk1LQlB1V3JyaEFEd0dlbkRMcTVMZkI1VVB2bVRaMDQ5Q1MtaXFpUjE3YTF6Qm5KbVF6RE5xaGkwUzl5N3UyR2d1QUF0bkUzdVhKYnc0aUpBdjItS0swZHRjX29SUG1VVEswbDlsX0dyemw5dl81RjVIOUZveENfMmpuQXNuamQtaUptbjAyRGFqMzNR0gHzAUFVX3lxTE0xcXRja0wzVGphX2xRSkVSTmkzaVVfV1VNaTJWR2hyQ19jWmh6dUQ5RG43bVJmeXJOS25PbS1YS1NDcDgwTTQzMHVCWEZ1cGxRSnh4cE5sNnVhOW03anhFNUpSTnhiNjZYNHA5OVNWVjloZWIxeWxhT1lYbTJ3OXJJUGpBOWtQbnRHX1paRjRRdGFxVFFxYWlBQWN3cEZzQmJoS2NIWW9rUWl2ZjFEel85bmlZSEQ1Ni1rbkhlRVpHcHlIZXJ0RHdrN0YyZU9NaW05VlloTXNTa3hLUC05MWNKZmxyVl9sZGJaQ0dFV0xuSkRBOA?oc=5",
       "published_at": "2026-11-22T11:00:27+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1029,7 +1183,7 @@
       "source": "CASRAI",
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5yRVFRZzltT2xGRjdwSThnNTFZNXdCaXd1Y1FNUHhfNDJNLUF1MkFPYmRPQ1hUeTZlTHpXQm9vcVhyRzA5VFpUcmlCYlJmT0FqVGlTS3RodlVvbmZaZEVWNFFtZ0lCdw?oc=5",
       "published_at": "2026-11-22T06:51:42+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1053,7 +1207,7 @@
       "source": "RuralVoice",
       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTHdIakhYQkhIRFllS051aEtZbjhqUmp2U3did3FDdzZQSXJIQm9ZcmkxWVVaS2VhSzY4RDVQUHhnaHBydElGbmpSd2lJWUluUHNUWEN5QkVZTm5tOVV5djZHM3pXT0F1YTNWeVd0ZXUyV0xPVTU4WGtDMEhNZGpzVlpGSWpEUjB3X2hUa1FnV2J6Vjh5Qlo1V0RGNG9RWXlqZUFVUEJTdmFOZlhwT2lhODRxT3QzZC1JamNvakExdVdMYzFQNnVublIxcVR2RjhwQTAxcHA1cVYyUWdXakNTNVozRG9fOHVtWUHSAeoBQVVfeXFMTUx3SGpIWEJISERZZUtOdWhLWW44alJqdlN3YndxQ3c2UElySEJvWXJpMVlVWktlYUs2OEQ1UFB4Z2hwcnRJRm5qUndpSVlJblBzVFhDeUJFWU5ubTlVeXY2RzN6V09BdWEzVnlXdGV1MldMT1U1OFhrQzBITWRqc1ZaRklqRFIwd19oVGtRZ1dielY4eUJaNVdERjRvUVl5amVBVVBCU3ZhTmZYcE9pYTg0cU90M2QtSWpjb2pBMXVXTGMxUDZ1bm5SMXFUdkY4cEEwMXBwNXFWMlFnV2pDUzVaM0RvXzh1bVlB?oc=5",
       "published_at": "2026-11-21T08:57:26+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Índia",
         "Estados Unidos"
@@ -1076,51 +1230,7 @@
       "source": "The Dark Side Of The Boom",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPeDR3T0hoQ2NyYzlOQjZtUmUxcWlTSmdCbWgzZG1MTkFyUkNzaFo2Tkk4UlFYQTNJNXJib09iMnY4QjQ1MEZMc3djQTh6cXN2dzFxUUo3cXpvVDZadi03WFNNYXJsbmRQZlpXSWNsT2hrZVFCMGVkVThHRTRpWHk1TEJfbDZRclRI?oc=5",
       "published_at": "2026-11-21T08:01:47+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "911145c00b6a54c066",
-      "title_original": "Suez Canal - Trade, Shipping, Economy - Britannica",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "Britannica",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9lSGdiU0MwcU9DVmFJdDdoX2w2aW41LVlnakhISU9WNWtobElKVXF4ZkEtYWhDSXhfZzZBYlRWZThtQVFqTDBHcFlUSnFoTXdhMzVrdjRDZTJaQTdmVjg1V1lkeTl6QQ?oc=5",
-      "published_at": "2026-11-21T08:00:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Logística",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "a573211cc0089287df",
-      "title_original": "Official exchange rates on selected date | Bank of Russia - Центральный Банк России",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "Центральный Банк России",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5YcldQcEpOMEd0OGVlTzFTZnlKM2lYZ1JxQ2FvLUVUMDI2WnQ0bnk2SzlEV01pb2RKNW40WVJTTzNUTTdDeFJmSDFJN3pnZE5tS3QtakRR?oc=5",
-      "published_at": "2026-11-21T08:00:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1142,7 +1252,7 @@
       "source": "CMB News",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQmZhRXJkaEVfYjBHWFBFMFpwR3NiQ0JNa3ZPeWhNeEstUWdjSWpwbXBIbFdSN0JsMUQ5YldzcTJURmVrelk2Q01obGJuZng0RDJ6aEhva2pDV19TUDliRFhjZHdPWjZXZlpnUkNNOVhaczg5M3B2SS1IbkQ1NmNKeVhaOUdVS0JMYTZ5ag?oc=5",
       "published_at": "2026-11-21T07:29:26+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1164,7 +1274,7 @@
       "source": "Gulf News",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQT3hoVXl4WEdjY0NLX3dhYlVBMGlnTVEyWTQ4eTBCLV9yYU1BZWpBNkNEQlZNeDFRcUVoNmxKcFhiZVBKLWVrQzBoM1J3Q2tpQV96MzkzRmxfWTVvTmxmMXlTSGYwTGhqNFB0WTJiVTVxcWw4Snk3UkRyakRiV1R6NF9UNW1SeFNsenF5cVM5alVEVlI4ZnpTRDVnQnJwX2pEbHMtcTNxVnk5QdIBugFBVV95cUxQUnJyZXcyMjBiaHNVaFlIU3hGaVl4U21fZHdhd3RGRnRrazZXMVYwemxnVU9SSkxUMTJNRTIxRF9ZRlR4cGtYUGZEMTRwZENVbm9pek1nZmFfNk1WeHZzX0JqYm5UTlNFUnBYQU9FYURSVllRYXhCbnl0WElOdlQ5RnVOY2xaejNKNEpGQjlIaUVCRXZ5bmI2aDBfZTBEM2gwNjdPbnhiOGEtM3R6RE9URzZuNkNEeEFQOGc?oc=5",
       "published_at": "2026-11-21T06:26:22+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1179,58 +1289,14 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "5c20f5c0a161b35fd7",
-      "title_original": "Building Resilient Supply Chains in an Era of Global Trade and Geopolitical Disruptions - India Shipping News",
+      "id": "01fe49c5cf56282c2f",
+      "title_original": "Beyond the sea lanes: How Africa is diversifying its global trade connections - Logistics Update Africa",
       "title_pt": null,
       "summary_pt": null,
-      "source": "India Shipping News",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMWk2QWV6OF9YR3htUWRiX2xBY3RTd21GVFhZWlhRR2QwQXRMVjBVdHdoMXJsNWZEbEcyU2t5WE1MVXd1b2hZZnJBQmRLQlNlV2YzM3NDMDRxSHkzMDNWV2RNVXp5NGdVdndFcm5SZHlhamRkbjhOUzBCeUdIc2lyMDU0OVBUWWFoQ0VIS2Z6eGZUeDJtTlkyZDBYMVI3MXNhRTdqakxFMEQ3TE81YTJCam5zTFdnRnkzZmFyTnl5d3NOZ3dOTWE4SlZqTQ?oc=5",
-      "published_at": "2026-11-21T03:13:40+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Índia"
-      ],
-      "category": "Logística",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "3ae07e98378c15a2b8",
-      "title_original": "Bypass the Strait of Hormuz? Why That’s Not So Easy - EnergyNow.com",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "EnergyNow.com",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSHhsUHMtRFR6c2FKbExXT2dhTTdxbzlyeTF1dUVucjdtemlRdnk2V1JIbHpuallkdS1fa3pJUWxmWm95YVZ0ZGZaQmlvdndJMmJuWENOYTJPU3hmaTZpUHZON3FZNG80RlFwb1EzNVVXQzZZTWNKQzEyTHhZYTR1Sk13NGFUTFE?oc=5",
-      "published_at": "2026-11-20T21:44:24+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Logística",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "335104682772e913b8",
-      "title_original": "Houthis Order Ships to Leave Saudi Red Sea Ports After Hodeidah Airstrikes - gCaptain",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "gCaptain",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPN2w2QzVydHJHdnNxZGRUbUctWUg3NHluMkFHZWdPMkhoTXhjbms4Y1dkMTUtMm5oYnJDOXpZb21MaGZPUXhadWJlZWhHNmNpRkJUNTFZLUx4UUJQYkp0ZjVzQUFKN1ZCb0IzZWU3RnRsdXVGdHFKdFBoM1hsLUk0eWU0QTlCOHc3TFU3Y3JHTW1QSC1VbG5NQzVJdjQ?oc=5",
-      "published_at": "2026-11-20T17:19:31+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "source": "Logistics Update Africa",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQQWs2ZlR2VkljeFdyRHBlOWtLc01TeWlsYV9pNl9nSWlCemRNdk9ONUlmcnNhd1F5TUVjRjZQMzNJLUpFYXhDVE5HNDBzTmF0SG1kYXRPRkJLV0kyemUtUFdrRW0zRXEzalBCQmlzeFdSQmw3VFVMbFFSUFVMQ0IwTGhXcGxOZ0ZyNkszd0lMMmVuUlZ0UzZMZUN1cGNkbzJIR1Vmd1pGWWNRM3JhdHU1Zk5Kb1VjNjRxbkpuSnQzWVp6V1p2QmJMLQ?oc=5",
+      "published_at": "2026-11-20T16:50:28+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1252,7 +1318,7 @@
       "source": "Kitco",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbTEtOE85bklMWGFXUktXS24yal9EYWNmaHZMLUJ4YnEzTlB4TVZ3TnhoQlhFUnBrX0RjLXlCYmVRSGlKMWJYOGdvcG1RalhiQTNuczdRWlVNWklSSGFEelZyLWlYTjJTMFpDXy1ocldibDBXbXoxeDVLN1NNNTE1b1NyTDVJY2J6RFhDOVNsR0pucTloZjBvcWxwdmRDVlBiWWdHZlkwck9lazlnVWtLSTFsbVhWRG9heVprZmZR?oc=5",
       "published_at": "2026-11-20T14:39:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1274,73 +1340,7 @@
       "source": "ColombiaOne.com",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ydERTdUNUU2dtMnlWSmw5dGpLU05kZGE0WlVubjJaSEVfbXBXandia1BGUTlmc2J4R1o0N21ackhrbXNoTEFrUVFwNUJsbG5vbHN6d280SEo0NFdvVUFqMTQ3VEVITzRQd3JOZGJsSURaMTg?oc=5",
       "published_at": "2026-11-20T14:31:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "54840633ee75ded17d",
-      "title_original": "Indian Rupee climbs to new seven-month high against US Dollar - www.tmgm.com",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQnJNX0VfM3lMNXJsc3JvNU1WdGd2SmhJZkthbGpfZWV0Z09kV0F1dXo1NDUzVUpzVW0zd1hsSTUyYUpqZFRXU1NKeG1xWDItMW5paXVtYVV5al9pSWJfSDFIb2k3VlBiVnNLUXVsWHhiU3E5b0N0dnRCWk1YMTdwSXAzN0tPMUFhMUw4X1VWaUhnN01IQWVmcUZkdGN0T1lkUkJJVGpJMUxQWnpsR2NkQVFtQkJlNGV3aEFCTWtxSG9YU2JYREE?oc=5",
-      "published_at": "2026-11-20T10:09:46+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Índia"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "35e7c79af7b441fd17",
-      "title_original": "Far more than transhipment capability - Logistics Middle East",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "Logistics Middle East",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLWxnVTlONzlNY0VvS1FnMURXRWllcElYcnlua2lkN3oyb296d2h3TmlIaFBQa1VBdDB0SjNPYTMwU2ljN0pOQURrTk5PQ01jTlV4b21kTDhtUFlCSG9HS0hNeXlTYkFXYlVsdGxmS2ZuTmZMLXJGdEVkdFFhTzVnR2hETTduemxqc2otTg?oc=5",
-      "published_at": "2026-11-20T10:02:55+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Logística",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "6d1e75de68e91f4e27",
-      "title_original": "South Africa's Rand Poised for Worst Week Since March as Carry Appeal Fades - Bloomberg.com",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdXNPeWdWMlBJeXdZTW9BVVUyN242cjhkem8yZm5pTWRLQmtoa3UxMXRkMjlBUDlfVE1lLXl4WTl0NW9leno3TFFPUzU0WEhxVEVYcXBIWU01Ym5kUWNvRXVZN0l5RV9YbjRwaURPdEZPelJ2UjVJem01QWZuTFFlYVEtd2t6OTNhSUt0UFN3S1lWR0gwZU8xUkZiVTlmeHdwb1l6T2FWRndncmJRcnlfdQ?oc=5",
-      "published_at": "2026-11-20T09:31:41+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1362,7 +1362,7 @@
       "source": "Newswav",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVG9vQlNQaDZ1c0NkZEJxakZXOFgxZGhXN3dNRUV3SkJfdzMtdEZ3RVR4amZYNTFETEFUbDZpcU8zQ1ZlRENvZDk4aTZqNHNEZHRXeVFfbmdUSlptUmYtOEhWYjFPYUc1QUhWNTVBcHBoakJPdmlLdDFtUEtweUZvSW1DWTRsa3lfSGZMaU5mTk5vZFJPWE9OWWRBbjZhVHRVUWdwZDFMMHdZNThvY19aaC1DRFFXdw?oc=5",
       "published_at": "2026-11-20T09:19:03+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Malásia"
       ],
@@ -1386,7 +1386,7 @@
       "source": "ing think",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYW1uTUtvc3hXXzYyN3JUUGtBeFBfdG1jMGdSVWY4bzV2NGhXUDFvRUs3VjJzTmg5MHhqb1hWQU0xR2xVdVRFYjdrbklGcG14VnpLZmlBNElUbk5aSXZ2VC1MRjdkdWVHQW4xQ2dZMVB5V2pFVDBzQnNmMFB0S18wcw?oc=5",
       "published_at": "2026-11-20T08:22:54+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1401,43 +1401,19 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "d7aad689f400fafbc7",
-      "title_original": "Why BI-Rate Could Climb Above 6% in 2027 - Tempo.co English",
+      "id": "37159fc07bd2848f9f",
+      "title_original": "Red Sea - Trade, Shipping, Fisheries - Britannica",
       "title_pt": null,
       "summary_pt": null,
-      "source": "Tempo.co English",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE01R3g2OW56SnFkX3ZLX3ZJNjhDVEFlZUNCbFlTT0hHQmpscU01bTVsLWxHX1p1MWJmZ2x5WWpxQlZOTmVtSlFuaHhYOHZ4OC1CZ0ptXzd3dmU4ZkxVZlQ2Y1M1T2RGeWR6ejV0ckxERGliVnNKUlY0Q0JveUg?oc=5",
-      "published_at": "2026-11-20T08:19:21+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "25185ec5fd3000879a",
-      "title_original": "How high by next July? Assessing corn’s ’27 rally prospects - Farm Progress",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "Farm Progress",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8wMVR3UDJBR1lJUmU1b2NGQjlmQ2phY1htUnVYeE01c1BrOU4wcEl2SS1KZDJMYnRxaXB1Vm5iUVZVYjVwdDh4ajVKVzA0dnRtcHFpRFhLeUFzUUNxU1VFd1FSTjdCZ2x3OXRoZzdpT0dmREhkZTZGRw?oc=5",
+      "source": "Britannica",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1HTDF2bUt4ZmpQTk90UE11eXdybkswWUNCVjlBcUhzcXo5NWw4MC1DSEhFa2lwRXV6NkFnVlp1c2VJaGlnUnh6WGJpMjk1Zy1EVmUtanVjd3J5T1k1cU5BS3BFZDlsUnJC?oc=5",
       "published_at": "2026-11-20T08:00:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
-      "category": "Soja",
-      "commodities": [
-        "Soja"
-      ],
+      "category": "Logística",
+      "commodities": [],
       "impact": "Baixo",
       "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
       "context_confirmed": null,
@@ -1454,11 +1430,33 @@
       "source": "China Briefing",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQVl9rOHkwQl9VYldidlJVajgtZzY4VE5TQmt6eEQ2czIxaTk5N3Ywd3diVXdCT3dKVmhUNmxMRjJ0UnJKdGE2TUtuNklrdWx4UTVGZG5kY1pvWnNEWUhkdmZ5WkV3R0plREV6aTlGc1JEUHVQeG02VzRsVE82OERteXhsMGNfTEVPMllnN0p3?oc=5",
       "published_at": "2026-11-20T08:00:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "China"
       ],
       "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "d1439bb63497e2bd17",
+      "title_original": "Dollar firmer as hawkish Waller backs aggressive Fed action - Reuters",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOU3BnNkxnajFsX0xFNklvRnJ0OHJtQVR0Zk56aGhVN19YY0Z5aFRjMnVTb1pIakt6cHNXajVNalNrUmVUWWpZWjk1Ukh6T0RhY2ZTX2dLRTdpWTNlVU1vY1hGUl84SlIwcUNQcW51NzlzZDFoNHNiT3hiSHpfSl9ENUhtWWExWWxkT2ZYUUJ4WHdWWjVSOVpkQzZycmpaOXhnbm96Q0RWMmJLYnlkTDFJRFVWbGhqWXkydEE?oc=5",
+      "published_at": "2026-11-20T01:38:44+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Câmbio",
       "commodities": [],
       "impact": "Baixo",
       "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
@@ -1476,7 +1474,7 @@
       "source": "FXStreet",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNa1JLQUNuY2Z3d2ZhT0tzN29hbnpvOVFrSldTLUhkc1llM3NiV1JoTFNKeDdCQ3pJSjBqNTdWem1oaUlWdnp4ZDVybTNiVnlERXcxa2pMVUl4Q1l1M1hMWXpBYVFSaE1ZN0ZVVzY4QzJKQldVYzIyU2pCd1dzS2R3S2htWUFtZG1vRnhHQ01hT3RHZmZTYVlWZWFwa3NGZTEydGthSmpMcm5UbGdndFp4ejBVS3pqZEs4Y3FrQw?oc=5",
       "published_at": "2026-11-20T00:45:21+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1493,28 +1491,6 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "0ce9788ef44116a9be",
-      "title_original": "Latin American Currencies Slide on Dollar Strength - Briefs Finance",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "Briefs Finance",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxORzVwWnhIUlpEWVBSZ2tCWHJiYWVRbVB6NDFoX0JuZm1DbVVVSHFvWFRYbzVYS2p4OEpRODc0bW1MeFFTYnBBdEVOd2xSM1hTR0ZwTDBhNWs0SElRc203VlJXN0VBVWRVcVZnanNnbDUyQ2ZzX2x0R0JyWEpJMnhGX2JldGJJaHdOanQ2TDVNNnQ?oc=5",
-      "published_at": "2026-11-19T22:58:52+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
       "id": "f4785b8993f6ba9e4f",
       "title_original": "Dollar Jumps 1.10% to Close at 5.93 Reais Despite Brazil Central Bank's US$1 Billion Auction - BigGo Finance",
       "title_pt": null,
@@ -1522,7 +1498,7 @@
       "source": "BigGo Finance",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9SYUF6NGo2S3k5SFZlQnd3ck12NVB3Smg1ZGtOQ210Qm9oOWMzMnBFVWZLV2ZaQWRNRV93d3dVVFUxOWcyLXc3SlcxRXFMS2o3Nk1ncFBvalZZbUlvM2g2Tk9HYl9DZVVTWXlfa05wanBWNXdXX2c?oc=5",
       "published_at": "2026-11-19T22:05:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Brasil"
       ],
@@ -1544,58 +1520,12 @@
       "source": "Bloomberg.com",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNDJvMkt1UU1qcW1VRFB3alZXWmw0bnBBZVBSd2VRUm9TVHZzb1BpNnd3UFdLY2gzZkVPcEg4cUhTa01JcmJDUnRXeG93MXhuQjl0b05TZjNUak0zZVFNdlVYOTgydWpSUWpuRGFnOG5OY1B0eGxoY21URzZWWFpxTEx0RTJ5VFNvVXk5R1AzTURheTQ4aUFELTh6XzBIM1VLY1FjNDR3UFBjb1AxLWRnbTZ3?oc=5",
       "published_at": "2026-11-19T21:42:38+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
       "category": "Câmbio",
       "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "b21a7a9137edfa7e4d",
-      "title_original": "Türkiye’s role as a manufacturing and logistics base for Gulf markets - Consultancy-me.com",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "Consultancy-me.com",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPSmYzV0JNUldUSDNYeFdxUG5fZFhadWVpTE5rVnVINHZVSU9jRTJNSk5Zc3Q1UUJON1FoeHQwanRJc2ZNLUxlZ2dFTGxTWTNsZVpORzM3cmlPa3d4OEQ1WWVldFMwZEs2QmN0TmpiR1lsRTFTNG1vc1pRNnNFMERacERMTURkamx6S3VVdUtzZWdkMjhJRldHNHlBSnVUa1JpU2tCeDlNTDFHbUZmN2NzUlpHOVbSAbQBQVVfeXFMT0pmM1dCTVJXVEgzWHhXcVBuX2RYWnVlaUxOa1Z1SDR2VUlPY0UyTUpOWXN0NVFCTjdRaHh0MGp0SXNmTS1MZWdnRUxsU1kzbGVaTkczN3JpT2t3eDhENVllZXRTMGRLNkJjdE5qYkdZbEUxUzRtb3NaUTZzRTBEWnBETE1EZGpsekt1VXVLc2VnZDI4SUZXRzR5QUp1VGtSaVNrQng5TUwxR21GZjdjc1JaRzlW?oc=5",
-      "published_at": "2026-11-19T17:04:20+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Logística",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "63f8ab886043e4526b",
-      "title_original": "Venezuelan Crude Moves North Faster Than Production Can Catch Up - IndraStra Global",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "IndraStra Global",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBYYXFZNWtNLWg3QnhweXgzcDYzNnRUcE9tanMwcWpOUmRCR1BWejdiTjRmekJqVHNfVUl0SXFfTmRQTmxxd0RPejBmOUNEMDhqM1lEV1pfcndyZHFYLW5NTkRoaThteFZHM3BIY0Q2UlR1RzlhcnZoazJhVkZZMzQ?oc=5",
-      "published_at": "2026-11-19T13:12:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Petróleo",
-      "commodities": [
-        "Petróleo"
-      ],
       "impact": "Baixo",
       "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
       "context_confirmed": null,
@@ -1612,7 +1542,7 @@
       "source": "Kalkine",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQS244aUU3Ry1rQXJ3VVFHa2U5RDRvUURyNm95NmQwakwtWnRLcVB1V3JVRFhrbkVlZFUxQmozZUFueS1UejU4ckxHb2lLNER2SUFrQzJjSXJLYncxeE1oU3JSZ2VCU3RUS0dRNjMxZG9QMlBTdE8zWHF1MFJzUEV6d0JrTEJuT0NEamdDazM5c3B5RXpTRkZwa2JGSWlZTXZUXzZGdFFka0dYOW1KMW9icTdNVmx5ejBaR2dEWVppSXdNOVVPci1LdGZDR2d0dTdWbFpz?oc=5",
       "published_at": "2026-11-19T12:37:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Brasil"
       ],
@@ -1634,29 +1564,7 @@
       "source": "Traders Union",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNVWJ2WXR3NEd4a0R4d3NacUpRUlIzWlgwc0NLTlgzT1VZVElnWTdxZWVuTjlMbXd5cmdUUnE4U0ZOd0NhYXFJMU0xVTUxRnc0Y1R0SnE3QVd5VGpqQUM1dE9ycFU1eDVoUEdjSGt2OXJZbTZiTlE0Z3dVMEUtTHZVRngwYWo?oc=5",
       "published_at": "2026-11-19T12:27:21+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "7ed9b0ba346e351bc7",
-      "title_original": "Brazil faces more challenging global backdrop in 2027, UBS says - Valor International",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "Valor International",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZEZGZ1JDT1JFYnRzQXVYRzY1N09zVm5oWVNCOVVpdHdPX1ZsMERNRXB4cTFkWDFZUlNoR0JWMHNDVTg5eHpoZUg4UnJxcUg4a2JuRVh0UWc5ell3cHJLaUc0dkJBQWhTaWVDalctTWFqTmxCelN0amxlZTdxRGxiTnhfLWVubUJXREpESU9DUV9kMF9IaElPWHRTR2ZEY3FWUGx6dllsZWdLTE9GS2ZkTExDYnNHakNvb3lZU0dEUWlwWWphdTBNVUdlZWJnTUpJclZ1Tzdfa9IB1wFBVV95cUxPZEZGZ1JDT1JFYnRzQXVYRzY1N09zVm5oWVNCOVVpdHdPX1ZsMERNRXB4cTFkWDFZUlNoR0JWMHNDVTg5eHpoZUg4UnJxcUg4a2JuRVh0UWc5ell3cHJLaUc0dkJBQWhTaWVDalctTWFqTmxCelN0amxlZTdxRGxiTnhfLWVubUJXREpESU9DUV9kMF9IaElPWHRTR2ZEY3FWUGx6dllsZWdLTE9GS2ZkTExDYnNHakNvb3lZU0dEUWlwWWphdTBNVUdlZWJnTUpJclZ1Tzdfaw?oc=5",
-      "published_at": "2026-11-19T12:05:40+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Brasil"
       ],
@@ -1678,7 +1586,7 @@
       "source": "SupplyChainBrain",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOMnprQVA1ZHVkN3FDa00xTVhXOGctX2wxWTg4N0pqOC00QUc2ZTB3UzktM3N0dFV6VS0tZVJSQ1gxM2ZrOW5mNVFNdGZRTjgxaWE4R0RXc2F5Y3hLQ3RoaE1YYXdrNi1XNnFaSzhSN2Rpem1PMmpWNFo5LUFMU2xfTFR4MU1SLUh4VlZxTjlxUVVJNVdnNDBMMERjSTFZVl9KTzFmRTREOXlTaXo3eGx6MkVEWFR4QUh6QlhlcXNCZWhGcGdTMGpHV092bUdIVzJCUWhXUFNxdFM?oc=5",
       "published_at": "2026-11-19T11:30:51+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1700,7 +1608,7 @@
       "source": "Valor International",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQOUNla2xvTnhJQmIzR3gwLXViR21ScXlSVzRJWkFXY1lIbUx3aFZqNzFGTklncEdDWk4ybll2ckNET01rakNXWGVfSUpDLUduN05tQmNYUTB1NWZ2NUpxczZ2cndXeEVUa0xpdDdycnliNkN5MGhhWUR2RmtuSWdsQVZBcmZfamlOd2doRkVhNV94bnFaVVUwRWxiRW5oc3VkVmtDX3JxREFvVnN2N19LS2ljU185YmtGT1I40gHKAUFVX3lxTE5DNVY3Yk8tTEt6d1hzSkJfaFZIMThKTndHRFZOZlo4aHdZUm8yQk5OY3BqVzFtZ1lsejZYRzhvVk9rTm8yQzdXWGhCRmh1YU1IeDkyRG5iNTJIYldXMDE5alJESndieUlJN284VEE3UkppaU0yUHJ2NTZHc0ZHT0lldEdmdFNqaTBUNDRjWVNPU09HaDF4MlpMcUxkZkd3ZDFleURqT29XdnNyNlY1amtYNVFtRGlIdkxZOVE1WXdfcFBTQk4tcmhlMVE?oc=5",
       "published_at": "2026-11-19T11:25:56+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
@@ -1722,7 +1630,7 @@
       "source": "The Economic Times",
       "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxONDBucWxiMHJOWjNUaWh5clRUY1loR0FxS3o5dzRVLUZPZGFsVkUwajRnZWtWaV9LRnNwZEtybXQyb2FoRnc1LUZwdkVzdmZTTDE1eXFuMl9tVXhIWlJWeWZKUkxxTXVUNHF4aGg3ME9xajhzUXlYUjZnMmU4WC0zM0pOSWlfc2xuTGRPLTA2V3BVcUpfMU1jNjRtLW44d3Q3dFJyeDJaSU5Wczc5R3ZRM3NmZ1lWSVdvNWhUQzU5VTNoajdnNVBhUkg3d25FTlFHMUl0aUdtQjdJUFhZTEJ4NVJqaGZxd0ZUdWdGRlBKSkc5V20zbzZZOHpMcHBMSUZiaFRINzAyNzhJRlHSAZACQVVfeXFMUGxtUnRWcEJXUG1zYnBmaGZ6b01BbDcxQ3pFYnBqazZzb0F3U2NNeVBCdUtGNGFHSFZpeEJVc0h5NzNtR3V5SkNDN2tnQXNZWTFmWTRvUF9sVGZ1SkNYLUc5SWp0RGUwNXFXa3UwTk5rOGVzWXV2VDBwdkpUOFBRRGwtT1JaRzFpY3RiWFFUcEFJdlRPVjZGY3EwZFVXc0ZUYTMyaDZFcjF0R1ZLbVRIX2YxS3RBUy1oMGxlVUM4eUpjckIwbVYwOU1Xa1haR1drTUc3S1RjZHlENHMxMEdoN2NzeU13VVNSQWNzcUNlUktXclhYLU1Ra1lBYWFvbTQ2TzBMRFQwV01QOWpoLURMeFA?oc=5",
       "published_at": "2026-11-19T10:23:30+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Índia"
       ],
@@ -1744,33 +1652,11 @@
       "source": "BigGo Finance",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1Dd2RsZUFyM1RsNjdZb1Y0NnBJMXlSMEFuX3FBcnJGLV91bWlLbDRVYm9OdUZDUkdIV2dORFFNdkI5VlQ5X0xyM2hEODVscHgzWkNqTlJzcUdtTE5tbmFpTlJjekQtbG5qeEhyZWdfM0hWOXBvNWc?oc=5",
       "published_at": "2026-11-19T08:35:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
       "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)"
-    },
-    {
-      "id": "14a834cc91f3877991",
-      "title_original": "Singapore boosts maritime, aviation hub role as cargo flows shift and supply chain risks rise - Singapore Economic Development Board (EDB)",
-      "title_pt": null,
-      "summary_pt": null,
-      "source": "Singapore Economic Development Board (EDB)",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNbWVEMEpRaGxTclgzNC1ibkxIOHZYX2tuOGgyM2tSNFppd3gtd20wRDFzd3g4amFoWS1qTHRkV1FaUVI0dXRXQkNDRXIySGZDc05uSllEM0pYVjgxM2F0U0hyRDJUWEtaNFp3eDh0M0N4c2Yyel9oVlJvcklKdEpCMDhVakFMYmRQRDhNMS1vSmNrMGlUNzRmSnd3ZEV2WDA4U3R4a3pGTklRaVRvYnREYkNYLXI3aXFsZzdnRW9vbWFEaUZiVHJBaW5xMlJoeGhHbmc?oc=5",
-      "published_at": "2026-11-19T08:00:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Logística",
       "commodities": [],
       "impact": "Baixo",
       "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
@@ -1788,7 +1674,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE44WHljWkxwQzdxMnJNbzhkS0JMcXRlX0xDM1NSa0JieklIRl9zVUh1ZGw4ZVNCU05YSWR1dnFGb2VMV3ZTb0FJRU93WE5zMGU1?oc=5",
       "published_at": "2026-11-19T06:29:04+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Malásia"
       ],
@@ -1805,19 +1691,137 @@
       "source_type": "Google News RSS (agregador)"
     },
     {
-      "id": "8fc160acfc9422437e",
-      "title_original": "Smaller Tankers Join Hormuz Shuttle Trade to Keep Oil Flowing - Bloomberg.com",
+      "id": "71c537c9f522152600",
+      "title_original": "The $32.7 trillion trade club India isn't in, but can't ignore - The Economic Times",
       "title_pt": null,
       "summary_pt": null,
-      "source": "Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQTd6VTZPeTNUYS0zWGczS2hLNHotUVh0YlFXUTRpX0dkelBvekdyRnJydEFRYU5GWlNVbDFJRkhLUGp3eVBpZ0RnOXk5cmdmbUhJSExkb2gzMjhwRkFIczZnNWprRGZ5bXktaGZfMVZqZWUzT0F6WkdIdHltRE5lY01hN1h6em9pYlNkR2tnR2w0U0hzUEJZUzd5ZVRsdG5pWWNxNndvQkhlY1dZRzBpWVQ5SFE?oc=5",
-      "published_at": "2026-11-19T05:15:00+00:00",
-      "collected_at": "2026-11-23T13:12:37.618287+00:00",
+      "source": "The Economic Times",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOeU0yVFhZNUpqM0pqNkxQRXFXYUR2alMwbkdzQ0hCVFE4OEFCY2V5RHFCMEVDaHFQWWMwRUhGakZZSjNwSDN4NVdXQUhYTzQ4RkZpeWg1TUtCTG1qVFMyMG9hc3dCUkU2dnZiNHlTSnloMWRSY3hicklKZnVGVkplZlRXeEV4cjFNcVVtQ0ZTWm9VLWdxd2taalRqaHp2eEgxNG1KMkdISUJES3N2WlVmZUxyQ3Mza2xmSjJ0aXNldUxLRWpLZnFvcHdYNVBzR3ZVaE9YZ2F1OHJLU1ZjcGZIczVVVDFXaE9DNmZDQTRlOUNjQXlpOHVN0gH8AUFVX3lxTFBhYldtOXQwZ1hlWWI1aWdFTlh0YTZOSzZFNEw4RWpaOFFQTVFsbHB2VktsSjhPMzhyY0FZQ1R1UzRzR29TXzUxNjhGV3NEcTFBNG9qZWExWHlSU3dwRFo0MmZqV0x3cHdnSXVad0p6MG81SU84bGg5c25hT0RVeUtaWkRqdWE2R1dxcmNhVkdnbXA0VzhLYWNYQUJMRzU0VmdIcElPUHVESDJfN3RSQy1KSkVlMkhoRlpXcl9PQ0xBVi0tVWstZ01seEhKUUZ4b09sZGx1aTdQVVJUTHJCc1pLRFAwUjY1cmpETGF4cUhyLVQzMElSWjBNTHBWSA?oc=5",
+      "published_at": "2026-11-19T04:45:46+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Índia"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "2bc57db050bc5d9d2a",
+      "title_original": "Partnerships key to raising national palm oil productivity: Ministry - ANTARA News",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "ANTARA News",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMzU2a3E5NEZIYUNuOGxpYUZNWVVraWkyRXBVVjFyZncxR1AzTHBHaUZkd2swV0FQTVJNQUhSTi1zeENfUkw5SHlqVk9MLTFCWW1FZjVJSEhieFNZaGt5SExOOHgtT0Znak82MjVlc3VQcWVJaTBKZTdoUDJhano2Y1MtSWh4UkFsRk42dzZsb1VGOTQxeHQ5N2N5ZG92LU0zMkJqNkJQakbSAa4BQVVfeXFMTjdWMktyMmt1LTFNRW5vbTZpRy11bVpSS0xLZEt5akpRMklDSWpPY0NRLTBCdVNIVHo4RFJackExcGJJbkhsdVdyajB5clVwZFgyQU1wNXBBblc5VmVSeGxZTnJTYVFNMjNrRzFwN1QtcXluZTl3R0FMQ0xaRWtkTy1yQTZaN1Myd2VOX2lHOEhVUW4xaG81S3FaU01IRTZ0S3dWT0RqWTF3RUxzRVpn?oc=5",
+      "published_at": "2026-11-19T03:02:34+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
       "regions": [
         "Global"
       ],
-      "category": "Logística",
+      "category": "Biodiesel",
       "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "4552ee1c2ce385853b",
+      "title_original": "Some Middle East Oil Output Will Stay Shut Through Next Year, US EIA Says - EnergyNow.com",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "EnergyNow.com",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYjR0bjhPb1hsc2IzTGZEcDJfUnpsWmpRUGlQajJ4TFoxNXJLelJmNUw3ZHZmWTFOSTRmM3NOREowQmxuMmRDSXh0M2Q2NDdTSm8zcXdjYzRtOExsdnZYbnBRTE9lQVpPcGZ4WUxnb1hsZFlvQkJFbU1kZlBZMzlGRkRUVEYza2VQZVZsYURFUzFhU0VoOEs5dXRRTWZKYzlnV1MtSTVn?oc=5",
+      "published_at": "2026-11-18T22:48:27+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Petróleo",
+      "commodities": [
+        "Petróleo"
+      ],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "92bfc459a52dba0f15",
+      "title_original": "Oil market anticipates crude oil surplus in 2027 due to increased supply - Inspenet",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "Inspenet",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9URkZHVGxKeVVmajVpRnMtQ3UxY09fdG12dHNPUzdOWFpaLWQ3bTVjbWhJTDZIaWNNMEtSTnNWWEVOekNMVmxYLXpTeTZzLXNpTlJGSWdISnJBcUtUVFMwZHdiU0VNZkNqUkZ4cjBwc3hPM2ZHTjBhZE9pcw?oc=5",
+      "published_at": "2026-11-18T19:03:10+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Petróleo",
+      "commodities": [
+        "Petróleo"
+      ],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "3bd0396ff8dd655f44",
+      "title_original": "WTI Slides to $84.77, Brent $92.53 on 5.28M-Barrel API Build; Hormuz Attacks Keep $88.56 and $95.84 Alive - TradingNEWS",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "TradingNEWS",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMW1PSjhuQTlCNWg4TDh5cDljLUt4U25nU0FkeVZLUDBYMGYzWWpaajBxNFgxTXJKejJuNXJ0TW01TFpsdy03alR4eGZfN3UxYnRtb2VlcHVleV8tblpfaUNKaFdwaG5WR21NVWprSmRxRmRJeTJXRW1adVpqcTB6aVdVYXluRmV0U1B1V3Q1MExjZFVjR1hiMjFuSTJrSy1VbVNzLTViUHJMdFJTdnhLRHN0ZVZDYk1oTXRfUm1SM0xlZw?oc=5",
+      "published_at": "2026-11-18T18:48:26+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Petróleo",
+      "commodities": [
+        "Petróleo"
+      ],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
+    },
+    {
+      "id": "dfc5ea78d1e3c054f8",
+      "title_original": "WTI drifts lower on surplus fears; holds above mid-$83.00s amid Mideast jitters - www.tmgm.com",
+      "title_pt": null,
+      "summary_pt": null,
+      "source": "www.tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxORjNDMFVuV3BjazM1S2FUTnZpU2RwLWszaXIyOUpId01ZY19Ka0p1b3NONUFhLV9tNTlUWVVhY3BlOTdYNGxYZm01d21XUWhONEt3ZUxwYTZ0US1MeUxEMDEyZVItaWZpTk9DZkd5ekpJRlNTQlVYX0Z4TjBmSGJEMmpaRzczdnpoTDhRdWI0azRMTkhYaGdxUzg1dWNrWUJaNXZQYUFrcUxnN1pKdzltZ2ViTFBHcWJsbDZIS0FfYi1IME0yNWR5S09uTEozUFBORVNTaGVUMm1Hdw?oc=5",
+      "published_at": "2026-11-18T16:33:29+00:00",
+      "collected_at": "2026-11-24T02:20:48.144785+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Petróleo",
+      "commodities": [
+        "Petróleo"
+      ],
       "impact": "Baixo",
       "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
       "context_confirmed": null,
