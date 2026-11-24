@@ -1,4 +1,4 @@
-name: Collect EODHD markets
+name: Collect global markets
 on:
   workflow_dispatch:
 permissions:
@@ -13,11 +13,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Collect market data
         env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          FMP_PUBLIC_DISPLAY_AUTHORIZED: ${{ vars.FMP_PUBLIC_DISPLAY_AUTHORIZED }}
           EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
           EODHD_PUBLIC_DISPLAY_AUTHORIZED: ${{ vars.EODHD_PUBLIC_DISPLAY_AUTHORIZED }}
         run: python scripts/collect_eodhd_markets.py
       - name: Publish only when licensed
-        if: vars.EODHD_PUBLIC_DISPLAY_AUTHORIZED == 'true'
+        if: vars.EODHD_PUBLIC_DISPLAY_AUTHORIZED == 'true' || vars.FMP_PUBLIC_DISPLAY_AUTHORIZED == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
