@@ -28,12 +28,16 @@ jobs:
               hits = []
               for term in terms:
                   params = urllib.parse.urlencode(dict(key=key,q=term,image_type='photo',orientation='horizontal',safesearch='true',per_page=20,min_width=960))
-                  with urllib.request.urlopen('https://pixabay.com/api/?'+params,timeout=30) as response:
+                  print('Consultando Pixabay:', name, term, flush=True)
+                  req = urllib.request.Request('https://pixabay.com/api/?'+params, headers={'User-Agent':'TradingGlobalNews/1.0'})
+                  with urllib.request.urlopen(req,timeout=30) as response:
                       hits = json.load(response).get('hits',[])
                   if hits: break
               if not hits: raise RuntimeError('Sem imagem para '+name)
               hit = hits[0]
-              with urllib.request.urlopen(hit['largeImageURL'],timeout=45) as response:
+              print('Baixando fotografia:', name, flush=True)
+              req = urllib.request.Request(hit['webformatURL'], headers={'User-Agent':'Mozilla/5.0','Accept':'image/jpeg,image/*;q=0.9,*/*;q=0.1'})
+              with urllib.request.urlopen(req,timeout=45) as response:
                   data = response.read()
               if not data.startswith(b'\xff\xd8'): raise RuntimeError('Imagem nao JPEG: '+name)
               (folder/(name+'.jpg')).write_bytes(data)
