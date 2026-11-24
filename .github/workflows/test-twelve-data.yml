@@ -17,6 +17,17 @@ jobs:
           if not key:
               raise SystemExit("Missing TWELVE_DATA_API_KEY")
           candidates = [("Bursa Malaysia","KLCI"),("Indonesia Stock Exchange","JKSE"),("CME Group / CBOT","ES"),("NYSE / Nasdaq","SPX"),("B3","IBOV"),("NSE India","NIFTY"),("Japan Exchange Group","N225"),("Shanghai Stock Exchange","SSEC"),("Euronext","N100")]
+          for term in ["KLCI","Jakarta Composite","S&P 500","Bovespa","Nifty 50","Nikkei 225","Shanghai Composite","Euronext 100","E-mini S&P"]:
+              try:
+                  url = "https://api.twelvedata.com/symbol_search?" + urllib.parse.urlencode({"symbol":term,"apikey":key})
+                  with urllib.request.urlopen(url,timeout=25) as response:
+                      d=json.load(response)
+                  print("SEARCH",term,[(x.get("symbol"),x.get("instrument_name"),x.get("exchange"),x.get("instrument_type")) for x in d.get("data",[])[:8]],"status",d.get("code"))
+              except urllib.error.HTTPError as e:
+                  print("SEARCH",term,"HTTP",e.code)
+              except Exception as e:
+                  print("SEARCH",term,type(e).__name__)
+              time.sleep(10)
           for i,(name,symbol) in enumerate(candidates):
               if i: time.sleep(9)
               try:
@@ -27,6 +38,8 @@ jobs:
                       print(name, symbol, "API rejected candidate; code:", d.get("code","unknown"))
                   else:
                       print(name, symbol, "returned metadata:", d.get("name"), d.get("exchange"), d.get("mic_code"), "price fields present:", bool(d.get("close") and d.get("previous_close")))
+              except urllib.error.HTTPError as e:
+                  print(name, symbol, "HTTP status:", e.code)
               except Exception as e:
                   print(name, symbol, "request failed:", type(e).__name__)
           PY
