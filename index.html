@@ -1063,42 +1063,18 @@ function renderMarketNews(){
  const verifiedLabel=n=>n.verification||"Metadados RSS";
  const original=n=>/^https:\/\//.test(n.url||"")?n.url:null;
  const meta=n=>newsSafe(n.source)+" · "+newsSafe(newsDate(n.published_at))+" (Brasília) · "+newsSafe(verifiedLabel(n));
- /* Biblioteca editorial: fotos temáticas de Unsplash, nunca fotografias documentais das notícias.
-    Fonte/licença: https://unsplash.com/license — imagens externas sujeitas à disponibilidade. */
-
- const news21Photos={
-  palm:["photo-1441974231531-c6227db76b6","photo-1470071459604-3b5ec3a7fe05","photo-1473448912268-2022ce9509d8"],
-  soy:["photo-1500382017468-9049fed747ef","photo-1500937386664-56d1dfef3854","photo-1464226184884-fa280b87c399"],
-  port:["photo-1494412519320-aa613dfb7738","photo-1578575437130-527eed3abbec","photo-1565793298595-6ba897d0b7c"],
-  factory:["photo-1516934024742-b461fba47600","photo-1581091226825-a6a2a5aee158","photo-1487958449943-2429e8be8625"],
-  energy:["photo-1466611653911-95081537e5b7","photo-1473341304170-971dccb5ac1e","photo-1497435334941-8c899ee9e8e9"],
-  finance:["photo-1486406146926-c627a92ad1ab","photo-1611974789855-9c2a0a7236a3","photo-1460925895917-afdab827c52f"]
- };
- const news21Used=new Set();
- const news21Image=(n,i)=>{
-  const title=(n.title_pt||n.title_original||"").toLowerCase(),cat=(n.category||"").toLowerCase();
-  const combined=title+" "+cat;
-  const soy=/soja|soy|corn|milho/.test(combined),palm=/palma|palm|cpo/.test(combined);
-  let type="factory";
-  if(/port|shipping|cargo|vessel|ship|freight|container|terminal|porto|navio|frete|log[ií]stic|export|import/.test(combined))type="port";
-  else if(/biodiesel|biofuel|fuel|renewable|energy|energia|petr[oó]leo/.test(combined))type="energy";
-  else if(/forex|currency|dollar|exchange rate|c[aâ]mbio|financial/.test(combined)&&!soy&&!palm)type="finance";
-  else if(soy)type="soy";
-  else if(palm)type="palm";
-  else if(/harvest|crop|plantation|farm|agricultur|colheita|plantio/.test(combined))type="soy";
-  const pool=[...news21Photos[type],...Object.entries(news21Photos).filter(([k])=>k!==type).flatMap(([,v])=>v)];
-  const photo=pool.find(id=>!news21Used.has(id));
-  if(!photo)return "";
-  news21Used.add(photo);
-  return "https://images.unsplash.com/"+photo+"?auto=format&fit=crop&w="+(i===0?1400:850)+"&q=76";
+ /* Imagens temáticas Pixabay vêm do JSON; nenhuma chave de API é enviada ao navegador. */
+ const news21Image=n=>{
+  const url=n.image&&n.image.url;
+  return typeof url==="string"&&/^https:\/\//.test(url)?url:"";
  };
  const card=(n,i)=>{
-  const link=original(n),context=n.context_confirmed||"O conteúdo integral ainda não foi verificado; a manchete e a fonte são metadados do feed.";
+  const link=original(n),photo=news21Image(n),context=n.context_confirmed||"O conteúdo integral ainda não foi verificado; a manchete e a fonte são metadados do feed.";
   const analysis=n.commercial_analysis||"Sem análise comercial confirmada. Verificar o texto original e os dados oficiais antes de inferir efeitos para a Mundo Novo.";
-  return '<article class="news-card news20-card '+(i===0?'news20-feature':'')+'"><div class="news20-card-art news21-photo"><img src="'+news21Image(n,i)+'" alt="Fotografia temática ilustrativa relacionada à editoria; não documenta o acontecimento" loading="'+(i===0?'eager':'lazy')+'" decoding="async" onerror="this.style.display=\'none\'"><span>IMAGEM TEMÁTICA ILUSTRATIVA · NÃO DOCUMENTAL</span></div><div class="news20-card-body"><div class="news-top"><span class="intel-kicker">'+newsSafe((n.regions||["Global"]).join(", "))+' · '+newsSafe(n.category)+'</span><span class="news-impact">'+newsSafe(n.impact||"Não definido")+' impacto potencial</span></div><h3>'+newsSafe(n.title_pt||n.title_original)+'</h3><div class="news-meta">'+meta(n)+'</div>'+(n.summary_pt?'<p class="intel-summary">'+newsSafe(n.summary_pt)+'</p>':'')+'<details><summary>Fato, contexto e inteligência comercial</summary><p><b>Fato disponível:</b> '+newsSafe(context)+'</p><p><b>Critério editorial:</b> '+newsSafe(n.impact_reason||"Não informado")+'</p><p><b>Leitura comercial:</b> '+newsSafe(analysis)+'</p></details>'+(link?'<a href="'+newsSafe(link)+'" target="_blank" rel="noopener noreferrer">Ler publicação original ↗</a>':'')+'</div></article>';
+  return '<article class="news-card news20-card '+(i===0?'news20-feature':'')+'"><div class="news20-card-art news21-photo">'+(photo?'<img src="'+newsSafe(photo)+'" alt="Imagem temática ilustrativa do Pixabay; não documenta o acontecimento" loading="'+(i===0?'eager':'lazy')+'" decoding="async" onerror="this.style.display=\'none\'">':'')+'<span>IMAGEM TEMÁTICA ILUSTRATIVA · NÃO DOCUMENTAL</span></div><div class="news20-card-body"><div class="news-top"><span class="intel-kicker">'+newsSafe((n.regions||["Global"]).join(", "))+' · '+newsSafe(n.category)+'</span><span class="news-impact">'+newsSafe(n.impact||"Não definido")+' impacto potencial</span></div><h3>'+newsSafe(n.title_pt||n.title_original)+'</h3><div class="news-meta">'+meta(n)+'</div>'+(n.summary_pt?'<p class="intel-summary">'+newsSafe(n.summary_pt)+'</p>':'')+'<details><summary>Fato, contexto e inteligência comercial</summary><p><b>Fato disponível:</b> '+newsSafe(context)+'</p><p><b>Critério editorial:</b> '+newsSafe(n.impact_reason||"Não informado")+'</p><p><b>Leitura comercial:</b> '+newsSafe(analysis)+'</p></details>'+(link?'<a href="'+newsSafe(link)+'" target="_blank" rel="noopener noreferrer">Ler publicação original ↗</a>':'')+'</div></article>';
  };
  if(!recent.length){feed.innerHTML='<div class="placeholder">Nenhuma notícia disponível para estes filtros e período. Experimente ampliar o intervalo.</div>';}
- else{news21Used.clear();feed.innerHTML=ranked.slice(0,9).map(card).join("");}
+ else{feed.innerHTML=ranked.slice(0,9).map(card).join("");}
  const counts={};recent.forEach(n=>(n.regions||["Global"]).forEach(r=>counts[r]=(counts[r]||0)+1));
  const regions=document.getElementById("news20-regions");
  regions.innerHTML=Object.keys(counts).length?Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,9).map(([r,v])=>'<div class="news20-region"><span>'+newsSafe(r)+'</span><div class="news20-track"><i style="width:'+Math.round(100*v/Math.max(...Object.values(counts)))+'%"></i></div><b>'+v+'</b></div>').join(""):'<p class="muted">Nenhuma região identificada neste filtro.</p>';
