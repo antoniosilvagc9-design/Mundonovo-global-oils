@@ -1,0 +1,37 @@
+name: Test FMP market coverage
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Discover indices and test quotes without publishing
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os,json,urllib.request,urllib.parse,urllib.error,re,math
+          key=os.environ.get("FMP_API_KEY")
+          if not key: raise SystemExit("Missing FMP_API_KEY")
+          def get(path,**params):
+              try:
+                  url="https://financialmodelingprep.com/stable/"+path+"?"+urllib.parse.urlencode(dict(apikey=key,**params))
+                  with urllib.request.urlopen(url,timeout=25) as r: return json.load(r)
+              except urllib.error.HTTPError as e: print(path,"HTTP",e.code)
+              except Exception as e: print(path,type(e).__name__)
+          for path in ["index-list","commodities-list"]:
+              rows=get(path)
+              if isinstance(rows,list):
+                  for x in rows:
+                      if re.search(r"malay|klci|kuala|shanghai|nifty|jakarta|nikkei|bovespa|euronext|s&p 500|soybean|palm oil|brent|e-mini",str(x.get("name","")),re.I):
+                          print("CATALOG",x.get("symbol"),x.get("name"),x.get("exchange"))
+          for symbol in ["^KLSE","ES=F","^JKSE","^GSPC","^BVSP","^NSEI","^N225","000001.SS","^N100","ZL=F","ZS=F","BZ=F"]:
+              rows=get("quote",symbol=symbol)
+              if isinstance(rows,list):
+                  for x in rows[:1]:
+                      print("QUOTE",symbol,"returned",x.get("symbol"),x.get("name"),"price present",isinstance(x.get("price"),(int,float)),"change present",isinstance(x.get("changePercentage"),(int,float)),"timestamp",x.get("timestamp"))
+                  if not rows: print("EMPTY",symbol)
+          print("No prices published; verify display license and instrument identity.")
+          PY
