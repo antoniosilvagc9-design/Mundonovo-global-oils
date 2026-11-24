@@ -68,36 +68,45 @@ def translate_titles(items):
  try:
   previous={n['title_original']:n['title_pt'] for n in json.loads(OUT.read_text(encoding='utf-8'))['news'] if n.get('title_pt')}
  except (OSError,ValueError,KeyError,TypeError): pass
- pending=[]
  for item in items:
   item['title_pt']=previous.get(item['title_original'])
-  if not item['title_pt'] and item.get('language')=='en': pending.append(item)
- if pending:
+ for code in ('en','es'):
+  pending=[n for n in items if not n['title_pt'] and n.get('language','en')==code]
+  if not pending: continue
   try:
    import argostranslate.package as pkg
    import argostranslate.translate as tr
    def translator():
     langs=tr.get_installed_languages()
-    en=next((l for l in langs if l.code=='en'),None)
+    src=next((l for l in langs if l.code==code),None)
     pt=next((l for l in langs if l.code in ('pt_BR','pt-br','pt')),None)
-    return en.get_translation(pt) if en and pt else None
+    if src and pt:
+     try:return src.get_translation(pt)
+     except Exception:return None
+    return None
    engine=translator()
    if engine is None:
     pkg.update_package_index()
-    candidates=[p for p in pkg.get_available_packages() if p.from_code=='en' and p.to_code in ('pt_BR','pt-br','pt')]
-    if not candidates: raise RuntimeError('Modelo inglês-português indisponível')
-    model=next((p for p in candidates if p.to_code!='pt'),candidates[0])
-    pkg.install_from_path(model.download())
+    packages=pkg.get_available_packages()
+    def install(source,targets):
+     candidates=[p for p in packages if p.from_code==source and p.to_code in targets]
+     if not candidates:return False
+     pkg.install_from_path(candidates[0].download())
+     return True
+    if not install(code,('pt_BR','pt-br','pt')) and code=='es':
+     install('es',('en',))
+     install('en',('pt_BR','pt-br','pt'))
     engine=translator()
-   if engine is None: raise RuntimeError('Tradutor indisponível')
+   if engine is None:raise RuntimeError('Modelo indisponível')
    for item in pending:
     try:
      title=item['title_original']; suffix=' - '+item['source']
      has_suffix=title.endswith(suffix)
      translated=engine.translate(title[:-len(suffix)] if has_suffix else title).strip()
-     if translated: item['title_pt']=translated+(suffix if has_suffix else '')
-    except Exception as exc: print('Falha na tradução:',type(exc).__name__)
-  except Exception as exc: print('Argos indisponível:',type(exc).__name__,str(exc)[:180])
+     if translated:item['title_pt']=translated+(suffix if has_suffix else '')
+    except Exception as exc:print('Falha na tradução',code,type(exc).__name__)
+  except Exception as exc:print('Argos indisponível',code,type(exc).__name__,str(exc)[:180])
+  print('Argos',code,': traduzidas',sum(bool(n.get('title_pt')) for n in pending),'de',len(pending))
  print('Argos: notícias traduzidas',sum(bool(n.get('title_pt')) for n in items),'de',len(items))
 
 def main():
