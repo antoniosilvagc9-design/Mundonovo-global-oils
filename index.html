@@ -661,6 +661,16 @@ body[data-portal-page="news"] .news21-photo img{display:block;position:absolute;
 body[data-portal-page="news"] .news21-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#080808a8,transparent 60%);pointer-events:none}
 body[data-portal-page="news"] .news21-photo span{z-index:2;max-width:calc(100% - 20px);font-size:9px}
 body[data-portal-page="news"] .news21-photo:before{display:none!important}
+
+/* Homepage — photographic backgrounds, local Pixabay assets */
+body[data-portal-page="home"] .portal-card[href="?page=quotes"]{--banner:url('data/home-images/quotes.jpg')}
+body[data-portal-page="home"] .portal-card[href="?page=supply"]{--banner:url('data/home-images/supply.jpg')}
+body[data-portal-page="home"] .portal-card[href="?page=news"]{--banner:url('data/home-images/news.jpg')}
+body[data-portal-page="home"] .portal-card[href="?page=intelligence"]{--banner:url('data/home-images/intelligence.jpg')}
+body[data-portal-page="home"] .portal-card::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(90deg,rgba(8,8,8,.88),rgba(8,8,8,.78) 45%,rgba(8,8,8,.38)),var(--banner);background-size:cover;background-position:center;transition:transform .35s ease}
+body[data-portal-page="home"] .portal-card:hover::after{transform:scale(1.035)}
+body[data-portal-page="home"] .portal-card-art{opacity:.08}
+@media(prefers-reduced-motion:reduce){body[data-portal-page="home"] .portal-card::after{transition:none;transform:none!important}}
 </style>
 </head>
 <body>
