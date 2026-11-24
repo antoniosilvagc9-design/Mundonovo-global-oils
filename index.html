@@ -672,15 +672,22 @@ body[data-portal-page="home"] .portal-card:hover::after{transform:scale(1.035)}
 body[data-portal-page="home"] .portal-card-art{opacity:.08}
 @media(prefers-reduced-motion:reduce){body[data-portal-page="home"] .portal-card::after{transition:none;transform:none!important}}
 </style>
+<style>
+#global-market-ticker,#global-market-ticker .market-ticker-head,#global-market-ticker .tradingview-widget-container,#global-market-ticker .tradingview-widget-container__widget,#global-market-ticker .tradingview-widget-copyright{background:#000!important;color:#fff!important}
+#global-market-ticker .market-ticker-head strong,#global-market-ticker .ticker-source,#global-market-ticker .tradingview-widget-copyright a span{color:#B6FF00!important;font-weight:800!important}
+#global-market-ticker .market-ticker-head small{color:#fff!important;font-weight:700!important}
+#global-market-ticker .tradingview-widget-copyright{padding:6px 10px;text-align:center;font-weight:700}
+#global-market-ticker .tradingview-widget-container iframe{background:#000!important;color-scheme:dark}
+</style>
 </head>
 <body>
 <header class="quotes-header"><div class="header-brand"><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="header-clock"><div id="clock"></div><small>Dados históricos</small></div></header>
 <section class="market-ticker" aria-label="Mercados financeiros internacionais" id="global-market-ticker">
-<div class="market-ticker-head"><strong>BOLSA DE VALORES E COMMODITIES</strong><small>TradingView · disponibilidade e atraso variam por mercado</small></div>
+<div class="market-ticker-head"><strong>BOLSA DE VALORES E COMMODITIES</strong><small>Fonte: <span class="ticker-source">TradingView</span> · Disponibilidade e atraso variam por mercado</small></div>
 <div class="tradingview-widget-container" style="width:100%;min-height:78px">
 <div class="tradingview-widget-container__widget"></div>
 <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/markets/" rel="noopener nofollow" target="_blank"><span style="color:#D4AF37">Mercados financeiros no TradingView</span></a></div>
-<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"DJ:DJI","title":"Dow Jones"},{"proName":"SP:SPX","title":"S&P 500"},{"proName":"NASDAQ:IXIC","title":"Nasdaq"},{"proName":"BMFBOVESPA:IBOV","title":"Ibovespa"},{"proName":"CME_MINI:ES1!","title":"E-mini S&P"},{"proName":"FTSEMYX:FBMKLCI","title":"KLCI"},{"proName":"NSE:NIFTY","title":"Nifty 50"},{"proName":"IDX:COMPOSITE","title":"IDX Composite"},{"proName":"SSE:000001","title":"Shanghai"},{"proName":"TVC:NI225","title":"Nikkei 225"},{"proName":"HSI:HSI","title":"Hang Seng"},{"proName":"XETR:DAX","title":"DAX"},{"proName":"MYX:FCPO1!","title":"Óleo de palma"},{"proName":"CBOT:ZL1!","title":"Óleo de soja"},{"proName":"CBOT:ZS1!","title":"Soja"},{"proName":"TVC:UKOIL","title":"Brent (referência)"},{"proName":"FX_IDC:USDBRL","title":"USD/BRL"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"br"}</script>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"DJ:DJI","title":"Dow Jones"},{"proName":"SP:SPX","title":"S&P 500"},{"proName":"NASDAQ:IXIC","title":"Nasdaq"},{"proName":"BMFBOVESPA:IBOV","title":"Ibovespa"},{"proName":"CME_MINI:ES1!","title":"E-mini S&P"},{"proName":"FTSEMYX:FBMKLCI","title":"KLCI"},{"proName":"NSE:NIFTY","title":"Nifty 50"},{"proName":"IDX:COMPOSITE","title":"IDX Composite"},{"proName":"SSE:000001","title":"Shanghai"},{"proName":"TVC:NI225","title":"Nikkei 225"},{"proName":"HSI:HSI","title":"Hang Seng"},{"proName":"XETR:DAX","title":"DAX"},{"proName":"MYX:FCPO1!","title":"Óleo de palma"},{"proName":"CBOT:ZL1!","title":"Óleo de soja"},{"proName":"CBOT:ZS1!","title":"Soja"},{"proName":"TVC:UKOIL","title":"Brent (referência)"},{"proName":"FX_IDC:USDBRL","title":"USD/BRL"}],"showSymbolLogo":true,"isTransparent":false,"displayMode":"adaptive","colorTheme":"dark","locale":"br"}</script>
 </div>
 </section><div class="portal-home" id="portal-home" aria-label="Áreas do Trading Global">
 <h2 class="portal-home-title">CENTRAL DE INTELIGÊNCIA GLOBAL</h2>
