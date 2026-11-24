@@ -1,0 +1,36 @@
+name: Test EODHD coverage
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check index catalog and candidate quotes
+        env:
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os,json,urllib.request,urllib.parse,urllib.error
+          key=os.environ.get("EODHD_API_KEY")
+          if not key: raise SystemExit("Missing EODHD_API_KEY")
+          def get(path):
+              url="https://eodhd.com/api/"+path+"?"+urllib.parse.urlencode({"api_token":key,"fmt":"json"})
+              try:
+                  with urllib.request.urlopen(url,timeout=25) as r: return json.load(r)
+              except urllib.error.HTTPError as e:
+                  print(path,"HTTP",e.code)
+              except Exception as e: print(path,type(e).__name__)
+          catalog=get("exchange-symbol-list/INDX")
+          if isinstance(catalog,list):
+              for x in catalog:
+                  name=str(x.get("Name","")).lower()
+                  if any(t in name for t in ["klci","kuala lumpur","jakarta","indonesia","s&p 500","bovespa","ibovespa","nifty 50","nikkei 225","shanghai composite","euronext 100","e-mini"]):
+                      print("CATALOG",x.get("Code"),x.get("Name"),x.get("Exchange"),x.get("Type"))
+          for symbol in ["KLSE","JKSE","GSPC","BVSP","NSEI","N225","SSEC","N100"]:
+              d=get("real-time/"+symbol+".INDX")
+              if isinstance(d,dict):
+                  print(symbol,"returned code:",d.get("code"),"price fields present:",all(isinstance(d.get(k),(int,float)) for k in ["close","previousClose"]),"timestamp present:",bool(d.get("timestamp")))
+          print("CME futures not tested: exact contract and entitlement need verification.")
+          PY
