@@ -1,0 +1,32 @@
+name: Test Twelve Data coverage
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check candidate symbols without publishing quotes
+        env:
+          TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os, urllib.request, urllib.parse, json, time
+          key = os.environ.get("TWELVE_DATA_API_KEY")
+          if not key:
+              raise SystemExit("Missing TWELVE_DATA_API_KEY")
+          candidates = [("Bursa Malaysia","KLCI"),("Indonesia Stock Exchange","JKSE"),("CME Group / CBOT","ES"),("NYSE / Nasdaq","SPX"),("B3","IBOV"),("NSE India","NIFTY"),("Japan Exchange Group","N225"),("Shanghai Stock Exchange","SSEC"),("Euronext","N100")]
+          for i,(name,symbol) in enumerate(candidates):
+              if i: time.sleep(9)
+              try:
+                  url = "https://api.twelvedata.com/quote?" + urllib.parse.urlencode({"symbol":symbol,"apikey":key})
+                  with urllib.request.urlopen(url,timeout=25) as response:
+                      d=json.load(response)
+                  if d.get("status")=="error":
+                      print(name, symbol, "API rejected candidate; code:", d.get("code","unknown"))
+                  else:
+                      print(name, symbol, "returned metadata:", d.get("name"), d.get("exchange"), d.get("mic_code"), "price fields present:", bool(d.get("close") and d.get("previous_close")))
+              except Exception as e:
+                  print(name, symbol, "request failed:", type(e).__name__)
+          PY
