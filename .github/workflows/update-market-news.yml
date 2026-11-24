@@ -35,4 +35,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/market-news.json
+          if [ -d data/news-images ]; then git add -f data/news-images/*.jpg; fi
           git diff --cached --quiet || (git commit -m "Atualiza radar de notícias verificáveis" && git push)
