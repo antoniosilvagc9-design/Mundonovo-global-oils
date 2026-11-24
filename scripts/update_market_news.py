@@ -29,8 +29,8 @@ def parse_date(raw):
 # Pixabay: busca imagens temáticas; a chave fica apenas no GitHub Actions.
 PIXABAY_TERMS={
  "Óleo de palma":"oil palm plantation",
- "Soja":"soybean field agriculture",
- "Biodiesel":"biodiesel production",
+ "Soja":"soybean field",
+ "Biodiesel":"biofuel agriculture",
  "Logística":"cargo container port",
  "Câmbio":"finance currency exchange",
  "Petróleo":"oil refinery",
@@ -91,6 +91,30 @@ def main():
  if not ordered:
   if OUT.exists():print("Nenhuma notícia nova; preservando último arquivo válido.");return
   raise RuntimeError("Nenhum RSS acessível com notícias verificáveis: "+"; ".join(errors))
+ api_key=os.environ.get("PIXABAY_API_KEY", "").strip()
+ if not api_key: raise RuntimeError("PIXABAY_API_KEY não configurada")
+ image_dir=ROOT/"data"/"news-images"
+ image_dir.mkdir(parents=True,exist_ok=True)
+ pools={}; used=set(); count=0
+ for item in ordered:
+  category=item["category"]
+  if category not in pools: pools[category]=pixabay_images(category,api_key)
+  for photo in pools[category]:
+   if photo["url"] in used: continue
+   filename=hashlib.sha256(photo["url"].encode()).hexdigest()[:24]+".jpg"
+   target=image_dir/filename
+   try:
+    if not target.exists():
+     with urllib.request.urlopen(photo["url"],timeout=15) as response:
+      content=response.read(5_000_001)
+     if len(content)>5_000_000 or not content.startswith(b"\xff\xd8"): continue
+     target.write_bytes(content)
+    used.add(photo["url"])
+    item["image"]={"url":"https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/"+filename,"page":photo["page"],"author":photo["author"]}
+    count+=1
+    break
+   except Exception as exc: print("Falha ao baixar imagem:",type(exc).__name__)
+ print("Notícias com imagens:",count,"de",len(ordered))
  payload={"updated_at_utc":NOW.isoformat(),"feed":"Google News RSS — manchetes e metadados de terceiros","limitations":"Título no idioma original; resumo e análise não gerados sem acesso ao texto. Classificação heurística, não avaliação factual do impacto.","errors":errors,"news":ordered}
  OUT.parent.mkdir(exist_ok=True)
  OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
