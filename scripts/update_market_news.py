@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Coleta RSS pública, sem scraping de matérias nem análise inventada."""
 import os
+import urllib.error
 import datetime as dt, email.utils, hashlib, json, pathlib, re, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/"data"/"market-news.json"
@@ -55,7 +56,7 @@ def pixabay_images(category, api_key):
           if str(hit.get("webformatURL","")).startswith("https://")]
  except Exception as exc:
   # Nunca registrar a URL da requisição, pois ela contém a chave.
-  print("Pixabay indisponível para",category,":",type(exc).__name__)
+  print("Pixabay indisponível para",category,":",type(exc).__name__,getattr(exc,"code",""))
   return []
 
 def main():
@@ -95,26 +96,37 @@ def main():
  if not api_key: raise RuntimeError("PIXABAY_API_KEY não configurada")
  image_dir=ROOT/"data"/"news-images"
  image_dir.mkdir(parents=True,exist_ok=True)
- pools={}; used=set(); count=0
+ pools={}; used=set(); count=0; attempts=0
  for item in ordered:
+  if attempts>=3 or count>=3: break
   category=item["category"]
   if category not in pools: pools[category]=pixabay_images(category,api_key)
   for photo in pools[category]:
+   if attempts>=3 or count>=3: break
    if photo["url"] in used: continue
+   used.add(photo["url"])
+   attempts+=1
    filename=hashlib.sha256(photo["url"].encode()).hexdigest()[:24]+".jpg"
    target=image_dir/filename
    try:
     if not target.exists():
-     with urllib.request.urlopen(photo["url"],timeout=15) as response:
+     req=urllib.request.Request(photo["url"],headers={"User-Agent":"Mozilla/5.0","Accept":"image/jpeg,image/*;q=0.9,*/*;q=0.1"})
+     with urllib.request.urlopen(req,timeout=15) as response:
       content=response.read(5_000_001)
-     if len(content)>5_000_000 or not content.startswith(b"\xff\xd8"): continue
+     if len(content)>5_000_000 or not content.startswith(b"\xff\xd8"):
+      print("Imagem inválida ou acima do limite"); continue
      target.write_bytes(content)
     used.add(photo["url"])
     item["image"]={"url":"https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/"+filename,"page":photo["page"],"author":photo["author"]}
     count+=1
     break
+   except urllib.error.HTTPError as exc:
+    print("Falha no download: HTTP",exc.code)
+    if exc.code==429: attempts=3; break
    except Exception as exc: print("Falha ao baixar imagem:",type(exc).__name__)
+ print("Teste Pixabay: tentativas",attempts,"sucessos",count)
  print("Notícias com imagens:",count,"de",len(ordered))
+ if not count: raise RuntimeError("Teste de imagens sem sucesso; feed anterior preservado")
  payload={"updated_at_utc":NOW.isoformat(),"feed":"Google News RSS — manchetes e metadados de terceiros","limitations":"Título no idioma original; resumo e análise não gerados sem acesso ao texto. Classificação heurística, não avaliação factual do impacto.","errors":errors,"news":ordered}
  OUT.parent.mkdir(exist_ok=True)
  OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
