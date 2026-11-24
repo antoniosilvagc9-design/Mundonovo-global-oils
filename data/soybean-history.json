@@ -6,40 +6,33 @@
   "instrument": "Futuro contínuo de soja (vencimento pode mudar por rolagem)",
   "price_type": "Fechamento diário indicativo; não settlement oficial",
   "unit": "centavos de USD/bushel",
-  "updated_at_utc": "2026-11-23T13:42:10.234697+00:00",
+  "updated_at_utc": "2026-11-24T02:36:33.906995+00:00",
   "latest": {
-    "date": "2026-11-23",
-    "value": 1224.75
+    "date": "2026-11-24",
+    "value": 1229.75
   },
   "baseline_30d": {
     "date": "2026-10-23",
     "value": 1256.5
   },
-  "target_30d": "2026-10-24",
-  "change_30d_absolute": -31.75,
-  "change_30d_percent": -2.5269,
+  "target_30d": "2026-10-25",
+  "change_30d_absolute": -26.75,
+  "change_30d_percent": -2.1289,
   "last_three": [
-    {
-      "date": "2026-11-19",
-      "value": 1207.5
-    },
     {
       "date": "2026-11-20",
       "value": 1220.75
     },
     {
       "date": "2026-11-23",
-      "value": 1224.75
+      "value": 1228.75
+    },
+    {
+      "date": "2026-11-24",
+      "value": 1229.75
     }
   ],
   "converted_last_three": [
-    {
-      "date": "2026-11-19",
-      "value": 1207.5,
-      "brl_per_60kg_bag": 156.7673,
-      "ptax_date": "2026-11-19",
-      "ptax_brl_usd": 5.8889
-    },
     {
       "date": "2026-11-20",
       "value": 1220.75,
@@ -49,10 +42,17 @@
     },
     {
       "date": "2026-11-23",
-      "value": 1224.75,
-      "brl_per_60kg_bag": 161.8204,
+      "value": 1228.75,
+      "brl_per_60kg_bag": 161.7448,
       "ptax_date": "2026-11-23",
-      "ptax_brl_usd": 5.9931
+      "ptax_brl_usd": 5.9708
+    },
+    {
+      "date": "2026-11-24",
+      "value": 1229.75,
+      "brl_per_60kg_bag": 161.8764,
+      "ptax_date": "2026-11-23",
+      "ptax_brl_usd": 5.9708
     }
   ],
   "converted_baseline_30d": {
@@ -63,12 +63,12 @@
     "ptax_brl_usd": 5.0377
   },
   "converted_latest": {
-    "date": "2026-11-23",
-    "value": 1224.75,
-    "brl_per_60kg_bag": 161.8204,
+    "date": "2026-11-24",
+    "value": 1229.75,
+    "brl_per_60kg_bag": 161.8764,
     "ptax_date": "2026-11-23",
-    "ptax_brl_usd": 5.9931
+    "ptax_brl_usd": 5.9708
   },
-  "average_last_three_brl_per_60kg_bag": 159.0251,
+  "average_last_three_brl_per_60kg_bag": 160.7029,
   "conversion_method": "CBOT US¢/bushel / 100 × (60 / 27.2155422) × PTAX venda BRL/USD na data ou último pregão anterior (até 5 dias)"
 }
