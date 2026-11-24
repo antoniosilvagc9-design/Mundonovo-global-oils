@@ -59,6 +59,43 @@ def pixabay_images(category, api_key):
   print("Pixabay indisponível para",category,":",type(exc).__name__,getattr(exc,"code",""))
   return []
 
+def translate_titles(items):
+ previous={}
+ try:
+  previous={n['title_original']:n['title_pt'] for n in json.loads(OUT.read_text(encoding='utf-8'))['news'] if n.get('title_pt')}
+ except (OSError,ValueError,KeyError,TypeError): pass
+ pending=[]
+ for item in items:
+  item['title_pt']=previous.get(item['title_original'])
+  if not item['title_pt']: pending.append(item)
+ if pending:
+  try:
+   import argostranslate.package as pkg
+   import argostranslate.translate as tr
+   def translator():
+    langs=tr.get_installed_languages()
+    en=next((l for l in langs if l.code=='en'),None)
+    pt=next((l for l in langs if l.code in ('pt_BR','pt-br','pt')),None)
+    return en.get_translation(pt) if en and pt else None
+   engine=translator()
+   if engine is None:
+    pkg.update_package_index()
+    candidates=[p for p in pkg.get_available_packages() if p.from_code=='en' and p.to_code in ('pt_BR','pt-br','pt')]
+    if not candidates: raise RuntimeError('Modelo inglês-português indisponível')
+    model=next((p for p in candidates if p.to_code!='pt'),candidates[0])
+    pkg.install_from_path(model.download())
+    engine=translator()
+   if engine is None: raise RuntimeError('Tradutor indisponível')
+   for item in pending:
+    try:
+     title=item['title_original']; suffix=' - '+item['source']
+     has_suffix=title.endswith(suffix)
+     translated=engine.translate(title[:-len(suffix)] if has_suffix else title).strip()
+     if translated: item['title_pt']=translated+(suffix if has_suffix else '')
+    except Exception as exc: print('Falha na tradução:',type(exc).__name__)
+  except Exception as exc: print('Argos indisponível:',type(exc).__name__,str(exc)[:180])
+ print('Argos: notícias traduzidas',sum(bool(n.get('title_pt')) for n in items),'de',len(items))
+
 def main():
  items={};errors=[]
  for category,query in TOPICS:
@@ -136,7 +173,8 @@ def main():
     print("Falha ao baixar imagem:",type(exc).__name__); failures+=1
     if failures>=5: stopped=True; break
  print("Pixabay: downloads tentados",attempts,"notícias com imagens",count,"de",len(ordered))
- payload={"updated_at_utc":NOW.isoformat(),"feed":"Google News RSS — manchetes e metadados de terceiros","limitations":"Título no idioma original; resumo e análise não gerados sem acesso ao texto. Classificação heurística, não avaliação factual do impacto.","errors":errors,"news":ordered}
+ translate_titles(ordered)
+ payload={"updated_at_utc":NOW.isoformat(),"feed":"Google News RSS — manchetes e metadados de terceiros","limitations":"Manchetes traduzidas automaticamente quando disponível; original preservado; resumo e análise não gerados sem acesso ao texto. Classificação heurística, não avaliação factual do impacto.","errors":errors,"news":ordered}
  OUT.parent.mkdir(exist_ok=True)
  OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
  print("Salvas",len(ordered),"notícias; fontes:",len(set(x["source"] for x in ordered)),"falhas:",len(errors))
