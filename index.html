@@ -679,16 +679,24 @@ body[data-portal-page="home"] .portal-card-art{opacity:.08}
 #global-market-ticker .tradingview-widget-copyright{padding:6px 10px;text-align:right!important;font-weight:700}
 #global-market-ticker .tradingview-widget-container iframe{background:#000!important;color-scheme:dark}
 </style>
+<style>
+#global-market-ticker{border:1px solid #D4AF37!important;border-radius:14px!important;background:#000!important;overflow:hidden!important}
+#global-market-ticker .market-ticker-head{border-bottom:1px solid #55431f!important}
+#global-market-ticker .premium-tickers{margin:8px 12px 4px;padding:4px;border:1px solid #D4AF37;border-radius:12px;background:#0D0D0D;overflow-x:auto;box-sizing:border-box;color-scheme:dark;--tv-widget-background-color:#0D0D0D;--tv-widget-text-color:#B6FF00;--tv-widget-price-text-color:#FFFFFF;--tv-widget-positive-color:#B6FF00;--tv-widget-negative-color:#FF4545;--tv-widget-accent-color:#D4AF37;--tv-widget-font-family:inherit;--tv-widget-popup-background-color:#0D0D0D;--tv-widget-tooltip-text-color:#FFFFFF;--tv-widget-tooltip-background-color:#141414}
+#global-market-ticker .tradingview-widget-copyright a .ticker-attribution-label{color:#fff!important}
+#global-market-ticker .premium-tickers:focus-within{border-color:#F4D675}
+@media(max-width:600px){#global-market-ticker .premium-tickers{margin:6px;padding:2px}#global-market-ticker .market-ticker-head{flex-wrap:wrap}}
+</style>
 </head>
 <body>
 <header class="quotes-header"><div class="header-brand"><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="header-clock"><div id="clock"></div><small>Dados históricos</small></div></header>
 <section class="market-ticker" aria-label="Mercados financeiros internacionais" id="global-market-ticker">
 <div class="market-ticker-head"><strong>BOLSA DE VALORES E COMMODITIES</strong><small>Fonte: <span class="ticker-source">TradingView</span> · Disponibilidade e atraso variam por mercado</small></div>
-<div style="background:#000;color-scheme:dark;width:100%;overflow-x:auto">
+<div class="premium-tickers">
 <script type="module" src="https://widgets.tradingview-widget.com/w/br/tv-tickers.js"></script>
-<tv-tickers symbols="DJ:DJI,SP:SPX,NASDAQ:IXIC,BMFBOVESPA:IBOV,CME_MINI:ES1!,FTSEMYX:FBMKLCI,NSE:NIFTY,IDX:COMPOSITE,SSE:000001,TVC:NI225,HSI:HSI,XETR:DAX,MYX:FCPO1!,CBOT:ZL1!,CBOT:ZS1!,TVC:UKOIL,FX_IDC:USDBRL" hide-chart style="display:block;color-scheme:dark"></tv-tickers>
+<tv-tickers symbols="DJ:DJI,SP:SPX,NASDAQ:IXIC,BMFBOVESPA:IBOV,CME_MINI:ES1!,FTSEMYX:FBMKLCI,NSE:NIFTY,IDX:COMPOSITE,SSE:000001,TVC:NI225,HSI:HSI,XETR:DAX,MYX:FCPO1!,CBOT:ZL1!,CBOT:ZS1!,TVC:UKOIL,FX_IDC:USDBRL" hide-chart theme="dark" style="display:block;color-scheme:dark"></tv-tickers>
 </div>
-<div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/markets/" rel="noopener nofollow" target="_blank"><span>Mercados financeiros no TradingView</span></a></div>
+<div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/markets/" rel="noopener nofollow" target="_blank"><span class="ticker-attribution-label">Mercados financeiros no </span><span>TradingView</span></a></div>
 </section><div class="portal-home" id="portal-home" aria-label="Áreas do Trading Global">
 <h2 class="portal-home-title">CENTRAL DE INTELIGÊNCIA GLOBAL</h2>
 <div class="portal-card-grid">
