@@ -39,5 +39,19 @@ jobs:
                       print(json.dumps(row, ensure_ascii=True)[:1800])
                   matches += 1
           print("Matching report names:", matches)
+          for slug in ("3668", "3618", "3878"):
+              url = "https://marsapi.ams.usda.gov/services/v1.2/reports/" + slug + "/Report%20Detail"
+              try:
+                  request = urllib.request.Request(url, headers={"Authorization": "Basic " + auth, "Accept": "application/json"})
+                  with urllib.request.urlopen(request, timeout=45) as response:
+                      detail = json.load(response)
+                  records = detail.get("results", []) if isinstance(detail, dict) else detail
+                  print("DETAIL", slug, "records:", len(records))
+                  if isinstance(records, list) and records:
+                      print("Fields:", sorted(records[0]) if isinstance(records[0], dict) else "unknown")
+                      for item in records[:3]:
+                          print(json.dumps(item, ensure_ascii=True)[:2200])
+              except (urllib.error.URLError, ValueError, TypeError) as exc:
+                  print("DETAIL", slug, "failed:", type(exc).__name__, getattr(exc, "code", ""))
           print("Diagnostic only. No prices published.")
           PY
