@@ -3,13 +3,8 @@
   "source_url": "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/",
   "unit": "BRL/USD",
   "type": "Último boletim disponível em cada dia útil",
-  "updated_at_utc": "2026-11-24T02:12:24.067843+00:00",
+  "updated_at_utc": "2026-11-24T13:39:57.417402+00:00",
   "points": [
-    {
-      "time": "2026-11-18 13:08:44.271245",
-      "value": 5.8102,
-      "type": "Fechamento"
-    },
     {
       "time": "2026-11-19 13:04:18.325373",
       "value": 5.8889,
@@ -19,6 +14,11 @@
       "time": "2026-11-23 13:06:23.798289",
       "value": 5.9708,
       "type": "Fechamento"
+    },
+    {
+      "time": "2026-11-24 10:11:11.218756",
+      "value": 5.8666,
+      "type": "Abertura"
     }
   ]
 }
