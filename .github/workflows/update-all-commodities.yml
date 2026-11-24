@@ -1,0 +1,188 @@
+name: Trading Global - Update All Commodities
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 22 * * 1-5'
+permissions:
+  contents: write
+concurrency:
+  group: trading-global-all
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: BNM
+        id: source0
+        continue-on-error: true
+        env:
+          USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
+        run: |
+          python - <<'PY'
+          import csv,io,json,urllib.request,urllib.parse,math
+          from datetime import date,timedelta
+          from pathlib import Path
+          def get(url):
+              with urllib.request.urlopen(url,timeout=90) as r: return r.read()
+          def valid(x):
+              try: return math.isfinite(float(x)) and float(x)>0
+              except (ValueError,TypeError): return False
+          def save(name,source,url,points,unit,license):
+              if len(points)<60: raise SystemExit("Insufficient history: "+name)
+              Path("data",name).write_text(json.dumps(dict(source=source,source_url=url,unit=unit,license=license,history=points[-260:]),indent=2)+"\n")
+              print(name,len(points),points[-1])
+          url="https://storage.data.gov.my/finsector/exr/daily_1200.csv"
+          rows=csv.DictReader(io.StringIO(get(url).decode("utf-8-sig")))
+          rows=list(rows)
+          print("BNM columns:", list(rows[0]) if rows else [])
+          print("BNM rate types:", sorted({str(r.get("rate_type")) for r in rows}))
+          pts={}
+          for r in rows:
+              if str(r.get("rate_type","")).strip().lower() in ("middle","mid","middle rate") and valid(r.get("USD")):
+                  day=date.fromisoformat(r["date"]).isoformat()
+                  pts[day]=float(r["USD"])
+          save("usd-myr-open-history.json","Bank Negara Malaysia · referência 12h, taxa média","https://data.gov.my/data-catalogue/exchangerates_daily_1200",[dict(date=k,value=pts[k]) for k in sorted(pts)],"MYR/USD","CC BY 4.0")
+          
+          PY
+      - name: BCB
+        id: source1
+        continue-on-error: true
+        env:
+          USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
+        run: |
+          python - <<'PY'
+          import csv,io,json,urllib.request,urllib.parse,math
+          from datetime import date,timedelta
+          from pathlib import Path
+          def get(url):
+              with urllib.request.urlopen(url,timeout=90) as r: return r.read()
+          def valid(x):
+              try: return math.isfinite(float(x)) and float(x)>0
+              except (ValueError,TypeError): return False
+          def save(name,source,url,points,unit,license):
+              if len(points)<60: raise SystemExit("Insufficient history: "+name)
+              Path("data",name).write_text(json.dumps(dict(source=source,source_url=url,unit=unit,license=license,history=points[-260:]),indent=2)+"\n")
+              print(name,len(points),points[-1])
+          end=date.today()
+          start=end-timedelta(days=400)
+          base="https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodo(moeda=@moeda,dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)"
+          query=urllib.parse.urlencode({"@moeda":"'USD'","@dataInicial":"'"+start.strftime("%m-%d-%Y")+"'","@dataFinalCotacao":"'"+end.strftime("%m-%d-%Y")+"'","$format":"json","$top":10000})
+          rows=json.loads(get(base+"?"+query))["value"]
+          pts={}
+          for r in rows:
+              if r.get("tipoBoletim")=="Fechamento" and valid(r.get("cotacaoVenda")):
+                  stamp=r["dataHoraCotacao"]; day=date.fromisoformat(stamp[:10]).isoformat()
+                  if day not in pts or stamp>pts[day][0]: pts[day]=(stamp,float(r["cotacaoVenda"]))
+          save("usd-brl-open-history.json","Banco Central do Brasil · PTAX venda fechamento","https://dadosabertos.bcb.gov.br/dataset/dolar-americano-usd-todos-os-boletins-diarios",[dict(date=k,value=pts[k][1]) for k in sorted(pts)],"BRL/USD","ODbL")
+          PY
+      - name: USDA oil
+        id: source2
+        continue-on-error: true
+        env:
+          USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os, json, base64, urllib.request, math
+          from datetime import datetime
+          from pathlib import Path
+          key = os.environ["USDA_API_KEY"]
+          if not key: raise SystemExit("Missing USDA key")
+          auth = base64.b64encode((key+":").encode()).decode()
+          req = urllib.request.Request("https://marsapi.ams.usda.gov/services/v1.2/reports/3618/Report%20Detail", headers={"Authorization":"Basic "+auth})
+          with urllib.request.urlopen(req, timeout=60) as res:
+              data=json.load(res)
+          rows=data["results"] if isinstance(data,dict) else data
+          weeks={}
+          for r in rows:
+              p=r.get("price")
+              if r.get("commodity")!="Soybean Oil" or r.get("trade_loc")!="Illinois" or r.get("price_unit")!="Cents Per Lb" or not isinstance(p,(int,float)) or isinstance(p,bool) or not math.isfinite(p) or p<=0: continue
+              end=datetime.strptime(r["report_end_date"],"%m/%d/%Y").date().isoformat()
+              pub=datetime.strptime(r["published_date"],"%m/%d/%Y %H:%M:%S")
+              item={"period_start":datetime.strptime(r["report_begin_date"],"%m/%d/%Y").date().isoformat(),"period_end":end,"published_date":r["published_date"],"price":p}
+              old=weeks.get(end)
+              if old is None or pub>old[0]: weeks[end]=(pub,item)
+              elif pub==old[0] and item!=old[1]: raise SystemExit("Conflicting weekly prices")
+          history=[weeks[d][1] for d in sorted(weeks)]
+          if not history: raise SystemExit("No valid Illinois observations")
+          output={"source":"USDA AMS Market News","report_id":3618,"commodity":"Soybean Oil","region":"Illinois","unit":"US cents/lb","frequency":"weekly","history":history[-104:]}
+          Path("data").mkdir(exist_ok=True)
+          Path("data/usda-soybean-oil.json").write_text(json.dumps(output,indent=2)+"\n")
+          print("Validated weekly observations:",len(history))
+          PY
+      - name: USDA meal and beans
+        id: source3
+        continue-on-error: true
+        env:
+          USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os,json,base64,urllib.request,math
+          from datetime import datetime
+          from pathlib import Path
+          auth=base64.b64encode((os.environ["USDA_API_KEY"]+":").encode()).decode()
+          for slug,filename,filters in [
+              (3668,"usda-soybean-meal.json",{"commodity":"Soybean Meal","trade_Loc":"Illinois","protein":"46.5-48%","price_unit":"$ Per Ton","freight":"F.O.B.","trans_mode":"Rail","sale_type":"Ask"}),
+              (3878,"usda-soybeans.json",{"commodity":"Soybeans","trade_loc":"Central","grade":"US #2","price_unit":"$ Per Bushel","freight":"F.O.B.","trans_mode":"Truck","current":"Yes","conventional":"Conventional","delivery_point":"Country Elevators","quote_type":"Basis","sale Type":"Bid"})]:
+              req=urllib.request.Request(f"https://marsapi.ams.usda.gov/services/v1.2/reports/{slug}/Report%20Detail",headers={"Authorization":"Basic "+auth})
+              with urllib.request.urlopen(req,timeout=60) as res: d=json.load(res)
+              rows=d["results"] if isinstance(d,dict) else d
+              points={}
+              for r in rows:
+                  if not all(r.get(k)==v for k,v in filters.items()): continue
+                  p=r.get("avg_price")
+                  if not isinstance(p,(int,float)) or isinstance(p,bool) or not math.isfinite(p) or p<=0: continue
+                  day=datetime.strptime(r["report_end_date"],"%m/%d/%Y").date().isoformat()
+                  pub=datetime.strptime(r["published_date"],"%m/%d/%Y %H:%M:%S")
+                  if day not in points or pub>points[day][0]: points[day]=(pub,p)
+                  elif pub==points[day][0] and p!=points[day][1]: raise SystemExit(f"Ambiguous {slug} {day}")
+              if not points: raise SystemExit(f"No valid observations {slug}")
+              history=[{"date":day,"value":points[day][1]} for day in sorted(points)][-260:]
+              Path("data",filename).write_text(json.dumps({"source":"USDA AMS Market News","report_id":slug,"filters":filters,"history":history},indent=2)+"\n")
+              print(slug,len(history),history[-1])
+          PY
+      - name: Brent
+        id: source4
+        continue-on-error: true
+        env:
+          USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
+        run: |
+          python - <<'PY'
+          import csv,io,json,urllib.request,math
+          from datetime import date,timedelta
+          from pathlib import Path
+          url="https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU&cosd="+str(date.today()-timedelta(days=400))
+          with urllib.request.urlopen(url,timeout=90) as r: rows=list(csv.DictReader(io.StringIO(r.read().decode("utf-8-sig"))))
+          pts={}
+          for row in rows:
+              try:
+                  d=date.fromisoformat(row.get("observation_date") or row.get("DATE")).isoformat()
+                  v=float(row["DCOILBRENTEU"])
+                  if math.isfinite(v) and v>0: pts[d]=v
+              except (ValueError,TypeError,KeyError): continue
+          history=[dict(date=d,value=pts[d]) for d in sorted(pts)][-260:]
+          if len(history)<60: raise SystemExit("Insufficient Brent history")
+          Path("data/brent-open-history.json").write_text(json.dumps(dict(source="EIA via FRED",source_url="https://fred.stlouisfed.org/series/DCOILBRENTEU",unit="USD/barril",history=history),indent=2)+"\n")
+          print(len(history),history[-1])
+          PY
+      - name: Publish validated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for f in usd-myr-open-history usd-brl-open-history usda-soybean-oil usda-soybean-meal usda-soybeans brent-open-history; do
+            if test -f "data/$f.json"; then git add "data/$f.json"; fi
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m "Update validated international commodity histories"
+            git pull --rebase
+            git push
+          fi
+      - name: Report partial failures
+        if: always()
+        run: |
+          echo "BNM: ${{ steps.source0.outcome }}"
+          echo "BCB: ${{ steps.source1.outcome }}"
+          echo "USDA oil: ${{ steps.source2.outcome }}"
+          echo "USDA meal and beans: ${{ steps.source3.outcome }}"
+          echo "Brent: ${{ steps.source4.outcome }}"
+          if [[ "${{ steps.source0.outcome }} ${{ steps.source1.outcome }} ${{ steps.source2.outcome }} ${{ steps.source3.outcome }} ${{ steps.source4.outcome }}" == *failure* ]]; then exit 1; fi
