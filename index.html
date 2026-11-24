@@ -722,6 +722,21 @@ body[data-portal-page="home"] .portal-card-description{font-size:11px!important;
 body[data-portal-page="home"] .portal-card-num,body[data-portal-page="home"] .portal-card-action{font-size:10px!important}
 body[data-portal-page="home"] .portal-card-icon{max-width:80px}
 }
+</style><style id="calculator-banner-alignment">
+@media(min-width:651px){
+body[data-portal-page="home"] .portal-card-grid{--calc-column-gap:18px}
+body[data-portal-page="home"] .portal-card[href="calculadora.html"]{padding-left:calc((100% - var(--calc-column-gap)) * .15)!important}
+body[data-portal-page="home"] .portal-card[href="calculadora.html"]:before{left:calc((100% - var(--calc-column-gap)) * .13)}
+body[data-portal-page="home"] .portal-card[href="calculadora.html"] .portal-card-icon{left:calc((100% - var(--calc-column-gap)) * .025);width:calc((100% - var(--calc-column-gap)) * .085)}
+}
+@media(min-width:651px) and (max-width:950px){
+body[data-portal-page="home"] .portal-card[href="calculadora.html"]{padding-left:calc((100% - var(--calc-column-gap)) * .13)!important}
+body[data-portal-page="home"] .portal-card[href="calculadora.html"]:before{left:calc((100% - var(--calc-column-gap)) * .11)}
+body[data-portal-page="home"] .portal-card[href="calculadora.html"] .portal-card-icon{left:calc((100% - var(--calc-column-gap)) * .02);width:calc((100% - var(--calc-column-gap)) * .07)}
+}
+@media(pointer:coarse) and (orientation:landscape) and (min-width:651px){
+body[data-portal-page="home"] .portal-card-grid{--calc-column-gap:12px}
+}
 </style></head>
 <body>
 <header class="quotes-header"><div class="header-brand"><div class="brand">TRADING GLOBAL</div><h1>Mercado Global de Inteligência</h1><div class="muted">All in the right direction.</div></div><div class="header-clock"><div id="clock"></div><small>Dados históricos</small></div></header>
