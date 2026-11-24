@@ -1,0 +1,38 @@
+name: FMP targeted futures test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test discovered futures symbols
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os,json,urllib.request,urllib.parse,urllib.error,re
+          key=os.environ["FMP_API_KEY"]
+          def get(path,**params):
+              try:
+                  url="https://financialmodelingprep.com/stable/"+path+"?"+urllib.parse.urlencode(dict(apikey=key,**params))
+                  with urllib.request.urlopen(url,timeout=25) as r: return json.load(r)
+              except urllib.error.HTTPError as e: print(path,params,"HTTP",e.code)
+              except Exception as e: print(path,params,type(e).__name__)
+          symbols=["ESUSD","ZLUSX","ZSUSX","ZMUSD","BZUSD"]
+          rows=get("index-list")
+          if isinstance(rows,list):
+              for x in rows:
+                  if re.search(r"malay|klci|kuala lumpur",str(x.get("name","")),re.I):
+                      print("MALAYSIA",x.get("symbol"),x.get("name"))
+                      if x.get("symbol"): symbols.append(x["symbol"])
+          for symbol in dict.fromkeys(symbols):
+              rows=get("quote",symbol=symbol)
+              if isinstance(rows,list):
+                  print(symbol,[(x.get("symbol"),x.get("name"),isinstance(x.get("price"),(int,float)),isinstance(x.get("changePercentage"),(int,float)),x.get("timestamp")) for x in rows[:1]])
+              if not rows:
+                  hist=get("historical-price-eod/full",symbol=symbol)
+                  if isinstance(hist,list): print(symbol,"historical rows",len(hist),"latest dates",[x.get("date") for x in hist[:2]])
+          print("Diagnostic only; no quotes published.")
+          PY
