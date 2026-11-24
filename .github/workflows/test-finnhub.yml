@@ -1,0 +1,43 @@
+name: Test Finnhub coverage
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Discover Malaysia index and test candidate quotes
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os,json,urllib.request,urllib.parse,urllib.error,re,math
+          key=os.environ["FINNHUB_API_KEY"]
+          def get(path,**params):
+              try:
+                  url="https://finnhub.io/api/v1/"+path+"?"+urllib.parse.urlencode(params)
+                  req=urllib.request.Request(url,headers={"X-Finnhub-Token":key})
+                  with urllib.request.urlopen(req,timeout=25) as r: return json.load(r)
+              except urllib.error.HTTPError as e: print(path,params,"HTTP",e.code)
+              except Exception as e: print(path,params,type(e).__name__)
+          candidates=[]
+          for term in ["FTSE Bursa Malaysia KLCI","KLCI","KLSE","FBMKLCI","Palm Oil","Soybean Oil"]:
+              d=get("search",q=term)
+              if isinstance(d,dict):
+                  for x in d.get("result",[])[:10]:
+                      print("SEARCH",term,x.get("symbol"),x.get("description"),x.get("type"))
+                      if term in ("KLCI","KLSE","FBMKLCI","FTSE Bursa Malaysia KLCI") and str(x.get("type","")).lower()=="index" and re.search(r"klci|kuala lumpur|malaysia",str(x.get("description","")),re.I): candidates.append(x["symbol"])
+          rows=get("stock/symbol",exchange="KL")
+          if isinstance(rows,list):
+              for x in rows:
+                  if re.search(r"klci|kuala lumpur composite|ftse bursa malaysia",str(x.get("description","")),re.I):
+                      print("CATALOG",x.get("symbol"),x.get("description"),x.get("type"))
+                      if str(x.get("type","")).lower()=="index": candidates.append(x["symbol"])
+          for symbol in list(dict.fromkeys(candidates+["^KLSE","FBMKLCI","KLSE","SPY"]))[:10]:
+              d=get("quote",symbol=symbol)
+              if isinstance(d,dict):
+                  valid=all(isinstance(d.get(k),(int,float)) and math.isfinite(d[k]) and d[k]>0 for k in ["c","pc","t"])
+                  print("QUOTE",symbol,"valid fields",valid,"timestamp",d.get("t"))
+          print("SPY is a connectivity control only, not a substitute index. No prices published.")
+          PY
