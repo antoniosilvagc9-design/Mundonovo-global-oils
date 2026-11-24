@@ -32,9 +32,9 @@ jobs:
           print("BNM rate types:", sorted({str(r.get("rate_type")) for r in rows}))
           pts={}
           for r in rows:
-              if str(r.get("rate_type","")).strip().lower() in ("middle","mid","middle rate") and valid(r.get("usd")):
+              if str(r.get("rate_type","")).strip().lower() in ("middle","mid","middle rate") and valid(r.get("USD")):
                   day=date.fromisoformat(r["date"]).isoformat()
-                  pts[day]=float(r["usd"])
+                  pts[day]=float(r["USD"])
           save("usd-myr-open-history.json","Bank Negara Malaysia · referência 12h, taxa média","https://data.gov.my/data-catalogue/exchangerates_daily_1200",[dict(date=k,value=pts[k]) for k in sorted(pts)],"MYR/USD","CC BY 4.0")
           end=date.today()
           start=end-timedelta(days=400)
