@@ -1221,7 +1221,8 @@ function show(m){
   info.textContent="Último valor: "+num(d.q.price)+" "+d.q.currency+" · Variação: "+(absolute>=0?"+":"")+num(absolute)+" ("+(d.pct>=0?"+":"")+num(d.pct)+"%) · Estado: "+d.state+" · Observação: "+d.q.as_of+" · Fonte: "+d.q.source+(d.q.delayed?" · Dados atrasados":"");
  }else info.textContent="Dado indisponível. Nenhuma cotação verificável foi integrada para este índice. Fuso: "+m.zone+".";
  detail.append(close,title,info);
- if(d.ok){const link=document.createElement("a");link.href=d.q.source_url;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Consultar fonte";detail.append(link)}
+ const officialSources={"dow":"https://www.spglobal.com/spdji/","sp500":"https://www.spglobal.com/spdji/","nasdaq":"https://www.nasdaq.com/","ibov":"https://www.b3.com.br/","cme":"https://www.cmegroup.com/","klci":"https://www.bursamalaysia.com/","nifty":"https://www.nseindia.com/","idx":"https://www.idx.co.id/","shcomp":"https://english.sse.com.cn/","nikkei":"https://indexes.nikkei.co.jp/en/nkave","hsi":"https://www.hsi.com.hk/","dax":"https://www.stoxx.com/"};
+ const link=document.createElement("a");link.href=d.ok?d.q.source_url:officialSources[m.id];link.target="_blank";link.rel="noopener noreferrer";link.textContent=d.ok?"Consultar fonte da cotação":"Consultar instituição oficial (sem integração automática)";detail.append(link);
  detail.hidden=false;
 }
 function render(){
@@ -1247,6 +1248,7 @@ async function load(){
  render();
 }
 render();load();
+setInterval(()=>{if(!document.hidden)load()},300000);
 })();
 </script>
 
