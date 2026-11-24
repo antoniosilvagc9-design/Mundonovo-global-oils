@@ -49,8 +49,12 @@ jobs:
                   print("DETAIL", slug, "records:", len(records))
                   if isinstance(records, list) and records:
                       print("Fields:", sorted(records[0]) if isinstance(records[0], dict) else "unknown")
-                      for item in records[:3]:
-                          print(json.dumps(item, ensure_ascii=True)[:2200])
+                      commodities = sorted({str(item.get("commodity", "")) for item in records if isinstance(item, dict)})
+                      print("COMMODITIES", slug, json.dumps(commodities))
+                      selected = [item for item in records if isinstance(item, dict) and re.search(r"soy|oil|canola|palm|sunflower|rapeseed", str(item.get("commodity", "")), re.I)]
+                      print("TARGET RECORDS", slug, len(selected))
+                      for item in selected[:12]:
+                          print("TARGET", slug, json.dumps(item, ensure_ascii=True)[:2200])
               except (urllib.error.URLError, ValueError, TypeError) as exc:
                   print("DETAIL", slug, "failed:", type(exc).__name__, getattr(exc, "code", ""))
           print("Diagnostic only. No prices published.")
