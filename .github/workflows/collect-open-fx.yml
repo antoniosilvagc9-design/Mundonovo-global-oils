@@ -27,9 +27,12 @@ jobs:
               print(name,len(points),points[-1])
           url="https://storage.data.gov.my/finsector/exr/daily_1200.csv"
           rows=csv.DictReader(io.StringIO(get(url).decode("utf-8-sig")))
+          rows=list(rows)
+          print("BNM columns:", list(rows[0]) if rows else [])
+          print("BNM rate types:", sorted({str(r.get("rate_type")) for r in rows}))
           pts={}
           for r in rows:
-              if r.get("rate_type")=="middle" and valid(r.get("usd")):
+              if str(r.get("rate_type","")).strip().lower() in ("middle","mid","middle rate") and valid(r.get("usd")):
                   day=date.fromisoformat(r["date"]).isoformat()
                   pts[day]=float(r["usd"])
           save("usd-myr-open-history.json","Bank Negara Malaysia · referência 12h, taxa média","https://data.gov.my/data-catalogue/exchangerates_daily_1200",[dict(date=k,value=pts[k]) for k in sorted(pts)],"MYR/USD","CC BY 4.0")
