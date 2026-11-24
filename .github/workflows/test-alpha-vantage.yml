@@ -1,0 +1,46 @@
+name: Test Alpha Vantage coverage
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Discover Malaysia and commodity coverage
+        env:
+          ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os,json,urllib.request,urllib.parse,urllib.error,time
+          key=os.environ["ALPHA_VANTAGE_API_KEY"]
+          def get(function,**params):
+              try:
+                  url="https://www.alphavantage.co/query?"+urllib.parse.urlencode(dict(function=function,apikey=key,**params))
+                  with urllib.request.urlopen(url,timeout=30) as r: d=json.load(r)
+                  for k in ["Error Message","Information","Note"]:
+                      if k in d:
+                          print(function,params,k,str(d[k]).replace(key,"[redacted]")[:300])
+                          return {}
+                  return d
+              except urllib.error.HTTPError as e: print(function,params,"HTTP",e.code)
+              except Exception as e: print(function,params,type(e).__name__)
+              return {}
+          for term in ["FTSE Bursa Malaysia KLCI","KLCI","KLSE","Bursa Malaysia","Soybean Oil","Palm Oil"]:
+              d=get("SYMBOL_SEARCH",keywords=term)
+              print("SEARCH",term,[(x.get("1. symbol"),x.get("2. name"),x.get("3. type"),x.get("4. region")) for x in d.get("bestMatches",[])[:8]])
+              time.sleep(13)
+          for symbol in ["^KLSE","KLSE"]:
+              d=get("GLOBAL_QUOTE",symbol=symbol)
+              q=d.get("Global Quote",{})
+              print("QUOTE",symbol,"returned",q.get("01. symbol"),"price present",bool(q.get("05. price")),"date",q.get("07. latest trading day"))
+              time.sleep(13)
+          for function in ["BRENT","ALL_COMMODITIES"]:
+              d=get(function,interval="monthly")
+              print(function,"series",d.get("name"),"unit",d.get("unit"),"latest date",next(iter(d.get("data",[])),{}).get("date"))
+              time.sleep(13)
+          d=get("CURRENCY_EXCHANGE_RATE",from_currency="USD",to_currency="BRL")
+          q=d.get("Realtime Currency Exchange Rate",{})
+          print("USD BRL","rate present",bool(q.get("5. Exchange Rate")),"as of",q.get("6. Last Refreshed"))
+          print("Diagnostic only; no prices published.")
+          PY
