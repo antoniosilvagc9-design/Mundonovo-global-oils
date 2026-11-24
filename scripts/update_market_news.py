@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Coleta RSS pública, sem scraping de matérias nem análise inventada."""
+import os
 import datetime as dt, email.utils, hashlib, json, pathlib, re, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/"data"/"market-news.json"
@@ -25,6 +26,38 @@ def fetch(topic):
 def parse_date(raw):
  try:return email.utils.parsedate_to_datetime(raw).astimezone(dt.timezone.utc)
  except (TypeError,ValueError,OverflowError):return None
+# Pixabay: busca imagens temáticas; a chave fica apenas no GitHub Actions.
+PIXABAY_TERMS={
+ "Óleo de palma":"oil palm plantation",
+ "Soja":"soybean field agriculture",
+ "Biodiesel":"biodiesel production",
+ "Logística":"cargo container port",
+ "Câmbio":"finance currency exchange",
+ "Petróleo":"oil refinery",
+ "Comércio exterior":"cargo shipping containers",
+}
+def pixabay_images(category, api_key):
+ if not api_key:
+  return []
+ params=urllib.parse.urlencode({
+  "key":api_key,"q":PIXABAY_TERMS.get(category,"global trade"),
+  "image_type":"photo","safesearch":"true","per_page":20,
+  "orientation":"horizontal",
+ })
+ try:
+  req=urllib.request.Request("https://pixabay.com/api/?"+params,
+      headers={"User-Agent":"TradingGlobalNews/1.0"})
+  with urllib.request.urlopen(req,timeout=12) as response:
+   data=json.load(response)
+  return [{"url":hit["webformatURL"],"page":hit.get("pageURL",""),
+           "author":hit.get("user","Pixabay")}
+          for hit in data.get("hits",[])
+          if str(hit.get("webformatURL","")).startswith("https://")]
+ except Exception as exc:
+  # Nunca registrar a URL da requisição, pois ela contém a chave.
+  print("Pixabay indisponível para",category,":",type(exc).__name__)
+  return []
+
 def main():
  items={};errors=[]
  for category,query in TOPICS:
