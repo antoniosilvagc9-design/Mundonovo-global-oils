@@ -1,6 +1,8 @@
 name: Collect global markets
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '15 21 * * 1-5'
 permissions:
   contents: write
 concurrency:
@@ -8,9 +10,10 @@ concurrency:
   cancel-in-progress: false
 jobs:
   collect:
+    if: github.event_name == 'workflow_dispatch' || vars.EODHD_PUBLIC_DISPLAY_AUTHORIZED == 'true' || vars.FMP_PUBLIC_DISPLAY_AUTHORIZED == 'true'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Collect market data
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
