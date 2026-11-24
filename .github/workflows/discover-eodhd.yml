@@ -1,0 +1,56 @@
+name: EODHD targeted discovery
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  discovery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Discover exact instruments and diagnose missing fields
+        env:
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os, json, urllib.request, urllib.parse, urllib.error, datetime, math, re
+          key=os.environ.get("EODHD_API_KEY")
+          if not key: raise SystemExit("Missing secret")
+          now=datetime.datetime.now(datetime.timezone.utc)
+          def get(path, **params):
+              try:
+                  url="https://eodhd.com/api/"+path+"?"+urllib.parse.urlencode(dict(api_token=key,fmt="json",**params))
+                  with urllib.request.urlopen(url,timeout=25) as r: return json.load(r)
+              except urllib.error.HTTPError as e: print(path,"HTTP",e.code)
+              except Exception as e: print(path,type(e).__name__)
+          def positive(x):
+              try: return math.isfinite(float(x)) and float(x)>0
+              except (ValueError,TypeError): return False
+          catalog=get("exchange-symbol-list/INDX")
+          malaysia=[]
+          if isinstance(catalog,list):
+              for x in catalog:
+                  name=str(x.get("Name","")); code=str(x.get("Code",""))
+                  if re.search(r"malay|kuala|klci|klse|e-mini|s&p 500 futures|soybean|wheat|corn futures",name+" "+code,re.I):
+                      print("MATCH",code,name,x.get("Type"),x.get("Exchange"))
+                  if re.search(r"klci|kuala lumpur composite|malaysia composite",name+" "+code,re.I) and x.get("Type","").upper()=="INDEX":
+                      if re.fullmatch(r"[A-Za-z0-9_-]+",code): malaysia.append(code)
+          exchanges=get("exchanges-list/")
+          if isinstance(exchanges,list):
+              for x in exchanges:
+                  if re.search(r"malaysia|chicago|commodity|futures",str(x.get("Name","")),re.I):
+                      print("EXCHANGE",x.get("Code"),x.get("Name"))
+          for term in ["KLCI","E-mini S&P 500","Soybean Oil"]:
+              rows=get("search/"+urllib.parse.quote(term,safe=""))
+              if isinstance(rows,list):
+                  for x in rows[:8]: print("SEARCH",term,x.get("Code"),x.get("Name"),x.get("Exchange"),x.get("Type"))
+          for code in list(dict.fromkeys(malaysia))[:2]+["SSEC","NSEI"]:
+              symbol=code+".INDX"
+              q=get("real-time/"+symbol)
+              if isinstance(q,dict):
+                  print(symbol,"quote identity",q.get("code")==symbol,"close valid",positive(q.get("close")),"previous close valid",positive(q.get("previousClose")),"timestamp valid",positive(q.get("timestamp")))
+              rows=get("eod/"+symbol,**{"from":(now.date()-datetime.timedelta(days=15)).isoformat(),"order":"d"})
+              if isinstance(rows,list):
+                  dates=sorted({x.get("date") for x in rows if isinstance(x,dict) and x.get("date") and positive(x.get("close"))},reverse=True)
+                  print(symbol,"valid session dates",dates[:2])
+          print("US500 identity still requires provider confirmation. No prices published.")
+          PY
