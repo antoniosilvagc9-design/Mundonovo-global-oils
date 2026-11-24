@@ -42,7 +42,7 @@ def pixabay_images(category, api_key):
   return []
  params=urllib.parse.urlencode({
   "key":api_key,"q":PIXABAY_TERMS.get(category,"global trade"),
-  "image_type":"photo","safesearch":"true","per_page":20,
+  "image_type":"photo","safesearch":"true","per_page":100,
   "orientation":"horizontal",
  })
  try:
@@ -93,40 +93,49 @@ def main():
   if OUT.exists():print("Nenhuma notícia nova; preservando último arquivo válido.");return
   raise RuntimeError("Nenhum RSS acessível com notícias verificáveis: "+"; ".join(errors))
  api_key=os.environ.get("PIXABAY_API_KEY", "").strip()
- if not api_key: raise RuntimeError("PIXABAY_API_KEY não configurada")
  image_dir=ROOT/"data"/"news-images"
  image_dir.mkdir(parents=True,exist_ok=True)
- pools={}; used=set(); count=0; attempts=0
+ base="https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/"
+ previous={}
+ try:
+  previous={n["id"]:n.get("image") for n in json.loads(OUT.read_text(encoding="utf-8"))["news"]}
+ except (OSError,ValueError,KeyError,TypeError): pass
+ used=set(); pools={}; attempts=0; count=0; stopped=False; failures=0
+ # Preserve existing assignments before allocating new photographs.
  for item in ordered:
-  if attempts>=3 or count>=3: break
+  photo=previous.get(item["id"])
+  if not isinstance(photo,dict): continue
+  url=photo.get("url",""); filename=url.removeprefix(base)
+  if url.startswith(base) and re.fullmatch(r"[a-f0-9]{24}\.jpg",filename) and filename not in used and (image_dir/filename).is_file():
+   item["image"]=photo; used.add(filename); count+=1
+ for item in ordered:
+  if "image" in item or stopped or not api_key: continue
   category=item["category"]
   if category not in pools: pools[category]=pixabay_images(category,api_key)
   for photo in pools[category]:
-   if attempts>=3 or count>=3: break
-   if photo["url"] in used: continue
-   used.add(photo["url"])
-   attempts+=1
    filename=hashlib.sha256(photo["url"].encode()).hexdigest()[:24]+".jpg"
+   if filename in used: continue
+   used.add(filename)
    target=image_dir/filename
    try:
     if not target.exists():
+     if attempts>=80: stopped=True; break
+     attempts+=1
      req=urllib.request.Request(photo["url"],headers={"User-Agent":"Mozilla/5.0","Accept":"image/jpeg,image/*;q=0.9,*/*;q=0.1"})
      with urllib.request.urlopen(req,timeout=15) as response:
       content=response.read(5_000_001)
      if len(content)>5_000_000 or not content.startswith(b"\xff\xd8"):
       print("Imagem inválida ou acima do limite"); continue
      target.write_bytes(content)
-    used.add(photo["url"])
-    item["image"]={"url":"https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/"+filename,"page":photo["page"],"author":photo["author"]}
-    count+=1
-    break
+    item["image"]={"url":base+filename,"page":photo["page"],"author":photo["author"]}
+    count+=1; failures=0; break
    except urllib.error.HTTPError as exc:
-    print("Falha no download: HTTP",exc.code)
-    if exc.code==429: attempts=3; break
-   except Exception as exc: print("Falha ao baixar imagem:",type(exc).__name__)
- print("Teste Pixabay: tentativas",attempts,"sucessos",count)
- print("Notícias com imagens:",count,"de",len(ordered))
- if not count: raise RuntimeError("Teste de imagens sem sucesso; feed anterior preservado")
+    print("Falha no download: HTTP",exc.code); failures+=1
+    if exc.code in (403,429) or failures>=5: stopped=True; break
+   except Exception as exc:
+    print("Falha ao baixar imagem:",type(exc).__name__); failures+=1
+    if failures>=5: stopped=True; break
+ print("Pixabay: downloads tentados",attempts,"notícias com imagens",count,"de",len(ordered))
  payload={"updated_at_utc":NOW.isoformat(),"feed":"Google News RSS — manchetes e metadados de terceiros","limitations":"Título no idioma original; resumo e análise não gerados sem acesso ao texto. Classificação heurística, não avaliação factual do impacto.","errors":errors,"news":ordered}
  OUT.parent.mkdir(exist_ok=True)
  OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
