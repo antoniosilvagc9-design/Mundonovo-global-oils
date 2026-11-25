@@ -1,0 +1,97 @@
+{
+  "updated_at": "2026-11-25T17:15:40.489217+00:00",
+  "source": "Finnhub / TradingView (gráficos)",
+  "coverage": "45 ações monitoradas; últimos preços disponíveis, não ranking mundial",
+  "commodity-down": [
+    {
+      "name": "MPC",
+      "tv": "NYSE:MPC",
+      "price": 345.48,
+      "change": -2.7255321545219036,
+      "timestamp": 1795626857
+    },
+    {
+      "name": "NEM",
+      "tv": "NYSE:NEM",
+      "price": 98.1,
+      "change": -1.5949443274149933,
+      "timestamp": 1795626891
+    },
+    {
+      "name": "FCX",
+      "tv": "NYSE:FCX",
+      "price": 47.11,
+      "change": -1.2989733919966384,
+      "timestamp": 1795626867
+    }
+  ],
+  "commodity-up": [
+    {
+      "name": "BG",
+      "tv": "NYSE:BG",
+      "price": 87.91,
+      "change": 4.580061860575779,
+      "timestamp": 1795626834
+    },
+    {
+      "name": "VALE",
+      "tv": "NYSE:VALE",
+      "price": 9.69,
+      "change": 3.415154749199578,
+      "timestamp": 1795626889
+    },
+    {
+      "name": "DE",
+      "tv": "NYSE:DE",
+      "price": 630.85,
+      "change": 2.7844760166840565,
+      "timestamp": 1795626827
+    }
+  ],
+  "general-down": [
+    {
+      "name": "NVDA",
+      "tv": "NASDAQ:NVDA",
+      "price": 144.84,
+      "change": -6.783369803063454,
+      "timestamp": 1795626891
+    },
+    {
+      "name": "INTC",
+      "tv": "NASDAQ:INTC",
+      "price": 51.16,
+      "change": -6.642335766423358,
+      "timestamp": 1795626914
+    },
+    {
+      "name": "AMD",
+      "tv": "NASDAQ:AMD",
+      "price": 387.18,
+      "change": -6.313064098531218,
+      "timestamp": 1795626914
+    }
+  ],
+  "general-up": [
+    {
+      "name": "BG",
+      "tv": "NYSE:BG",
+      "price": 87.91,
+      "change": 4.580061860575779,
+      "timestamp": 1795626834
+    },
+    {
+      "name": "VALE",
+      "tv": "NYSE:VALE",
+      "price": 9.69,
+      "change": 3.415154749199578,
+      "timestamp": 1795626889
+    },
+    {
+      "name": "DE",
+      "tv": "NYSE:DE",
+      "price": 630.85,
+      "change": 2.7844760166840565,
+      "timestamp": 1795626827
+    }
+  ]
+}
