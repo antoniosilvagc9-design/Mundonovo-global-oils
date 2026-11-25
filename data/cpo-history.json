@@ -5,62 +5,1818 @@
   "unit": "metric_tonne",
   "price_type": "official_settlement",
   "contract_policy": "highest_daily_volume",
-  "data_status": "partial_history",
+  "data_status": "90_sessions",
   "latest": {
-    "date": "2026-11-20",
-    "source_file": "derivative_trading_statistic_20261120 (1).csv",
-    "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261120.csv",
+    "date": "2026-11-24",
+    "source_file": "derivative_trading_statistic_20261124.csv",
+    "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261124.csv",
     "selected": {
-      "date": "2026-11-20",
+      "date": "2026-11-24",
       "contract_month": "202702",
-      "settlement_myr_per_tonne": 4217.0,
-      "previous_myr_per_tonne": 4333.0,
-      "change_myr_per_tonne": -116.0,
-      "volume": 38489,
-      "open_interest": 63969.0
+      "settlement_myr_per_tonne": 4240,
+      "previous_myr_per_tonne": 4141,
+      "change_myr_per_tonne": 99,
+      "open_price": 4150,
+      "high_price": 4244,
+      "low_price": 4079,
+      "volume": 40985,
+      "open_interest": 63172
     },
-    "total_fcpo_volume": 117017,
-    "contracts_count": 24
+    "total_fcpo_volume": 145466,
+    "total_fcpo_open_interest": 333038
   },
   "last_three": [
     {
       "date": "2026-11-20",
-      "source_file": "derivative_trading_statistic_20261120 (1).csv",
+      "source_file": "derivative_trading_statistic_20261120.csv",
       "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261120.csv",
       "selected": {
         "date": "2026-11-20",
         "contract_month": "202702",
-        "settlement_myr_per_tonne": 4217.0,
-        "previous_myr_per_tonne": 4333.0,
-        "change_myr_per_tonne": -116.0,
+        "settlement_myr_per_tonne": 4217,
+        "previous_myr_per_tonne": 4333,
+        "change_myr_per_tonne": -116,
+        "open_price": 4331,
+        "high_price": 4370,
+        "low_price": 4205,
         "volume": 38489,
-        "open_interest": 63969.0
+        "open_interest": 63969
       },
       "total_fcpo_volume": 117017,
-      "contracts_count": 24
+      "total_fcpo_open_interest": 338348
+    },
+    {
+      "date": "2026-11-23",
+      "source_file": "derivative_trading_statistic_20261123.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261123.csv",
+      "selected": {
+        "date": "2026-11-23",
+        "contract_month": "202702",
+        "settlement_myr_per_tonne": 4141,
+        "previous_myr_per_tonne": 4217,
+        "change_myr_per_tonne": -76,
+        "open_price": 4238,
+        "high_price": 4239,
+        "low_price": 4131,
+        "volume": 31948,
+        "open_interest": 62707
+      },
+      "total_fcpo_volume": 99374,
+      "total_fcpo_open_interest": 331107
+    },
+    {
+      "date": "2026-11-24",
+      "source_file": "derivative_trading_statistic_20261124.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261124.csv",
+      "selected": {
+        "date": "2026-11-24",
+        "contract_month": "202702",
+        "settlement_myr_per_tonne": 4240,
+        "previous_myr_per_tonne": 4141,
+        "change_myr_per_tonne": 99,
+        "open_price": 4150,
+        "high_price": 4244,
+        "low_price": 4079,
+        "volume": 40985,
+        "open_interest": 63172
+      },
+      "total_fcpo_volume": 145466,
+      "total_fcpo_open_interest": 333038
     }
   ],
-  "three_day_average": null,
+  "three_day_average": 4199.333333333333,
   "reference_30d": {
-    "target_date": "2026-10-21",
-    "session": null
+    "target_date": "2026-10-25",
+    "session": {
+      "date": "2026-10-23",
+      "source_file": "derivative_trading_statistic_20261023.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261023.csv",
+      "selected": {
+        "date": "2026-10-23",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4818,
+        "previous_myr_per_tonne": 4792,
+        "change_myr_per_tonne": 26,
+        "open_price": 4788,
+        "high_price": 4834,
+        "low_price": 4777,
+        "volume": 32125,
+        "open_interest": 71787
+      },
+      "total_fcpo_volume": 91028,
+      "total_fcpo_open_interest": 341106
+    }
   },
   "observations": [
     {
+      "date": "2026-07-16",
+      "source_file": "derivative_trading_statistic_20260716.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260716.csv",
+      "selected": {
+        "date": "2026-07-16",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4606,
+        "previous_myr_per_tonne": 4601,
+        "change_myr_per_tonne": 5,
+        "open_price": 4593,
+        "high_price": 4614,
+        "low_price": 4568,
+        "volume": 23591,
+        "open_interest": 51179
+      },
+      "total_fcpo_volume": 86078,
+      "total_fcpo_open_interest": 284166
+    },
+    {
+      "date": "2026-07-17",
+      "source_file": "derivative_trading_statistic_20260717.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260717.csv",
+      "selected": {
+        "date": "2026-07-17",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4597,
+        "previous_myr_per_tonne": 4606,
+        "change_myr_per_tonne": -9,
+        "open_price": 4604,
+        "high_price": 4608,
+        "low_price": 4575,
+        "volume": 24319,
+        "open_interest": 54660
+      },
+      "total_fcpo_volume": 64100,
+      "total_fcpo_open_interest": 286716
+    },
+    {
+      "date": "2026-07-20",
+      "source_file": "derivative_trading_statistic_20260720.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260720.csv",
+      "selected": {
+        "date": "2026-07-20",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4643,
+        "previous_myr_per_tonne": 4597,
+        "change_myr_per_tonne": 46,
+        "open_price": 4650,
+        "high_price": 4661,
+        "low_price": 4620,
+        "volume": 23096,
+        "open_interest": 55594
+      },
+      "total_fcpo_volume": 57818,
+      "total_fcpo_open_interest": 286708
+    },
+    {
+      "date": "2026-07-21",
+      "source_file": "derivative_trading_statistic_20260721.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260721.csv",
+      "selected": {
+        "date": "2026-07-21",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4610,
+        "previous_myr_per_tonne": 4643,
+        "change_myr_per_tonne": -33,
+        "open_price": 4644,
+        "high_price": 4650,
+        "low_price": 4588,
+        "volume": 30573,
+        "open_interest": 56946
+      },
+      "total_fcpo_volume": 78960,
+      "total_fcpo_open_interest": 285461
+    },
+    {
+      "date": "2026-07-22",
+      "source_file": "derivative_trading_statistic_20260722.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260722.csv",
+      "selected": {
+        "date": "2026-07-22",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4622,
+        "previous_myr_per_tonne": 4610,
+        "change_myr_per_tonne": 12,
+        "open_price": 4608,
+        "high_price": 4633,
+        "low_price": 4592,
+        "volume": 44355,
+        "open_interest": 63054
+      },
+      "total_fcpo_volume": 110403,
+      "total_fcpo_open_interest": 291077
+    },
+    {
+      "date": "2026-07-23",
+      "source_file": "derivative_trading_statistic_20260723.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260723.csv",
+      "selected": {
+        "date": "2026-07-23",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4710,
+        "previous_myr_per_tonne": 4622,
+        "change_myr_per_tonne": 88,
+        "open_price": 4619,
+        "high_price": 4721,
+        "low_price": 4616,
+        "volume": 44006,
+        "open_interest": 67838
+      },
+      "total_fcpo_volume": 137068,
+      "total_fcpo_open_interest": 300098
+    },
+    {
+      "date": "2026-07-24",
+      "source_file": "derivative_trading_statistic_20260724.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260724.csv",
+      "selected": {
+        "date": "2026-07-24",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4722,
+        "previous_myr_per_tonne": 4710,
+        "change_myr_per_tonne": 12,
+        "open_price": 4721,
+        "high_price": 4786,
+        "low_price": 4712,
+        "volume": 40507,
+        "open_interest": 71612
+      },
+      "total_fcpo_volume": 118819,
+      "total_fcpo_open_interest": 306540
+    },
+    {
+      "date": "2026-07-27",
+      "source_file": "derivative_trading_statistic_20260727.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260727.csv",
+      "selected": {
+        "date": "2026-07-27",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4673,
+        "previous_myr_per_tonne": 4722,
+        "change_myr_per_tonne": -49,
+        "open_price": 4675,
+        "high_price": 4696,
+        "low_price": 4663,
+        "volume": 26698,
+        "open_interest": 71912
+      },
+      "total_fcpo_volume": 62982,
+      "total_fcpo_open_interest": 306703
+    },
+    {
+      "date": "2026-07-28",
+      "source_file": "derivative_trading_statistic_20260728.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260728.csv",
+      "selected": {
+        "date": "2026-07-28",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4642,
+        "previous_myr_per_tonne": 4673,
+        "change_myr_per_tonne": -31,
+        "open_price": 4678,
+        "high_price": 4685,
+        "low_price": 4603,
+        "volume": 34308,
+        "open_interest": 69836
+      },
+      "total_fcpo_volume": 91139,
+      "total_fcpo_open_interest": 305445
+    },
+    {
+      "date": "2026-07-29",
+      "source_file": "derivative_trading_statistic_20260729.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260729.csv",
+      "selected": {
+        "date": "2026-07-29",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4664,
+        "previous_myr_per_tonne": 4642,
+        "change_myr_per_tonne": 22,
+        "open_price": 4643,
+        "high_price": 4681,
+        "low_price": 4633,
+        "volume": 31369,
+        "open_interest": 71158
+      },
+      "total_fcpo_volume": 77694,
+      "total_fcpo_open_interest": 302561
+    },
+    {
+      "date": "2026-07-30",
+      "source_file": "derivative_trading_statistic_20260730.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260730.csv",
+      "selected": {
+        "date": "2026-07-30",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4683,
+        "previous_myr_per_tonne": 4664,
+        "change_myr_per_tonne": 19,
+        "open_price": 4675,
+        "high_price": 4689,
+        "low_price": 4635,
+        "volume": 26569,
+        "open_interest": 69416
+      },
+      "total_fcpo_volume": 67530,
+      "total_fcpo_open_interest": 302397
+    },
+    {
+      "date": "2026-07-31",
+      "source_file": "derivative_trading_statistic_20260731.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260731.csv",
+      "selected": {
+        "date": "2026-07-31",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4643,
+        "previous_myr_per_tonne": 4683,
+        "change_myr_per_tonne": -40,
+        "open_price": 4674,
+        "high_price": 4686,
+        "low_price": 4627,
+        "volume": 27335,
+        "open_interest": 67970
+      },
+      "total_fcpo_volume": 64096,
+      "total_fcpo_open_interest": 301947
+    },
+    {
+      "date": "2026-08-03",
+      "source_file": "derivative_trading_statistic_20260803.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260803.csv",
+      "selected": {
+        "date": "2026-08-03",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4629,
+        "previous_myr_per_tonne": 4643,
+        "change_myr_per_tonne": -14,
+        "open_price": 4623,
+        "high_price": 4662,
+        "low_price": 4618,
+        "volume": 31657,
+        "open_interest": 66386
+      },
+      "total_fcpo_volume": 80947,
+      "total_fcpo_open_interest": 304293
+    },
+    {
+      "date": "2026-08-04",
+      "source_file": "derivative_trading_statistic_20260804.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260804.csv",
+      "selected": {
+        "date": "2026-08-04",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4696,
+        "previous_myr_per_tonne": 4629,
+        "change_myr_per_tonne": 67,
+        "open_price": 4626,
+        "high_price": 4702,
+        "low_price": 4614,
+        "volume": 34784,
+        "open_interest": 70270
+      },
+      "total_fcpo_volume": 96435,
+      "total_fcpo_open_interest": 305012
+    },
+    {
+      "date": "2026-08-05",
+      "source_file": "derivative_trading_statistic_20260805.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260805.csv",
+      "selected": {
+        "date": "2026-08-05",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4702,
+        "previous_myr_per_tonne": 4696,
+        "change_myr_per_tonne": 6,
+        "open_price": 4664,
+        "high_price": 4723,
+        "low_price": 4649,
+        "volume": 35433,
+        "open_interest": 71929
+      },
+      "total_fcpo_volume": 109598,
+      "total_fcpo_open_interest": 309063
+    },
+    {
+      "date": "2026-08-06",
+      "source_file": "derivative_trading_statistic_20260806.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260806.csv",
+      "selected": {
+        "date": "2026-08-06",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4686,
+        "previous_myr_per_tonne": 4702,
+        "change_myr_per_tonne": -16,
+        "open_price": 4705,
+        "high_price": 4715,
+        "low_price": 4665,
+        "volume": 26973,
+        "open_interest": 74161
+      },
+      "total_fcpo_volume": 85066,
+      "total_fcpo_open_interest": 312050
+    },
+    {
+      "date": "2026-08-07",
+      "source_file": "derivative_trading_statistic_20260807.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260807.csv",
+      "selected": {
+        "date": "2026-08-07",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4677,
+        "previous_myr_per_tonne": 4686,
+        "change_myr_per_tonne": -9,
+        "open_price": 4690,
+        "high_price": 4698,
+        "low_price": 4648,
+        "volume": 27592,
+        "open_interest": 73891
+      },
+      "total_fcpo_volume": 112427,
+      "total_fcpo_open_interest": 314839
+    },
+    {
+      "date": "2026-08-10",
+      "source_file": "derivative_trading_statistic_20260810.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260810.csv",
+      "selected": {
+        "date": "2026-08-10",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4723,
+        "previous_myr_per_tonne": 4677,
+        "change_myr_per_tonne": 46,
+        "open_price": 4705,
+        "high_price": 4735,
+        "low_price": 4684,
+        "volume": 30966,
+        "open_interest": 74855
+      },
+      "total_fcpo_volume": 97133,
+      "total_fcpo_open_interest": 313462
+    },
+    {
+      "date": "2026-08-11",
+      "source_file": "derivative_trading_statistic_20260811.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260811.csv",
+      "selected": {
+        "date": "2026-08-11",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4748,
+        "previous_myr_per_tonne": 4723,
+        "change_myr_per_tonne": 25,
+        "open_price": 4724,
+        "high_price": 4770,
+        "low_price": 4724,
+        "volume": 38499,
+        "open_interest": 75643
+      },
+      "total_fcpo_volume": 127603,
+      "total_fcpo_open_interest": 320164
+    },
+    {
+      "date": "2026-08-12",
+      "source_file": "derivative_trading_statistic_20260812.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260812.csv",
+      "selected": {
+        "date": "2026-08-12",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4697,
+        "previous_myr_per_tonne": 4748,
+        "change_myr_per_tonne": -51,
+        "open_price": 4730,
+        "high_price": 4734,
+        "low_price": 4688,
+        "volume": 32227,
+        "open_interest": 72725
+      },
+      "total_fcpo_volume": 110756,
+      "total_fcpo_open_interest": 319529
+    },
+    {
+      "date": "2026-08-13",
+      "source_file": "derivative_trading_statistic_20260813.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260813.csv",
+      "selected": {
+        "date": "2026-08-13",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4724,
+        "previous_myr_per_tonne": 4697,
+        "change_myr_per_tonne": 27,
+        "open_price": 4694,
+        "high_price": 4733,
+        "low_price": 4669,
+        "volume": 40202,
+        "open_interest": 71636
+      },
+      "total_fcpo_volume": 136861,
+      "total_fcpo_open_interest": 322540
+    },
+    {
+      "date": "2026-08-14",
+      "source_file": "derivative_trading_statistic_20260814.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260814.csv",
+      "selected": {
+        "date": "2026-08-14",
+        "contract_month": "202610",
+        "settlement_myr_per_tonne": 4710,
+        "previous_myr_per_tonne": 4724,
+        "change_myr_per_tonne": -14,
+        "open_price": 4710,
+        "high_price": 4760,
+        "low_price": 4702,
+        "volume": 31888,
+        "open_interest": 71793
+      },
+      "total_fcpo_volume": 109995,
+      "total_fcpo_open_interest": 327575
+    },
+    {
+      "date": "2026-08-17",
+      "source_file": "derivative_trading_statistic_20260817.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260817.csv",
+      "selected": {
+        "date": "2026-08-17",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4821,
+        "previous_myr_per_tonne": 4807,
+        "change_myr_per_tonne": 14,
+        "open_price": 4828,
+        "high_price": 4834,
+        "low_price": 4790,
+        "volume": 35867,
+        "open_interest": 55449
+      },
+      "total_fcpo_volume": 129862,
+      "total_fcpo_open_interest": 328798
+    },
+    {
+      "date": "2026-08-18",
+      "source_file": "derivative_trading_statistic_20260818.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260818.csv",
+      "selected": {
+        "date": "2026-08-18",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4860,
+        "previous_myr_per_tonne": 4821,
+        "change_myr_per_tonne": 39,
+        "open_price": 4820,
+        "high_price": 4872,
+        "low_price": 4796,
+        "volume": 42792,
+        "open_interest": 60385
+      },
+      "total_fcpo_volume": 165588,
+      "total_fcpo_open_interest": 333655
+    },
+    {
+      "date": "2026-08-19",
+      "source_file": "derivative_trading_statistic_20260819.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260819.csv",
+      "selected": {
+        "date": "2026-08-19",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4893,
+        "previous_myr_per_tonne": 4860,
+        "change_myr_per_tonne": 33,
+        "open_price": 4859,
+        "high_price": 4905,
+        "low_price": 4845,
+        "volume": 41672,
+        "open_interest": 64025
+      },
+      "total_fcpo_volume": 142285,
+      "total_fcpo_open_interest": 336503
+    },
+    {
+      "date": "2026-08-20",
+      "source_file": "derivative_trading_statistic_20260820.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260820.csv",
+      "selected": {
+        "date": "2026-08-20",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4961,
+        "previous_myr_per_tonne": 4893,
+        "change_myr_per_tonne": 68,
+        "open_price": 4885,
+        "high_price": 4977,
+        "low_price": 4884,
+        "volume": 39328,
+        "open_interest": 66460
+      },
+      "total_fcpo_volume": 124014,
+      "total_fcpo_open_interest": 338827
+    },
+    {
+      "date": "2026-08-21",
+      "source_file": "derivative_trading_statistic_20260821.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260821.csv",
+      "selected": {
+        "date": "2026-08-21",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 5018,
+        "previous_myr_per_tonne": 4961,
+        "change_myr_per_tonne": 57,
+        "open_price": 4967,
+        "high_price": 5031,
+        "low_price": 4960,
+        "volume": 37352,
+        "open_interest": 69304
+      },
+      "total_fcpo_volume": 121114,
+      "total_fcpo_open_interest": 342155
+    },
+    {
+      "date": "2026-08-24",
+      "source_file": "derivative_trading_statistic_20260824.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260824.csv",
+      "selected": {
+        "date": "2026-08-24",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4946,
+        "previous_myr_per_tonne": 5018,
+        "change_myr_per_tonne": -72,
+        "open_price": 5000,
+        "high_price": 5010,
+        "low_price": 4930,
+        "volume": 25968,
+        "open_interest": 71442
+      },
+      "total_fcpo_volume": 79190,
+      "total_fcpo_open_interest": 343401
+    },
+    {
+      "date": "2026-08-26",
+      "source_file": "derivative_trading_statistic_20260826.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260826.csv",
+      "selected": {
+        "date": "2026-08-26",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4852,
+        "previous_myr_per_tonne": 4946,
+        "change_myr_per_tonne": -94,
+        "open_price": 4922,
+        "high_price": 4927,
+        "low_price": 4847,
+        "volume": 33457,
+        "open_interest": 74212
+      },
+      "total_fcpo_volume": 114373,
+      "total_fcpo_open_interest": 348842
+    },
+    {
+      "date": "2026-08-27",
+      "source_file": "derivative_trading_statistic_20260827.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260827.csv",
+      "selected": {
+        "date": "2026-08-27",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4816,
+        "previous_myr_per_tonne": 4852,
+        "change_myr_per_tonne": -36,
+        "open_price": 4855,
+        "high_price": 4891,
+        "low_price": 4813,
+        "volume": 37356,
+        "open_interest": 69389
+      },
+      "total_fcpo_volume": 150594,
+      "total_fcpo_open_interest": 340146
+    },
+    {
+      "date": "2026-08-28",
+      "source_file": "derivative_trading_statistic_20260828.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260828.csv",
+      "selected": {
+        "date": "2026-08-28",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4894,
+        "previous_myr_per_tonne": 4816,
+        "change_myr_per_tonne": 78,
+        "open_price": 4825,
+        "high_price": 4908,
+        "low_price": 4799,
+        "volume": 35299,
+        "open_interest": 67076
+      },
+      "total_fcpo_volume": 121872,
+      "total_fcpo_open_interest": 332943
+    },
+    {
+      "date": "2026-09-01",
+      "source_file": "derivative_trading_statistic_20260901.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260901.csv",
+      "selected": {
+        "date": "2026-09-01",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4973,
+        "previous_myr_per_tonne": 4894,
+        "change_myr_per_tonne": 79,
+        "open_price": 4950,
+        "high_price": 5013,
+        "low_price": 4941,
+        "volume": 32032,
+        "open_interest": 71104
+      },
+      "total_fcpo_volume": 121554,
+      "total_fcpo_open_interest": 338107
+    },
+    {
+      "date": "2026-09-02",
+      "source_file": "derivative_trading_statistic_20260902.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260902.csv",
+      "selected": {
+        "date": "2026-09-02",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4958,
+        "previous_myr_per_tonne": 4973,
+        "change_myr_per_tonne": -15,
+        "open_price": 4964,
+        "high_price": 4985,
+        "low_price": 4918,
+        "volume": 31660,
+        "open_interest": 71327
+      },
+      "total_fcpo_volume": 94460,
+      "total_fcpo_open_interest": 339030
+    },
+    {
+      "date": "2026-09-03",
+      "source_file": "derivative_trading_statistic_20260903.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260903.csv",
+      "selected": {
+        "date": "2026-09-03",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4904,
+        "previous_myr_per_tonne": 4958,
+        "change_myr_per_tonne": -54,
+        "open_price": 4949,
+        "high_price": 5022,
+        "low_price": 4895,
+        "volume": 36806,
+        "open_interest": 70912
+      },
+      "total_fcpo_volume": 137648,
+      "total_fcpo_open_interest": 338419
+    },
+    {
+      "date": "2026-09-04",
+      "source_file": "derivative_trading_statistic_20260904.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260904.csv",
+      "selected": {
+        "date": "2026-09-04",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4929,
+        "previous_myr_per_tonne": 4904,
+        "change_myr_per_tonne": 25,
+        "open_price": 4909,
+        "high_price": 4946,
+        "low_price": 4881,
+        "volume": 29286,
+        "open_interest": 71066
+      },
+      "total_fcpo_volume": 116950,
+      "total_fcpo_open_interest": 334025
+    },
+    {
+      "date": "2026-09-07",
+      "source_file": "derivative_trading_statistic_20260907.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260907.csv",
+      "selected": {
+        "date": "2026-09-07",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4978,
+        "previous_myr_per_tonne": 4929,
+        "change_myr_per_tonne": 49,
+        "open_price": 4954,
+        "high_price": 4995,
+        "low_price": 4934,
+        "volume": 27805,
+        "open_interest": 71675
+      },
+      "total_fcpo_volume": 91019,
+      "total_fcpo_open_interest": 337392
+    },
+    {
+      "date": "2026-09-08",
+      "source_file": "derivative_trading_statistic_20260908.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260908.csv",
+      "selected": {
+        "date": "2026-09-08",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4976,
+        "previous_myr_per_tonne": 4978,
+        "change_myr_per_tonne": -2,
+        "open_price": 4983,
+        "high_price": 5017,
+        "low_price": 4956,
+        "volume": 33415,
+        "open_interest": 72575
+      },
+      "total_fcpo_volume": 120701,
+      "total_fcpo_open_interest": 336966
+    },
+    {
+      "date": "2026-09-09",
+      "source_file": "derivative_trading_statistic_20260909.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260909.csv",
+      "selected": {
+        "date": "2026-09-09",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4966,
+        "previous_myr_per_tonne": 4976,
+        "change_myr_per_tonne": -10,
+        "open_price": 4974,
+        "high_price": 4989,
+        "low_price": 4918,
+        "volume": 34306,
+        "open_interest": 74498
+      },
+      "total_fcpo_volume": 115278,
+      "total_fcpo_open_interest": 337207
+    },
+    {
+      "date": "2026-09-10",
+      "source_file": "derivative_trading_statistic_20260910.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260910.csv",
+      "selected": {
+        "date": "2026-09-10",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4885,
+        "previous_myr_per_tonne": 4966,
+        "change_myr_per_tonne": -81,
+        "open_price": 4971,
+        "high_price": 4976,
+        "low_price": 4872,
+        "volume": 38164,
+        "open_interest": 76507
+      },
+      "total_fcpo_volume": 149992,
+      "total_fcpo_open_interest": 340891
+    },
+    {
+      "date": "2026-09-11",
+      "source_file": "derivative_trading_statistic_20260911.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260911.csv",
+      "selected": {
+        "date": "2026-09-11",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4814,
+        "previous_myr_per_tonne": 4885,
+        "change_myr_per_tonne": -71,
+        "open_price": 4904,
+        "high_price": 4940,
+        "low_price": 4810,
+        "volume": 41782,
+        "open_interest": 77785
+      },
+      "total_fcpo_volume": 176318,
+      "total_fcpo_open_interest": 349906
+    },
+    {
+      "date": "2026-09-14",
+      "source_file": "derivative_trading_statistic_20260914.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260914.csv",
+      "selected": {
+        "date": "2026-09-14",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4850,
+        "previous_myr_per_tonne": 4814,
+        "change_myr_per_tonne": 36,
+        "open_price": 4830,
+        "high_price": 4883,
+        "low_price": 4829,
+        "volume": 39899,
+        "open_interest": 75383
+      },
+      "total_fcpo_volume": 147722,
+      "total_fcpo_open_interest": 351160
+    },
+    {
+      "date": "2026-09-15",
+      "source_file": "derivative_trading_statistic_20260915.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260915.csv",
+      "selected": {
+        "date": "2026-09-15",
+        "contract_month": "202611",
+        "settlement_myr_per_tonne": 4884,
+        "previous_myr_per_tonne": 4850,
+        "change_myr_per_tonne": 34,
+        "open_price": 4859,
+        "high_price": 4905,
+        "low_price": 4847,
+        "volume": 36983,
+        "open_interest": 68861
+      },
+      "total_fcpo_volume": 153885,
+      "total_fcpo_open_interest": 351861
+    },
+    {
+      "date": "2026-09-17",
+      "source_file": "derivative_trading_statistic_20260917.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260917.csv",
+      "selected": {
+        "date": "2026-09-17",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4936,
+        "previous_myr_per_tonne": 4998,
+        "change_myr_per_tonne": -62,
+        "open_price": 5027,
+        "high_price": 5049,
+        "low_price": 4907,
+        "volume": 38078,
+        "open_interest": 62991
+      },
+      "total_fcpo_volume": 137371,
+      "total_fcpo_open_interest": 348305
+    },
+    {
+      "date": "2026-09-18",
+      "source_file": "derivative_trading_statistic_20260918.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260918.csv",
+      "selected": {
+        "date": "2026-09-18",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4898,
+        "previous_myr_per_tonne": 4936,
+        "change_myr_per_tonne": -38,
+        "open_price": 4933,
+        "high_price": 4952,
+        "low_price": 4877,
+        "volume": 33745,
+        "open_interest": 62195
+      },
+      "total_fcpo_volume": 122261,
+      "total_fcpo_open_interest": 339480
+    },
+    {
+      "date": "2026-09-21",
+      "source_file": "derivative_trading_statistic_20260921.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260921.csv",
+      "selected": {
+        "date": "2026-09-21",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4857,
+        "previous_myr_per_tonne": 4898,
+        "change_myr_per_tonne": -41,
+        "open_price": 4910,
+        "high_price": 4918,
+        "low_price": 4845,
+        "volume": 33068,
+        "open_interest": 65469
+      },
+      "total_fcpo_volume": 87334,
+      "total_fcpo_open_interest": 333717
+    },
+    {
+      "date": "2026-09-22",
+      "source_file": "derivative_trading_statistic_20260922.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260922.csv",
+      "selected": {
+        "date": "2026-09-22",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4810,
+        "previous_myr_per_tonne": 4857,
+        "change_myr_per_tonne": -47,
+        "open_price": 4854,
+        "high_price": 4904,
+        "low_price": 4797,
+        "volume": 38702,
+        "open_interest": 66718
+      },
+      "total_fcpo_volume": 144008,
+      "total_fcpo_open_interest": 337546
+    },
+    {
+      "date": "2026-09-23",
+      "source_file": "derivative_trading_statistic_20260923.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260923.csv",
+      "selected": {
+        "date": "2026-09-23",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4768,
+        "previous_myr_per_tonne": 4810,
+        "change_myr_per_tonne": -42,
+        "open_price": 4818,
+        "high_price": 4828,
+        "low_price": 4723,
+        "volume": 45526,
+        "open_interest": 67351
+      },
+      "total_fcpo_volume": 173211,
+      "total_fcpo_open_interest": 334386
+    },
+    {
+      "date": "2026-09-24",
+      "source_file": "derivative_trading_statistic_20260924.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260924.csv",
+      "selected": {
+        "date": "2026-09-24",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4772,
+        "previous_myr_per_tonne": 4768,
+        "change_myr_per_tonne": 4,
+        "open_price": 4778,
+        "high_price": 4811,
+        "low_price": 4767,
+        "volume": 35502,
+        "open_interest": 69084
+      },
+      "total_fcpo_volume": 113518,
+      "total_fcpo_open_interest": 337668
+    },
+    {
+      "date": "2026-09-25",
+      "source_file": "derivative_trading_statistic_20260925.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260925.csv",
+      "selected": {
+        "date": "2026-09-25",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4672,
+        "previous_myr_per_tonne": 4772,
+        "change_myr_per_tonne": -100,
+        "open_price": 4768,
+        "high_price": 4775,
+        "low_price": 4650,
+        "volume": 42145,
+        "open_interest": 71708
+      },
+      "total_fcpo_volume": 146988,
+      "total_fcpo_open_interest": 342948
+    },
+    {
+      "date": "2026-09-28",
+      "source_file": "derivative_trading_statistic_20260928.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260928.csv",
+      "selected": {
+        "date": "2026-09-28",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4664,
+        "previous_myr_per_tonne": 4672,
+        "change_myr_per_tonne": -8,
+        "open_price": 4717,
+        "high_price": 4720,
+        "low_price": 4642,
+        "volume": 28186,
+        "open_interest": 71188
+      },
+      "total_fcpo_volume": 92860,
+      "total_fcpo_open_interest": 338007
+    },
+    {
+      "date": "2026-09-29",
+      "source_file": "derivative_trading_statistic_20260929.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260929.csv",
+      "selected": {
+        "date": "2026-09-29",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4624,
+        "previous_myr_per_tonne": 4664,
+        "change_myr_per_tonne": -40,
+        "open_price": 4656,
+        "high_price": 4676,
+        "low_price": 4606,
+        "volume": 34158,
+        "open_interest": 72329
+      },
+      "total_fcpo_volume": 114553,
+      "total_fcpo_open_interest": 339820
+    },
+    {
+      "date": "2026-09-30",
+      "source_file": "derivative_trading_statistic_20260930.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20260930.csv",
+      "selected": {
+        "date": "2026-09-30",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4610,
+        "previous_myr_per_tonne": 4624,
+        "change_myr_per_tonne": -14,
+        "open_price": 4643,
+        "high_price": 4654,
+        "low_price": 4578,
+        "volume": 36296,
+        "open_interest": 72421
+      },
+      "total_fcpo_volume": 131293,
+      "total_fcpo_open_interest": 340642
+    },
+    {
+      "date": "2026-10-01",
+      "source_file": "derivative_trading_statistic_20261001.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261001.csv",
+      "selected": {
+        "date": "2026-10-01",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4554,
+        "previous_myr_per_tonne": 4610,
+        "change_myr_per_tonne": -56,
+        "open_price": 4615,
+        "high_price": 4627,
+        "low_price": 4528,
+        "volume": 33688,
+        "open_interest": 71375
+      },
+      "total_fcpo_volume": 106630,
+      "total_fcpo_open_interest": 341306
+    },
+    {
+      "date": "2026-10-02",
+      "source_file": "derivative_trading_statistic_20261002.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261002.csv",
+      "selected": {
+        "date": "2026-10-02",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4535,
+        "previous_myr_per_tonne": 4554,
+        "change_myr_per_tonne": -19,
+        "open_price": 4544,
+        "high_price": 4550,
+        "low_price": 4491,
+        "volume": 42780,
+        "open_interest": 69058
+      },
+      "total_fcpo_volume": 164637,
+      "total_fcpo_open_interest": 334658
+    },
+    {
+      "date": "2026-10-05",
+      "source_file": "derivative_trading_statistic_20261005.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261005.csv",
+      "selected": {
+        "date": "2026-10-05",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4578,
+        "previous_myr_per_tonne": 4535,
+        "change_myr_per_tonne": 43,
+        "open_price": 4570,
+        "high_price": 4595,
+        "low_price": 4524,
+        "volume": 28545,
+        "open_interest": 71850
+      },
+      "total_fcpo_volume": 87313,
+      "total_fcpo_open_interest": 329113
+    },
+    {
+      "date": "2026-10-06",
+      "source_file": "derivative_trading_statistic_20261006.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261006.csv",
+      "selected": {
+        "date": "2026-10-06",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4560,
+        "previous_myr_per_tonne": 4578,
+        "change_myr_per_tonne": -18,
+        "open_price": 4574,
+        "high_price": 4621,
+        "low_price": 4537,
+        "volume": 30855,
+        "open_interest": 73622
+      },
+      "total_fcpo_volume": 92828,
+      "total_fcpo_open_interest": 329375
+    },
+    {
+      "date": "2026-10-07",
+      "source_file": "derivative_trading_statistic_20261007.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261007.csv",
+      "selected": {
+        "date": "2026-10-07",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4524,
+        "previous_myr_per_tonne": 4560,
+        "change_myr_per_tonne": -36,
+        "open_price": 4554,
+        "high_price": 4566,
+        "low_price": 4507,
+        "volume": 23904,
+        "open_interest": 74704
+      },
+      "total_fcpo_volume": 70612,
+      "total_fcpo_open_interest": 328944
+    },
+    {
+      "date": "2026-10-08",
+      "source_file": "derivative_trading_statistic_20261008.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261008.csv",
+      "selected": {
+        "date": "2026-10-08",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4661,
+        "previous_myr_per_tonne": 4524,
+        "change_myr_per_tonne": 137,
+        "open_price": 4506,
+        "high_price": 4684,
+        "low_price": 4501,
+        "volume": 47593,
+        "open_interest": 77578
+      },
+      "total_fcpo_volume": 160977,
+      "total_fcpo_open_interest": 333864
+    },
+    {
+      "date": "2026-10-09",
+      "source_file": "derivative_trading_statistic_20261009.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261009.csv",
+      "selected": {
+        "date": "2026-10-09",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4592,
+        "previous_myr_per_tonne": 4661,
+        "change_myr_per_tonne": -69,
+        "open_price": 4657,
+        "high_price": 4756,
+        "low_price": 4580,
+        "volume": 44709,
+        "open_interest": 79065
+      },
+      "total_fcpo_volume": 145207,
+      "total_fcpo_open_interest": 337867
+    },
+    {
+      "date": "2026-10-12",
+      "source_file": "derivative_trading_statistic_20261012.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261012.csv",
+      "selected": {
+        "date": "2026-10-12",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4637,
+        "previous_myr_per_tonne": 4592,
+        "change_myr_per_tonne": 45,
+        "open_price": 4675,
+        "high_price": 4680,
+        "low_price": 4608,
+        "volume": 28199,
+        "open_interest": 74163
+      },
+      "total_fcpo_volume": 103981,
+      "total_fcpo_open_interest": 333723
+    },
+    {
+      "date": "2026-10-13",
+      "source_file": "derivative_trading_statistic_20261013.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261013.csv",
+      "selected": {
+        "date": "2026-10-13",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4682,
+        "previous_myr_per_tonne": 4637,
+        "change_myr_per_tonne": 45,
+        "open_price": 4644,
+        "high_price": 4695,
+        "low_price": 4578,
+        "volume": 29565,
+        "open_interest": 74485
+      },
+      "total_fcpo_volume": 109117,
+      "total_fcpo_open_interest": 331818
+    },
+    {
+      "date": "2026-10-14",
+      "source_file": "derivative_trading_statistic_20261014.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261014.csv",
+      "selected": {
+        "date": "2026-10-14",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4700,
+        "previous_myr_per_tonne": 4682,
+        "change_myr_per_tonne": 18,
+        "open_price": 4681,
+        "high_price": 4750,
+        "low_price": 4675,
+        "volume": 35420,
+        "open_interest": 74286
+      },
+      "total_fcpo_volume": 124058,
+      "total_fcpo_open_interest": 335045
+    },
+    {
+      "date": "2026-10-15",
+      "source_file": "derivative_trading_statistic_20261015.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261015.csv",
+      "selected": {
+        "date": "2026-10-15",
+        "contract_month": "202612",
+        "settlement_myr_per_tonne": 4619,
+        "previous_myr_per_tonne": 4700,
+        "change_myr_per_tonne": -81,
+        "open_price": 4700,
+        "high_price": 4737,
+        "low_price": 4614,
+        "volume": 35868,
+        "open_interest": 69552
+      },
+      "total_fcpo_volume": 133700,
+      "total_fcpo_open_interest": 333964
+    },
+    {
+      "date": "2026-10-16",
+      "source_file": "derivative_trading_statistic_20261016.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261016.csv",
+      "selected": {
+        "date": "2026-10-16",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4769,
+        "previous_myr_per_tonne": 4725,
+        "change_myr_per_tonne": 44,
+        "open_price": 4727,
+        "high_price": 4785,
+        "low_price": 4681,
+        "volume": 42457,
+        "open_interest": 58544
+      },
+      "total_fcpo_volume": 133428,
+      "total_fcpo_open_interest": 339364
+    },
+    {
+      "date": "2026-10-19",
+      "source_file": "derivative_trading_statistic_20261019.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261019.csv",
+      "selected": {
+        "date": "2026-10-19",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4766,
+        "previous_myr_per_tonne": 4769,
+        "change_myr_per_tonne": -3,
+        "open_price": 4780,
+        "high_price": 4821,
+        "low_price": 4758,
+        "volume": 33336,
+        "open_interest": 61131
+      },
+      "total_fcpo_volume": 106846,
+      "total_fcpo_open_interest": 332357
+    },
+    {
+      "date": "2026-10-20",
+      "source_file": "derivative_trading_statistic_20261020.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261020.csv",
+      "selected": {
+        "date": "2026-10-20",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4817,
+        "previous_myr_per_tonne": 4766,
+        "change_myr_per_tonne": 51,
+        "open_price": 4762,
+        "high_price": 4852,
+        "low_price": 4746,
+        "volume": 44592,
+        "open_interest": 66799
+      },
+      "total_fcpo_volume": 142270,
+      "total_fcpo_open_interest": 334160
+    },
+    {
+      "date": "2026-10-21",
+      "source_file": "derivative_trading_statistic_20261021.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261021.csv",
+      "selected": {
+        "date": "2026-10-21",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4767,
+        "previous_myr_per_tonne": 4817,
+        "change_myr_per_tonne": -50,
+        "open_price": 4828,
+        "high_price": 4845,
+        "low_price": 4766,
+        "volume": 35406,
+        "open_interest": 68701
+      },
+      "total_fcpo_volume": 119654,
+      "total_fcpo_open_interest": 335340
+    },
+    {
+      "date": "2026-10-22",
+      "source_file": "derivative_trading_statistic_20261022.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261022.csv",
+      "selected": {
+        "date": "2026-10-22",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4792,
+        "previous_myr_per_tonne": 4767,
+        "change_myr_per_tonne": 25,
+        "open_price": 4760,
+        "high_price": 4800,
+        "low_price": 4736,
+        "volume": 29135,
+        "open_interest": 69154
+      },
+      "total_fcpo_volume": 78548,
+      "total_fcpo_open_interest": 336766
+    },
+    {
+      "date": "2026-10-23",
+      "source_file": "derivative_trading_statistic_20261023.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261023.csv",
+      "selected": {
+        "date": "2026-10-23",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4818,
+        "previous_myr_per_tonne": 4792,
+        "change_myr_per_tonne": 26,
+        "open_price": 4788,
+        "high_price": 4834,
+        "low_price": 4777,
+        "volume": 32125,
+        "open_interest": 71787
+      },
+      "total_fcpo_volume": 91028,
+      "total_fcpo_open_interest": 341106
+    },
+    {
+      "date": "2026-10-26",
+      "source_file": "derivative_trading_statistic_20261026.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261026.csv",
+      "selected": {
+        "date": "2026-10-26",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4789,
+        "previous_myr_per_tonne": 4818,
+        "change_myr_per_tonne": -29,
+        "open_price": 4793,
+        "high_price": 4803,
+        "low_price": 4767,
+        "volume": 21074,
+        "open_interest": 73431
+      },
+      "total_fcpo_volume": 54448,
+      "total_fcpo_open_interest": 342858
+    },
+    {
+      "date": "2026-10-27",
+      "source_file": "derivative_trading_statistic_20261027.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261027.csv",
+      "selected": {
+        "date": "2026-10-27",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4701,
+        "previous_myr_per_tonne": 4789,
+        "change_myr_per_tonne": -88,
+        "open_price": 4780,
+        "high_price": 4796,
+        "low_price": 4682,
+        "volume": 35888,
+        "open_interest": 73803
+      },
+      "total_fcpo_volume": 101228,
+      "total_fcpo_open_interest": 342815
+    },
+    {
+      "date": "2026-10-28",
+      "source_file": "derivative_trading_statistic_20261028.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261028.csv",
+      "selected": {
+        "date": "2026-10-28",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4685,
+        "previous_myr_per_tonne": 4701,
+        "change_myr_per_tonne": -16,
+        "open_price": 4698,
+        "high_price": 4738,
+        "low_price": 4681,
+        "volume": 24911,
+        "open_interest": 74560
+      },
+      "total_fcpo_volume": 66192,
+      "total_fcpo_open_interest": 338941
+    },
+    {
+      "date": "2026-10-29",
+      "source_file": "derivative_trading_statistic_20261029.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261029.csv",
+      "selected": {
+        "date": "2026-10-29",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4616,
+        "previous_myr_per_tonne": 4685,
+        "change_myr_per_tonne": -69,
+        "open_price": 4692,
+        "high_price": 4705,
+        "low_price": 4596,
+        "volume": 35031,
+        "open_interest": 74641
+      },
+      "total_fcpo_volume": 110477,
+      "total_fcpo_open_interest": 339545
+    },
+    {
+      "date": "2026-10-30",
+      "source_file": "derivative_trading_statistic_20261030.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261030.csv",
+      "selected": {
+        "date": "2026-10-30",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4681,
+        "previous_myr_per_tonne": 4616,
+        "change_myr_per_tonne": 65,
+        "open_price": 4610,
+        "high_price": 4693,
+        "low_price": 4605,
+        "volume": 35230,
+        "open_interest": 73213
+      },
+      "total_fcpo_volume": 97010,
+      "total_fcpo_open_interest": 337166
+    },
+    {
+      "date": "2026-11-02",
+      "source_file": "derivative_trading_statistic_20261102.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261102.csv",
+      "selected": {
+        "date": "2026-11-02",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4649,
+        "previous_myr_per_tonne": 4681,
+        "change_myr_per_tonne": -32,
+        "open_price": 4685,
+        "high_price": 4693,
+        "low_price": 4635,
+        "volume": 21534,
+        "open_interest": 72754
+      },
+      "total_fcpo_volume": 57464,
+      "total_fcpo_open_interest": 334103
+    },
+    {
+      "date": "2026-11-03",
+      "source_file": "derivative_trading_statistic_20261103.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261103.csv",
+      "selected": {
+        "date": "2026-11-03",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4551,
+        "previous_myr_per_tonne": 4649,
+        "change_myr_per_tonne": -98,
+        "open_price": 4644,
+        "high_price": 4656,
+        "low_price": 4543,
+        "volume": 31068,
+        "open_interest": 75728
+      },
+      "total_fcpo_volume": 88707,
+      "total_fcpo_open_interest": 337745
+    },
+    {
+      "date": "2026-11-04",
+      "source_file": "derivative_trading_statistic_20261104.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261104.csv",
+      "selected": {
+        "date": "2026-11-04",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4496,
+        "previous_myr_per_tonne": 4551,
+        "change_myr_per_tonne": -55,
+        "open_price": 4546,
+        "high_price": 4553,
+        "low_price": 4455,
+        "volume": 44989,
+        "open_interest": 73487
+      },
+      "total_fcpo_volume": 137168,
+      "total_fcpo_open_interest": 334908
+    },
+    {
+      "date": "2026-11-05",
+      "source_file": "derivative_trading_statistic_20261105.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261105.csv",
+      "selected": {
+        "date": "2026-11-05",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4377,
+        "previous_myr_per_tonne": 4496,
+        "change_myr_per_tonne": -119,
+        "open_price": 4487,
+        "high_price": 4504,
+        "low_price": 4374,
+        "volume": 37102,
+        "open_interest": 74726
+      },
+      "total_fcpo_volume": 97181,
+      "total_fcpo_open_interest": 336631
+    },
+    {
+      "date": "2026-11-06",
+      "source_file": "derivative_trading_statistic_20261106.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261106.csv",
+      "selected": {
+        "date": "2026-11-06",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4258,
+        "previous_myr_per_tonne": 4377,
+        "change_myr_per_tonne": -119,
+        "open_price": 4384,
+        "high_price": 4394,
+        "low_price": 4256,
+        "volume": 37864,
+        "open_interest": 73846
+      },
+      "total_fcpo_volume": 131922,
+      "total_fcpo_open_interest": 332934
+    },
+    {
+      "date": "2026-11-10",
+      "source_file": "derivative_trading_statistic_20261110.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261110.csv",
+      "selected": {
+        "date": "2026-11-10",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4256,
+        "previous_myr_per_tonne": 4258,
+        "change_myr_per_tonne": -2,
+        "open_price": 4232,
+        "high_price": 4287,
+        "low_price": 4088,
+        "volume": 51313,
+        "open_interest": 72235
+      },
+      "total_fcpo_volume": 153954,
+      "total_fcpo_open_interest": 334827
+    },
+    {
+      "date": "2026-11-11",
+      "source_file": "derivative_trading_statistic_20261111.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261111.csv",
+      "selected": {
+        "date": "2026-11-11",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4410,
+        "previous_myr_per_tonne": 4256,
+        "change_myr_per_tonne": 154,
+        "open_price": 4245,
+        "high_price": 4417,
+        "low_price": 4235,
+        "volume": 46984,
+        "open_interest": 68643
+      },
+      "total_fcpo_volume": 158137,
+      "total_fcpo_open_interest": 335671
+    },
+    {
+      "date": "2026-11-12",
+      "source_file": "derivative_trading_statistic_20261112.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261112.csv",
+      "selected": {
+        "date": "2026-11-12",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4440,
+        "previous_myr_per_tonne": 4410,
+        "change_myr_per_tonne": 30,
+        "open_price": 4414,
+        "high_price": 4482,
+        "low_price": 4389,
+        "volume": 47546,
+        "open_interest": 66918
+      },
+      "total_fcpo_volume": 156894,
+      "total_fcpo_open_interest": 337840
+    },
+    {
+      "date": "2026-11-13",
+      "source_file": "derivative_trading_statistic_20261113.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261113.csv",
+      "selected": {
+        "date": "2026-11-13",
+        "contract_month": "202701",
+        "settlement_myr_per_tonne": 4462,
+        "previous_myr_per_tonne": 4440,
+        "change_myr_per_tonne": 22,
+        "open_price": 4453,
+        "high_price": 4468,
+        "low_price": 4412,
+        "volume": 39350,
+        "open_interest": 61017
+      },
+      "total_fcpo_volume": 126549,
+      "total_fcpo_open_interest": 336793
+    },
+    {
+      "date": "2026-11-16",
+      "source_file": "derivative_trading_statistic_20261116.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261116.csv",
+      "selected": {
+        "date": "2026-11-16",
+        "contract_month": "202702",
+        "settlement_myr_per_tonne": 4547,
+        "previous_myr_per_tonne": 4565,
+        "change_myr_per_tonne": -18,
+        "open_price": 4532,
+        "high_price": 4578,
+        "low_price": 4437,
+        "volume": 30902,
+        "open_interest": 54267
+      },
+      "total_fcpo_volume": 105227,
+      "total_fcpo_open_interest": 340814
+    },
+    {
+      "date": "2026-11-17",
+      "source_file": "derivative_trading_statistic_20261117.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261117.csv",
+      "selected": {
+        "date": "2026-11-17",
+        "contract_month": "202702",
+        "settlement_myr_per_tonne": 4436,
+        "previous_myr_per_tonne": 4547,
+        "change_myr_per_tonne": -111,
+        "open_price": 4540,
+        "high_price": 4545,
+        "low_price": 4432,
+        "volume": 39792,
+        "open_interest": 58426
+      },
+      "total_fcpo_volume": 136280,
+      "total_fcpo_open_interest": 343322
+    },
+    {
+      "date": "2026-11-18",
+      "source_file": "derivative_trading_statistic_20261118.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261118.csv",
+      "selected": {
+        "date": "2026-11-18",
+        "contract_month": "202702",
+        "settlement_myr_per_tonne": 4386,
+        "previous_myr_per_tonne": 4436,
+        "change_myr_per_tonne": -50,
+        "open_price": 4440,
+        "high_price": 4444,
+        "low_price": 4340,
+        "volume": 40407,
+        "open_interest": 60521
+      },
+      "total_fcpo_volume": 122464,
+      "total_fcpo_open_interest": 341407
+    },
+    {
+      "date": "2026-11-19",
+      "source_file": "derivative_trading_statistic_20261119.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261119.csv",
+      "selected": {
+        "date": "2026-11-19",
+        "contract_month": "202702",
+        "settlement_myr_per_tonne": 4333,
+        "previous_myr_per_tonne": 4386,
+        "change_myr_per_tonne": -53,
+        "open_price": 4380,
+        "high_price": 4403,
+        "low_price": 4243,
+        "volume": 32463,
+        "open_interest": 62003
+      },
+      "total_fcpo_volume": 118412,
+      "total_fcpo_open_interest": 339587
+    },
+    {
       "date": "2026-11-20",
-      "source_file": "derivative_trading_statistic_20261120 (1).csv",
+      "source_file": "derivative_trading_statistic_20261120.csv",
       "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261120.csv",
       "selected": {
         "date": "2026-11-20",
         "contract_month": "202702",
-        "settlement_myr_per_tonne": 4217.0,
-        "previous_myr_per_tonne": 4333.0,
-        "change_myr_per_tonne": -116.0,
+        "settlement_myr_per_tonne": 4217,
+        "previous_myr_per_tonne": 4333,
+        "change_myr_per_tonne": -116,
+        "open_price": 4331,
+        "high_price": 4370,
+        "low_price": 4205,
         "volume": 38489,
-        "open_interest": 63969.0
+        "open_interest": 63969
       },
       "total_fcpo_volume": 117017,
-      "contracts_count": 24
+      "total_fcpo_open_interest": 338348
+    },
+    {
+      "date": "2026-11-23",
+      "source_file": "derivative_trading_statistic_20261123.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261123.csv",
+      "selected": {
+        "date": "2026-11-23",
+        "contract_month": "202702",
+        "settlement_myr_per_tonne": 4141,
+        "previous_myr_per_tonne": 4217,
+        "change_myr_per_tonne": -76,
+        "open_price": 4238,
+        "high_price": 4239,
+        "low_price": 4131,
+        "volume": 31948,
+        "open_interest": 62707
+      },
+      "total_fcpo_volume": 99374,
+      "total_fcpo_open_interest": 331107
+    },
+    {
+      "date": "2026-11-24",
+      "source_file": "derivative_trading_statistic_20261124.csv",
+      "source_url": "https://www.bursamalaysia.com/misc/missftp/derivative/derivative_trading_statistic_20261124.csv",
+      "selected": {
+        "date": "2026-11-24",
+        "contract_month": "202702",
+        "settlement_myr_per_tonne": 4240,
+        "previous_myr_per_tonne": 4141,
+        "change_myr_per_tonne": 99,
+        "open_price": 4150,
+        "high_price": 4244,
+        "low_price": 4079,
+        "volume": 40985,
+        "open_interest": 63172
+      },
+      "total_fcpo_volume": 145466,
+      "total_fcpo_open_interest": 333038
     }
   ],
   "note": "Rolling most-liquid contract: changes of contract may affect comparisons. Offline import only."
