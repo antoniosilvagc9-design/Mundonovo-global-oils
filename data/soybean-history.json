@@ -6,18 +6,18 @@
   "instrument": "Futuro contínuo de soja (vencimento pode mudar por rolagem)",
   "price_type": "Fechamento diário indicativo; não settlement oficial",
   "unit": "centavos de USD/bushel",
-  "updated_at_utc": "2026-11-24T14:19:05.879707+00:00",
+  "updated_at_utc": "2026-11-25T00:08:49.250221+00:00",
   "latest": {
     "date": "2026-11-24",
-    "value": 1232.5
+    "value": 1232.25
   },
   "baseline_30d": {
-    "date": "2026-10-23",
-    "value": 1256.5
+    "date": "2026-10-26",
+    "value": 1241.25
   },
-  "target_30d": "2026-10-25",
-  "change_30d_absolute": -24.0,
-  "change_30d_percent": -1.9101,
+  "target_30d": "2026-10-26",
+  "change_30d_absolute": -9.0,
+  "change_30d_percent": -0.7251,
   "last_three": [
     {
       "date": "2026-11-20",
@@ -29,7 +29,7 @@
     },
     {
       "date": "2026-11-24",
-      "value": 1232.5
+      "value": 1232.25
     }
   ],
   "converted_last_three": [
@@ -49,26 +49,26 @@
     },
     {
       "date": "2026-11-24",
-      "value": 1232.5,
-      "brl_per_60kg_bag": 158.5974,
+      "value": 1232.25,
+      "brl_per_60kg_bag": 159.1221,
       "ptax_date": "2026-11-24",
-      "ptax_brl_usd": 5.8368
+      "ptax_brl_usd": 5.8573
     }
   ],
   "converted_baseline_30d": {
-    "date": "2026-10-23",
-    "value": 1256.5,
-    "brl_per_60kg_bag": 139.5497,
-    "ptax_date": "2026-10-23",
-    "ptax_brl_usd": 5.0377
+    "date": "2026-10-26",
+    "value": 1241.25,
+    "brl_per_60kg_bag": 150.526,
+    "ptax_date": "2026-10-26",
+    "ptax_brl_usd": 5.5007
   },
   "converted_latest": {
     "date": "2026-11-24",
-    "value": 1232.5,
-    "brl_per_60kg_bag": 158.5974,
+    "value": 1232.25,
+    "brl_per_60kg_bag": 159.1221,
     "ptax_date": "2026-11-24",
-    "ptax_brl_usd": 5.8368
+    "ptax_brl_usd": 5.8573
   },
-  "average_last_three_brl_per_60kg_bag": 159.6099,
+  "average_last_three_brl_per_60kg_bag": 159.7848,
   "conversion_method": "CBOT US¢/bushel / 100 × (60 / 27.2155422) × PTAX venda BRL/USD na data ou último pregão anterior (até 5 dias)"
 }
