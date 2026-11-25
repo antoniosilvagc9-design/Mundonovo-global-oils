@@ -1,11 +1,11 @@
 {
   "climatepara": {
     "path": "data/supply-demand/images/climatepara.jpg",
-    "page": "https://pixabay.com/photos/forest-fire-angel-road-rain-flame-2828933/",
-    "author": "Angela_Yuriko_Smith",
-    "tags": "forest fire, angel, road, rain, flame, ghost, forest, fire, california, national, angeles, hills, wildfire, santa, southern, wilderness, clarita, los, grass, charred, nature, burn, scorch, public, sand, blackened, land, earth, scorched, smoke, grassland, county, desert, burned, tree, remains, heat, night, orange, danger, haze, panorama, environment, trail, warning, stone, outdoor, landscape, scenery, park, travel, mountain, mountaineering, heritage, recreation, angel, ghost, ghost, ghost, ghost, ghost",
-    "query": "wildfire forest",
-    "editorial_score": 7
+    "page": "https://pixabay.com/photos/dry-arid-yellow-nature-landscape-856544/",
+    "author": "Photocurry",
+    "tags": "dry, arid, yellow, nature, landscape, desert, drought, environment, hot, climate, soil, earth, land, crack, heat, ground, sand, mud, summer, weather, warming, brown, travel, global, natural, field, dirt, environmental, plant, agriculture, barren, sky, drought, drought, drought, drought, drought, soil, soil, ground",
+    "query": "drought dry field",
+    "editorial_score": 9
   },
   "cropstress": {
     "path": "data/supply-demand/images/cropstress.jpg",
@@ -57,18 +57,18 @@
   },
   "biodiesel": {
     "path": "data/supply-demand/images/biodiesel.jpg",
-    "page": "https://pixabay.com/photos/refinery-oil-industry-silhouette-3613522/",
+    "page": "https://pixabay.com/photos/refinery-oil-industry-gas-3613526/",
     "author": "SatyaPrem",
-    "tags": "refinery, oil, industry, silhouette, oil refinery, energy, factory, architecture, tube, factory building, wesseling, industrial plant, chemistry, chemical plant, refinery, refinery, refinery, refinery, oil, oil, oil, oil refinery, oil refinery, oil refinery, oil refinery, oil refinery, factory, factory, factory, chemical plant, chemical plant, chemical plant",
+    "tags": "refinery, oil, industry, gas, silhouette, oil refinery, crude oil, mineral oil, factory, architecture, production, petrochemicals, cables, pipeline, chemical, fuel, industrial plant, refinery, gas, oil refinery, crude oil, crude oil, crude oil, crude oil, crude oil, pipeline",
     "query": "oil refinery",
     "editorial_score": 6
   },
   "energy": {
     "path": "data/supply-demand/images/energy.jpg",
-    "page": "https://pixabay.com/photos/refinery-oil-industry-gas-3613526/",
+    "page": "https://pixabay.com/photos/refinery-oil-industry-silhouette-3613522/",
     "author": "SatyaPrem",
-    "tags": "refinery, oil, industry, gas, silhouette, oil refinery, crude oil, mineral oil, factory, architecture, production, petrochemicals, cables, pipeline, chemical, fuel, industrial plant, refinery, gas, oil refinery, crude oil, crude oil, crude oil, crude oil, crude oil, pipeline",
+    "tags": "refinery, oil, industry, silhouette, oil refinery, energy, factory, architecture, tube, factory building, wesseling, industrial plant, chemistry, chemical plant, refinery, refinery, refinery, refinery, oil, oil, oil, oil refinery, oil refinery, oil refinery, oil refinery, oil refinery, factory, factory, factory, chemical plant, chemical plant, chemical plant",
     "query": "petroleum refinery",
-    "editorial_score": 4
+    "editorial_score": 5
   }
 }
