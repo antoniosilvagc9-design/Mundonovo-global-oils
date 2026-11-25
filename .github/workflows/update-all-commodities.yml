@@ -165,11 +165,35 @@ jobs:
           Path("data/brent-open-history.json").write_text(json.dumps(dict(source="EIA via FRED",source_url="https://fred.stlouisfed.org/series/DCOILBRENTEU",unit="USD/barril",history=history),indent=2)+"\n")
           print(len(history),history[-1])
           PY
+      - name: WTI
+        id: source5
+        continue-on-error: true
+        env:
+          USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
+        run: |
+          python - <<'PY'
+          import csv,io,json,urllib.request,math
+          from datetime import date,timedelta
+          from pathlib import Path
+          url="https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd="+str(date.today()-timedelta(days=400))
+          with urllib.request.urlopen(url,timeout=90) as r: rows=list(csv.DictReader(io.StringIO(r.read().decode("utf-8-sig"))))
+          pts={}
+          for row in rows:
+              try:
+                  d=date.fromisoformat(row.get("observation_date") or row.get("DATE")).isoformat()
+                  v=float(row["DCOILWTICO"])
+                  if math.isfinite(v) and v>0: pts[d]=v
+              except (ValueError,TypeError,KeyError): continue
+          history=[dict(date=d,value=pts[d]) for d in sorted(pts)][-260:]
+          if len(history)<60: raise SystemExit("Insufficient WTI history")
+          Path("data/wti-open-history.json").write_text(json.dumps(dict(source="EIA via FRED",source_url="https://fred.stlouisfed.org/series/DCOILWTICO",unit="USD/barril",history=history),indent=2)+"\n")
+          print(len(history),history[-1])
+          PY
       - name: Publish validated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for f in usd-myr-open-history usd-brl-open-history usda-soybean-oil usda-soybean-meal usda-soybeans brent-open-history; do
+          for f in usd-myr-open-history usd-brl-open-history usda-soybean-oil usda-soybean-meal usda-soybeans brent-open-history wti-open-history; do
             if test -f "data/$f.json"; then git add "data/$f.json"; fi
           done
           if ! git diff --cached --quiet; then
@@ -184,5 +208,6 @@ jobs:
           echo "BCB: ${{ steps.source1.outcome }}"
           echo "USDA oil: ${{ steps.source2.outcome }}"
           echo "USDA meal and beans: ${{ steps.source3.outcome }}"
+          echo "WTI: ${{ steps.source5.outcome }}"
           echo "Brent: ${{ steps.source4.outcome }}"
-          if [[ "${{ steps.source0.outcome }} ${{ steps.source1.outcome }} ${{ steps.source2.outcome }} ${{ steps.source3.outcome }} ${{ steps.source4.outcome }}" == *failure* ]]; then exit 1; fi
+          if [[ "${{ steps.source0.outcome }} ${{ steps.source1.outcome }} ${{ steps.source2.outcome }} ${{ steps.source3.outcome }} ${{ steps.source4.outcome }} ${{ steps.source5.outcome }}" == *failure* ]]; then exit 1; fi
