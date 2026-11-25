@@ -5,6 +5,9 @@ key=os.environ.get("PIXABAY_API_KEY","").strip()
 if not key: raise SystemExit("PIXABAY_API_KEY ausente")
 # Each group must match at least one exact tag. Never infer geographic location.
 rules={
+"climatepara":(["forest wildfire smoke","wildfire forest","forest fire"],[{"wildfire","forest fire","fire"},{"forest","smoke","wildfire","forest fire"}],set()),
+"cropstress":(["cracked dry soil","drought cracked earth"],[{"drought","dry","arid"},{"soil","earth","cracked soil","cracks","ground"}],{"corn","cornfield"}),
+"rainrisk":(["dry reservoir drought","drought river low water"],[{"drought","dry","water shortage"},{"river","reservoir","lake","water","riverbed"}],set()),
 "indonesia":(["oil palm plantation","palm plantation","palm oil plantation"],[{"oil palm","palm oil"},{"plantation","palm plantation","oil palm plantation","aerial","palm trees","field"}],{"fruit","food","seed","nut"}),
 "para":(["oil palm plantation","palm plantation","palm trees agriculture"],[{"oil palm","palm oil"},{"plantation","palm plantation","oil palm plantation","aerial","palm trees","field"}],{"corn","cornfield","fruit","food","seed"}),
 "stocks":(["oil storage tanks","storage tank industrial","tank farm"],[{"tank","tanks","storage tank","storage tanks","oil tank","oil tanks","tank farm"},{"storage","oil","industrial","industry","refinery","tank farm","storage tank","storage tanks"}],set()),
