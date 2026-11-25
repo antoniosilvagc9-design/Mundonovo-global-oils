@@ -1,44 +1,50 @@
 {
   "indonesia": {
     "path": "data/supply-demand/images/indonesia.jpg",
-    "page": "https://pixabay.com/photos/fall-garden-leaf-fruit-food-palm-3306105/",
-    "author": "tristantan",
-    "tags": "fall, garden, 4k wallpaper, leaf, fruit, food, full hd wallpaper, windows wallpaper, palm, oil, background, ripe, red, produce, agriculture, crop, 4k wallpaper 1920x1080, commodity, free wallpaper, indonesia, asia, hd wallpaper, energy, wallpaper hd, agricultural, industrial, malaysia, palm oil, industry, cooking, free background, oil palm, freshness, laptop wallpaper, nut, cool backgrounds, resources, wallpaper 4k, seed, tropical, yellow, raw material, oil industry, harvest, healthy, organic, fresh, floral background, green, vegetarian, nature, vitamin, ingredient, beautiful wallpaper, desktop backgrounds, eating, raw, plant, nutrition, colorful, mac wallpaper, natural, green cooking, green energy, green eating, green nutrition, green industry",
-    "query": "oil palm plantation aerial"
+    "page": "https://pixabay.com/photos/oil-palm-tree-plantation-287878/",
+    "author": "sarangib",
+    "tags": "oil palm, nature, tree, plantation, horticulture, karnataka, india",
+    "query": "palm oil plantation",
+    "editorial_score": 2
   },
   "para": {
     "path": "data/supply-demand/images/para.jpg",
-    "page": "https://pixabay.com/photos/cornfield-dry-field-corn-4240209/",
-    "author": "Couleur",
-    "tags": "cornfield, dry, field, corn, young plants, agriculture, crops, food, corn plant, earth, drought, floor, plants, cultivation, nature, pxclimateaction, earth day, drought, drought, drought, drought, drought",
-    "query": "dry agricultural soil drought"
+    "page": "https://pixabay.com/photos/oil-palm-tree-plantation-287902/",
+    "author": "sarangib",
+    "tags": "oil palm, tree, plantation, horticulture, nature, karnataka, india",
+    "query": "palm trees agriculture",
+    "editorial_score": 2
   },
   "stocks": {
     "path": "data/supply-demand/images/stocks.jpg",
-    "page": "https://pixabay.com/photos/sunset-factory-buildings-6226244/",
-    "author": "tasukaran",
-    "tags": "sunset, nature, factory, buildings, illuminated, industrial, industrial plant, pollution",
-    "query": "industrial storage tanks"
+    "page": "https://pixabay.com/photos/storage-tanks-vats-metal-tanks-20959/",
+    "author": "PublicDomainPictures",
+    "tags": "storage tanks, vats, metal tanks, barrels, pastel tanks, tank, holding tank, liquid storage, storage, vat, industry, factory, container, fermentation, storage tanks, vat, vat, vat, vat, vat, fermentation, fermentation",
+    "query": "tank farm",
+    "editorial_score": 7
   },
   "china": {
     "path": "data/supply-demand/images/china.jpg",
-    "page": "https://pixabay.com/photos/port-container-ship-night-7418239/",
-    "author": "LoboStudioHamburg",
-    "tags": "port, container ship, night, cargo ship, freighter ship, ship, evening, hamburg, waltershofer hafen, germany, evening atmosphere, port, port, container ship, container ship, container ship, cargo ship, cargo ship, cargo ship, cargo ship, ship, ship, ship, ship, ship",
-    "query": "cargo ship port terminal"
+    "page": "https://pixabay.com/photos/sunset-tanker-oil-tanker-sea-654867/",
+    "author": "Sekau67",
+    "tags": "sunset, tanker, hd wallpaper, oil tanker, sea, free background, evening atmosphere, industry, industrial port, port, transport, crane, port cranes, container ship, windows wallpaper, ship, bay, evening glow, reflection, water, lake, mountain range, fog, haze, golden, gold tone, mountains, silhouette, heaven, free wallpaper, mysterious, mood, 4k wallpaper 1920x1080, morning mood, 4k wallpaper, backlighting, gibraltar, full hd wallpaper, andalusia, desktop backgrounds, wallpaper hd, the shade, shadow play, sunbeams, waves, lichtspiel, wallpaper 4k, mac wallpaper, cool backgrounds, heavenly mood, horizon, nature, orange, beautiful wallpaper, dawn, morning light, laptop wallpaper, background",
+    "query": "tanker port",
+    "editorial_score": 9
   },
   "biodiesel": {
     "path": "data/supply-demand/images/biodiesel.jpg",
-    "page": "https://pixabay.com/photos/industry-port-rhine-ship-9562428/",
-    "author": "Tho-Ge",
-    "tags": "industry, port, rhine, ship, industrial port, cologne",
-    "query": "industrial refinery tanks"
-  },
-  "energy": {
-    "path": "data/supply-demand/images/energy.jpg",
     "page": "https://pixabay.com/photos/refinery-oil-industry-silhouette-3613522/",
     "author": "SatyaPrem",
     "tags": "refinery, oil, industry, silhouette, oil refinery, energy, factory, architecture, tube, factory building, wesseling, industrial plant, chemistry, chemical plant, refinery, refinery, refinery, refinery, oil, oil, oil, oil refinery, oil refinery, oil refinery, oil refinery, oil refinery, factory, factory, factory, chemical plant, chemical plant, chemical plant",
-    "query": "oil refinery"
+    "query": "oil refinery",
+    "editorial_score": 6
+  },
+  "energy": {
+    "path": "data/supply-demand/images/energy.jpg",
+    "page": "https://pixabay.com/photos/refinery-oil-industry-gas-3613526/",
+    "author": "SatyaPrem",
+    "tags": "refinery, oil, industry, gas, silhouette, oil refinery, crude oil, mineral oil, factory, architecture, production, petrochemicals, cables, pipeline, chemical, fuel, industrial plant, refinery, gas, oil refinery, crude oil, crude oil, crude oil, crude oil, crude oil, pipeline",
+    "query": "petroleum refinery",
+    "editorial_score": 4
   }
 }
