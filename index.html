@@ -1403,6 +1403,7 @@ observer.observe(source,{childList:true,subtree:true,characterData:true});render
  const root=document.getElementById("tg15");if(!root)return;
  const defs=[
 {id:"cpo",label:"ÓLEO DE PALMA · FCPO",source:"BURSA MALAYSIA",unit:"MYR/t"},
+{id:"mpob",label:"ÓLEO DE PALMA · MPOB FÍSICO",source:"MPOB · SEMANAL · MALÁSIA",unit:"MYR/t"},
 {id:"meal",label:"FARELO DE SOJA · ILLINOIS",source:"USDA 3668 · MENSAL",unit:"USD/ton (EUA)"},
 {id:"soy",label:"SOJA FÍSICA · DAKOTA DO NORTE",source:"USDA 3878 · DIÁRIO",unit:"USD/bushel"},
 {id:"soyoil",label:"ÓLEO DE SOJA · ILLINOIS",source:"USDA · SEMANAL",unit:"US¢/lb"},
@@ -1492,6 +1493,7 @@ observer.observe(source,{childList:true,subtree:true,characterData:true});render
  });
  draw();
  load("data/cpo-history.json","cpo",d=>(d.observations||[]).map(p=>({date:p.date,value:Number(p.selected?.settlement_myr_per_tonne)})));
+ load("data/mpob-weekly-prices.json","mpob",d=>(d.months||[]).flatMap(m=>{const seen=new Set();return (m.records||[]).filter(x=>x.region==="MALAYSIA"&&x.product==="Crude Palm Oil (Local Delivered)").flatMap(x=>{const match=String(x.week_dates).match(/(\d+)(?:st|nd|rd|th)?\s*$/i);if(!match||seen.has(x.week))return [];seen.add(x.week);const date=m.month+"-"+match[1].padStart(2,"0");return Number.isFinite(x.price_rm_per_tonne)&&x.price_rm_per_tonne>0?[{date,value:x.price_rm_per_tonne}]:[]})}));
  load("data/usda-soybean-meal.json","meal",d=>d.history);
  load("data/usda-soybeans.json","soy",d=>d.history);
  load("data/usda-soybean-oil.json","soyoil",d=>d.history.map(x=>({date:x.period_end,value:x.price})));
