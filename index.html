@@ -1452,10 +1452,11 @@ observer.observe(source,{childList:true,subtree:true,characterData:true});render
   return a.filter(p=>p.date>=dt.toISOString().slice(0,10))}
  function renderChart(){
   const svg=document.getElementById("tg15-chart"),caption=document.getElementById("tg15-chart-caption"),def=defs.find(d=>d.id===state.selected),a=filtered();
+  const n=a.length, mx=(n-1)/2, my=n?a.reduce((v,p)=>v+p.value,0)/n:0, den=a.reduce((v,p,i)=>v+(i-mx)**2,0), slope=den?a.reduce((v,p,i)=>v+(i-mx)*(p.value-my),0)/den:0, trend=n>=2?a.map((p,i)=>my+slope*(i-mx)):[], trendNote=n>=2?" · TENDÊNCIA LINEAR "+(slope>0?"DE ALTA":slope<0?"DE BAIXA":"ESTÁVEL"):" · TENDÊNCIA INDISPONÍVEL";
   let tv=document.getElementById("tg15-history-tv");
   let host=document.getElementById("tg15-history-echart");
   if(!host){host=document.createElement("div");host.id="tg15-history-echart";host.style.cssText="width:100%;height:300px;min-width:0;display:none;background:#0e0e0e;border-radius:10px";svg.after(host)}
-  if(def.tv){
+  if(def.tv&&def.id!=="usdbrl"){
    host.style.display="none";
    svg.style.display="none";
    if(!tv){tv=document.createElement("div");tv.id="tg15-history-tv";svg.after(tv)}
@@ -1469,34 +1470,34 @@ observer.observe(source,{childList:true,subtree:true,characterData:true});render
     const credit=document.createElement("div");credit.className="tradingview-widget-copyright";
     const link=document.createElement("a");link.href="https://www.tradingview.com/symbols/"+def.tv.replace(":","-")+"/";link.target="_blank";link.rel="noopener noreferrer";link.textContent="Gráfico por TradingView";credit.append(link);
     const script=document.createElement("script");script.async=true;script.src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
-    script.textContent=JSON.stringify({symbols:[[def.label,key.toUpperCase()]],dateRanges:[range+"|"+(state.days===7?"60":"1D")],width:"100%",height:"100%",autosize:true,locale:"br",colorTheme:"dark",backgroundColor:"#121212",isTransparent:false,chartType:"line",lineColor:"#D4AF37",showVolume:false,showMA:false,hideDateRanges:true,scalePosition:"right",scaleMode:"Normal"});
+    script.textContent=JSON.stringify({symbols:[[def.label,def.tv]],dateRanges:[range+"|"+(state.days===7?"60":"1D")],width:"100%",height:"100%",autosize:true,locale:"br",colorTheme:"dark",backgroundColor:"#121212",isTransparent:false,chartType:"line",lineColor:"#D4AF37",showVolume:false,showMA:false,hideDateRanges:true,scalePosition:"right",scaleMode:"Normal"});
     w.append(inner,credit,script);tv.append(w);
    }
-   caption.textContent="TRADINGVIEW · "+(state.days===7?"1 SEMANA":state.days===30?"1 MÊS":"3 MESES")+" · HISTÓRICO EXIBIDO PELO FORNECEDOR";return;
+   caption.textContent="TRADINGVIEW · "+(state.days===7?"1 SEMANA":state.days===30?"1 MÊS":"3 MESES")+" · HISTÓRICO EXIBIDO PELO FORNECEDOR · REGRESSÃO INDISPONÍVEL NO WIDGET";return;
   }
   if(tv)tv.style.display="none";svg.style.display="";host.style.display="none";
   if(window.echarts&&a.length){
    try{
     host.style.display="block";svg.style.display="none";
     const chart=echarts.getInstanceByDom(host)||echarts.init(host,"dark");
-    chart.setOption({backgroundColor:"transparent",animation:false,grid:{left:20,right:24,top:24,bottom:30,containLabel:true},tooltip:{trigger:"axis",confine:true,axisPointer:{type:"line",lineStyle:{color:"#aaa",type:"dashed"}},formatter:items=>{const item=items[0];return esc(dateBR(item.axisValue))+"<br/>"+item.marker+esc(num(item.value)+" "+def.unit)}},xAxis:{type:"category",boundaryGap:false,data:a.map(p=>p.date),axisLabel:{color:"#aaa",formatter:dateBR}},yAxis:{type:"value",scale:true,axisLabel:{color:"#aaa",formatter:num},splitLine:{lineStyle:{color:"#333",type:"dashed"}}},series:[{name:def.label,type:"line",data:a.map(p=>p.value),symbol:"circle",symbolSize:6,showSymbol:a.length<=30,lineStyle:{color:"#D4AF37",width:2.5},itemStyle:{color:"#D4AF37"},emphasis:{scale:1.5}}]},true);
+    chart.setOption({backgroundColor:"transparent",animation:false,grid:{left:20,right:24,top:42,bottom:30,containLabel:true},legend:{top:4,textStyle:{color:"#ccc"},data:[def.label,"Tendência linear"]},tooltip:{trigger:"axis",confine:true,axisPointer:{type:"line",lineStyle:{color:"#aaa",type:"dashed"}},formatter:items=>{return esc(dateBR(items[0].axisValue))+"<br/>"+items.map(item=>item.marker+esc(item.seriesName+": "+num(item.value)+" "+def.unit)).join("<br/>")}},xAxis:{type:"category",boundaryGap:false,data:a.map(p=>p.date),axisLabel:{color:"#aaa",formatter:dateBR}},yAxis:{type:"value",scale:true,axisLabel:{color:"#aaa",formatter:num},splitLine:{lineStyle:{color:"#333",type:"dashed"}}},series:[{name:def.label,type:"line",data:a.map(p=>p.value),symbol:"circle",symbolSize:6,showSymbol:a.length<=30,lineStyle:{color:"#D4AF37",width:2.5},itemStyle:{color:"#D4AF37"},emphasis:{scale:1.5}},...(trend.length?[{name:"Tendência linear",type:"line",data:trend,symbol:"none",lineStyle:{color:"#eee",type:"dashed",width:2},itemStyle:{color:"#eee"}}]:[])]},true);
     if(!host.dataset.observed&&window.ResizeObserver){new ResizeObserver(()=>{if(host.clientWidth)chart.resize()}).observe(host);host.dataset.observed="1"}
     chart.resize();
     const c=a.length>1&&a[0].value!==0?(a.at(-1).value/a[0].value-1)*100:null;
-    caption.textContent=def.source+" · "+a.length+" OBSERVAÇÕES · "+dateBR(a[0].date)+" A "+dateBR(a.at(-1).date)+" · INICIAL "+num(a[0].value)+" · FINAL "+num(a.at(-1).value)+" "+def.unit+(c===null?" · SEM VARIAÇÃO CALCULÁVEL":" · VARIAÇÃO "+(c>0?"+":"")+num(c)+"%");
+    caption.textContent=(def.id==="usdbrl"?"BCB · PTAX VENDA":def.source)+" · "+a.length+" OBSERVAÇÕES · "+dateBR(a[0].date)+" A "+dateBR(a.at(-1).date)+" · INICIAL "+num(a[0].value)+" · FINAL "+num(a.at(-1).value)+" "+def.unit+(c===null?" · SEM VARIAÇÃO CALCULÁVEL":" · VARIAÇÃO "+(c>0?"+":"")+num(c)+"%")+trendNote;
     return;
    }catch(e){host.style.display="none";svg.style.display=""}
   }
   if(a.length===1){svg.innerHTML='<circle cx="400" cy="130" r="6" fill="#D4AF37"/><text x="400" y="100" text-anchor="middle" fill="#D4AF37" font-size="18">'+esc(num(a[0].value)+" "+def.unit)+'</text><text x="400" y="160" text-anchor="middle" fill="#B8B8B8" font-size="14">'+dateBR(a[0].date)+'</text>';caption.textContent=def.source+" · 1 OBSERVAÇÃO DISPONÍVEL · SEM EVOLUÇÃO CALCULÁVEL"+(def.id==="meal"?" · SÉRIE MENSAL: SELECIONE 90 DIAS":"");return}
   if(a.length<2){svg.innerHTML='<text x="400" y="130" text-anchor="middle" fill="#B8B8B8" font-size="18">HISTÓRICO INSUFICIENTE PARA ESTE PERÍODO</text>';caption.textContent=def.source+" · "+a.length+" OBSERVAÇÃO(ÕES) · SEM INTERPOLAÇÃO";return}
-  const min=Math.min(...a.map(p=>p.value)),max=Math.max(...a.map(p=>p.value)),span=max-min||1;
+  const min=Math.min(...a.map(p=>p.value),...trend),max=Math.max(...a.map(p=>p.value),...trend),span=max-min||1;
   const xy=a.map((p,i)=>({x:60+i*710/(a.length-1),y:210-(p.value-min)/span*160,p}));
   const path=xy.map((p,i)=>(i?"L":"M")+p.x.toFixed(2)+" "+p.y.toFixed(2)).join(" ");
-  svg.innerHTML='<path d="M60 50H770 M60 130H770 M60 210H770" stroke="#333" stroke-dasharray="4 6" fill="none"/><path d="'+path+'" stroke="#D4AF37" stroke-width="3" fill="none" stroke-linejoin="round"/>'+
+  svg.innerHTML='<path d="M60 50H770 M60 130H770 M60 210H770" stroke="#333" stroke-dasharray="4 6" fill="none"/><path d="'+path+'" stroke="#D4AF37" stroke-width="3" fill="none" stroke-linejoin="round"/><path d="M60 '+(210-(trend[0]-min)/span*160)+' L770 '+(210-(trend.at(-1)-min)/span*160)+'" stroke="#eee" stroke-width="2" stroke-dasharray="8 6" fill="none"/>'+
    xy.map(({x,y,p})=>'<circle cx="'+x+'" cy="'+y+'" r="5" fill="#fff"><title>'+esc(dateBR(p.date)+" · "+num(p.value)+" "+def.unit)+'</title></circle>').join("")+
    '<text x="60" y="240" fill="#B8B8B8" font-size="14">'+dateBR(a[0].date)+'</text><text x="770" y="240" text-anchor="end" fill="#B8B8B8" font-size="14">'+dateBR(a.at(-1).date)+'</text><text x="65" y="38" fill="#D4AF37" font-size="14">'+esc(num(max)+" "+def.unit)+'</text><text x="65" y="202" fill="#B8B8B8" font-size="14">'+esc(num(min))+'</text>';
   const c=(a.at(-1).value/a[0].value-1)*100;
-  caption.textContent=def.source+" · "+a.length+" OBSERVAÇÕES · INICIAL "+num(a[0].value)+" · FINAL "+num(a.at(-1).value)+" "+def.unit+" · VARIAÇÃO "+(c>0?"+":"")+num(c)+"%";
+  caption.textContent=def.source+" · "+a.length+" OBSERVAÇÕES · INICIAL "+num(a[0].value)+" · FINAL "+num(a.at(-1).value)+" "+def.unit+" · VARIAÇÃO "+(c>0?"+":"")+num(c)+"%"+trendNote;
  }
  select.innerHTML=defs.map(d=>'<option value="'+d.id+'">'+esc(d.label)+'</option>').join("");
  select.addEventListener("change",()=>{state.selected=select.value;renderChart()});
@@ -1521,6 +1522,7 @@ observer.observe(source,{childList:true,subtree:true,characterData:true});render
  load("data/usda-soybean-meal.json","meal",d=>d.history);
  load("data/usda-soybeans.json","soy",d=>d.history);
  load("data/usda-soybean-oil.json","soyoil",d=>d.history.map(x=>({date:x.period_end,value:x.price})));
+ load("data/usd-brl-open-history.json","usdbrl",d=>d.history);
  load("data/usd-myr-open-history.json","usdmyr",d=>d.history);
  load("data/wti-open-history.json","wti",d=>d.history);
 })();
