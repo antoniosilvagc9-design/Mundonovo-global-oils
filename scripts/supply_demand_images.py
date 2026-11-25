@@ -12,7 +12,7 @@ rules={
 "para":(["oil palm plantation","palm plantation","palm trees agriculture"],[{"oil palm","palm oil"},{"plantation","palm plantation","oil palm plantation","aerial","palm trees","field"}],{"corn","cornfield","fruit","food","seed"}),
 "stocks":(["oil storage tanks","storage tank industrial","tank farm"],[{"tank","tanks","storage tank","storage tanks","oil tank","oil tanks","tank farm"},{"storage","oil","industrial","industry","refinery","tank farm","storage tank","storage tanks"}],set()),
 "china":(["oil tanker ship","tanker port","cargo ship port"],[{"ship","cargo ship","tanker","oil tanker","container ship"},{"port","harbor","harbour","terminal","tanker","oil tanker"}],set()),
-"biodiesel":(["biodiesel plant","biofuel refinery","oil refinery"],[{"biodiesel","biofuel","refinery","oil refinery"},{"industry","industrial","plant","factory","refinery","oil refinery"}],{"port","ship"}),
+"biodiesel":(["biodiesel fuel","biofuel vegetable oil","vegetable oil bottle","rapeseed oil"],[{"biodiesel","biofuel","vegetable oil","rapeseed oil","cooking oil","oil"},{"fuel","biofuel","biodiesel","bottle","vegetable oil","rapeseed","cooking oil"}],{"refinery","oil refinery","port","ship","petroleum"}),
 "energy":(["oil refinery","petroleum refinery"],[{"refinery","oil refinery"},{"oil","petroleum","energy","oil refinery"}],set())
 }
 def tags(h): return {t.strip().lower() for t in h.get("tags","").split(",")}
@@ -28,6 +28,7 @@ p=root/"manifest.json"
 old=json.loads(p.read_text()) if p.exists() else {}
 manifest={}
 used=set()
+used_authors=set()
 for name,(queries,groups,exclude) in rules.items():
     candidates={}
     try:
@@ -37,20 +38,22 @@ for name,(queries,groups,exclude) in rules.items():
                 v=score(h,groups,exclude)
                 if v>=0: candidates[h["id"]]=(v,h,q)
         for v,h,q in sorted(candidates.values(),key=lambda x:x[0],reverse=True):
-            if h["pageURL"] in used: continue
+            if h["pageURL"] in used or h["user"] in used_authors: continue
             data=get(h["largeImageURL"])
             if not data.startswith(b"\xff\xd8"): continue
             (root/(name+".jpg")).write_bytes(data)
             manifest[name]={"path":"data/supply-demand/images/"+name+".jpg","page":h["pageURL"],"author":h["user"],"tags":h["tags"],"query":q,"editorial_score":v}
             used.add(h["pageURL"])
+            used_authors.add(h["user"])
             print(name,"accepted",h["id"],"score",v,flush=True)
             break
     except urllib.error.HTTPError as e: print(name,"HTTP",e.code,flush=True)
     except Exception as e: print(name,type(e).__name__,flush=True)
     if name not in manifest:
         previous=old.get(name,{})
-        if previous.get("page") and previous["page"] not in used and score(previous,groups,exclude)>=0 and (root/(name+".jpg")).exists():
+        if previous.get("page") and previous["page"] not in used and previous.get("author") not in used_authors and score(previous,groups,exclude)>=0 and (root/(name+".jpg")).exists():
             manifest[name]=previous
             used.add(previous["page"])
+            used_authors.add(previous.get("author"))
         else: print(name,"no relevant image; omit from manifest",flush=True)
 p.write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
