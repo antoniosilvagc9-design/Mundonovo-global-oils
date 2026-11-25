@@ -1,0 +1,22 @@
+name: Supply demand illustrations
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 10 * * *'
+permissions:
+  contents: write
+jobs:
+  images:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect thematic images
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: python scripts/supply_demand_images.py
+      - name: Publish images
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add data/supply-demand/images
+          git diff --cached --quiet || (git commit -m "Refresh thematic supply images" && git push)
