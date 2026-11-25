@@ -1,4 +1,28 @@
 {
+  "climatepara": {
+    "path": "data/supply-demand/images/climatepara.jpg",
+    "page": "https://pixabay.com/photos/forest-fire-angel-road-rain-flame-2828933/",
+    "author": "Angela_Yuriko_Smith",
+    "tags": "forest fire, angel, road, rain, flame, ghost, forest, fire, california, national, angeles, hills, wildfire, santa, southern, wilderness, clarita, los, grass, charred, nature, burn, scorch, public, sand, blackened, land, earth, scorched, smoke, grassland, county, desert, burned, tree, remains, heat, night, orange, danger, haze, panorama, environment, trail, warning, stone, outdoor, landscape, scenery, park, travel, mountain, mountaineering, heritage, recreation, angel, ghost, ghost, ghost, ghost, ghost",
+    "query": "wildfire forest",
+    "editorial_score": 7
+  },
+  "cropstress": {
+    "path": "data/supply-demand/images/cropstress.jpg",
+    "page": "https://pixabay.com/photos/arid-cracked-erosion-cracks-desert-21799/",
+    "author": "PublicDomainPictures",
+    "tags": "arid, desktop backgrounds, cracked, 4k wallpaper 1920x1080, free background, erosion, cool backgrounds, laptop wallpaper, cracks, wallpaper 4k, desert, drought, dirt, dry, background, earth, environment, ground, land, mac wallpaper, wallpaper hd, nature, free wallpaper, windows wallpaper, pattern, beautiful wallpaper, rough, hd wallpaper, full hd wallpaper, 4k wallpaper, soil, surface, terrain, texture, brown background, brown earth",
+    "query": "drought cracked earth",
+    "editorial_score": 9
+  },
+  "rainrisk": {
+    "path": "data/supply-demand/images/rainrisk.jpg",
+    "page": "https://pixabay.com/photos/drought-barren-irrigation-dry-4133538/",
+    "author": "pen_ash",
+    "tags": "drought, barren, irrigation, dry, landscape, nature, water, land, lake, river, earth, dirt, dusty, mud, environment, brown, dryness, drought, drought, drought, drought, drought, irrigation",
+    "query": "dry reservoir drought",
+    "editorial_score": 7
+  },
   "indonesia": {
     "path": "data/supply-demand/images/indonesia.jpg",
     "page": "https://pixabay.com/photos/oil-palm-tree-plantation-287878/",
