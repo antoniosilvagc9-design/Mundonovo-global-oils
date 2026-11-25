@@ -1,0 +1,25 @@
+name: Bursa Malaysia - authorized checks
+on:
+  schedule:
+    - cron: '0 11,15,21 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bursa-collect
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check authorization and collect candidates
+        env:
+          BURSA_DOWNLOAD_AUTHORIZED: ${{ vars.BURSA_DOWNLOAD_AUTHORIZED }}
+        run: python scripts/bursa_collect.py
+      # No uploads or commits: this repository is public.
+      # Persistent historical storage must be configured privately after approval.
