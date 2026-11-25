@@ -5,7 +5,7 @@ key=os.environ.get("PIXABAY_API_KEY","").strip()
 if not key: raise SystemExit("PIXABAY_API_KEY ausente")
 # Each group must match at least one exact tag. Never infer geographic location.
 rules={
-"climatepara":(["forest wildfire smoke","wildfire forest","forest fire"],[{"wildfire","forest fire","fire"},{"forest","smoke","wildfire","forest fire"}],set()),
+"climatepara":(["drought dry landscape","dry river drought","drought dry field"],[{"drought","dry","arid"},{"landscape","river","field","soil","earth","lake","reservoir"}],{"fire","flame","wildfire","corn","cornfield"}),
 "cropstress":(["cracked dry soil","drought cracked earth"],[{"drought","dry","arid"},{"soil","earth","cracked soil","cracks","ground"}],{"corn","cornfield"}),
 "rainrisk":(["dry reservoir drought","drought river low water"],[{"drought","dry","water shortage"},{"river","reservoir","lake","water","riverbed"}],set()),
 "indonesia":(["oil palm plantation","palm plantation","palm oil plantation"],[{"oil palm","palm oil"},{"plantation","palm plantation","oil palm plantation","aerial","palm trees","field"}],{"fruit","food","seed","nut"}),
