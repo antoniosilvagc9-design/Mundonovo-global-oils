@@ -31,21 +31,13 @@
     "query": "palm oil plantation",
     "editorial_score": 2
   },
-  "para": {
-    "path": "data/supply-demand/images/para.jpg",
-    "page": "https://pixabay.com/photos/oil-palm-tree-plantation-287902/",
-    "author": "sarangib",
-    "tags": "oil palm, tree, plantation, horticulture, nature, karnataka, india",
-    "query": "palm trees agriculture",
-    "editorial_score": 2
-  },
   "stocks": {
     "path": "data/supply-demand/images/stocks.jpg",
-    "page": "https://pixabay.com/photos/storage-tanks-vats-metal-tanks-20959/",
-    "author": "PublicDomainPictures",
-    "tags": "storage tanks, vats, metal tanks, barrels, pastel tanks, tank, holding tank, liquid storage, storage, vat, industry, factory, container, fermentation, storage tanks, vat, vat, vat, vat, vat, fermentation, fermentation",
-    "query": "tank farm",
-    "editorial_score": 7
+    "page": "https://pixabay.com/photos/tanks-petrochemistry-silos-406908/",
+    "author": "Life-Of-Pix",
+    "tags": "tanks, petrochemistry, silos, containers, industrial, factory, industry, white, round, tall, distillation, production, storage, manufacturing, oil, tank, stairs, railing, steps, tanks, petrochemistry, petrochemistry, distillation, distillation, distillation, manufacturing, manufacturing, manufacturing, manufacturing, manufacturing, tank, tank",
+    "query": "storage tank industrial",
+    "editorial_score": 6
   },
   "china": {
     "path": "data/supply-demand/images/china.jpg",
@@ -57,10 +49,10 @@
   },
   "biodiesel": {
     "path": "data/supply-demand/images/biodiesel.jpg",
-    "page": "https://pixabay.com/photos/refinery-oil-industry-gas-3613526/",
-    "author": "SatyaPrem",
-    "tags": "refinery, oil, industry, gas, silhouette, oil refinery, crude oil, mineral oil, factory, architecture, production, petrochemicals, cables, pipeline, chemical, fuel, industrial plant, refinery, gas, oil refinery, crude oil, crude oil, crude oil, crude oil, crude oil, pipeline",
-    "query": "oil refinery",
+    "page": "https://pixabay.com/photos/rape-blossom-close-up-yellow-5094068/",
+    "author": "Lolame",
+    "tags": "rape blossom, close up, yellow, blossom, bloom, plant, field of rapeseeds, nature, agriculture, spring, field, bright, landscape, rapeseed, crop, rapeseed oil, rapeseed flowers, macro, may, biodiesel, biodiesel, biodiesel, biodiesel, biodiesel, biodiesel",
+    "query": "rapeseed oil",
     "editorial_score": 6
   },
   "energy": {
