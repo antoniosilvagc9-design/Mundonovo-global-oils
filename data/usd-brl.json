@@ -1,10 +1,10 @@
 {
   "pair": "USD/BRL",
-  "value": 5.8573,
+  "value": 5.8825,
   "unit": "BRL por USD",
   "type": "PTAX venda (referência, não cotação comercial em tempo real)",
-  "reference_datetime": "2026-11-24 13:07:40.485706",
-  "fetched_at_utc": "2026-11-24T23:02:00.144687+00:00",
+  "reference_datetime": "2026-11-25 13:02:42.418138",
+  "fetched_at_utc": "2026-11-25T22:33:51.831789+00:00",
   "source": "Banco Central do Brasil",
   "source_url": "https://www.bcb.gov.br/estabilidadefinanceira/historicocotacoes"
 }
