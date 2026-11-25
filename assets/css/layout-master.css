@@ -5,3 +5,18 @@
 #verified-chart-grid .mn-echart{width:100%;height:clamp(190px,18vw,240px)!important;min-width:0}
 #palm-oil-market-intelligence .pi-chart{max-width:100%;height:auto}
 @media(max-width:650px){#verified-chart-grid,.pi-panels{grid-template-columns:minmax(0,1fr)!important}#verified-market-charts,#palm-oil-market-intelligence{padding:12px!important}}
+
+/* Quotes only: executive hierarchy, consistent chart sizes. */
+body[data-portal-page="quotes"] #verified-chart-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important}
+body[data-portal-page="quotes"] #verified-chart-grid>div{display:flex;flex-direction:column;gap:5px;padding:16px!important}
+body[data-portal-page="quotes"] #verified-chart-grid>div:first-child{grid-column:span 2;border-color:#B6FF00!important}
+body[data-portal-page="quotes"] #verified-chart-grid>div>strong{min-height:2.5em;line-height:1.25}
+body[data-portal-page="quotes"] #verified-chart-grid .mn-echart{height:240px!important}
+body[data-portal-page="quotes"] #verified-chart-grid>div:first-child .mn-echart{height:280px!important}
+body[data-portal-page="quotes"] #verified-chart-grid select{max-width:100%;align-self:flex-start}
+body[data-portal-page="quotes"] #verified-chart-grid h3{font-size:clamp(17px,1.5vw,23px);margin:6px 0}
+body[data-portal-page="quotes"] #palm-oil-market-intelligence .pi-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+body[data-portal-page="quotes"] #palm-oil-market-intelligence .pi-panels{grid-template-columns:repeat(2,minmax(0,1fr))}
+body[data-portal-page="quotes"] #palm-oil-market-intelligence .pi-panels>article:last-child{grid-column:1/-1}
+@media(max-width:1050px){body[data-portal-page="quotes"] #verified-chart-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}body[data-portal-page="quotes"] #palm-oil-market-intelligence .pi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){body[data-portal-page="quotes"] #verified-chart-grid,body[data-portal-page="quotes"] #palm-oil-market-intelligence .pi-panels{grid-template-columns:minmax(0,1fr)!important}body[data-portal-page="quotes"] #verified-chart-grid>div:first-child{grid-column:auto}body[data-portal-page="quotes"] #verified-chart-grid .mn-echart{height:210px!important}body[data-portal-page="quotes"] #verified-chart-grid>div:first-child .mn-echart{height:240px!important}body[data-portal-page="quotes"] #verified-chart-grid>div>strong{min-height:0}}
