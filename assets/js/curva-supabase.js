@@ -3,7 +3,7 @@ export const SUPABASE_URL = "https://hkalmvrygmkkxkuiplkz.supabase.co";
 export const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_qCyO92omCB7mhxitv1R0Vg_pQnxZ73d";
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/+esm";
 export const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
-  auth: { persistSession: false, autoRefreshToken: true, detectSessionInUrl: true }
+  auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
 });
 export async function acessoLiberado() {
   const {data,error} = await supabase.rpc("curva_acesso_liberado");
