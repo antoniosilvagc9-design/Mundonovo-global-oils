@@ -1,8 +1,25 @@
 {
-  "updated_at_utc": "2026-11-26T02:22:49.914270+00:00",
+  "updated_at_utc": "2026-11-26T02:28:20.199309+00:00",
   "feed": "Google News RSS — manchetes e metadados de terceiros",
   "limitations": "Manchetes traduzidas automaticamente quando disponível; original preservado; resumo e análise não gerados sem acesso ao texto. Classificação heurística, não avaliação factual do impacto.",
-  "errors": [],
+  "errors": [
+    "Óleo de palma: HTTP Error 503: Service Unavailable",
+    "Óleo de palma: HTTP Error 503: Service Unavailable",
+    "Soja: HTTP Error 503: Service Unavailable",
+    "Soja: HTTP Error 503: Service Unavailable",
+    "Soja: HTTP Error 503: Service Unavailable",
+    "Biodiesel: HTTP Error 503: Service Unavailable",
+    "Biodiesel: HTTP Error 503: Service Unavailable",
+    "Biodiesel: HTTP Error 503: Service Unavailable",
+    "Logística: HTTP Error 503: Service Unavailable",
+    "Logística: HTTP Error 503: Service Unavailable",
+    "Câmbio: HTTP Error 503: Service Unavailable",
+    "Câmbio: HTTP Error 503: Service Unavailable",
+    "Petróleo: HTTP Error 503: Service Unavailable",
+    "Comércio exterior: HTTP Error 503: Service Unavailable",
+    "Comércio exterior: HTTP Error 503: Service Unavailable",
+    "Comércio exterior: HTTP Error 503: Service Unavailable"
+  ],
   "news": [
     {
       "id": "9add5caabdca673e96",
@@ -4478,7 +4495,14 @@
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
       "language": "en",
-      "source_type": "Google News RSS (agregador)"
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": "France",
+        "tags": "bridge, stone bridge, bordeaux, coat of arms, napoleon, france, vacations, blue hour, evening atmosphere, bridge, bridge, bridge, bridge, bridge, bordeaux, bordeaux, bordeaux",
+        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/711a730104214ae2185534f5.jpg",
+        "page": "https://pixabay.com/photos/bridge-stone-bridge-bordeaux-8291058/",
+        "author": "AG-Pics"
+      }
     },
     {
       "id": "21d1bcc7386c9d44ac",
@@ -4652,7 +4676,14 @@
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
       "language": "en",
-      "source_type": "Google News RSS (agregador)"
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": "Indonesia",
+        "tags": "beach, nature, dusk, people, vacation, leisure, swim, ocean, sea, water, sand, shore, seashore, coast, tropical, canggu, bali, indonesia, Indonesia, Bali, Dalung",
+        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/94472189bca2532d1f5e90ce.jpg",
+        "page": "https://pixabay.com/photos/beach-dusk-people-vacation-leisure-5548446/",
+        "author": "Peggy_Marco"
+      }
     },
     {
       "id": "bdaedd3a377a598cc6",
@@ -4912,7 +4943,14 @@
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
       "language": "en",
-      "source_type": "Google News RSS (agregador)"
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": "India",
+        "tags": "taj mahal, india, agra, islamic, marble, tomb, mausoleum, facade, building, architecture, landmark, tourist spot, tourist attraction, tourists, unesco world heritage site, tourism, monument, heritage, islam, culture, travel, historic, holy, taj mahal, taj mahal, taj mahal, taj mahal, taj mahal, india, india, india, india, islamic",
+        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/3e4f65887ad0eaf2ebe93f1a.jpg",
+        "page": "https://pixabay.com/photos/taj-mahal-india-agra-islamic-866692/",
+        "author": "wiganparky0"
+      }
     },
     {
       "id": "9cdef56cbb5463688a",
@@ -5196,7 +5234,14 @@
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
       "language": "en",
-      "source_type": "Google News RSS (agregador)"
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": "Turkey",
+        "tags": "turkey, istanbul, prayer, mosque, architecture, minaret, dome, history, nature, culture, view, cityscape, islam, religion, light, pilgrimage, tourist, sunrise, medieval, tourism, historic building, landmark",
+        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/f71bd104e696d0fab1847564.jpg",
+        "page": "https://pixabay.com/photos/turkey-istanbul-prayer-mosque-10476496/",
+        "author": "Konevi"
+      }
     },
     {
       "id": "b38eadb603a9167482",
@@ -5662,7 +5707,14 @@
       "source_type": "Publicação original",
       "language": "en",
       "verification": "Manchete, data e fonte conferidas na publicação original",
-      "summary_pt": null
+      "summary_pt": null,
+      "image": {
+        "illustrative_country": "Japan",
+        "tags": "mountain, volcano, peak, summit, countryside, sea of clouds, scenery, scenic, idyllic, mount fuji, nature, japan",
+        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/e50d65f3f3818ce6574f52b0.jpg",
+        "page": "https://pixabay.com/photos/mountain-volcano-peak-summit-477832/",
+        "author": "kimura2"
+      }
     },
     {
       "id": "87f329a7672f9aebd6",
@@ -5685,7 +5737,14 @@
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
       "language": "es",
-      "source_type": "Google News RSS (agregador)"
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": "Argentina",
+        "tags": "glacier, argentina, south america, patagonia, ice, moreno, iceberg, lake, panorama, tourist attraction, tourist destination, famous, nature, places of interest",
+        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/e95dde401b67d535fc9dbbac.jpg",
+        "page": "https://pixabay.com/photos/glacier-argentina-south-america-583419/",
+        "author": "derwiki"
+      }
     },
     {
       "id": "3f9b02297b88a72212",
@@ -5737,7 +5796,14 @@
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
       "language": "es",
-      "source_type": "Google News RSS (agregador)"
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": "Argentina",
+        "tags": "mountains, lake, lagoon, glacier, trekking, cerro torre, nature, argentina, patagonia, landscape",
+        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/6b5020d2703c441dd955bc81.jpg",
+        "page": "https://pixabay.com/photos/mountains-lake-lagoon-glacier-6318080/",
+        "author": "jawajeziorski"
+      }
     },
     {
       "id": "979b8e2adffd3da896",
@@ -5760,7 +5826,14 @@
       "commercial_analysis": null,
       "verification": "Metadados RSS; conteúdo integral não verificado",
       "language": "es",
-      "source_type": "Google News RSS (agregador)"
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": "Argentina",
+        "tags": "street, highway, city, traffic, travel, buenos aires, buenos aires, buenos aires, buenos aires, buenos aires, buenos aires, Argentina, Buenos Aires",
+        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/35dafad64800646a9c21e11a.jpg",
+        "page": "https://pixabay.com/photos/street-highway-city-traffic-travel-3242215/",
+        "author": "Lernestorod"
+      }
     }
   ]
 }
