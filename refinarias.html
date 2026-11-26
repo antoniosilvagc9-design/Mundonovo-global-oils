@@ -277,6 +277,17 @@ a{color:#D4AF37}
 @media(max-width:630px){.qualification-image-frame,.qualification-visual-figure>a{min-height:220px}
  .qualification-visual{min-height:300px}}
 @media(prefers-reduced-motion:reduce){.qualification-image-frame img{transition:none}}
+
+/* Card 08 — preencher a altura do perfil com a fotografia da refinaria.
+   O card acompanha a coluna do mapa em desktop; legendas e créditos ficam na base. */
+@media(min-width:1041px){
+  #facilityDetail{display:flex;flex-direction:column}
+  #facilityDetail .refinery-photo-panel{display:flex;flex-direction:column;flex:1 1 auto;min-height:370px}
+  #facilityDetail .refinery-photo-figure{display:flex;flex-direction:column;flex:1 1 auto;min-height:0}
+  #facilityDetail .refinery-photo-figure>a{display:block;position:relative;flex:1 1 auto;min-height:280px;aspect-ratio:auto}
+  #facilityDetail .refinery-photo-figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+  #facilityDetail .refinery-photo-figure figcaption{flex:0 0 auto}
+}
 </style>
 </head>
 <body>
