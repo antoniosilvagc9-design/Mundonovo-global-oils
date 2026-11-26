@@ -811,6 +811,7 @@ function renderAll(){
 }
 async function loadBrazilMaritime(){
  const status=$("maritimeStatus"),host=$("maritimeShips");
+ status.hidden=false;
  try{
   const response=await fetch("./data/cattalini/current.json",{cache:"no-store"});
   if(!response.ok)throw Error("fonte indisponível");
@@ -825,8 +826,8 @@ async function loadBrazilMaritime(){
     visit.products.add(String(item["Produto"]||"Não informado"));
   }
   const list=[...visits.values()].sort((a,b)=>a.eta.localeCompare(b.eta)).slice(0,6);
-  const updated=payload.updated_at?new Date(payload.updated_at).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo"}):"horário não informado";
-  status.textContent=visits.size+" escala(s) com produtos vegetais no registro · arquivo atualizado em "+updated+" (Brasília).";
+  status.textContent="";
+  status.hidden=true;
   host.replaceChildren();
   if(!list.length){const p=document.createElement("p");p.className="marine-empty";p.textContent="Nenhuma escala com produto vegetal identificada neste registro.";host.append(p);return;}
   for(const item of list){
