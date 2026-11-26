@@ -73,13 +73,24 @@ PIXABAY_TERMS={
  "Petróleo":"oil refinery",
  "Comércio exterior":"chemical tanker ship",
 }
+COUNTRY_PHOTOS={
+ "c546ab726313b88eda":("France","Bordeaux France","bordeaux|france"),
+ "c54095d32cdaf6be41":("Indonesia","Bali Indonesia","bali|indonesia"),
+ "6998352077adbeba34":("India","Taj Mahal India","taj.mah[a]?l|india"),
+ "d729544ac15e9801e7":("Turkey","Istanbul Turkey","istanbul|turkey|türkiye"),
+ "eu-steel-20261116":("Japan","Mount Fuji Japan","fuji|japan"),
+ "87f329a7672f9aebd6":("Argentina","Argentina landscape","argentina"),
+ "a256550742d83a3538":("Argentina","Argentina Patagonia","argentina"),
+ "979b8e2adffd3da896":("Argentina","Buenos Aires Argentina","buenos.aires|argentina"),
+}
+
 def photo_identity(photo, category):
  page=photo.get("page","")
  match=re.search(r"-(\d+)/?$",page)
  if not match:return None
  description=(page+" "+photo.get("tags","")).lower()
  if "container" in description:return None
- maritime=category in ("Logística","Comércio exterior") or re.search(r"\b(ship|freighter|cargo|dock|harbour|harbor)\b",description)
+ maritime=(category in ("Logística","Comércio exterior") and not photo.get("illustrative_country")) or re.search(r"\b(ship|freighter|cargo|dock|harbour|harbor)\b",description)
  if maritime and (not re.search(r"\btanker\b",description) or re.search(r"\b(truck|aircraft|plane|firefighter)\b",description)):return None
  return match.group(1)
 
@@ -87,7 +98,7 @@ def pixabay_images(category, api_key):
  if not api_key:
   return []
  params=urllib.parse.urlencode({
-  "key":api_key,"q":PIXABAY_TERMS.get(category,"global trade"),
+  "key":api_key,"q":PIXABAY_TERMS.get(category,category),
   "image_type":"photo","safesearch":"true","per_page":200,
   "orientation":"horizontal",
  })
@@ -245,8 +256,13 @@ def main():
  for item in ordered:
   if "image" in item or stopped or not api_key: continue
   category=item["category"]
-  if category not in pools: pools[category]=pixabay_images(category,api_key)
-  for photo in pools[category]:
+  country=COUNTRY_PHOTOS.get(item["id"])
+  query=country[1] if country else category
+  if query not in pools:pools[query]=pixabay_images(query,api_key)
+  for photo in pools[query]:
+   if country:
+    if not re.search(country[2],photo["page"]+" "+photo.get("tags",""),re.I):continue
+    photo=dict(photo,illustrative_country=country[0])
    identity=photo_identity(photo,category)
    if not identity or identity in identities:continue
    filename=hashlib.sha256(identity.encode()).hexdigest()[:24]+".jpg"
@@ -266,7 +282,7 @@ def main():
     digest=hashlib.sha256(target.read_bytes()).digest()
     if digest in digests:continue
     identities.add(identity); digests.add(digest)
-    item["image"]={"tags":photo.get("tags",""),"url":base+filename,"page":photo["page"],"author":photo["author"]}
+    item["image"]={"illustrative_country":photo.get("illustrative_country"),"tags":photo.get("tags",""),"url":base+filename,"page":photo["page"],"author":photo["author"]}
     count+=1; failures=0; break
    except urllib.error.HTTPError as exc:
     print("Falha no download: HTTP",exc.code); failures+=1
