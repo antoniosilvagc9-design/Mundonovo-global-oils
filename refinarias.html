@@ -205,6 +205,24 @@ a{color:#D4AF37}
 .fac .fac-copy span{font-size:11px;display:block;color:#dadada}
 .fac.selected .fac-index,.fac:hover .fac-index,.fac:focus-visible .fac-index{background:#D4AF37;color:#0b0b0b;border-color:#fff}
 .ref-marker{font-weight:900;font-size:12px;line-height:1}
+
+/* Card 08: visual context connected to selected refinery, same card 07 visual identity */
+.refinery-photo-panel{margin-top:23px;border:1px solid rgba(255,255,255,.3);border-radius:11px;background:#080808;overflow:hidden;transition:background-color .22s,border-color .22s,box-shadow .22s}
+.refinery-photo-panel:hover,.refinery-photo-panel:focus-within{background:#171207;border-color:#D4AF37;box-shadow:0 0 12px rgba(212,175,55,.26)}
+.refinery-photo-heading{padding:11px 13px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:1px solid rgba(255,255,255,.35);flex-wrap:wrap}
+.refinery-photo-heading h3{margin:0;color:#D4AF37;font-size:14px;letter-spacing:.08em}
+.refinery-photo-heading span{font-size:10px;color:#fff;letter-spacing:.11em;font-weight:700}
+.refinery-photo-figure{margin:0}
+.refinery-photo-figure>a{position:relative;display:block;aspect-ratio:16/9;background:#171e26;overflow:hidden}
+.refinery-photo-figure img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .35s ease,opacity .22s ease}
+.refinery-photo-figure>a:hover img{transform:scale(1.03)}
+.refinery-photo-figure img.is-loading{opacity:.32}
+.refinery-photo-badge{position:absolute;left:12px;bottom:11px;background:rgba(0,0,0,.82);color:#ffdf8b;font-size:10px;font-weight:800;letter-spacing:.08em;border:1px solid #ae914b;border-radius:5px;padding:6px 9px}
+.refinery-photo-figure figcaption{padding:12px 14px 15px}
+.refinery-photo-figure figcaption strong{font-size:13px;color:#fff;line-height:1.35}
+.refinery-photo-figure figcaption p{font-size:11px;color:#d6d6d6;line-height:1.45;margin:5px 0 7px}
+.refinery-photo-figure figcaption a{color:#e2c26f;font-size:11px;text-decoration:underline;text-underline-offset:3px}
+@media(prefers-reduced-motion:reduce){.refinery-photo-panel,.refinery-photo-figure img{transition:none}}
 </style>
 </head>
 <body>
@@ -255,6 +273,20 @@ a{color:#D4AF37}
       <h2 style="margin-top:28px">Homologação orientada por risco</h2>
       <p class="muted">A presença de um certificado não é suficiente: conferir titular, unidade, produto, escopo, organismo emissor, validade e condições específicas do transporte.</p>
       <div id="scopeHint" class="hint">Uma empresa pode possuir certificações com escopos diferentes entre suas instalações.</div>
+      <section class="refinery-photo-panel" id="refineryPhotoPanel" aria-label="Fotografia contextual da refinaria selecionada">
+        <div class="refinery-photo-heading"><h3>REFERÊNCIA VISUAL</h3><span id="refineryPhotoNumber">VISÃO GERAL</span></div>
+        <figure class="refinery-photo-figure">
+          <a id="refineryPhotoLink" href="https://pixabay.com/photos/industry-plant-night-industrial-2732942/" target="_blank" rel="noopener noreferrer" title="Abrir fonte da fotografia">
+            <img id="refineryPhoto" alt="Instalação industrial ilustrativa fotografada à noite — Pixabay" loading="eager" decoding="async" referrerpolicy="no-referrer" width="1000" height="560">
+            <span id="refineryPhotoBadge" class="refinery-photo-badge">IMAGEM ILUSTRATIVA</span>
+          </a>
+          <figcaption>
+            <strong id="refineryPhotoTitle">Indústria e armazenagem de óleos · visão geral</strong>
+            <p id="refineryPhotoDescription">Foto ilustrativa do setor industrial. Não representa nenhuma refinaria cadastrada.</p>
+            <a id="refineryPhotoCredit" href="https://pixabay.com/photos/industry-plant-night-industrial-2732942/" target="_blank" rel="noopener noreferrer">Pixabay · ClickerHappy · licença Pixabay</a>
+          </figcaption>
+        </figure>
+      </section>
     </section>
   </div>
 
@@ -412,6 +444,113 @@ function renderFacilities(){
  }
 }
 function row(label,value){const d=document.createElement("div");d.className="fact-row";const a=document.createElement("b");a.textContent=label;const b=document.createElement("span");b.textContent=value;d.append(a,b);return d;}
+
+/* Imagens verificadas em Pixabay e Wikimedia Commons.
+   Nenhuma imagem de porto ou instalação genérica é atribuída à planta refinadora.
+   A legenda de cada uma informa a diferença e aponta para sua fonte/licença. */
+const photoFallback={
+ src:"https://cdn.pixabay.com/photo/2017/09/09/18/26/industry-2732942_1280.jpg",
+ source:"https://pixabay.com/photos/industry-plant-night-industrial-2732942/",
+ title:"Instalação industrial · imagem ilustrativa",
+ description:"Fotografia genérica de estrutura industrial do Pixabay. Não representa uma refinaria da lista.",
+ credit:"Pixabay · ClickerHappy · licença Pixabay",
+ badge:"IMAGEM ILUSTRATIVA"
+};
+const refineryPhotos={
+ amr:{
+  src:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Port_of_Bitung.JPG/960px-Port_of_Bitung.JPG",
+  source:"https://commons.wikimedia.org/wiki/File:Port_of_Bitung.JPG",
+  title:"Porto de Bitung · Sulawesi do Norte",
+  description:"Imagem da cidade/porto de Bitung, não da refinaria PT Agro Makmur Raya. Localização contextual.",
+  credit:"Sakurai Midori · Wikimedia Commons · CC BY 2.5",badge:"PORTO / CIDADE"
+ },
+ "ibp-dumai":{
+  src:"https://upload.wikimedia.org/wikipedia/commons/0/06/Pelabuhan_Dumai_%28preview%29.jpg",
+  source:"https://commons.wikimedia.org/wiki/File:Pelabuhan_Dumai_(preview).jpg",
+  title:"Porto de Dumai · Riau",
+  description:"Fotografia do porto de Dumai. Não é imagem confirmada da planta PT Intibenua Perkasatama.",
+  credit:"Pelindo 1 · Wikimedia Commons · CC BY-SA 4.0",badge:"PORTO / CIDADE"
+ },
+ "ibp-lg":{
+  src:"https://cdn.pixabay.com/photo/2014/07/31/21/42/industry-406905_1280.jpg",
+  source:"https://pixabay.com/photos/industry-industrial-fabric-chimneys-406905/",
+  title:"Instalações industriais · referência de processamento",
+  description:"Imagem industrial ilustrativa para a unidade Lubuk Gaung; não é uma foto verificada dessa refinaria.",
+  credit:"Pixabay · Life-Of-Pix · licença Pixabay",badge:"IMAGEM ILUSTRATIVA"
+ },
+ musim:{
+  src:"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Pelabuhan_petikemas_Belawan.jpg/960px-Pelabuhan_petikemas_Belawan.jpg",
+  source:"https://commons.wikimedia.org/wiki/File:Pelabuhan_petikemas_Belawan.jpg",
+  title:"Terminal de contêineres de Belawan · Medan",
+  description:"Foto do porto de Belawan, região onde há operações industriais. Não retrata a planta da PT Musim Mas.",
+  credit:"Mahardika98 · Wikimedia Commons · CC BY-SA 4.0",badge:"PORTO / CIDADE"
+ },
+ sip:{
+  src:"https://cdn.pixabay.com/photo/2015/02/22/13/35/factory-644982_1280.jpg",
+  source:"https://pixabay.com/photos/factory-storage-tank-chemistry-644982/",
+  title:"Tanques industriais de armazenagem · referência",
+  description:"Imagem ilustrativa de tanques; não representa a PT Sumber Indahperkasa nem confirma a localização da planta.",
+  credit:"Pixabay · GREGOR · licença Pixabay",badge:"IMAGEM ILUSTRATIVA"
+ },
+ smart:{
+  src:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Kotabaru.jpg/960px-Kotabaru.jpg",
+  source:"https://commons.wikimedia.org/wiki/File:Kotabaru.jpg",
+  title:"Panorama de Kotabaru · Kalimantan do Sul",
+  description:"Imagem da região de Kotabaru, próxima à unidade Tarjun. Não é foto verificada da PT SMART Tbk.",
+  credit:"Marwan Mohamad · Wikimedia Commons · licença indicada na fonte",badge:"CIDADE / REGIÃO"
+ },
+ teckno:{
+  src:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/KABIL_Jetty_in_Batam_-_panoramio.jpg/960px-KABIL_Jetty_in_Batam_-_panoramio.jpg",
+  source:"https://commons.wikimedia.org/wiki/File:KABIL_Jetty_in_Batam_-_panoramio.jpg",
+  title:"Cais de Kabil · Batam",
+  description:"Foto do cais de Kabil em Batam. Não representa a unidade industrial PT Teckno Dua Indonesia.",
+  credit:"hotmahtg · Wikimedia Commons · CC BY-SA 3.0",badge:"PORTO / CIDADE"
+ },
+ wira:{
+  src:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/A_view_of_Teluk_Bayur_Port_from_the_air.jpg/960px-A_view_of_Teluk_Bayur_Port_from_the_air.jpg",
+  source:"https://commons.wikimedia.org/wiki/File:A_view_of_Teluk_Bayur_Port_from_the_air.jpg",
+  title:"Vista aérea do porto de Teluk Bayur · Padang",
+  description:"Foto aérea do porto de Teluk Bayur. Não é uma imagem verificada da planta da PT Wira Inno Mas.",
+  credit:"Afdhal Sy · Wikimedia Commons · CC BY-SA 4.0",badge:"PORTO / CIDADE"
+ }
+};
+let photoRequest=0;
+function renderRefineryPhoto(f){
+ const photo=f?refineryPhotos[f.id]||photoFallback:photoFallback;
+ const num=$("refineryPhotoNumber"),img=$("refineryPhoto"),link=$("refineryPhotoLink");
+ const request=++photoRequest;
+ num.textContent=f?"REFINARIA "+facilityNumber[f.id]+" / 8":"VISÃO GERAL";
+ $("refineryPhotoBadge").textContent=photo.badge;
+ $("refineryPhotoTitle").textContent=photo.title;
+ $("refineryPhotoDescription").textContent=photo.description;
+ $("refineryPhotoCredit").textContent=photo.credit;
+ $("refineryPhotoCredit").href=photo.source;
+ link.href=photo.source;
+ img.classList.add("is-loading");
+ img.alt=photo.description;
+ img.onerror=()=>{
+  if(photoRequest!==request)return;
+  if(img.dataset.fallback==="true"){
+    img.classList.remove("is-loading");
+    img.style.visibility="hidden";
+    $("refineryPhotoBadge").textContent="IMAGEM INDISPONÍVEL";
+    $("refineryPhotoDescription").textContent="A fonte da fotografia não pôde ser carregada. Abra o link original para consultá-la.";
+    return;
+  }
+  img.dataset.fallback="true";
+  img.alt=photoFallback.description;
+  img.src=photoFallback.src;
+  $("refineryPhotoBadge").textContent="FOTO ILUSTRATIVA";
+  $("refineryPhotoDescription").textContent="Imagem da região indisponível; exibindo fotografia industrial genérica do Pixabay.";
+  $("refineryPhotoCredit").textContent=photoFallback.credit;
+  $("refineryPhotoCredit").href=photoFallback.source;
+  link.href=photoFallback.source;
+ };
+ img.onload=()=>{if(photoRequest===request){img.classList.remove("is-loading");img.style.visibility="visible";}};
+ img.style.visibility="visible";img.dataset.fallback="false";
+ img.src=photo.src;
+}
+
 function renderDetail(){
  const f=byId[selectedUnit()],target=$("detailRows"),tags=$("detailTags"),google=$("googleCity");
  target.replaceChildren();tags.replaceChildren();
@@ -421,6 +560,7 @@ function renderDetail(){
    setText("detailDocs",inventory?filteredDocs().length+" registros documentais dentro do filtro atual.":"Aguardando catálogo documental.");
    setText("scopeHint","Para localizar uma instalação e seus certificados, clique em um marcador ou em uma refinaria da lista.");
    google.hidden=true;
+   renderRefineryPhoto(null);
    return;
  }
  google.hidden=false;google.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(f.city+", "+f.region+", Indonésia");
@@ -431,6 +571,7 @@ function renderDetail(){
  const all=archiveUnits(f).length;
  setText("detailDocs",inventory?matched+" de "+all+" registros associados à unidade neste recorte. "+(f.id.startsWith("ibp-")?"Os documentos IBP sem unidade explícita continuam separados.":""):"Aguardando catálogo documental.");
  setText("scopeHint",f.note);
+ renderRefineryPhoto(f);
 }
 function renderMap(){
  const holder=$("map");
