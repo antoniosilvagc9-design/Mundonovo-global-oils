@@ -146,7 +146,7 @@ a{color:#D4AF37}
  background:#302711;border-color:#D4AF37;box-shadow:0 0 12px rgba(212,175,55,.19)}
 .fact-title{color:#fff;font-size:23px}.fact-row{border-bottom:1px solid #555}.fact-row span{color:#fff}
 .pill{background:#211b0e;border:1px solid #746131;color:#eac45e}
-.grid .panel .actions{margin-top:16px}.panel #scopeHint{margin-top:11px}
+.grid .panel .actions{margin-top:16px}
 .analytics,.subgrid{gap:12px;margin-top:14px}
 .chart-heading{border-bottom:1px solid rgba(255,255,255,.72);padding-bottom:10px;margin-bottom:10px}
 .chart-heading h2{color:#D4AF37;font-size:19px}.micro-tag{color:#cfcfcf}
@@ -322,11 +322,7 @@ a{color:#D4AF37}
       <div class="fact-title" id="detailName"></div>
       <div id="detailRows"></div>
       <div class="pills" id="detailTags"></div>
-      <div id="detailDocs" class="hint"></div>
       <div class="actions"><a class="cta alt" id="googleCity" href="https://www.google.com/maps" target="_blank" rel="noopener">Abrir cidade no Google Maps</a><a class="cta" href="logistica.html">Ver inteligência marítima do Brasil</a><a class="cta alt" href="https://rspo.org/" target="_blank" rel="noopener">RSPO</a></div>
-      <h2 style="margin-top:28px">Homologação orientada por risco</h2>
-      <p class="muted">A presença de um certificado não é suficiente: conferir titular, unidade, produto, escopo, organismo emissor, validade e condições específicas do transporte.</p>
-      <div id="scopeHint" class="hint">Uma empresa pode possuir certificações com escopos diferentes entre suas instalações.</div>
       <section class="refinery-photo-panel" id="refineryPhotoPanel" aria-label="Fotografia contextual da refinaria selecionada">
         <div class="refinery-photo-heading"><h3>REFERÊNCIA VISUAL</h3><span id="refineryPhotoNumber">VISÃO GERAL</span></div>
         <figure class="refinery-photo-figure">
@@ -345,16 +341,15 @@ a{color:#D4AF37}
   </div>
 
   <hr class="section-rule">
-  <div class="section-title"><h2>ANÁLISE DOCUMENTAL</h2><small>Gráficos cruzados · clique para refinar</small></div>
+  <div class="section-title"><h2>ANÁLISE DOCUMENTAL</h2></div>
   <div class="analytics" aria-label="Gráficos com filtros cruzados">
-    <section class="panel"><div class="chart-heading"><h2>Documentos por categoria</h2><span class="micro-tag">Clique em uma barra para filtrar</span></div><p class="section-note">Distribuição documental segundo as unidades, regiões e situações selecionadas.</p><div class="bar-chart" id="chartTypes" role="group" aria-label="Filtrar por categoria do documento"></div></section>
-    <section class="panel"><div class="chart-heading"><h2>Validade documental</h2><span class="micro-tag">Clique para filtrar</span></div><p class="section-note">Datas extraídas das cópias recebidas; não confirma renovações nem autenticidade.</p><div class="bar-chart" id="chartStatus" role="group" aria-label="Filtrar por situação documental"></div></section>
+    <section class="panel"><div class="chart-heading"><h2>Documentos por categoria</h2></div><div class="bar-chart" id="chartTypes" role="group" aria-label="Filtrar por categoria do documento"></div></section>
+    <section class="panel"><div class="chart-heading"><h2>Validade documental</h2></div><div class="bar-chart" id="chartStatus" role="group" aria-label="Filtrar por situação documental"></div></section>
   </div>
   <hr class="section-rule">
   <div class="section-title"><h2>CONTROLE DE DOCUMENTOS</h2><small>118 registros públicos · validade e homologação</small></div>
   <section class="panel private" id="catalogDocs">
     <h2>Documentos e validade · consulta aberta</h2>
-    <p class="muted">O catálogo documental é carregado automaticamente, sem login ou PIN. Consulte a unidade, o tipo de certificado e a data registrada. A disponibilização dos arquivos PDF integrais será realizada separadamente; os nomes abaixo não são links de download.</p>
     <div class="actions">
       <button type="button" id="exportCSV" class="action-btn" disabled>Exportar conferência CSV</button>
       <button type="button" id="reloadCatalog" class="action-btn">Atualizar catálogo</button>
@@ -365,15 +360,13 @@ a{color:#D4AF37}
       <label class="field">Tipo de documento<select id="docType"><option value="">Todos os tipos</option></select></label>
       <label class="field">Vencimento<select id="docStatus"><option value="">Todos os estados</option><option value="expired">Vencido na cópia</option><option value="warning">Até 90 dias</option><option value="valid">Prazo superior a 90 dias</option><option value="unknown">Data não confirmada</option></select></label>
     </div>
-    <div class="doc-showing" id="docsShowing" aria-live="polite">Carregando registros…</div><div class="table-wrap"><table class="table"><thead><tr><th>Refinaria</th><th>Documento</th><th>Tipo</th><th>Validade extraída</th><th>Controle</th></tr></thead><tbody id="docsBody"><tr><td colspan="5" class="none">Carregando catálogo público de documentos…</td></tr></tbody></table></div>
-    <p class="muted">Legenda: “vencido na cópia” significa apenas que o documento enviado apresenta data passada; não confirma ausência de renovação. “Data não confirmada” não equivale a validade permanente. A autenticidade deve ser conferida nos emissores oficiais.</p>
+<div class="table-wrap"><table class="table"><thead><tr><th>Refinaria</th><th>Documento</th><th>Tipo</th><th>Validade extraída</th><th>Controle</th></tr></thead><tbody id="docsBody"><tr><td colspan="5" class="none">Carregando catálogo público de documentos…</td></tr></tbody></table></div>
   </section>
   <hr class="section-rule">
-  <div class="section-title"><h2>QUALIFICAÇÃO & INTELIGÊNCIA MARÍTIMA</h2><small>Riscos, conformidade e movimentação</small></div>
+  <div class="section-title"><h2>QUALIFICAÇÃO & INTELIGÊNCIA MARÍTIMA</h2></div>
   <div class="subgrid">
     <section class="panel qualification-panel">
       <h2>Matriz documental recomendada</h2>
-      <p class="section-note">Checklist comercial e técnico — exigibilidade depende do produto, uso final, cliente, NCM e tratamento administrativo brasileiro.</p>
       <div class="category-list">
         <button class="check qualification-option" type="button" data-qualification="1" aria-pressed="false" aria-controls="qualificationVisual"><b>01 · Homologação & registro</b><p>Questionário do fornecedor; registro da entidade e planta; capacidade; dados de contato interno em sistema restrito.</p></button>
         <button class="check qualification-option" type="button" data-qualification="2" aria-pressed="false" aria-controls="qualificationVisual"><b>02 · Segurança alimentar</b><p>HACCP, FSSC 22000 e controles de processo; conferir escopo específico da unidade.</p></button>
@@ -405,7 +398,6 @@ a{color:#D4AF37}
     </section>
     <section class="panel">
       <h2>Inteligência marítima por operação</h2>
-      <p class="section-note">Campos operacionais a estruturar com o ERP, contratos, agente marítimo e fontes verificadas. Nenhuma rota ou ETA é presumida.</p>
       <div class="maritime-steps">
         <div class="step"><strong>01 · Origem e embarque</strong><small>Refinaria, porto efetivo de carregamento, operador do terminal, tanques e lote</small></div>
         <div class="step"><strong>02 · Produto e contrato</strong><small>PO, PS, PKO, PKS; toneladas; Incoterm, laycan e vendedor contratual</small></div>
@@ -726,8 +718,6 @@ function renderDetail(){
  if(!f){
    setText("detailName","Visão geral · Indonésia");
    target.append(row("Plantas mapeadas","8 unidades em 7 grupos"),row("País","Indonésia"),row("Localização","Cidades aproximadas"),row("Operação","Selecione uma refinaria para detalhar"));
-   setText("detailDocs",inventory?filteredDocs().length+" registros documentais dentro do filtro atual.":"Aguardando catálogo documental.");
-   setText("scopeHint","Para localizar uma instalação e seus certificados, clique em um marcador ou em uma refinaria da lista.");
    google.hidden=true;
    renderRefineryPhoto(null);
    return;
@@ -736,10 +726,6 @@ function renderDetail(){
  setText("detailName",String(facilityNumber[f.id]).padStart(2,"0")+" · "+f.name);
  target.append(row("Unidade industrial",f.unit),row("Cidade / País",f.city+" / Indonésia"),row("Região",f.region),row("Porto efetivo do embarque","A confirmar por contrato"));
  for(const v of f.scope){const e=document.createElement("span");e.className="pill";e.textContent=v;tags.append(e);}
- const matched=filteredDocs().filter(d=>d.unit===f.id).length;
- const all=archiveUnits(f).length;
- setText("detailDocs",inventory?matched+" de "+all+" registros associados à unidade neste recorte. "+(f.id.startsWith("ibp-")?"Os documentos IBP sem unidade explícita continuam separados.":""):"Aguardando catálogo documental.");
- setText("scopeHint",f.note);
  renderRefineryPhoto(f);
 }
 function renderMap(){
@@ -867,10 +853,9 @@ function renderDocOptions(){
 function renderDocs(){
  const body=$("docsBody");body.replaceChildren();
  if(!inventory){
-  const tr=document.createElement("tr"),td=document.createElement("td");td.colSpan=5;td.className="none";td.textContent="Catálogo não disponível. Tente atualizar.";tr.append(td);body.append(tr);setText("docsShowing","Catálogo não disponível.");return;
+  const tr=document.createElement("tr"),td=document.createElement("td");td.colSpan=5;td.className="none";td.textContent="Catálogo não disponível. Tente atualizar.";tr.append(td);body.append(tr);return;
  }
  const list=filteredDocs();
- setText("docsShowing",list.length+" de "+inventory.documents.length+" documentos no recorte atual. Clique em uma refinaria, categoria ou situação para cruzar os filtros.");
  if(!list.length){const tr=document.createElement("tr"),td=document.createElement("td");td.colSpan=5;td.textContent="Nenhum documento corresponde aos filtros.";tr.append(td);body.append(tr);return;}
  for(const d of list){
   const tr=document.createElement("tr"),f=byId[d.unit],st=statusOf(d);
