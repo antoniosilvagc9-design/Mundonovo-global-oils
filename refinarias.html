@@ -194,6 +194,17 @@ a{color:#D4AF37}
  .logistics-hero,.logistics-dashboard-group .panel,.logistics-dashboard-group .kpi,.logistics-dashboard-group .field,
  .logistics-dashboard-group .check,.logistics-dashboard-group .step{transition:none}
  .logistics-hero:hover{transform:none}}
+
+/* Card 08 — numeração coerente mapa ↔ lista */
+.fac{display:flex;align-items:center;gap:12px;text-align:left}
+.fac .fac-index{flex:0 0 34px;display:flex;align-items:center;justify-content:center;width:34px;height:34px;
+ border-radius:50%;background:#59032f;color:#fff;border:2px solid #D4AF37;
+ font-size:15px;font-weight:900;line-height:1;box-shadow:0 0 0 2px #D4AF371b}
+.fac .fac-copy{flex:1;min-width:0;display:block}
+.fac .fac-copy b{font-size:12px;color:#fff}
+.fac .fac-copy span{font-size:11px;display:block;color:#dadada}
+.fac.selected .fac-index,.fac:hover .fac-index,.fac:focus-visible .fac-index{background:#D4AF37;color:#0b0b0b;border-color:#fff}
+.ref-marker{font-weight:900;font-size:12px;line-height:1}
 </style>
 </head>
 <body>
@@ -224,7 +235,7 @@ a{color:#D4AF37}
   <div class="grid">
     <section class="panel">
       <h2>Mapa de unidades industriais</h2>
-      <p class="section-note">Pontos aproximados das cidades, não coordenadas exatas das plantas ou de seus terminais.</p>
+      <p class="section-note">Cada número corresponde à mesma refinaria na lista abaixo. Pontos aproximados por cidade; as duas unidades de Dumai aparecem ligeiramente separadas apenas para facilitar a seleção.</p>
       <div class="toolbar">
         <label class="field">Localizar refinaria<input type="search" id="search" placeholder="Empresa, cidade ou unidade"></label>
         <label class="field">Região<select id="region"><option value="">Todas as regiões</option><option>Sumatra do Norte</option><option>Sumatra Ocidental</option><option>Riau</option><option>Ilhas Riau</option><option>Lampung</option><option>Kalimantan do Sul</option><option>Sulawesi do Norte</option></select></label>
@@ -328,6 +339,8 @@ const facilities=[
 {id:"wira",name:"PT Wira Inno Mas",unit:"Teluk Bayur",city:"Padang",region:"Sumatra Ocidental",lat:-0.949,lng:100.354,scope:["PO","PS","PKO","PKS"],note:"Conferir renovações HACCP/ISO e exigência Kosher por embarque."}
 ];
 const byId=Object.fromEntries(facilities.map(f=>[f.id,f]));
+// Numeracao unica, fixa e identica no mapa, na lista e no perfil.
+const facilityNumber=Object.fromEntries(facilities.map((f,i)=>[f.id,i+1]));
 const $=id=>document.getElementById(id);
 let selected=null,inventory=null,map=null,markers=[],mapPicker=null;
 const escapeCsv=value=>{let s=String(value??"");if(/^[=+\-@]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"';};
@@ -386,10 +399,16 @@ function renderFacilities(){
  const docs=filteredDocs({skipUnit:true}),counts=new Map();
  for(const d of docs)counts.set(d.unit,(counts.get(d.unit)||0)+1);
  for(const f of matching){
-  const b=document.createElement("button");b.type="button";b.className="fac"+(f.id===selectedUnit()?" selected":"");b.setAttribute("aria-pressed",String(f.id===selectedUnit()));
+  const b=document.createElement("button");b.type="button";b.className="fac"+(f.id===selectedUnit()?" selected":"");
+  b.setAttribute("aria-pressed",String(f.id===selectedUnit()));
+  b.setAttribute("aria-label","Refinaria "+facilityNumber[f.id]+": "+f.name+" — "+f.unit+", "+f.city);
+  const number=document.createElement("span");number.className="fac-index";number.textContent=String(facilityNumber[f.id]);
+  number.setAttribute("aria-hidden","true");
+  const copy=document.createElement("span");copy.className="fac-copy";
   const title=document.createElement("b");title.textContent=f.name;
   const sub=document.createElement("span");sub.textContent=f.unit+" · "+f.city+" · "+(inventory?String(counts.get(f.id)||0)+" documento(s)":"Indonésia");
-  b.append(title,sub);b.addEventListener("click",()=>selectFacility(f.id));host.append(b);
+  copy.append(title,sub);b.append(number,copy);
+  b.addEventListener("click",()=>selectFacility(f.id));host.append(b);
  }
 }
 function row(label,value){const d=document.createElement("div");d.className="fact-row";const a=document.createElement("b");a.textContent=label;const b=document.createElement("span");b.textContent=value;d.append(a,b);return d;}
@@ -405,7 +424,7 @@ function renderDetail(){
    return;
  }
  google.hidden=false;google.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(f.city+", "+f.region+", Indonésia");
- setText("detailName",f.name);
+ setText("detailName",String(facilityNumber[f.id]).padStart(2,"0")+" · "+f.name);
  target.append(row("Unidade industrial",f.unit),row("Cidade / País",f.city+" / Indonésia"),row("Região",f.region),row("Porto efetivo do embarque","A confirmar por contrato"));
  for(const v of f.scope){const e=document.createElement("span");e.className="pill";e.textContent=v;tags.append(e);}
  const matched=filteredDocs().filter(d=>d.unit===f.id).length;
@@ -420,24 +439,22 @@ function renderMap(){
  try{
   map=new maplibregl.Map({container:holder,style:"https://tiles.openfreemap.org/styles/fiord",center:[112,0],zoom:3.7,minZoom:2.4,maxZoom:14,attributionControl:true});
   map.addControl(new maplibregl.NavigationControl({showCompass:false}),"top-right");
-  const groups=new Map();
-  for(const f of facilities){const key=f.city.includes("Dumai")?"Dumai":f.city;const list=groups.get(key)||[];list.push(f);groups.set(key,list);}
-  for(const list of groups.values()){
-    const f=list[0],node=document.createElement("button");node.type="button";node.className="ref-marker";node.textContent=list.length>1?String(list.length):"•";
-    node.title=list.length>1?f.city+" · "+list.length+" unidades; clique para escolher":f.name+" · "+f.city;
-    node.setAttribute("aria-label",node.title);
-    node.addEventListener("click",event=>{
-      event.stopPropagation();
-      if(list.length===1){selectFacility(f.id);return;}
-      if(mapPicker)mapPicker.remove();
-      const box=document.createElement("div");box.className="city-popup";
-      const name=document.createElement("strong");name.textContent=f.city+" · "+list.length+" refinarias";box.append(name);
-      const desc=document.createElement("p");desc.textContent="Escolha qual unidade deseja filtrar.";box.append(desc);
-      for(const unit of list){const btn=document.createElement("button");btn.type="button";btn.textContent=unit.name+" — "+unit.unit;btn.addEventListener("click",()=>selectFacility(unit.id));box.append(btn);}
-      mapPicker=new maplibregl.Popup({offset:24,closeButton:true}).setLngLat([f.lng,f.lat]).setDOMContent(box).addTo(map);
-    });
-    const marker=new maplibregl.Marker({element:node,anchor:"center"}).setLngLat([f.lng,f.lat]).addTo(map);
-    markers.push({marker,node,ids:list.map(v=>v.id)});
+  // Um marcador numerado por refinaria; em Dumai as duas unidades compartilham
+  // coordenadas aproximadas da cidade e ganham apenas um pequeno deslocamento VISUAL
+  // em pixels. As coordenadas cadastrais permanecem rigorosamente inalteradas.
+  for(const f of facilities){
+    const sameCity=facilities.filter(u=>u.lat===f.lat&&u.lng===f.lng);
+    const position=sameCity.findIndex(u=>u.id===f.id);
+    const offset=[(position-(sameCity.length-1)/2)*40,0];
+    const number=facilityNumber[f.id];
+    const node=document.createElement("button");
+    node.type="button";node.className="ref-marker";node.textContent=String(number);
+    node.title=number+" · "+f.name+" — "+f.unit+", "+f.city;
+    node.setAttribute("aria-label","Refinaria "+node.title);
+    node.addEventListener("click",event=>{event.stopPropagation();selectFacility(f.id);});
+    const marker=new maplibregl.Marker({element:node,anchor:"center",offset})
+      .setLngLat([f.lng,f.lat]).addTo(map);
+    markers.push({marker,node,ids:[f.id],number});
   }
   map.on("load",()=>{map.fitBounds([[96,-7],[128,7]],{padding:55,duration:0,maxZoom:5});refreshMapMarkers();});
   map.on("error",()=>{});
