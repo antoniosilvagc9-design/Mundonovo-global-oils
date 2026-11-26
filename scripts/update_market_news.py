@@ -34,6 +34,16 @@ HIGH += ["proibição de exportação","corte de produção","embargo","sançõe
 MED += ["exportação","importação","estoque","safra","preço","juros","câmbio","frete","exportaciones","importaciones","cosecha","precios","molienda"]
 LOCALES={"en":"hl=en-US&gl=US&ceid=US:en","es":"hl=es-419&gl=AR&ceid=AR:es-419","pt":"hl=pt-BR&gl=BR&ceid=BR:pt-419"}
 
+MARKET_TERMS={
+ "Óleo de palma":r"palm oil|oil palm|óleo de palma|azeite de dendê|\bdendê\b|\bcpo\b|\bmpob\b",
+ "Soja":r"\bsoja\b|\bsoy\b|soybeans?|soybean oil|aceite de soja|oleaginosas|oilseeds",
+ "Biodiesel":r"biodiesel|biofuels?|biocombust[ií]ve(?:l|is)|biocombustibles?|\bb40\b|\bb50\b",
+ "Logística":r"shipping|freight|cargo|\bports?\b|\bportos?\b|puertos?|\bfrete\b|containers?|contêiner|sea transport",
+ "Câmbio":r"\bdollar\b|\bdólar\b|exchange rate|\bcâmbio\b|\bcurrencies\b|\bcurrency\b|\bforex\b|federal reserve|banco central",
+ "Petróleo":r"crude|\bbrent\b|\bwti\b|\bopec\b|\bpetróleo\b|oil prices?|oil supply|oil demand",
+ "Comércio exterior":r"exports?|imports?|tariffs?|trade|exporta|importa|arancel|\btarifas?\b|comércio exterior",
+}
+
 def fetch(topic, language):
  q=urllib.parse.quote(topic+" when:30d")
  url=f"https://news.google.com/rss/search?q={q}&{LOCALES[language]}"
@@ -133,6 +143,8 @@ def main():
    source_node=node.find("source")
    source=(source_node.text or "").strip() if source_node is not None else ""
    if not title or not link.startswith("https://") or not pub or not source:continue
+   headline=title.removesuffix(" - "+source).strip()
+   if not re.search(MARKET_TERMS[category],headline,re.IGNORECASE):continue
    if pub>NOW+dt.timedelta(minutes=10) or pub<NOW-dt.timedelta(days=30):continue
    # Google News fornece manchete, fonte e link; não fornece o texto integral verificado.
    normalized=re.sub(r"\W+","",title.lower())
