@@ -40,7 +40,7 @@
     <article class="kpi"><div class="n gold" id="kpiWarn">—</div><p>Documentos com vencimento em até 90 dias*</p></article>
     <article class="kpi"><div class="n red" id="kpiExpired">—</div><p>Documentos com data vencida no inventário*</p></article>
   </div>
-  <div class="hint"><strong>Privacidade:</strong> os PDFs e questionários de homologação não são disponibilizados neste site. As datas e os nomes dos arquivos só aparecem após importar o inventário JSON no próprio navegador. *Os indicadores dependem desse arquivo e não representam homologação oficial.</div>
+  <div class="hint"><strong>Consulta pública:</strong> catálogo de certificados, tipos de documentos e prazos disponível sem senha e carregado automaticamente. <strong>Importante:</strong> por enquanto estão publicados somente os metadados; os PDFs originais ainda não estão hospedados neste portal. *Datas de vencimento referem-se às cópias recebidas, sem confirmação de renovação pelo emissor.</div>
 
   <div class="grid">
     <section class="panel">
@@ -96,22 +96,20 @@
     </section>
   </div>
 
-  <section class="panel private" id="privateDocs">
-    <h2>Validade de documentos · inventário privado</h2>
-    <p class="muted">Faça upload do arquivo <strong>Refinarias_inventario_privado_2026-11-26.json</strong>, gerado a partir dos PDFs enviados. O arquivo é lido localmente, não é enviado ao GitHub, ao Supabase nem a APIs externas. Dados não permanecem após fechar/recarregar a página.</p>
+  <section class="panel private" id="catalogDocs">
+    <h2>Documentos e validade · consulta aberta</h2>
+    <p class="muted">O catálogo documental é carregado automaticamente, sem login ou PIN. Consulte a unidade, o tipo de certificado e a data registrada. A disponibilização dos arquivos PDF integrais será realizada separadamente; os nomes abaixo não são links de download.</p>
     <div class="actions">
-      <label class="file-button" for="inventoryFile">Carregar inventário privado (.json)</label>
-      <input id="inventoryFile" type="file" accept=".json,application/json">
       <button type="button" id="exportCSV" class="action-btn" disabled>Exportar conferência CSV</button>
-      <button type="button" id="clearDocs" class="action-btn" disabled>Limpar dados carregados</button>
-      <span id="inventoryStatus" class="inventory-status" role="status">Nenhum inventário privado carregado.</span>
+      <button type="button" id="reloadCatalog" class="action-btn">Atualizar catálogo</button>
+      <span id="inventoryStatus" class="inventory-status" role="status">Carregando catálogo público…</span>
     </div>
     <div class="toolbar">
       <label class="field">Unidade<select id="docUnit"><option value="">Todas as unidades</option></select></label>
       <label class="field">Tipo de documento<select id="docType"><option value="">Todos os tipos</option></select></label>
       <label class="field">Vencimento<select id="docStatus"><option value="">Todos os estados</option><option value="expired">Vencido na cópia</option><option value="warning">Até 90 dias</option><option value="valid">Prazo superior a 90 dias</option><option value="unknown">Data não confirmada</option></select></label>
     </div>
-    <div class="table-wrap"><table class="table"><thead><tr><th>Refinaria</th><th>Documento</th><th>Tipo</th><th>Validade extraída</th><th>Controle</th></tr></thead><tbody id="docsBody"><tr><td colspan="5" class="none">Carregue seu inventário privado para consultar os documentos.</td></tr></tbody></table></div>
+    <div class="table-wrap"><table class="table"><thead><tr><th>Refinaria</th><th>Documento</th><th>Tipo</th><th>Validade extraída</th><th>Controle</th></tr></thead><tbody id="docsBody"><tr><td colspan="5" class="none">Carregando catálogo público de documentos…</td></tr></tbody></table></div>
     <p class="muted">Legenda: “vencido na cópia” significa apenas que o documento enviado apresenta data passada; não confirma ausência de renovação. “Data não confirmada” não equivale a validade permanente. A autenticidade deve ser conferida nos emissores oficiais.</p>
   </section>
   <footer class="footer">
@@ -191,18 +189,34 @@ async function loadBrazilMaritime(){
 }
 function renderDocOptions(){const units=$("docUnit"),types=$("docType");units.replaceChildren();types.replaceChildren();for(const [select,label] of [[units,"Todas as unidades"],[types,"Todos os tipos"]]){const o=document.createElement("option");o.value="";o.textContent=label;select.append(o);}for(const f of facilities){const o=document.createElement("option");o.value=f.id;o.textContent=f.name+" — "+f.unit;units.append(o);}if(inventory){const categories=[...new Set(inventory.documents.map(d=>d.category))].sort((a,b)=>a.localeCompare(b,"pt-BR"));for(const cat of categories){const o=document.createElement("option");o.value=cat;o.textContent=cat;types.append(o);}const o=document.createElement("option");o.value="ibp-notallocated";o.textContent="PT Intibenua · unidade não identificada";units.append(o);}}
 function filteredDocs(){if(!inventory)return [];const unit=$("docUnit").value,kind=$("docType").value,status=$("docStatus").value;return inventory.documents.filter(d=>(!unit||d.unit===unit)&&(!kind||d.category===kind)&&(!status||statusOf(d).key===status)).sort((a,b)=>{const prio={expired:0,warning:1,unknown:2,valid:3};return prio[statusOf(a).key]-prio[statusOf(b).key]||String(a.filename).localeCompare(String(b.filename),"pt-BR");});}
-function renderDocs(){const body=$("docsBody");body.replaceChildren();if(!inventory){const tr=document.createElement("tr"),td=document.createElement("td");td.colSpan=5;td.className="none";td.textContent="Carregue o inventário privado para visualizar os documentos.";tr.append(td);body.append(tr);return;}
+function renderDocs(){const body=$("docsBody");body.replaceChildren();if(!inventory){const tr=document.createElement("tr"),td=document.createElement("td");td.colSpan=5;td.className="none";td.textContent="Catálogo não disponível. Tente atualizar.";tr.append(td);body.append(tr);return;}
  const docs=filteredDocs();if(!docs.length){const tr=document.createElement("tr"),td=document.createElement("td");td.colSpan=5;td.textContent="Nenhum documento corresponde aos filtros.";tr.append(td);body.append(tr);return;}
  for(const d of docs){const tr=document.createElement("tr"),f=byId[d.unit],st=statusOf(d);const vals=[f?f.unit+" · "+f.city:d.unit==="ibp-notallocated"?"PT Intibenua · unidade a confirmar":"Não alocado",d.filename,d.category,d.validUntil?new Date(d.validUntil+"T00:00:00Z").toLocaleDateString("pt-BR",{timeZone:"UTC"}):"Não identificada"];vals.forEach(v=>{const td=document.createElement("td");td.textContent=v;tr.append(td);});const td=document.createElement("td"),badge=document.createElement("span");badge.className="status "+st.key;badge.textContent=st.label;td.append(badge);tr.append(td);body.append(tr);}
 }
 function renderKPIs(){setText("kpiUnits",facilities.length);if(!inventory){setText("kpiWarn","—");setText("kpiExpired","—");return;}const counts={expired:0,warning:0};for(const d of inventory.documents){const state=statusOf(d).key;if(state in counts)counts[state]++;}setText("kpiWarn",counts.warning);setText("kpiExpired",counts.expired);}
-function clearInventory(){inventory=null;$("inventoryFile").value="";$("exportCSV").disabled=true;$("clearDocs").disabled=true;setText("inventoryStatus","Nenhum inventário privado carregado.");renderDocOptions();renderKPIs();renderDocs();renderDetail();}
-$("inventoryFile").addEventListener("change",async event=>{const file=event.target.files?.[0];if(!file)return;try{if(file.size>2_000_000)throw Error("Arquivo muito grande para o inventário de metadados.");const data=JSON.parse(await file.text());if(data?.version!==1||!Array.isArray(data.documents)||data.documents.length>2000||!data.documents.every(d=>d&&typeof d.filename==="string"&&typeof d.category==="string"&&typeof d.unit==="string"))throw Error("Formato do inventário incompatível.");inventory={documents:data.documents.map(d=>({filename:String(d.filename).slice(0,220),category:String(d.category).slice(0,80),unit:String(d.unit).slice(0,60),validUntil:typeof d.validUntil==="string"?d.validUntil:null}))};$("exportCSV").disabled=false;$("clearDocs").disabled=false;setText("inventoryStatus",inventory.documents.length+" registros de documentos carregados localmente. Nenhum arquivo foi enviado à rede.");renderDocOptions();renderKPIs();renderDocs();renderDetail();}catch(e){clearInventory();setText("inventoryStatus","Erro: "+e.message);}});
+async function loadPublicCatalog(){
+  const state=$("inventoryStatus");
+  state.textContent="Carregando catálogo público de documentos…";
+  try{
+    const response=await fetch("./data/refinarias/catalogo.json",{cache:"no-store"});
+    if(!response.ok)throw Error("HTTP "+response.status);
+    const data=await response.json();
+    if(data?.version!==1||!Array.isArray(data.documents)||data.documents.length>2000||!data.documents.every(d=>d&&typeof d.filename==="string"&&typeof d.category==="string"&&typeof d.unit==="string"))throw Error("Formato do catálogo inválido.");
+    inventory={documents:data.documents.map(d=>({filename:String(d.filename).slice(0,220),category:String(d.category).slice(0,80),unit:String(d.unit).slice(0,60),validUntil:typeof d.validUntil==="string"?d.validUntil:null}))};
+    $("exportCSV").disabled=false;
+    state.textContent=inventory.documents.length+" registros públicos de documentos · referência: "+String(data.referenceDate||"não informada")+". Arquivos originais ainda não publicados.";
+    renderDocOptions();renderKPIs();renderDocs();renderDetail();
+  }catch(error){
+    inventory=null;$("exportCSV").disabled=true;
+    state.textContent="Não foi possível acessar o catálogo ("+error.message+"). Atualize para tentar novamente.";
+    renderDocOptions();renderKPIs();renderDocs();renderDetail();
+  }
+}
 $("exportCSV").addEventListener("click",()=>{if(!inventory)return;const rows=[["Unidade","Documento","Categoria","Validade","Situação"],...filteredDocs().map(d=>[d.unit,d.filename,d.category,d.validUntil||"",statusOf(d).label])];const csv="\uFEFF"+rows.map(row=>row.map(escapeCsv).join(";")).join("\r\n");const url=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download="MundoNovo_Refinarias_Conferencia.csv";a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);});
-$("clearDocs").addEventListener("click",clearInventory);
+$("reloadCatalog").addEventListener("click",loadPublicCatalog);
 ["docUnit","docType","docStatus"].forEach(id=>$(id).addEventListener("change",renderDocs));
 $("search").addEventListener("input",renderFacilities);$("region").addEventListener("change",renderFacilities);
-renderDocOptions();renderFacilities();renderDetail();renderDocs();renderKPIs();renderMap();loadBrazilMaritime();
+renderDocOptions();renderFacilities();renderDetail();renderDocs();renderKPIs();renderMap();loadBrazilMaritime();loadPublicCatalog();
 </script>
 </body>
 </html>
