@@ -15,10 +15,10 @@ export const reportProducts=[
 const MONTHS=['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
 const moneyText=s=>/^\d[\d.,]*$/.test(String(s||'').trim())?'R$ '+String(s).trim():'';
 const brDate=new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:false});
-function layoutTable(ctx, data, year, first, startY, fullWidth){
+function layoutTable(ctx, data, monthKeys, first, startY, fullWidth){
   const x=145,w=fullWidth,headH=79,rowH=88,prodW=570,colW=(w-prodW)/6;
   ctx.fillStyle=ACCENT;ctx.font='bold 36px Arial';
-  ctx.fillText(first===0?'JANEIRO A JUNHO':'JULHO A DEZEMBRO',x,startY-32);
+  ctx.fillText(MONTHS[Number(monthKeys[first].slice(5,7))-1]+' '+monthKeys[first].slice(0,4)+' A '+MONTHS[Number(monthKeys[first+5].slice(5,7))-1]+' '+monthKeys[first+5].slice(0,4),x,startY-32);
   const top=startY;
   ctx.fillStyle=HEADER;ctx.fillRect(x,top,w,headH);
   ctx.strokeStyle='#39424a';ctx.lineWidth=2;
@@ -33,7 +33,7 @@ function layoutTable(ctx, data, year, first, startY, fullWidth){
   ctx.fillText('PRODUTO',x+prodW/2,top+headH/2);
   for(let j=0;j<6;j++){
     const idx=first+j;
-    const month=MONTHS[idx]+'/'+String(year).slice(-2);
+    const month=MONTHS[Number(monthKeys[idx].slice(5,7))-1]+'/'+monthKeys[idx].slice(2,4);
     ctx.fillText(month,x+prodW+colW*(j+.5),top+headH/2);
   }
   let y=top+headH;
@@ -63,8 +63,9 @@ function layoutTable(ctx, data, year, first, startY, fullWidth){
   return bottom;
 }
 function imgFromData(src){return new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=()=>reject(Error('Não foi possível carregar a logo oficial'));i.src=src;});}
-export async function exportMonthlyA4({payment,year,products,scenario=''}){
+export async function exportMonthlyA4({payment,year,months:monthKeys,products,scenario=''}){
   if(!Number.isInteger(year)||year<2020||year>2100)throw Error('Ano de referência inválido');
+  if(!Array.isArray(monthKeys)||monthKeys.length!==12||monthKeys.some(v=>typeof v!=='string'||v.length!==7||v[4]!=='-'||Number(v.slice(5,7))<1||Number(v.slice(5,7))>12))throw Error('Período mensal inválido');
   if(!payment||!payment.trim())throw Error('Informe a condição de pagamento antes de exportar');
   if(!Array.isArray(products)||products.length!==4||products.some(p=>p.sales?.length!==12||p.net?.length!==12))throw Error('Dados da Curva Mensal incompletos');
   if(!products.some(p=>p.sales.some(moneyText)))throw Error('Preencha e calcule ao menos um preço comercial antes da exportação.');
@@ -83,11 +84,11 @@ export async function exportMonthlyA4({payment,year,products,scenario=''}){
   ctx.fillStyle=INK;ctx.font='bold 53px Arial';
   ctx.fillText('CONDIÇÕES DE PAGAMENTO — '+payment.toUpperCase(),W/2,803,2160);
   ctx.fillStyle='#6c7680';ctx.font='29px Arial';
-  ctx.fillText('CURVA MENSAL DE PREÇOS · '+year,W/2,875);
+  ctx.fillText('CURVA MENSAL DE PREÇOS · '+monthKeys[0]+' A '+monthKeys[11],W/2,875);
   ctx.strokeStyle=ACCENT;ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(145,934);ctx.lineTo(W-145,934);ctx.stroke();
   const tableW=W-290;
-  layoutTable(ctx,products,year,0,1030,tableW);
-  layoutTable(ctx,products,year,6,2040,tableW);
+  layoutTable(ctx,products,monthKeys,0,1030,tableW);
+  layoutTable(ctx,products,monthKeys,6,2040,tableW);
   ctx.strokeStyle=ACCENT;ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(145,3050);ctx.lineTo(W-145,3050);ctx.stroke();
   ctx.fillStyle=INK;ctx.font='29px Arial';ctx.textAlign='center';
   const when=brDate.format(new Date())+' (Brasília)';
