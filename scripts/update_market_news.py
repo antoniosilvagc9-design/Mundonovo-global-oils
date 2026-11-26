@@ -234,7 +234,8 @@ def main():
  api_key=os.environ.get("PIXABAY_API_KEY", "").strip()
  image_dir=ROOT/"data"/"news-images"
  image_dir.mkdir(parents=True,exist_ok=True)
- base="https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/"
+ base="./data/news-images/"
+ legacy_bases=("https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/","https://inteligencia-design.github.io/Mundonovo-global-oils/data/news-images/")
  previous={}
  try:
   previous={n["id"]:n.get("image") for n in json.loads(OUT.read_text(encoding="utf-8"))["news"]}
@@ -247,12 +248,15 @@ def main():
   if not isinstance(photo,dict): continue
   identity=photo_identity(photo,item["category"])
   if not identity or identity in identities:continue
-  url=photo.get("url",""); filename=url.removeprefix(base)
+  url=photo.get("url","")
+  for legacy in legacy_bases:
+   if url.startswith(legacy):url=base+url.removeprefix(legacy);break
+  filename=url.removeprefix(base)
   if url.startswith(base) and re.fullmatch(r"[a-f0-9]{24}\.jpg",filename) and filename not in used and (image_dir/filename).is_file():
    digest=hashlib.sha256((image_dir/filename).read_bytes()).digest()
    if digest in digests:continue
    digests.add(digest); identities.add(identity)
-   item["image"]=photo; used.add(filename); count+=1
+   item["image"]=dict(photo,url=url); used.add(filename); count+=1
  for item in ordered:
   if "image" in item or stopped or not api_key: continue
   category=item["category"]
