@@ -290,6 +290,35 @@ a{color:#D4AF37}
 }
 /* Respiro entre o título Controle de Documentos e o quadro abaixo. */
 .document-section-title{margin-bottom:14px}
+
+/* Inteligência de Refinarias · gráfico executivo de validade documental.
+   Quatro barras horizontais com altura flexível; filtros e valores sempre dinâmicos. */
+.analytics > .status-chart-panel{display:flex;flex-direction:column}
+.analytics > .status-chart-panel > .chart-heading{flex:0 0 auto}
+#chartStatus{display:flex;flex-direction:column;flex:1 1 auto;min-height:420px;
+  max-height:none;overflow:visible;gap:10px;padding:0;margin-top:13px}
+#chartStatus .status-chart-row{display:flex;flex-direction:column;flex:1 1 0;justify-content:center;gap:12px;
+  min-height:78px;padding:12px 15px;border:1px solid #434343;border-radius:8px;
+  background:#080808;color:#fff;text-align:left;font:inherit;cursor:pointer;
+  transition:background-color .2s,border-color .2s,box-shadow .2s}
+#chartStatus .status-chart-row:hover,#chartStatus .status-chart-row:focus-visible{
+  background:#302711;border-color:#D4AF37;box-shadow:0 0 12px #D4AF373b}
+#chartStatus .status-chart-row[aria-pressed="true"]{border-color:#D4AF37;background:#302711;
+  box-shadow:inset 0 0 0 1px #D4AF3748,0 0 14px #D4AF372d}
+.status-chart-label-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.status-chart-name{font-size:13px;font-weight:700;color:#fff}
+.status-chart-count{font-size:clamp(19px,1.7vw,26px);font-variant-numeric:tabular-nums;
+  color:#fff;font-weight:800;line-height:1}
+.status-chart-track{display:block;width:100%;height:16px;overflow:hidden;border-radius:20px;
+  background:#292929;border:1px solid #454545}
+.status-chart-fill{display:block;height:100%;border-radius:20px;
+  background:linear-gradient(90deg,#8D701D,#D4AF37 60%,#F0C65A)}
+.status-chart-row[aria-pressed="true"] .status-chart-fill{background:#F6D66F}
+.status-chart-percent{font-size:11px;color:#c8c8c8;line-height:1.25;font-variant-numeric:tabular-nums}
+@media(max-width:630px){#chartStatus{min-height:340px;gap:8px}
+  #chartStatus .status-chart-row{min-height:74px;gap:8px;padding:10px 12px}
+  .status-chart-track{height:13px}.status-chart-count{font-size:20px}}
+@media(prefers-reduced-motion:reduce){#chartStatus .status-chart-row{transition:none}}
 </style>
 </head>
 <body>
@@ -349,7 +378,7 @@ a{color:#D4AF37}
   <div class="section-title"><h2>ANÁLISE DOCUMENTAL</h2></div>
   <div class="analytics" aria-label="Gráficos com filtros cruzados">
     <section class="panel"><div class="chart-heading"><h2>Documentos por categoria</h2></div><div class="bar-chart" id="chartTypes" role="group" aria-label="Filtrar por categoria do documento"></div></section>
-    <section class="panel"><div class="chart-heading"><h2>Validade documental</h2></div><div class="bar-chart" id="chartStatus" role="group" aria-label="Filtrar por situação documental"></div></section>
+    <section class="panel status-chart-panel"><div class="chart-heading"><h2>Validade documental</h2></div><div class="bar-chart" id="chartStatus" role="group" aria-label="Filtrar por situação documental"></div></section>
   </div>
   <hr class="section-rule">
   <div class="section-title document-section-title"><h2>CONTROLE DE DOCUMENTOS</h2><small>118 registros públicos · validade e homologação</small></div>
@@ -781,7 +810,35 @@ function renderCharts(){
  const statuses=[["expired","Vencidos na cópia"],["warning","Até 90 dias"],["valid","Validade futura"],["unknown","Data não confirmada"]];
  const counter={expired:0,warning:0,valid:0,unknown:0};
  for(const d of filteredDocs({skipStatus:true}))counter[statusOf(d).key]++;
- renderBars("chartStatus",statuses.map(([key,label])=>[key,counter[key],label]),$("docStatus").value,setStatus);
+ renderStatusChart(statuses.map(([key,label])=>[key,counter[key],label]),$("docStatus").value,filteredDocs({skipStatus:true}).length);
+}
+
+function renderStatusChart(rows, chosen, total){
+ const host=$("chartStatus");
+ host.replaceChildren();
+ const max=Math.max(1,...rows.map(entry=>entry[1]));
+ const percentFormat=new Intl.NumberFormat("pt-BR",{maximumFractionDigits:1});
+ for(const [key,value,label] of rows){
+   const button=document.createElement("button");
+   button.type="button";button.className="status-chart-row";
+   const active=chosen===key;
+   button.setAttribute("aria-pressed",String(active));
+   const share=total>0?value/total*100:0;
+   button.setAttribute("aria-label",label+": "+value+" documento(s), "+percentFormat.format(share)+"% do recorte. Clique para "+(active?"remover":"aplicar")+" o filtro.");
+   const heading=document.createElement("span");heading.className="status-chart-label-row";
+   const name=document.createElement("span");name.className="status-chart-name";name.textContent=label;
+   const count=document.createElement("strong");count.className="status-chart-count";count.textContent=String(value);
+   heading.append(name,count);
+   const track=document.createElement("span");track.className="status-chart-track";
+   const fill=document.createElement("span");fill.className="status-chart-fill";
+   fill.style.width=value===0?"0%":(100*value/max).toFixed(2)+"%";
+   track.append(fill);
+   const percentage=document.createElement("span");percentage.className="status-chart-percent";
+   percentage.textContent=percentFormat.format(share)+"% do total no recorte";
+   button.append(heading,track,percentage);
+   button.addEventListener("click",()=>setStatus(key));
+   host.append(button);
+ }
 }
 function renderBars(targetId,rows,chosen,choose){
  const host=$(targetId);host.replaceChildren();
