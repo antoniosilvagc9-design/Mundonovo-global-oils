@@ -1,0 +1,55 @@
+[
+  {
+    "ids": [
+      "0d4a8a079b0c89adc7"
+    ],
+    "terms": [
+      "indonesia",
+      "palm",
+      "fee"
+    ],
+    "title": "Indonésia planeja cobrar taxa sobre exportações de óleo de palma",
+    "fact": "Segundo a Bloomberg, a proposta prevê 0,5% sobre o valor declarado do embarque, excluídos frete e seguro.",
+    "watch": "Confirmar a vigência e se o fornecedor incluirá a taxa na oferta FOB.",
+    "source": "Bloomberg via The Edge",
+    "url": "https://www.theedgesingapore.com/news/palm-oil/indonesia-said-set-palm-oil-export-fee-05-value",
+    "date": "2026-11-25T12:37:00Z",
+    "priority": 1
+  },
+  {
+    "ids": [
+      "09810b154181246ae3",
+      "54fab6d2e8e341ec3a"
+    ],
+    "terms": [
+      "mpoc",
+      "december",
+      "100"
+    ],
+    "title": "MPOC projeta óleo de palma acima de 4.100 ringgits por tonelada",
+    "fact": "O conselho malaio vê a queda recente dos preços como oportunidade para embarques no primeiro trimestre de 2027.",
+    "watch": "Comparar as ofertas para esse período com o custo de entrega no Brasil.",
+    "source": "MPOC via The Edge Malaysia",
+    "url": "https://theedgemalaysia.com/node/827174",
+    "date": "2026-11-25T03:25:00Z",
+    "priority": 2
+  },
+  {
+    "ids": [
+      "us-tariffs-20261125",
+      "fc66b08dcd7f6e151b"
+    ],
+    "terms": [
+      "tariff",
+      "excess",
+      "capacity"
+    ],
+    "title": "EUA propõem novas tarifas para 14 parceiros comerciais",
+    "fact": "A proposta abrange China, Japão e União Europeia, com alíquotas que variam conforme o parceiro comercial.",
+    "watch": "Verificar quais produtos entram na lista e a vigência antes de rever o custo de importação.",
+    "source": "Reuters",
+    "url": "https://www.reuters.com/world/china/us-proposes-new-tariffs-14-trading-partners-fight-excess-factory-capacity-2026-11-25/",
+    "date": "2026-11-25T13:15:39Z",
+    "priority": 3
+  }
+]
