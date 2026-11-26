@@ -290,14 +290,6 @@ a{color:#D4AF37}
   </header>
   <div class="logistics-dashboard-group" id="refineryDashboard">
     <div class="group-title-row"><h2>PAINEL EXECUTIVO · REFINARIAS</h2></div>
-  <div class="kpis" aria-label="Indicadores dinâmicos das refinarias">
-    <button type="button" class="kpi kpi-action" id="kpiAll" title="Limpar a seleção de unidade e de situação" aria-label="Mostrar todas as refinarias e documentos"><div class="n" id="kpiUnits">8</div><p>Unidades no recorte · clique para visão geral</p></button>
-    <div class="kpi"><div class="n" id="kpiDocs">—</div><p>Documentos no recorte atual</p></div>
-    <button type="button" class="kpi kpi-action" id="kpiWarnBtn" aria-pressed="false" title="Filtrar documentos com vencimento em até 90 dias"><div class="n gold" id="kpiWarn">—</div><p>Até 90 dias · clique para filtrar</p></button>
-    <button type="button" class="kpi kpi-action" id="kpiExpiredBtn" aria-pressed="false" title="Filtrar documentos com data vencida na cópia"><div class="n red" id="kpiExpired">—</div><p>Vencidos na cópia · clique para filtrar</p></button>
-  </div>
-  
-
   <hr class="section-rule">
   <div class="filter-strip" aria-label="Filtros cruzados ativos">
     <div><strong>SELEÇÃO ATIVA</strong><div id="activeFilters" class="filter-chips"><span class="muted">Todas as refinarias e documentos</span></div></div>
@@ -799,14 +791,10 @@ function renderFilterSummary(){
  for(const [,label,value,clear] of selectedValues){
    const btn=document.createElement("button");btn.type="button";btn.className="filter-chip";btn.title="Remover filtro "+label;btn.textContent=label+": "+value+" ×";btn.addEventListener("click",clear);chips.append(btn);
  }
- $("kpiWarnBtn").classList.toggle("active",$("docStatus").value==="warning");
- $("kpiExpiredBtn").classList.toggle("active",$("docStatus").value==="expired");
- $("kpiWarnBtn").setAttribute("aria-pressed",String($("docStatus").value==="warning"));
- $("kpiExpiredBtn").setAttribute("aria-pressed",String($("docStatus").value==="expired"));
 }
 function renderAll(){
  selected=selectedUnit()||null;
- renderKPIs();renderFacilities();renderDetail();renderDocs();renderCharts();renderFilterSummary();refreshMapMarkers();
+ renderFacilities();renderDetail();renderDocs();renderCharts();renderFilterSummary();refreshMapMarkers();
 }
 async function loadBrazilMaritime(){
  const status=$("maritimeStatus"),host=$("maritimeShips");
@@ -868,17 +856,6 @@ function renderDocs(){
   const td=document.createElement("td"),badge=document.createElement("button");badge.type="button";badge.className="status status-btn "+st.key;badge.textContent=st.label;badge.title="Filtrar documentos desta situação";badge.addEventListener("click",()=>setStatus(st.key));td.append(badge);tr.append(td);body.append(tr);
  }
 }
-function renderKPIs(){
- const docs=filteredDocs(),base=filteredDocs({skipStatus:true});
- let available=facilities.filter(unitMatches);
- if(selectedUnit())available=available.filter(f=>f.id===selectedUnit());
- if(inventory&&($("docStatus").value||$("docType").value))available=available.filter(f=>docs.some(d=>d.unit===f.id));
- setText("kpiUnits",available.length);
- setText("kpiDocs",inventory?docs.length:"—");
- if(!inventory){setText("kpiWarn","—");setText("kpiExpired","—");return;}
- setText("kpiWarn",base.filter(d=>statusOf(d).key==="warning").length);
- setText("kpiExpired",base.filter(d=>statusOf(d).key==="expired").length);
-}
 async function loadPublicCatalog(){
   const state=$("inventoryStatus");
   state.textContent="Carregando catálogo público de documentos…";
@@ -907,9 +884,6 @@ $("clearFilters").addEventListener("click",()=>{
  $("search").value="";$("region").value="";$("docUnit").value="";$("docType").value="";$("docStatus").value="";selected=null;
  if(map)map.fitBounds([[96,-7],[128,7]],{padding:55,maxZoom:5});renderAll();
 });
-$("kpiAll").addEventListener("click",()=>{$("docUnit").value="";$("docStatus").value="";selected=null;renderAll();});
-$("kpiWarnBtn").addEventListener("click",()=>setStatus("warning"));
-$("kpiExpiredBtn").addEventListener("click",()=>setStatus("expired"));
 for(const [id,style] of [["modeDark","fiord"],["modeLight","liberty"]]){
  $(id).addEventListener("click",()=>{
   if(map)map.setStyle("https://tiles.openfreemap.org/styles/"+style);
