@@ -996,7 +996,32 @@ async function refresh(){
     loading=false;
   }
 }
-function go(){positions=positions.map(x=>x+1);start=performance.now();elapsed=0;displaySlots()}setInterval(()=>{if(!paused){elapsed=performance.now()-start;if(elapsed>=35000)go()}$('mt-progress').style.width=Math.min(100,elapsed/350)+'%';},100);$('mt-pause').onclick=()=>{paused=!paused;root.classList.toggle('mt-paused',paused);if(!paused)start=performance.now()-elapsed;$('mt-pause').textContent=paused?'Continuar':'Pausar'};$('mt-full').onclick=async()=>{if(document.fullscreenElement){await document.exitFullscreen();return}if(document.body.classList.contains('mn-tv-mode')){document.body.classList.remove('mn-tv-mode');return}try{await root.requestFullscreen()}catch{document.body.classList.add('mn-tv-mode')}};if(new URLSearchParams(location.search).get('mode')==='tv')document.body.classList.add('mn-tv-mode');refresh();setInterval(refresh,900000);window.addEventListener('online',refresh)})();
+function go(){positions=positions.map(x=>x+1);start=performance.now();elapsed=0;displaySlots()}setInterval(()=>{if(!paused){elapsed=performance.now()-start;if(elapsed>=35000)go()}$('mt-progress').style.width=Math.min(100,elapsed/350)+'%';},100);$('mt-pause').onclick=()=>{paused=!paused;root.classList.toggle('mt-paused',paused);if(!paused)start=performance.now()-elapsed;$('mt-pause').textContent=paused?'Continuar':'Pausar'};const tvButton=$('mt-full');
+function setTvMode(active){
+  document.body.classList.toggle('mn-tv-mode',active);
+  tvButton.textContent=active?'SAIR DO MODO TV':'ATIVAR MODO TV';
+  tvButton.setAttribute('aria-pressed',String(active));
+  const url=new URL(location.href);
+  if(active)url.searchParams.set('mode','tv');
+  else url.searchParams.delete('mode');
+  if(url.href!==location.href)history.replaceState(history.state,'',url.href);
+}
+tvButton.onclick=async()=>{
+  const active=!document.body.classList.contains('mn-tv-mode');
+  setTvMode(active);
+  if(active && root.requestFullscreen){
+    try{await root.requestFullscreen()}catch{/* Mantém o layout de TV quando a tela cheia é bloqueada. */}
+  }else if(!active && document.fullscreenElement===root){
+    await document.exitFullscreen();
+  }
+};
+let nativeTvFullscreen=false;
+document.addEventListener('fullscreenchange',()=>{
+  if(nativeTvFullscreen && !document.fullscreenElement)setTvMode(false);
+  nativeTvFullscreen=document.fullscreenElement===root;
+});
+setTvMode(new URLSearchParams(location.search).get('mode')==='tv');
+refresh();setInterval(refresh,900000);window.addEventListener('online',refresh)})();
 </script><section class="fx-intelligence" id="brazil-fx-intelligence" aria-label="Brazil FX Intelligence"><div class="fx-label">MUNDO NOVO · BRAZIL FX INTELLIGENCE</div><h3>Brasil, Ásia e decisão comercial</h3><div class="fx-subtitle">Briefing do CEO · três decisões em 30 segundos</div><div class="fx-grid">
 <article class="fx-card"><div class="fx-label">01 · BRASIL — PRESSÃO CAMBIAL</div><h3>O que pode pressionar o dólar?</h3><div class="fx-number" id="fx-ptax">Carregando PTAX…</div><div class="fx-caption" id="fx-ptax-source">Banco Central · PTAX venda · referência histórica</div><p>Dólar em alta pressiona o custo das importações.</p><p><strong>Favorece:</strong> real mais forte e menor custo cambial. <strong>Risco:</strong> depreciação do real e maior necessidade de caixa.</p><p><strong>Acompanhar:</strong> PTAX, Selic, Fed, inflação, risco fiscal e fluxo cambial; sem dados atualizados desses fatores, não atribuir causalidade.</p><details><summary>Ver análise · Nível 2</summary><p id="fx-br-context">Histórico cambial em consulta.</p><p>Uma PTAX publicada não representa preço de fechamento do dólar comercial negociável.</p><details><summary>Inteligência Mundo Novo · Nível 3</summary><p>Para importações, comparar a cotação efetivamente negociável com a data do pagamento, o preço em USD, o frete e os custos de internalização. O impacto da moeda depende do prazo e da exposição contratada.</p></details></details></article>
 <article class="fx-card"><div class="fx-label">02 · MALÁSIA E INDONÉSIA — OFERTA GLOBAL</div><h3>Oferta asiática e competitividade</h3><div class="fx-number">3,621 mi t</div><div class="fx-caption">Estoques finais da Malásia · outubro/2026 · MPOB, conforme quadro de oferta existente</div><p>Maior oferta pode favorecer negociações de palma.</p><p><strong>Favorece:</strong> disponibilidade exportável e concorrência entre fornecedores. <strong>Risco:</strong> restrições de oferta, biodiesel mais intenso e frete elevado.</p><p><strong>Acompanhar:</strong> MPOB, GAPKI, preços de palma e soja, USD/MYR, Índia, China e fretes.</p><details><summary>Ver análise · Nível 2</summary><p>Malásia: exportações 1,709 mi t e estoques 3,621 mi t (outubro/2026, MPOB). Indonésia: exportações 3,920 mi t e estoques 2,006 mi t (setembro/2026, GAPKI). Períodos distintos.</p><p>Fontes institucionais: <a href="https://bepi.mpob.gov.my/" target="_blank" rel="noopener noreferrer">MPOB</a> · <a href="https://gapki.id/" target="_blank" rel="noopener noreferrer">GAPKI</a>.</p><details><summary>Inteligência Mundo Novo · Nível 3</summary><p>Uma redução no preço FOB em USD pode melhorar a compra, mas a vantagem precisa ser recalculada com USD/BRL, frete, tributos e prazo. A oferta malaia não determina isoladamente o câmbio brasileiro.</p></details></details></article>
