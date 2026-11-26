@@ -20,7 +20,7 @@
 .fact-title{font-size:24px;font-weight:850;line-height:1.15;margin:13px 0 8px}.fact-row{display:flex;justify-content:space-between;gap:10px;margin:8px 0;padding-bottom:8px;border-bottom:1px solid #2c353d;font-size:13px}.fact-row span{color:#aab8c2;text-align:right}.pills{display:flex;gap:6px;flex-wrap:wrap}.pill{background:#272e34;color:#d8e0e5;border-radius:20px;font-size:11px;padding:5px 10px}.cta{display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;background:var(--wine);border:1px solid #a85580;border-radius:7px;color:#fff;text-decoration:none;font-size:12px;font-weight:800;transition:.2s}.cta:hover{filter:brightness(1.25)}.cta.alt{background:transparent;border-color:#777;color:#e8edf0}
 .subgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:16px}.category-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}.check{background:#0b1014;border:1px solid #313b44;border-radius:9px;padding:12px;min-height:96px}.check b{font-size:13px}.check p{font-size:12px;color:#a6b4be;margin:5px 0 0}.check em{font-style:normal;color:#dbbc65;font-size:11px;font-weight:700}.maritime-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.step{background:#0c1115;border:1px solid #303941;border-radius:10px;padding:12px}.step strong{font-size:12px}.step small{display:block;color:#9dabb6;margin-top:5px}.private{margin-top:16px}.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0}.file-button{display:inline-flex;align-items:center;background:#33261a;color:#ffe9a8;border:1px solid #9d7a36;border-radius:8px;padding:11px 17px;font-weight:800;cursor:pointer}.file-button:hover{filter:brightness(1.12)}#inventoryFile{display:none}.action-btn{padding:11px 17px;border-radius:8px;border:1px solid #59636b;background:transparent;color:#e9eef0}.action-btn:disabled{opacity:.5;cursor:not-allowed}.inventory-status{color:#c7d0d7;font-size:12px}.table-wrap{overflow:auto;max-height:480px;border:1px solid #343e46;border-radius:9px}.table{border-collapse:collapse;width:100%;font-size:12px;min-width:780px}.table th,.table td{padding:11px 12px;border-bottom:1px solid #333d44;text-align:left}.table th{position:sticky;top:0;background:#252f38;color:#f1f6f8;z-index:2}.table tr:nth-child(even){background:#192027}.table tr:hover{background:#29313a}.status{font-size:11px;font-weight:800;border-radius:20px;padding:4px 8px;white-space:nowrap;display:inline-block}.status.expired{color:#ffd0cc;background:#772d34}.status.warning{color:#ffddb1;background:#5e452a}.status.valid{color:#caeec8;background:#264633}.status.unknown{color:#c9d1d6;background:#3a444b}.none{color:#adbac5;font-style:italic}
 .footer{font-size:11px;color:#8e9ba5;padding:25px 0;display:flex;gap:12px;flex-wrap:wrap}.footer a{color:#cbb77a}
-@media(max-width:1040px){.grid,.subgrid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}@media(max-width:630px){.page{padding:12px}.hero{padding:24px 20px}.fac-list,.category-list,.maritime-steps{grid-template-columns:1fr}.kpis{gap:8px}.kpi{padding:13px;min-height:91px}.panel{padding:14px}#map{height:330px}}
+.maritime-title{margin:24px 0 4px;font-size:15px;color:var(--gold)}.maritime-overview{display:grid;gap:7px;margin-top:9px}.marine-visit{display:grid;grid-template-columns:minmax(100px,1fr) minmax(160px,1.3fr) auto;gap:9px;align-items:center;background:#0d1318;border:1px solid #323c44;border-radius:7px;padding:10px 11px;font-size:12px}.marine-visit b{color:#f2f5f7}.marine-visit span{color:#aebdc8}.marine-visit em{font-style:normal;color:#efce7c;font-weight:800}.marine-empty{font-size:12px;color:#9eacb6}@media(max-width:630px){.marine-visit{grid-template-columns:1fr 1fr}.marine-visit span{grid-column:1/-1;grid-row:2}}@media(max-width:1040px){.grid,.subgrid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}@media(max-width:630px){.page{padding:12px}.hero{padding:24px 20px}.fac-list,.category-list,.maritime-steps{grid-template-columns:1fr}.kpis{gap:8px}.kpi{padding:13px;min-height:91px}.panel{padding:14px}#map{height:330px}}
 @media(prefers-reduced-motion:reduce){.fac,.cta{transition:none}}
 </style>
 </head>
@@ -92,7 +92,7 @@
         <div class="step"><strong>05 · Qualidade do transporte</strong><small>Histórico de cargas, limpeza dos tanques, inspeção, amostragem e certificados aplicáveis</small></div>
         <div class="step"><strong>06 · Desembarque Brasil</strong><small>Porto/terminal, previsão de atracação, estadia, custos e cumprimento do contrato</small></div>
       </div>
-      <div class="hint"><strong>Integração futura:</strong> relacionar cada contrato do Maxys ao fornecedor, navio, porto de origem, status documental e evento da Cattalini, sem afirmar que qualquer navio listado pertence a determinada refinaria.</div>
+      <div class="hint"><strong>Integração futura:</strong> relacionar cada contrato do Maxys ao fornecedor, navio, porto de origem, status documental e evento da Cattalini, sem afirmar que qualquer navio listado pertence a determinada refinaria.</div><h3 class="maritime-title">Cattalini · embarcações com produtos vegetais</h3><p class="section-note">Dados publicados no quadro marítimo da Mundo Novo. Sem vínculo comprovado com as refinarias listadas e sem inferir o porto de origem.</p><div id="maritimeStatus" class="inventory-status" role="status">Consultando registro de movimentação…</div><div class="maritime-overview" id="maritimeShips"></div>
     </section>
   </div>
 
@@ -160,6 +160,35 @@ function renderMap(){const holder=$("map");if(!window.L){holder.textContent="Map
  const groups=new Map();for(const f of facilities){const key=f.city.includes("Dumai")?"Dumai":f.city;const list=groups.get(key)||[];list.push(f);groups.set(key,list);}
  for(const list of groups.values()){const f=list[0],marker=L.circleMarker([f.lat,f.lng],{radius:list.length>1?10:8,color:"#80385c",fillColor:"#80385c",fillOpacity:.9,weight:2}).addTo(map);const label=list.length>1?f.city+" · "+list.length+" unidades":f.city;marker.bindTooltip(label);marker.on("click",()=>selectFacility(list[0].id));markers.push({marker,ids:list.map(f=>f.id)});}
  map.invalidateSize();}
+async function loadBrazilMaritime(){
+ const status=$("maritimeStatus"),host=$("maritimeShips");
+ try{
+  const response=await fetch("./data/cattalini/current.json",{cache:"no-store"});
+  if(!response.ok)throw Error("fonte indisponível");
+  const payload=await response.json();
+  if(!Array.isArray(payload.rows))throw Error("formato inesperado da fonte");
+  const eligible=payload.rows.filter(item=>/\b(SOJA|PALMA|PALMISTE|VEGETAL)\b/i.test(String(item["Produto"]||""))&&item["Navio"]);
+  const visits=new Map();
+  for(const item of eligible){
+    const key=String(item["ID escala"]||item["Navio"])+"|"+String(item["Navio"]);
+    let visit=visits.get(key);
+    if(!visit){visit={ship:String(item["Navio"]),eta:String(item["ETA"]||""),products:new Set()};visits.set(key,visit);}
+    visit.products.add(String(item["Produto"]||"Não informado"));
+  }
+  const list=[...visits.values()].sort((a,b)=>a.eta.localeCompare(b.eta)).slice(0,6);
+  const updated=payload.updated_at?new Date(payload.updated_at).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo"}):"horário não informado";
+  status.textContent=visits.size+" escala(s) com produtos vegetais no registro · arquivo atualizado em "+updated+" (Brasília).";
+  host.replaceChildren();
+  if(!list.length){const p=document.createElement("p");p.className="marine-empty";p.textContent="Nenhuma escala com produto vegetal identificada neste registro.";host.append(p);return;}
+  for(const item of list){
+    const div=document.createElement("div");div.className="marine-visit";
+    const b=document.createElement("b");b.textContent=item.ship;
+    const p=document.createElement("span");p.textContent=[...item.products].join(" · ");
+    const time=document.createElement("em");time.textContent=item.eta?"ETA "+item.eta.split("-").reverse().join("/"):"ETA não informado";
+    div.append(b,p,time);host.append(div);
+  }
+ }catch(e){status.textContent="Registro marítimo indisponível. Acesse o Card 07 para a consulta direta.";host.replaceChildren();}
+}
 function renderDocOptions(){const units=$("docUnit"),types=$("docType");units.replaceChildren();types.replaceChildren();for(const [select,label] of [[units,"Todas as unidades"],[types,"Todos os tipos"]]){const o=document.createElement("option");o.value="";o.textContent=label;select.append(o);}for(const f of facilities){const o=document.createElement("option");o.value=f.id;o.textContent=f.name+" — "+f.unit;units.append(o);}if(inventory){const categories=[...new Set(inventory.documents.map(d=>d.category))].sort((a,b)=>a.localeCompare(b,"pt-BR"));for(const cat of categories){const o=document.createElement("option");o.value=cat;o.textContent=cat;types.append(o);}const o=document.createElement("option");o.value="ibp-notallocated";o.textContent="PT Intibenua · unidade não identificada";units.append(o);}}
 function filteredDocs(){if(!inventory)return [];const unit=$("docUnit").value,kind=$("docType").value,status=$("docStatus").value;return inventory.documents.filter(d=>(!unit||d.unit===unit)&&(!kind||d.category===kind)&&(!status||statusOf(d).key===status)).sort((a,b)=>{const prio={expired:0,warning:1,unknown:2,valid:3};return prio[statusOf(a).key]-prio[statusOf(b).key]||String(a.filename).localeCompare(String(b.filename),"pt-BR");});}
 function renderDocs(){const body=$("docsBody");body.replaceChildren();if(!inventory){const tr=document.createElement("tr"),td=document.createElement("td");td.colSpan=5;td.className="none";td.textContent="Carregue o inventário privado para visualizar os documentos.";tr.append(td);body.append(tr);return;}
@@ -173,7 +202,7 @@ $("exportCSV").addEventListener("click",()=>{if(!inventory)return;const rows=[["
 $("clearDocs").addEventListener("click",clearInventory);
 ["docUnit","docType","docStatus"].forEach(id=>$(id).addEventListener("change",renderDocs));
 $("search").addEventListener("input",renderFacilities);$("region").addEventListener("change",renderFacilities);
-renderDocOptions();renderFacilities();renderDetail();renderDocs();renderKPIs();renderMap();
+renderDocOptions();renderFacilities();renderDetail();renderDocs();renderKPIs();renderMap();loadBrazilMaritime();
 </script>
 </body>
 </html>
