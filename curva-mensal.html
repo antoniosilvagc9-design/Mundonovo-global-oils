@@ -16,6 +16,27 @@ let config=null;
 function calculate(v,product,c){const [kilos,origin,fx,days,margin,freight]=v;const scenario=el('curveScenario').value,national=scenario==='COMPRA_NACIONAL',noPC=scenario==='SEM_IMPOSTOS',parana=scenario==='PARANA_COMPETITIVO';const icms=national?.04:parana?.025:c.icmsSalesRate,finRate=(parana?.018:c.monthlyFinanceRate)*days/30,pisS=noPC?0:c.pisSalesRate,cofS=noPC?0:c.cofinsSalesRate;const value=origin*kilos*(national?1:fx);const fixed=national?value-value*.04:value+c.siscomex+value*c.afrmmRate+(el('curveExtra').checked&&/^(PO|PS) —/.test(product)?value*c.extraQuotaRate:0)+c.unionFee+(noPC?0:value*c.pisImportRate)+(noPC?0:value*c.cofinsImportRate)+c.customsAgentFee+c.anvisaFee;const den=1-margin/100-icms*(1+finRate)-pisS-cofS-(el('curveBroker').checked?c.brokerRate:0);if(den<=0)throw Error('Margem inviável');const sale=(fixed/kilos*(1+finRate)+freight)/den;return [sale,sale*1000,sale*(1-c.netDiscountRate)];}
 const fmt=n=>n.toLocaleString('pt-BR',{minimumFractionDigits:4,maximumFractionDigits:4});
 function recalc(){let volume=0,revenue=0,count=0;for(const a of el('curveTables').querySelectorAll('article')){for(const tr of a.querySelectorAll('tbody tr')){const inputs=[...tr.querySelectorAll('input')],v=inputs.map(i=>Number(i.value));let result=null;try{if(config&&inputs.every(i=>i.value!==''&&i.validity.valid)&&v.every(Number.isFinite)&&v[0]>0&&v[1]>0&&v[2]>0)result=calculate(v,a.querySelector('h3').textContent,config);}catch(e){tr.cells[7].title=e.message;}for(let j=0;j<2;j++)tr.cells[7+j].textContent=result?fmt(result[j===0?0:2]):'—';if(inputs.every(i=>i.value!=='')&&!result){tr.cells[7].textContent=config?'Inválido':'Sem config.';tr.cells[7].title=config?'Verifique os valores e a margem.':'Parâmetros financeiros não carregados.';}if(result){volume+=v[0];revenue+=v[0]*result[0];count++;}}}el('curveSummary').textContent='Meses calculados: '+count+' | Volume: '+volume.toLocaleString('pt-BR')+' kg | Receita: '+revenue.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});}
+// Enter: avanca verticalmente para o mesmo campo do proximo mes e, apos dezembro, para o proximo produto.
+el('curveTables').addEventListener('keydown',event=>{
+  if(event.key!=='Enter'||event.isComposing||event.ctrlKey||event.altKey||event.metaKey||event.shiftKey)return;
+  const input=event.target;
+  if(!(input instanceof HTMLInputElement)||!input.closest('tbody'))return;
+  const row=input.closest('tr');
+  const body=row?.parentElement;
+  const article=input.closest('article.curve-product');
+  if(!row||!body||!article)return;
+  const column=[...row.querySelectorAll('input')].indexOf(input);
+  const month=[...body.rows].indexOf(row);
+  if(column<0||month<0)return;
+  const articles=[...el('curveTables').querySelectorAll('article.curve-product')];
+  const productIndex=articles.indexOf(article);
+  const nextRow=month+1<body.rows.length?body.rows[month+1]:articles[productIndex+1]?.querySelector('tbody tr');
+  const nextInput=nextRow?.querySelectorAll('input')[column];
+  if(!nextInput)return;
+  event.preventDefault();
+  nextInput.focus();
+  nextInput.select();
+});
 el('curveTables').addEventListener('input',recalc);el('workspace').addEventListener('change',recalc);async function loadConfig(){config=null;el('configStatus').textContent='Carregando parâmetros protegidos…';try{const {data,error}=await supabase.rpc('curva_obter_config');if(error)throw error;if(!data||!configKeys.every(k=>typeof data[k]==='number'&&Number.isFinite(data[k])&&data[k]>=0))throw Error('Parâmetros ausentes ou incompletos');if(el('workspace').hidden)return;config=data;el('configStatus').textContent='Parâmetros carregados — cálculos em homologação.';}catch(e){el('configStatus').textContent='Configuração financeira indisponível: '+e.message;}recalc();}
 el('curveConfig').onclick=loadConfig;
 el('curveExport').onclick=()=>{const rows=[['Produto','Mês','Venda R$/kg','NET R$/kg']];for(const a of el('curveTables').querySelectorAll('article'))for(const tr of a.querySelectorAll('tbody tr'))if(/^\d/.test(tr.cells[7].textContent))rows.push([a.querySelector('h3').textContent,tr.cells[0].textContent,...[7,8].map(i=>tr.cells[i].textContent)]);if(rows.length===1){status('Nenhum preço calculado para exportar.');return;}const url=URL.createObjectURL(new Blob(['\ufeff'+rows.map(r=>r.join(';')).join('\r\n')],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='Curva_Mensal_Comercial.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
