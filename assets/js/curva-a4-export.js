@@ -93,7 +93,7 @@ export async function exportMonthlyA4({payment,year,months:monthKeys,products}){
   const lw=logo.naturalWidth*factor,lh=logo.naturalHeight*factor;
   ctx.drawImage(logo,(W-lw)/2,30,lw,lh);
   paintText(ctx,'PROPOSTA COMERCIAL',W/2,535,2300,64,{bold:true,color:WINE,align:'center'});
-  paintText(ctx,'CONDIÇÕES DE PAGAMENTO — '+payment.trim().toUpperCase(),W/2,635,3050,49,{bold:true,color:INK,align:'center'});
+  paintText(ctx,'CONDIÇÕES DE PAGAMENTO - '+payment.trim().toUpperCase(),W/2,635,3050,49,{bold:true,color:INK,align:'center'});
   fill(ctx,100,720,W-200,6,WINE);
   const tableBottom=drawTable(ctx,products,monthKeys);
   const footerY=Math.max(tableBottom+90,2300);
