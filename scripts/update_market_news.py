@@ -68,17 +68,27 @@ PIXABAY_TERMS={
  "Óleo de palma":"oil palm plantation",
  "Soja":"soybean field",
  "Biodiesel":"biofuel agriculture",
- "Logística":"cargo container port",
+ "Logística":"oil tanker ship",
  "Câmbio":"finance currency exchange",
  "Petróleo":"oil refinery",
- "Comércio exterior":"cargo shipping containers",
+ "Comércio exterior":"chemical tanker ship",
 }
+def photo_identity(photo, category):
+ page=photo.get("page","")
+ match=re.search(r"-(\d+)/?$",page)
+ if not match:return None
+ description=(page+" "+photo.get("tags","")).lower()
+ if "container" in description:return None
+ maritime=category in ("Logística","Comércio exterior") or re.search(r"\b(ship|freighter|cargo|dock|harbour|harbor)\b",description)
+ if maritime and (not re.search(r"\btanker\b",description) or re.search(r"\b(truck|aircraft|plane|firefighter)\b",description)):return None
+ return match.group(1)
+
 def pixabay_images(category, api_key):
  if not api_key:
   return []
  params=urllib.parse.urlencode({
   "key":api_key,"q":PIXABAY_TERMS.get(category,"global trade"),
-  "image_type":"photo","safesearch":"true","per_page":100,
+  "image_type":"photo","safesearch":"true","per_page":200,
   "orientation":"horizontal",
  })
  try:
@@ -87,7 +97,7 @@ def pixabay_images(category, api_key):
   with urllib.request.urlopen(req,timeout=12) as response:
    data=json.load(response)
   return [{"url":hit["webformatURL"],"page":hit.get("pageURL",""),
-           "author":hit.get("user","Pixabay")}
+           "author":hit.get("user","Pixabay"),"tags":hit.get("tags","") or ""}
           for hit in data.get("hits",[])
           if str(hit.get("webformatURL","")).startswith("https://")]
  except Exception as exc:
@@ -218,26 +228,34 @@ def main():
  try:
   previous={n["id"]:n.get("image") for n in json.loads(OUT.read_text(encoding="utf-8"))["news"]}
  except (OSError,ValueError,KeyError,TypeError): pass
- used=set(); pools={}; attempts=0; count=0; stopped=False; failures=0
+ identities=set(); digests=set(); used=set(); pools={}; attempts=0; count=0; stopped=False; failures=0
  # Preserve existing assignments before allocating new photographs.
  for item in ordered:
+  item.pop("image",None)
   photo=previous.get(item["id"])
   if not isinstance(photo,dict): continue
+  identity=photo_identity(photo,item["category"])
+  if not identity or identity in identities:continue
   url=photo.get("url",""); filename=url.removeprefix(base)
   if url.startswith(base) and re.fullmatch(r"[a-f0-9]{24}\.jpg",filename) and filename not in used and (image_dir/filename).is_file():
+   digest=hashlib.sha256((image_dir/filename).read_bytes()).digest()
+   if digest in digests:continue
+   digests.add(digest); identities.add(identity)
    item["image"]=photo; used.add(filename); count+=1
  for item in ordered:
   if "image" in item or stopped or not api_key: continue
   category=item["category"]
   if category not in pools: pools[category]=pixabay_images(category,api_key)
   for photo in pools[category]:
-   filename=hashlib.sha256(photo["url"].encode()).hexdigest()[:24]+".jpg"
+   identity=photo_identity(photo,category)
+   if not identity or identity in identities:continue
+   filename=hashlib.sha256(identity.encode()).hexdigest()[:24]+".jpg"
    if filename in used: continue
    used.add(filename)
    target=image_dir/filename
    try:
     if not target.exists():
-     if attempts>=80: stopped=True; break
+     if attempts>=len(ordered)+30: stopped=True; break
      attempts+=1
      req=urllib.request.Request(photo["url"],headers={"User-Agent":"Mozilla/5.0","Accept":"image/jpeg,image/*;q=0.9,*/*;q=0.1"})
      with urllib.request.urlopen(req,timeout=15) as response:
@@ -245,7 +263,10 @@ def main():
      if len(content)>5_000_000 or not content.startswith(b"\xff\xd8"):
       print("Imagem inválida ou acima do limite"); continue
      target.write_bytes(content)
-    item["image"]={"url":base+filename,"page":photo["page"],"author":photo["author"]}
+    digest=hashlib.sha256(target.read_bytes()).digest()
+    if digest in digests:continue
+    identities.add(identity); digests.add(digest)
+    item["image"]={"tags":photo.get("tags",""),"url":base+filename,"page":photo["page"],"author":photo["author"]}
     count+=1; failures=0; break
    except urllib.error.HTTPError as exc:
     print("Falha no download: HTTP",exc.code); failures+=1
