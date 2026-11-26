@@ -61,18 +61,152 @@
 .link-select:hover{color:#fff}.status-btn{border:0;cursor:pointer}
 @media(max-width:1040px){.analytics{grid-template-columns:1fr}}
 @media(max-width:620px){.filter-strip{padding:12px}.bar-filter{grid-template-columns:minmax(90px,1fr) 1fr 25px;gap:7px}.ref-marker{width:27px;height:27px}}
+
+/* CARD 08 | Shared visual design with Card 07 - Maritime Logistics.
+   Match: black background, gold accents, white rules, framed sections,
+   maritime-style hero, interactive card hover. No functionality removed. */
+:root{
+ --bg:#000;--panel:#090909;--panel2:#101010;
+ --edge:rgba(255,255,255,.27);--gold:#D4AF37;--fg:#fff;--soft:#d2d2d2;
+}
+body{background:#000;color:#fff;font:15px/1.48 Arial,"Segoe UI",sans-serif}
+.page{max-width:1600px;margin:0 auto;padding:24px 24px 40px}
+a{color:#D4AF37}
+.hero{min-height:196px;padding:29px 32px 26px;border:1px solid #51452e;border-radius:16px;
+ background:linear-gradient(90deg,rgba(0,0,0,.93),rgba(0,0,0,.79) 48%,rgba(0,0,0,.36)),
+ url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201400%20520%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22b%22%20x2%3D%221%22%20y2%3D%220%22%3E%3Cstop%20stop-color%3D%22%23111821%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2339253A%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22a%22%3E%3Cstop%20stop-color%3D%22%2395A2AA%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%236B033B%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221400%22%20height%3D%22520%22%20fill%3D%22url(%23b)%22%2F%3E%3Cg%20opacity%3D%22.36%22%20fill%3D%22none%22%20stroke%3D%22%2395A2AA%22%20stroke-width%3D%223%22%3E%3Cpath%20d%3D%22M560%20130H1300M600%20180H1360M520%20380H1390M650%20320H1400%22%2F%3E%3Cpath%20d%3D%22M650%20130V390M790%20130V390M980%20130V390M1160%20130V390%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%2395A2AA%22%20opacity%3D%22.25%22%3E%3Crect%20x%3D%22720%22%20y%3D%22200%22%20width%3D%22120%22%20height%3D%22230%22%20rx%3D%2212%22%2F%3E%3Crect%20x%3D%22878%22%20y%3D%22158%22%20width%3D%22135%22%20height%3D%22272%22%20rx%3D%2212%22%2F%3E%3Crect%20x%3D%221050%22%20y%3D%22240%22%20width%3D%22110%22%20height%3D%22190%22%20rx%3D%2210%22%2F%3E%3Crect%20x%3D%221190%22%20y%3D%22105%22%20width%3D%2245%22%20height%3D%22325%22%2F%3E%3Cpath%20d%3D%22M670%20430L800%20380L930%20430ZM840%20430L950%20395L1060%20430Z%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M680%20200H800M850%20158H990M1180%20115V68H1270M1300%20150V66%22%20stroke%3D%22%23d4af37%22%20stroke-width%3D%226%22%20opacity%3D%22.6%22%2F%3E%3Cg%20stroke%3D%22url(%23a)%22%20stroke-width%3D%226%22%20fill%3D%22none%22%20opacity%3D%22.72%22%3E%3Ccircle%20cx%3D%22650%22%20cy%3D%22420%22%20r%3D%2228%22%2F%3E%3Ccircle%20cx%3D%22790%22%20cy%3D%22420%22%20r%3D%2228%22%2F%3E%3Cpath%20d%3D%22M550%20460H1360%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center center/cover;
+}
+.hero:after{display:none}
+.hero .eyebrow{color:#D4AF37;letter-spacing:.18em;font-size:12px}
+.hero h1{font:800 clamp(25px,3vw,40px)/1.14 Arial,"Segoe UI",sans-serif;color:#D4AF37;
+ letter-spacing:0;margin:10px 0 8px;text-transform:uppercase}
+.hero p{color:#fff;font-size:14px;max-width:930px;line-height:1.5}
+.herofoot{margin-top:16px;gap:8px}
+.herofoot .tag,.herofoot .tag.wine{border:1px solid #a08a47;color:#fff;background:#0005;
+ font-size:10px;letter-spacing:.09em;padding:5px 10px}
+.herofoot .tag.wine{color:#e9c967}
+.logistics-hero{transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease;position:relative}
+.logistics-hero:hover,.logistics-hero:focus-within{border-color:#D4AF37;
+ box-shadow:0 0 12px rgba(212,175,55,.80),0 0 32px rgba(212,175,55,.45),0 9px 24px #0008,
+ inset 0 0 12px rgba(212,175,55,.18);transform:translateY(-2px)}
+.topline{margin:11px 0 14px;padding:0 1px}
+.topline a,.logistics-home{font-size:12px;font-weight:800;color:#D4AF37;text-decoration:none}
+.topline a:hover{text-decoration:underline}
+.mark{color:#fff;font-size:10px;letter-spacing:.15em}.mark span{color:#D4AF37}
+.logistics-dashboard-group{padding:18px;margin-top:14px;border:1px solid rgba(255,255,255,.42);
+ border-radius:16px;background:#000;min-width:0}
+.group-title-row,.section-title{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.group-title-row h2,.section-title h2{margin:0;color:#D4AF37;font-size:17px;text-transform:uppercase;
+ letter-spacing:.055em}
+.group-title-row p{margin:6px 0 0;font-size:12px;color:#fff}
+.live-note,.section-title small{font-size:10px;letter-spacing:.08em;color:#b9c0c5}
+.section-rule{height:1px;border:0;background:rgba(255,255,255,.72);margin:22px 0}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:17px 0}
+.kpi{min-height:114px;padding:16px;border:1px solid rgba(255,255,255,.24);border-radius:10px;
+ background:#090909;color:#D4AF37;display:flex;flex-direction:column;justify-content:space-between}
+.kpi .n,.kpi .n.gold,.kpi .n.red{color:#fff;font-size:clamp(24px,2.3vw,37px);font-weight:800;line-height:1.15}
+.kpi p{color:#D4AF37;font-size:12px;font-weight:700;line-height:1.45;margin:8px 0 0}
+.kpi-action{width:auto;color:#D4AF37;margin:0;font:inherit}
+.kpi-action:hover,.kpi-action:focus-visible,.kpi-action.active{
+ background:#302711;border-color:#D4AF37;box-shadow:0 0 12px rgba(212,175,55,.44),
+ inset 0 0 19px rgba(212,175,55,.10)}
+.hint{border-left:3px solid #D4AF37;background:#101010;color:#d5d5d5;border-radius:0 8px 8px 0}
+.hint strong{color:#fff}
+.filter-strip{margin:5px 0 0;padding:13px 14px;background:#090909;
+ border:1px solid rgba(255,255,255,.27)}
+.filter-strip strong{color:#D4AF37}
+.filter-chip{border-color:#b89546;color:#fff;background:#1e1b12}
+.filter-chip:hover{border-color:#D4AF37;background:#302711}
+.action-btn,.cta,.cta.alt,.file-button{border:1px solid #787878;background:#000;color:#D4AF37;
+ border-radius:7px;min-height:37px;font-size:12px;font-weight:800;transition:background .25s,border-color .25s,box-shadow .25s}
+.action-btn:hover:not(:disabled),.cta:hover,.file-button:hover{background:#302711;
+ border-color:#D4AF37;box-shadow:0 0 10px rgba(212,175,55,.22);filter:none}
+.action-btn:disabled{color:#888}
+.grid{grid-template-columns:minmax(390px,1.13fr) minmax(340px,.87fr);gap:12px}
+.panel,.private{margin:0;min-width:0;background:#090909;color:#fff;
+ border:1px solid rgba(255,255,255,.24);border-radius:10px;padding:16px}
+.panel h2{font-size:19px;color:#D4AF37;letter-spacing:.01em}
+.panel>h2{border-bottom:1px solid rgba(255,255,255,.72);padding-bottom:10px;margin-bottom:9px}
+.panel .section-note,.panel p.muted,.muted{color:#dedede}
+.field{font-size:12px;font-weight:700;color:#D4AF37}
+.field input,.field select{background:#000;color:#fff;border:1px solid #5b5b5b;border-radius:6px;padding:10px 11px}
+.field input:focus,.field select:focus{outline:2px solid #D4AF37}
+#map{height:440px;border:1px solid #464646;border-radius:10px;background:#161a22}
+.map-legend{color:#fff}.legend-dot{background:#6B033B;border-color:#D4AF37}
+.map-toggles{border-color:#777;background:#000}
+.map-mode{color:#fff;font-size:11px}.map-mode.active{background:#392e11;color:#ffdf79}
+.ref-marker{width:26px;height:26px;border:2px solid #D4AF37;background:#59032f;
+ box-shadow:0 2px 7px #000a; font-size:11px}
+.ref-marker:hover{box-shadow:0 0 0 4px #D4AF3740}
+.ref-marker.selected{background:#D4AF37;color:#111;border-color:#fff;box-shadow:0 0 0 5px #D4AF3740}
+.fac-list{gap:9px;margin-top:14px}
+.fac{min-height:75px;padding:12px;background:#090909;color:#fff;
+ border:1px solid #555;border-radius:8px}
+.fac span{color:#d1d1d1}.fac.selected,.fac:hover,.fac:focus-visible{
+ background:#302711;border-color:#D4AF37;box-shadow:0 0 12px rgba(212,175,55,.19)}
+.fact-title{color:#fff;font-size:23px}.fact-row{border-bottom:1px solid #555}.fact-row span{color:#fff}
+.pill{background:#211b0e;border:1px solid #746131;color:#eac45e}
+.grid .panel .actions{margin-top:16px}.panel #scopeHint{margin-top:11px}
+.analytics,.subgrid{gap:12px;margin-top:14px}
+.chart-heading{border-bottom:1px solid rgba(255,255,255,.72);padding-bottom:10px;margin-bottom:10px}
+.chart-heading h2{color:#D4AF37;font-size:19px}.micro-tag{color:#cfcfcf}
+.bar-chart{max-height:440px;gap:7px}
+.bar-filter{background:#0b0b0b;color:#fff;border:1px solid #424242;border-radius:6px;min-height:38px}
+.bar-filter span:first-child{color:#fff}
+.bar-track{background:#333}.bar-fill{background:#D4AF37}
+.bar-filter[aria-pressed="true"]{border-color:#D4AF37;background:#302711}
+.bar-filter[aria-pressed="true"] .bar-fill{background:#ffe083}
+.bar-filter:hover,.bar-filter:focus-visible{border-color:#D4AF37;background:#302711}
+.category-list,.maritime-steps{gap:9px}
+.check,.step,.marine-visit{background:#080808;border:1px solid #414141;border-radius:8px}
+.check b,.step strong{color:#D4AF37}.check p,.step small,.marine-visit span{color:#fff}
+.maritime-title{color:#D4AF37}.marine-visit em{color:#e1c272}
+.logistics-dashboard-group .panel,
+.logistics-dashboard-group .kpi,
+.logistics-dashboard-group .field,
+.logistics-dashboard-group .check,
+.logistics-dashboard-group .step,
+.logistics-dashboard-group .marine-visit{
+ transition:background-color .25s,border-color .25s,box-shadow .25s}
+.logistics-dashboard-group .panel:hover,.logistics-dashboard-group .panel:focus-within,
+.logistics-dashboard-group .kpi:hover,.logistics-dashboard-group .field:hover,
+.logistics-dashboard-group .check:hover,.logistics-dashboard-group .step:hover,
+.logistics-dashboard-group .marine-visit:hover{
+ background:#302711;border-color:#D4AF37;
+ box-shadow:0 0 12px rgba(212,175,55,.38),0 0 24px rgba(212,175,55,.16),
+ inset 0 0 20px rgba(212,175,55,.07)}
+.table-wrap{border:1px solid #4f4f4f;border-radius:8px}
+.table th{background:#000;color:#D4AF37;border-bottom:1px solid #fff;font-size:12px}
+.table td{color:#fff;border-bottom:1px solid #363636}
+.table tr:nth-child(even){background:#111}.table tr:hover{background:#272219}
+.link-select{color:#e9c05b;text-decoration-color:#93783a}
+.link-select:hover{color:#fff}
+.status.valid{color:#bfeec0;background:#1c3d28}.status.warning{color:#ffe3a4;background:#583e13}
+.status.expired{color:#ffd2d2;background:#64242b}.status.unknown{color:#ddd;background:#343434}
+.doc-showing,.inventory-status{color:#fff}
+.footer{padding:21px 0;color:#bbb;border-top:1px solid #666;margin-top:20px}
+.footer a{color:#D4AF37}
+@media(max-width:1040px){.grid,.subgrid{grid-template-columns:1fr}}
+@media(max-width:690px){.page{padding:12px}.logistics-dashboard-group{padding:11px}.hero{padding:25px 17px}
+ .grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{font-size:25px}
+ .mark{font-size:9px}.tag{font-size:9px}}
+@media(prefers-reduced-motion:reduce){
+ .logistics-hero,.logistics-dashboard-group .panel,.logistics-dashboard-group .kpi,.logistics-dashboard-group .field,
+ .logistics-dashboard-group .check,.logistics-dashboard-group .step{transition:none}
+ .logistics-hero:hover{transform:none}}
 </style>
 </head>
 <body>
 <main class="page">
-  <div class="topline"><a href="./">← CENTRAL DE INTELIGÊNCIA</a><div class="mark">MUNDO<span>NOVO</span> TRADE · 08</div></div>
-  <header class="hero">
-    <div class="eyebrow">08 / INTELIGÊNCIA DE FORNECIMENTO</div>
-    <h1>Inteligência de Refinarias</h1>
-    <p>Visão geográfica das unidades de processamento de óleos vegetais, matriz de qualificação documental e rastreabilidade logística do embarque à chegada ao Brasil.</p>
-    <div class="herofoot"><span class="tag">Origem · Indonésia</span><span class="tag">8 unidades identificadas</span><span class="tag wine">Controle documental por unidade e produto</span></div>
+  <header class="hero logistics-hero">
+    <div class="eyebrow">MUNDO NOVO TRADE · INTELIGÊNCIA GLOBAL</div>
+    <h1>08 · INTELIGÊNCIA DE REFINARIAS</h1>
+    <p>Localização das plantas, qualificação de fornecedores, vencimento documental e inteligência marítima de óleos vegetais.</p>
+    <div class="herofoot"><span class="tag">INDONÉSIA · 8 UNIDADES</span><span class="tag">7 GRUPOS EMPRESARIAIS</span><span class="tag wine">DASHBOARD INTERATIVO</span></div>
   </header>
-
+  <div class="topline"><a class="logistics-home" href="./">← VOLTAR À CENTRAL DE INTELIGÊNCIA</a><div class="mark">MUNDO<span>NOVO</span> TRADE · 08</div></div>
+  <div class="logistics-dashboard-group" id="refineryDashboard">
+    <div class="group-title-row"><div><h2>PAINEL EXECUTIVO · REFINARIAS</h2><p>Selecione indicadores, regiões, refinarias ou barras para atualizar todo o dashboard.</p></div><span class="live-note">CADASTRO · DOCUMENTAÇÃO · LOGÍSTICA</span></div>
   <div class="kpis" aria-label="Indicadores dinâmicos das refinarias">
     <button type="button" class="kpi kpi-action" id="kpiAll" title="Limpar a seleção de unidade e de situação" aria-label="Mostrar todas as refinarias e documentos"><div class="n" id="kpiUnits">8</div><p>Unidades no recorte · clique para visão geral</p></button>
     <div class="kpi"><div class="n" id="kpiDocs">—</div><p>Documentos no recorte atual</p></div>
@@ -81,10 +215,12 @@
   </div>
   <div class="hint"><strong>Consulta pública:</strong> catálogo de certificados, tipos de documentos e prazos disponível sem senha e carregado automaticamente. <strong>Importante:</strong> por enquanto estão publicados somente os metadados; os PDFs originais ainda não estão hospedados neste portal. *Datas de vencimento referem-se às cópias recebidas, sem confirmação de renovação pelo emissor.</div>
 
+  <hr class="section-rule">
   <div class="filter-strip" aria-label="Filtros cruzados ativos">
     <div><strong>SELEÇÃO ATIVA</strong><div id="activeFilters" class="filter-chips"><span class="muted">Todas as refinarias e documentos</span></div></div>
     <button class="action-btn" type="button" id="clearFilters">Limpar todos os filtros</button>
   </div>
+  <hr class="section-rule">
   <div class="grid">
     <section class="panel">
       <h2>Mapa de unidades industriais</h2>
@@ -111,10 +247,32 @@
     </section>
   </div>
 
+  <hr class="section-rule">
+  <div class="section-title"><h2>ANÁLISE DOCUMENTAL</h2><small>Gráficos cruzados · clique para refinar</small></div>
   <div class="analytics" aria-label="Gráficos com filtros cruzados">
     <section class="panel"><div class="chart-heading"><h2>Documentos por categoria</h2><span class="micro-tag">Clique em uma barra para filtrar</span></div><p class="section-note">Distribuição documental segundo as unidades, regiões e situações selecionadas.</p><div class="bar-chart" id="chartTypes" role="group" aria-label="Filtrar por categoria do documento"></div></section>
     <section class="panel"><div class="chart-heading"><h2>Validade documental</h2><span class="micro-tag">Clique para filtrar</span></div><p class="section-note">Datas extraídas das cópias recebidas; não confirma renovações nem autenticidade.</p><div class="bar-chart" id="chartStatus" role="group" aria-label="Filtrar por situação documental"></div></section>
   </div>
+  <hr class="section-rule">
+  <div class="section-title"><h2>CONTROLE DE DOCUMENTOS</h2><small>118 registros públicos · validade e homologação</small></div>
+  <section class="panel private" id="catalogDocs">
+    <h2>Documentos e validade · consulta aberta</h2>
+    <p class="muted">O catálogo documental é carregado automaticamente, sem login ou PIN. Consulte a unidade, o tipo de certificado e a data registrada. A disponibilização dos arquivos PDF integrais será realizada separadamente; os nomes abaixo não são links de download.</p>
+    <div class="actions">
+      <button type="button" id="exportCSV" class="action-btn" disabled>Exportar conferência CSV</button>
+      <button type="button" id="reloadCatalog" class="action-btn">Atualizar catálogo</button>
+      <span id="inventoryStatus" class="inventory-status" role="status">Carregando catálogo público…</span>
+    </div>
+    <div class="toolbar">
+      <label class="field">Unidade<select id="docUnit"><option value="">Todas as unidades</option></select></label>
+      <label class="field">Tipo de documento<select id="docType"><option value="">Todos os tipos</option></select></label>
+      <label class="field">Vencimento<select id="docStatus"><option value="">Todos os estados</option><option value="expired">Vencido na cópia</option><option value="warning">Até 90 dias</option><option value="valid">Prazo superior a 90 dias</option><option value="unknown">Data não confirmada</option></select></label>
+    </div>
+    <div class="doc-showing" id="docsShowing" aria-live="polite">Carregando registros…</div><div class="table-wrap"><table class="table"><thead><tr><th>Refinaria</th><th>Documento</th><th>Tipo</th><th>Validade extraída</th><th>Controle</th></tr></thead><tbody id="docsBody"><tr><td colspan="5" class="none">Carregando catálogo público de documentos…</td></tr></tbody></table></div>
+    <p class="muted">Legenda: “vencido na cópia” significa apenas que o documento enviado apresenta data passada; não confirma ausência de renovação. “Data não confirmada” não equivale a validade permanente. A autenticidade deve ser conferida nos emissores oficiais.</p>
+  </section>
+  <hr class="section-rule">
+  <div class="section-title"><h2>QUALIFICAÇÃO & INTELIGÊNCIA MARÍTIMA</h2><small>Riscos, conformidade e movimentação</small></div>
   <div class="subgrid">
     <section class="panel">
       <h2>Matriz documental recomendada</h2>
@@ -143,23 +301,7 @@
       <div class="hint"><strong>Integração futura:</strong> relacionar cada contrato do Maxys ao fornecedor, navio, porto de origem, status documental e evento da Cattalini, sem afirmar que qualquer navio listado pertence a determinada refinaria.</div><h3 class="maritime-title">Cattalini · embarcações com produtos vegetais</h3><p class="section-note">Dados publicados no quadro marítimo da Mundo Novo. Sem vínculo comprovado com as refinarias listadas e sem inferir o porto de origem.</p><div id="maritimeStatus" class="inventory-status" role="status">Consultando registro de movimentação…</div><div class="maritime-overview" id="maritimeShips"></div>
     </section>
   </div>
-
-  <section class="panel private" id="catalogDocs">
-    <h2>Documentos e validade · consulta aberta</h2>
-    <p class="muted">O catálogo documental é carregado automaticamente, sem login ou PIN. Consulte a unidade, o tipo de certificado e a data registrada. A disponibilização dos arquivos PDF integrais será realizada separadamente; os nomes abaixo não são links de download.</p>
-    <div class="actions">
-      <button type="button" id="exportCSV" class="action-btn" disabled>Exportar conferência CSV</button>
-      <button type="button" id="reloadCatalog" class="action-btn">Atualizar catálogo</button>
-      <span id="inventoryStatus" class="inventory-status" role="status">Carregando catálogo público…</span>
-    </div>
-    <div class="toolbar">
-      <label class="field">Unidade<select id="docUnit"><option value="">Todas as unidades</option></select></label>
-      <label class="field">Tipo de documento<select id="docType"><option value="">Todos os tipos</option></select></label>
-      <label class="field">Vencimento<select id="docStatus"><option value="">Todos os estados</option><option value="expired">Vencido na cópia</option><option value="warning">Até 90 dias</option><option value="valid">Prazo superior a 90 dias</option><option value="unknown">Data não confirmada</option></select></label>
-    </div>
-    <div class="doc-showing" id="docsShowing" aria-live="polite">Carregando registros…</div><div class="table-wrap"><table class="table"><thead><tr><th>Refinaria</th><th>Documento</th><th>Tipo</th><th>Validade extraída</th><th>Controle</th></tr></thead><tbody id="docsBody"><tr><td colspan="5" class="none">Carregando catálogo público de documentos…</td></tr></tbody></table></div>
-    <p class="muted">Legenda: “vencido na cópia” significa apenas que o documento enviado apresenta data passada; não confirma ausência de renovação. “Data não confirmada” não equivale a validade permanente. A autenticidade deve ser conferida nos emissores oficiais.</p>
-  </section>
+  </div>
   <footer class="footer">
     <span>Fontes normativas e de validação:</span>
     <a href="https://www.fssc.com/public-register/" target="_blank" rel="noopener">Registro FSSC</a>
