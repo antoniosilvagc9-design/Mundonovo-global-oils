@@ -309,7 +309,7 @@ function refreshMapMarkers(){
   const hasDocs=!inventory||m.ids.some(id=>filteredDocs({skipUnit:true}).some(d=>d.unit===id));
   m.node.classList.toggle("selected",!!unit&&m.ids.includes(unit));
   m.node.classList.toggle("dimmed",!inSearch||!hasDocs);
-  m.node.hidden=!inSearch;
+  m.node.style.display=inSearch?"flex":"none";
  }
 }
 function renderCharts(){
@@ -339,7 +339,7 @@ function renderBars(targetId,rows,chosen,choose){
 }
 function renderFilterSummary(){
  const chips=$("activeFilters");chips.replaceChildren();
- const selectedValues=[["search","Busca", $("search").value.trim(),()=>{$("search").value="";renderAll();}],["region","Região",$("region").value,()=>{$("region").value="";renderAll();}],["unit","Unidade",byId[selectedUnit()]?.unit,()=>{selected=null;$("docUnit").value="";renderAll();}],["type","Tipo",$("docType").value,()=>{$("docType").value="";renderAll();}],["status","Situação",$("docStatus").selectedOptions[0]?.textContent,$("docStatus").value?()=>{$("docStatus").value="";renderAll();}:null]].filter(item=>item[3]);
+ const selectedValues=[["search","Busca", $("search").value.trim(),()=>{$("search").value="";renderAll();}],["region","Região",$("region").value,()=>{$("region").value="";renderAll();}],["unit","Unidade",byId[selectedUnit()]?.unit||(selectedUnit()==="ibp-notallocated"?"Intibenua · unidade a confirmar":selectedUnit()==="notallocated"?"Unidade não identificada":""),()=>{selected=null;$("docUnit").value="";renderAll();}],["type","Tipo",$("docType").value,()=>{$("docType").value="";renderAll();}],["status","Situação",$("docStatus").selectedOptions[0]?.textContent,$("docStatus").value?()=>{$("docStatus").value="";renderAll();}:null]].filter(item=>item[3]);
  if(!selectedValues.length){const empty=document.createElement("span");empty.className="muted";empty.textContent="Todas as refinarias e documentos";chips.append(empty);}
  for(const [,label,value,clear] of selectedValues){
    const btn=document.createElement("button");btn.type="button";btn.className="filter-chip";btn.title="Remover filtro "+label;btn.textContent=label+": "+value+" ×";btn.addEventListener("click",clear);chips.append(btn);
