@@ -1347,10 +1347,13 @@ const newsDate=(v)=>new Date(v).toLocaleString("pt-BR",{timeZone:"America/Sao_Pa
 function renderMarketNews(){
  const category=document.getElementById("news-category").value,region=document.getElementById("news-region").value;
  const impact=document.getElementById("news-impact").value,hours=Number(document.getElementById("news-period").value);
- const now=Date.now(),recent=newsState.items.filter(n=>{
+ const now=Date.now();
+ const matching=newsState.items.filter(n=>{
   const age=(now-Date.parse(n.published_at))/3600000;
-  return age>=-0.2&&age<=hours&&(!category||n.category===category)&&(!region||(n.regions||[]).includes(region))&&(!impact||n.impact===impact);
- });
+  return age>=-0.2&&age<=720&&(!category||n.category===category)&&(!region||(n.regions||[]).includes(region))&&(!impact||n.impact===impact);
+ }).sort((a,b)=>Date.parse(b.published_at)-Date.parse(a.published_at));
+ const recent=matching.filter(n=>now-Date.parse(n.published_at)<=hours*3600000);
+ const archive=matching.filter(n=>now-Date.parse(n.published_at)>hours*3600000).slice(0,Math.max(0,4-recent.length));
  const day=newsState.items.filter(n=>{const age=(now-Date.parse(n.published_at))/3600000;return age>=0&&age<=24});
  const high=day.filter(n=>n.impact==="Alto").length;
  
@@ -1370,8 +1373,9 @@ function renderMarketNews(){
   const analysis=n.commercial_analysis||"Sem análise comercial confirmada. Verificar o texto original e os dados oficiais antes de inferir efeitos para a Mundo Novo.";
   return '<article class="news-card news20-card '+(i===0?'news20-feature':'')+'"><div class="news20-card-art news21-photo">'+(photo?'<img src="'+newsSafe(photo)+'" alt="Imagem temática ilustrativa do Pixabay; não documenta o acontecimento" loading="'+(i===0?'eager':'lazy')+'" decoding="async" onerror="this.style.display=\'none\'">':'')+'<span>IMAGEM TEMÁTICA ILUSTRATIVA · NÃO DOCUMENTAL</span></div><div class="news20-card-body"><div class="news-top"><span class="intel-kicker">'+newsSafe((n.regions||["Global"]).join(", "))+' · '+newsSafe(n.category)+'</span><span class="news-impact">'+newsSafe(n.impact||"Não definido")+' impacto potencial</span></div><h3>'+newsSafe(n.title_pt||n.title_original)+'</h3><div class="news-meta">'+meta(n)+'</div>'+(n.summary_pt?'<p class="intel-summary">'+newsSafe(n.summary_pt)+'</p>':'')+'<details><summary>Fato, contexto e inteligência comercial</summary><p><b>Fato disponível:</b> '+newsSafe(context)+'</p><p><b>Critério editorial:</b> '+newsSafe(n.impact_reason||"Não informado")+'</p><p><b>Leitura comercial:</b> '+newsSafe(analysis)+'</p></details>'+(link?'<a href="'+newsSafe(link)+'" target="_blank" rel="noopener noreferrer">Ler publicação original ↗</a>':'')+'</div></article>';
  };
- if(!recent.length){feed.innerHTML='<div class="placeholder">Nenhuma notícia disponível para estes filtros e período. Experimente ampliar o intervalo.</div>';}
- else{feed.innerHTML=ranked.slice(0,9).map(card).join("");}
+ const status=recent.length<4?'<div class="placeholder" style="grid-column:1/-1" role="status">'+recent.length+' no período selecionado.'+(archive.length?' Abaixo, publicações do mesmo filtro fora do período.':'')+(recent.length+archive.length<4?' Ainda há menos de quatro publicações com esses filtros.':'')+'</div>':'';
+ const older=archive.length?'<div class="placeholder" style="grid-column:1/-1">PUBLICAÇÕES ANTERIORES · ATÉ 30 DIAS</div>'+archive.map(n=>card(n,1)).join(""):'';
+ feed.innerHTML=status+ranked.slice(0,9).map(card).join("")+older;
  const counts={};recent.forEach(n=>(n.regions||["Global"]).forEach(r=>counts[r]=(counts[r]||0)+1));
  const regions=document.getElementById("news20-regions");
  regions.innerHTML=Object.keys(counts).length?Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,9).map(([r,v])=>'<div class="news20-region"><span>'+newsSafe(r)+'</span><div class="news20-track"><i style="width:'+Math.round(100*v/Math.max(...Object.values(counts)))+'%"></i></div><b>'+v+'</b></div>').join(""):'<p class="muted">Nenhuma região identificada neste filtro.</p>';
