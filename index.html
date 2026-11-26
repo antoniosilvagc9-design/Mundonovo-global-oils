@@ -943,7 +943,7 @@ function render(){
  add('Soja · CBOT',cache.soy?.last_three||[],'US¢/bu','Yahoo Finance · indicativo');
  add('Brent · spot',cache.brent?.last_three||[],'USD/barril','EIA/FRED');
  if(!strip.querySelector('.mt-footer-row')){
- strip.replaceChildren(node('strong','COTAÇÕES INTERNACIONAIS','mt-footer-title'));
+ strip.replaceChildren();
  const row=node('div','','mt-footer-row'),windowEl=node('div','','mt-footer-window'),dollar=node('div','','mt-footer-dollar');
  const widget=document.createElement('tv-ticker-tape');
  widget.setAttribute('symbols','FX_IDC:USDBRL');widget.setAttribute('theme','dark');widget.setAttribute('item-size','compact');
