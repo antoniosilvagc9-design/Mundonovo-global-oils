@@ -1,8 +1,25 @@
 {
-  "updated_at_utc": "2026-11-26T03:40:46.839172+00:00",
+  "updated_at_utc": "2026-11-26T17:07:42.127283+00:00",
   "feed": "Google News RSS — manchetes e metadados de terceiros",
   "limitations": "Manchetes traduzidas automaticamente quando disponível; original preservado; resumo e análise não gerados sem acesso ao texto. Classificação heurística, não avaliação factual do impacto.",
-  "errors": [],
+  "errors": [
+    "Óleo de palma: HTTP Error 503: Service Unavailable",
+    "Óleo de palma: HTTP Error 429: Too Many Requests",
+    "Soja: HTTP Error 503: Service Unavailable",
+    "Soja: HTTP Error 503: Service Unavailable",
+    "Soja: HTTP Error 503: Service Unavailable",
+    "Biodiesel: HTTP Error 503: Service Unavailable",
+    "Biodiesel: HTTP Error 503: Service Unavailable",
+    "Biodiesel: HTTP Error 503: Service Unavailable",
+    "Logística: HTTP Error 429: Too Many Requests",
+    "Logística: HTTP Error 503: Service Unavailable",
+    "Câmbio: HTTP Error 503: Service Unavailable",
+    "Câmbio: HTTP Error 503: Service Unavailable",
+    "Petróleo: HTTP Error 503: Service Unavailable",
+    "Comércio exterior: HTTP Error 503: Service Unavailable",
+    "Comércio exterior: HTTP Error 503: Service Unavailable",
+    "Comércio exterior: HTTP Error 503: Service Unavailable"
+  ],
   "news": [
     {
       "id": "304757b73da4091ed9",
