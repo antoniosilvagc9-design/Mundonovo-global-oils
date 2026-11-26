@@ -446,7 +446,7 @@ async function loadPublicCatalog(){
 $("exportCSV").addEventListener("click",()=>{if(!inventory)return;const rows=[["Unidade","Documento","Categoria","Validade","Situação"],...filteredDocs().map(d=>[d.unit,d.filename,d.category,d.validUntil||"",statusOf(d).label])];const csv="\uFEFF"+rows.map(row=>row.map(escapeCsv).join(";")).join("\r\n");const url=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download="MundoNovo_Refinarias_Conferencia.csv";a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);});
 $("reloadCatalog").addEventListener("click",loadPublicCatalog);
 ["docType","docStatus"].forEach(id=>$(id).addEventListener("change",renderAll));
-$("docUnit").addEventListener("change",()=>{selected=selectedUnit()||null;renderAll();if(map&&selected)map.flyTo({center:[byId[selected].lng,byId[selected].lat],zoom:6.5,essential:true});});
+$("docUnit").addEventListener("change",()=>{selected=selectedUnit()||null;renderAll();if(map&&selected&&byId[selected])map.flyTo({center:[byId[selected].lng,byId[selected].lat],zoom:6.5,essential:true});});
 $("search").addEventListener("input",()=>{const f=byId[selectedUnit()];if(f&&!unitMatches(f)){$("docUnit").value="";selected=null;}renderAll();});
 $("region").addEventListener("change",()=>{const f=byId[selectedUnit()];if(f&&!unitMatches(f)){$("docUnit").value="";selected=null;}renderAll();});
 $("clearFilters").addEventListener("click",()=>{
