@@ -30,14 +30,14 @@ function fill(ctx,x,y,w,h,color){
   ctx.fillStyle=color;ctx.fillRect(x,y,w,h);
 }
 function drawTable(ctx,products,monthKeys){
-  const x=100,top=780,width=W-200,labelW=640,monthW=(width-labelW)/12;
+  const x=100,top=795,width=W-200,labelW=640,monthW=(width-labelW)/12;
   const headH=112,rowH=154;
   fill(ctx,x,top,width,headH,SLATE);
-  paintText(ctx,'PRODUTO',x+labelW/2,top+headH/2,labelW-30,36,{bold:true,color:WINE,align:'center'});
+  paintText(ctx,'PRODUTO',x+labelW/2,top+headH/2,labelW-30,36,{bold:true,color:WHITE,align:'center'});
   for(let j=0;j<12;j++){
     const key=monthKeys[j];
     const month=MONTHS[Number(key.slice(5,7))-1]+'/'+key.slice(2,4);
-    paintText(ctx,month,x+labelW+monthW*(j+.5),top+headH/2,monthW-10,33,{bold:true,color:WINE,align:'center'});
+    paintText(ctx,month,x+labelW+monthW*(j+.5),top+headH/2,monthW-10,33,{bold:true,color:WHITE,align:'center'});
   }
   for(let i=0;i<4;i++){
     const saleY=top+headH+(i*2)*rowH,netY=saleY+rowH;
@@ -89,15 +89,12 @@ export async function exportMonthlyA4({payment,year,months:monthKeys,products}){
   if(!ctx)throw Error('Seu navegador não suporta a exportação por Canvas.');
   fill(ctx,0,0,W,H,WHITE);
   const logo=await imageFromData(LOGO_SRC);
-  const factor=Math.min(640/logo.naturalWidth,410/logo.naturalHeight);
+  const factor=Math.min(640/logo.naturalWidth,370/logo.naturalHeight);
   const lw=logo.naturalWidth*factor,lh=logo.naturalHeight*factor;
-  ctx.drawImage(logo,(W-lw)/2,38,lw,lh);
-  paintText(ctx,'PROPOSTA COMERCIAL',W/2,468,2300,64,{bold:true,color:WINE,align:'center'});
-  paintText(ctx,'CONDIÇÕES DE PAGAMENTO — '+payment.trim().toUpperCase(),W/2,557,3050,49,{bold:true,color:INK,align:'center'});
-  const first=monthKeys[0],last=monthKeys[11];
-  const period=MONTHS[Number(first.slice(5,7))-1]+'/'+first.slice(2,4)+' — '+MONTHS[Number(last.slice(5,7))-1]+'/'+last.slice(2,4);
-  paintText(ctx,'CURVA MENSAL · '+period,W/2,640,2000,34,{color:SLATE,align:'center'});
-  fill(ctx,100,710,W-200,6,WINE);
+  ctx.drawImage(logo,(W-lw)/2,30,lw,lh);
+  paintText(ctx,'PROPOSTA COMERCIAL',W/2,535,2300,64,{bold:true,color:WINE,align:'center'});
+  paintText(ctx,'CONDIÇÕES DE PAGAMENTO — '+payment.trim().toUpperCase(),W/2,635,3050,49,{bold:true,color:INK,align:'center'});
+  fill(ctx,100,720,W-200,6,WINE);
   const tableBottom=drawTable(ctx,products,monthKeys);
   const footerY=Math.max(tableBottom+90,2300);
   fill(ctx,100,footerY-45,W-200,3,SLATE);
