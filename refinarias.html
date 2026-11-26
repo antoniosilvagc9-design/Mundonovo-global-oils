@@ -858,6 +858,7 @@ function renderDocs(){
 }
 async function loadPublicCatalog(){
   const state=$("inventoryStatus");
+  state.hidden=false;
   state.textContent="Carregando catálogo público de documentos…";
   try{
     const response=await fetch("./data/refinarias/catalogo.json",{cache:"no-store"});
@@ -866,10 +867,11 @@ async function loadPublicCatalog(){
     if(data?.version!==1||!Array.isArray(data.documents)||data.documents.length>2000||!data.documents.every(d=>d&&typeof d.filename==="string"&&typeof d.category==="string"&&typeof d.unit==="string"))throw Error("Formato do catálogo inválido.");
     inventory={documents:data.documents.map(d=>({filename:String(d.filename).slice(0,220),category:String(d.category).slice(0,80),unit:String(d.unit).slice(0,60),validUntil:typeof d.validUntil==="string"?d.validUntil:null}))};
     $("exportCSV").disabled=false;
-    state.textContent=inventory.documents.length+" registros públicos de documentos · referência: "+String(data.referenceDate||"não informada")+". Arquivos originais ainda não publicados.";
+    state.textContent="";state.hidden=true;
     renderDocOptions();renderAll();
   }catch(error){
     inventory=null;$("exportCSV").disabled=true;
+    state.hidden=false;
     state.textContent="Não foi possível acessar o catálogo ("+error.message+"). Atualize para tentar novamente.";
     renderDocOptions();renderAll();
   }
