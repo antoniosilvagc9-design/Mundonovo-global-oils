@@ -68,7 +68,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, sea, water, sight, transport, cargo ship, tanker, oil, mountains, nature, gibraltar, coastline, strait, Gibraltar",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/df1847b624b288ecef724272.jpg",
+        "url": "./data/news-images/df1847b624b288ecef724272.jpg",
         "page": "https://pixabay.com/photos/ship-sea-water-sight-transport-10038606/",
         "author": "Bergadder"
       }
@@ -97,7 +97,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, sea, transport, vessel, ocean, boat, sailing, nature, travel, tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/769c6033c2e852f6cc1c78e3.jpg",
+        "url": "./data/news-images/769c6033c2e852f6cc1c78e3.jpg",
         "page": "https://pixabay.com/photos/ship-sea-transport-vessel-ocean-6580994/",
         "author": "papazachariasa"
       }
@@ -125,7 +125,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/5bc6f3b870344fbd6d3450e7.jpg",
+        "url": "./data/news-images/5bc6f3b870344fbd6d3450e7.jpg",
         "page": "https://pixabay.com/photos/stock-trading-monitor-business-1863880/",
         "author": "3844328"
       }
@@ -153,7 +153,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/6febc920dfabd9e5ea432e36.jpg",
+        "url": "./data/news-images/6febc920dfabd9e5ea432e36.jpg",
         "page": "https://pixabay.com/photos/cryptocurrency-business-finance-3085139/",
         "author": "WorldSpectrum"
       }
@@ -182,7 +182,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, freighter, tanker, oil, oil tanker, ocean freighters, diesel, fuel, tanker, oil tanker, oil tanker, oil tanker, oil tanker, oil tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/1829954df0dba9bcde950f3b.jpg",
+        "url": "./data/news-images/1829954df0dba9bcde950f3b.jpg",
         "page": "https://pixabay.com/photos/ship-freighter-tanker-oil-5562741/",
         "author": "Freiheitsjunkie"
       }
@@ -210,7 +210,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/f9e45650fa7b3f49aac0f837.jpg",
+        "url": "./data/news-images/f9e45650fa7b3f49aac0f837.jpg",
         "page": "https://pixabay.com/photos/currencies-finance-business-pounds-69522/",
         "author": "PublicDomainPictures"
       }
@@ -238,7 +238,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "money, finance, banknotes, dollar, investment, value, euro, currency, wealth, money, investment, currency, currency, currency, currency, currency",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/e4c7c5c3429dcca8881bf2d3.jpg",
+        "url": "./data/news-images/e4c7c5c3429dcca8881bf2d3.jpg",
         "page": "https://pixabay.com/photos/money-finance-banknotes-dollar-8325972/",
         "author": "vjkombajn"
       }
@@ -267,7 +267,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, sea, horizon, sky, blue sky, ocean, tanker, vessel, freighter, cargo ship, water, seascape, scenic, nature, tanker, tanker, tanker, tanker, tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/9c393652ef310aef7bbbe915.jpg",
+        "url": "./data/news-images/9c393652ef310aef7bbbe915.jpg",
         "page": "https://pixabay.com/photos/ship-sea-horizon-sky-blue-sky-5957064/",
         "author": "angad305"
       }
@@ -295,7 +295,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "bitcoin, business, money, currency, cryptocurrency, finance, blockchain, exchange, coin, crypto, technology, digital, gold, financial, internet, electronic, computer, mining, cash, virtual, payment, network, cryptography, investment, e-commerce, blue money, blue finance, bitcoin, bitcoin, bitcoin, bitcoin, bitcoin, money, cryptocurrency, cryptocurrency, cryptocurrency, cryptocurrency, blockchain, crypto, crypto, crypto",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/f8ec33eb8cea563de8c68da3.jpg",
+        "url": "./data/news-images/f8ec33eb8cea563de8c68da3.jpg",
         "page": "https://pixabay.com/photos/bitcoin-business-money-currency-4647177/",
         "author": "pattymalajak"
       }
@@ -323,7 +323,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, oil tanker, nature, lake, sea, water, oil",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/72a1fa773860f46be7e167f4.jpg",
+        "url": "./data/news-images/72a1fa773860f46be7e167f4.jpg",
         "page": "https://pixabay.com/photos/ship-oil-tanker-lake-sea-water-629472/",
         "author": "jpeter2"
       }
@@ -352,7 +352,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/19b2ea685b86e32ab374566b.jpg",
+        "url": "./data/news-images/19b2ea685b86e32ab374566b.jpg",
         "page": "https://pixabay.com/photos/refinery-oil-industry-silhouette-3613522/",
         "author": "SatyaPrem"
       }
@@ -380,7 +380,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "energy patriot, tanker, ship, sea, watercraft, water vessel, commercial, nature, marine",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/c249f53eae0710a0289694aa.jpg",
+        "url": "./data/news-images/c249f53eae0710a0289694aa.jpg",
         "page": "https://pixabay.com/photos/energy-patriot-tanker-ship-sea-7043480/",
         "author": "Canadian-Nature-Visions"
       }
@@ -411,7 +411,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "factory night view, refinery, nature, sunset, pollution, urban",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/e418bdcd8768cd7f9c4347bf.jpg",
+        "url": "./data/news-images/e418bdcd8768cd7f9c4347bf.jpg",
         "page": "https://pixabay.com/photos/factory-night-view-refinery-sunset-7806641/",
         "author": "tasukaran"
       }
@@ -440,7 +440,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tanker ship, vlcc vessel, oil industry, anchorage area, fujirah, vessel, chemical tanker, import, export, m t gladiator, freight, cargo, transport, shipping, logistic, commercial, blue industry, tanker ship, tanker ship, chemical tanker, chemical tanker, chemical tanker, chemical tanker, chemical tanker, import, import, export, export, export",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/c847e80f2064ad6d3d45cc6a.jpg",
+        "url": "./data/news-images/c847e80f2064ad6d3d45cc6a.jpg",
         "page": "https://pixabay.com/photos/tanker-ship-vlcc-vessel-oil-industry-5117014/",
         "author": "Capt-M"
       }
@@ -469,7 +469,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ships, the transport of the fuel, oil, petroleum, the refinery, fuel, gas, power, commercial, technology, dock, tanker, industry, charge, porto, transport, industrial, petroleum, petroleum, petroleum, petroleum, petroleum",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/ce53c5c0f28b87deb35ef84b.jpg",
+        "url": "./data/news-images/ce53c5c0f28b87deb35ef84b.jpg",
         "page": "https://pixabay.com/photos/ships-the-transport-of-the-fuel-oil-4426675/",
         "author": "Marcos-Photographer"
       }
@@ -499,7 +499,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/26f165018de3fdc29595bd6e.jpg",
+        "url": "./data/news-images/26f165018de3fdc29595bd6e.jpg",
         "page": "https://pixabay.com/photos/fall-garden-leaf-fruit-food-palm-3306105/",
         "author": "tristantan"
       }
@@ -529,7 +529,7 @@
       "image": {
         "illustrative_country": null,
         "tags": "money, cash, finance, business, banknotes, currency, wealth, investment, bill",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a9ff14c9d43534d975523ac7.jpg",
+        "url": "./data/news-images/a9ff14c9d43534d975523ac7.jpg",
         "page": "https://pixabay.com/photos/money-cash-finance-business-6978773/",
         "author": "Byszek"
       }
@@ -558,7 +558,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/0fd20b62557eabd4b11f2a92.jpg",
+        "url": "./data/news-images/0fd20b62557eabd4b11f2a92.jpg",
         "page": "https://pixabay.com/photos/sunset-building-petrochemicals-4320208/",
         "author": "rauschenberger"
       }
@@ -588,7 +588,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/63248cc8956e7adabde30d43.jpg",
+        "url": "./data/news-images/63248cc8956e7adabde30d43.jpg",
         "page": "https://pixabay.com/photos/palm-oil-oil-palm-agriculture-1022012/",
         "author": "feelphotoz"
       }
@@ -618,7 +618,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/81ade9d71fc483ee44fa8dc9.jpg",
+        "url": "./data/news-images/81ade9d71fc483ee44fa8dc9.jpg",
         "page": "https://pixabay.com/photos/refinery-oil-industry-gas-3613526/",
         "author": "SatyaPrem"
       }
@@ -648,7 +648,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "city, cityscape, night, evening, city lights",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/3eb86156a44b2ea6f972c6a2.jpg",
+        "url": "./data/news-images/3eb86156a44b2ea6f972c6a2.jpg",
         "page": "https://pixabay.com/photos/city-cityscape-night-evening-6999396/",
         "author": "tasukaran"
       }
@@ -681,7 +681,7 @@
       "source_type": "Publicação original",
       "image": {
         "tags": "tanker, cargo ship, freighter ship, nature, sea, ocean",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/2d1eb5ce59ed78abacf11cee.jpg",
+        "url": "./data/news-images/2d1eb5ce59ed78abacf11cee.jpg",
         "page": "https://pixabay.com/photos/tanker-cargo-ship-freighter-ship-6937800/",
         "author": "barskefranck"
       }
@@ -710,7 +710,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tanker, ship, oil tanker, storage tank, gastanker, store reserved unto fire west, chemical tanker, caland canal, vopak, tanker, oil tanker, oil tanker, oil tanker, oil tanker, oil tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/4fb7ce52e1e1044a27e457a3.jpg",
+        "url": "./data/news-images/4fb7ce52e1e1044a27e457a3.jpg",
         "page": "https://pixabay.com/photos/tanker-ship-oil-tanker-storage-tank-2875593/",
         "author": "TheoRivierenlaan"
       }
@@ -738,7 +738,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "hands, money, change, bills, euros, coins, notes, finance, transaction, money, transaction, transaction, transaction, transaction, transaction",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/dd43a357c4f0421fb9938062.jpg",
+        "url": "./data/news-images/dd43a357c4f0421fb9938062.jpg",
         "page": "https://pixabay.com/photos/hands-money-change-bills-euros-5982514/",
         "author": "Tumisu"
       }
@@ -769,7 +769,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/24cdbf79309e3360aaa1332b.jpg",
+        "url": "./data/news-images/24cdbf79309e3360aaa1332b.jpg",
         "page": "https://pixabay.com/photos/cambodia-plantation-countryside-6877978/",
         "author": "allphotobangkok"
       }
@@ -796,7 +796,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/686a62f913d2ca14dab47d79.jpg",
+        "url": "./data/news-images/686a62f913d2ca14dab47d79.jpg",
         "page": "https://pixabay.com/photos/bitcoin-blockchain-currency-coin-4912863/",
         "author": "IgorShubin"
       }
@@ -826,7 +826,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/5e2ec0283115a515ad7a8c56.jpg",
+        "url": "./data/news-images/5e2ec0283115a515ad7a8c56.jpg",
         "page": "https://pixabay.com/photos/palm-oil-palm-tree-oil-fruit-3800603/",
         "author": "Orientierungslust"
       }
@@ -855,7 +855,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "maracaibo, venezuela, sunrise, ship, oil tanker, silhouettes, sun, sunshine, sea, ocean, water, nature, outside, beautiful, brown sunshine, venezuela, oil tanker, oil tanker, oil tanker, oil tanker, oil tanker, Maracaibo, Zulia, Venezuela",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/5e617e55be5f6e0c865e7d0f.jpg",
+        "url": "./data/news-images/5e617e55be5f6e0c865e7d0f.jpg",
         "page": "https://pixabay.com/photos/maracaibo-venezuela-sunrise-ship-106398/",
         "author": "12019"
       }
@@ -883,7 +883,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "houses, fjord, sea, mountains, tanker, tank farm, nature, norway, scandinavia",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/c8790ae902839fe643dc7fec.jpg",
+        "url": "./data/news-images/c8790ae902839fe643dc7fec.jpg",
         "page": "https://pixabay.com/photos/houses-fjord-sea-mountains-tanker-7416758/",
         "author": "Bernhard_Schuermann"
       }
@@ -911,7 +911,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/4f4791e2d5f0774a91d747b2.jpg",
+        "url": "./data/news-images/4f4791e2d5f0774a91d747b2.jpg",
         "page": "https://pixabay.com/photos/business-chart-graph-graphic-5475664/",
         "author": "Buffik"
       }
@@ -940,7 +940,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/deb906ad32580ef92f8bb688.jpg",
+        "url": "./data/news-images/deb906ad32580ef92f8bb688.jpg",
         "page": "https://pixabay.com/photos/industrial-plant-rain-mist-night-7527769/",
         "author": "tasukaran"
       }
@@ -968,7 +968,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tanker, ship, oil tanker, tanker, tanker, tanker, tanker, oil tanker, oil tanker, oil tanker, oil tanker, oil tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/c1f962a8d4a043b56aacdbac.jpg",
+        "url": "./data/news-images/c1f962a8d4a043b56aacdbac.jpg",
         "page": "https://pixabay.com/photos/tanker-ship-oil-tanker-1242111/",
         "author": "GTraschuetz"
       }
@@ -996,7 +996,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, oil, sea, ocean, nature, sky, water, tanker, clouds, vessel, boat, sail, sailing, marine",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/96a4b7db903362b86997e494.jpg",
+        "url": "./data/news-images/96a4b7db903362b86997e494.jpg",
         "page": "https://pixabay.com/photos/ship-oil-sea-ocean-sky-water-5227404/",
         "author": "papazachariasa"
       }
@@ -1026,7 +1026,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/1a5b4d4cb5f6d6904cec6d40.jpg",
+        "url": "./data/news-images/1a5b4d4cb5f6d6904cec6d40.jpg",
         "page": "https://pixabay.com/photos/oil-palm-tree-plantation-287878/",
         "author": "sarangib"
       }
@@ -1056,7 +1056,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "thailand, nature, agriculture, mountain, asia, landscape, rural scene, scenics, outdoors, green color, hill, farm, travel, field, tree, sky, plant, summer, tropical climate, blue farm",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/194a3d4e739d63983dcaaa2b.jpg",
+        "url": "./data/news-images/194a3d4e739d63983dcaaa2b.jpg",
         "page": "https://pixabay.com/photos/thailand-nature-agriculture-4788452/",
         "author": "Erik_Karits"
       }
@@ -1086,7 +1086,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "oil palm, tree, plantation, horticulture, nature, karnataka, india",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/6b6793c44b160961c7ae7293.jpg",
+        "url": "./data/news-images/6b6793c44b160961c7ae7293.jpg",
         "page": "https://pixabay.com/photos/oil-palm-tree-plantation-287902/",
         "author": "sarangib"
       }
@@ -1114,7 +1114,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "zloty, money, coins, value, currency, zloty, zloty, zloty, zloty, zloty",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/af8e794e44416b5014b191fd.jpg",
+        "url": "./data/news-images/af8e794e44416b5014b191fd.jpg",
         "page": "https://pixabay.com/photos/zloty-money-coins-value-currency-7398729/",
         "author": "gosiak1980"
       }
@@ -1143,7 +1143,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tanker, nature, water vessel, ship, ocean, sea, transport, panorama",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/0a80419ae07f7b005233edfd.jpg",
+        "url": "./data/news-images/0a80419ae07f7b005233edfd.jpg",
         "page": "https://pixabay.com/photos/tanker-water-vessel-ship-ocean-sea-7202368/",
         "author": "zzkonst"
       }
@@ -1171,7 +1171,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/2b587f218667c0d57c288cce.jpg",
+        "url": "./data/news-images/2b587f218667c0d57c288cce.jpg",
         "page": "https://pixabay.com/photos/bitcoin-crypto-btc-cryptocurrency-3890350/",
         "author": "petre_barlea"
       }
@@ -1201,7 +1201,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/14843423499ca05d2b75602f.jpg",
+        "url": "./data/news-images/14843423499ca05d2b75602f.jpg",
         "page": "https://pixabay.com/photos/refinery-oil-refinery-oil-industry-2251247/",
         "author": "michaelmep"
       }
@@ -1230,7 +1230,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tanker, vessel, nautical, transport, industry, logistics, bulk, fleet",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/d58fa7dc4447ce8a401396ae.jpg",
+        "url": "./data/news-images/d58fa7dc4447ce8a401396ae.jpg",
         "page": "https://pixabay.com/photos/tanker-vessel-nautical-transport-6880466/",
         "author": "zzkonst"
       }
@@ -1259,7 +1259,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "dollars, money, don, cash, call, the united states money",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/be6a33098c3f7ea9d58d4920.jpg",
+        "url": "./data/news-images/be6a33098c3f7ea9d58d4920.jpg",
         "page": "https://pixabay.com/photos/dollars-money-don-cash-call-2772671/",
         "author": "HeungSoon"
       }
@@ -1289,7 +1289,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "factory, industrial, urban, air pollution, tanks, industrial, industrial, industrial, air pollution, air pollution, air pollution, air pollution, air pollution",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/7d01f6f9fcb12b58359a0ae0.jpg",
+        "url": "./data/news-images/7d01f6f9fcb12b58359a0ae0.jpg",
         "page": "https://pixabay.com/photos/factory-industrial-urban-6951382/",
         "author": "tasukaran"
       }
@@ -1318,7 +1318,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "seagoing ship, tanker, north sea, mouth of the elbe river, bow wave, shipping, transport, supply, elbe, cuxhaven, hamburg, tanker, tanker, tanker, tanker, tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/f0136cd6f682264c2e1f4e5e.jpg",
+        "url": "./data/news-images/f0136cd6f682264c2e1f4e5e.jpg",
         "page": "https://pixabay.com/photos/seagoing-ship-tanker-north-sea-4113071/",
         "author": "hpgruesen"
       }
@@ -1346,7 +1346,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/fefd8cd32b05dbf973a442da.jpg",
+        "url": "./data/news-images/fefd8cd32b05dbf973a442da.jpg",
         "page": "https://pixabay.com/photos/stock-trading-financial-finance-2463798/",
         "author": "AhmadArdity"
       }
@@ -1375,7 +1375,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "motor tanker, cargo ship, invest, moored, rhine, rhine shipping, mooring, mineral oil transport, birsfelden, waters, transport system, ship, port",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/9cd23b088f1041988a57a74a.jpg",
+        "url": "./data/news-images/9cd23b088f1041988a57a74a.jpg",
         "page": "https://pixabay.com/photos/motor-tanker-cargo-ship-invest-3140155/",
         "author": "adege"
       }
@@ -1403,7 +1403,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "bitcoin, money, btc, finance, blockchain, coins, coin, crypto, cryptocurrency, exchange, black money, black finance, btc, btc, btc, crypto, crypto, crypto, crypto, crypto, cryptocurrency, cryptocurrency",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/97421e6079ab0612c9c59971.jpg",
+        "url": "./data/news-images/97421e6079ab0612c9c59971.jpg",
         "page": "https://pixabay.com/photos/bitcoin-money-btc-finance-4353069/",
         "author": "photographersupreme"
       }
@@ -1432,7 +1432,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "the outer port, pier, oil port, tanker, discharge, crude oil, clear, oil tanker, sea, waters, ship, industry, port, wilhelmshaven, jade bay, north sea, crane, nature, industrial plant, technology",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/104c93c380c66456664f502e.jpg",
+        "url": "./data/news-images/104c93c380c66456664f502e.jpg",
         "page": "https://pixabay.com/photos/the-outer-port-pier-oil-port-tanker-3108235/",
         "author": "hpgruesen"
       }
@@ -1460,7 +1460,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "bitcoin, dollar, cool backgrounds, coin, money, wallpaper hd, windows wallpaper, electronic money, currency, imitation, draft, hd wallpaper, internet, laptop wallpaper, transfer, cash, network, monetary units, transaction, stock exchange, free background, 4k wallpaper 1920x1080, online exchange, beautiful wallpaper, 4k wallpaper, future, gold, full hd wallpaper, mac wallpaper, free wallpaper, golden, desktop backgrounds, trade, company, wallpaper 4k, background",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/5d46ca5a18d998c107aa9388.jpg",
+        "url": "./data/news-images/5d46ca5a18d998c107aa9388.jpg",
         "page": "https://pixabay.com/photos/bitcoin-dollar-coin-money-3035013/",
         "author": "geralt"
       }
@@ -1488,7 +1488,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/cbc3ecf85d88ec95f747cebb.jpg",
+        "url": "./data/news-images/cbc3ecf85d88ec95f747cebb.jpg",
         "page": "https://pixabay.com/photos/cryptocurrency-asset-3409658/",
         "author": "WorldSpectrum"
       }
@@ -1517,7 +1517,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "wilhelmshaven, pier, tanker, discharge, oil port, crude oil, deep water, jade, jade bay, wadden sea, water, nature, tide, supply, north sea, coast, north sea coast",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/4c128b685dc0cd55ff54bc67.jpg",
+        "url": "./data/news-images/4c128b685dc0cd55ff54bc67.jpg",
         "page": "https://pixabay.com/photos/wilhelmshaven-pier-tanker-discharge-1578577/",
         "author": "hpgruesen"
       }
@@ -1545,7 +1545,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/cc29c7dbdac93c303a7404cd.jpg",
+        "url": "./data/news-images/cc29c7dbdac93c303a7404cd.jpg",
         "page": "https://pixabay.com/photos/money-china-rmb-yuan-asian-938269/",
         "author": "moerschy"
       }
@@ -1575,7 +1575,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ölpferd, oil pump, support financially, crude oil, fuel, industry, oil, energy, power, equipment, technology, oilfield, environment, hdr, high dynamic range, contrast, crude oil, crude oil, crude oil, crude oil, crude oil",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/d75a4b9120af5a6ff76d699d.jpg",
+        "url": "./data/news-images/d75a4b9120af5a6ff76d699d.jpg",
         "page": "https://pixabay.com/photos/%C3%B6lpferd-oil-pump-support-financially-3807678/",
         "author": "distelAPPArath"
       }
@@ -1604,7 +1604,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, laptop wallpaper, accident, girl, black, free wallpaper, sink, view, wallpaper 4k, beautiful wallpaper, sky background, full hd wallpaper, windows wallpaper, turkey, antalya, sea, cool backgrounds, wave, storm, nature, sunset, hd wallpaper, tanker, 4k wallpaper 1920x1080, coastline, coast, background, boat, sky, mac wallpaper, unbelievable, 4k wallpaper, skyline, life, clouds, wallpaper hd, peace, cloudy, free background, desktop backgrounds, nature turkey",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/c5a71ae9780ed50516382c4e.jpg",
+        "url": "./data/news-images/c5a71ae9780ed50516382c4e.jpg",
         "page": "https://pixabay.com/photos/ship-accident-girl-black-sink-2359663/",
         "author": "Engin_Akyurt"
       }
@@ -1634,7 +1634,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/302e7e50c4412456d00d5836.jpg",
+        "url": "./data/news-images/302e7e50c4412456d00d5836.jpg",
         "page": "https://pixabay.com/photos/nature-industry-sunrise-trees-9448741/",
         "author": "Tho-Ge"
       }
@@ -1664,7 +1664,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/2cc1c62717c0340cf236444f.jpg",
+        "url": "./data/news-images/2cc1c62717c0340cf236444f.jpg",
         "page": "https://pixabay.com/photos/green-leaves-vine-garden-10572101/",
         "author": "Designmine99"
       }
@@ -1693,7 +1693,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "oil tanker, tugboat, tug boat, nautical, ship, water, sea, vessel, nature, maritime, tow, towboat, shipping",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/3a5f3d30dd58875988e2b41b.jpg",
+        "url": "./data/news-images/3a5f3d30dd58875988e2b41b.jpg",
         "page": "https://pixabay.com/photos/oil-tanker-tugboat-tug-boat-4902901/",
         "author": "bryanhanson1956"
       }
@@ -1722,7 +1722,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tanker, vessel, transport, industry, ship, port, raid",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/eebe91437df5651d62913b37.jpg",
+        "url": "./data/news-images/eebe91437df5651d62913b37.jpg",
         "page": "https://pixabay.com/photos/tanker-vessel-transport-industry-6816030/",
         "author": "zzkonst"
       }
@@ -1750,7 +1750,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, waters, sea, transport system, industry, oil tanker, coast, nautical, port, alhani zueitina, north sea, nature, jade bay, tanker bridge, delete bridge, by the sea, jade weser port",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a7ef97d7f7a97d783c59432d.jpg",
+        "url": "./data/news-images/a7ef97d7f7a97d783c59432d.jpg",
         "page": "https://pixabay.com/photos/ship-waters-sea-transport-system-3157954/",
         "author": "AntjeBartholdi"
       }
@@ -1780,7 +1780,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "industrial plant, rain, night, nature, lights, mist",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/38f7a4422a878954888968ca.jpg",
+        "url": "./data/news-images/38f7a4422a878954888968ca.jpg",
         "page": "https://pixabay.com/photos/industrial-plant-rain-night-lights-7527754/",
         "author": "tasukaran"
       }
@@ -1810,7 +1810,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "refinery, petrolium, fossil, gas, polluted, drop, dirty, oil, black, extraction, pollution, pollute, crude oil, tankers, nature, sea, industry, pozzo",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/fa47fac002e603d106bed042.jpg",
+        "url": "./data/news-images/fa47fac002e603d106bed042.jpg",
         "page": "https://pixabay.com/photos/refinery-petrolium-fossil-gas-3400043/",
         "author": "nicolagiordano"
       }
@@ -1839,7 +1839,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "rhine, port, tanker, cologne, flow, dom, cologne cathedral",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/2b7e5773cec4cc321f0d8c72.jpg",
+        "url": "./data/news-images/2b7e5773cec4cc321f0d8c72.jpg",
         "page": "https://pixabay.com/photos/rhine-port-tanker-cologne-flow-7852377/",
         "author": "Tho-Ge"
       }
@@ -1869,7 +1869,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "industry, structure, tower, work, smoke, fog, nature, sky, tubes, oil, factory",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/616f9a73582c6bbf29058f61.jpg",
+        "url": "./data/news-images/616f9a73582c6bbf29058f61.jpg",
         "page": "https://pixabay.com/photos/industry-structure-tower-work-7844278/",
         "author": "Michael_Pointner"
       }
@@ -1898,7 +1898,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, tanker, sea, nature, transportation, transport, maritime, nautical, export, import, industry, logistic, delivery, shipping, travel",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/f7a0d378f8e2375cedda4159.jpg",
+        "url": "./data/news-images/f7a0d378f8e2375cedda4159.jpg",
         "page": "https://pixabay.com/photos/ship-tanker-sea-transportation-6560323/",
         "author": "zzkonst"
       }
@@ -1928,7 +1928,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "oil, petkim, tüpraş, kocaeli, turkey, sea, view, nature, refinery, natural gas",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/fc736f6d6dee88ae4db3e6d6.jpg",
+        "url": "./data/news-images/fc736f6d6dee88ae4db3e6d6.jpg",
         "page": "https://pixabay.com/photos/oil-petkim-t%C3%BCpra%C5%9F-kocaeli-turkey-1685981/",
         "author": "isakarakus"
       }
@@ -1957,7 +1957,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/120911ae386771385a3a078e.jpg",
+        "url": "./data/news-images/120911ae386771385a3a078e.jpg",
         "page": "https://pixabay.com/photos/refinery-oil-refinery-oil-industry-2251248/",
         "author": "michaelmep"
       }
@@ -1985,7 +1985,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "money, currency, notes, international, finance, business, bill, malaysian, ringgit, chinese, yuan, renminbi, australian, dollar, ringgit, ringgit, ringgit, ringgit, ringgit, yuan",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/ec75b17887b082da05ef75a7.jpg",
+        "url": "./data/news-images/ec75b17887b082da05ef75a7.jpg",
         "page": "https://pixabay.com/photos/money-currency-notes-international-4214028/",
         "author": "Squirrel_photos"
       }
@@ -2013,7 +2013,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/0bd78a8e94afc4c559854ccf.jpg",
+        "url": "./data/news-images/0bd78a8e94afc4c559854ccf.jpg",
         "page": "https://pixabay.com/photos/bitcoin-table-courses-finance-4481815/",
         "author": "RoyBuri"
       }
@@ -2042,7 +2042,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tanker, energy, landscape, ship, sun, power, boat, sunlight, sea, ocean, petroleum, gray sun, gray energy, nature, gray boat, gray power",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/77fe3747df7dd9b29fcd2b10.jpg",
+        "url": "./data/news-images/77fe3747df7dd9b29fcd2b10.jpg",
         "page": "https://pixabay.com/photos/tanker-energy-landscape-ship-sun-4279995/",
         "author": "LhcCoutinho"
       }
@@ -2072,7 +2072,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/000827ec836ec2ad3cc0f8b2.jpg",
+        "url": "./data/news-images/000827ec836ec2ad3cc0f8b2.jpg",
         "page": "https://pixabay.com/photos/factory-industrial-production-7026489/",
         "author": "yamabon"
       }
@@ -2101,7 +2101,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tanker, ship, sea, transport, supply, barge, shipping, freight, nature, cargo ship",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/70262e071db3e67cde49f5f9.jpg",
+        "url": "./data/news-images/70262e071db3e67cde49f5f9.jpg",
         "page": "https://pixabay.com/photos/tanker-ship-sea-transport-supply-7254523/",
         "author": "makabera"
       }
@@ -2132,7 +2132,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/1993f099d0713da199446711.jpg",
+        "url": "./data/news-images/1993f099d0713da199446711.jpg",
         "page": "https://pixabay.com/photos/harvest-combines-soybeans-5307548/",
         "author": "hannahlmyers"
       }
@@ -2161,7 +2161,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "gas carrier, lpg vessel, ship, tanker, petrol, oil industry, sea, sky, port, m v kuwait gas 2, kuwait port, boat, oil import, transportation, nature, blue industry",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/7b563873fcf931f57e106b14.jpg",
+        "url": "./data/news-images/7b563873fcf931f57e106b14.jpg",
         "page": "https://pixabay.com/photos/gas-carrier-lpg-vessel-ship-tanker-5085700/",
         "author": "Capt-M"
       }
@@ -2189,7 +2189,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "motor tanker mercini lady, tanker ship, light house, nature, break water, gantry crane, port, fujirah port, sea, boats, ocean, ship, beach, export, transportation, freight, blue lady",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a1a7b28c9421a17b2d30ac4f.jpg",
+        "url": "./data/news-images/a1a7b28c9421a17b2d30ac4f.jpg",
         "page": "https://pixabay.com/photos/motor-tanker-mercini-lady-tanker-ship-4906551/",
         "author": "Capt-M"
       }
@@ -2219,7 +2219,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "refinery, oil, aerial, natural gas, gasoline, aerial view, gray natural, refinery, natural gas, natural gas, natural gas, natural gas, natural gas",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/13dc17c5a6d1ecbc2a7ed0c8.jpg",
+        "url": "./data/news-images/13dc17c5a6d1ecbc2a7ed0c8.jpg",
         "page": "https://pixabay.com/photos/refinery-oil-aerial-natural-gas-109025/",
         "author": "jpenrose"
       }
@@ -2249,7 +2249,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/cb32cbd660c5fa85f0ca242b.jpg",
+        "url": "./data/news-images/cb32cbd660c5fa85f0ca242b.jpg",
         "page": "https://pixabay.com/photos/wisconsin-corn-soybeans-landscape-1808154/",
         "author": "12019"
       }
@@ -2277,7 +2277,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "currency, finances, wealth, business, money making, savings, abundance, paper, the dollar, cash, investment, pay, bank, shopping, numeral, sell off, loan, abundance, abundance, loan, loan, loan, loan, loan",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/45603933710019bd10ded443.jpg",
+        "url": "./data/news-images/45603933710019bd10ded443.jpg",
         "page": "https://pixabay.com/photos/currency-finances-wealth-business-3118767/",
         "author": "frycyk01"
       }
@@ -2306,7 +2306,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/54495e719f278da6d706f5e8.jpg",
+        "url": "./data/news-images/54495e719f278da6d706f5e8.jpg",
         "page": "https://pixabay.com/photos/plant-chimney-night-view-7010971/",
         "author": "yamabon"
       }
@@ -2337,7 +2337,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "oil refinery, industry, oil, mineral oil, architecture, factory, nature, factory building, pipeline, towers, rusty, industrial plant, ugly, old, heavy industry, stole, usa, new orleans, plant",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/143dd2d52b463f4f9adf8843.jpg",
+        "url": "./data/news-images/143dd2d52b463f4f9adf8843.jpg",
         "page": "https://pixabay.com/photos/oil-refinery-industry-oil-3713276/",
         "author": "McRonny"
       }
@@ -2366,7 +2366,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "gas tanker, ship, sea, gas carrier, maritime, nautical, shipping, nature, ocean",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a80ef938445d922c007facf3.jpg",
+        "url": "./data/news-images/a80ef938445d922c007facf3.jpg",
         "page": "https://pixabay.com/photos/gas-tanker-ship-sea-gas-carrier-6367981/",
         "author": "Gaz_Chapp"
       }
@@ -2394,7 +2394,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/082618512c9df0dc223d54b6.jpg",
+        "url": "./data/news-images/082618512c9df0dc223d54b6.jpg",
         "page": "https://pixabay.com/photos/mixture-currencies-finance-business-69523/",
         "author": "PublicDomainPictures"
       }
@@ -2423,7 +2423,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, wallpaper hd, nature, free background, windows wallpaper, tanker, north sea, beautiful nature, hd wallpaper, laptop wallpaper, mac wallpaper, water, wallpaper 4k, sea, cool backgrounds, nature background, 4k wallpaper 1920x1080, free wallpaper, nature wallpaper, heaven, full hd wallpaper, lake, maritime, boat, port, storm, 4k wallpaper, beautiful wallpaper, desktop backgrounds, dark clouds, cuxhaven, wallpaper, flock of birds, meadow",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/b303af2602e8b32430b5fac6.jpg",
+        "url": "./data/news-images/b303af2602e8b32430b5fac6.jpg",
         "page": "https://pixabay.com/photos/ship-tanker-north-sea-water-sea-3611262/",
         "author": "2780243"
       }
@@ -2453,7 +2453,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "cargo, ship, tanker, shipping, tanker, tanker, tanker, tanker, tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/e3480b455bdda100f5367bea.jpg",
+        "url": "./data/news-images/e3480b455bdda100f5367bea.jpg",
         "page": "https://pixabay.com/photos/cargo-ship-tanker-shipping-572997/",
         "author": "jaslagman0"
       }
@@ -2483,7 +2483,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "factory, industrial, manufacturer, production plant, site, manufacturer, manufacturer, manufacturer, manufacturer, manufacturer",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/c2b5ef78f41eaf79864d2a1d.jpg",
+        "url": "./data/news-images/c2b5ef78f41eaf79864d2a1d.jpg",
         "page": "https://pixabay.com/photos/factory-industrial-manufacturer-6529742/",
         "author": "tasukaran"
       }
@@ -2513,7 +2513,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ölpferd, oil pump, support financially, crude oil, fuel, industry, oil, energy, power, equipment, technology, oilfield, environment, hdr, high dynamic range, contrast, crude oil, crude oil, crude oil, crude oil, crude oil",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/4726351a306c38b80aec8677.jpg",
+        "url": "./data/news-images/4726351a306c38b80aec8677.jpg",
         "page": "https://pixabay.com/photos/%C3%B6lpferd-oil-pump-support-financially-3807680/",
         "author": "distelAPPArath"
       }
@@ -2541,7 +2541,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/542233c3f8ee98ae23c12ee8.jpg",
+        "url": "./data/news-images/542233c3f8ee98ae23c12ee8.jpg",
         "page": "https://pixabay.com/photos/gear-gears-euro-currency-dollar-384743/",
         "author": "geralt"
       }
@@ -2569,7 +2569,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, oil, sea, ocean, sky, water, tanker, clouds, vessel, boat, sail, sailing, marine, port, thessaloniki, greece",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a7f81df26da877550971cc80.jpg",
+        "url": "./data/news-images/a7f81df26da877550971cc80.jpg",
         "page": "https://pixabay.com/photos/ship-oil-sea-ocean-sky-water-5390125/",
         "author": "papazachariasa"
       }
@@ -2597,7 +2597,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "sea, surfing, surfer, water sports, waves, water, mediterranean, nature, france, surfboard, windsurfer, wind, storm, leisure time, sport, sports, beach, trend sport, heaven, powerful, wind power, lawn, ship, tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/7743f095f2d37dc89b963fc2.jpg",
+        "url": "./data/news-images/7743f095f2d37dc89b963fc2.jpg",
         "page": "https://pixabay.com/photos/sea-surfing-surfer-water-sports-2273056/",
         "author": "Tama66"
       }
@@ -2627,7 +2627,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "soy, hairs, pods, end of summer, floors, glycine max, farming, landscape, plantation, sheets, food, green, fields, nature, soybean, crops, grain, soy, soybean, soybean, soybean, soybean, soybean",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/cee66ce298454da1f5ec5372.jpg",
+        "url": "./data/news-images/cee66ce298454da1f5ec5372.jpg",
         "page": "https://pixabay.com/photos/soy-hairs-pods-end-of-summer-964324/",
         "author": "jcesar2015"
       }
@@ -2655,7 +2655,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "bank, money, turkey, products",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/f6a167c93dca91bfd86ecc6b.jpg",
+        "url": "./data/news-images/f6a167c93dca91bfd86ecc6b.jpg",
         "page": "https://pixabay.com/photos/bank-money-turkey-products-9939062/",
         "author": "AzamatNeovedimov"
       }
@@ -2683,7 +2683,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/3771f0b523e32526260d14f9.jpg",
+        "url": "./data/news-images/3771f0b523e32526260d14f9.jpg",
         "page": "https://pixabay.com/photos/finance-currency-money-wealth-3065269/",
         "author": "USA-Reiseblogger"
       }
@@ -2713,7 +2713,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/4550bde301d125235b694bab.jpg",
+        "url": "./data/news-images/4550bde301d125235b694bab.jpg",
         "page": "https://pixabay.com/photos/floors-soybean-soy-nature-1331667/",
         "author": "jcesar2015"
       }
@@ -2742,7 +2742,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tanker, vessel, nautical, fleet, transport, logistics, shipping, industry",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/68b8b00bf6c8cb912e40eb1e.jpg",
+        "url": "./data/news-images/68b8b00bf6c8cb912e40eb1e.jpg",
         "page": "https://pixabay.com/photos/tanker-vessel-nautical-fleet-7170641/",
         "author": "zzkonst"
       }
@@ -2770,7 +2770,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "dollar, euro, currency, european union, the crisis, green, business, bank, paper, financial, finance, cash, money, credits, payment, trade, economy, european union, european union, european union, european union, european union, economy",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/e453f4550ebc4020abaf9f4e.jpg",
+        "url": "./data/news-images/e453f4550ebc4020abaf9f4e.jpg",
         "page": "https://pixabay.com/photos/dollar-euro-currency-european-union-1974710/",
         "author": "NikolayFrolochkin"
       }
@@ -2798,7 +2798,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "stock exchange, courses, shares, trading, forex, analysis, chart, speculate, course, win, merit, business, trading floor, capital market, financial world, finance, money, share price, investment, speculation, forex, forex, forex, forex, forex",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/b1c6e602fb202c3072258e1a.jpg",
+        "url": "./data/news-images/b1c6e602fb202c3072258e1a.jpg",
         "page": "https://pixabay.com/photos/stock-exchange-courses-shares-3556719/",
         "author": "kalhh"
       }
@@ -2827,7 +2827,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, tanker, freighter, cargo ship, nature, transport ship, transport, goods, traffic, freight transport, water, lake, sea, ocean",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/7132d9afb0c007c90f14bc76.jpg",
+        "url": "./data/news-images/7132d9afb0c007c90f14bc76.jpg",
         "page": "https://pixabay.com/photos/ship-tanker-freighter-cargo-ship-3480712/",
         "author": "Bru-nO"
       }
@@ -2855,7 +2855,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/7d486d09f481662b4805647e.jpg",
+        "url": "./data/news-images/7d486d09f481662b4805647e.jpg",
         "page": "https://pixabay.com/photos/europe-pay-usa-banknote-business-69527/",
         "author": "PublicDomainPictures"
       }
@@ -2883,7 +2883,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/f7711231a3202dc420fdf3ff.jpg",
+        "url": "./data/news-images/f7711231a3202dc420fdf3ff.jpg",
         "page": "https://pixabay.com/photos/money-dollar-currency-us-dollar-2168003/",
         "author": "hbschw"
       }
@@ -2911,7 +2911,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "bitcoin, cryptocurrency, desktop backgrounds, laptop wallpaper, of technology, coin, mac wallpaper, money, blockchain, golden, finances, sign, 4k wallpaper 1920x1080, wealth, background, exchange, hd wallpaper, market, technology, full hd wallpaper, free background, beautiful wallpaper, investment, free wallpaper, digital, wallpaper 4k, cool backgrounds, windows wallpaper, 4k wallpaper, currency, wallpaper hd, business",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/d94f5317b24cdd13a9a6f026.jpg",
+        "url": "./data/news-images/d94f5317b24cdd13a9a6f026.jpg",
         "page": "https://pixabay.com/photos/bitcoin-cryptocurrency-of-technology-6278312/",
         "author": "SergDE"
       }
@@ -2938,7 +2938,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/1d8cc5711b8c84e67eb6ecfc.jpg",
+        "url": "./data/news-images/1d8cc5711b8c84e67eb6ecfc.jpg",
         "page": "https://pixabay.com/photos/european-union-brexit-exchange-rates-1493894/",
         "author": "AS_Photography"
       }
@@ -2967,7 +2967,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "cryptocurrency, crypto, blockchain, banking, bitcoin, broker, digital currency, earnings, e-business, e-commerce, economics, cryptocurrency, cryptocurrency, cryptocurrency, cryptocurrency, crypto, crypto, crypto, crypto, crypto, bitcoin, broker, broker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/c8383f2bd582b1f3c38bc9de.jpg",
+        "url": "./data/news-images/c8383f2bd582b1f3c38bc9de.jpg",
         "page": "https://pixabay.com/photos/cryptocurrency-crypto-blockchain-7214367/",
         "author": "amhnasim"
       }
@@ -2994,7 +2994,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/de7abf326612c032eab3d713.jpg",
+        "url": "./data/news-images/de7abf326612c032eab3d713.jpg",
         "page": "https://pixabay.com/photos/bitcoin-crypto-virtual-money-3024280/",
         "author": "QuinceCreative"
       }
@@ -3022,7 +3022,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/3189e9744acfb12419ba36db.jpg",
+        "url": "./data/news-images/3189e9744acfb12419ba36db.jpg",
         "page": "https://pixabay.com/photos/bitcoin-blockchain-currency-4912864/",
         "author": "IgorShubin"
       }
@@ -3050,7 +3050,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/0582219385a5d7b5ff70c988.jpg",
+        "url": "./data/news-images/0582219385a5d7b5ff70c988.jpg",
         "page": "https://pixabay.com/photos/bitcoin-trading-currency-money-3698462/",
         "author": "rubns28"
       }
@@ -3077,7 +3077,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a03529ae92cf780f419ac15d.jpg",
+        "url": "./data/news-images/a03529ae92cf780f419ac15d.jpg",
         "page": "https://pixabay.com/photos/bitcoin-business-money-currency-4647175/",
         "author": "pattymalajak"
       }
@@ -3106,7 +3106,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, mooring, vessel, tanker, maritime, rope, connect",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/170932b2f991f18e2c559e6c.jpg",
+        "url": "./data/news-images/170932b2f991f18e2c559e6c.jpg",
         "page": "https://pixabay.com/photos/ship-mooring-vessel-tanker-2637936/",
         "author": "highseas"
       }
@@ -3136,7 +3136,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "oil, gasoline, fuel, energy, crude oil, environment, crude oil, crude oil, crude oil, crude oil, crude oil",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/c1bbf28c5d0d157dee190822.jpg",
+        "url": "./data/news-images/c1bbf28c5d0d157dee190822.jpg",
         "page": "https://pixabay.com/photos/oil-gasoline-fuel-energy-crude-oil-7166594/",
         "author": "Az1975"
       }
@@ -3166,7 +3166,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "industry, the oil industry, nature, processing, factory, sea, institution",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/516f614fce0f84af4c8f9b33.jpg",
+        "url": "./data/news-images/516f614fce0f84af4c8f9b33.jpg",
         "page": "https://pixabay.com/photos/industry-the-oil-industry-processing-5292067/",
         "author": "661512"
       }
@@ -3194,7 +3194,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/b9a82e0e0a300a809d7599a7.jpg",
+        "url": "./data/news-images/b9a82e0e0a300a809d7599a7.jpg",
         "page": "https://pixabay.com/photos/don-money-call-finance-cash-3565683/",
         "author": "HeungSoon"
       }
@@ -3222,7 +3222,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "boat, ship, tanker, tanker ship, transport, transportation of goods, ocean, sea, water, travel, nautical, shipping, maritime, vietnam, cargo, nature, horizon",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/7e71f95570484ed96779e88a.jpg",
+        "url": "./data/news-images/7e71f95570484ed96779e88a.jpg",
         "page": "https://pixabay.com/photos/boat-ship-tanker-tanker-ship-5500977/",
         "author": "thuanvo"
       }
@@ -3252,7 +3252,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/df60c7ccbe772b274fd480fc.jpg",
+        "url": "./data/news-images/df60c7ccbe772b274fd480fc.jpg",
         "page": "https://pixabay.com/photos/wisconsin-landscape-scenic-sky-1809870/",
         "author": "12019"
       }
@@ -3281,7 +3281,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tanker, port tractor, ship, istanbul, bosphorus, turkey, trade, oil, freight, seafaring, sea, europe, asia, nature, shipping, business, marmara sea, black sea",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/4efdd7adfa3c0072680fcf76.jpg",
+        "url": "./data/news-images/4efdd7adfa3c0072680fcf76.jpg",
         "page": "https://pixabay.com/photos/tanker-port-tractor-ship-istanbul-3734630/",
         "author": "gerholdt"
       }
@@ -3309,7 +3309,7 @@
       "source_type": "Publicação original",
       "image": {
         "tags": "tanker ship, ship, crude oil, oil, industry, sea, transportation, vessel, discharge, crane, freight, cargo, master, summer, cloud, landscape, boats, nature, boating, blue, platform, sailing, adventure, travel",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/2df2689a8dddb8f6d52b68a8.jpg",
+        "url": "./data/news-images/2df2689a8dddb8f6d52b68a8.jpg",
         "page": "https://pixabay.com/photos/tanker-ship-ship-crude-oil-oil-5447381/",
         "author": "Capt-M"
       }
@@ -3337,7 +3337,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "lock system, lock, the passage of the gateway, motor tanker, cargo ship, invest, moored, rhine, rhine shipping, mooring, mineral oil transport, birsfelden, waters, transport system, ship, port",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/560dcc47dee1a9e0fc5886f4.jpg",
+        "url": "./data/news-images/560dcc47dee1a9e0fc5886f4.jpg",
         "page": "https://pixabay.com/photos/lock-system-lock-3140171/",
         "author": "adege"
       }
@@ -3367,7 +3367,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "plant, industrial plant, sunset, factory night view, nature, urban",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/68481a6da9c46cb1e6c4752d.jpg",
+        "url": "./data/news-images/68481a6da9c46cb1e6c4752d.jpg",
         "page": "https://pixabay.com/photos/plant-industrial-plant-sunset-7806635/",
         "author": "tasukaran"
       }
@@ -3396,7 +3396,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "vessel, bulk carrier, tanker, transport, ship, port, industry, transportation, bulk carrier, bulk carrier, bulk carrier, bulk carrier, bulk carrier",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/3877f6b265bbd2208feb0c87.jpg",
+        "url": "./data/news-images/3877f6b265bbd2208feb0c87.jpg",
         "page": "https://pixabay.com/photos/vessel-bulk-carrier-tanker-6816020/",
         "author": "zzkonst"
       }
@@ -3425,7 +3425,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "money, euro, eu, finance, currency, business, bank, usa, us, investment, profit, banking, financial, cash, rich, success, europe, economy, credit, dollar, money, money, rich, rich, rich, rich, rich",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/bf648408a27c635842e67887.jpg",
+        "url": "./data/news-images/bf648408a27c635842e67887.jpg",
         "page": "https://pixabay.com/photos/money-euro-eu-finance-currency-4546855/",
         "author": "FilipFilipovic"
       }
@@ -3455,7 +3455,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "combine, soybean harvest, sunset, agriculture, soybean, field, machinery, harvester, harvest, farming, autumn, rural, season, fall, agronomy, farm, agricultural, working, nature, crop, plant, food, cereal, landscape, cultivated, organic, machine, yellow, golden, clouds, blue, equipment, work, countryside, harvesting, growth, grow, rows, land, scene, reaping",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/4c1ce2e0a838096e26624796.jpg",
+        "url": "./data/news-images/4c1ce2e0a838096e26624796.jpg",
         "page": "https://pixabay.com/photos/combine-soybean-harvest-sunset-2927854/",
         "author": "6734180"
       }
@@ -3484,7 +3484,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "business, finance, wealth, currency, money, investment, cash, monetary, financial, ethereum, mining, blockchain, cryptocurrency, exchange, virtual, market, cryptography, crypto, payment, coin, dollars, benjamin franklin, 100 dollar bill, sd card, card, memory card, visa, visa card, wallet, crypto currency, digital coin, digital assets, ethereum, ethereum, ethereum, ethereum, ethereum",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a4521c16c525688dc041486e.jpg",
+        "url": "./data/news-images/a4521c16c525688dc041486e.jpg",
         "page": "https://pixabay.com/photos/business-finance-wealth-currency-3085138/",
         "author": "WorldSpectrum"
       }
@@ -3512,7 +3512,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/e80e028f9a28dec70ffb12e6.jpg",
+        "url": "./data/news-images/e80e028f9a28dec70ffb12e6.jpg",
         "page": "https://pixabay.com/photos/money-banknotes-currency-forex-1578510/",
         "author": "TheDigitalWay"
       }
@@ -3540,7 +3540,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "arrow, money, banknotes, currency, euro, stock exchange, loss, bank, banks, chart, development, course, tendency, growth, arrow, money, money, money, stock exchange, stock exchange, stock exchange, stock exchange, stock exchange, chart, chart, chart, chart, chart",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/c1e5a87092ef3d20959ec1aa.jpg",
+        "url": "./data/news-images/c1e5a87092ef3d20959ec1aa.jpg",
         "page": "https://pixabay.com/photos/arrow-money-banknotes-currency-3078562/",
         "author": "Bru-nO"
       }
@@ -3568,7 +3568,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "bitcoin, gold, money, cryptocurrency, currency, coin, btc, crypto, blockchain, digital, cryptography, 3d, exchange, bitcoin, bitcoin, bitcoin, bitcoin, btc, btc, btc, btc, btc, crypto",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/387b75618d95da54dfb101dc.jpg",
+        "url": "./data/news-images/387b75618d95da54dfb101dc.jpg",
         "page": "https://pixabay.com/photos/bitcoin-gold-money-cryptocurrency-5155180/",
         "author": "AaronJOlson"
       }
@@ -3597,7 +3597,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, ships, shipping, tanker, nok, tanker, tanker, tanker, tanker, tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/c087fd4de81b3c5cc75228ba.jpg",
+        "url": "./data/news-images/c087fd4de81b3c5cc75228ba.jpg",
         "page": "https://pixabay.com/photos/ship-ships-shipping-tanker-nok-286761/",
         "author": "127071"
       }
@@ -3625,7 +3625,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/0562a0a9b49d2dd8a431ebfe.jpg",
+        "url": "./data/news-images/0562a0a9b49d2dd8a431ebfe.jpg",
         "page": "https://pixabay.com/photos/india-rupee-occupation-3887567/",
         "author": "shameersrk"
       }
@@ -3655,7 +3655,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/472f244f65bedbce2a8f1dc1.jpg",
+        "url": "./data/news-images/472f244f65bedbce2a8f1dc1.jpg",
         "page": "https://pixabay.com/photos/soy-combine-harvest-grains-brazil-1543071/",
         "author": "charlesricardo"
       }
@@ -3684,7 +3684,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/082cca4b0c7da1d6c287e1f4.jpg",
+        "url": "./data/news-images/082cca4b0c7da1d6c287e1f4.jpg",
         "page": "https://pixabay.com/photos/factory-chimney-industry-steam-6991799/",
         "author": "tasukaran"
       }
@@ -3713,7 +3713,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "life, beauty, scene, transit, transport, ship, boat, vessel, row, paddle, canoe, freight, tanker, nature, horizon, sunset, sunrise, dawn, dusk, trade",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/aa8182182a3eab3603a83c49.jpg",
+        "url": "./data/news-images/aa8182182a3eab3603a83c49.jpg",
         "page": "https://pixabay.com/photos/life-beauty-scene-transit-863028/",
         "author": "Foundry"
       }
@@ -3741,7 +3741,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "rubles, money, bills, banknote, money, money, money, money, money",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a1366015937204ef63b39233.jpg",
+        "url": "./data/news-images/a1366015937204ef63b39233.jpg",
         "page": "https://pixabay.com/photos/rubles-money-bills-banknote-1370418/",
         "author": "AlexSky"
       }
@@ -3769,7 +3769,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/fd12019a257c428f46f402b9.jpg",
+        "url": "./data/news-images/fd12019a257c428f46f402b9.jpg",
         "page": "https://pixabay.com/photos/money-dollar-cents-euro-euro-cent-837376/",
         "author": "artbaggage"
       }
@@ -3798,7 +3798,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "labor, nature, river, sea, tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/83d23e6e3916a5401d280c04.jpg",
+        "url": "./data/news-images/83d23e6e3916a5401d280c04.jpg",
         "page": "https://pixabay.com/photos/labor-river-sea-tanker-2178961/",
         "author": "Pexels"
       }
@@ -3826,7 +3826,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "barge, europe class, tanker, dutch, datteln-hamm-channel, one way traffic, change of direction, canal bridge, stockum, supply of raw materials, bridge, heaven, waters, gerstein work",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/20e8b6c85f43f4571911538f.jpg",
+        "url": "./data/news-images/20e8b6c85f43f4571911538f.jpg",
         "page": "https://pixabay.com/photos/barge-europe-class-tanker-dutch-3173366/",
         "author": "hpgruesen"
       }
@@ -3855,7 +3855,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/f8b87e22478ce823f9a07fa1.jpg",
+        "url": "./data/news-images/f8b87e22478ce823f9a07fa1.jpg",
         "page": "https://pixabay.com/photos/oil-storage-tank-crude-oil-5015840/",
         "author": "Capt-M"
       }
@@ -3885,7 +3885,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "refinery, petroleum, oil, nature, industry, plant, factory, industrial, petrochemical, capetown",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/b53d9db864f03e5f59829c4e.jpg",
+        "url": "./data/news-images/b53d9db864f03e5f59829c4e.jpg",
         "page": "https://pixabay.com/photos/refinery-petroleum-oil-industry-340439/",
         "author": "HarryStilianou"
       }
@@ -3913,7 +3913,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/69a33df291652f54176b30dd.jpg",
+        "url": "./data/news-images/69a33df291652f54176b30dd.jpg",
         "page": "https://pixabay.com/photos/dollars-money-finance-business-7544659/",
         "author": "Sandra-Gabriel"
       }
@@ -3941,7 +3941,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "bitcoin, btc, money, currency, crypto, cryptocurrency, blockchain, cryptography, digital, gold, financial, coins, business, finance, united kingdom, uk, england, exchange, bitcoin, bitcoin, bitcoin, btc, btc, btc, btc, btc, crypto, crypto, crypto",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/9461d58e0cae79b6a9e6f2e4.jpg",
+        "url": "./data/news-images/9461d58e0cae79b6a9e6f2e4.jpg",
         "page": "https://pixabay.com/photos/bitcoin-btc-money-currency-crypto-4374654/",
         "author": "cryptostock"
       }
@@ -3971,7 +3971,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/851d06ea705bfd0b463dc33f.jpg",
+        "url": "./data/news-images/851d06ea705bfd0b463dc33f.jpg",
         "page": "https://pixabay.com/photos/mountains-trees-palm-trees-palm-5767602/",
         "author": "Erik_Karits"
       }
@@ -3999,7 +3999,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/e23631a0382560cdee4963f4.jpg",
+        "url": "./data/news-images/e23631a0382560cdee4963f4.jpg",
         "page": "https://pixabay.com/photos/thai-isolated-debt-thailand-rate-1549030/",
         "author": "41330"
       }
@@ -4029,7 +4029,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "oil palm, tree, plantation, horticulture, karnataka, nature, india",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/80d0bbe242fd5da84aefa4df.jpg",
+        "url": "./data/news-images/80d0bbe242fd5da84aefa4df.jpg",
         "page": "https://pixabay.com/photos/oil-palm-tree-plantation-287899/",
         "author": "sarangib"
       }
@@ -4059,7 +4059,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "factory night view, chimney, vapor, urban, pollution",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/031e33f6a6924c62da380a46.jpg",
+        "url": "./data/news-images/031e33f6a6924c62da380a46.jpg",
         "page": "https://pixabay.com/photos/factory-night-view-chimney-vapor-7806638/",
         "author": "tasukaran"
       }
@@ -4088,7 +4088,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/cfcbdb43ad884d80ed743193.jpg",
+        "url": "./data/news-images/cfcbdb43ad884d80ed743193.jpg",
         "page": "https://pixabay.com/photos/rhine-industry-refinery-tanks-5366666/",
         "author": "Tho-Ge"
       }
@@ -4117,7 +4117,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, water, harbor, harbour, sea, funnel, tanker, port, vessel, transportation, nautical, shipping, nature, marine, cargo, freight",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/19ed9c94bd69034cac3e6a6d.jpg",
+        "url": "./data/news-images/19ed9c94bd69034cac3e6a6d.jpg",
         "page": "https://pixabay.com/photos/ship-water-harbor-harbour-sea-1023442/",
         "author": "fotshot"
       }
@@ -4147,7 +4147,7 @@
       "language": "pt",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/1a290cfae62723bda2e15ff9.jpg",
+        "url": "./data/news-images/1a290cfae62723bda2e15ff9.jpg",
         "page": "https://pixabay.com/photos/field-farmer-crops-sunset-7708736/",
         "author": "RonaldPlett"
       }
@@ -4176,7 +4176,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "sea, tanker, clouds, shadows, isle of wight, nature, sky, distance, ship",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/f924ca7e9b78626d63d40889.jpg",
+        "url": "./data/news-images/f924ca7e9b78626d63d40889.jpg",
         "page": "https://pixabay.com/photos/sea-tanker-clouds-shadows-7441386/",
         "author": "Infinite-Creations"
       }
@@ -4205,7 +4205,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, tanker, hd wallpaper, 4k wallpaper 1920x1080, laptop wallpaper, north sea, water, sea, heaven, beautiful nature, wallpaper hd, lake, mac wallpaper, maritime, windows wallpaper, beautiful wallpaper, nature background, boat, free wallpaper, port, nature wallpaper, 4k wallpaper, nature, full hd wallpaper, free background, storm, wallpaper 4k, cool backgrounds, dark clouds, desktop backgrounds, cuxhaven, wallpaper",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/52ebcdb1be1eef1a816eccf9.jpg",
+        "url": "./data/news-images/52ebcdb1be1eef1a816eccf9.jpg",
         "page": "https://pixabay.com/photos/ship-tanker-north-sea-water-sea-3611254/",
         "author": "2780243"
       }
@@ -4234,7 +4234,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/104ecf151415cf809867b93e.jpg",
+        "url": "./data/news-images/104ecf151415cf809867b93e.jpg",
         "page": "https://pixabay.com/photos/industrial-plant-rain-mist-night-7527794/",
         "author": "tasukaran"
       }
@@ -4263,7 +4263,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tanker, ship, sea, reflection, old, nature, rusty",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/6057b177324be43dbbb5e53b.jpg",
+        "url": "./data/news-images/6057b177324be43dbbb5e53b.jpg",
         "page": "https://pixabay.com/photos/tanker-ship-sea-reflection-old-1103658/",
         "author": "zamanisahudi"
       }
@@ -4292,7 +4292,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "money, worldwide, coins, currency, international, gray money",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/d8058276ddc82f56ae19a1b1.jpg",
+        "url": "./data/news-images/d8058276ddc82f56ae19a1b1.jpg",
         "page": "https://pixabay.com/photos/money-worldwide-coins-currency-4925557/",
         "author": "jhenning"
       }
@@ -4321,7 +4321,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "ship, mac wallpaper, tanker, hd wallpaper, north sea, water, free wallpaper, desktop backgrounds, sea, wallpaper hd, 4k wallpaper 1920x1080, beautiful wallpaper, 4k wallpaper, laptop wallpaper, heaven, lake, wallpaper 4k, maritime, boat, port, free background, beautiful nature, storm, dark clouds, cuxhaven, nature, cool backgrounds, full hd wallpaper, nature wallpaper, windows wallpaper, nature background, wallpaper, flock of birds, meadow",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a0dde0172f19ad06513b6044.jpg",
+        "url": "./data/news-images/a0dde0172f19ad06513b6044.jpg",
         "page": "https://pixabay.com/photos/ship-tanker-north-sea-water-sea-3611259/",
         "author": "2780243"
       }
@@ -4350,7 +4350,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "newspaper, daily newspaper, newsprint, paper, pressure, writing, old script, printed font, wrinkled, antique, old, information, text, close up, texture, newspaper, newspaper, newspaper, newspaper, newspaper",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/08befded8b8e2292036be101.jpg",
+        "url": "./data/news-images/08befded8b8e2292036be101.jpg",
         "page": "https://pixabay.com/photos/newspaper-daily-newspaper-newsprint-671630/",
         "author": "Pezibear"
       }
@@ -4379,7 +4379,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "money, bill, finance, euro, coin, currency, bank note, passport, penny, ruble, rubles, banknotes, money, penny, ruble, rubles, rubles, rubles, rubles, rubles",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/647d29a4baa4fcc38409bef8.jpg",
+        "url": "./data/news-images/647d29a4baa4fcc38409bef8.jpg",
         "page": "https://pixabay.com/photos/money-bill-finance-euro-coin-5231473/",
         "author": "ulianapinto"
       }
@@ -4407,7 +4407,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "euro, dollar, parity, exchange rate, usd, eur, currency, finance, symbol, chalkboard, parity, exchange rate, exchange rate, exchange rate, exchange rate, exchange rate",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a6a3bc043065627fcac60dc4.jpg",
+        "url": "./data/news-images/a6a3bc043065627fcac60dc4.jpg",
         "page": "https://pixabay.com/photos/euro-dollar-parity-exchange-rate-7317266/",
         "author": "Tumisu"
       }
@@ -4436,7 +4436,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "lock system, lock, the passage of the gateway, motor tanker, cargo ship, invest, moored, rhine, rhine shipping, mooring, mineral oil transport, birsfelden, waters, transport system, ship, port",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/01b0b112d418e53ad352cfdb.jpg",
+        "url": "./data/news-images/01b0b112d418e53ad352cfdb.jpg",
         "page": "https://pixabay.com/photos/lock-system-lock-3140176/",
         "author": "adege"
       }
@@ -4464,7 +4464,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "rhine, industry, factory, ship, refinery, oil, tanker, tank, transport, towers, tube, factory, factory, refinery, refinery, refinery, refinery, refinery, tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/1ebad6e12a32f5b85e5aa7ee.jpg",
+        "url": "./data/news-images/1ebad6e12a32f5b85e5aa7ee.jpg",
         "page": "https://pixabay.com/photos/rhine-industry-factory-ship-5385905/",
         "author": "Tho-Ge"
       }
@@ -4494,7 +4494,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "thailand, nature, agriculture, mountain, asia, landscape, rural scene, scenics, outdoors, green color, hill, farm, travel, field, tree, sky, plant, summer, tropical climate",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/fdbea198dfb2eec4f4e28682.jpg",
+        "url": "./data/news-images/fdbea198dfb2eec4f4e28682.jpg",
         "page": "https://pixabay.com/photos/thailand-nature-agriculture-4888675/",
         "author": "Erik_Karits"
       }
@@ -4523,7 +4523,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "sea, water, ship, nature, tanker",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/46be74bdd0b8518ee16a1ae0.jpg",
+        "url": "./data/news-images/46be74bdd0b8518ee16a1ae0.jpg",
         "page": "https://pixabay.com/photos/sea-water-ship-tanker-56098/",
         "author": "derdento"
       }
@@ -4552,7 +4552,7 @@
       "image": {
         "illustrative_country": "France",
         "tags": "bridge, stone bridge, bordeaux, coat of arms, napoleon, france, vacations, blue hour, evening atmosphere, bridge, bridge, bridge, bridge, bridge, bordeaux, bordeaux, bordeaux",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/711a730104214ae2185534f5.jpg",
+        "url": "./data/news-images/711a730104214ae2185534f5.jpg",
         "page": "https://pixabay.com/photos/bridge-stone-bridge-bordeaux-8291058/",
         "author": "AG-Pics"
       }
@@ -4603,7 +4603,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "chart, trading, forex, analysis, tablet, trading, forex, forex, forex, forex, forex",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/97b6f3320e8b20fc7d6f5e6c.jpg",
+        "url": "./data/news-images/97b6f3320e8b20fc7d6f5e6c.jpg",
         "page": "https://pixabay.com/photos/chart-trading-forex-analysis-840333/",
         "author": "PIX1861"
       }
@@ -4632,7 +4632,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "vessel, river, danube, landscape, nature, day, winter, bunker, tanker, clouds, sky, silence, mile, romania, ukraine",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/8a02e255898d2ed14cca14a4.jpg",
+        "url": "./data/news-images/8a02e255898d2ed14cca14a4.jpg",
         "page": "https://pixabay.com/photos/vessel-river-danube-landscape-day-4176371/",
         "author": "Sergii_ILyushi"
       }
@@ -4662,7 +4662,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "cycling, farm, oil plum, gray farm, Senai, Johor, Malaysia",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a9c2dc86ca599a48c85fe008.jpg",
+        "url": "./data/news-images/a9c2dc86ca599a48c85fe008.jpg",
         "page": "https://pixabay.com/photos/cycling-farm-oil-plum-gray-farm-2104784/",
         "author": "chiliapi"
       }
@@ -4693,7 +4693,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "agriculture, chemicals, soy, tractor, soy, soy, soy, soy, soy, tractor, tractor, tractor",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/7557463878b60ce164e33196.jpg",
+        "url": "./data/news-images/7557463878b60ce164e33196.jpg",
         "page": "https://pixabay.com/photos/agriculture-chemicals-soy-tractor-4472766/",
         "author": "kaosnoff"
       }
@@ -4725,7 +4725,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "tree, fruit, nature, leaf, green, plant, branch, garden, food, natural, fresh, spring, season, agriculture, harvest, orchard, healthy, orange, organic, growth, grow, leaves, design, yellow, floral",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/01efd6a6788d00a553cfa047.jpg",
+        "url": "./data/news-images/01efd6a6788d00a553cfa047.jpg",
         "page": "https://pixabay.com/photos/tree-fruit-nature-leaf-green-2807373/",
         "author": "oranfireblade"
       }
@@ -4756,7 +4756,7 @@
       "image": {
         "illustrative_country": "Indonesia",
         "tags": "beach, nature, dusk, people, vacation, leisure, swim, ocean, sea, water, sand, shore, seashore, coast, tropical, canggu, bali, indonesia, Indonesia, Bali, Dalung",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/94472189bca2532d1f5e90ce.jpg",
+        "url": "./data/news-images/94472189bca2532d1f5e90ce.jpg",
         "page": "https://pixabay.com/photos/beach-dusk-people-vacation-leisure-5548446/",
         "author": "Peggy_Marco"
       }
@@ -4786,7 +4786,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "palm, oil, fruit, background, ripe, red, produce, agriculture, crop, commodity, indonesia, asia, energy, agricultural, industrial, malaysia, palm oil, industry, cooking, oil palm, freshness, nut, resources, seed, tropical, food, yellow, raw material, oil industry, harvest, palm tree, cooking oil, incomplete, orange, vegetable oil, nature, area, conservation, cultivated, environmental, merchandise, brown energy, palm oil, palm oil, palm oil, palm oil, palm oil",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/ee36788599f5af74d40681f7.jpg",
+        "url": "./data/news-images/ee36788599f5af74d40681f7.jpg",
         "page": "https://pixabay.com/photos/palm-oil-fruit-background-ripe-1464654/",
         "author": "tristantan"
       }
@@ -4816,7 +4816,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "field, plantation, agriculture, leaves, foliage, rural, soy, soybean, crops, farm, plants, agronomy, country, nature, soy, soybean, soybean, soybean, soybean, soybean",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/1d35ec49392c293ab978c07b.jpg",
+        "url": "./data/news-images/1d35ec49392c293ab978c07b.jpg",
         "page": "https://pixabay.com/photos/field-plantation-agriculture-leaves-5134440/",
         "author": "die9ov"
       }
@@ -4845,7 +4845,7 @@
       "language": "en",
       "source_type": "Google News RSS (agregador)",
       "image": {
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a463dc819572403219ddc7cd.jpg",
+        "url": "./data/news-images/a463dc819572403219ddc7cd.jpg",
         "page": "https://pixabay.com/photos/port-arthur-texas-night-evening-1584098/",
         "author": "12019"
       }
@@ -4875,7 +4875,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "factory, industry, evening, silhouette, slovnaft, bratislava, processing, oil",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/401f4bd645668df529b7ea14.jpg",
+        "url": "./data/news-images/401f4bd645668df529b7ea14.jpg",
         "page": "https://pixabay.com/photos/factory-industry-evening-silhouette-3337235/",
         "author": "phtorxp"
       }
@@ -4905,7 +4905,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "refinery, oil refinery, oil, industry, mineral oil, refinery, refinery, oil refinery, oil refinery, oil refinery, oil refinery, oil refinery, mineral oil",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/7986f2579bc3c46b04aee28f.jpg",
+        "url": "./data/news-images/7986f2579bc3c46b04aee28f.jpg",
         "page": "https://pixabay.com/photos/refinery-oil-refinery-oil-industry-2251249/",
         "author": "michaelmep"
       }
@@ -4934,7 +4934,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "money, dinero, peso, currency, cash, mexican, mxn, 500, 50, 20, dollar, 100, exchange, peso, peso, peso, peso, peso",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/5436eb68d1922c78f1b463b3.jpg",
+        "url": "./data/news-images/5436eb68d1922c78f1b463b3.jpg",
         "page": "https://pixabay.com/photos/money-dinero-peso-currency-cash-960171/",
         "author": "emiliomeza0"
       }
@@ -4963,7 +4963,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "europe, pay, wallpaper 4k, 4k wallpaper, usa, banknote, business, mac wallpaper, money, rate, bill, dollar, cash, finance, full hd wallpaper, currency, american, us dollars, texture, background, pattern, windows wallpaper, european, cool backgrounds, 4k wallpaper 1920x1080, market, euro, brown business, brown money, beautiful wallpaper, hd wallpaper, free wallpaper, brown finance, laptop wallpaper, wallpaper hd, desktop backgrounds, brown company, free background, brown market",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/3047d4294491447e62f24efe.jpg",
+        "url": "./data/news-images/3047d4294491447e62f24efe.jpg",
         "page": "https://pixabay.com/photos/europe-pay-usa-banknote-business-69526/",
         "author": "PublicDomainPictures"
       }
@@ -4994,7 +4994,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "farm field, field, farm, corn, landscape, agriculture, nature, plant, summer, green, rural, wisconsin, midwest, grass, season, outdoor, countryside, country, harvest, blue sky, scenic, natural, land, scenery, scene, organic, non-gmo, farming, blue, sky, agricultural, environment, healthy, gmo, modified, vegetable, bio, industry",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/8df34b4676afa794adc94470.jpg",
+        "url": "./data/news-images/8df34b4676afa794adc94470.jpg",
         "page": "https://pixabay.com/photos/farm-field-field-farm-corn-2642467/",
         "author": "1139623"
       }
@@ -5023,7 +5023,7 @@
       "image": {
         "illustrative_country": "India",
         "tags": "taj mahal, india, agra, islamic, marble, tomb, mausoleum, facade, building, architecture, landmark, tourist spot, tourist attraction, tourists, unesco world heritage site, tourism, monument, heritage, islam, culture, travel, historic, holy, taj mahal, taj mahal, taj mahal, taj mahal, taj mahal, india, india, india, india, islamic",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/3e4f65887ad0eaf2ebe93f1a.jpg",
+        "url": "./data/news-images/3e4f65887ad0eaf2ebe93f1a.jpg",
         "page": "https://pixabay.com/photos/taj-mahal-india-agra-islamic-866692/",
         "author": "wiganparky0"
       }
@@ -5052,7 +5052,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "money, dollars, us, currency, business, wealth, success, financial, bank, cash, euro, forex, banking, us-dollar, income, economy, forex, forex, forex, forex, forex",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/136d5fbe1f27d03fd9d466d0.jpg",
+        "url": "./data/news-images/136d5fbe1f27d03fd9d466d0.jpg",
         "page": "https://pixabay.com/photos/money-dollars-us-currency-business-4546872/",
         "author": "FilipFilipovic"
       }
@@ -5081,7 +5081,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "euro, dollar, european union, usa, currency, the crisis, business, bank, paper, cash, money, invest, credits, trade, economy, payment, federal reserve system, european union, european union, european union, european union, european union, money, economy, economy",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/52326c66792e11e74260062c.jpg",
+        "url": "./data/news-images/52326c66792e11e74260062c.jpg",
         "page": "https://pixabay.com/photos/euro-dollar-european-union-usa-1974712/",
         "author": "NikolayFrolochkin"
       }
@@ -5110,7 +5110,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "money, croatia, banknote, business, kuna, croatian kuna, currency, rich, banking, financial, economy, paper, payment, bank, savings, croatian money, croatian kuna, croatian kuna, croatian kuna, croatian kuna, croatian kuna, croatian money, croatian money",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/b8f8547a275fc119f197797a.jpg",
+        "url": "./data/news-images/b8f8547a275fc119f197797a.jpg",
         "page": "https://pixabay.com/photos/money-croatia-banknote-business-4624702/",
         "author": "FilipFilipovic"
       }
@@ -5139,7 +5139,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "bitcoin, btc, cryptocurrency, money, digital, cryptography, internet, finance, blockchain, electronic, financial, virtual, online, currency",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/2eaf982f4470f88ebe96985b.jpg",
+        "url": "./data/news-images/2eaf982f4470f88ebe96985b.jpg",
         "page": "https://pixabay.com/photos/bitcoin-btc-cryptocurrency-money-5512019/",
         "author": "vjkombajn"
       }
@@ -5168,7 +5168,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "coins, money, banknotes, currency, gold",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/69ae051aa2bdd7dea0c5d466.jpg",
+        "url": "./data/news-images/69ae051aa2bdd7dea0c5d466.jpg",
         "page": "https://pixabay.com/photos/coins-money-banknotes-currency-7007802/",
         "author": "gosiak1980"
       }
@@ -5199,7 +5199,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "pxclimateaction, industry, port, nature, sea, weather, windmills, energy, darling, clouds",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/c53477f15f58564c61534d3b.jpg",
+        "url": "./data/news-images/c53477f15f58564c61534d3b.jpg",
         "page": "https://pixabay.com/photos/pxclimateaction-industry-port-sea-7158318/",
         "author": "ELG21"
       }
@@ -5228,7 +5228,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "background, field, windows wallpaper, agriculture, landscape, rural, nature, full hd wallpaper, plant, beautiful wallpaper, 4k wallpaper 1920x1080, mac wallpaper, oil, farm, farming, hd wallpaper, cool backgrounds, countryside, summer, yellow, beautiful, wallpaper hd, view, seed, farmland, natural, desktop backgrounds, 4k wallpaper, free wallpaper, laptop wallpaper, oilseed, canola, blooming, wallpaper 4k, renewable, floral background, free background, harvesting, work, transport",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/b9821880fce0d60ff5b5df76.jpg",
+        "url": "./data/news-images/b9821880fce0d60ff5b5df76.jpg",
         "page": "https://pixabay.com/photos/background-field-agriculture-10057950/",
         "author": "kumarsu6745_"
       }
@@ -5280,7 +5280,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "india, rupee, occupation, indian currency, giving, letter - document, contract, currency exchange, global business, paper, people, bank, banking, borrowing, finance, finance and economy, accounting, checkout, delhi, entrepreneur, rupee, indian currency, indian currency, indian currency, indian currency, indian currency",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/e41dc19f7914966e10312b6f.jpg",
+        "url": "./data/news-images/e41dc19f7914966e10312b6f.jpg",
         "page": "https://pixabay.com/photos/india-rupee-occupation-3887566/",
         "author": "shameersrk"
       }
@@ -5308,7 +5308,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "banknotes, us-dollar, dollar, finance, funds, currency, seem, financial world, dollar sign, finance dollars, paper money, dollar, dollar, dollar, dollar, dollar, dollar sign, dollar sign",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/a64f9a73a3e2266ec0f55dc3.jpg",
+        "url": "./data/news-images/a64f9a73a3e2266ec0f55dc3.jpg",
         "page": "https://pixabay.com/photos/banknotes-us-dollar-dollar-finance-946395/",
         "author": "TBIT"
       }
@@ -5338,7 +5338,7 @@
       "image": {
         "illustrative_country": "Turkey",
         "tags": "turkey, istanbul, prayer, mosque, architecture, minaret, dome, history, nature, culture, view, cityscape, islam, religion, light, pilgrimage, tourist, sunrise, medieval, tourism, historic building, landmark",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/f71bd104e696d0fab1847564.jpg",
+        "url": "./data/news-images/f71bd104e696d0fab1847564.jpg",
         "page": "https://pixabay.com/photos/turkey-istanbul-prayer-mosque-10476496/",
         "author": "Konevi"
       }
@@ -5369,7 +5369,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "industrial plant, nature, rain, mist, night, lights, evening",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/ada8c4832f94ccad0a4446db.jpg",
+        "url": "./data/news-images/ada8c4832f94ccad0a4446db.jpg",
         "page": "https://pixabay.com/photos/industrial-plant-rain-mist-night-7527766/",
         "author": "tasukaran"
       }
@@ -5398,7 +5398,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "buck, money, coins, currency, value",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/8bdadfb7718c8ec580d9b797.jpg",
+        "url": "./data/news-images/8bdadfb7718c8ec580d9b797.jpg",
         "page": "https://pixabay.com/photos/buck-money-coins-currency-value-7398790/",
         "author": "gosiak1980"
       }
@@ -5429,7 +5429,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "harvest, harvester, teamwork, harvesting, soybean, agriculture, farming, farm, working, team, picking, connected, connect, side by side, soybean, soybean, soybean, soybean, soybean",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/105da4e2d2f129f4d6e41168.jpg",
+        "url": "./data/news-images/105da4e2d2f129f4d6e41168.jpg",
         "page": "https://pixabay.com/photos/harvest-harvester-teamwork-1825170/",
         "author": "CJ"
       }
@@ -5457,7 +5457,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "money, euro, currency, business, finance, cash register, economy, bank, europe, spain, change, money, money, money, money, euro, euro, euro, euro, finance, economy, economy, economy, economy, economy, europe, europe, europe, europe, spain, change",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/b236ec71975b687440fc3ba2.jpg",
+        "url": "./data/news-images/b236ec71975b687440fc3ba2.jpg",
         "page": "https://pixabay.com/photos/money-euro-currency-business-2094527/",
         "author": "semeyas"
       }
@@ -5486,7 +5486,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "dollar, money, finance, us-dollar, funds, currency, dollar sign, symbol, financial world, business, financial crisis, banknotes, paper money, usa, seem, greed, newspaper, read, information, financial crisis, greed, greed, newspaper, newspaper, newspaper, newspaper, newspaper",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/0a16d9d6948cc11b34a84ad8.jpg",
+        "url": "./data/news-images/0a16d9d6948cc11b34a84ad8.jpg",
         "page": "https://pixabay.com/photos/dollar-money-finance-us-dollar-1426420/",
         "author": "markusspiske"
       }
@@ -5515,7 +5515,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "usa, dollar, poor, rich, flag, america, currency, money, finance, financial world, coin money, banknotes, seem",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/28b3fed5990358dbbcf582b9.jpg",
+        "url": "./data/news-images/28b3fed5990358dbbcf582b9.jpg",
         "page": "https://pixabay.com/photos/usa-dollar-poor-rich-flag-america-2682719/",
         "author": "geralt"
       }
@@ -5545,7 +5545,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "harvest, soy, plantation, harvester, grains, combine, agricultural machine, farm, brazil, soy, soy, soy, soy, soy, combine, combine, combine, brazil",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/16254c8d49336357692c9594.jpg",
+        "url": "./data/news-images/16254c8d49336357692c9594.jpg",
         "page": "https://pixabay.com/photos/harvest-soy-plantation-harvester-1543064/",
         "author": "charlesricardo"
       }
@@ -5575,7 +5575,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "palm, oil, fruit, background, ripe, red, produce, agriculture, crop, commodity, indonesia, asia, energy, agricultural, industrial, malaysia, palm oil, industry, cooking, oil palm, freshness, nut, resources, seed, tropical, food, yellow, raw material, oil industry, harvest, palm tree, cooking oil, incomplete, orange, vegetable oil, nature, area, conservation, cultivated, environmental, merchandise, palm oil, palm oil, palm oil, palm oil, palm oil",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/43ce41a34b36d68faaf4cbbd.jpg",
+        "url": "./data/news-images/43ce41a34b36d68faaf4cbbd.jpg",
         "page": "https://pixabay.com/photos/palm-oil-fruit-background-ripe-1464662/",
         "author": "tristantan"
       }
@@ -5605,7 +5605,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "soy, plantation, nature, agriculture, green, cultures, crop, fields, grains, brazil, sheets, leaf",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/bb3cecce30212c8dab09658b.jpg",
+        "url": "./data/news-images/bb3cecce30212c8dab09658b.jpg",
         "page": "https://pixabay.com/photos/soy-plantation-agriculture-green-4019684/",
         "author": "mari_lazaro"
       }
@@ -5634,7 +5634,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "agriculture, artificial, beaker, bio, biochemistry, bio-diesel, biofuel, biotechnology, chemical, conservation, corn, diesel, dish, energy, environmentalist, ethanol, experiment, flask, food, fossil, fructose, fuel, beaker, biochemistry, biofuel, biofuel, biofuel, biofuel, chemical, chemical, chemical, chemical, chemical, diesel, ethanol, ethanol, ethanol, ethanol",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/7a389dfa156531296dedbb27.jpg",
+        "url": "./data/news-images/7a389dfa156531296dedbb27.jpg",
         "page": "https://pixabay.com/photos/agriculture-artificial-beaker-bio-4402811/",
         "author": "ckstockphoto"
       }
@@ -5663,7 +5663,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "cornfield, corn leaves, corn, zea mays, kukuruz, field, agriculture, green, leaves, food, forage corn, corn cultivation, plant, animal feed, nature, grain, cultivation, corn plants, summer",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/7da3b2a2f5e873a887a3f3f3.jpg",
+        "url": "./data/news-images/7da3b2a2f5e873a887a3f3f3.jpg",
         "page": "https://pixabay.com/photos/cornfield-corn-leaves-corn-zea-mays-5367154/",
         "author": "manfredrichter"
       }
@@ -5690,7 +5690,7 @@
       "image": {
         "illustrative_country": "Japan",
         "tags": "mountain, volcano, peak, summit, countryside, sea of clouds, scenery, scenic, idyllic, mount fuji, nature, japan",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/e50d65f3f3818ce6574f52b0.jpg",
+        "url": "./data/news-images/e50d65f3f3818ce6574f52b0.jpg",
         "page": "https://pixabay.com/photos/mountain-volcano-peak-summit-477832/",
         "author": "kimura2"
       }
@@ -5720,7 +5720,7 @@
       "image": {
         "illustrative_country": "Argentina",
         "tags": "glacier, argentina, south america, patagonia, ice, moreno, iceberg, lake, panorama, tourist attraction, tourist destination, famous, nature, places of interest",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/e95dde401b67d535fc9dbbac.jpg",
+        "url": "./data/news-images/e95dde401b67d535fc9dbbac.jpg",
         "page": "https://pixabay.com/photos/glacier-argentina-south-america-583419/",
         "author": "derwiki"
       }
@@ -5749,7 +5749,7 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "tags": "cane field, the sugar cane-of-sugar, crop, agricultural, farm, combine, harvest, brazil, goias, agriculture, ground, harvester, machining, ground, ground, ground, ground, ground",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/04c195c8dbc7ea100e5263ba.jpg",
+        "url": "./data/news-images/04c195c8dbc7ea100e5263ba.jpg",
         "page": "https://pixabay.com/photos/cane-field-the-sugar-cane-of-sugar-4362528/",
         "author": "joaolimafotografias"
       }
@@ -5779,7 +5779,7 @@
       "image": {
         "illustrative_country": "Argentina",
         "tags": "mountains, lake, lagoon, glacier, trekking, cerro torre, nature, argentina, patagonia, landscape",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/6b5020d2703c441dd955bc81.jpg",
+        "url": "./data/news-images/6b5020d2703c441dd955bc81.jpg",
         "page": "https://pixabay.com/photos/mountains-lake-lagoon-glacier-6318080/",
         "author": "jawajeziorski"
       }
@@ -5809,7 +5809,7 @@
       "image": {
         "illustrative_country": "Argentina",
         "tags": "street, highway, city, traffic, travel, buenos aires, buenos aires, buenos aires, buenos aires, buenos aires, buenos aires, Argentina, Buenos Aires",
-        "url": "https://antoniosilvagc9-design.github.io/Mundonovo-global-oils/data/news-images/35dafad64800646a9c21e11a.jpg",
+        "url": "./data/news-images/35dafad64800646a9c21e11a.jpg",
         "page": "https://pixabay.com/photos/street-highway-city-traffic-travel-3242215/",
         "author": "Lernestorod"
       }
