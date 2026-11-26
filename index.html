@@ -807,7 +807,15 @@ for(const spec of [{name:'Óleo de palma · FCPO',file:'cpo-history.json',unit:'
 #mn-tv{display:none;background:#0b0b0b;color:#fff;font-family:Arial,sans-serif;box-sizing:border-box;padding:clamp(12px,2vw,30px);border:1px solid #806a32;border-radius:14px;margin:12px 0}body[data-portal-page="intelligence"] #mn-tv{display:flex;flex-direction:column;gap:8px}body[data-portal-page="intelligence"] #executive-section-4>:not(.exec18-hero):not(#mn-tv){display:none!important}#mn-tv *{box-sizing:border-box}#mn-tv h2,#mn-tv h3,#mn-tv p{margin:0}#mn-tv h2{color:#b6ff00;font-size:clamp(22px,3vw,48px)}#mn-tv h3{color:#d4af37;font-size:clamp(14px,1.5vw,25px)}#mn-tv .mt-head{min-height:32px;margin:0;padding:0}#mn-tv .mt-head,#mn-tv .mt-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}#mn-tv .mt-clocks{display:flex;gap:14px;flex-wrap:wrap;color:#ddd;font-size:clamp(12px,1vw,18px)}#mn-tv .mt-progress{height:4px;background:#333}#mn-tv .mt-progress i{display:block;height:100%;background:#D4AF37;width:0}#mn-tv .mt-panel{display:none;flex:1;min-height:0;overflow:hidden}#mn-tv .mt-panel.active{display:flex;flex-direction:column;gap:12px;animation:mtfade .6s ease}@keyframes mtfade{from{opacity:.2}to{opacity:1}}#mn-tv .mt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;flex:1;min-height:0}#mn-tv .mt-card{background:#151515;border:1px solid #655326;border-radius:12px;padding:clamp(12px,1.6vw,26px);min-width:0;overflow:hidden;display:flex;flex-direction:column;gap:8px}#mn-tv .mt-value{font-size:clamp(30px,5vw,80px);font-weight:bold;color:#b6ff00}#mn-tv .mt-small{color:#aaa;font-size:clamp(11px,1vw,17px)}#mn-tv .mt-news{font-size:clamp(15px,1.65vw,28px);line-height:1.25;color:white;text-decoration:none;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}#mn-tv .mt-card img{width:100%;height:clamp(60px,12vh,180px);object-fit:cover;border-radius:7px}#mn-tv button{background:#d4af37;color:#111;border:0;border-radius:6px;padding:8px 14px;font-weight:bold;cursor:pointer}#mn-tv .mt-ticker{overflow:hidden;white-space:nowrap;border-top:1px solid #655326;padding:3px 0 0;color:#d4af37}#mn-tv .mt-ticker tv-ticker-tape{display:block;width:100%;color-scheme:dark}
 #mn-tv .mt-tv-quotes{display:none;padding:6px 0;border-top:1px solid #655326;min-width:0;overflow:hidden}
 #mn-tv:fullscreen .mt-ticker,body.mn-tv-mode #mn-tv .mt-ticker{display:none}
-#mn-tv:fullscreen .mt-tv-quotes,body.mn-tv-mode #mn-tv .mt-tv-quotes{display:flex;align-items:center;flex-wrap:wrap;gap:5px 18px}
+#mn-tv:fullscreen .mt-tv-quotes,body.mn-tv-mode #mn-tv .mt-tv-quotes{display:block}
+#mn-tv .mt-tv-quotes-track{display:inline-flex;max-width:none;vertical-align:middle;animation:mtticker 32s linear infinite}
+#mn-tv .mt-tv-quotes-group{display:flex;flex:none;align-items:center;justify-content:space-around;gap:24px;min-width:100vw;padding:0 20px;white-space:nowrap}
+#mn-tv.mt-paused .mt-tv-quotes-track{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){
+  #mn-tv .mt-tv-quotes-track{display:block;animation:none}
+  #mn-tv .mt-tv-quotes-group{min-width:0;justify-content:flex-start;flex-wrap:wrap;padding:0}
+  #mn-tv .mt-tv-quotes-group[aria-hidden="true"]{display:none}
+}
 #mn-tv .mt-tv-quote{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 8px;font-size:clamp(11px,1vw,16px);color:#fff}
 #mn-tv .mt-tv-quote strong{color:#e8c65a}
 #mn-tv .mt-tv-quote small{color:#b8b8b8}
@@ -868,7 +876,9 @@ function chart(rows,unit){const el=node('div','','mt-chart');el.style.cssText='w
     });
   }
   strip.textContent='';
-  if(!indices.length)strip.appendChild(node('small','Fechamentos das bolsas indisponíveis','mt-small'));
+  const track=node('div','','mt-tv-quotes-track');
+  const group=node('div','','mt-tv-quotes-group');
+  if(!indices.length)group.appendChild(node('small','Fechamentos das bolsas indisponíveis','mt-small'));
   for(const quote of entries){
     const item=node('div','','mt-tv-quote');
     item.appendChild(node('strong',quote.name));
@@ -879,8 +889,13 @@ function chart(rows,unit){const el=node('div','','mt-chart');el.style.cssText='w
       item.appendChild(node('span',sign+fmt(quote.change)+'%',color));
     }
     item.appendChild(node('small',[quote.date,quote.source].filter(Boolean).join(' · ')));
-    strip.appendChild(item);
+    group.appendChild(item);
   }
+  track.appendChild(group);
+  const repeat=group.cloneNode(true);
+  repeat.setAttribute('aria-hidden','true');
+  track.appendChild(repeat);
+  strip.appendChild(track);
 }
 function loadTvSource(path){
   return new Promise((resolve,reject)=>{
@@ -914,7 +929,7 @@ async function refresh(){
     loading=false;
   }
 }
-function go(){positions=positions.map(x=>x+1);start=performance.now();elapsed=0;displaySlots()}setInterval(()=>{if(!paused){elapsed=performance.now()-start;if(elapsed>=35000)go()}$('mt-progress').style.width=Math.min(100,elapsed/350)+'%';},100);$('mt-pause').onclick=()=>{paused=!paused;if(!paused)start=performance.now()-elapsed;$('mt-pause').textContent=paused?'Continuar':'Pausar'};$('mt-full').onclick=async()=>{if(document.fullscreenElement){await document.exitFullscreen();return}if(document.body.classList.contains('mn-tv-mode')){document.body.classList.remove('mn-tv-mode');return}try{await root.requestFullscreen()}catch{document.body.classList.add('mn-tv-mode')}};if(new URLSearchParams(location.search).get('mode')==='tv')document.body.classList.add('mn-tv-mode');refresh();setInterval(refresh,900000);window.addEventListener('online',refresh)})();
+function go(){positions=positions.map(x=>x+1);start=performance.now();elapsed=0;displaySlots()}setInterval(()=>{if(!paused){elapsed=performance.now()-start;if(elapsed>=35000)go()}$('mt-progress').style.width=Math.min(100,elapsed/350)+'%';},100);$('mt-pause').onclick=()=>{paused=!paused;root.classList.toggle('mt-paused',paused);if(!paused)start=performance.now()-elapsed;$('mt-pause').textContent=paused?'Continuar':'Pausar'};$('mt-full').onclick=async()=>{if(document.fullscreenElement){await document.exitFullscreen();return}if(document.body.classList.contains('mn-tv-mode')){document.body.classList.remove('mn-tv-mode');return}try{await root.requestFullscreen()}catch{document.body.classList.add('mn-tv-mode')}};if(new URLSearchParams(location.search).get('mode')==='tv')document.body.classList.add('mn-tv-mode');refresh();setInterval(refresh,900000);window.addEventListener('online',refresh)})();
 </script><section class="fx-intelligence" id="brazil-fx-intelligence" aria-label="Brazil FX Intelligence"><div class="fx-label">MUNDO NOVO · BRAZIL FX INTELLIGENCE</div><h3>Brasil, Ásia e decisão comercial</h3><div class="fx-subtitle">Briefing do CEO · três decisões em 30 segundos</div><div class="fx-grid">
 <article class="fx-card"><div class="fx-label">01 · BRASIL — PRESSÃO CAMBIAL</div><h3>O que pode pressionar o dólar?</h3><div class="fx-number" id="fx-ptax">Carregando PTAX…</div><div class="fx-caption" id="fx-ptax-source">Banco Central · PTAX venda · referência histórica</div><p>Dólar em alta pressiona o custo das importações.</p><p><strong>Favorece:</strong> real mais forte e menor custo cambial. <strong>Risco:</strong> depreciação do real e maior necessidade de caixa.</p><p><strong>Acompanhar:</strong> PTAX, Selic, Fed, inflação, risco fiscal e fluxo cambial; sem dados atualizados desses fatores, não atribuir causalidade.</p><details><summary>Ver análise · Nível 2</summary><p id="fx-br-context">Histórico cambial em consulta.</p><p>Uma PTAX publicada não representa preço de fechamento do dólar comercial negociável.</p><details><summary>Inteligência Mundo Novo · Nível 3</summary><p>Para importações, comparar a cotação efetivamente negociável com a data do pagamento, o preço em USD, o frete e os custos de internalização. O impacto da moeda depende do prazo e da exposição contratada.</p></details></details></article>
 <article class="fx-card"><div class="fx-label">02 · MALÁSIA E INDONÉSIA — OFERTA GLOBAL</div><h3>Oferta asiática e competitividade</h3><div class="fx-number">3,621 mi t</div><div class="fx-caption">Estoques finais da Malásia · outubro/2026 · MPOB, conforme quadro de oferta existente</div><p>Maior oferta pode favorecer negociações de palma.</p><p><strong>Favorece:</strong> disponibilidade exportável e concorrência entre fornecedores. <strong>Risco:</strong> restrições de oferta, biodiesel mais intenso e frete elevado.</p><p><strong>Acompanhar:</strong> MPOB, GAPKI, preços de palma e soja, USD/MYR, Índia, China e fretes.</p><details><summary>Ver análise · Nível 2</summary><p>Malásia: exportações 1,709 mi t e estoques 3,621 mi t (outubro/2026, MPOB). Indonésia: exportações 3,920 mi t e estoques 2,006 mi t (setembro/2026, GAPKI). Períodos distintos.</p><p>Fontes institucionais: <a href="https://bepi.mpob.gov.my/" target="_blank" rel="noopener noreferrer">MPOB</a> · <a href="https://gapki.id/" target="_blank" rel="noopener noreferrer">GAPKI</a>.</p><details><summary>Inteligência Mundo Novo · Nível 3</summary><p>Uma redução no preço FOB em USD pode melhorar a compra, mas a vantagem precisa ser recalculada com USD/BRL, frete, tributos e prazo. A oferta malaia não determina isoladamente o câmbio brasileiro.</p></details></details></article>
