@@ -247,6 +247,36 @@ a{color:#D4AF37}
   .hero p{font-size:12px}
   .herofoot{margin-top:9px}
 }
+
+/* Card 08 · Galeria contextual de qualificação documental (seis categorias). */
+.qualification-panel{display:flex;flex-direction:column}
+.qualification-option{font:inherit;color:#fff;text-align:left;cursor:pointer;width:100%;display:block}
+.qualification-option b,.qualification-option p{display:block;text-align:left}
+.qualification-option:hover,.qualification-option:focus-visible{border-color:#D4AF37;outline-offset:3px}
+.qualification-option[aria-pressed="true"]{background:#302711;border:1px solid #D4AF37;box-shadow:inset 0 0 0 1px #D4AF3740,0 0 14px #D4AF3725}
+.qualification-option[aria-pressed="true"] b{color:#F2D57C}
+.qualification-visual{margin-top:16px;border:1px solid rgba(255,255,255,.3);border-radius:10px;
+ background:#080808;overflow:hidden;display:flex;flex-direction:column;flex:1;min-height:345px}
+.qualification-visual-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;
+ padding:11px 13px;background:#090909;border-bottom:1px solid #444}
+.qualification-visual-heading h3{margin:0;font-size:13px;letter-spacing:.06em;color:#D4AF37}
+.qualification-visual-heading span{color:#aaa;font-size:10px;font-weight:700;letter-spacing:.09em}
+.qualification-visual-figure{margin:0;display:flex;flex-direction:column;flex:1;min-height:0}
+.qualification-visual-figure>a{display:flex;flex-direction:column;flex:1;min-height:290px;text-decoration:none}
+.qualification-image-frame{position:relative;flex:1;min-height:290px;max-height:530px;background:#151a1b;overflow:hidden}
+.qualification-image-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;
+ transition:opacity .22s ease,transform .34s ease}
+.qualification-image-frame:hover img{transform:scale(1.025)}
+.qualification-image-frame img.is-loading{opacity:.3}
+.qualification-photo-label{position:absolute;bottom:12px;left:12px;color:#f6de97;background:rgba(0,0,0,.82);
+ border:1px solid #a88d41;border-radius:5px;padding:6px 9px;font-size:10px;font-weight:800;letter-spacing:.06em}
+.qualification-visual-figure figcaption{padding:12px 14px 14px;border-top:1px solid #292929;background:#080808}
+.qualification-visual-figure figcaption strong{font-size:13px;color:#fff}
+.qualification-visual-figure figcaption p{font-size:11px;color:#dadada;margin:5px 0}
+.qualification-visual-figure figcaption a{font-size:11px;color:#e2c26f}
+@media(max-width:630px){.qualification-image-frame,.qualification-visual-figure>a{min-height:220px}
+ .qualification-visual{min-height:300px}}
+@media(prefers-reduced-motion:reduce){.qualification-image-frame img{transition:none}}
 </style>
 </head>
 <body>
@@ -341,18 +371,37 @@ a{color:#D4AF37}
   <hr class="section-rule">
   <div class="section-title"><h2>QUALIFICAÇÃO & INTELIGÊNCIA MARÍTIMA</h2><small>Riscos, conformidade e movimentação</small></div>
   <div class="subgrid">
-    <section class="panel">
+    <section class="panel qualification-panel">
       <h2>Matriz documental recomendada</h2>
       <p class="section-note">Checklist comercial e técnico — exigibilidade depende do produto, uso final, cliente, NCM e tratamento administrativo brasileiro.</p>
       <div class="category-list">
-        <div class="check"><b>01 · Homologação & registro</b><p>Questionário do fornecedor; registro da entidade e planta; capacidade; dados de contato interno em sistema restrito.</p></div>
-        <div class="check"><b>02 · Segurança alimentar</b><p>HACCP, FSSC 22000 e controles de processo; conferir escopo específico da unidade.</p></div>
-        <div class="check"><b>03 · Certificações comerciais</b><p>Halal, Kosher, RSPO SCC (modelo MB/SG/IP quando aplicável) e certificação de transporte do embarque.</p></div>
-        <div class="check"><b>04 · Qualidade do produto</b><p>Especificação técnica e COA por lote; acidez, peróxidos, composição e parâmetros contratuais.</p></div>
-        <div class="check"><b>05 · Contaminantes & declarações</b><p>Metais, pesticidas, PAH, dioxinas, microbiologia; alergênicos, OGM, irradiação e origem quando exigidos.</p></div>
-        <div class="check"><b>06 · Segurança & sustentabilidade</b><p>SDS/FISPQ, fluxograma, ISO 9001/14001/45001 e evidências ambientais aplicáveis.</p></div>
+        <button class="check qualification-option" type="button" data-qualification="1" aria-pressed="false" aria-controls="qualificationVisual"><b>01 · Homologação & registro</b><p>Questionário do fornecedor; registro da entidade e planta; capacidade; dados de contato interno em sistema restrito.</p></button>
+        <button class="check qualification-option" type="button" data-qualification="2" aria-pressed="false" aria-controls="qualificationVisual"><b>02 · Segurança alimentar</b><p>HACCP, FSSC 22000 e controles de processo; conferir escopo específico da unidade.</p></button>
+        <button class="check qualification-option" type="button" data-qualification="3" aria-pressed="false" aria-controls="qualificationVisual"><b>03 · Certificações comerciais</b><p>Halal, Kosher, RSPO SCC (modelo MB/SG/IP quando aplicável) e certificação de transporte do embarque.</p></button>
+        <button class="check qualification-option" type="button" data-qualification="4" aria-pressed="false" aria-controls="qualificationVisual"><b>04 · Qualidade do produto</b><p>Especificação técnica e COA por lote; acidez, peróxidos, composição e parâmetros contratuais.</p></button>
+        <button class="check qualification-option" type="button" data-qualification="5" aria-pressed="false" aria-controls="qualificationVisual"><b>05 · Contaminantes & declarações</b><p>Metais, pesticidas, PAH, dioxinas, microbiologia; alergênicos, OGM, irradiação e origem quando exigidos.</p></button>
+        <button class="check qualification-option" type="button" data-qualification="6" aria-pressed="false" aria-controls="qualificationVisual"><b>06 · Segurança & sustentabilidade</b><p>SDS/FISPQ, fluxograma, ISO 9001/14001/45001 e evidências ambientais aplicáveis.</p></button>
       </div>
       <p class="muted">Os laudos COA se referem a amostras/lotes; não devem ser avaliados como certificados com validade anual. Documentos sem data de expiração exigem revisão do escopo e confirmação na fonte emissora.</p>
+      <section class="qualification-visual" id="qualificationVisual" aria-label="Fotografia ilustrativa da categoria documental">
+        <div class="qualification-visual-heading">
+          <h3 id="qualificationVisualHeading">REFERÊNCIA VISUAL · DOCUMENTAÇÃO</h3>
+          <span id="qualificationVisualCounter">VISÃO GERAL</span>
+        </div>
+        <figure class="qualification-visual-figure">
+          <a id="qualificationVisualSource" href="https://pixabay.com/photos/plant-night-view-industrial-pipe-1769429/" target="_blank" rel="noopener noreferrer" title="Abrir a fotografia no Pixabay">
+            <div class="qualification-image-frame">
+              <img id="qualificationVisualImg" alt="Imagem ilustrativa de instalação industrial" loading="eager" decoding="async" referrerpolicy="no-referrer" width="1200" height="750">
+              <span class="qualification-photo-label">IMAGEM ILUSTRATIVA · PIXABAY</span>
+            </div>
+          </a>
+          <figcaption>
+            <strong id="qualificationVisualTitle">Documentação e controle de refinarias</strong>
+            <p id="qualificationVisualDescription">Selecione uma das seis categorias para visualizar uma fotografia relacionada ao tema.</p>
+            <a id="qualificationVisualCredit" href="https://pixabay.com/photos/plant-night-view-industrial-pipe-1769429/" target="_blank" rel="noopener noreferrer">Imagem ilustrativa · Pixabay</a>
+          </figcaption>
+        </figure>
+      </section>
     </section>
     <section class="panel">
       <h2>Inteligência marítima por operação</h2>
@@ -575,6 +624,102 @@ function renderRefineryPhoto(f){
  img.src=photo.src;
 }
 
+
+/* Fotografias ilustrativas licenciadas pelo Pixabay, uma para cada grupo documental.
+   Nenhuma fotografia comprova certificado, processo ou qualidade de uma refinaria concreta. */
+const qualificationFallback={
+ src:"https://cdn.pixabay.com/photo/2016/10/25/17/12/factory-1769429_1280.jpg",
+ source:"https://pixabay.com/photos/plant-night-view-industrial-pipe-1769429/",
+ title:"Documentação e controle de refinarias",
+ description:"Selecione uma das seis categorias para visualizar uma fotografia relacionada ao tema.",
+ credit:"Pixabay · koshinuke_mcfly · licença Pixabay"
+};
+const qualificationPhotos=[
+ {src:"https://cdn.pixabay.com/photo/2015/10/31/21/28/folder-1016290_1280.jpg",
+  source:"https://pixabay.com/photos/folder-paperwork-office-accountant-1016290/",
+  title:"01 · Homologação e registro",
+  description:"Pasta de documentos e carimbo de escritório, ilustrando o controle de homologação de fornecedores.",
+  credit:"Pixabay · cloudhoreca · licença Pixabay"},
+ {src:"https://cdn.pixabay.com/photo/2017/05/29/00/51/microscope-2352650_1280.jpg",
+  source:"https://pixabay.com/photos/microscope-laboratory-tests-science-2352650/",
+  title:"02 · Segurança alimentar",
+  description:"Profissional realizando análise ao microscópio em laboratório; exemplo ilustrativo de controles e ensaios.",
+  credit:"Pixabay · Herney · licença Pixabay"},
+ {src:"https://cdn.pixabay.com/photo/2021/09/04/21/40/paper-6598541_1280.jpg",
+  source:"https://pixabay.com/photos/paper-document-stamp-signature-6598541/",
+  title:"03 · Certificações comerciais",
+  description:"Documento sendo assinado e carimbado, como referência visual para aprovação e certificação.",
+  credit:"Pixabay · naor4040 · licença Pixabay"},
+ {src:"https://cdn.pixabay.com/photo/2023/02/14/04/39/science-7788808_1280.jpg",
+  source:"https://pixabay.com/photos/science-scientist-lab-laboratory-7788808/",
+  title:"04 · Qualidade do produto",
+  description:"Ensaio laboratorial com pipeta e amostras, ilustrando o controle de qualidade dos produtos.",
+  credit:"Pixabay · chaiyananuwatmongkolchai · licença Pixabay"},
+ {src:"https://cdn.pixabay.com/photo/2015/10/27/15/27/laboratory-1009190_1280.jpg",
+  source:"https://pixabay.com/photos/lab-chemistry-subjects-chemical-1009190/",
+  title:"05 · Contaminantes e declarações",
+  description:"Vidrarias de laboratório e amostras usadas como referência visual para análises de substâncias.",
+  credit:"Pixabay · bdyczewski · licença Pixabay"},
+ {src:"https://cdn.pixabay.com/photo/2017/05/10/21/21/energy-2302001_1280.jpg",
+  source:"https://pixabay.com/photos/energy-renewable-energy-solar-energy-2302001/",
+  title:"06 · Segurança e sustentabilidade",
+  description:"Painéis solares e geração eólica como referência visual de práticas ambientais e sustentabilidade.",
+  credit:"Pixabay · adege · licença Pixabay"}
+];
+let qualificationSelection=0,qualificationImageRequest=0;
+function selectQualification(category){
+ const position=Number(category),valid=Number.isInteger(position)&&position>=1&&position<=qualificationPhotos.length;
+ if(!valid)return;
+ qualificationSelection=qualificationSelection===position?0:position;
+ renderQualificationPhoto();
+}
+function renderQualificationPhoto(){
+ const selection=qualificationSelection;
+ const photo=selection?qualificationPhotos[selection-1]:qualificationFallback;
+ const counter=$("qualificationVisualCounter"),img=$("qualificationVisualImg"),link=$("qualificationVisualSource");
+ const request=++qualificationImageRequest;
+ counter.textContent=selection?String(selection).padStart(2,"0")+" / 06":"VISÃO GERAL";
+ $("qualificationVisualHeading").textContent=selection?"REFERÊNCIA VISUAL · "+photo.title:"REFERÊNCIA VISUAL · DOCUMENTAÇÃO";
+ $("qualificationVisualTitle").textContent=photo.title;
+ $("qualificationVisualDescription").textContent=photo.description;
+ $("qualificationVisualCredit").textContent=photo.credit;
+ $("qualificationVisualCredit").href=photo.source;
+ link.href=photo.source;
+ img.alt=photo.description;
+ for(const btn of document.querySelectorAll(".qualification-option")){
+  btn.setAttribute("aria-pressed",String(btn.dataset.qualification===String(selection)));
+ }
+ img.classList.add("is-loading");
+ img.style.visibility="visible";
+ img.dataset.usedFallback="false";
+ img.onerror=()=>{
+  if(request!==qualificationImageRequest)return;
+  if(img.dataset.usedFallback==="true"){
+   img.classList.remove("is-loading");
+   img.style.visibility="hidden";
+   $("qualificationVisualDescription").textContent="Imagem indisponível no momento. Clique no crédito para consultar a fonte.";
+   return;
+  }
+  img.dataset.usedFallback="true";
+  img.alt="Instalação industrial genérica · Pixabay";
+  img.src=qualificationFallback.src;
+  $("qualificationVisualDescription").textContent="Imagem selecionada indisponível; exibindo fotografia industrial ilustrativa do Pixabay.";
+  $("qualificationVisualCredit").textContent=qualificationFallback.credit;
+  $("qualificationVisualCredit").href=qualificationFallback.source;
+  link.href=qualificationFallback.source;
+ };
+ img.onload=()=>{if(request===qualificationImageRequest){img.classList.remove("is-loading");img.style.visibility="visible";}};
+ img.src=photo.src;
+}
+function setupQualificationGallery(){
+ const buttons=[...document.querySelectorAll(".qualification-option")];
+ if(buttons.length!==6)throw new Error("Não foi possível inicializar a galeria documental.");
+ for(const btn of buttons){
+  btn.addEventListener("click",()=>selectQualification(btn.dataset.qualification));
+ }
+ renderQualificationPhoto();
+}
+
 function renderDetail(){
  const f=byId[selectedUnit()],target=$("detailRows"),tags=$("detailTags"),google=$("googleCity");
  target.replaceChildren();tags.replaceChildren();
@@ -786,7 +931,7 @@ for(const [id,style] of [["modeDark","fiord"],["modeLight","liberty"]]){
   for(const button of $("modeDark").parentElement.querySelectorAll("button")){button.classList.toggle("active",button.id===id);button.setAttribute("aria-pressed",String(button.id===id));}
  });
 }
-renderDocOptions();renderMap();renderAll();loadBrazilMaritime();loadPublicCatalog();
+setupQualificationGallery();renderDocOptions();renderMap();renderAll();loadBrazilMaritime();loadPublicCatalog();
 </script>
 </body>
 </html>
