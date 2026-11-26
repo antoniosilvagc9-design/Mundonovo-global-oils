@@ -875,10 +875,21 @@ function chart(rows,unit){const el=node('div','','mt-chart');el.style.cssText='w
       date:latest.date, source:'Yahoo Finance · indicativo', unit:'US¢/bu'
     });
   }
+  const palm=cache.cpo?.latest?.selected;
+  if(!indices.length && Number.isFinite(palm?.settlement_myr_per_tonne) && palm.date){
+    entries.push({
+      name:'Óleo de palma · FCPO', price:palm.settlement_myr_per_tonne,
+      change:palm.previous_myr_per_tonne?(palm.settlement_myr_per_tonne/palm.previous_myr_per_tonne-1)*100:null,
+      date:palm.date, source:'Bursa Malaysia', unit:'MYR/t'
+    });
+  }
   strip.textContent='';
+  if(!entries.length){
+    strip.appendChild(node('small','Sem fechamentos disponíveis no momento','mt-small'));
+    return;
+  }
   const track=node('div','','mt-tv-quotes-track');
   const group=node('div','','mt-tv-quotes-group');
-  if(!indices.length)group.appendChild(node('small','Fechamentos das bolsas indisponíveis','mt-small'));
   for(const quote of entries){
     const item=node('div','','mt-tv-quote');
     item.appendChild(node('strong',quote.name));
