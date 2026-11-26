@@ -1392,7 +1392,7 @@ function renderMarketNews(){
  /* Imagens temáticas Pixabay vêm do JSON; nenhuma chave de API é enviada ao navegador. */
  const news21Image=n=>{
   const url=n.image&&n.image.url;
-  return typeof url==="string"&&/^https:\/\//.test(url)?url:"";
+  return typeof url==="string"&&(/^https:\/\//.test(url)||/^\.\/data\/news-images\/[a-f0-9]{24}\.jpg$/.test(url))?url:"";
  };
  const card=(n,i)=>{
   const link=original(n),photo=news21Image(n),context=n.context_confirmed||"O conteúdo integral ainda não foi verificado; a manchete e a fonte são metadados do feed.";
