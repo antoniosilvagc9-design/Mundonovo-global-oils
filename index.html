@@ -831,15 +831,8 @@ body[data-portal-page="intelligence"] #mn-tv #global-market-ticker{display:block
 #mn-tv #mt-news-secondary img{flex-shrink:1;min-height:0}
 #mn-tv .mt-news-slot .mn-supply-copy>h3,
 #mn-tv .mt-news-slot .mt-card>.mt-news{margin-bottom:clamp(3px,.5vw,8px)}#mn-tv .mt-slot .mn-image-credit,
-#mn-tv .mt-slot .mn-supply-copy>label{display:none}#mn-tv .mt-slot .mt-chart{flex:1;min-height:65px;height:auto}#mn-tv:not(:fullscreen){min-height:780px}body.mn-tv-mode #mn-tv{min-height:0}#mn-tv:fullscreen .mt-four,body.mn-tv-mode #mn-tv .mt-four{overflow:hidden}#mn-tv .mt-slot .tradingview-widget-container__widget{height:calc(100% - 22px)}#mn-tv .mt-slot .tradingview-widget-copyright{font-size:11px} #mn-tv,#mn-tv .mt-four>section{background:#080808!important}#mn-tv .mt-four>section{border-color:#282828!important}#mn-tv .mt-foot,#mn-tv .mt-ticker{background:#080808!important}#mn-tv .mt-slot .tradingview-widget-container{background:#080808;border-radius:6px;overflow:hidden;min-height:120px}#mn-tv .mt-slot .tradingview-widget-container__widget{min-height:100px}#mn-tv .mt-four>section>h3{color:#B6FF00!important}#mn-tv .mt-four>section>.mt-slot>.mt-card{background:linear-gradient(135deg,#121109,#29230f);transition:background .25s ease,box-shadow .25s ease,border-color .25s ease;border-color:#655326}#mn-tv .mt-four>section:hover>.mt-slot>.mt-card,#mn-tv .mt-four>section:focus-within>.mt-slot>.mt-card{background:linear-gradient(135deg,#29230f,#55451a);border-color:#D4AF37;box-shadow:inset 0 0 28px rgba(212,175,55,.24),0 0 12px rgba(212,175,55,.16)}</style><section id="mn-tv"><div class="mt-head"><div><h3>GLOBAL MARKET INTELLIGENCE</h3></div><div><button id="mt-full">ATIVAR MODO TV</button> <button id="mt-pause">Pausar</button> <button id="mt-ticker-toggle" type="button" aria-pressed="false">Usar fechamentos</button></div></div><div class="mt-progress"><i id="mt-progress"></i></div><div class="mt-four"><section><h3>01 · NOTÍCIAS E ACONTECIMENTOS</h3><div id="mt-news" class="mt-slot mt-news-slot"></div></section><section><h3>02 · BOLSAS DE VALORES</h3><div id="mt-fin" class="mt-slot"></div></section><section><h3>03 · COTAÇÕES INTERNACIONAIS</h3><div id="mt-supply" class="mt-slot"></div></section><section><h3>04 · MAIORES IMPACTOS NA ECONOMIA</h3><div id="mt-news-secondary" class="mt-slot mt-news-slot"></div></section></div><div class="mt-foot"><div id="mt-state" class="mt-small">Carregando fontes…</div><div id="mt-nav"></div></div><div id="mt-market-ticker" class="mt-ticker"></div><div id="mt-tv-quotes" class="mt-tv-quotes" aria-label="Fechamentos de mercado">Carregando fechamentos…</div></section><script>
-(()=>{if(new URLSearchParams(location.search).get('page')!=='intelligence')return;const $=id=>document.getElementById(id),root=$('mn-tv'),panels=[...root.querySelectorAll('.mt-panel')];const marketTicker=$('global-market-ticker');
-if(marketTicker)$('mt-market-ticker').appendChild(marketTicker);
-const tickerToggle=$('mt-ticker-toggle');
-tickerToggle.onclick=()=>{
-  const local=root.classList.toggle('mt-local-quotes');
-  tickerToggle.setAttribute('aria-pressed',String(local));
-  tickerToggle.textContent=local?'Usar TradingView':'Usar fechamentos';
-};
+#mn-tv .mt-slot .mn-supply-copy>label{display:none}#mn-tv .mt-slot .mt-chart{flex:1;min-height:65px;height:auto}#mn-tv:not(:fullscreen){min-height:780px}body.mn-tv-mode #mn-tv{min-height:0}#mn-tv:fullscreen .mt-four,body.mn-tv-mode #mn-tv .mt-four{overflow:hidden}#mn-tv .mt-slot .tradingview-widget-container__widget{height:calc(100% - 22px)}#mn-tv .mt-slot .tradingview-widget-copyright{font-size:11px} #mn-tv,#mn-tv .mt-four>section{background:#080808!important}#mn-tv .mt-four>section{border-color:#282828!important}#mn-tv .mt-foot,#mn-tv .mt-ticker{background:#080808!important}#mn-tv .mt-slot .tradingview-widget-container{background:#080808;border-radius:6px;overflow:hidden;min-height:120px}#mn-tv .mt-slot .tradingview-widget-container__widget{min-height:100px}#mn-tv .mt-four>section>h3{color:#B6FF00!important}#mn-tv .mt-four>section>.mt-slot>.mt-card{background:linear-gradient(135deg,#121109,#29230f);transition:background .25s ease,box-shadow .25s ease,border-color .25s ease;border-color:#655326}#mn-tv .mt-four>section:hover>.mt-slot>.mt-card,#mn-tv .mt-four>section:focus-within>.mt-slot>.mt-card{background:linear-gradient(135deg,#29230f,#55451a);border-color:#D4AF37;box-shadow:inset 0 0 28px rgba(212,175,55,.24),0 0 12px rgba(212,175,55,.16)}#mn-tv .mt-tv-quotes{flex:none;padding:5px 0 0}#mn-tv .mt-footer-title{display:block;color:#b6ff00;font-size:clamp(11px,1vw,16px);margin-bottom:4px}#mn-tv .mt-tv-quotes-group{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));min-width:0;gap:4px;padding:0;white-space:normal}#mn-tv .mt-tv-quote{display:flex;gap:2px 6px;padding:4px 7px;border-left:1px solid #655326;line-height:1.15;font-size:clamp(10px,.95vw,15px)}#mn-tv .mt-tv-quote strong{width:100%;color:#b6ff00}#mn-tv .mt-tv-quote small{width:100%;font-size:.8em}@media(max-width:700px){#mn-tv .mt-tv-quotes-group{grid-template-columns:repeat(3,minmax(0,1fr))}}</style><section id="mn-tv"><div class="mt-head"><div><h3>GLOBAL MARKET INTELLIGENCE</h3></div><div><button id="mt-full">ATIVAR MODO TV</button> <button id="mt-pause">Pausar</button></div></div><div class="mt-progress"><i id="mt-progress"></i></div><div class="mt-four"><section><h3>01 · NOTÍCIAS E ACONTECIMENTOS</h3><div id="mt-news" class="mt-slot mt-news-slot"></div></section><section><h3>02 · BOLSAS DE VALORES</h3><div id="mt-fin" class="mt-slot"></div></section><section><h3>03 · COTAÇÕES INTERNACIONAIS</h3><div id="mt-supply" class="mt-slot"></div></section><section><h3>04 · MAIORES IMPACTOS NA ECONOMIA</h3><div id="mt-news-secondary" class="mt-slot mt-news-slot"></div></section></div><div class="mt-foot"><div id="mt-state" class="mt-small">Carregando fontes…</div><div id="mt-nav"></div></div><div id="mt-market-ticker" class="mt-ticker"></div><div id="mt-tv-quotes" class="mt-tv-quotes" aria-label="Fechamentos de mercado">Carregando fechamentos…</div></section><script>
+(()=>{if(new URLSearchParams(location.search).get('page')!=='intelligence')return;const $=id=>document.getElementById(id),root=$('mn-tv'),panels=[...root.querySelectorAll('.mt-panel')];root.classList.add('mt-local-quotes');
 let current=0,start=performance.now(),paused=false,elapsed=0,cache={},loading=false;const fmt=(n,d=2)=>typeof n==='number'&&Number.isFinite(n)?n.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d}):'—';function node(tag,t,cls){const e=document.createElement(tag);e.textContent=t||'';if(cls)e.className=cls;return e}function card(title,value,details){const e=node('article','','mt-card');e.append(node('h3',title));if(value)e.append(node('div',value,'mt-value'));for(const t of details||[])e.append(node('p',t,'mt-small'));return e}function drawHistory(el,data,unit){
   const namespace='http://www.w3.org/2000/svg';
   const svg=document.createElementNS(namespace,'svg');
@@ -933,56 +926,30 @@ function chart(rows,unit){const el=node('div','','mt-chart');el.style.cssText='w
 function render(){
   const c=cache.cpo?.latest?.selected;
   rotations[1]=[['S&P 500 · referência CFD','FOREXCOM:SPXUSD'],['Ibovespa','BMFBOVESPA:IBOV'],['Índia · ETF INDA','AMEX:INDA'],['Japão · referência CFD','FOREXCOM:JPXJPY'],['Shanghai Composite','SSE:000001'],['Euronext 100','EURONEXT:N100']].map(([t,s])=>()=>tvCard(t,s,'Mercado internacional · referência conforme símbolo'));rotations[2]=[()=>metric('Óleo de palma · FCPO',(cache.cpo?.observations||[]).map(x=>({date:x.date,value:x.selected?.settlement_myr_per_tonne})),'MYR/t','Bursa Malaysia · ajuste oficial · contrato '+(c?.contract_month||'—')),()=>tvCard('Petróleo WTI · EUA','TVC:USOIL','USD/barril · referência de mercado'),()=>tvCard('Petróleo Brent','TVC:UKOIL','USD/barril · referência de mercado, distinta do spot EIA'),()=>metric('Soja · CBOT',cache.soy?.last_three||[],'US¢/bu','Yahoo Finance · fechamento diário indicativo'),()=>metric('Óleo de soja',(cache.oil?.history||[]).map(x=>({date:x.period_end,value:x.price})),'US¢/lb','USDA AMS · semanal')];displaySlots();}function renderTvQuotes(){
-  const strip=$('mt-tv-quotes');
-  const indices=(cache.indices?.quotes||[]).filter(quote=>
-    quote.data_status==='daily_close' && quote.index_name &&
-    Number.isFinite(quote.price) && quote.as_of
-  ).map(quote=>({
-    name:quote.index_name, price:quote.price, change:quote.change_percent,
-    date:quote.as_of.slice(0,10), source:quote.source
-  }));
-  const soy=(cache.soy?.last_three||[]).filter(point=>Number.isFinite(point.value));
-  const latest=soy[soy.length-1], previous=soy[soy.length-2];
-  const entries=indices.slice();
-  if(!indices.length && latest){
-    entries.push({
-      name:'Soja · CBOT', price:latest.value,
-      change:previous?.value?(latest.value/previous.value-1)*100:null,
-      date:latest.date, source:'Yahoo Finance · indicativo', unit:'US¢/bu'
-    });
-  }
-  const palm=cache.cpo?.latest?.selected;
-  if(!indices.length && Number.isFinite(palm?.settlement_myr_per_tonne) && palm.date){
-    entries.push({
-      name:'Óleo de palma · FCPO', price:palm.settlement_myr_per_tonne,
-      change:palm.previous_myr_per_tonne?(palm.settlement_myr_per_tonne/palm.previous_myr_per_tonne-1)*100:null,
-      date:palm.date, source:'Bursa Malaysia', unit:'MYR/t'
-    });
-  }
-  strip.textContent='';
-  if(!entries.length){
-    strip.appendChild(node('small','Sem fechamentos disponíveis no momento','mt-small'));
-    return;
-  }
-  const track=node('div','','mt-tv-quotes-track');
-  const group=node('div','','mt-tv-quotes-group');
-  for(const quote of entries){
-    const item=node('div','','mt-tv-quote');
-    item.appendChild(node('strong',quote.name));
-    item.appendChild(node('span',fmt(quote.price)+' '+(quote.unit||'pts')));
-    if(Number.isFinite(quote.change)){
-      const sign=quote.change>0?'+':'';
-      const color=quote.change>0?'up':quote.change<0?'down':'';
-      item.appendChild(node('span',sign+fmt(quote.change)+'%',color));
-    }
-    item.appendChild(node('small',[quote.date,quote.source].filter(Boolean).join(' · ')));
-    group.appendChild(item);
-  }
-  track.appendChild(group);
-  const repeat=group.cloneNode(true);
-  repeat.setAttribute('aria-hidden','true');
-  track.appendChild(repeat);
-  strip.appendChild(track);
+ const strip=$('mt-tv-quotes');
+ const entries=[];
+ function add(name,rows,unit,source,precision=2){
+ const valid=rows.filter(x=>Number.isFinite(x.value)&&x.value>0);
+ const last=valid[valid.length-1],prev=valid[valid.length-2];
+ entries.push({name,price:last?.value,change:prev?(last.value/prev.value-1)*100:null,date:last?.date||last?.time,unit,source,precision});
+ }
+ const p=cache.cpo?.latest?.selected;
+ add('Palma · FCPO',[{value:p?.previous_myr_per_tonne},{value:p?.settlement_myr_per_tonne,date:p?.date}], 'MYR/t','Bursa Malaysia');
+ add('Óleo de soja · USDA semanal',(cache.oil?.history||[]).map(x=>({date:x.period_end,value:x.price})),'US¢/lb','USDA AMS');
+ add('Soja · CBOT',cache.soy?.last_three||[],'US¢/bu','Yahoo Finance · indicativo');
+ add('Brent · spot',cache.brent?.last_three||[],'USD/barril','EIA/FRED');
+ add('Dólar · PTAX',cache.fx?.points||[],'BRL/USD','BCB',4);
+ strip.replaceChildren(node('strong','COTAÇÕES INTERNACIONAIS','mt-footer-title'));
+ const group=node('div','','mt-tv-quotes-group');
+ for(const q of entries){
+ const item=node('div','','mt-tv-quote');
+ item.append(node('strong',q.name),node('span',Number.isFinite(q.price)?fmt(q.price,q.precision)+' '+q.unit:'Indisponível'));
+ if(Number.isFinite(q.change))item.append(node('span',(q.change>0?'+':'')+fmt(q.change)+'%',q.change>0?'up':q.change<0?'down':''));
+ item.append(node('small',q.date?q.date.slice(0,10):'Sem dado'));
+ item.title=q.source;
+ group.append(item);
+ }
+ strip.append(group);
 }
 function loadTvSource(path){
   return new Promise((resolve,reject)=>{
@@ -1000,7 +967,7 @@ function loadTvSource(path){
 async function refresh(){
   if(loading)return;
   loading=true;
-  const sources={cpo:'cpo-history',news:'market-news',oil:'usda-soybean-oil',soy:'soybean-history',indices:'global-market-ticker',edition:'economic-impact-edition',contextImages:'supply-demand/images/manifest'};
+  const sources={cpo:'cpo-history',news:'market-news',oil:'usda-soybean-oil',soy:'soybean-history',brent:'brent-history',fx:'usd-brl-history',edition:'economic-impact-edition',contextImages:'supply-demand/images/manifest'};
   let ok=0;
   try{
     await Promise.all(Object.entries(sources).map(async ([key,path])=>{
