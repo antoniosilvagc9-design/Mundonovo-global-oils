@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Mundo Novo Trade | Inteligência de Refinarias</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{--bg:#080a0d;--panel:#14191e;--panel2:#1a2026;--edge:#323a42;--slate:#95A2AA;--wine:#6B033B;--gold:#d6b348;--fg:#f5f6f7;--soft:#acb6bf;--lime:#b7ef58;--warn:#f5c26a;--bad:#ff918c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 "Segoe UI",Arial,sans-serif}a{color:var(--gold)}button,input,select{font:inherit}button{cursor:pointer}.page{max-width:1700px;margin:0 auto;padding:22px clamp(14px,3vw,42px) 55px}
+.topline{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:14px}.topline a{text-decoration:none;font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.mark{font-weight:900;color:var(--slate);letter-spacing:.18em}.mark span{color:#a30058}
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 76% 20%,#3d283a 0,transparent 37%),linear-gradient(120deg,#181c20,#0d1218 65%);border:1px solid #554b40;border-radius:18px;padding:38px 34px 36px}.hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid #95a2aa23;border-radius:50%;right:-80px;top:-280px;box-shadow:0 0 0 54px #95a2aa09,0 0 0 108px #95a2aa08;pointer-events:none}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:.22em;font-weight:800}.hero h1{font-size:clamp(29px,3.4vw,51px);letter-spacing:-.035em;margin:12px 0 9px;line-height:1.08}.hero p{color:#c5ced5;max-width:930px;margin:0}.herofoot{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.tag{border:1px solid #6d7781;border-radius:30px;padding:7px 12px;font-size:11px;letter-spacing:.055em;text-transform:uppercase;color:#d4dbe0}.tag.wine{border-color:#a34b78;color:#e9b8cf}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}.kpi{border:1px solid var(--edge);border-radius:12px;background:var(--panel);padding:20px;min-height:104px}.kpi .n{font-size:clamp(24px,2.5vw,38px);font-weight:900;color:var(--fg);line-height:1}.kpi p{color:var(--soft);margin:8px 0 0;font-size:12px}.kpi .n.gold{color:var(--gold)}.kpi .n.red{color:var(--bad)}
+.hint{border-left:3px solid var(--slate);background:#151c22;border-radius:0 8px 8px 0;padding:13px 17px;color:#c0cad2;font-size:13px;margin:15px 0}.hint strong{color:#fff}
+.grid{display:grid;grid-template-columns:minmax(360px,1.25fr) minmax(310px,1fr);gap:16px;align-items:start}.panel{border:1px solid var(--edge);background:var(--panel);border-radius:13px;padding:18px;min-width:0}.panel h2{font-size:20px;margin:0 0 8px;line-height:1.2}.panel p.muted,.muted{color:var(--soft);font-size:13px}.panel .section-note{font-size:11px;color:#9ba9b3;margin:4px 0 16px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.field{flex:1;min-width:180px;display:flex;flex-direction:column;gap:5px;font-weight:700;font-size:12px;color:#bbc6cc}.field input,.field select{padding:12px;background:#0b0f12;color:#fff;border:1px solid #505a62;border-radius:7px;min-height:43px}.field input:focus,.field select:focus{outline:2px solid var(--gold);outline-offset:1px}
+#map{height:420px;border-radius:10px;border:1px solid #343b42;background:linear-gradient(150deg,#141f26,#121a22);position:relative;z-index:0}.map-fallback{color:#b5c1ca;font-size:13px;padding:24px}.leaflet-container{font-family:"Segoe UI",Arial,sans-serif}.leaflet-popup-content-wrapper{background:#1b2229;color:#fff}.leaflet-popup-tip{background:#1b2229}.leaflet-popup-content{margin:10px 13px}.leaflet-control-attribution{font-size:9px!important}
+.fac-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:14px}.fac{border:1px solid #3e484f;background:#10151a;color:#eff3f6;border-radius:9px;padding:11px;text-align:left;transition:.18s;min-height:83px}.fac:hover,.fac:focus-visible{border-color:var(--gold)}.fac.selected{border-color:var(--gold);background:#3c321e}.fac b{display:block;font-size:12px;line-height:1.3}.fac span{display:block;margin-top:5px;color:#a8b5be;font-size:11px}
+.fact-title{font-size:24px;font-weight:850;line-height:1.15;margin:13px 0 8px}.fact-row{display:flex;justify-content:space-between;gap:10px;margin:8px 0;padding-bottom:8px;border-bottom:1px solid #2c353d;font-size:13px}.fact-row span{color:#aab8c2;text-align:right}.pills{display:flex;gap:6px;flex-wrap:wrap}.pill{background:#272e34;color:#d8e0e5;border-radius:20px;font-size:11px;padding:5px 10px}.cta{display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;background:var(--wine);border:1px solid #a85580;border-radius:7px;color:#fff;text-decoration:none;font-size:12px;font-weight:800;transition:.2s}.cta:hover{filter:brightness(1.25)}.cta.alt{background:transparent;border-color:#777;color:#e8edf0}
+.subgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:16px}.category-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}.check{background:#0b1014;border:1px solid #313b44;border-radius:9px;padding:12px;min-height:96px}.check b{font-size:13px}.check p{font-size:12px;color:#a6b4be;margin:5px 0 0}.check em{font-style:normal;color:#dbbc65;font-size:11px;font-weight:700}.maritime-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.step{background:#0c1115;border:1px solid #303941;border-radius:10px;padding:12px}.step strong{font-size:12px}.step small{display:block;color:#9dabb6;margin-top:5px}.private{margin-top:16px}.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0}.file-button{display:inline-flex;align-items:center;background:#33261a;color:#ffe9a8;border:1px solid #9d7a36;border-radius:8px;padding:11px 17px;font-weight:800;cursor:pointer}.file-button:hover{filter:brightness(1.12)}#inventoryFile{display:none}.action-btn{padding:11px 17px;border-radius:8px;border:1px solid #59636b;background:transparent;color:#e9eef0}.action-btn:disabled{opacity:.5;cursor:not-allowed}.inventory-status{color:#c7d0d7;font-size:12px}.table-wrap{overflow:auto;max-height:480px;border:1px solid #343e46;border-radius:9px}.table{border-collapse:collapse;width:100%;font-size:12px;min-width:780px}.table th,.table td{padding:11px 12px;border-bottom:1px solid #333d44;text-align:left}.table th{position:sticky;top:0;background:#252f38;color:#f1f6f8;z-index:2}.table tr:nth-child(even){background:#192027}.table tr:hover{background:#29313a}.status{font-size:11px;font-weight:800;border-radius:20px;padding:4px 8px;white-space:nowrap;display:inline-block}.status.expired{color:#ffd0cc;background:#772d34}.status.warning{color:#ffddb1;background:#5e452a}.status.valid{color:#caeec8;background:#264633}.status.unknown{color:#c9d1d6;background:#3a444b}.none{color:#adbac5;font-style:italic}
+.footer{font-size:11px;color:#8e9ba5;padding:25px 0;display:flex;gap:12px;flex-wrap:wrap}.footer a{color:#cbb77a}
+@media(max-width:1040px){.grid,.subgrid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}@media(max-width:630px){.page{padding:12px}.hero{padding:24px 20px}.fac-list,.category-list,.maritime-steps{grid-template-columns:1fr}.kpis{gap:8px}.kpi{padding:13px;min-height:91px}.panel{padding:14px}#map{height:330px}}
+@media(prefers-reduced-motion:reduce){.fac,.cta{transition:none}}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="topline"><a href="./">← CENTRAL DE INTELIGÊNCIA</a><div class="mark">MUNDO<span>NOVO</span> TRADE · 08</div></div>
+  <header class="hero">
+    <div class="eyebrow">08 / INTELIGÊNCIA DE FORNECIMENTO</div>
+    <h1>Inteligência de Refinarias</h1>
+    <p>Visão geográfica das unidades de processamento de óleos vegetais, matriz de qualificação documental e rastreabilidade logística do embarque à chegada ao Brasil.</p>
+    <div class="herofoot"><span class="tag">Origem · Indonésia</span><span class="tag">8 unidades identificadas</span><span class="tag wine">Controle documental por unidade e produto</span></div>
+  </header>
+
+  <div class="kpis" aria-label="Indicadores das refinarias">
+    <article class="kpi"><div class="n" id="kpiUnits">8</div><p>Unidades industriais identificadas</p></article>
+    <article class="kpi"><div class="n">7</div><p>Grupos empresariais no levantamento</p></article>
+    <article class="kpi"><div class="n gold" id="kpiWarn">—</div><p>Documentos com vencimento em até 90 dias*</p></article>
+    <article class="kpi"><div class="n red" id="kpiExpired">—</div><p>Documentos com data vencida no inventário*</p></article>
+  </div>
+  <div class="hint"><strong>Privacidade:</strong> os PDFs e questionários de homologação não são disponibilizados neste site. As datas e os nomes dos arquivos só aparecem após importar o inventário JSON no próprio navegador. *Os indicadores dependem desse arquivo e não representam homologação oficial.</div>
+
+  <div class="grid">
+    <section class="panel">
+      <h2>Mapa de unidades industriais</h2>
+      <p class="section-note">Pontos aproximados das cidades, não coordenadas exatas das plantas ou de seus terminais.</p>
+      <div class="toolbar">
+        <label class="field">Localizar refinaria<input type="search" id="search" placeholder="Empresa, cidade ou unidade"></label>
+        <label class="field">Região<select id="region"><option value="">Todas as regiões</option><option>Sumatra do Norte</option><option>Sumatra Ocidental</option><option>Riau</option><option>Ilhas Riau</option><option>Lampung</option><option>Kalimantan do Sul</option><option>Sulawesi do Norte</option></select></label>
+      </div>
+      <div id="map" role="region" aria-label="Mapa de cidades das refinarias"><div class="map-fallback">Carregando mapa geográfico…</div></div>
+      <div class="fac-list" id="facList" aria-label="Selecionar refinaria"></div>
+    </section>
+    <section class="panel" id="facilityDetail">
+      <h2>Perfil da refinaria</h2>
+      <p class="muted">Selecione uma unidade no mapa ou na lista para consultar localização, escopo e situação documental do inventário.</p>
+      <div class="fact-title" id="detailName"></div>
+      <div id="detailRows"></div>
+      <div class="pills" id="detailTags"></div>
+      <div id="detailDocs" class="hint"></div>
+      <div class="actions"><a class="cta" href="logistica.html">Ver inteligência marítima do Brasil</a><a class="cta alt" href="https://rspo.org/" target="_blank" rel="noopener">RSPO</a></div>
+      <h2 style="margin-top:28px">Homologação orientada por risco</h2>
+      <p class="muted">A presença de um certificado não é suficiente: conferir titular, unidade, produto, escopo, organismo emissor, validade e condições específicas do transporte.</p>
+      <div id="scopeHint" class="hint">Uma empresa pode possuir certificações com escopos diferentes entre suas instalações.</div>
+    </section>
+  </div>
+
+  <div class="subgrid">
+    <section class="panel">
+      <h2>Matriz documental recomendada</h2>
+      <p class="section-note">Checklist comercial e técnico — exigibilidade depende do produto, uso final, cliente, NCM e tratamento administrativo brasileiro.</p>
+      <div class="category-list">
+        <div class="check"><b>01 · Homologação & registro</b><p>Questionário do fornecedor; registro da entidade e planta; capacidade; dados de contato interno em sistema restrito.</p></div>
+        <div class="check"><b>02 · Segurança alimentar</b><p>HACCP, FSSC 22000 e controles de processo; conferir escopo específico da unidade.</p></div>
+        <div class="check"><b>03 · Certificações comerciais</b><p>Halal, Kosher, RSPO SCC (modelo MB/SG/IP quando aplicável) e certificação de transporte do embarque.</p></div>
+        <div class="check"><b>04 · Qualidade do produto</b><p>Especificação técnica e COA por lote; acidez, peróxidos, composição e parâmetros contratuais.</p></div>
+        <div class="check"><b>05 · Contaminantes & declarações</b><p>Metais, pesticidas, PAH, dioxinas, microbiologia; alergênicos, OGM, irradiação e origem quando exigidos.</p></div>
+        <div class="check"><b>06 · Segurança & sustentabilidade</b><p>SDS/FISPQ, fluxograma, ISO 9001/14001/45001 e evidências ambientais aplicáveis.</p></div>
+      </div>
+      <p class="muted">Os laudos COA se referem a amostras/lotes; não devem ser avaliados como certificados com validade anual. Documentos sem data de expiração exigem revisão do escopo e confirmação na fonte emissora.</p>
+    </section>
+    <section class="panel">
+      <h2>Inteligência marítima por operação</h2>
+      <p class="section-note">Campos operacionais a estruturar com o ERP, contratos, agente marítimo e fontes verificadas. Nenhuma rota ou ETA é presumida.</p>
+      <div class="maritime-steps">
+        <div class="step"><strong>01 · Origem e embarque</strong><small>Refinaria, porto efetivo de carregamento, operador do terminal, tanques e lote</small></div>
+        <div class="step"><strong>02 · Produto e contrato</strong><small>PO, PS, PKO, PKS; toneladas; Incoterm, laycan e vendedor contratual</small></div>
+        <div class="step"><strong>03 · Navio e viagem</strong><small>Nome, IMO, armador, afretamento, ETD, ETA, posição e porto de destino</small></div>
+        <div class="step"><strong>04 · Documentos de carga</strong><small>Bill of Lading, invoice, packing/weight list, origem e COA do lote</small></div>
+        <div class="step"><strong>05 · Qualidade do transporte</strong><small>Histórico de cargas, limpeza dos tanques, inspeção, amostragem e certificados aplicáveis</small></div>
+        <div class="step"><strong>06 · Desembarque Brasil</strong><small>Porto/terminal, previsão de atracação, estadia, custos e cumprimento do contrato</small></div>
+      </div>
+      <div class="hint"><strong>Integração futura:</strong> relacionar cada contrato do Maxys ao fornecedor, navio, porto de origem, status documental e evento da Cattalini, sem afirmar que qualquer navio listado pertence a determinada refinaria.</div>
+    </section>
+  </div>
+
+  <section class="panel private" id="privateDocs">
+    <h2>Validade de documentos · inventário privado</h2>
+    <p class="muted">Faça upload do arquivo <strong>Refinarias_inventario_privado_2026-11-26.json</strong>, gerado a partir dos PDFs enviados. O arquivo é lido localmente, não é enviado ao GitHub, ao Supabase nem a APIs externas. Dados não permanecem após fechar/recarregar a página.</p>
+    <div class="actions">
+      <label class="file-button" for="inventoryFile">Carregar inventário privado (.json)</label>
+      <input id="inventoryFile" type="file" accept=".json,application/json">
+      <button type="button" id="exportCSV" class="action-btn" disabled>Exportar conferência CSV</button>
+      <button type="button" id="clearDocs" class="action-btn" disabled>Limpar dados carregados</button>
+      <span id="inventoryStatus" class="inventory-status" role="status">Nenhum inventário privado carregado.</span>
+    </div>
+    <div class="toolbar">
+      <label class="field">Unidade<select id="docUnit"><option value="">Todas as unidades</option></select></label>
+      <label class="field">Tipo de documento<select id="docType"><option value="">Todos os tipos</option></select></label>
+      <label class="field">Vencimento<select id="docStatus"><option value="">Todos os estados</option><option value="expired">Vencido na cópia</option><option value="warning">Até 90 dias</option><option value="valid">Prazo superior a 90 dias</option><option value="unknown">Data não confirmada</option></select></label>
+    </div>
+    <div class="table-wrap"><table class="table"><thead><tr><th>Refinaria</th><th>Documento</th><th>Tipo</th><th>Validade extraída</th><th>Controle</th></tr></thead><tbody id="docsBody"><tr><td colspan="5" class="none">Carregue seu inventário privado para consultar os documentos.</td></tr></tbody></table></div>
+    <p class="muted">Legenda: “vencido na cópia” significa apenas que o documento enviado apresenta data passada; não confirma ausência de renovação. “Data não confirmada” não equivale a validade permanente. A autenticidade deve ser conferida nos emissores oficiais.</p>
+  </section>
+  <footer class="footer">
+    <span>Fontes normativas e de validação:</span>
+    <a href="https://www.fssc.com/public-register/" target="_blank" rel="noopener">Registro FSSC</a>
+    <a href="https://rspo.org/upgraded-rspo-search-engine/" target="_blank" rel="noopener">Pesquisa RSPO</a>
+    <a href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/importacao" target="_blank" rel="noopener">MAPA</a>
+    <a href="https://www.gov.br/anvisa/pt-br/assuntos/paf/anuencia/controle-administrativo-anvisa-no-comercio-exterior/importacao-de-produtos/informacoes-gerais/" target="_blank" rel="noopener">Anvisa</a>
+    <a href="https://www.imo.org/en/ourwork/facilitation/pages/declarationscertificates-default.aspx" target="_blank" rel="noopener">IMO/FAL</a>
+    <span>· Versão inicial · cidades, não endereços exatos</span>
+  </footer>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+"use strict";
+// Cadastro geográfico resumido a partir das instalações citadas nos documentos recebidos.
+// Coordenadas aproximadas das CIDADES: nunca representar como localização exata da fábrica.
+const facilities=[
+{id:"amr",name:"PT Agro Makmur Raya",unit:"Bitung",city:"Bitung",region:"Sulawesi do Norte",lat:1.44722,lng:125.19778,scope:["PO","PKO","PS"],note:"Confirmar escopo do certificado vigente por produto."},
+{id:"ibp-dumai",name:"PT Intibenua Perkasatama",unit:"Dumai",city:"Dumai",region:"Riau",lat:1.64757,lng:101.43834,scope:["PO","PS"],note:"Distinguir os documentos da unidade Dumai dos de Lubuk Gaung."},
+{id:"ibp-lg",name:"PT Intibenua Perkasatama",unit:"Lubuk Gaung",city:"Dumai",region:"Riau",lat:1.64757,lng:101.43834,scope:["PO","PS","PKO","PKS"],note:"Uma unidade documental distinta da unidade Dumai."},
+{id:"musim",name:"PT Musim Mas",unit:"Belawan",city:"Medan (Belawan)",region:"Sumatra do Norte",lat:3.78,lng:98.69,scope:["PO","PS","PKO","PKS"],note:"Certificações podem ter restrições para transporte a granel."},
+{id:"sip",name:"PT Sumber Indahperkasa",unit:"Tarahan",city:"Lampung Selatan",region:"Lampung",lat:-5.54,lng:105.51,scope:["PO","PS"],note:"Questionário e certificados incluem óleo, oleína e estearina."},
+{id:"smart",name:"PT SMART Tbk",unit:"Tarjun",city:"Kotabaru",region:"Kalimantan do Sul",lat:-3.27,lng:116.12,scope:["PO","PS"],note:"Conferir certificação RSPO e escopo da unidade de Tarjun."},
+{id:"teckno",name:"PT Teckno Dua Indonesia",unit:"Kabil",city:"Batam",region:"Ilhas Riau",lat:1.05,lng:103.96,scope:["PKO"],note:"Conferir renovação do Halal e demais certificados."},
+{id:"wira",name:"PT Wira Inno Mas",unit:"Teluk Bayur",city:"Padang",region:"Sumatra Ocidental",lat:-0.949,lng:100.354,scope:["PO","PS","PKO","PKS"],note:"Conferir renovações HACCP/ISO e exigência Kosher por embarque."}
+];
+const byId=Object.fromEntries(facilities.map(f=>[f.id,f]));
+const $=id=>document.getElementById(id);
+let selected="amr",inventory=null,map=null,markers=[];
+const escapeCsv=value=>{let s=String(value??"");if(/^[=+\-@]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"';};
+function todayBrazil(){const parts=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"America/Sao_Paulo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).filter(v=>["year","month","day"].includes(v.type)).map(v=>[v.type,v.value]));return parts.year+"-"+parts.month+"-"+parts.day;}
+function statusOf(doc){if(!doc.validUntil||!/^\d{4}-\d{2}-\d{2}$/.test(doc.validUntil))return {key:"unknown",label:"Data não confirmada"};const now=todayBrazil(),days=Math.round((Date.parse(doc.validUntil+"T00:00:00Z")-Date.parse(now+"T00:00:00Z"))/86400000);if(days<0)return {key:"expired",label:"Vencido na cópia"};if(days<=90)return {key:"warning",label:"Até 90 dias"};return {key:"valid",label:"Data futura na cópia"};}
+function archiveUnits(f){if(!inventory)return [];return inventory.documents.filter(d=>d.unit===f.id);}
+function docCount(f){return archiveUnits(f).length+(f.id.startsWith("ibp-")?inventory.documents.filter(d=>d.unit==="ibp-notallocated").length:0);}
+function setText(id,value){$(id).textContent=value;}
+function selectFacility(id){selected=id;renderFacilities();renderDetail();markers.forEach(m=>m.marker.setStyle({color:m.ids.includes(id)?"#e5bc55":"#80385c",fillColor:m.ids.includes(id)?"#e5bc55":"#80385c"}));}
+function renderFacilities(){const term=$("search").value.trim().toLowerCase(),region=$("region").value;const host=$("facList");host.replaceChildren();
+  let visible=facilities.filter(f=>(!region||f.region===region)&&[f.name,f.unit,f.city,f.region].join(" ").toLowerCase().includes(term));
+  if(!visible.length){const p=document.createElement("p");p.className="muted";p.textContent="Nenhuma refinaria encontrada.";host.append(p);return;}
+  for(const f of visible){const b=document.createElement("button");b.type="button";b.className="fac"+(f.id===selected?" selected":"");b.setAttribute("aria-pressed",String(f.id===selected));const title=document.createElement("b");title.textContent=f.name;const sub=document.createElement("span");sub.textContent=f.unit+" · "+f.city+" · Indonésia";b.append(title,sub);b.addEventListener("click",()=>selectFacility(f.id));host.append(b);}
+}
+function row(label,value){const d=document.createElement("div");d.className="fact-row";const a=document.createElement("b");a.textContent=label;const b=document.createElement("span");b.textContent=value;d.append(a,b);return d;}
+function renderDetail(){const f=byId[selected];if(!f)return;setText("detailName",f.name);const target=$("detailRows");target.replaceChildren(row("Unidade industrial",f.unit),row("Cidade / País",f.city+" / Indonésia"),row("Região",f.region),row("Porto efetivo do embarque","A confirmar por contrato"));const tags=$("detailTags");tags.replaceChildren();for(const v of f.scope){const e=document.createElement("span");e.className="pill";e.textContent=v;tags.append(e);}const msg=inventory?archiveUnits(f).length+" documentos associados diretamente à unidade. "+(f.id.startsWith("ibp-")?"Documentos IBP sem unidade explícita permanecem separados.":""):"Validade documental disponível após importar o inventário privado.";setText("detailDocs",msg);setText("scopeHint",f.note);}
+function renderMap(){const holder=$("map");if(!window.L){holder.textContent="Mapa externo indisponível. As cidades estão disponíveis na lista abaixo.";return;}holder.replaceChildren();map=L.map(holder,{scrollWheelZoom:false,zoomControl:true}).setView([0,112],4);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:16,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+ const groups=new Map();for(const f of facilities){const key=f.city.includes("Dumai")?"Dumai":f.city;const list=groups.get(key)||[];list.push(f);groups.set(key,list);}
+ for(const list of groups.values()){const f=list[0],marker=L.circleMarker([f.lat,f.lng],{radius:list.length>1?10:8,color:"#80385c",fillColor:"#80385c",fillOpacity:.9,weight:2}).addTo(map);const label=list.length>1?f.city+" · "+list.length+" unidades":f.city;marker.bindTooltip(label);marker.on("click",()=>selectFacility(list[0].id));markers.push({marker,ids:list.map(f=>f.id)});}
+ map.invalidateSize();}
+function renderDocOptions(){const units=$("docUnit"),types=$("docType");units.replaceChildren();types.replaceChildren();for(const [select,label] of [[units,"Todas as unidades"],[types,"Todos os tipos"]]){const o=document.createElement("option");o.value="";o.textContent=label;select.append(o);}for(const f of facilities){const o=document.createElement("option");o.value=f.id;o.textContent=f.name+" — "+f.unit;units.append(o);}if(inventory){const categories=[...new Set(inventory.documents.map(d=>d.category))].sort((a,b)=>a.localeCompare(b,"pt-BR"));for(const cat of categories){const o=document.createElement("option");o.value=cat;o.textContent=cat;types.append(o);}const o=document.createElement("option");o.value="ibp-notallocated";o.textContent="PT Intibenua · unidade não identificada";units.append(o);}}
+function filteredDocs(){if(!inventory)return [];const unit=$("docUnit").value,kind=$("docType").value,status=$("docStatus").value;return inventory.documents.filter(d=>(!unit||d.unit===unit)&&(!kind||d.category===kind)&&(!status||statusOf(d).key===status)).sort((a,b)=>{const prio={expired:0,warning:1,unknown:2,valid:3};return prio[statusOf(a).key]-prio[statusOf(b).key]||String(a.filename).localeCompare(String(b.filename),"pt-BR");});}
+function renderDocs(){const body=$("docsBody");body.replaceChildren();if(!inventory){const tr=document.createElement("tr"),td=document.createElement("td");td.colSpan=5;td.className="none";td.textContent="Carregue o inventário privado para visualizar os documentos.";tr.append(td);body.append(tr);return;}
+ const docs=filteredDocs();if(!docs.length){const tr=document.createElement("tr"),td=document.createElement("td");td.colSpan=5;td.textContent="Nenhum documento corresponde aos filtros.";tr.append(td);body.append(tr);return;}
+ for(const d of docs){const tr=document.createElement("tr"),f=byId[d.unit],st=statusOf(d);const vals=[f?f.unit+" · "+f.city:d.unit==="ibp-notallocated"?"PT Intibenua · unidade a confirmar":"Não alocado",d.filename,d.category,d.validUntil?new Date(d.validUntil+"T00:00:00Z").toLocaleDateString("pt-BR",{timeZone:"UTC"}):"Não identificada"];vals.forEach(v=>{const td=document.createElement("td");td.textContent=v;tr.append(td);});const td=document.createElement("td"),badge=document.createElement("span");badge.className="status "+st.key;badge.textContent=st.label;td.append(badge);tr.append(td);body.append(tr);}
+}
+function renderKPIs(){setText("kpiUnits",facilities.length);if(!inventory){setText("kpiWarn","—");setText("kpiExpired","—");return;}const counts={expired:0,warning:0};for(const d of inventory.documents){const state=statusOf(d).key;if(state in counts)counts[state]++;}setText("kpiWarn",counts.warning);setText("kpiExpired",counts.expired);}
+function clearInventory(){inventory=null;$("inventoryFile").value="";$("exportCSV").disabled=true;$("clearDocs").disabled=true;setText("inventoryStatus","Nenhum inventário privado carregado.");renderDocOptions();renderKPIs();renderDocs();renderDetail();}
+$("inventoryFile").addEventListener("change",async event=>{const file=event.target.files?.[0];if(!file)return;try{if(file.size>2_000_000)throw Error("Arquivo muito grande para o inventário de metadados.");const data=JSON.parse(await file.text());if(data?.version!==1||!Array.isArray(data.documents)||data.documents.length>2000||!data.documents.every(d=>d&&typeof d.filename==="string"&&typeof d.category==="string"&&typeof d.unit==="string"))throw Error("Formato do inventário incompatível.");inventory={documents:data.documents.map(d=>({filename:String(d.filename).slice(0,220),category:String(d.category).slice(0,80),unit:String(d.unit).slice(0,60),validUntil:typeof d.validUntil==="string"?d.validUntil:null}))};$("exportCSV").disabled=false;$("clearDocs").disabled=false;setText("inventoryStatus",inventory.documents.length+" registros de documentos carregados localmente. Nenhum arquivo foi enviado à rede.");renderDocOptions();renderKPIs();renderDocs();renderDetail();}catch(e){clearInventory();setText("inventoryStatus","Erro: "+e.message);}});
+$("exportCSV").addEventListener("click",()=>{if(!inventory)return;const rows=[["Unidade","Documento","Categoria","Validade","Situação"],...filteredDocs().map(d=>[d.unit,d.filename,d.category,d.validUntil||"",statusOf(d).label])];const csv="\uFEFF"+rows.map(row=>row.map(escapeCsv).join(";")).join("\r\n");const url=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download="MundoNovo_Refinarias_Conferencia.csv";a.click();setTimeout(()=>URL.revokeObjectURL(url),5000);});
+$("clearDocs").addEventListener("click",clearInventory);
+["docUnit","docType","docStatus"].forEach(id=>$(id).addEventListener("change",renderDocs));
+$("search").addEventListener("input",renderFacilities);$("region").addEventListener("change",renderFacilities);
+renderDocOptions();renderFacilities();renderDetail();renderDocs();renderKPIs();renderMap();
+</script>
+</body>
+</html>
