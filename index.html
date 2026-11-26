@@ -881,16 +881,30 @@ function chart(rows,unit){const el=node('div','','mt-chart');el.style.cssText='w
   }
   return card;
 }function displaySlots(){
-  ['mt-news','mt-fin','mt-supply','mt-news-secondary'].forEach((id,index)=>{
-    const secondary=index===3;
-    const rotation=secondary?0:index;
-    const entries=rotations[rotation];
-    const slot=$(id);
-    if(!entries.length || (secondary && entries.length<2)){
-      if(secondary)slot.replaceChildren(card('Aguardando outra notícia',null,[]));
-      return;
-    }
-    const entry=entries[(positions[rotation]+(secondary?1:0))%entries.length]();
+  const now=Date.now();
+  const seen=new Set();
+  const week=(cache.news?.news||[]).filter(n=>{
+    const age=now-Date.parse(n.published_at);
+    return age>=0 && age<=7*86400000 && (n.title_pt||n.title_original);
+  }).sort((a,b)=>Date.parse(b.published_at)-Date.parse(a.published_at)).filter(n=>{
+    const title=(n.title_pt||n.title_original).trim().toLowerCase().replace(/\s+/g,' ');
+    if(seen.has(title))return false;
+    seen.add(title);
+    return true;
+  });
+  const impact=week.filter(n=>now-Date.parse(n.published_at)<=48*3600000);
+  const weight={Alto:3,'Médio':2,Baixo:1};
+  const highest=Math.max(0,...impact.map(n=>weight[n.impact]||0));
+  const featured=impact.filter(n=>(weight[n.impact]||0)===highest);
+  const second=featured[positions[0]%featured.length];
+  const other=week.filter(n=>n!==second && (!second||n.url!==second.url));
+  const first=other[positions[0]%other.length]||week[0];
+  $('mt-news').replaceChildren(first?newsCard(first):card('Sem notícias nos últimos 7 dias',null,[]));
+  $('mt-news-secondary').replaceChildren(second && first!==second?newsCard(second):card('Sem outra notícia nas últimas 48 horas',null,[]));
+  ['mt-fin','mt-supply'].forEach((id,index)=>{
+    const rotation=index+1,entries=rotations[rotation];
+    if(!entries.length)return;
+    const slot=$(id),entry=entries[positions[rotation]%entries.length]();
     slot.querySelectorAll('.mt-chart').forEach(chart=>chart._dispose?.());
     slot.replaceChildren(entry);
     entry._mount?.();
@@ -898,19 +912,6 @@ function chart(rows,unit){const el=node('div','','mt-chart');el.style.cssText='w
 }
 function render(){
   const c=cache.cpo?.latest?.selected;
-  const stories=[...storySource.children];
-  const titleKey=title=>title.trim().replace(/\s+/g,' ').toLowerCase();
-  const titles=new Set(stories.map(story=>titleKey(story.querySelector('h3').textContent)));
-  const images=new Set();
-  const chosen=(cache.news?.news||[]).filter(news=>{
-    const title=titleKey(news.title_pt||news.title_original||'');
-    const image=news.image?.url;
-    if(!title||titles.has(title)||(image&&images.has(image)))return false;
-    titles.add(title);
-    if(image)images.add(image);
-    return true;
-  }).slice(0,12);
-  rotations[0]=[...stories.map(story=>()=>storyCard(story)),...chosen.map(news=>()=>newsCard(news))];
   rotations[1]=[['S&P 500 · referência CFD','FOREXCOM:SPXUSD'],['Ibovespa','BMFBOVESPA:IBOV'],['Índia · ETF INDA','AMEX:INDA'],['Japão · referência CFD','FOREXCOM:JPXJPY'],['Shanghai Composite','SSE:000001'],['Euronext 100','EURONEXT:N100']].map(([t,s])=>()=>tvCard(t,s,'Mercado internacional · referência conforme símbolo'));rotations[2]=[()=>metric('Óleo de palma · FCPO',(cache.cpo?.observations||[]).map(x=>({date:x.date,value:x.selected?.settlement_myr_per_tonne})),'MYR/t','Bursa Malaysia · ajuste oficial · contrato '+(c?.contract_month||'—')),()=>tvCard('Petróleo WTI · EUA','TVC:USOIL','USD/barril · referência de mercado'),()=>tvCard('Petróleo Brent','TVC:UKOIL','USD/barril · referência de mercado, distinta do spot EIA'),()=>metric('Soja · CBOT',cache.soy?.last_three||[],'US¢/bu','Yahoo Finance · fechamento diário indicativo'),()=>metric('Óleo de soja',(cache.oil?.history||[]).map(x=>({date:x.period_end,value:x.price})),'US¢/lb','USDA AMS · semanal')];displaySlots();}function renderTvQuotes(){
   const strip=$('mt-tv-quotes');
   const indices=(cache.indices?.quotes||[]).filter(quote=>
