@@ -7,24 +7,36 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/"data"/"market-news.json"
 NOW=dt.datetime.now(dt.timezone.utc)
 TOPICS=[
- ("Óleo de palma","palm oil Malaysia Indonesia MPOB exports stocks"),
- ("Soja","soybean oil CBOT USDA Brazil Argentina exports"),
- ("Soja","Argentina soybean oil soybean meal exports Rosario"),
- ("Soja","Argentina soja aceite harina molienda exportaciones Rosario"),
- ("Comércio exterior","Argentina exportaciones agroindustriales retenciones aceite soja"),
- ("Biodiesel","Indonesia biodiesel B40 B50 palm oil mandate"),
- ("Logística","shipping freight ports Red Sea trade commodities"),
- ("Câmbio","Federal Reserve dollar Brazilian real exchange rate"),
- ("Petróleo","Brent crude oil OPEC EIA supply"),
- ("Comércio exterior","India China vegetable oil imports tariffs")
+ ("Óleo de palma","palm oil (MPOB OR Malaysia OR Bursa Malaysia) (site:bernama.com OR site:theedgemalaysia.com OR site:mpob.gov.my)","en"),
+ ("Óleo de palma","palm oil (Indonesia OR China OR India) (site:reuters.com OR site:antaranews.com OR site:business-standard.com)","en"),
+ ("Soja","soybeans OR soybean oil (site:reuters.com OR site:usda.gov OR site:ams.usda.gov)","en"),
+ ("Soja","soja safra exportações (site:gov.br OR site:conab.gov.br OR site:canalrural.com.br)","pt"),
+ ("Soja","soja aceite molienda exportaciones (site:bcr.com.ar OR site:bolsadecereales.com OR site:lanacion.com.ar)","es"),
+ ("Biodiesel","biodiesel Indonesia (B40 OR B50 OR palm oil) (site:antaranews.com OR site:reuters.com OR site:esdm.go.id)","en"),
+ ("Biodiesel","biodiesel mistura produção (site:gov.br OR site:canalrural.com.br)","pt"),
+ ("Biodiesel","biodiesel biofuels (site:eia.gov OR site:epa.gov OR site:reuters.com OR site:europa.eu)","en"),
+ ("Logística","(shipping OR freight OR port) (site:reuters.com OR site:maersk.com OR site:drewry.co.uk)","en"),
+ ("Logística","portos frete exportações (site:gov.br OR site:portosdoparana.pr.gov.br)","pt"),
+ ("Câmbio","(dollar OR exchange rate OR currencies) (site:reuters.com OR site:federalreserve.gov OR site:ecb.europa.eu)","en"),
+ ("Câmbio","dólar câmbio Banco Central (site:agenciabrasil.ebc.com.br OR site:bcb.gov.br OR site:valor.globo.com)","pt"),
+ ("Petróleo","(Brent OR crude oil) (site:reuters.com OR site:eia.gov OR site:opec.org)","en"),
+ ("Comércio exterior","(China OR India) (imports OR tariffs OR trade) (site:reuters.com OR site:business-standard.com OR site:chinadaily.com.cn)","en"),
+ ("Comércio exterior","(European Union OR EU) (trade OR imports OR tariffs) (site:reuters.com OR site:ec.europa.eu)","en"),
+ ("Comércio exterior","exportaciones agroindustriales Argentina (site:bcr.com.ar OR site:argentina.gob.ar OR site:lanacion.com.ar)","es"),
 ]
 COUNTRIES={"malásia":["malaysia","malaysian","mpob"],"indonésia":["indonesia","indonesian","gapki"],"china":["china","chinese"],"índia":["india","indian"],"brasil":["brazil","brasil","brazilian"],"estados unidos":["united states","u.s.","usda","federal reserve"],"argentina":["argentina","argentine","argentinian","rosario","ciara-cec","ciara cec","bolsa de cereales"],"união europeia":["european union","eu commission"]}
 HIGH=["export ban","tariff hike","supply disruption","port closure","biodiesel mandate","export tax","embargo","sanctions","production cut"]
 MED=["export","import","stock","harvest","demand","price","interest rate","freight","policy","forecast","tariff","crop","biodiesel"]
-def fetch(topic, spanish=False):
- q=urllib.parse.quote(topic+" when:7d")
- locale="hl=es-419&gl=AR&ceid=AR:es-419" if spanish else "hl=en-US&gl=US&ceid=US:en"
- url=f"https://news.google.com/rss/search?q={q}&{locale}"
+
+COUNTRIES["união europeia"] += ["european commission","comissão europeia","european central bank","union europea"]
+COUNTRIES["estados unidos"] += ["estados unidos","eia","epa"]
+HIGH += ["proibição de exportação","corte de produção","embargo","sanções","cierre de puerto","recorte de producción","suba de aranceles","b40","b50"]
+MED += ["exportação","importação","estoque","safra","preço","juros","câmbio","frete","exportaciones","importaciones","cosecha","precios","molienda"]
+LOCALES={"en":"hl=en-US&gl=US&ceid=US:en","es":"hl=es-419&gl=AR&ceid=AR:es-419","pt":"hl=pt-BR&gl=BR&ceid=BR:pt-419"}
+
+def fetch(topic, language):
+ q=urllib.parse.quote(topic+" when:30d")
+ url=f"https://news.google.com/rss/search?q={q}&{LOCALES[language]}"
  req=urllib.request.Request(url,headers={"User-Agent":"TradingGlobalNews/1.0 (+https://github.com/antoniosilvagc9-design/Mundonovo-global-oils)"})
  with urllib.request.urlopen(req,timeout=22) as resp:
   return ET.fromstring(resp.read(2_000_000))
@@ -69,7 +81,7 @@ def translate_titles(items):
   previous={n['title_original']:n['title_pt'] for n in json.loads(OUT.read_text(encoding='utf-8'))['news'] if n.get('title_pt')}
  except (OSError,ValueError,KeyError,TypeError): pass
  for item in items:
-  item['title_pt']=previous.get(item['title_original'])
+  item['title_pt']=item['title_original'] if item.get('language')=='pt' else previous.get(item['title_original'])
  for code in ('en','es'):
   pending=[n for n in items if not n['title_pt'] and n.get('language','en')==code]
   if not pending: continue
@@ -111,9 +123,8 @@ def translate_titles(items):
 
 def main():
  items={};errors=[]
- for category,query in TOPICS:
-  spanish=query.startswith("Argentina") and ("exportaciones" in query)
-  try:root=fetch(query,spanish)
+ for category,query,language in TOPICS:
+  try:root=fetch(query,language)
   except Exception as exc:errors.append(category+": "+str(exc)[:140]);continue
   for node in root.findall("./channel/item"):
    title=(node.findtext("title") or "").strip()
@@ -122,12 +133,12 @@ def main():
    source_node=node.find("source")
    source=(source_node.text or "").strip() if source_node is not None else ""
    if not title or not link.startswith("https://") or not pub or not source:continue
-   if pub>NOW+dt.timedelta(minutes=10) or pub<NOW-dt.timedelta(days=7):continue
+   if pub>NOW+dt.timedelta(minutes=10) or pub<NOW-dt.timedelta(days=30):continue
    # Google News fornece manchete, fonte e link; não fornece o texto integral verificado.
    normalized=re.sub(r"\W+","",title.lower())
    key=hashlib.sha256((normalized[:100]+"|"+source.lower()).encode()).hexdigest()[:18]
    hay=(title+" "+source).lower()
-   regions=[name.title() for name,keys in COUNTRIES.items() if any(k in hay for k in keys)]
+   regions=[name.title() for name,keys in COUNTRIES.items() if any(re.search(r"(?<!\w)"+re.escape(k)+r"(?!\w)",hay) for k in keys)]
    hits_high=[w for w in HIGH if w in hay];hits_med=[w for w in MED if w in hay]
    impact="Alto" if hits_high else "Médio" if hits_med else "Baixo"
    reason=("Termo de possível impacto elevado na manchete: "+", ".join(hits_high[:2]) if hits_high else
@@ -137,14 +148,34 @@ def main():
     "source":source,"url":link,"published_at":pub.isoformat(),"collected_at":NOW.isoformat(),
     "regions":regions or ["Global"],"category":category,"commodities":[category] if category in ("Óleo de palma","Soja","Petróleo") else [],
     "impact":impact,"impact_reason":reason,"context_confirmed":None,"commercial_analysis":None,
-    "verification":"Metadados RSS; conteúdo integral não verificado","language":"es" if spanish else "en","source_type":"Google News RSS (agregador)"}
+    "verification":"Metadados RSS; conteúdo integral não verificado","language":language,"source_type":"Google News RSS (agregador)"}
    if key not in items or pub>dt.datetime.fromisoformat(items[key]["published_at"]):items[key]=obj
- ranked=sorted(items.values(),key=lambda x:({"Alto":2,"Médio":1,"Baixo":0}[x["impact"]],x["published_at"]),reverse=True)
- argentina=[x for x in ranked if "Argentina" in x["regions"]][:12]
- reserved={x["id"] for x in argentina}
- ordered=argentina+[x for x in ranked if x["id"] not in reserved][:80-len(argentina)]
- ordered.sort(key=lambda x:({"Alto":2,"Médio":1,"Baixo":0}[x["impact"]],x["published_at"]),reverse=True)
- print("Argentina: notícias selecionadas",len(argentina))
+ try:
+  archive=json.loads(OUT.read_text(encoding="utf-8")).get("news",[])
+ except (OSError,ValueError,TypeError):
+  archive=[]
+ cutoff=(NOW-dt.timedelta(days=30)).isoformat()
+ for article in archive:
+  if article.get("published_at","")>=cutoff and article.get("id"):
+   items.setdefault(article["id"],article)
+ ranked=sorted(items.values(),key=lambda article:article["published_at"],reverse=True)
+ reserved={}
+ groups=[
+  (sorted({topic[0] for topic in TOPICS}),lambda n:[n["category"]]),
+  (["Global",*[name.title() for name in COUNTRIES]],lambda n:n["regions"]),
+  (["Alto","Médio","Baixo"],lambda n:[n["impact"]]),
+ ]
+ for labels,values in groups:
+  for label in labels:
+   matching=[article for article in ranked if label in values(article)]
+   for article in matching[:4]:
+    reserved[article["id"]]=article
+   if len(matching)<4:
+    print("Cobertura em 30 dias:",label,len(matching),"de 4")
+ for article in ranked:
+  if len(reserved)>=200:break
+  reserved.setdefault(article["id"],article)
+ ordered=sorted(reserved.values(),key=lambda article:article["published_at"],reverse=True)
  if not ordered:
   if OUT.exists():print("Nenhuma notícia nova; preservando último arquivo válido.");return
   raise RuntimeError("Nenhum RSS acessível com notícias verificáveis: "+"; ".join(errors))
