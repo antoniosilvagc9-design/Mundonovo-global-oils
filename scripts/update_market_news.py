@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Coleta RSS pública, sem scraping de matérias nem análise inventada."""
 import os
+import html
 import urllib.error
 import datetime as dt, email.utils, hashlib, json, pathlib, re, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 ROOT=pathlib.Path(__file__).resolve().parents[1]
@@ -50,6 +51,15 @@ def fetch(topic, language):
  req=urllib.request.Request(url,headers={"User-Agent":"TradingGlobalNews/1.0 (+https://github.com/antoniosilvagc9-design/Mundonovo-global-oils)"})
  with urllib.request.urlopen(req,timeout=22) as resp:
   return ET.fromstring(resp.read(2_000_000))
+def feed_summary(node, headline, source):
+ raw=html.unescape(node.findtext("description") or "")
+ if "<ol" in raw.lower():return None
+ plain=" ".join(html.unescape(re.sub(r"<[^>]+>"," ",raw)).split())
+ plain=plain.removesuffix(source).strip(" -–")
+ if plain.casefold().startswith(headline.casefold()):plain=plain[len(headline):].strip(" -–")
+ if len(plain.split())<10 or plain.casefold() in headline.casefold():return None
+ return plain[:900]
+
 def parse_date(raw):
  try:return email.utils.parsedate_to_datetime(raw).astimezone(dt.timezone.utc)
  except (TypeError,ValueError,OverflowError):return None
@@ -90,10 +100,16 @@ def translate_titles(items):
  try:
   previous={n['title_original']:n['title_pt'] for n in json.loads(OUT.read_text(encoding='utf-8'))['news'] if n.get('title_pt')}
  except (OSError,ValueError,KeyError,TypeError): pass
+ try:
+  summaries={n['id']:n['summary_pt'] for n in json.loads(OUT.read_text(encoding='utf-8'))['news'] if n.get('summary_pt')}
+ except (OSError,ValueError,KeyError,TypeError): summaries={}
  for item in items:
+  item['summary_pt']=item.get('summary_pt') or summaries.get(item['id'])
+  if item.get('language')=='pt' and item.get('summary_original') and not item['summary_pt']:
+   item['summary_pt']=item['summary_original']
   item['title_pt']=item['title_original'] if item.get('language')=='pt' else previous.get(item['title_original'])
  for code in ('en','es'):
-  pending=[n for n in items if not n['title_pt'] and n.get('language','en')==code]
+  pending=[n for n in items if n.get('language','en')==code and (not n['title_pt'] or (n.get('summary_original') and not n.get('summary_pt')))]
   if not pending: continue
   try:
    import argostranslate.package as pkg
@@ -122,6 +138,9 @@ def translate_titles(items):
    if engine is None:raise RuntimeError('Modelo indisponível')
    for item in pending:
     try:
+     if item.get('summary_original') and not item.get('summary_pt'):
+      item['summary_pt']=engine.translate(item['summary_original']).strip()
+     if item.get('title_pt'):continue
      title=item['title_original']; suffix=' - '+item['source']
      has_suffix=title.endswith(suffix)
      translated=engine.translate(title[:-len(suffix)] if has_suffix else title).strip()
@@ -156,7 +175,7 @@ def main():
    reason=("Termo de possível impacto elevado na manchete: "+", ".join(hits_high[:2]) if hits_high else
            "A manchete menciona fatores de mercado: "+", ".join(hits_med[:2]) if hits_med else
            "Monitoramento informativo; impacto econômico não confirmado")
-   obj={"id":key,"title_original":title,"title_pt":None,"summary_pt":None,
+   obj={"id":key,"title_original":title,"title_pt":None,"summary_pt":None,"summary_original":feed_summary(node,headline,source),
     "source":source,"url":link,"published_at":pub.isoformat(),"collected_at":NOW.isoformat(),
     "regions":regions or ["Global"],"category":category,"commodities":[category] if category in ("Óleo de palma","Soja","Petróleo") else [],
     "impact":impact,"impact_reason":reason,"context_confirmed":None,"commercial_analysis":None,
