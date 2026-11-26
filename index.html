@@ -929,7 +929,7 @@ function chart(rows,unit){const el=node('div','','mt-chart');el.style.cssText='w
 }
 function render(){
   const c=cache.cpo?.latest?.selected;
-  rotations[1]=[['S&P 500 · referência CFD','FOREXCOM:SPXUSD'],['Ibovespa','BMFBOVESPA:IBOV'],['Índia · ETF INDA','AMEX:INDA'],['Japão · referência CFD','FOREXCOM:JPXJPY'],['Shanghai Composite','SSE:000001'],['Euronext 100','EURONEXT:N100']].map(([t,s])=>()=>tvCard(t,s,'Mercado internacional · referência conforme símbolo'));rotations[2]=[()=>metric('Óleo de palma · FCPO',(cache.cpo?.observations||[]).map(x=>({date:x.date,value:x.selected?.settlement_myr_per_tonne})),'MYR/t','Bursa Malaysia · ajuste oficial · contrato '+(c?.contract_month||'—')),()=>tvCard('Petróleo WTI · EUA','TVC:USOIL','USD/barril · referência de mercado'),()=>tvCard('Petróleo Brent','TVC:UKOIL','USD/barril · referência de mercado, distinta do spot EIA'),()=>metric('Soja · CBOT',cache.soy?.last_three||[],'US¢/bu','Yahoo Finance · fechamento diário indicativo'),()=>metric('Óleo de soja',(cache.oil?.history||[]).map(x=>({date:x.period_end,value:x.price})),'US¢/lb','USDA AMS · semanal')];displaySlots();}function renderTvQuotes(){
+  rotations[1]=[['S&P 500 · referência CFD','FOREXCOM:SPXUSD'],['Ibovespa','BMFBOVESPA:IBOV'],['Índia · ETF INDA','AMEX:INDA'],['Japão · referência CFD','FOREXCOM:JPXJPY'],['China · ETF ASHR (CSI 300)','AMEX:ASHR'],['Euronext 100','EURONEXT:N100']].map(([t,s])=>()=>tvCard(t,s,'Mercado internacional · referência conforme símbolo'));rotations[2]=[()=>metric('Óleo de palma · FCPO',(cache.cpo?.observations||[]).map(x=>({date:x.date,value:x.selected?.settlement_myr_per_tonne})),'MYR/t','Bursa Malaysia · ajuste oficial · contrato '+(c?.contract_month||'—')),()=>tvCard('Petróleo WTI · EUA','TVC:USOIL','USD/barril · referência de mercado'),()=>tvCard('Petróleo Brent','TVC:UKOIL','USD/barril · referência de mercado, distinta do spot EIA'),()=>metric('Soja · CBOT',cache.soy?.last_three||[],'US¢/bu','Yahoo Finance · fechamento diário indicativo'),()=>metric('Óleo de soja',(cache.oil?.history||[]).map(x=>({date:x.period_end,value:x.price})),'US¢/lb','USDA AMS · semanal')];displaySlots();}function renderTvQuotes(){
  const strip=$('mt-tv-quotes');
  const entries=[];
  function add(name,rows,unit,source,precision=2){
@@ -952,7 +952,7 @@ function render(){
  const stocksTitle=node('strong','BOLSAS DE VALORES','mt-footer-title mt-stocks-title');
  const stocksRow=node('div','','mt-footer-row mt-stocks-row'),stocksWindow=node('div','','mt-footer-window mt-stocks-window'),ibov=node('div','','mt-footer-dollar mt-footer-ibov');
  const tape=document.createElement('tv-ticker-tape');
- tape.setAttribute('symbols','AMEX:EWM,IDX:COMPOSITE,AMEX:SOYB,FOREXCOM:SPXUSD,AMEX:INDA,FOREXCOM:JPXJPY,SSE:000001,EURONEXT:N100');
+ tape.setAttribute('symbols','AMEX:EWM,AMEX:EIDO,AMEX:SOYB,FOREXCOM:SPXUSD,AMEX:INDA,FOREXCOM:JPXJPY,AMEX:ASHR,EURONEXT:N100');
  tape.setAttribute('theme','dark');tape.setAttribute('item-size','compact');
  stocksWindow.setAttribute('aria-label','Mercados internacionais · TradingView');stocksWindow.append(tape);
  const fixed=document.createElement('tv-ticker-tape');
