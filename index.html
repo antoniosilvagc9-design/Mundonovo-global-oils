@@ -863,6 +863,15 @@ body[data-portal-page="intelligence"] #mn-tv #global-market-ticker{display:block
  #mn-tv #mt-supply .mt-chart{height:150px;min-height:150px;flex:none}
  #mn-tv .mt-head,#mn-tv .mt-progress,#mn-tv .mt-foot{flex:none}
 }
+
+/* TV desktop: reserve headline and editorial text before allocating image height. */
+@media (min-width:768px), (pointer:fine) {
+ #mn-tv:fullscreen #mt-news-secondary .mt-card,body.mn-tv-mode #mn-tv #mt-news-secondary .mt-card{gap:4px}
+ #mn-tv:fullscreen #mt-news-secondary .mt-news,body.mn-tv-mode #mn-tv #mt-news-secondary .mt-news{flex:0 0 auto;display:block;overflow:visible;-webkit-line-clamp:unset;white-space:normal;overflow-wrap:anywhere;line-height:1.2;font-size:clamp(14px,1.25vw,22px);margin-bottom:2px}
+ #mn-tv:fullscreen #mt-news-secondary .mt-impact-line,body.mn-tv-mode #mn-tv #mt-news-secondary .mt-impact-line{flex:0 0 auto;font-size:clamp(11px, min(1vw,1.65vh),17px);line-height:1.2}
+ #mn-tv:fullscreen #mt-news-secondary .mt-small,body.mn-tv-mode #mn-tv #mt-news-secondary .mt-small{flex:0 0 auto;font-size:clamp(10px,1.5vh,15px)}
+ #mn-tv:fullscreen #mt-news-secondary .mt-card>img,body.mn-tv-mode #mn-tv #mt-news-secondary .mt-card>img{flex:1 1 0;min-height:0;height:0;max-height:clamp(35px,8vh,110px);object-fit:cover}
+}
 </style><section id="mn-tv"><div class="mt-head"><div><h3>GLOBAL MARKET INTELLIGENCE</h3></div><div><button id="mt-full">ATIVAR MODO TV</button> <button id="mt-pause">Pausar</button></div></div><div class="mt-progress"><i id="mt-progress"></i></div><div class="mt-four"><section><h3>01 · NOTÍCIAS E ACONTECIMENTOS</h3><div id="mt-news" class="mt-slot mt-news-slot"></div></section><section><h3>02 · BOLSAS DE VALORES</h3><div id="mt-fin" class="mt-slot"></div></section><section><h3>03 · COTAÇÕES INTERNACIONAIS</h3><div id="mt-supply" class="mt-slot"></div></section><section><h3>04 · MAIORES IMPACTOS NA ECONOMIA</h3><div id="mt-news-secondary" class="mt-slot mt-news-slot"></div></section></div><div class="mt-foot"><div id="mt-state" class="mt-small">Carregando fontes…</div><div id="mt-nav"></div></div><div id="mt-market-ticker" class="mt-ticker"></div><div id="mt-tv-quotes" class="mt-tv-quotes" aria-label="Fechamentos de mercado">Carregando fechamentos…</div></section><script>
 (()=>{if(new URLSearchParams(location.search).get('page')!=='intelligence')return;const $=id=>document.getElementById(id),root=$('mn-tv'),panels=[...root.querySelectorAll('.mt-panel')];root.classList.add('mt-local-quotes');
 let current=0,start=performance.now(),paused=false,elapsed=0,cache={},loading=false;const fmt=(n,d=2)=>typeof n==='number'&&Number.isFinite(n)?n.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d}):'—';function node(tag,t,cls){const e=document.createElement(tag);e.textContent=t||'';if(cls)e.className=cls;return e}function card(title,value,details){const e=node('article','','mt-card');e.append(node('h3',title));if(value)e.append(node('div',value,'mt-value'));for(const t of details||[])e.append(node('p',t,'mt-small'));return e}function drawHistory(el,data,unit){
