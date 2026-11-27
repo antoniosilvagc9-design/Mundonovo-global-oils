@@ -1,9 +1,677 @@
 {
-  "updated_at_utc": "2026-11-27T12:46:25.005882+00:00",
+  "updated_at_utc": "2026-11-27T23:34:33.777167+00:00",
   "feed": "Google News RSS — manchetes e metadados de terceiros",
   "limitations": "Manchetes traduzidas automaticamente quando disponível; original preservado; resumo e análise não gerados sem acesso ao texto. Classificação heurística, não avaliação factual do impacto.",
   "errors": [],
   "news": [
+    {
+      "id": "ba5ea84a0dc0bc6379",
+      "title_original": "Desaceleração em IA pode enfraquecer dólar no médio prazo, avalia Goldman Sachs - Valor Econômico",
+      "title_pt": "Desaceleração em IA pode enfraquecer dólar no médio prazo, avalia Goldman Sachs - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQk1CaU9TTDZyRjNYa2Nac2IzZEpDc0cwNktvUlgyVE9YN3dLNks5cWR0MDFPM2k0SWxQLWVDSEVMaXBlbXVzT0wwM1NiajBEVW8yMFY2V00tZWpYSnh5ZnV6T2o4UGJpeEpBZ1VZN2s2RmJoazFfNzQ1d1ZsT1RKamJtZjU3LURDTnluUjB3WTdQdXFMaVpIWDJFckhEaTlpOVhIeW9HQ2lESG1aaWpBaDF1VmRHMFk4OUhpQ2ptMGVzVEpwUmNFc1VqV2rSAdsBQVVfeXFMUFNyS3JHc2pwRWxOakJiSEZydkZLR05VRjl3YnpDMEpmX2s2aEViNlVoNUtqakgtaVF4T2RNSEhnaFNORGwycGN1amItUTRiVHpuanhvakswdVlUdE15ZmthSV9KZlJDeHVTbC1JRWF2aEJDaUxWQ2dab3V4N3ljZnNBVEt5Z3VlbGdFdDhrckZWckpsSnhwejA0Z2E3NF80TE1qN2lLaFRBXy05b0FuWTFPNVJfZVRzUjRCd1BrX1haaWl2VlRXNzdGQktFVnJnTlM3U1g1RUJmVmFF?oc=5",
+      "published_at": "2026-11-27T23:12:13+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "passport, visa, immigration, document, international, tourism, travel, country, destination, security, airport, identification, trip, holiday, traveler, visa, visa, visa, immigration, immigration, immigration, immigration, immigration",
+        "url": "./data/news-images/9e7ccce18362b17bb3497b26.jpg",
+        "page": "https://pixabay.com/photos/passport-visa-immigration-document-2510289/",
+        "author": "sarahpassos"
+      }
+    },
+    {
+      "id": "f8899eae1be90df4a0",
+      "title_original": "OpenAI countersues Apple for stealing trade secrets - Reuters",
+      "title_pt": "OpenAI contrassues Apple para roubar segredos comerciais - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQa0FibW0xZFFBUlJ2MGJkd0NEcWZtRzkzUkdWcFl1VnlRN2dRMkpjWHpKVXlIekttSno1b1RMeWxJN2dtU0ZlS085Y1ZqTkpfM2Jaci13RUdMNFVPOWtqRldaazVrX25mMExUSkU0SmJRcHJsdnZxMWJXU05MNXFzc211YzlXNzMwRTVUM1k1MW5RQTdHbnRpU1p6Y2hQMFE0UnVBSk45eHg?oc=5",
+      "published_at": "2026-11-27T23:00:08+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "tanker, nature, water vessel, ship, ocean, sea, transport, panorama",
+        "url": "./data/news-images/0a80419ae07f7b005233edfd.jpg",
+        "page": "https://pixabay.com/photos/tanker-water-vessel-ship-ocean-sea-7202368/",
+        "author": "zzkonst"
+      }
+    },
+    {
+      "id": "6e8aa1e6a2e08509f8",
+      "title_original": "Las exportaciones agroindustriales de octubre marcaron un récord: US$5717 millones - La Nación",
+      "title_pt": "As exportações agro-industriais de outubro marcaram um recorde: US$5717 milhões - La Nación",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "La Nación",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNV2tYbUxoOHRULUJMQnhWejBiT1pGT3VkMmtrMEpEb3hLNlRJX3FiQk1BTE1jb1RETXlSaklhVlZCWWduTzZRR1lNWnh3NXJCbTQwbTI4Z0g5ckp4MTVtSlIzNWNxVFQ5RmJjOGhkWXZhWE15QVpsNEhnOWlJdnhKOENXNFFlb2tDVWRraDNrSW9UbklvZ0lIMnJDS3Fjdlg4d1ZsOGdBZTBkQ0pKc3ZscFdvYk1wTkNrQVpXX1lUV25MTXNnQkhkNDhtbXBWRDBfVUE?oc=5",
+      "published_at": "2026-11-27T21:19:00+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: export, exportaciones",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "es",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "ship, laptop wallpaper, accident, girl, black, free wallpaper, sink, view, wallpaper 4k, beautiful wallpaper, sky background, full hd wallpaper, windows wallpaper, turkey, antalya, sea, cool backgrounds, wave, storm, nature, sunset, hd wallpaper, tanker, 4k wallpaper 1920x1080, coastline, coast, background, boat, sky, mac wallpaper, unbelievable, 4k wallpaper, skyline, life, clouds, wallpaper hd, peace, cloudy, free background, desktop backgrounds, nature turkey",
+        "url": "./data/news-images/c5a71ae9780ed50516382c4e.jpg",
+        "page": "https://pixabay.com/photos/ship-accident-girl-black-sink-2359663/",
+        "author": "Engin_Akyurt"
+      }
+    },
+    {
+      "id": "33bcc2702c0a6eff7d",
+      "title_original": "Juros do crédito empresarial chegam a 24,37% ao ano e atingem maior nível para setembro desde 2016 - Valor Econômico",
+      "title_pt": "Juros do crédito empresarial chegam a 24,37% ao ano e atingem maior nível para setembro desde 2016 - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOZDhtMWtDN0YxWW1XbkJvMGZJRTAzSHVVMGM1czFSYmJFTnVaSDB0N3ZVSHpUbW0tRlRQejloNDBka0tYaHM4OGE5NXVrTjBocERhNS1nM21JSk5CVlhGc2RJNGpXd3lPakRoSlJSMWloSTVpeFdSTUJqcWhwa1g2a2hsRm55Sm9UOG9qcDZ2cmQ3SmFOeTYyZUJxTEhjQTlWS2VHTy1nNThZM0ZXR296SnZsdEVXdnZiMGx0bVBaSWN6Y3ZMMlM5SGozQmtiN0xyTUN0Xzd1bm85VnJ1V1dyQkhYeDFreDV0cWc0cUlpX2R0TGJpaDVMZVk4Uzh4Zm_SAY4CQVVfeXFMT0RjLWhYNVgxRHB6NE1BZk5NZWFWdWJ1TXZOZnBOTHhPcDkzWXpRSndHOEVTai03TjdCWmhEUEpOXzV5WFBwb0wwWmRnTFNHSjNxQnVKZXE4UXFFVk9UelE2NWNVZDFuLWdCUW9kM0ljZ1VuY0dJc0xSdl9CMi1xQlRBdU9kSWpWdUJONGdlVW5UOVY0RU9CLTdHNWZ1MGpRVmJBbW9NSGRFdmw3NGlnOHNkcld3NGhpS25vcEN6Y05IS3VqOVpQdEIxZU9yWXdVMzRySklBRTJMa2pKYkFKNHNYXzZjQWdfZXU1OTcxbk1jQk9jYl9icURMUEVRb2V4SVBkZFFpaUdydzhTb2tB?oc=5",
+      "published_at": "2026-11-27T21:03:35+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: juros",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "children, win, success, video game, play, happy, macbook, creative, computer, laptop, technology, happiness, portrait, children, children, success, success, success, happy, happy, happy, happy, happy, computer, computer, computer, computer, laptop, technology, technology",
+        "url": "./data/news-images/ad51d6f43f2a89a968410c48.jpg",
+        "page": "https://pixabay.com/photos/children-win-success-video-game-593313/",
+        "author": "StartupStockPhotos"
+      }
+    },
+    {
+      "id": "5fc5e820c7e3485c6e",
+      "title_original": "Juros futuros despencam após confirmação de Trabuco na Fazenda gerar queima de prêmios de risco | Finanças - Valor Econômico",
+      "title_pt": "Juros futuros despencam após confirmação de Trabuco na Fazenda gerar queima de prêmios de risco | Finanças - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPU1RSdXVNc3AxaFliWU9lV2FXb3JkQXNsbEV4VkdhZzVwcUhCeGlSV0hXNVo2OE9UVXFlSDE3bWZZY1pSODB4ME1TQ1JGTHc3TFdSVU9CUGN3UG1ZRWRsTEhlTGs2aWVUazJhY08xcjFQNkE3aUpzaGRZNDV4Z1AwTkVpVHFUVGQ4R1ZzbHdzb2xjeGtoeGZ3dzFCWjdqd0ZSUE45VGZZRUktaVItNHJkTnFsWVUyNlc1Um5MMU9Eb29FU0J0S1FOSFgtU0hJMWEwb3BaOXNINGJCTmxlcXpzUThGM3ZzQnot?oc=5",
+      "published_at": "2026-11-27T20:41:03+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: juros",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "bookkeeper, accountant, office, coffee, calculator, keyboard, pen, usb drive, invoice, company, paperwork, administration, accounting, work, desk, profit, paper, mouse, document, financial, finance, business, accountant, invoice, invoice, invoice, administration, administration, administration, administration, administration, accounting, accounting, accounting",
+        "url": "./data/news-images/b24832edbdb7851fd5a3584c.jpg",
+        "page": "https://pixabay.com/photos/bookkeeper-accountant-office-coffee-1016299/",
+        "author": "cloudhoreca"
+      }
+    },
+    {
+      "id": "9d44817248d7f0e7ea",
+      "title_original": "Equipe econômica quer deixar pacote fiscal pronto e prevê apresentação a Trabuco - Valor Econômico",
+      "title_pt": "Equipe econômica quer deixar pacote fiscal pronto e prevê apresentação a Trabuco - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOeUJmNnFYd1hFVkJTZ2QxN01xeC1hX09CX2JvTnVFRzJmN3lUQk96bFYxOG1rbGZ5TEw5U1dHM1NKT0Qyd1VKX05Hc2lzRXh3VDI2Mlh5bmNhaXYzdEhqd0JtTjNLT2hIQXR6ZTF3aXhtcmx4b3A4X3c1TV9NX1lLcUhEZVpxX2tZMmRLZnlVcVVCNEotMlhYYzZTejF3ektpcVFUYl9HTV9ZZU1FUUJnNjZwLWt0Z1paTmhVVmw2eFJNQzhRVThLYkRSMzdEbTJFVFHSAeABQVVfeXFMTWFpTS00d1BmUkZfNHFsN2RlOU05NV9kSS00dWZwdTVwalN5bWVNbk92Tng5NEkwZGtUdllFN3dsMG9ZeEp3cW10aXM4N0hTUDZGcUVjejJTOHJGY0Q1R0hjTGxrQWZVakl4eTIwRnBVSkU2NHNwTDJlWEZsc0hkeXB3Zjl2Z2hCNG9FWFh0QWNmSzJXa3dhYjMxMGM5SFkzOXVCRmRmNFNpM2VKa2ZtZWNuX2xaVXN5ME1NMnM2bDNJQUtzYVRPaUJya2VuN1d1V3lONzRwVGNOLVRYaDFvRVg?oc=5",
+      "published_at": "2026-11-27T20:17:12+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "barack obama, windows wallpaper, hd wallpaper, free wallpaper, official portrait, president of the united states, wallpaper hd, 4k wallpaper 1920x1080, america, free background, washington, beautiful wallpaper, mac wallpaper, official photo, cool backgrounds, desktop backgrounds, speech, conference, laptop wallpaper, united states flag, full hd wallpaper, us, wallpaper 4k, usa, american, 4k wallpaper, man, person, wallpaper",
+        "url": "./data/news-images/f9dce2d34cb36289d1fb4065.jpg",
+        "page": "https://pixabay.com/photos/barack-obama-official-portrait-1174489/",
+        "author": "janeb13"
+      }
+    },
+    {
+      "id": "bedaf1a11303bd403d",
+      "title_original": "Com ‘efeito Trabuco’, dólar despenca 7% na semana, maior queda desde 2008 para o período - Valor Econômico",
+      "title_pt": "Com ‘efeito Trabuco’, dólar despenca 7% na semana, maior queda desde 2008 para o período - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPNWtnTjdNSWtYTlNkOXN0OTVXOF9RNkw1S2d2ZUNVUHVDNGkwbUFDTEc3SnU5dkJYclpCXzI1anRPN2pvMERQcERfcmM1MzZoNWxQQ0tZOXRfdGpRbE5XZFQwUXd5YXVVVThicHBieDRmbExiQk1YNkZBSDhfSWc2NzU1TXJwQ2Zqb3ZiMU1WY0dXZ3RUcDJMWW9DYWZVeFFMQjY2UnVxRnpyQ2lrX0xqeWQtdWlLdF9OUW5TODdwdE5tM1BUQzZTWWNodG5FYmwzM0w5S21TY0tJcTJKdmg5cWhn0gHwAUFVX3lxTE44RTZhMTVnMU9sVlZ5U0gwQUI2aG1XWEdVUzdmbVJJQzJudlhXZEQwWjRGT29abThxYTY4ZlZaYld3NzZ4bXQ1LUkwNnF2M0VLZTlPNEk4U0VlZ0VBNW4wNmRzbF9PSy1nejNseFhyc1pnN2hpZTZmT1JyeFI2RURTNUU5ODhlTkRsUVZrRWZrVGZMVXd1dGVtTzFmclJTQ2hLNV92TjFGS0ZtSnFJbjQzX2c5clVxV3MtYlY0SzhJaUVCbGJSbFdaV0cxVng3bm9kN3RmVU1ORkpiTmNERmR0VU9oUVdSUmY1ZTFtcUNjag?oc=5",
+      "published_at": "2026-11-27T20:16:15+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "teamwork, cooperation, brainstorming, business, finance, office, team, partners, flat lay, meeting, collaboration, corporation, management, support, team building, unity, teamwork, business, business, business, business, business, office, office, team, team, meeting",
+        "url": "./data/news-images/6abc9a53777659830bfdb7ca.jpg",
+        "page": "https://pixabay.com/photos/teamwork-cooperation-brainstorming-3213924/",
+        "author": "Mohamed_hassan"
+      }
+    },
+    {
+      "id": "207cdda38d42a63dbf",
+      "title_original": "La harina de soja argentina se negocia US$ 25/t por encima de la brasilera en el mercado FOB La liquidación de divisas del agro - Bolsa de Comercio de Rosario",
+      "title_pt": "A farinha de soja argentina se negocia US$ 25/t acima da brasileira no mercado FOB A liquidação de divisas do agro - Bolsa de Comercio de Rosario",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Bolsa de Comercio de Rosario",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Kc1B0a1BwZG1NMlBlblMtQXg2Y1NZOEJnNk0wWFZzc3pNam1FUUw3TEZPRXhNM2dVSkhCbXJIODFDenRTZjJPN3V6d1ByaGljSHdBbzRaY3Y5am8?oc=5",
+      "published_at": "2026-11-27T19:13:42+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Argentina"
+      ],
+      "category": "Soja",
+      "commodities": [
+        "Soja"
+      ],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "es",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "green leaves, vine, garden, ground plants, foliage, leaf veins, lush vegetation, botany, growth, macro, summer, natural environment, ecology, bokeh, nature",
+        "url": "./data/news-images/c740cfb1b10276661b8ecfdf.jpg",
+        "page": "https://pixabay.com/photos/green-leaves-vine-garden-10572101/",
+        "author": "Designmine99"
+      }
+    },
+    {
+      "id": "8423414e8a5d00d2da",
+      "title_original": "Cargo ship sinks off Cuba, leaving one dead and three missing - Reuters",
+      "title_pt": "Navio de carga afunda em Cuba, deixando um morto e três desaparecidos - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSllJdGhGWXFGV21OLWJUT0l0VDZlb29SLXBldDdIckw0NHdMQWRSUlhuUEl5U2hra0pnLXN6dHdraVVJREtmQ3g1WkozeG9RUnk1NjNEWjlMb25hbGozQmt0RTNYV0VfVkltdXRqQ3RobFUzV09TeHI0WUwzQ3BpMDU0ZEk1emdLWU1OQm5Vbnl1cjRjZGo1cDYxaEw5UXpvM3piSjlqQzU5Xzg?oc=5",
+      "published_at": "2026-11-27T18:51:59+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Logística",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "motor tanker, cargo ship, invest, moored, rhine, rhine shipping, mooring, mineral oil transport, birsfelden, waters, transport system, ship, port",
+        "url": "./data/news-images/9cd23b088f1041988a57a74a.jpg",
+        "page": "https://pixabay.com/photos/motor-tanker-cargo-ship-invest-3140155/",
+        "author": "adege"
+      }
+    },
+    {
+      "id": "20660a5f9f6a038c48",
+      "title_original": "Equilíbrio fiscal: outubro fecha com superávit de R$ 52 bilhões - Agência Brasil",
+      "title_pt": "Equilíbrio fiscal: outubro fecha com superávit de R$ 52 bilhões - Agência Brasil",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Agência Brasil",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOSFMxX1ZSOEtuRXBRN3RsYW5TZ1U0M2wyeU9lTWcxSFZKT2dPNEpDejlTazdHZEpNMzNaY3kzSXQzX3dnelBMR0VtUzlPY1hpdjRLWHNQTUMzTUk5MmRlMndKaG9HU0UxalIxMm5ZcGg0VVc1Ymc5VlZNV2JQN2RYV2JpZERRdEZaYWViM3R2WDdMa1hremxOYXV5RzJVN0RhWjU5Nko0X3dGZDZsWjIzLWZoQUh2ckpqZDZWMzNJODUxc3FQaEN2MDg3b3lOLTlSSVN0OVdR?oc=5",
+      "published_at": "2026-11-27T18:28:00+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "office work, work, office, folder, files, file folder, balance sheet, accounting, invoice, management, organization, folder, files, files, files, files, files, accounting, accounting, accounting, invoice",
+        "url": "./data/news-images/3fffc8b3c623ac3e5f7a141f.jpg",
+        "page": "https://pixabay.com/photos/office-work-work-office-folder-3293203/",
+        "author": "Juergen_Sieber"
+      }
+    },
+    {
+      "id": "e501435179e4663145",
+      "title_original": "O que Luiz Carlos Trabuco, futuro ministro da Fazenda, já disse sobre juros, ajuste fiscal e gastos sociais - Valor Econômico",
+      "title_pt": "O que Luiz Carlos Trabuco, futuro ministro da Fazenda, já disse sobre juros, ajuste fiscal e gastos sociais - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOQVpFWVY3VGk4NlJtTk9BeUZvR2FxZGdsa0YtVUZJb0dlRWphZEcwN2d4cUdybk1wNTRBWnRoZjN6UFVXa1JjcERsWGZvNmQ5TzMtbk1NTmN1MzRVU3YwZkR5c284dU1UUUJhcnJTQkVLVS1VeTFiZm1lc1Vwa3E3aGJ3NXlDNDNLQWQxVm85LTFmMHlTaXd2YWo2dG5PZmdweWJMZWd6SkhpT2NLWm95RnQzZXcxODdZUzJ5NlpIeFNrSFBpM2w1Y29NZ0RyN2xWTFBLVkxvSk5qTzN1aGtBNVNpTDZycVJsMEI5dVh6cUw0NTVy0gGDAkFVX3lxTE5JZENoVVFGbExEdkRsX0hCamNhcUlhR0VaU3g1TGRQRXZJQUdET0p4QWg5UWMwOHc4RkZ5UG1XZjVJRzBWdUN3WHRJSnNJNFZFZGdFTDdEZHJBUkE2a1o3QWJEYk9URDc4b0FOTDJLUEtvakFNYmh4ZEU1cVhCZEdKdF8wZ3QtZXlWdnR3MHhqNm42NUpZbE9LbG4zc1ltYlA0dXZ5RHVxS3VwcF9RbWw3WloxVnhCaVVDTkZkSUdGSjdBa0UwbGxfNjdpRUNpckM4MnpfRlVkQlkzT1ViTzNRSUxxdnhKM0o5MmFObFZlalJTNHI3cTR3UnhYaXdVcVNvUWM?oc=5",
+      "published_at": "2026-11-27T18:20:30+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: juros",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "magnifier, schedules, tables, glasses, business, magnifying, data, document, concept, diagram, finance, growth, market, graph, chart, paper, stock, close, backgrounds, investment, searching, financial, loupe, graph, graph, graph, graph, graph, investment, investment, investment",
+        "url": "./data/news-images/3c44e664038e8da4e6ef4127.jpg",
+        "page": "https://pixabay.com/photos/magnifier-schedules-tables-glasses-5245329/",
+        "author": "ds_30"
+      }
+    },
+    {
+      "id": "f0f22c102256de7c0e",
+      "title_original": "Lula dá carta branca para Trabuco montar equipe da Fazenda - Valor Econômico",
+      "title_pt": "Lula dá carta branca para Trabuco montar equipe da Fazenda - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWXhZS3dEVjJsU1EzeHVPOUZrbU4wRjRvMjlZR0RwcmhHeEFOc3RiMGgtdVZjdlBUQUl2aVBBd3dlei11aWhaU01IemNJZ09WckVlbFJMY0VfdFctOGtNTTVEYW40SjJnLXRvckdzRXhzVF9Mc0NjNF9tWjZXakZ5YUtiT2xPV1Z6NlZuRjFuUmNxT3dDdkNXbU93MHpKTENsNGd5dGN1Vy1HeXc4YkZmX2ZFQnA2aEHSAcYBQVVfeXFMTm5hZFY2WjYtMmVRbUNXX0lxU2JkVFJTNGJoWnBpY2JpMXRTOUVPNzY4QzEzMlUxR2tIanBnZ2M3NThDNWxzbjdXbFAweGpnUEo1Ni1LdnJLa2tjQXZuREhTVTVxUFd0YjN0M21yajhyaFNhS09oQ09DX1oySHpETjVTSkNUVHNoX1M3WnVCSXFfZUFteDhQd21CN2Z0MlNGRHhLak90RkptMFREaVhLdlNyUVUxZXVXUDA2TDhPVlFCZHBBWUN3?oc=5",
+      "published_at": "2026-11-27T17:36:50+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "chart, laptop wallpaper, hd wallpaper, graph, finance, 4k wallpaper 1920x1080, financial, data, full hd wallpaper, stats, investment, man, mac wallpaper, hand, finger, person, empty, wood, paper, table, wooden, office, desktop backgrounds, blank, business, background, note, space, space wallpaper, document, notebook, above, wallpaper hd, white, windows wallpaper, page, coffee cup, desk, workplace, pen, copy, coffee, cup, work, paperwork, notepad, copyspace, pencil, view, beautiful wallpaper, meeting, desktop, cool backgrounds, message, free wallpaper, pad, sheet, texture, free background, information, computer, 4k wallpaper, write, wallpaper 4k, technology, laptop",
+        "url": "./data/news-images/de4442b41fc4ea23bf6da617.jpg",
+        "page": "https://pixabay.com/photos/chart-graph-finance-financial-data-2785979/",
+        "author": "Goumbik"
+      }
+    },
+    {
+      "id": "a898b60270d7999e3b",
+      "title_original": "US goods trade deficit deteriorates further as AI helps to lift imports to record high - Reuters",
+      "title_pt": "Défice comercial de mercadorias dos EUA piora ainda mais, uma vez que a IA ajuda a levantar as importações para registar um nível elevado - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOUhkOFctdmNWVmE4V25NYVFPXy1fbmpLZnJubGRnZDZQVkk1alZaNE1hMjNJMkVxMFY5aFZVclJnTmM5WkhEVjM0OUFlMEVXc2pLX3VGMzBZOVFuZ0JqWHFTWWROTmY5dkFzMDdSTFR4THE2WEt6dmd6ZVVob1kwOFdyUHpvaVZndmExTTEtbG80VVN4?oc=5",
+      "published_at": "2026-11-27T16:52:21+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: import",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "seagoing ship, tanker, north sea, mouth of the elbe river, bow wave, shipping, transport, supply, elbe, cuxhaven, hamburg, tanker, tanker, tanker, tanker, tanker",
+        "url": "./data/news-images/f0136cd6f682264c2e1f4e5e.jpg",
+        "page": "https://pixabay.com/photos/seagoing-ship-tanker-north-sea-4113071/",
+        "author": "hpgruesen"
+      }
+    },
+    {
+      "id": "ec8915801385ad0e9e",
+      "title_original": "Receita Federal e CGIBS esclarecem emissão de documento fiscal por condomínios - Governo Federal",
+      "title_pt": "Receita Federal e CGIBS esclarecem emissão de documento fiscal por condomínios - Governo Federal",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Governo Federal",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNQVliOVAwTGgtdDcyaGtKRGFTOFdZUXgzRTRfclFBSzlQbW8zSF9zcEV0QmJTZFdLcDFjQ0I2ZDRoYmhxWU1IUmE1aUZhdXZuX29YN1NRU29RczlFT0h0WEZkWVZHTnhRWG5lYlVKUGVpZUQ1VFhqN3VKRkVrRG5rRjNYamNXVElHWkM4dFI1THlDeHVjbnJQSDllWmxxMmlmZ0lMQkRVeTBobWFSOEVVUUFyRW1vZUtRdWc0bWx2YjBTUnNscXhkVWdQd25OMHVvanRCVWRlaHloLWZyb2gyQW15aUE?oc=5",
+      "published_at": "2026-11-27T16:39:28+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "hungarian parliament building, night, windows wallpaper, danube river, danube, architecture, wallpaper 4k, background, budapest, free wallpaper, building, beautiful wallpaper, full hd wallpaper, free background, laptop wallpaper, wallpaper hd, mac wallpaper, capital, city, cool backgrounds, hd wallpaper, 4k wallpaper, cityscape, desktop backgrounds, destination, 4k wallpaper 1920x1080, downtown, europe, evening, government",
+        "url": "./data/news-images/01b528cc8a1a537ac8356fe8.jpg",
+        "page": "https://pixabay.com/photos/hungarian-parliament-building-night-7506436/",
+        "author": "niki_emmert"
+      }
+    },
+    {
+      "id": "7c9b477ff97fcf00f0",
+      "title_original": "Iraq in talks with OPEC for higher oil quota, minister says before OPEC+ meeting - Reuters",
+      "title_pt": "Iraque em conversações com a OPEP para maior quota de petróleo, ministro diz antes da reunião OPEP+ - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOdndaSmMtcnZ2OU41SkZNYnNtNlU5ZnRWTFlOamJLb0x6eHRhRHJuQkNMY1oybHlpOUFkRWdncURJcUc0eGZvM2JNZUc4SGdvZG0yeTJFY0llZWJUeGtMRzQxaHFZNmZ0OS1YWFloelk4eDBVenhkQlotREpzR2F1cFgxbkZaT18zRWtGbHd2aTZENWFDMmhKaU13WnpSQkhIaUZGTDZtMFkwa2ZxUjdpTkRfTXRZMkNUcW1FM3hn?oc=5",
+      "published_at": "2026-11-27T16:37:43+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Petróleo",
+      "commodities": [
+        "Petróleo"
+      ],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "nature, industry, sunrise, trees, chimneys, exhaust, environmental protection",
+        "url": "./data/news-images/7111740cb83f8bdf80b1d309.jpg",
+        "page": "https://pixabay.com/photos/nature-industry-sunrise-trees-9448741/",
+        "author": "Tho-Ge"
+      }
+    },
+    {
+      "id": "5bcbe5835bde85c1af",
+      "title_original": "Trabuco na Fazenda pode favorecer ações de XP, B3 e BTG no curto prazo avalia Citi - Valor Econômico",
+      "title_pt": "Trabuco na Fazenda pode favorecer ações de XP, B3 e BTG no curto prazo avalia Citi - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPWnVncUhIVFl6MF9PSTRTek9fYk5rb0pHVENTMHdPYU16N2NpOHN6NS1lYjJfWFE3REstWU5MQ1RnNzIzM2VNa2twUjBQRjBEOUY3bVNoRHlmZ0RfUW4wQk1xOS1DX1FZZVNxR1p1UnU0S1pDUWpHUjBkVzhGN3lseGgzeHRCREtZdDB2LWVDelM0Wmp0bkM4dy1MaTRieXFVd1JNWUJGWXBkYnFRZTdZVmJUTFdrMkMweGIzeHdiZVZMeEE1Q0ttc1gyd3JxenhlVXBV0gHiAUFVX3lxTE5SVGdTeE10TVNSc0c0cDRMSEluenFJRU45bXhuLUZvandvZTJveC1pYy1RRm5QUnhrRUZOcHdwaTd2VWhNVkd0Z1BRWHgzc0tKbFFwZlJhX0x3ZWF0SmxGQmx6QWtGcVhCaXd1MW9fRWdLa3pWNzR2X3B6VFE5d0x5MWZ4RjVjM19HbTRIR1JmTWJUbHl2czM2ZGRxdERFX3VFRVpEWmw2cGg0blUwUmVVRGloeXRjQ0FhcU00aHFET3V2TkItR0hmRU56NXVnUVFKQlB5akJjTnVMNGM2d1ByOVE?oc=5",
+      "published_at": "2026-11-27T15:26:41+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "europe palace, europe, flags, germany, star, flag, eu, europe flag, european, eu flag, strasbourg, european union flag, country, euro flag, states of america, international, euro states, blow, fence, flags, flags, flags, flags, flags, eu, eu, eu flag, strasbourg",
+        "url": "./data/news-images/6b7a0f94a862975f4c9db0c1.jpg",
+        "page": "https://pixabay.com/photos/europe-palace-europe-flags-germany-5414751/",
+        "author": "USA-Reiseblogger"
+      }
+    },
+    {
+      "id": "f43e5d50c5c1ad5bac",
+      "title_original": "Safra 2026/27 de soja é estimada em 182,3 milhões de toneladas - Canal Rural",
+      "title_pt": "Safra 2026/27 de soja é estimada em 182,3 milhões de toneladas - Canal Rural",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Canal Rural",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNLXNrMndJTkZwRjlaMkVOVXM3OG0zQWtxYm1FakpqWXRJSHJYZ0hxQkVKamZOLUJVaDBwSDBjN0RKdjI5ejExenBEY2hHWUlQQ3RkTWJtNjVIRjFkM0dOcHo3eWprM3p3M2tfMXVTMjZSYTdGdWhrbzlrR25QRHNWM3dxcnRVQlZ3d0ZZZXJ2M2FDNXNEY3Z5dXFfMUx6OEw3Q0JjakZuWQ?oc=5",
+      "published_at": "2026-11-27T14:54:26+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Soja",
+      "commodities": [
+        "Soja"
+      ],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: safra",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "floors, soybean, soy, nature, germination, soybean seedlings, farming, glycine max, green, crops, food, landscape, plantation, end of summer, fields, foreground, leaf, summer, seedling, soybean, soybean, soybean, soy, soy, germination, germination, germination, germination, germination, seedling, seedling, seedling, seedling",
+        "url": "./data/news-images/bdad926a27f50dc8628767e3.jpg",
+        "page": "https://pixabay.com/photos/floors-soybean-soy-nature-1331667/",
+        "author": "jcesar2015"
+      }
+    },
+    {
+      "id": "7ab8d0d4e315bc38de",
+      "title_original": "Queda do farelo de soja melhora poder de compra de produtores de ovos e frangos - Canal Rural",
+      "title_pt": "Queda do farelo de soja melhora poder de compra de produtores de ovos e frangos - Canal Rural",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Canal Rural",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQMVFZME1pOFQ5V0p1Tm8zUUQyRlNkOHZvWGpiN1dtUGpnWVVib3d5T1dRaEt2dnZMNUxDbXk4am5YaXE3LS1fcG0tT2JDc1g1NnZCTm9yaXh2S2EyLVR3eG5wWGdlTmxGTVB2SWpZazdQX1V6LVludHRXbXdrSl9FWXdDaDcxcy0tMFYzbDlGbk91b05UOThCMlQtalMyRnJ2RzNaallSVkRkaFNEZy1BbXlmWTRKWmpFb0NDY21iaVpBSWJFOUE?oc=5",
+      "published_at": "2026-11-27T14:13:12+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Soja",
+      "commodities": [
+        "Soja"
+      ],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "wisconsin, landscape, scenic, sky, clouds, barn, windmill, buildings, soybeans, field, crop, agriculture, nature, outdoors, country, countryside, rural, farm, hdr, wisconsin, wisconsin, wisconsin, barn, barn, barn, barn, barn",
+        "url": "./data/news-images/98e12b2e3bffc423a9157346.jpg",
+        "page": "https://pixabay.com/photos/wisconsin-landscape-scenic-sky-1809870/",
+        "author": "12019"
+      }
+    },
+    {
+      "id": "ce3eaab4c4a2d928ad",
+      "title_original": "Dutch PM to discuss MATCH Act chipmaking export controls with Trump at G20 - Reuters",
+      "title_pt": "Primeiro-ministro holandês para discutir os controles de exportação de chipmaking da MATCH Act com Trump no G20 - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQWWxBYUpTVDhrVzJiSHloOE1CUnA4SURkemtJVFRkM2g5ZWxUUFBIeVd0M3EtWThILU10MV9jcVJuNjNzdlVibndDU2JTMDdTc0pMZnJuZ1d4STNvbmtYMmY2VU5UcHlxaHpIeHM1YmR3MDQ5MEY3c0lsTFhJbEtGUlRmMWczRFVKLU0zUHkzUVhnZjFDMWVfbEZ6V3lKbGZFVDNyV2lVWGFNM2ZnWWRmcmc0R2dMdw?oc=5",
+      "published_at": "2026-11-27T14:07:44+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: export",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "tanker, ship, sea, transport, supply, barge, shipping, freight, nature, cargo ship",
+        "url": "./data/news-images/70262e071db3e67cde49f5f9.jpg",
+        "page": "https://pixabay.com/photos/tanker-ship-sea-transport-supply-7254523/",
+        "author": "makabera"
+      }
+    },
+    {
+      "id": "874402d8c1b7d72572",
+      "title_original": "BC pede projeções de impacto da reforma tributária na inflação antes do próximo Copom - Valor Econômico",
+      "title_pt": "BC pede projeções de impacto da reforma tributária na inflação antes do próximo Copom - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOekRNTmNTYV9Qd18xYkx0WjBJd3JoZzMzVUUzMERSWGlMSUlxM2lBLW4tRDFNZjI4Unl1SDhnbE9zOVNMTnBwUjFHVzFLVHN0eEI3YU9FNzFZUS1TZ1Jza1lFRm9fdFdFSFpjQ3U5UEpqY2NDXzlBeUV2TVNUREkwUUhtQ28tcDBWRi1RWm1hMDgtVExKNHQzaEtPN1luWGFCeDVXM2hmNVNOcnJxYmJFb1VKX0NzTGNvMXFwVEhsVjdKQXlqaU42TExZR25qWFNaTmxF0gHiAUFVX3lxTE9XZ01lSENoOGxLVi0xNUR2UkoweHVPQ1h3X2xyZllLNU9TcWMtRHJaOS1CV1VmNWdWWFNBdjZYVHNyUEtFNVJpN3lOSjUyXzZDS2VkN29UdTE1ck1LUVk3TXdaNEhyTWJSWkFyUmFtc3VGWWJ4ZzJtOThTSTFrdmlYMUtDenc0ZWJlSGcxejZ1QUNUN0Y4a2NHTDRtcnQ1TEV2MV9Kd1dwUjNUb21idFpHSi1JdlRiZERTWTBVS3AyTFV4aGV2ZEJmWFhSaVVYVjhMYXh5cUxTNndqVHZ3eHA0X3c?oc=5",
+      "published_at": "2026-11-27T14:00:59+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "working, female, work, desk, office, think, thinking, work, work, office, think, thinking, thinking, thinking, thinking, thinking",
+        "url": "./data/news-images/541f619d35699734ebf33209.jpg",
+        "page": "https://pixabay.com/photos/working-female-work-desk-office-791849/",
+        "author": "kaboompics"
+      }
+    },
+    {
+      "id": "04ad284d3c6dc1b4b7",
+      "title_original": "US stock selloffs trigger a new kind of dollar bounce - Reuters",
+      "title_pt": "A venda de ações dos EUA desencadeia um novo tipo de rejeição de dólares - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZGRGWE5fV3A5Um9RYUlPZ1ZTRjlHMzBHckV2bmhVbkFTX0xqZEJ0dldFMkN0NFNlYUNOLXpLR25YNU1fdzNyajYyV0JHcUFELUtLU3FMN3E5MWlCS0dqLVIybTF3bXpRMU5CeHhxbXFpeHNhNzVMZ2RnREdUaXZCbGdCQXh1YUxKRXhuUVpUb3k3SDl4ZGt5ZQ?oc=5",
+      "published_at": "2026-11-27T13:17:43+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Câmbio",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: stock",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "bitcoin, crypto, btc, cryptocurrency, currency, money, financial, blockchain, cash, brown money, bitcoin, bitcoin, bitcoin, bitcoin, crypto, crypto, crypto, crypto, crypto, cryptocurrency, cryptocurrency, cryptocurrency",
+        "url": "./data/news-images/922c6c4c410b6078087e526f.jpg",
+        "page": "https://pixabay.com/photos/bitcoin-crypto-btc-cryptocurrency-3890350/",
+        "author": "petre_barlea"
+      }
+    },
+    {
+      "id": "e6ad73b85f929cda9f",
+      "title_original": "Juros futuros despencam no primeiro pregão após confirmação de Trabuco - Valor Econômico",
+      "title_pt": "Juros futuros despencam no primeiro pregão após confirmação de Trabuco - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPOEJ6QzJFOEcwX19NSzFTU2YyUUptWDl0eUE0LVhBVXRKc04yZlJwUW5kbWY3Q2drdF9ONUZSYkc2UUFpLWctSF9odzhlbnJMdWVFaEV0RVJJV3RfT2o2NHUwZFFuRm9oMzNSeE9sMi1pNFc5bVZvbkdwWVB6NXlsajhjVkZBMmxiN21DdVBaUEtRWnRYc0ZqU29WZjNzOWl1X3FHNk5ENUdoUUpzY3VxS040X2VuMDdYMHlpWEFXUm5nVzBFV0h1Z9IB1wFBVV95cUxQNU94SF83S1pDRkpiYlN4TW1RODlrWmIyc0pLd3ktUFpqQkFiNmtsb1E1eHVja0JJZFBEVFJSOEd2T1BmX2VWOUdEdUg2dWszTDFuV2VQOERkTFl6Q0pqZXE1aDFfUXMxemNCd0REeUI1NzBsaTByMHhfclc3ZkdCLU82NWxxdzFSZThzQWV6WEIwNHh1eF9ZaG1oY19GWG1XNEhidHFLeVU1cWpIMzhSeFN3TmszeXJpd1owLXZ5R3MtZDhrMjV5bkh1b0MyLVR5ajUyUGpMQQ?oc=5",
+      "published_at": "2026-11-27T12:18:27+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: juros",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "old letters, letters, handwritten, calligraphy, font, old, ink, style, handwriting, penmanship, handwritten letter, nostalgic, vintage, closeup, old letters, letters, letters, letters, letters, calligraphy, handwriting, vintage, vintage, vintage, vintage, vintage",
+        "url": "./data/news-images/e1df15827971f2515f47c677.jpg",
+        "page": "https://pixabay.com/photos/old-letters-letters-handwritten-436501/",
+        "author": "jarmoluk"
+      }
+    },
     {
       "id": "bed489812f311efca7",
       "title_original": "Juros futuros têm forte alivio em risco e recuam com Trabuco na Fazenda - Valor Econômico",
@@ -135,7 +803,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBrZHZ5THJ1ZlFYWmdxNEMtbWI4TUp2cnlLWVVKRGFsXzNOSVlZQThaOVBYR2xOdUVCb3MxZTY3UFk3dUtZSjI5Y25IcjVsZFhU?oc=5",
       "published_at": "2026-11-27T10:26:53+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Malásia"
       ],
@@ -402,36 +1070,6 @@
       }
     },
     {
-      "id": "0dc485ff52420c7e77",
-      "title_original": "Fed está pronto para elevar taxas de juros - Valor Econômico",
-      "title_pt": "Fed está pronto para elevar taxas de juros - Valor Econômico",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Valor Econômico",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNV0JPOEtjNHZJWFRqNDJWM1lnc0dTOTd6UnhWaFRJWUVINnVsQS1KOC15XzV5ZnZWX1RMWUFUVjNzTm5NSDU1V09OS2x3UlNzQkpGZWc5NnN1NkhSNGw4em1RcmJwQm9TOElfcHBxVDd1MDJEbElPMmZNRV9RZHpVYUhTTHFhY2tic01HWVVrVjIwbVJaclptazJFQzcySG5fQkHSAbABQVVfeXFMT2dMZm1lU2tZb2htNlg4YmlDdXg2VjQ4ajZPaUlwMmdOSnZ1a0FGVnlOWHpFOGU4VDFlcy10U1pMampiRnFjV3B4NzdWSVF5RG8wQVZMUGtQSmthNy1NbndZRTNKZXpkT1FBQ1Z1bXNMQU5MWnl1enJFSFptdHRoWllNbzIxVi1KcmVIWDI0QVFlb3Y2Z3FackI4ekRFaHVRMTdTTjBKTFo1RXlkQWFNT24?oc=5",
-      "published_at": "2026-11-27T08:00:01+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Economia Brasileira",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: juros",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "money, financial, grades, real, brazil money, savings, economy, finances, coins, wage, brazilian currency, ballot, budget, income, financial education, financial, financial, financial, budget, budget, budget, budget, budget, income, financial education, financial education, financial education",
-        "url": "./data/news-images/1b22b7a9870e50fb24faae95.jpg",
-        "page": "https://pixabay.com/photos/money-financial-grades-real-1632057/",
-        "author": "joaogbjunior"
-      }
-    },
-    {
       "id": "a233e6d5b5e0bb1171",
       "title_original": "Expectativa por Trabuco na Fazenda leva Ibovespa a disparar 6% - Valor Econômico",
       "title_pt": "Expectativa por Trabuco na Fazenda leva Ibovespa a disparar 6% - Valor Econômico",
@@ -492,36 +1130,6 @@
       }
     },
     {
-      "id": "4a9a0873beb5b7f14d",
-      "title_original": "Trabuco, do Bradesco, é escolhido para o Ministério da Fazenda - Valor Econômico",
-      "title_pt": "Trabuco, do Bradesco, é escolhido para o Ministério da Fazenda - Valor Econômico",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Valor Econômico",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVldTT3VQMEY1RDJKa05ydjVIaVBhWlNRZE1EdThzcl9fQnVBZks3ZS1ZWjAxTGFXOGR4YXozTjQ4VHhaZmhVUVh2MjhmVE8tWW9yWDFZakpwTnU5VVJ2NEJaSnQyOGY3a3JQWERxYTlwalVhYXBwRXViYlB0aWZ5SHpyTTlDOG1nX19jSFZhQnNzZjY3d2lOU0JObWJLNkhURVMwQTJuRno0c19YOHRnLW5HcEV3U1hRM2fSAcgBQVVfeXFMUHBwdjJtLWR6dFRPaWtzSWpFLUNBTjlCVDJ1eTJRallaUENjbnU0LWoxZldPUUcyWXFxdmZNWkIxb3Z4Vl80aVItWVBwbmJGdjBzaEpySjJ4Qnk4LWQzcVBfQjE3cHhPYkYwNzVqRUtLMFgzZDVoVWR1RXQ2ZXJFY25SYmRLV2ZKUkVaZGlTQ05HU2R0ZkVqTmhPN2VpNHc4Q2ZjQ2hybTNTR2tvM3NWU093TXY5R2xmYThpc2xYOGZreG9aR3BMZng?oc=5",
-      "published_at": "2026-11-27T08:00:01+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Economia Brasileira",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "god, brazilian money, ballots, brazil, faith, religion, wage, wage, wage, wage, wage, wage",
-        "url": "./data/news-images/99151d6bd4adacc84b355b33.jpg",
-        "page": "https://pixabay.com/photos/god-brazilian-money-ballots-brazil-3114511/",
-        "author": "Pedrosa_picture"
-      }
-    },
-    {
       "id": "3a7ad33a87a6daef94",
       "title_original": "Setores industriais e de infraestrutura pedem adiamento da reforma tributária - Valor Econômico",
       "title_pt": "Setores industriais e de infraestrutura pedem adiamento da reforma tributária - Valor Econômico",
@@ -552,6 +1160,66 @@
       }
     },
     {
+      "id": "0dc485ff52420c7e77",
+      "title_original": "Fed está pronto para elevar taxas de juros - Valor Econômico",
+      "title_pt": "Fed está pronto para elevar taxas de juros - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNV0JPOEtjNHZJWFRqNDJWM1lnc0dTOTd6UnhWaFRJWUVINnVsQS1KOC15XzV5ZnZWX1RMWUFUVjNzTm5NSDU1V09OS2x3UlNzQkpGZWc5NnN1NkhSNGw4em1RcmJwQm9TOElfcHBxVDd1MDJEbElPMmZNRV9RZHpVYUhTTHFhY2tic01HWVVrVjIwbVJaclptazJFQzcySG5fQkHSAbABQVVfeXFMT2dMZm1lU2tZb2htNlg4YmlDdXg2VjQ4ajZPaUlwMmdOSnZ1a0FGVnlOWHpFOGU4VDFlcy10U1pMampiRnFjV3B4NzdWSVF5RG8wQVZMUGtQSmthNy1NbndZRTNKZXpkT1FBQ1Z1bXNMQU5MWnl1enJFSFptdHRoWllNbzIxVi1KcmVIWDI0QVFlb3Y2Z3FackI4ekRFaHVRMTdTTjBKTFo1RXlkQWFNT24?oc=5",
+      "published_at": "2026-11-27T08:00:01+00:00",
+      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: juros",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "money, financial, grades, real, brazil money, savings, economy, finances, coins, wage, brazilian currency, ballot, budget, income, financial education, financial, financial, financial, budget, budget, budget, budget, budget, income, financial education, financial education, financial education",
+        "url": "./data/news-images/1b22b7a9870e50fb24faae95.jpg",
+        "page": "https://pixabay.com/photos/money-financial-grades-real-1632057/",
+        "author": "joaogbjunior"
+      }
+    },
+    {
+      "id": "4a9a0873beb5b7f14d",
+      "title_original": "Trabuco, do Bradesco, é escolhido para o Ministério da Fazenda - Valor Econômico",
+      "title_pt": "Trabuco, do Bradesco, é escolhido para o Ministério da Fazenda - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVldTT3VQMEY1RDJKa05ydjVIaVBhWlNRZE1EdThzcl9fQnVBZks3ZS1ZWjAxTGFXOGR4YXozTjQ4VHhaZmhVUVh2MjhmVE8tWW9yWDFZakpwTnU5VVJ2NEJaSnQyOGY3a3JQWERxYTlwalVhYXBwRXViYlB0aWZ5SHpyTTlDOG1nX19jSFZhQnNzZjY3d2lOU0JObWJLNkhURVMwQTJuRno0c19YOHRnLW5HcEV3U1hRM2fSAcgBQVVfeXFMUHBwdjJtLWR6dFRPaWtzSWpFLUNBTjlCVDJ1eTJRallaUENjbnU0LWoxZldPUUcyWXFxdmZNWkIxb3Z4Vl80aVItWVBwbmJGdjBzaEpySjJ4Qnk4LWQzcVBfQjE3cHhPYkYwNzVqRUtLMFgzZDVoVWR1RXQ2ZXJFY25SYmRLV2ZKUkVaZGlTQ05HU2R0ZkVqTmhPN2VpNHc4Q2ZjQ2hybTNTR2tvM3NWU093TXY5R2xmYThpc2xYOGZreG9aR3BMZng?oc=5",
+      "published_at": "2026-11-27T08:00:01+00:00",
+      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "god, brazilian money, ballots, brazil, faith, religion, wage, wage, wage, wage, wage, wage",
+        "url": "./data/news-images/99151d6bd4adacc84b355b33.jpg",
+        "page": "https://pixabay.com/photos/god-brazilian-money-ballots-brazil-3114511/",
+        "author": "Pedrosa_picture"
+      }
+    },
+    {
       "id": "93e25e29e3f3e6eb09",
       "title_original": "Palm oil posts over 2% weekly gains on rival oils at Dalian - The Edge Malaysia",
       "title_pt": "Petróleo de palma mais de 2% ganhos semanais em óleos rivais em Dalian - The Edge Malaysia",
@@ -560,7 +1228,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE92Um9aSDNiSFc1ZHQyd1VDTkNnQ3JrV0FIQ0RNQ1hOZXRKNHZIMW1HTUZJZmNVazVZUTZvM1REVlF1dWdpd0pacm5fdW5wZUdM?oc=5",
       "published_at": "2026-11-27T07:33:52+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Malásia"
       ],
@@ -624,7 +1292,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdFhhQzVlSnZ0TUtmdUY5WUhtWHd3R1kyTXpLZTk2XzFINUFmYWlKakpFcmZsS21GNEdKd0VUMTVReHZmR0xnM2dxRjk3aXA3U0lXX3F1cG55REhGMGd2NVJzUzFkNDBKQmJOTENiWlJ1S2FxMFE2QjZhSEpyeWhKay1WeUNGQnB3NFhQUy1qdjJ4dmNqWkNjbUVqUWxsSUVtSTJrWEw0Y0hzQkxFYUxTU05FNUd3NjAtNENwVUFvOVZidw?oc=5",
       "published_at": "2026-11-27T07:18:00+00:00",
-      "collected_at": "2026-11-27T10:47:58.014842+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Índia"
       ],
@@ -646,6 +1314,36 @@
       }
     },
     {
+      "id": "2b472adb5e976d8618",
+      "title_original": "China's factory slump likely extends to November despite solid exports - Reuters",
+      "title_pt": "A queda da fábrica da China provavelmente se estende até novembro, apesar de exportações sólidas - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObTJEX3lna0xGOEJxYnJoM2RkemlfOUdUakRNM3BmTmF0TUtpRmRrYVE3VnRlanVYNzZaYVRNUlc2aWhzUnlSX3hyRDlXc182MERSV19SRFgwcTNhWS1zNUowcjFDOGhzcllxSHEwR09VZTBpVnp4WUZIdnhSckRabEZOdXlUS1lxZFRDUGNRMXlZU20xMlJ6WFB5QTNHWDczTmxFV0lDZmY2bTlObWtVdUhsTWRhdw?oc=5",
+      "published_at": "2026-11-27T07:15:00+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "China"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: export",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "tanker, energy, landscape, ship, sun, power, boat, sunlight, sea, ocean, petroleum, gray sun, gray energy, nature, gray boat, gray power",
+        "url": "./data/news-images/77fe3747df7dd9b29fcd2b10.jpg",
+        "page": "https://pixabay.com/photos/tanker-energy-landscape-ship-sun-4279995/",
+        "author": "LhcCoutinho"
+      }
+    },
+    {
       "id": "71b3479585ae94cea4",
       "title_original": "India-US trade deal is nearing completion, minister says - Reuters",
       "title_pt": "India-US negócio comercial está se aproximando de conclusão, ministro diz - Reuters",
@@ -654,7 +1352,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNMkR3N0t3ZmV1SDk5LWNGa3hCcXVleWpPVFpORzVUZnUtYUJoUXQ2eFEzN3ZrQjcxMHhCaXk0NzY4M2NkSFNic1Q2aGJYZlZoYnFlSG5iU0NQX1dUNWZzci1xTU10bm5UbGRYSWkzdno1c3dDRlpZWjVxNjRaWkF5ZzlJdGxsUlJpWUFTbDZCN0d4bFlqN3NNOG4xdy1zZy05TmxNZTlR?oc=5",
       "published_at": "2026-11-27T05:21:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Índia"
       ],
@@ -767,6 +1465,36 @@
       }
     },
     {
+      "id": "efe1c5fed376309128",
+      "title_original": "Rupee rally takes a hit as AI trade revival dents shares, currency sees weekly dip - Reuters",
+      "title_pt": "Rali Rupee leva um golpe como AI reavivamento comercial denta ações, moeda vê mergulho semanal - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTVpnbGF5MDlLb2hLcjBEWnM2ajc3TkQ0R0tmYy1ZV2lMU2NpeEMtdG95djVVcDVFY3dZMmxRSjFPT19sWDJNeDNCcTJyLVJYelprdFNIdkNOQTV0NG80VjV3bTVkYXhBb3JWY2ZydEJsbFVMUll0Q3lkZVAyWWkwY0NNV3lVcll6YzVqcDU2SGZma0c4cm5WR2ZSLVlTekx6LUgwUGlWTWNuMlBXeEhrQTIza3Q4TTBC?oc=5",
+      "published_at": "2026-11-27T02:47:00+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Câmbio",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "europe, pay, usa, banknote, business, cool backgrounds, money, full hd wallpaper, windows wallpaper, mac wallpaper, free background, wallpaper hd, rate, hd wallpaper, bill, dollar, cash, finance, currency, american, us dollars, texture, background, beautiful wallpaper, pattern, european, market, euro, free wallpaper, 4k wallpaper 1920x1080, brown business, brown money, brown texture, brown finance, desktop backgrounds, brown pattern, brown company, wallpaper 4k, 4k wallpaper, laptop wallpaper, brown market",
+        "url": "./data/news-images/4617689ad52d72c6f2fd0373.jpg",
+        "page": "https://pixabay.com/photos/europe-pay-usa-banknote-business-69527/",
+        "author": "PublicDomainPictures"
+      }
+    },
+    {
       "id": "4093b71a75f56b7298",
       "title_original": "Rupee rally stumbles alongside equities on tentative AI trade comeback - Reuters",
       "title_pt": "Rali Rupee tropeça ao lado de ações em tentativa de retorno comercial de IA - Reuters",
@@ -797,36 +1525,6 @@
       }
     },
     {
-      "id": "efe1c5fed376309128",
-      "title_original": "Rupee rally takes a hit as AI trade revival dents shares, currency sees weekly dip - Reuters",
-      "title_pt": "Rali Rupee leva um golpe como AI reavivamento comercial denta ações, moeda vê mergulho semanal - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTVpnbGF5MDlLb2hLcjBEWnM2ajc3TkQ0R0tmYy1ZV2lMU2NpeEMtdG95djVVcDVFY3dZMmxRSjFPT19sWDJNeDNCcTJyLVJYelprdFNIdkNOQTV0NG80VjV3bTVkYXhBb3JWY2ZydEJsbFVMUll0Q3lkZVAyWWkwY0NNV3lVcll6YzVqcDU2SGZma0c4cm5WR2ZSLVlTekx6LUgwUGlWTWNuMlBXeEhrQTIza3Q4TTBC?oc=5",
-      "published_at": "2026-11-27T02:47:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "europe, pay, usa, banknote, business, cool backgrounds, money, full hd wallpaper, windows wallpaper, mac wallpaper, free background, wallpaper hd, rate, hd wallpaper, bill, dollar, cash, finance, currency, american, us dollars, texture, background, beautiful wallpaper, pattern, european, market, euro, free wallpaper, 4k wallpaper 1920x1080, brown business, brown money, brown texture, brown finance, desktop backgrounds, brown pattern, brown company, wallpaper 4k, 4k wallpaper, laptop wallpaper, brown market",
-        "url": "./data/news-images/4617689ad52d72c6f2fd0373.jpg",
-        "page": "https://pixabay.com/photos/europe-pay-usa-banknote-business-69527/",
-        "author": "PublicDomainPictures"
-      }
-    },
-    {
       "id": "9f3c4b9f4b4e03598c",
       "title_original": "Indian shares snap blistering rally after four weeks as oil prices climb - Reuters",
       "title_pt": "As ações indianas snap bullying rali depois de quatro semanas como os preços do petróleo subir - Reuters",
@@ -835,7 +1533,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVDF2UTZXY0ZrSVVuYktpbG1TWVI0aU5wZENOV1Y4YlZZV1NiTmhyeWYxMDB6MGl1cWR3ZllHTWF3YkxIT1BhbDRjQjd6SUZvaTRybUZPZDBtSjMySTlqMVdZMklDWEtKUzI3OGQ4R0l4WjlDcWRNemtmY3dUV25kYThKRVNXWmZ0am4zenFldkZvNk8yWHZQRnMzR0pfUzg1OUxGRlkxMmtIVWtkNEw4aE5rQU5KOGZjOTd0ZFNGcw?oc=5",
       "published_at": "2026-11-27T02:30:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Índia"
       ],
@@ -856,6 +1554,36 @@
         "url": "./data/news-images/8d9adc4cb753cc50e6471272.jpg",
         "page": "https://pixabay.com/photos/rhine-industry-refinery-tanks-5366666/",
         "author": "Tho-Ge"
+      }
+    },
+    {
+      "id": "d05185d3be8a0a57d3",
+      "title_original": "Dollar set for weekly gain as risk appetite returns - Reuters",
+      "title_pt": "Dólar definido para ganho semanal como retorno do apetite de risco - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWkt5OU9rSlNUam1waVVQSzc0cWNjMWk3N0xXSnk5Q1p4UlVHSG5JdGpkZGxVLWI5bW9QOVUwMGRsOExnNkc1VkZWUHllWWQxOV9QX0xTLUVxbGcxOFV3NHQxUnpUQUJRTFh6aXZ6MlpOb3d0eHRucTNQOERjNHlfS01YTlk3dTBwX2ZfWVFjdER1Tkl5V0NDODlzclpSckpUT3c?oc=5",
+      "published_at": "2026-11-27T01:03:00+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Câmbio",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "stock, trading, financial, finance, business, data, investment, market, money, exchange, trade, profit, economy, stockmarket, forex, commercial, funds, currency, bank, rate, stock, stock, trading, trading, trading, trading, investment, trade, economy, economy, stockmarket, stockmarket, stockmarket, stockmarket, forex, forex, forex, forex, forex",
+        "url": "./data/news-images/cfe71463c43f5c299ad9d550.jpg",
+        "page": "https://pixabay.com/photos/stock-trading-financial-finance-2463798/",
+        "author": "AhmadArdity"
       }
     },
     {
@@ -919,6 +1647,66 @@
       }
     },
     {
+      "id": "aab0d11de53afe9ad9",
+      "title_original": "Trabuco aceita convite de Lula para comandar Ministério da Fazenda | Radioagência Nacional - Agência Brasil",
+      "title_pt": "Trabuco aceita convite de Lula para comandar Ministério da Fazenda | Radioagência Nacional - Agência Brasil",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Agência Brasil",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdWt0X3NqR0U1dFlVZWRRY0Rmb2kzVXh3TEJEeDhOa0cwS3NJMVFOdTFqdHRCNThOMGpzbFN4Ylp3czduZXNxelFxOGVnZl9ZOWlUZFpHaVlKd004WU5GR0hpZ1NLQTRQMkg4QW9BVGMtOUpJQ1hKSVU2NGFtU3p4cUtDcldqUUg4RHRudW45ZGF4WDBURW1hVi1qY25KLTRybl9GclQxSXBFSG1RY2hHMVJpTzZ3dml4RFEySnZyUkV4TlpGRmpmeUF0M3J5WnJpR0tlNmlyNS0zSnNp?oc=5",
+      "published_at": "2026-11-27T00:32:00+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "federal chancellery, federal government, nature, government, berlin, building, architecture, government district, germany, sunset, dusk, Berlin, Germany",
+        "url": "./data/news-images/32c817bbf53cb6db6239b843.jpg",
+        "page": "https://pixabay.com/photos/federal-chancellery-637999/",
+        "author": "LoboStudioHamburg"
+      }
+    },
+    {
+      "id": "ebe424fffbbb456436",
+      "title_original": "No X, Durigan deseja ‘bom trabalho’ a Trabuco e coloca equipe à disposição para transição na Fazenda - Valor Econômico",
+      "title_pt": "No X, Durigan deseja ‘bom trabalho’ a Trabuco e coloca equipe à disposição para transição na Fazenda - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOWURiRGd0OE1SLTFrTzIxZU5qYjBiOS1EczdQc212RUYxcnVJZTJOOUtCZGN0SmxNTXJfQkx0RjN0bmNiM1UtQnJTUThFenJ3TU01ajh5dGdwOC1IUXZ0S2llbzRNQWFRbzVNai04cF9fdWhfZTBZSTNTeTZlWm0xUzZRdTVKN0lxNUZhRHBIajhQYUNBTWVIbnVBYUpIczlqT29pdzh0Sy03RUdMYTh3RWl5OHVMcTZnYjllTW1DRHNxWVFmYU5aV2pLTXgtYTRqejZLQTZjcTZrYTlmTUNJN0xqSzJVWUxBbkdn0gH6AUFVX3lxTE0wa1piYzV3X2VHWXNSVkVqdldhMlFfb2NRRW5YVFljanl0c3c5cjdieDhwWG5sMEZUX3ZLb0EzNHBleV84ZUFpbkN5WmQ3eE1wX01YWkhualJuMFhYSzJvSXBHZUxGTTFNQzNKNGh0R2kyQTc5OE90bnBFY3llZVRjODZZMm1udkRoZDM5U182VGlWSkRWckVEUENMVmlPWWNPT09vT1FYcFROYjEtLUwyVlNMd0dFS0kxSGZxdE9mQkR0MzR1U1NhaDZDbldmOEs1Z1NQX2VaOGUxOFNuaGlPRDdsbS1zTkJ1eHJCejZfQUl3VW85X0UyRVE?oc=5",
+      "published_at": "2026-11-27T00:26:26+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "bookkeeping, accounting, taxes, settlement, calculator, money, business, finance, billing, documents, office, desk, secretariat, macbook, binder, folders, bookkeeping, bookkeeping, bookkeeping, accounting, accounting, accounting, accounting, accounting, taxes, calculator, money, money, money, finance, finance, finance, finance, billing",
+        "url": "./data/news-images/6ac0b74794bade4a5860d201.jpg",
+        "page": "https://pixabay.com/photos/bookkeeping-accounting-taxes-615384/",
+        "author": "Firmbee"
+      }
+    },
+    {
       "id": "a5b974dfb48bb8c3d3",
       "title_original": "Para Anbima, Trabuco na Fazenda mostra comprometimento do governo com gestão econômica competente - Valor Econômico",
       "title_pt": "Para Anbima, Trabuco na Fazenda mostra comprometimento do governo com gestão econômica competente - Valor Econômico",
@@ -976,6 +1764,36 @@
         "url": "./data/news-images/009977df5975d084b81891cb.jpg",
         "page": "https://pixabay.com/photos/accounting-report-credit-card-761599/",
         "author": "777546"
+      }
+    },
+    {
+      "id": "3274d1c2280365929b",
+      "title_original": "Shoppers look for respite in big Black Friday discounts as inflation bites - Reuters",
+      "title_pt": "Os compradores procuram descanso em grandes descontos Black Friday como mordidas inflação - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNXzUyQUp1enhRcjVIdWlBejd2XzFsdXVwaFF1SUswaVBuTzBKMkE2cU5GdnVSX2tiMjVIYnQzLXFKN3E2UWZ0bVZkX3dvdjEzaHRQRUdsM1pBOF9vaG0wYWVKZ2JNam5zWXZmT25QcVhPcWIwcDQ5cEx2U3QyQW1LcE43UEpGQVhpMF94bjVid21hYm9YbEZ0UnhBTnhPdlBJRFpzbFhsbWxBNndmeGNjcHptNXhJMnlQNk94TQ?oc=5",
+      "published_at": "2026-11-27T00:03:00+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "supermarket, stalls, coolers, market, food, fresh, shop, organic, vegetable, healthy, grocery, store, fruit, ripe, yellow, freshness, marketplace, hypermarket, colorful, stand, consumer, nutrition, brown food, brown shopping, brown vegetables, brown healthy, brown shop, brown fruits, brown grocery, brown color, brown nutrition, brown groceries, brown market, supermarket, supermarket, supermarket, supermarket, supermarket, market, market, market, food, shop, grocery, grocery, store",
+        "url": "./data/news-images/e0f371327fc71151dba8168b.jpg",
+        "page": "https://pixabay.com/photos/supermarket-stalls-coolers-market-949913/",
+        "author": "ElasticComputeFarm"
       }
     },
     {
@@ -1107,11 +1925,11 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQY25OMnN4NU9UMkpqZXcxWk5oMkdHRnR3alJpWVZfMnZVOEN2U1k3Z0xkVTdEZTFoSm9KdXExUnVReGhGeDl5SnprUncxOXpzSGpOazRVOEMzREczYzF2ODNaTkh4b2l4Q1dCU1JhekJIVXFNX1J1eTdlNmFpbTVSYU5BRUQwRmZzU3BvMjEyTmhOd3JXZlRjY1cwUjV0LWl0QkhVTVUzQmFKYmlJaEtQdXZORUdnZ25GZnZHcU04UEMtWDg?oc=5",
       "published_at": "2026-11-26T22:54:36+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Brasil"
       ],
-      "category": "Economia Brasileira",
+      "category": "Comércio exterior",
       "commodities": [],
       "impact": "Médio",
       "impact_reason": "A manchete menciona fatores de mercado: tariff",
@@ -1122,10 +1940,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "supermarket, stalls, coolers, market, food, fresh, shop, organic, vegetable, healthy, grocery, store, fruit, ripe, yellow, freshness, marketplace, hypermarket, colorful, stand, consumer, nutrition, brown food, brown shopping, brown vegetables, brown healthy, brown shop, brown fruits, brown grocery, brown color, brown nutrition, brown groceries, brown market, supermarket, supermarket, supermarket, supermarket, supermarket, market, market, market, food, shop, grocery, grocery, store",
-        "url": "./data/news-images/e0f371327fc71151dba8168b.jpg",
-        "page": "https://pixabay.com/photos/supermarket-stalls-coolers-market-949913/",
-        "author": "ElasticComputeFarm"
+        "tags": "gas carrier, lpg vessel, ship, tanker, petrol, oil industry, sea, sky, port, m v kuwait gas 2, kuwait port, boat, oil import, transportation, nature, blue industry",
+        "url": "./data/news-images/7b563873fcf931f57e106b14.jpg",
+        "page": "https://pixabay.com/photos/gas-carrier-lpg-vessel-ship-tanker-5085700/",
+        "author": "Capt-M"
       }
     },
     {
@@ -1246,39 +2064,6 @@
         "url": "./data/news-images/06e0099010098584024f0109.jpg",
         "page": "https://pixabay.com/photos/analysis-analytics-business-charts-1841158/",
         "author": "Pexels"
-      }
-    },
-    {
-      "id": "e58b954955c89cec44",
-      "title_original": "Palm oil rises on Indonesia's proposed new export charge - The Edge Malaysia",
-      "title_pt": "O óleo de palma aumenta com a nova taxa de exportação proposta pela Indonésia - The Edge Malaysia",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "The Edge Malaysia",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5STzhZMTFCRU5KSXdTTF9tdGdfVDdhVThmU2tsc3NuVzJMS2VJN3VNbEhhNzNwTWFOSzdBcDQ1N2lWbWF2TTNRcktXeEhVd3N2?oc=5",
-      "published_at": "2026-11-26T20:59:41+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Malásia",
-        "Indonésia"
-      ],
-      "category": "Óleo de palma",
-      "commodities": [
-        "Óleo de palma"
-      ],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: export",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "cycling, farm, oil plum, gray farm, Senai, Johor, Malaysia",
-        "url": "./data/news-images/a9c2dc86ca599a48c85fe008.jpg",
-        "page": "https://pixabay.com/photos/cycling-farm-oil-plum-gray-farm-2104784/",
-        "author": "chiliapi"
       }
     },
     {
@@ -1501,7 +2286,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUUc4WG9ENXhCb3pYbkROeHlGUFFQRWVhYzFienJfUDJxSmdJbUsxYjMyVldjMm44ZFNrWW1IVmhvUVBDd3d0ek1fSUpySzgzc19sdE5iZkNBRU5NdmVzaWdRUExsU2pmRVFpbnJBakI3eVdjalhNanVEa3RUZmg0cW5USEE4cWo1Z1psb3otY05ScUpJcG13X1NuSWdfQU1uY0EzTTB3?oc=5",
       "published_at": "2026-11-26T17:45:38+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -1531,7 +2316,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWDAyOS03ZTA0ZzRTRmR6d2diZDJ5X0V0ejhjSlg1MzhMaTlCNU1LNTBCYVlJS2VhVV9USmNxYnNGYk9CaTdYckN1NVBZLWNKQm9BYXB5SEpNYVMyN3hzbFRjaExPY3piakNDakM1Qm1NSDJ1MFJLZzF3NGN5TFVCYThrYmNzZFhyVzN1bVBhaXh6a2t4cUxNQzBGUnpWVVFxb1l2cFR5WE1UZ0tvUEpDcw?oc=5",
       "published_at": "2026-11-26T17:43:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -1580,6 +2365,36 @@
         "url": "./data/news-images/6af70f591bb859c9092e93ad.jpg",
         "page": "https://pixabay.com/photos/child-girl-cute-kid-young-7317938/",
         "author": "SEASON-V"
+      }
+    },
+    {
+      "id": "eebb3af56548e43a4e",
+      "title_original": "China opposes proposed US tariffs - China Daily",
+      "title_pt": "China se opõe às tarifas dos EUA propostas - China Daily",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "China Daily",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9qem4zTVNaT25Qbm54a0RnV2lEQlA3V3F5Tlk4Z25pbXh6TlllWi1GeTd2ZjA2UUJ3VDhXZy14QTg0eGxjanhycFF2V1c2WmVtNGhBOGFLOE9Hdk5vTERNVmctbDdSNzZBc3FLempTQTkzRWVjbTloRFpONHVTdw?oc=5",
+      "published_at": "2026-11-26T17:28:09+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "China"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: tariff",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "the outer port, pier, oil port, tanker, discharge, crude oil, clear, oil tanker, sea, waters, ship, industry, port, wilhelmshaven, jade bay, north sea, crane, nature, industrial plant, technology",
+        "url": "./data/news-images/104c93c380c66456664f502e.jpg",
+        "page": "https://pixabay.com/photos/the-outer-port-pier-oil-port-tanker-3108235/",
+        "author": "hpgruesen"
       }
     },
     {
@@ -1651,7 +2466,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPaHhmUFduZ0tRbWFBQ2xIRmtIZDU0S012anU5bEx3SGVzOXVmV1JkNGxIZkNXV0RYTWJlNEVqUTFoS0tnQ1QtcXI0bVlJT25XQ1Y4TFZvczVTbTFPWTc3eUF6MzF6M0swR3JYTGR0ZjNwZVhhb2dWUjNBSjBod1ZfWU4zajFXMnBYUU1YY3pNQXNDWlRQa2VILWVJc25tcnJpV3ljRW95RjViUXM?oc=5",
       "published_at": "2026-11-26T17:09:43+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -1681,7 +2496,7 @@
       "source": "Canal Rural",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNUUJCRUc4YXNpV3ZDRzJXVnRQRUptVXM2WXVCNkhQaTBHRnF6RC1CZHFFZF9aelRja1g5TDdKWHZEVm5BU0Q0SUxyNFpPMWNmTHhBX3VzU0tCWHowTHJYUVFPOENpSFoxVU9rak9XTURLaTliUnYtbkdSWDRWbG5uYkNvVDhBRnFCQlhWS05Nc1lhSEdpMjNhclRLU21WZ200SkpKTU1vSGRuY3BWS3VrbmJPdkhTZ3VkSUN3ZXlMcDBnQVo5aDlZdg?oc=5",
       "published_at": "2026-11-26T15:21:41+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -1711,9 +2526,9 @@
       "summary_pt": null,
       "summary_original": null,
       "source": "Valor Econômico",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaVpiVXdMSGRXb1BYb2hEMGxfbmpxdXFIdkFQQmlDWVpYUUZlYXp3d3BkXzd2MTUyY2xrN2VnR2ZEdlFZc1VxUzJXa1dONmYxTnFoMGk0VGFucWY2YnFkY2luSUNGZE1OTVpIdkxWVkx3eG0zbWxHa2gxanpaT19oUE9KQlFKbjRNSmU3cDNRaFh6MmFKR21RZjVOXy14NEpyTFNVRTNrTTVkY1lXSDktSGYzNVA5OFkxckkyWGJuWUUzYWxyeU9GMk9B?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaVpiVXdMSGRXb1BYb2hEMGxfbmpxdXFIdkFQQmlDWVpYUUZlYXp3d3BkXzd2MTUyY2xrN2VnR2ZEdlFZc1VxUzJXa1dONmYxTnFoMGk0VGFucWY2YnFkY2luSUNGZE1OTVpIdkxWVkx3eG0zbWxHa2gxanpaT19oUE9KQlFKbjRNSmU3cDNRaFh6MmFKR21RZjVOXy14NEpyTFNVRTNrTTVkY1lXSDktSGYzNVA5OFkxckkyWGJuWUUzYWxyeU9GMk9B0gHYAUFVX3lxTE00MlBjMlhma3JzRkZiZUVyOVNaeTgtelUtNlNXUmgxT0IyY3RlQXdXby1qZlpuNW1OY3ZXWGkxQ3ozdUxTOEEwLWZ6ZGRSNU11SElLSmg3bzVjNWdHaDl1T0xqSmQ5cUNlNm1XQ0V1dXRVNlFWTlRxTWJJYkt5d0FYZ1F3Uk9ueUdvYzVxdFd2ODFNbmlKYUxOdVBYMWxQZGd6Z3FyWDQtQzE3Ri1QVWFMV0RRYldRV1BhTHZtRVd4WXlPSURhbXBlalNKamdocHB2ZUxRbHpEdA?oc=5",
       "published_at": "2026-11-26T15:19:41+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -1797,6 +2612,36 @@
       }
     },
     {
+      "id": "672bb0e24b5d4d4330",
+      "title_original": "Swiss economy expected to suffer only minor hit from higher US tariffs, economist says - Reuters",
+      "title_pt": "A economia suíça espera sofrer apenas um pequeno impacto de tarifas mais altas dos EUA, diz economista - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOd0RfZDJxYldqU3VOVTd5SUFSZlFiMHlTMGI2dVNEMkpVTlZRNlRTSy1lMnV4MnFLRmhqMEQ5UXI2LXg3b0wyX2hFSUhwUnM0ZmpFcWtNUVlHTE9pVlhseFlwcXBlNENYZ0o2Zkp5S00yNVNLMFQ3WWdJaGp6NXRxczBWdndPdmdVeXdxVUJDWTlyeVBRMThYd1NEdF9QYnVEWkpqOTRHWU9KbFJFejk3VERiNVhUOHE3R0lPVHI5TmJXdWljRU80?oc=5",
+      "published_at": "2026-11-26T13:51:45+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: tariff",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "tanker, vessel, transport, industry, ship, port, raid",
+        "url": "./data/news-images/eebe91437df5651d62913b37.jpg",
+        "page": "https://pixabay.com/photos/tanker-vessel-transport-industry-6816030/",
+        "author": "zzkonst"
+      }
+    },
+    {
       "id": "8cfb45f578918b8de7",
       "title_original": "Passagem aérea, gasolina e energia empurram IPCA-15 para baixo em novembro | Brasil - Valor Econômico",
       "title_pt": "Passagem aérea, gasolina e energia empurram IPCA-15 para baixo em novembro | Brasil - Valor Econômico",
@@ -1835,7 +2680,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPazJOREJoNmhjSkxHQmw4R09UTUluX0tONmFncWhCS2g0bkxDckl5bDlyZzhOLUgxeDBhMHMzYzFPR1c2dGFGS2ZhZTNCQnpfNk9qZHB3OXlVNUFmbmpIMkhkMkhfVC1vLUNwOGZTVVpieGlwVnR3YnVKMVMtTUlyREtDWmdlN29sbkE?oc=5",
       "published_at": "2026-11-26T13:36:28+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -1865,7 +2710,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdVdRWHdFWmhsVnBsWXd0RE5sdWtTTDlJN2lXSkxLTnhWVk5nR0RRSkN6cHVZV0pKZ2ozcWM3dUxCNVZUWDdENUpBOENveTROOUxudGpHNlk1Ny1jeTZSLTdINmdlWTJLVm9HWXZ2UU9RbGFaLV90UkFBZl9TLTByblUtMVQ0UTlO?oc=5",
       "published_at": "2026-11-26T13:04:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -1926,7 +2771,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYlR6OVYzNjI0N0hVQ2FsMVFSWU13djRFWmZDLUFQSUNoOFdWZ2RSdlZuLVZvbjc3bDlwWGlrN3NLMnktVFQtTndObHZZQVBFTjRGSkY0SmJVSkVteFYyY2RXRDNfRkdlQ1VNVWtkbjBQZmgtbXhpYTFXOElWeDYxNVlHdUlwVnhDV28xZlJoSC1GQ0tjcGRvXzZjNnpvZ2l4SHNqS1pLaFpaUQ?oc=5",
       "published_at": "2026-11-26T12:30:05+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -1956,7 +2801,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQV3BlMEIyV0IyWU0zTE1xSllodC1Lc1E0VThIaGIxanBOX29CZ1c0alNwOFFXS2VCUWlhTUd4Ylp3TXIyOTZCOVYxMFVYazlPZmd1XzJvdWJkczkzLVl3MkJjMXA0SHNDNnAtMmMxTHplRnRLVTJCdnZQVzNfcVZyODlCQzZPZk02YUd5RDR2bExtdw?oc=5",
       "published_at": "2026-11-26T12:25:47+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -1978,6 +2823,36 @@
       }
     },
     {
+      "id": "c7fb75d01624a0a4b1",
+      "title_original": "Australia delays final vote on gas reservation law for LNG exporters to February - Reuters",
+      "title_pt": "Austrália atrasa votação final da lei de reserva de gás para exportadores de GNL para fevereiro - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPS1QwUkxuakdFVVE1NjBCcDVBRDlCa2psb3RPUmp1N2VveDNBVi1EcHFZV2Qzckk4dF9TUTFWVjh0WmxYWWZfTUxKQlBnWnlkQ1Z2dXNkeFZlb2tpN1hRNnctZFZhOGZDU2ZPcUh0S0p0bWdubGh0cjFILWp4Tm5tck5EbUYySWF1RVBhTmRHR3J4WmJFcVNXYXlwY0RrY1ZEMlh0TWdKMlJjNW1YZWtYUEJ6MV9LR0pFSEE?oc=5",
+      "published_at": "2026-11-26T12:19:10+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: export",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "ship, waters, sea, transport system, industry, oil tanker, coast, nautical, port, alhani zueitina, north sea, nature, jade bay, tanker bridge, delete bridge, by the sea, jade weser port",
+        "url": "./data/news-images/a7ef97d7f7a97d783c59432d.jpg",
+        "page": "https://pixabay.com/photos/ship-waters-sea-transport-system-3157954/",
+        "author": "AntjeBartholdi"
+      }
+    },
+    {
       "id": "a79afcc6d635070382",
       "title_original": "AFRICA-FX-Ghana, Uganda and Zambia currencies expected to lose ground - Reuters",
       "title_pt": "ÁFRICA-FX-Gana, Uganda e Zâmbia - Reuters",
@@ -1986,7 +2861,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa1dDUndpMmlsYmhnUEFHMXgwYnVzeDZmYjFLVkpPdkp5aHJGaUUydnZVMlhEbnNyaWpISDVRTjJ0S0w0MU04bWpwQk1Jc0pIZ3lxZE5ETVlWenV1dDZRaDBfV2tWQ3ZmTjN2VDI3RzZ4dmxFWFN4bFBwQTRaNk1rQWNzWlI1YzRmd1I5YkVLX09vZHdYdlRyWF85N0RORlZRVFpxamRzQnNlNFNJcVBF?oc=5",
       "published_at": "2026-11-26T11:26:02+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2016,7 +2891,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNazJTSjI3dk40ZnhoM2ZJR2N2eXp0NUFoaWUxNUI4NW9wV19YWEtpd24tS0t5YnFHV2YzSkRmSXdiTnR6cjRuMTROY1d1VlQ2NUR3UjNNMUJkeU5XQVBOeUQ1VnVTQmtQU3BVOUNndHdyeUhvWDcxdmRHMGtheVJCREs4UzdCWS1VVDQwcmdQYWtILXltMHRhN1UxeTVtdGhuMFhpemlOdDRkLTB5?oc=5",
       "published_at": "2026-11-26T11:10:56+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Índia"
       ],
@@ -2046,7 +2921,7 @@
       "source": "European Commission",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5EMGlvbnZobTVQRnRvVU5EZWcxQWdlRmFMZkxlMzFHei1VLWUyV1RqODVubWZuOElmSWg4a0dHRy1XRFF6Mjh4a2NDY0psNjRXRHZlOHFsSHAtWVhTZmk1amhtWnI3TF9CcGN6S0NOSWc3czJ0NEE5LW1NR0JnZw?oc=5",
       "published_at": "2026-11-26T10:08:13+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "China",
         "União Europeia"
@@ -2288,7 +3163,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE42YUZwSm1FSzNvY1NNVUlrTVZtMC13X09aS3BmSHRpYkd5b0poVFZzRzJYWi1GeVdEbEUzSl9GOXF5RlVmNVhiaWVjOFBLYkJ6?oc=5",
       "published_at": "2026-11-26T07:14:37+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Malásia",
         "Indonésia"
@@ -2321,7 +3196,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOaUdXQjZTRVJvNzVESnNzMlpfZmxhTEgweFZsUHRZRTVLa29xcENmUjJaUUNjWExsaVNTREJqNlNwSFZzNXFuRUFqSlpRam4tZkZHWXEwZXQ5VlhPVFJzcmNnZEw5a3N2ZVBndnpnNzhiN1Y1NkRtU1M5WE05UmRFcGMzUVk0NXYyRTVpM05MOUhISDhmb3BPTERXcmNHWE9zc2dR?oc=5",
       "published_at": "2026-11-26T07:03:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "China"
       ],
@@ -2343,6 +3218,39 @@
       }
     },
     {
+      "id": "e58b954955c89cec44",
+      "title_original": "Palm oil rises on Indonesia's proposed new export charge - The Edge Malaysia",
+      "title_pt": "O óleo de palma aumenta com a nova taxa de exportação proposta pela Indonésia - The Edge Malaysia",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "The Edge Malaysia",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5STzhZMTFCRU5KSXdTTF9tdGdfVDdhVThmU2tsc3NuVzJMS2VJN3VNbEhhNzNwTWFOSzdBcDQ1N2lWbWF2TTNRcktXeEhVd3N2?oc=5",
+      "published_at": "2026-11-26T05:50:02+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Malásia",
+        "Indonésia"
+      ],
+      "category": "Óleo de palma",
+      "commodities": [
+        "Óleo de palma"
+      ],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: export",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "cycling, farm, oil plum, gray farm, Senai, Johor, Malaysia",
+        "url": "./data/news-images/a9c2dc86ca599a48c85fe008.jpg",
+        "page": "https://pixabay.com/photos/cycling-farm-oil-plum-gray-farm-2104784/",
+        "author": "chiliapi"
+      }
+    },
+    {
       "id": "07d16c753c83504738",
       "title_original": "Singapore 'very disappointed' over new tariffs, urges US to reconsider - Reuters",
       "title_pt": "Singapura «muito desapontada» com novas tarifas, insta os EUA a reconsiderar - Reuters",
@@ -2351,7 +3259,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVTBhUG5wa3oyMWZJSVhaWlo3V0hiVjlsUlN6bXRXTVdpUmVlaWFzSkFOVEF0UEc4cTJESV9CVDZiSzdvVV9tS2JOQVU0X3BPdDdXejYzM2VPWnF6UjNLMmI4ZndCa2w2WXdwTVRQaGFSZ0pfY3FFdXRhMllLVVowdWJIblU3dEUtZi1XU0Jrc1J2NS10LUFLTnNZS0o0bnB6eGlRSGVLWHJnV08xem9YV1FNMA?oc=5",
       "published_at": "2026-11-26T04:11:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2381,7 +3289,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWHpfX3p2RFoxU2l0SGZVbVdSejdGYkc0NFpERWlxVEtab0pQbGd1NUtqQ3c0cXprdWItUF9fRmVVVElET3BNbklnbElwaC1UZ0xoNnd4dE9Wb2dFVDFGN2JyQ3YyUVhfTWxsNGFWNFNURG5kX1pMdVBtb2QyLXFMaXZPM0ZPdGdud1hWdHFuTEpNQXBtdUh6RmpWcW1jelhTU0JHdmp3dWphb0hB?oc=5",
       "published_at": "2026-11-26T03:08:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2413,7 +3321,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQdTBpdWE3OHFzWWtzUUpIUHNYdzZVNUtiTjg5SVZndWxPQjE5VjUtUXA0Qk9KbmtFTVBIM2tqcUp5djQxczctUUVvcWFUaGFOYTZjNkZqVzNKcm9YbW1RaTdfc1ZjZDZCSnAzODhwUjRQeUV0eXlJRjAzV1pKb3ExS0dtMzRRRmdnUVVzS2lvcUdSeVZ5dmJoX2NYWnpfczZJN05LcW5ldlFZNEp0SjVqWU1UQkJ0dExPUjFN?oc=5",
       "published_at": "2026-11-26T03:06:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2443,7 +3351,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcVVHMmNCU2duUTNWNkVyNzMzUmhKMWxJZExIQVJwc1hhcDlMNS1KUzYxMnFjc3dGeTViMGg1YmhJUGhjR3REQjRqbks5cTMzMmVpaWtyWHhCOHo0YVg5ZHNfYkJ1NmgtMWxZRU1ib0pUejloVVExcmxqeGJXZ1NQNTJ4YTc5WWEzN3BOaFpnNVIxTk1Gc1ZLbE1PNjQ4c2dmS2Yw?oc=5",
       "published_at": "2026-11-26T02:38:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2475,7 +3383,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQeGRxVzhWY18xWGQzRlVEbmZBbU9lcnR5WEpveVIybFY3X0I5bVNXN2Q2NWZUTUl6eGJYQUZoeHEwSFJqYzhGZDV4Yk9OV29Qc0dXSXFEbm9PY09FQlhNWVlQb2ZEN0FlelZvQVJyT2N3WU42X3phd3ZYVVczQ0RORDFwaW5vd0NxTnozeEpYU3VIVF9NcGtGYng0VWRnT0hk?oc=5",
       "published_at": "2026-11-26T01:44:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2565,7 +3473,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPS0FSUjN0THdiZzJpSzctaWg1Vks2dVhSTlNVWTJuZElHcEQ5WGNUX3BVWUgxVmdESnJ5WHExUFloSUlWQTdtZ0g4UEtLTUwzczE4bHB1V3lEczBpcE9qeE5aZjZJZ1lXeGlGQTh0NDM1WnlFTjlONFRGd3ViTHJzMEQxOGhkMUZpUmxBd1A0WE1TdTFmTDhJdFVBQ05kY2dHNDZkWURzc2s2MXFnRTUyNTgwZllaTFhSdVpFQjl3?oc=5",
       "published_at": "2026-11-26T00:30:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2654,7 +3562,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNOUJSZDlKMEI2OHVpZjlzVFhrbXlSVFpZRHFCMWFSSVVHRmZhcG9WVHlObTdFVGhUdjROUmRCYWYyRmFMQjNaMTlsOEktdVcyYlR6YjlMQUtiTXhPRm8wSTVRWGNLbllNVTVxR3VocFcxa1ZEQlZyeEpOTXk2ZUdENjczRl9zYnA4ODJQaEM4eHo4ZnNZdWZGOGdneVZ0ZjFDMGc?oc=5",
       "published_at": "2026-11-25T23:41:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2683,7 +3591,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUGF3UXNuQWFId2NPaERJLTVlLUhkQlp0WGpPNWRaamVTN3BmVFc5YkY3NVkzNHhJLUx6aTN4c2hZVnRucS13S1hMVlJWMEhzNllrYjJDSzczMndmRm5EeUhreW1qb0dpUG1HdTBrdnUtdGRLdFRVaDBWcFFEOXBsZ3gxMXlMNjJFbWk4ZzVtYXF3bWF2Z2NzZ3dTMmE5THV4VGdnRw?oc=5",
       "published_at": "2026-11-25T23:31:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2701,6 +3609,36 @@
         "url": "./data/news-images/769c6033c2e852f6cc1c78e3.jpg",
         "page": "https://pixabay.com/photos/ship-sea-transport-vessel-ocean-6580994/",
         "author": "papazachariasa"
+      }
+    },
+    {
+      "id": "2635ddcc6cf5674d5f",
+      "title_original": "Taiwan says it is confident of keeping previously agreed tariffs with US - Reuters",
+      "title_pt": "Taiwan diz que está confiante em manter tarifas previamente acordadas com os EUA - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcG1xdFN1WlF6MWxzVDZhdVZhOUpVMGprdUVpSE1hbUxZRjB2Q0RuTE9JOVRmX1pJYlVDUDJYdW1hVGk2UmRJVWxwbVNYOUlSOWlJb2NpRnRsSlppc1RoUUpONl9ndEQzTVYwY3RKdm1RZFNGX2xEemFBcVN1M2dWSUU3cXB6UWRZU1l3eWp2dTZQQ25Lcm8tX0hObGVneWFZR3V1ZlJoOXctQUZmdGREb1hjS3htWlhNRHN6UjRXTkxQUQ?oc=5",
+      "published_at": "2026-11-25T23:31:00+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: tariff",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "wilhelmshaven, pier, tanker, discharge, oil port, crude oil, deep water, jade, jade bay, wadden sea, water, nature, tide, supply, north sea, coast, north sea coast",
+        "url": "./data/news-images/4c128b685dc0cd55ff54bc67.jpg",
+        "page": "https://pixabay.com/photos/wilhelmshaven-pier-tanker-discharge-1578577/",
+        "author": "hpgruesen"
       }
     },
     {
@@ -2742,7 +3680,7 @@
       "source": "Valor Econômico",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNT1pWMUk5N2FRMmIwZmFwR2wzeER5ZVJZaEItUXpRYU1NU3RHUXo0aFBJTHRBeGw3VG1MbkNTNkxMT25CdnhnSjRUeHgyc2JIeVFjM1NncEtIVHgyeldGc3JPOG4wSklEQmtsSHFYQURuQUZsOFp2a1U1ZHFoTTlEQV9kblpVeVFsVWVGV2c2U25nYk1tN3pRdjk1NEJTQnZJYWltcExwcno0Y0tvTHBwZTRxQVpueHZqR0JMWjVqZ0lENEdFbmNTT0ZiZUY4TFRiWFNz0gHiAUFVX3lxTE44N3VpTGZoVUtjOVFzd2hoUFFwYXowOHd2RjdndllJX3ZPLUx2TzVjV3RueXlLVlItX0dzTFBBcGMwUVNiSnRYY0xueUwtSjVrRllhNC1yTGozNnlnanFmeFBjZDN2NTNCR3J1YUZPV3R1TWZwck53Wjd4Zk83VExEcEhPSk52ay1ORUU4cU5DNFhlLTFlN2IzMlo2MGxaRWpORnFCelBoNVJDMEdia0VKbHNTcFFNQjl0eGpFb0NQMWx1eHpFV0RsUTJmejlKSHFCOFNsRFk1QTdveTJNSnBybnc?oc=5",
       "published_at": "2026-11-25T22:23:38+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2858,7 +3796,7 @@
       "source": "Canal Rural",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQZnFYWG91X1RqNkk5Qm5jYzVJdHVaX2ZSbVExQWtRM3NDcmdwMi1INTh0dTc5b2xlMXU1QnpDYzkyMkUyRE1qMEZ3dDV0aTQzX1A1VWViVURXZFE3azcyX3JkMG5qTlFXYkdUdlpBb3VNUl9UU2pHdG5CQUpJXzZPb2YtSC1ncVJKR3g1cXdLMTdYTy12SDdKRFNYNVZsYXBxVkwzQVgxWlg5RUwyc3BYQkUwRWRPdTVFRFdydFBzcXNKSnlmWF8yYmZsMVRjaV9Cc1NzMQ?oc=5",
       "published_at": "2026-11-25T21:21:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2890,7 +3828,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVGl4Nzdfc01ReTB5TnAxUkVLTXlaRVFvbGM5aTZDOEtVUXlrVDQtMHJwcWh2WldoMnVyb0QxU1pEQUoyN09sNU1SZXR3NVUzdTZXeWpkdGNTZW95MUtmdjV3dWFxTEZsRW5WUlF1djVTTWZxUGVxcHhPNEptMnBEcmZ0MURhX0JxTDFqc19HblpWd2hLSEs5SXRYTXB6bzFwNzZqOUFTc1ZOM3ItVDFZWmM2a0R5YkxsdnlsMTZWQ1ZEUQ?oc=5",
       "published_at": "2026-11-25T20:57:17+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2920,7 +3858,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZGd2TDZySmQ2VXE4QUhfUG1OOGU3S3l4eWVDMGFKLWNVRlp1dE1zYnNmOUNYTGpQeGZtS3RrWC11R0x0aEo2YnBsU2Y1NTEwT2V2eF9fQmhfLXc1ekFmajRGUWg0NVZheFBtUy15RWd6NkpsZzFSZTY1M1FIYjI5b2htVWVYemdvRDQyTUFQbw?oc=5",
       "published_at": "2026-11-25T20:50:19+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -2938,6 +3876,36 @@
         "url": "./data/news-images/1829954df0dba9bcde950f3b.jpg",
         "page": "https://pixabay.com/photos/ship-freighter-tanker-oil-5562741/",
         "author": "Freiheitsjunkie"
+      }
+    },
+    {
+      "id": "f5e9a83aefe95bd368",
+      "title_original": "Fed survey shows continued economic growth, sticky inflation in recent weeks - Reuters",
+      "title_pt": "Inquérito federal mostra crescimento econômico contínuo, inflação pegajosa nas últimas semanas - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZm5vWXNOWWIxaUVxUEVsRDBCWmpwYmd6eWJMLW1tcnJMVmxvR08ybXFaYWlFcVZ2YU1fYk9hbWotWlBXTzVValBHSFFzNjM1QlpyVWNCXzFPTFRZMUtWeHp0SThmaWxRMTVYVXp3UlM2R3pKQnVNS2hiZ1VERU9EVnFGNlA5dGZEa1NtZ1o5REVxM3ZzX2ZpOXRaN0lydzlDZk1VQ2FlS212U3dw?oc=5",
+      "published_at": "2026-11-25T20:42:46+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "woman, face mask, market, hijab, people, store, grocery, shopping, farmers market, buying, customers, market, market, market, market, hijab, hijab, hijab, hijab, store, store, grocery, grocery, grocery, grocery, shopping, shopping, shopping, shopping, shopping, farmers market, buying, customers",
+        "url": "./data/news-images/ff1e647d8d03792e122c24e1.jpg",
+        "page": "https://pixabay.com/photos/woman-face-mask-market-hijab-5632026/",
+        "author": "Antonio_Cansino"
       }
     },
     {
@@ -3038,7 +4006,7 @@
       "source": "Canal Rural",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQWXFCTGNRd0I1MWZkc2FNY0RKX29pVU9fXzh1azItclZPT05ZRV9Ga0tjMGtkbWE4U1RZbzRKSkI2a0hwLW9UdUdpMElDdzFzOUFqdUZrV1N4VElkaDJpaXdZOHRBeVhDakszSmxOeUNIRlJ5TS1XaE1PRUlfZXJHbUQ5em5DWjNndzBaWkc4QWw4RV90YWo4emJPeUNJdVFZT1FHUXlhVWRQZDJnRGhyS3FrOGRoS1Nfb2NfWEV1OFJQRGFGenpRTll1dXN4ZVNiMEpGbE02ZkpydU5qQ1ZCMA?oc=5",
       "published_at": "2026-11-25T20:02:09+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -3100,7 +4068,7 @@
       "source": "www.gov.br",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQaXlWdjRpVExzOW96akNSajI1NHpUWmdSWkVqeXFxVUtYNnhmVTl4RHV6VktLMXNyOWdWSVBxSjdULURUTFc1YnNPZ05DRUdNbGk3TXlGOC1BUzJ1WFV5MF9tV0hwYk9rLVVGLTg2R256V0lTc3dRblN2RWZTZE5uNzUzc3ZBTkFMc1pNR1dUNENYMXJ2Z2xUc0FZYkZYQkgzNUZnQW1TM2htNlE?oc=5",
       "published_at": "2026-11-25T19:35:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -3218,7 +4186,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQRmdGMDdiZVhMaEZiM2hLVlNhdXQzZkM1b2F5NXFYaWZzbC1mX25kLU56ZThrNjFmZ2JVMW9fbjJhbUMwMXdzN3JLYXAyNE02a0FqclFyblhxZmxfbWRLVlQ5OFdoQkdmNEF1ZTlZUzRVVkkxQm14eDY0R1ZtUXJpRWhaNDE5c1hOM3pUYUhiRmJ1NnlTaGVrQk9uNGwwU2w5UmliTkRpZGQ?oc=5",
       "published_at": "2026-11-25T18:26:10+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Índia"
       ],
@@ -3267,6 +4235,29 @@
         "page": "https://pixabay.com/photos/ai-generated-people-crowd-8458708/",
         "author": "machinecode"
       }
+    },
+    {
+      "id": "6212883238e003c62c",
+      "title_original": "India says it doesn't have structural excess capacity in any sector after US tariff determination - Reuters",
+      "title_pt": "A Índia diz que não tem excesso de capacidade estrutural em nenhum setor após determinação tarifária dos EUA - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOUGx1cVBWMUZCcGQ5T1hqZDZqcmZmZlZhbm93VFRlc0JiMVhxNDBCNFVObHVrU0Vlems5ZmtyTmdTMzVrWVhzdXBMLXlaUTc4OFJIT1YyY1ZJSzgtU1J0a1BsYUFQQ2JYeGlIUEliWVBCM0tUR3F4UVRjTWRtb05HVlZST20tcHhGbU9hdHdPckN0Zno1alpfLUh4QjlmeDFsZ0FHd0dseFNmT2h0UGZQRUVfWlIzdFVwNWFZbmlqZ1dtTXdaanc?oc=5",
+      "published_at": "2026-11-25T17:53:43+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
+      "regions": [
+        "Índia"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: tariff",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)"
     },
     {
       "id": "73d28fdcb77460f188",
@@ -3482,7 +4473,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUmZkWG52MVRvamtENGF3YmViWno3ckhhV1JIeFBzcnVTeG5ueG55S0M1amhYa1c3U1NVUldNV3c3UTRzTG9lcnVsUmJoYzV2ckJsY2c2cmtFdFlLckpLRk91NTdnSEtJQ3lDSVlYNzEwdklnUkFvb1R6dUpZLWV2TnM5d0dldC00NnBCWkZ1RVRjQ0NqMFA2OEp2SThlVlQ5OXZNbDVHN2tLVjFjbmJhSHlPUGZCSXR0aUxLZGQ3RjZIdWlwOElBWmZPUQ?oc=5",
       "published_at": "2026-11-25T14:18:48+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -3513,7 +4504,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcjh3N19UdkU4bXQ1WExkUGtVTF96Vnh1MmpOUkdJcTczMkhwOFpiYUFFYVNnRUpwcmdQNjRhT01md1lnR2xXNDlVb003aGk3SEZiczYyVjlGMTFLcGhJQ0o4WHRoT3JlWS1MTl9PYUtrR1g0emFESG51WGgzVHhvc1lRMnhNZ1NXejBsTDkxMTFhREVRZ1E0Y2NMeDllT2FVS0E?oc=5",
       "published_at": "2026-11-25T14:08:58+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -3661,7 +4652,7 @@
       "source": "Business Standard",
       "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOM2czVEU0M2wyQUJvQ3pDOHA1LWpPREhqNGVoT0h4SzU0QXRiQ25Cd3FOckp3UVFzeXZwSWN3RTFfUnZYZGhVaVR0WVd0UF9WX3FqUGJRdUVSUThtOW44bWdPb0tUeTRicjlGNTlGZG1ab3Bpa00zTW53bkhUa3F0bUphZERMZWNoZXpTU0JBb1NJbjVCWjdYOUNkVjUtNU9lTC13SVFieFJpaThKTTN3anNNcG9xd0FiNmI3aGsydGdUbmgydmZleEwtR1EtVGcyTXFidlcwcUxOTWlzV3pDY0tfeXdJMXlEYi1TVXlIMlJpd9IB9wFBVV95cUxORVVPUHFTd21wSzNmeU81bnZpOVVsOTNEa3pLQ0lIT1NieC01Rm5MWUVsYkw3X0NyQi03X3kwSkNyMHAxTlhveTdoVGg0cGRyWTdJMDA4TXdyZFpxdE81ckdqMzBYaE5GdHNVc2hNWDM0NHNoeW5sNXRUbzhJUDNiT3dPbDBXMWpaU2kzanB0c2ZNU2tqeTZLZ3c5YzF0TGN3akdNLTl4T244aDNFQm9QTng1UGxFWWlPMV9IWDg2LWluc3FELW1fS2pKRFNKMEVSTWF1UFdGeGg1Y1QzLXlwQ3BKSmpGNEtBQUJzaDVock5Sd2R2VUJz?oc=5",
       "published_at": "2026-11-25T13:40:20+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -3691,7 +4682,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZ0IxclpHN1hmaHhKSk1TQmpLeHhYNjJPMHlNVl9LN3RUaGc3d0NjSmV6OC01Q2hfdmR4eVZkZUtkbFNOZGljRmFrM3Z5RVZwa1VDQy1paVNCM042ODg3d3poTWRnSy1QMUYyWjVnbVg1SVo5QnpLZ1lBRTAtRkZNb1g4OEVxbE9QVUQ3eDU5dXRiQkZfc3U3aklUWGtlSm1zTUVLMjVVb1hUWnRqVVBETUMxRWZuTFE?oc=5",
       "published_at": "2026-11-25T13:33:43+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -3784,7 +4775,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOcjZ1MUw5RG5fdk0tUjNTRFNIRzl5amR0VklFSzdTOUlUS2hxNWk5aV9xcm5VWmQtZGRkdXVKMWZ3Um5qZHluSFp4MGNIdHNETlZPck1RcmJmUC1oZHFtWFdYT29PbkdjUU1IbjQyWE9GRFJZdXFwTVFRMEtDcl81bXpDS3RHSHNka3VSbGlHNmNFV09uMTE1aExBRVkxUldZUmpwX3hYdGduS1BJcW1QRlY4ZjdyYkZyWTI0dVBB?oc=5",
       "published_at": "2026-11-25T13:15:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -3871,7 +4862,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9uS01FTmpCQi1TRnBkNzNwdVdEcGEzNDdhdlFLaFRqdVowSkEwMVd2dUVRa3VRaTMwNjFKMURWTi01TGFGbWpjUk44cjhvam0y?oc=5",
       "published_at": "2026-11-25T12:37:19+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Malásia",
         "Indonésia"
@@ -3929,12 +4920,11 @@
       "source": "Valor Econômico",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPTjVHejdoX0hDWVRWaXZDZW5YNl9yZGtLamJfR1U4Wk1GenB4b04zM2ozTFBUbm9kakN6d1FUZjFQZWxHdVlJTkVfZnJtWlNUUG1sTXRoVE41ZWZCeFhaZVI4Z0RnbVU1U1dQcHpXTTMweVRKbEEzSlRTM2ZCbTV5eW5VVHlQWWlBdm55cVhWbTNlWF95TnpFWXVzT3NmZEMzM1V5NUdhVDlKSDR5TlRmTjhIazJrWGpVRlhYU3VPazI2dTBvMmxzTlJB0gHYAUFVX3lxTE5rWUo4Rm5wMGgzcklUVW14TVUyd0lRaTUta1k3bjQ1OXd6WEVCSW1MczJDYVpkRlAyLW5ZdFBBMF93X00yTDZKanI4Yy1vZHZETFRtSVkyVm1aQ0lvN0hBejNlYUhOM3ZVSUQ5U09HMHBubTNkUVJpVzRodE5RcWRtOWlfdkV2TEFRaTdfejR3cEZwTHNadlY0LWpfRDk3NmpuanVzdzVnRVlVWUc1TnZONmhWSndPQ2hNeGM0MDZIZHVobDVvZnQ0WDV0TjhIVFRRVENXR1JXbw?oc=5",
       "published_at": "2026-11-25T12:29:45+00:00",
-      "collected_at": "2026-11-27T01:49:24.153779+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
-        "Brasil",
         "Global"
       ],
-      "category": "Economia Brasileira",
+      "category": "Câmbio",
       "commodities": [],
       "impact": "Baixo",
       "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
@@ -4020,7 +5010,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNklFaE54bEV6OGdKT29ScUxHUlZwRDNyREJ0MzBSZzZGdnptTkVxaXNHeWx2WjFWYVMzMzdMeU92dC1PVmYyZ1BTT3lCTWVRVnJ5ODFEb0NXYWpDd1ZQUlg4bkZ5QVAyck9KQUhMbldjY2FqMmtsZGs3MTFUY0xLZm9wMWRRTFAyS3VvZUZ6Wnk0VzlxTjR3VS1GSkJ1S3VCU2xmZ09FX1E5dUVjTUhfR21wMG1pcktxdGc?oc=5",
       "published_at": "2026-11-25T12:07:49+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -4109,7 +5099,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQaVAwTDNCV1BtTUJJbFJiTlJfT1FteGFhWUFiSmlmZVhMWUpXcGlMWVl4RkxQd0p3ZUtnekU3Sk0yZW1RWTJrUzZmQVVpeF9vMWVDTnBTdnZHaExEcmJKT0JFTlhkLTZDcDFRaHlnQVRqb2FJNmYwMkF2U2pkR0VfTzVjSUFXbEZ4cmxaWVhiSm90dFZVUmo0QWF0Z04tcktN?oc=5",
       "published_at": "2026-11-25T11:07:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -4139,7 +5129,7 @@
       "source": "European Commission",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5ZZHF2VTFTYlJiR0hQNmVkYkRXYjlzU2dEbGc4WFRmSldwX3ItbU1lTndhc044NTV3OGcyTWJFb1ZrZEEyaW1ZMVBfU053Mm9zU3FMc0g1ZjFoTDhyY2JSbnF4N093WkpGbHkxcTI2ZUkzREgwODU1ZUpBQkFNdw?oc=5",
       "published_at": "2026-11-25T10:04:53+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "União Europeia"
       ],
@@ -4256,11 +5246,11 @@
       "source": "Valor Econômico",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNamRjM0dVM1FmOWUxZ0JjN21FMS1UMnB2U0taa0dlRmtFUF83ZlNkRUtNcnJ6NVVJUmtZcTdTTEdIN3lkS3RFQ3FWR0hzby1ybTZUZFBGd2YzUVAxVDhzUUhlNWYwaXM5aXpxcWZlcWFlU0h4RVMtR2dNR3lJVVVmUTUtUlh4RVQxRDlvTkh6bV9EVDlmT3JoX3B6QWxsOUxqUlpqUVlNa3VWcU40TkZlMdIBvwFBVV95cUxOSk5ZU1FZY0I1MnZaMmd0WTg1VS1tWjJkVWNlSFRUMGQ0Y1YzOWhNODVySENnMXJNSDRvTzFveFJUa1dmX0d5bEVRd3VVY2QzUTdKNUVPdkNFX2tDNzFOcmE1T3BZcHVRYnFIdkhKQTN4ZmVlSktIQjRhYi1aX2xqVnBoNVR0M1ZoSTlhTWlXckdIT3FaVndlZGJabVFicTV3WGtMaDk5V3RqNmVSWEhrejl2S24wTlJlT2Z5WTdCOA?oc=5",
       "published_at": "2026-11-25T08:00:01+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
-        "Brasil"
+        "Global"
       ],
-      "category": "Economia Brasileira",
+      "category": "Câmbio",
       "commodities": [],
       "impact": "Baixo",
       "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
@@ -4550,7 +5540,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1tdEtzQUdLb20zUUJsTGhfR1dOVWc4UjJaQ3JWRm5MUmpXMjNBaWdMS3JOemdydzlOSnFqaFVpQXItXzNJbm5kVG4yYjd5eXJ5?oc=5",
       "published_at": "2026-11-25T03:25:53+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Malásia"
       ],
@@ -4690,857 +5680,6 @@
       }
     },
     {
-      "id": "f19070e65f117a7fb1",
-      "title_original": "Yemen's Houthis threaten to target Jeddah and other Saudi Red Sea ports - Reuters",
-      "title_pt": "Houthis do Iémen ameaçam atacar Jeddah e outros portos do Mar Vermelho Saudita - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbmE5cEFGWGFLVzVEUlVvWlE5NzJaT2p0MTUxclgxejJ2ZHJPbTQ5d1BLNzh6R2tFb251aWQ4dHBUTDRtaTlETkVick9uV1hKVkdZSjNPbFk5M2NBd1oxQXptdzAtLS1zVzlidDBDVXBmWFAyVnRzMGRmZHNGZVk4T3Y1aV9ycGZFcWxGejZ0T29BbG9EUks5QjZ0bzFVRG05YlVQemt4UDdDSEY5cUZrYzNsSU9VMGVX?oc=5",
-      "published_at": "2026-11-25T02:42:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Logística",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "tanker, nature, water vessel, ship, ocean, sea, transport, panorama",
-        "url": "./data/news-images/0a80419ae07f7b005233edfd.jpg",
-        "page": "https://pixabay.com/photos/tanker-water-vessel-ship-ocean-sea-7202368/",
-        "author": "zzkonst"
-      }
-    },
-    {
-      "id": "f192897a0b4f3fb51d",
-      "title_original": "Rupee resumes rally as equity inflows push currency to seven-month high - Reuters",
-      "title_pt": "Rupee retoma rali como entradas de capital empurra moeda para sete meses de alta - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNclBMcW9VZGdZQW03OUFPS2J0VWdzbWNrNFYwUnREMVRSTG0xd0poeG1oLUpUNmxVd1lNWnBVbDQySWRQQkRjeDhKR1o3QkMxQWNEbmQ0MGhPT2t4N0lneHQ2UWJUX1lGN2NOSGlsU2k0OUNNZXFBMk1RbDcxSEotaE9TdGRKbDVOejN2XzktSjctOFVTUHlwaU9PMVo5NWQ0NjAzSTFDZmVpYmE0ZlpvSg?oc=5",
-      "published_at": "2026-11-25T02:29:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "url": "./data/news-images/2b587f218667c0d57c288cce.jpg",
-        "page": "https://pixabay.com/photos/bitcoin-crypto-btc-cryptocurrency-3890350/",
-        "author": "petre_barlea"
-      }
-    },
-    {
-      "id": "6c38b4ce037028fadc",
-      "title_original": "Australian inflation heats up in October, core hits two-year high - Reuters",
-      "title_pt": "Inflação australiana aquece em outubro, núcleo atinge dois anos de alta - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOaHo3dUJCUmRaTEFNN1NHaGIwSzhUTF9RVGduN1RfVk4xWGlyblRLYWhCT0F3N3hMMFFJekJHZnFsNHpucEF4TnVuakZWdHVDbF9QbFV5NkViTzQ4VHFLWjdtN0diMUJsblFGMWdxYXRrZGdaODhFcmtGZVVLeXh5bVZJdXduUHAxb0prR2I0NGRmaW5xZ19vZ1dRczdGU0gwSGVtSENBZGpmMDRqOFljRUJPNHpRM3M?oc=5",
-      "published_at": "2026-11-25T02:21:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Economia Brasileira",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "shopping carts, grocery, shopping, grocery shopping, grocery carts, supermarket, trolleys, transport, grocery store, metal, steel, shopping, shopping, shopping, shopping, shopping, supermarket, supermarket, steel",
-        "url": "./data/news-images/9edfdb84b5a47777b4a2f50a.jpg",
-        "page": "https://pixabay.com/photos/shopping-carts-grocery-shopping-1275480/",
-        "author": "652234"
-      }
-    },
-    {
-      "id": "471fa7fb7be1a1df1b",
-      "title_original": "Oil settles up $2 as traders weigh continued Hormuz ship attacks - Reuters",
-      "title_pt": "O petróleo fixa-se $2 como os comerciantes pesam contínua Hormuz navios ataques - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQMDQ4RU9qMFd6TWl0WkFDUGVsdk5Gb3Q1dURMcjcwbGxUV3ItdjhZUGdQUTBZOVUyZEZlRzdmSEtjM3EwQTNUam1nRVZNdXFRbmNfeHhpUnNVQjNPbjNyOGtSZHVnNEZmbnpJdC1VdVA5X25rWndhMnZqemNGVWdVU1Y5OE8ybExyT2xLelF6dnZsNkM0OU55b1dKc1NuNF9sWkVGSGZJaUNxLXc4eEdGZTl3LUtFTDFuUUE?oc=5",
-      "published_at": "2026-11-25T01:26:50+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Comércio exterior",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "tanker, energy, landscape, ship, sun, power, boat, sunlight, sea, ocean, petroleum, gray sun, gray energy, nature, gray boat, gray power",
-        "url": "./data/news-images/77fe3747df7dd9b29fcd2b10.jpg",
-        "page": "https://pixabay.com/photos/tanker-energy-landscape-ship-sun-4279995/",
-        "author": "LhcCoutinho"
-      }
-    },
-    {
-      "id": "5c3cd4ff85bed4b932",
-      "title_original": "Yen, Swiss franc gain as dollar slips in volatile AI-driven session - Reuters",
-      "title_pt": "Yen, o franco suíço ganha como o dólar desliza em sessão volátil orientada por IA - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUUFucHFRbGxzR3laOUhHVU5fQ215SV82VkdMcExqZy1DMmpLalE4RHkyUDgyaEVLQmhVQ3l1VFZXcUV2ZV9UQmlqX1p2X09UbjlfbzlTY1EwUld2Z2dFV0d3cTI0bDlUejkxbFRsczJ5Q2ZmdXVaTkNNTXNKLUZkYkxLVVhFejU1VjdVTXp4d3ctRmc2NWhDbFdJV1NDRTE4UFQzOGQ4eXI4bXdjLWJB?oc=5",
-      "published_at": "2026-11-25T01:19:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "euro banknotes, polish banknotes, money, banknotes, currency, finance, money making, cash, business, polish banknotes, money, money, money, currency, finance, money making, money making, money making, money making, money making",
-        "url": "./data/news-images/c91ccdadadb238d8007422a8.jpg",
-        "page": "https://pixabay.com/photos/euro-banknotes-polish-banknotes-5473286/",
-        "author": "Królestwo_Nauki"
-      }
-    },
-    {
-      "id": "53302774baa9995ebe",
-      "title_original": "Dollar boosted by safety bid as stocks tumble - Reuters",
-      "title_pt": "Dólar impulsionado pela oferta de segurança à medida que as ações caem - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUUFucHFRbGxzR3laOUhHVU5fQ215SV82VkdMcExqZy1DMmpLalE4RHkyUDgyaEVLQmhVQ3l1VFZXcUV2ZV9UQmlqX1p2X09UbjlfbzlTY1EwUld2Z2dFV0d3cTI0bDlUejkxbFRsczJ5Q2ZmdXVaTkNNTXNKLUZkYkxLVVhFejU1VjdVTXp4d3ctRmc2NWhDbFdJV1NDRTE4UFQzOGQ4eXI4bXdjLWJB?oc=5",
-      "published_at": "2026-11-25T01:19:00+00:00",
-      "collected_at": "2026-11-26T03:40:46.839172+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: stock",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "dollars, money, don, cash, call, the united states money",
-        "url": "./data/news-images/be6a33098c3f7ea9d58d4920.jpg",
-        "page": "https://pixabay.com/photos/dollars-money-don-cash-call-2772671/",
-        "author": "HeungSoon"
-      }
-    },
-    {
-      "id": "61701322b7dfd2c685",
-      "title_original": "Dollar slips as Nvidia-fueled AI rally fades - Reuters",
-      "title_pt": "Deslizes de dólares enquanto o rali de IA alimentado por Nvidia desaparece - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWk01SnRnY1hzWHBOdlQ5eGdldmlIQkd5QUM4SFJ5S3Z5YWtVQnlYWVp3LXlqajM1QTA5UTBBSFNrOFdjVGdWME54WUJYdFRGUXJDYlVmUDFETjlITTZtYkFiWW9IcU9sVTM0R0otbjlmMXNCdC1HSEVNOXJMaDlIMC1YUnFBUDZNMXh6RlRwMVM5MDFRTy1YQXc3U21zYU0?oc=5",
-      "published_at": "2026-11-25T01:17:55+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "url": "./data/news-images/3771f0b523e32526260d14f9.jpg",
-        "page": "https://pixabay.com/photos/finance-currency-money-wealth-3065269/",
-        "author": "USA-Reiseblogger"
-      }
-    },
-    {
-      "id": "e4caded92562ec59ac",
-      "title_original": "Gold falls to more than one-year low after data shows US inflation rose further - Reuters",
-      "title_pt": "O ouro cai para mais de um ano baixo após os dados mostrarem que a inflação dos EUA aumentou ainda mais - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOV1p3ZkduX2FrdGJhMEMtbmNXNTgxN05HeDFsX2xxNDBkWXZQVkFWS3NzNFpITzZ2RnRyYXVZQ1k5bmthekYzdG9aSDVxcGZGS1RxMnNTTHNRRkQyQWFoWm1zNXVfd2hVQW96VHQ1ZFd4eU04cXNTRWk0cFJ4LS1PLUd1eUFmN3Y4ZjJQbXZpVkd3UQ?oc=5",
-      "published_at": "2026-11-25T00:49:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Economia Brasileira",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "woman, face mask, market, hijab, people, store, grocery, shopping, farmers market, buying, customers, market, market, market, market, hijab, hijab, hijab, hijab, store, store, grocery, grocery, grocery, grocery, shopping, shopping, shopping, shopping, shopping, farmers market, buying, customers",
-        "url": "./data/news-images/ff1e647d8d03792e122c24e1.jpg",
-        "page": "https://pixabay.com/photos/woman-face-mask-market-hijab-5632026/",
-        "author": "Antonio_Cansino"
-      }
-    },
-    {
-      "id": "8b6a4964f96787d658",
-      "title_original": "Oversupply Expectations Weigh on Market as International Oil Prices Break Key Thresholds; China's Domestic Refined Fuel Prices Poised for Synchronized Cut - BigGo Finance",
-      "title_pt": "Expectativas de excesso de suprimento Pesam no mercado como limiares chave de quebra de preços internacionais do petróleo; Preços domésticos de combustível refinado da China preparados para corte sincronizado - BigGo Finance",
-      "summary_pt": null,
-      "source": "BigGo Finance",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE52eDB4cVpodVhYeEdWNFp3bmc2cmdaVGpCTk4yMGhoYktrNE5MX2FpeHhFa3NlYm40WU5fT0UzTHZmNXRsbVFHSFlRNHg2UEY4NFNfVy1jbVdIejVHUG9Va1Uxbl9yd3hMMkUyQ1VfVFB6emstdXc?oc=5",
-      "published_at": "2026-11-24T23:55:00+00:00",
-      "collected_at": "2026-11-25T19:26:58.716651+00:00",
-      "regions": [
-        "China"
-      ],
-      "category": "Petróleo",
-      "commodities": [
-        "Petróleo"
-      ],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: price",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "factory, industrial, urban, air pollution, tanks, industrial, industrial, industrial, air pollution, air pollution, air pollution, air pollution, air pollution",
-        "url": "./data/news-images/7d01f6f9fcb12b58359a0ae0.jpg",
-        "page": "https://pixabay.com/photos/factory-industrial-urban-6951382/",
-        "author": "tasukaran"
-      }
-    },
-    {
-      "id": "67fecb2cb58a49169f",
-      "title_original": "China, India set for record Russian oil imports in 2026 - Business Recorder",
-      "title_pt": "China, Índia estabeleceu para registro as importações de petróleo russo em 2026 - Business Recorder",
-      "summary_pt": null,
-      "source": "Business Recorder",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE95THkxSE9leDAwbWZJUWdrcHBST3V6WVJPZHl6RDlZSlVodjYwVlRTeTAyZGZvN21KRTJBUE5hNDZscXh2OGlkLXdLWkcxQldW0gFWQVVfeXFMTmlQWjZlS3RzenM4NzBjY2RxT0xVcnVMTjRmenVreFJjQ2Iyd0xURExuOWVJd2dJV2hiU3pNN0k5VGFERTFzY2FCMTlBQi1FOUNyQ2FQNEE?oc=5",
-      "published_at": "2026-11-24T23:45:58+00:00",
-      "collected_at": "2026-11-25T19:26:58.716651+00:00",
-      "regions": [
-        "China",
-        "Índia"
-      ],
-      "category": "Comércio exterior",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: import",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "seagoing ship, tanker, north sea, mouth of the elbe river, bow wave, shipping, transport, supply, elbe, cuxhaven, hamburg, tanker, tanker, tanker, tanker, tanker",
-        "url": "./data/news-images/f0136cd6f682264c2e1f4e5e.jpg",
-        "page": "https://pixabay.com/photos/seagoing-ship-tanker-north-sea-4113071/",
-        "author": "hpgruesen"
-      }
-    },
-    {
-      "id": "ee7f21e58f26b94655",
-      "title_original": "US stocks slide as Nvidia rally fizzles out, dollar falls - Reuters",
-      "title_pt": "As ações dos EUA deslizam enquanto Nvidia rali falha, quedas de dólares - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVGQ3cVhHXzJBLXEybDVWX21xeWcxbUVEOHA1ZV9IU0lacEM2a3dKbmFLSGk2Y1MwLXk0OVFzWV8yT1JNQ3FnX3hWNGxidEZvbDZwTl8tdjNoUDV6MU45ZnJSa3lSMnZJNXdwWk5VRUFOYzJlTk11TmZaS1hocXhPVUE4bw?oc=5",
-      "published_at": "2026-11-24T23:33:16+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: stock",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "url": "./data/news-images/fefd8cd32b05dbf973a442da.jpg",
-        "page": "https://pixabay.com/photos/stock-trading-financial-finance-2463798/",
-        "author": "AhmadArdity"
-      }
-    },
-    {
-      "id": "fe23ab7d3404e97af4",
-      "title_original": "Sancionado, ajuste fiscal pode gerar economia de cerca de R$ 50 bi - Agência Brasil",
-      "title_pt": "Sancionado, ajuste fiscal pode gerar economia de cerca de R$ 50 bi - Agência Brasil",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Agência Brasil",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZmNWVW1GUGZVMksxd0E4bVVaMmU5WGgwNXZSZFRSS2tDN1QzdnVRUDFfTkF5b1VqeWxrZGlFd2dZZVp3bUM0VXJ0bEwxeUNXU0p2ODZ3RTQtRzNsTjZOb1owWktrUzluWHhab3RuU25rdjZZWWthV043b3pYbW1jeXg0bldpUzh4RTRkdW81M2F1aXNNOFR2QzRhVXlzdVVCeDBQX0ZZZmcteTJ1bG9vb2ZNRDN2UDJWYUxLczBhb2tHcTJhUjA5TDR4Z3V4NldBR09ZakhDdXJVUQ?oc=5",
-      "published_at": "2026-11-24T22:47:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Economia Brasileira",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "bookkeeper, accountant, office, coffee, calculator, keyboard, pen, usb drive, invoice, company, paperwork, administration, accounting, work, desk, profit, paper, mouse, document, financial, finance, business, accountant, invoice, invoice, invoice, administration, administration, administration, administration, administration, accounting, accounting, accounting",
-        "url": "./data/news-images/b24832edbdb7851fd5a3584c.jpg",
-        "page": "https://pixabay.com/photos/bookkeeper-accountant-office-coffee-1016299/",
-        "author": "cloudhoreca"
-      }
-    },
-    {
-      "id": "d17d2f3ac12e337686",
-      "title_original": "Two Libyan army personnel succumbed to wounds after Benghazi port attack, Libyan National Army says - Reuters",
-      "title_pt": "Dois militares líbios sucumbiram aos ferimentos após o ataque ao porto de Benghazi, diz o Exército Nacional da Líbia - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNbWJabUYzSzl1Mm9ZYllmYkZ5aUdXOWFoU0NDdGRUbmFGNDhWOVc5VDc2N09hazhJc24tZUJiXzR0dkMyZU9lYXY3cl9jQ0NhQ2xNTU8zSmlRdE9CbjR2dGlTVUZ5WTB2YjZraVpXMklycEI0U19EcWFEU3dhUUQ4dXpON1FRTm9wT1NVWDhGTUtZRTdNNTVrTFhERjBZSHRFV0NsNmZ1eXRCeXo0SGNvSHJyeVcxdmI3RkdBZHdEelpVZEk?oc=5",
-      "published_at": "2026-11-24T22:36:20+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Logística",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "motor tanker, cargo ship, invest, moored, rhine, rhine shipping, mooring, mineral oil transport, birsfelden, waters, transport system, ship, port",
-        "url": "./data/news-images/9cd23b088f1041988a57a74a.jpg",
-        "page": "https://pixabay.com/photos/motor-tanker-cargo-ship-invest-3140155/",
-        "author": "adege"
-      }
-    },
-    {
-      "id": "95f6b91c86e0c75435",
-      "title_original": "Soybeans Firm as Brazil’s Real Rebounds, Castle Says - Dakota News Network",
-      "title_pt": "Soja firme como o verdadeiro recanto do Brasil, diz o Castelo - Dakota News Network",
-      "summary_pt": null,
-      "source": "Dakota News Network",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWHJTNWR4VU5MT0VPdXRDUnltTVpIWG9GbWpjek5MTkFwNUJ4MVlVZ3pmNC1hZk5xS21ZZncteTdxWU5Hc0daNm1icnI5TjAyZHNLenVCbnFONDJuSmtCR2dhYUZSVkE5WlAyR2VBblA3QXJmdUIzQ2VBOFpWZW9MS1pZczFPdVoyWWZCY0ZscFRSYktBVzYyRW1GYXY?oc=5",
-      "published_at": "2026-11-24T22:25:30+00:00",
-      "collected_at": "2026-11-25T19:26:58.716651+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "bitcoin, money, btc, finance, blockchain, coins, coin, crypto, cryptocurrency, exchange, black money, black finance, btc, btc, btc, crypto, crypto, crypto, crypto, crypto, cryptocurrency, cryptocurrency",
-        "url": "./data/news-images/97421e6079ab0612c9c59971.jpg",
-        "page": "https://pixabay.com/photos/bitcoin-money-btc-finance-4353069/",
-        "author": "photographersupreme"
-      }
-    },
-    {
-      "id": "30e39856c9ab97cad9",
-      "title_original": "Saudi-led coalition issues evacuation warning for Yemen's Hodeidah port - Reuters",
-      "title_pt": "Coalizão liderada pela Arábia Saudita emite alerta de evacuação para o porto de Hodeidah do Iêmen - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNVG1zbDJSYngzOXYyX0pnWnBSUFB6Q0FYVzBkUzNtSVpRQm9ZZEY1S3VtMFJFWHVVbjFqQ29aeXhILVNwekVkX0Y1SUp1T3lUZXFCY2hOVWd1YWhVZVBVRFhoeWF2Y01jUkFGQTl0LWRsWUVNZU0xSGJsTE5hVjlOMm1KOVBOVlJtSGcwYm1zV3d2OE52VHJ1ZEFNeXdQRjhPTGhLMmRDNk14QVo4UHg1THdEQ2xMekJ2ZzJxXw?oc=5",
-      "published_at": "2026-11-24T22:11:43+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Logística",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "the outer port, pier, oil port, tanker, discharge, crude oil, clear, oil tanker, sea, waters, ship, industry, port, wilhelmshaven, jade bay, north sea, crane, nature, industrial plant, technology",
-        "url": "./data/news-images/104c93c380c66456664f502e.jpg",
-        "page": "https://pixabay.com/photos/the-outer-port-pier-oil-port-tanker-3108235/",
-        "author": "hpgruesen"
-      }
-    },
-    {
-      "id": "fa341217b21827a286",
-      "title_original": "Preços de soja sobem e seguem nos melhores níveis do ano; confira as cotações - Canal Rural",
-      "title_pt": "Preços de soja sobem e seguem nos melhores níveis do ano; confira as cotações - Canal Rural",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Canal Rural",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOZmRIazI4MDZSTWd3Zm03ZDctVE1mb19wNXhPREFKNXVPRTZPT2wwZU5zeGliTHN3TGdpa2FqYzFVVzh5NHRlRDRZTnB5X1ctNlNLT0QyeWxIeURCWnk1NlNlbjVYV1czVUpFSU5hQnBncHV3ZVF4eGRaMTNPV2owTGxEOFZmY2hyMkxiMll6NlpwTFRnRHhyZlVhX2Q0T0Ntem1RSzU5aDNsR19DWi1kTERISWRodWJBZDNRV1ZINEJyeFlnWWxSeFJfSFhpWlI2VjBLS3Fub1lEX1AxSWNNRS1qN3B0RWtuQnE1R2V3?oc=5",
-      "published_at": "2026-11-24T21:25:45+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Soja",
-      "commodities": [
-        "Soja"
-      ],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: preço",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "floors, soybean, soy, nature, germination, soybean seedlings, farming, glycine max, green, crops, food, landscape, plantation, end of summer, fields, foreground, leaf, summer, seedling, soybean, soybean, soybean, soy, soy, germination, germination, germination, germination, germination, seedling, seedling, seedling, seedling",
-        "url": "./data/news-images/bdad926a27f50dc8628767e3.jpg",
-        "page": "https://pixabay.com/photos/floors-soybean-soy-nature-1331667/",
-        "author": "jcesar2015"
-      }
-    },
-    {
-      "id": "824891021fa9c69f4c",
-      "title_original": "USD/JPY Price Forecast — USDJPY (159.45) 160.90 Upside Target on 263bp Fed–BOJ Rate Gap - TradingNEWS",
-      "title_pt": "Previsão do preço USD/JPY — USDJPY (159,45) 160,90 Target Upside on 263bp Fed–BOJ Rate Gap - TradingNEWS",
-      "summary_pt": null,
-      "source": "TradingNEWS",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ0ZVUE5zTDFyS3FGSm5scnVmYnNoTUNENVMxNC12UHlQZWgzTGx4UzVpRTBuQVFjXzFzNmJIQkNmVGxvSnRfbkhoNmR0MlZLYzZtNW02MDF1MnpQajZJU2hLb25GNFRROEtYVlU5NEZkRnhBNGtNMF9fTnlfakVlZVdrWnpVU3h4R2p2bk5WU2NMYUkwZ19WSXRXVnUwQUxrVy1SZXlnS19ZeWsyMjdXdzUtaTBadw?oc=5",
-      "published_at": "2026-11-24T21:10:29+00:00",
-      "collected_at": "2026-11-25T19:26:58.716651+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: price, forecast",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "bitcoin, dollar, cool backgrounds, coin, money, wallpaper hd, windows wallpaper, electronic money, currency, imitation, draft, hd wallpaper, internet, laptop wallpaper, transfer, cash, network, monetary units, transaction, stock exchange, free background, 4k wallpaper 1920x1080, online exchange, beautiful wallpaper, 4k wallpaper, future, gold, full hd wallpaper, mac wallpaper, free wallpaper, golden, desktop backgrounds, trade, company, wallpaper 4k, background",
-        "url": "./data/news-images/5d46ca5a18d998c107aa9388.jpg",
-        "page": "https://pixabay.com/photos/bitcoin-dollar-coin-money-3035013/",
-        "author": "geralt"
-      }
-    },
-    {
-      "id": "50db302bf8c9211c60",
-      "title_original": "Entenda o pacote fiscal que prevê ajuste de até R$ 56 bilhões - Agência Brasil",
-      "title_pt": "Entenda o pacote fiscal que prevê ajuste de até R$ 56 bilhões - Agência Brasil",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Agência Brasil",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRUpVZkljeC14ekVqOFFCbWNvTXZBMEJYZjNuQzlqSmRrakctci1Yd3FUc3JwRVpQdEV0d3JqRXpMRUxmRE5VeTBXcl95TTJJNGNHZ0pCVFA4dEZHNDZvRGJ0OUttSkUxTDRhUUt1WnZHOGxXTU1PV2lnNUhZT1p4T0xQUEZKV09TWGw4eHhDaGxrUjhid3VzQ1VyR3BHS3U3QndkSHFMR1VWeXIyRlRvcFBtNzBuLUJPb3c?oc=5",
-      "published_at": "2026-11-24T20:54:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Economia Brasileira",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "barack obama, windows wallpaper, hd wallpaper, free wallpaper, official portrait, president of the united states, wallpaper hd, 4k wallpaper 1920x1080, america, free background, washington, beautiful wallpaper, mac wallpaper, official photo, cool backgrounds, desktop backgrounds, speech, conference, laptop wallpaper, united states flag, full hd wallpaper, us, wallpaper 4k, usa, american, 4k wallpaper, man, person, wallpaper",
-        "url": "./data/news-images/f9dce2d34cb36289d1fb4065.jpg",
-        "page": "https://pixabay.com/photos/barack-obama-official-portrait-1174489/",
-        "author": "janeb13"
-      }
-    },
-    {
-      "id": "95d4e05ac428b06a50",
-      "title_original": "AI consumes less water per dollar spent than almond milk or golf, Enverus report says - Reuters",
-      "title_pt": "AI consome menos água por dólar gasto do que leite de amêndoa ou golfe, diz o relatório Enverus - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLXlYaTU4SDlDWXJSNGFNN1FFaGZSZzcxY3NnM0VEd0ZhbThkT1d5UDBsLTRfLXAzSmk5MUxpUGdMY1BrakhsbndpV2pycnpsblZaX0E0V2JpTExxam5VWW0xcUV4RFNabTk3bk51QmwyQjd4bHZEdFI2ZTFMeVpPWmVpc1RFaXFtRHZMWHdPaXNTWE9PQ253S1M5eFFaZHF1UE01SFZJbGtkdGNZWngwUVgxLVpNSGpaQ1JyeExYRlUxc3h3?oc=5",
-      "published_at": "2026-11-24T20:53:59+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "url": "./data/news-images/cbc3ecf85d88ec95f747cebb.jpg",
-        "page": "https://pixabay.com/photos/cryptocurrency-asset-3409658/",
-        "author": "WorldSpectrum"
-      }
-    },
-    {
-      "id": "ec7e5579cba47f88b0",
-      "title_original": "Shein to pay $100 million to settle US shipping, customer service claims - Reuters",
-      "title_pt": "Shein pagar 100 milhões de dólares para resolver o transporte dos EUA, pedidos de serviço ao cliente - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcWhsZ000UTV1SjF3ak9ONXpxUy1JWUFjM2wtMWZTQ3dqOVhZNDBKRHFQVkFlYjZaVWRjWXFoSUY3Ry1JN1ozRk9TQTQ3R2ZFV2ZVQUx6MjF5endGeUptTU5OakRMNlVjb01qWi0ySHItb1dEUFJDc3kxNTJ0akJfbXBlSVZMdkdwb2p1b3BHWnh3aW5scllxRVg2M3BFSHc?oc=5",
-      "published_at": "2026-11-24T20:40:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Logística",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "wilhelmshaven, pier, tanker, discharge, oil port, crude oil, deep water, jade, jade bay, wadden sea, water, nature, tide, supply, north sea, coast, north sea coast",
-        "url": "./data/news-images/4c128b685dc0cd55ff54bc67.jpg",
-        "page": "https://pixabay.com/photos/wilhelmshaven-pier-tanker-discharge-1578577/",
-        "author": "hpgruesen"
-      }
-    },
-    {
-      "id": "41aaa8cc70f63d5119",
-      "title_original": "Dólar termina em queda, mas distante das mínimas, com moderação de otimismo sobre política fiscal - Valor Econômico",
-      "title_pt": "Dólar termina em queda, mas distante das mínimas, com moderação de otimismo sobre política fiscal - Valor Econômico",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Valor Econômico",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQWWhaUEQ0ZjBpeFlZcEktem1fN2JrTDJiMG1COFhzbDQtdWtWN01FNVFCdzNiMzVJVlVJV0xrQ19JNjZacFRPbTFQR3dIaXRoYTlra1FydHhRekg0TzZiLW4wVVBibkZ5b1djTHlvMnNscHQxcVZpaHhLUHhtZnRleU4tYUR4MVRrN2c5ckdaV3JUdjAwR19SRXJKWEVXUWZRbTBLbUpra1JFcnhfYVR6Z2NfbmgtdEJZeUdJRXdRVGRlY0cyeFUxajl3QWtpOFAxTUJkZk5oSDNrdlU5SEg0YkdrTXVQcjA00gH3AUFVX3lxTFBQOEtEbm5GVzV5Ujc3OWZSZnJuMWp1Vk42cjd2bFFLeWpDeEw3dmliTnM1cE45dE96SjdXWlNraGl5MTdpSktuN09ubU02ZThPNl9nby1vaGdzaXFjMjNEMWhrcWhua0hncV9sOXd5R0NTTnJXblVkZU1PdFA0TEVLMjB6dWFHa0ctTHkyaUJ5eG9QYTlTNGZ1LUQzdDNvS2NHWHc4dmlBSG9jLUJHX3oyQjhrc21BbUo4WGxkTXZlMXgyZmd6cktEZUR5WnA5S1FScFlYZURIX01VX3N6UzVVVG5aSW01RXBRYnNuU3ZYcE1mUUNvYlE?oc=5",
-      "published_at": "2026-11-24T20:19:16+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Economia Brasileira",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "federal chancellery, federal government, nature, government, berlin, building, architecture, government district, germany, sunset, dusk, Berlin, Germany",
-        "url": "./data/news-images/32c817bbf53cb6db6239b843.jpg",
-        "page": "https://pixabay.com/photos/federal-chancellery-637999/",
-        "author": "LoboStudioHamburg"
-      }
-    },
-    {
-      "id": "48c4396fda94b5b3f8",
-      "title_original": "Petrobras: Tivemos custo inflacionário e efeito do câmbio envolvidos no novo plano, diz diretor - Valor Econômico",
-      "title_pt": "Petrobras: Tivemos custo inflacionário e efeito do câmbio envolvidos no novo plano, diz diretor - Valor Econômico",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Valor Econômico",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNZzhGWS1PMVk5SFd1NUVfczdCSXgyQlJVX29ELXZYa0V5d2t2TWZIWWNnYmswYWgzOElWMTd4ZzF5V2d2MlZHOGtyRm13R2FWbk53aDJtYk9DSVZ4ckVQNEFUU3VhRlc0TDlFNUxJOG9VWFRKblZnZFZDQll1a0ppck1hNExpVXBuVlJUcl9pcVJqTEQ3N1lrUHpxZ1NNQzdqSjN0UjBVcmNERlRnQk1HQzByZ21fQktMSVdDM1VJQi1wRUU3YW9XSUp6RlJick1SRXExLUlHS29GemJWNmV3TEZfVdIB8gFBVV95cUxNSnJnLVR0VE9Iem5OMklIMkY4ZjA4ZGsyS3lqTnJIUXk0RWdWMmlkYWthMTNTMGp6bDhvQ2dMcElRRUlRdFlCUW5QaXZfaEp2NFdLYVdkRktQck1GclZzd09mbzRGOXNORUIxMU9WNHRzT2F0Um5SWFpaTWxUcE9XUjBuRjlWMTloUXVKLWVWclk5aUJ1WGJlYk50VmN5cWhZaG9CUWF6RVhZdElxaWJUaGhTZlNmb2ZocFM3WHdRVFBXQmpCTGRwTE1xMEVlbGVSOUVfanU3bW9CN2ZDOXRPSExzZEFUYk1rUDZjdVpoWkZUQQ?oc=5",
-      "published_at": "2026-11-24T19:35:25+00:00",
-      "collected_at": "2026-11-27T01:49:24.153779+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: câmbio",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "dollar, money, finance, us-dollar, funds, currency, dollar sign, symbol, financial world, business, financial crisis, banknotes, paper money, usa, seem, greed, newspaper, read, information, financial crisis, greed, greed, newspaper, newspaper, newspaper, newspaper, newspaper",
-        "url": "./data/news-images/0a16d9d6948cc11b34a84ad8.jpg",
-        "page": "https://pixabay.com/photos/dollar-money-finance-us-dollar-1426420/",
-        "author": "markusspiske"
-      }
-    },
-    {
-      "id": "6d1b5d10b1273fe7c3",
-      "title_original": "Canadian dollar hits 11-day high as investors raise BoC rate hike bets - Reuters",
-      "title_pt": "Dólar canadense atinge 11 dias de alta como investidores aumentar BoC taxa de aumento apostas - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZnA4Z09LNE81VEdjeHA3QmgzbXQ2ZGRtOEMwQUpRYTA5UUN6WnNvN0dlS0p6LW9saDNRUzVodE9OdnREMThQOHhYTzNWdUhnb291VHZkRW1IZHE4akJpRDE5OGtMM2FiTUNUN0RwYmRJcVlDNTc5TW11NWF6VzB1RmF3bnNUVkpNbldqZ3VQSTc5TVlweFQzaXhDUWZsdkNXaDZ1T0tTODdyR0I4RFZBOVBZdzU?oc=5",
-      "published_at": "2026-11-24T19:32:02+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "url": "./data/news-images/cc29c7dbdac93c303a7404cd.jpg",
-        "page": "https://pixabay.com/photos/money-china-rmb-yuan-asian-938269/",
-        "author": "moerschy"
-      }
-    },
-    {
-      "id": "5e527538f841826084",
-      "title_original": "Gas Prices Were Already Down 32.5 Cents Before the Midterms. Diesel Is Still Near $6. - Energy News Beat",
-      "title_pt": "Os preços do gás já estavam abaixo de 32,5 centavos antes dos períodos médios. O Diesel ainda está perto dos 6 dólares. - Energy News Beat",
-      "summary_pt": null,
-      "source": "Energy News Beat",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQXlfWnM0N2FSS1ZCX3BvalBGQXFhQlVoVEFyTGhxUktPRXlnSnptVEFSZFRoR0RlRlB1NXhCdGVRUnZKMWM3U241cHg1ZlFWNUphbkstRktjRUJCb2pEcmhPdVdObFNHemY2VldzZ2U0eUtjMlRkRHVpdWlJd2phejYwMEVKS25CRzNvRDRPSEg4aXdqbm4yUzNvY2dTZWZxQm9ONzNFaUp2OHdla2dNSEZjc1lNRlU?oc=5",
-      "published_at": "2026-11-24T19:07:02+00:00",
-      "collected_at": "2026-11-25T19:26:58.716651+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Petróleo",
-      "commodities": [
-        "Petróleo"
-      ],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: price",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "ölpferd, oil pump, support financially, crude oil, fuel, industry, oil, energy, power, equipment, technology, oilfield, environment, hdr, high dynamic range, contrast, crude oil, crude oil, crude oil, crude oil, crude oil",
-        "url": "./data/news-images/d75a4b9120af5a6ff76d699d.jpg",
-        "page": "https://pixabay.com/photos/%C3%B6lpferd-oil-pump-support-financially-3807678/",
-        "author": "distelAPPArath"
-      }
-    },
-    {
-      "id": "f0702832637fc49658",
-      "title_original": "Lula sanciona o ajuste fiscal sem vetos - Valor Econômico",
-      "title_pt": "Lula sanciona o ajuste fiscal sem vetos - Valor Econômico",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Valor Econômico",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTDdfT1lRNjE0U3BxSmRzTEpSS3kybkxfX2NIODlfcnEweHRZaGZKZHJLSFE4QjB1ZGpRWXZxaHBLSkFVT1dqTTByMWlYZFpkY2FZZnJ0Ti1ncjJQa0MwcENxc3VtVHJuT0FTd1lSTm5PXzNFX0RxVkd3QVlMLW84TnViQll2aC0zUWNFTGZjMTgtcUJyNEdBeHUzQdIBqgFBVV95cUxOeFhFV2FwYUU3ZTB0ZzFRc0NKQjg2YmpmdlJwSGdiM0JBbU5KbDNNb2s2amY0MGpaeWdIQ1NoU1RuclVCU0NyZXAwbngtWjVFSURyOU5vQnJZM19wZ3hTUlluQ3p1Y0ZFTm9oblJ4UlVCa0sxc09KbUltM2RPMlFTcGI0cFNFNElpaTFoX3VIcUxMeU41a2lQQVQ1ZFQ3R2JRTjRuT1JuMDRqQQ?oc=5",
-      "published_at": "2026-11-24T19:01:57+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Economia Brasileira",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "magnifier, schedules, tables, glasses, business, magnifying, data, document, concept, diagram, finance, growth, market, graph, chart, paper, stock, close, backgrounds, investment, searching, financial, loupe, graph, graph, graph, graph, graph, investment, investment, investment",
-        "url": "./data/news-images/3c44e664038e8da4e6ef4127.jpg",
-        "page": "https://pixabay.com/photos/magnifier-schedules-tables-glasses-5245329/",
-        "author": "ds_30"
-      }
-    },
-    {
-      "id": "6f20f489f17d3b337b",
-      "title_original": "Schumer accuses Nvidia CEO of violating US export control law - Reuters",
-      "title_pt": "Schumer acusa Nvidia CEO de violar a lei de controle de exportação dos EUA - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWkIyNDFsT2dsN05tM0U4NFZjRU9IZG1Bemx1b2hqOXFneHV3bDBnY0gzc3drRkxjY0JqWVdPTW8xR29QUy1wczZRM0FaemMzMEk3X2I5Wlp5elVhS0dTb2tIMFJ3VlZ3a0dNelRZYWFpeVA0THA3UDkwMGVtd1BZMENTbEZ6alRuR3pnNnI0TGdMWjZ3VVBmb2lDZHd4ckJwVzJRTk1veERGQQ?oc=5",
-      "published_at": "2026-11-24T18:46:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Comércio exterior",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: export",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "ship, laptop wallpaper, accident, girl, black, free wallpaper, sink, view, wallpaper 4k, beautiful wallpaper, sky background, full hd wallpaper, windows wallpaper, turkey, antalya, sea, cool backgrounds, wave, storm, nature, sunset, hd wallpaper, tanker, 4k wallpaper 1920x1080, coastline, coast, background, boat, sky, mac wallpaper, unbelievable, 4k wallpaper, skyline, life, clouds, wallpaper hd, peace, cloudy, free background, desktop backgrounds, nature turkey",
-        "url": "./data/news-images/c5a71ae9780ed50516382c4e.jpg",
-        "page": "https://pixabay.com/photos/ship-accident-girl-black-sink-2359663/",
-        "author": "Engin_Akyurt"
-      }
-    },
-    {
-      "id": "cd78f39134afb4f200",
-      "title_original": "Iraq seeks higher oil output capacity estimate ahead of 2027 OPEC+ quota debate, sources say - Reuters",
-      "title_pt": "Iraque procura aumentar a capacidade de produção de petróleo estimada antes de 2027 OPEP+ debate de quotas, dizem fontes - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQZDlBeGxKNEloWTJLaTdNQjFFSkQyZWx3VjBqMzNpQVFoMjF5c1BkaEpCYkNhV2NCZmNXN1hPM2ZHVzdJN2I2aUpLd0ZSSnhLd3JWOHJJVTEyWG1ZTDdhOXJvNGtybnRkMU9yMDlJWE44eVhFNGZjbTlwMDFwQURSLW94U21XS3VqUDFWWFAzM2FLV2ZXdTNPa3djTzBPbDl5WVBUeVdUSXdWVDh4eE5acHppbzdvTjVtbEZORkh2TVFkR1M1T1E?oc=5",
-      "published_at": "2026-11-24T18:41:43+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Petróleo",
-      "commodities": [
-        "Petróleo"
-      ],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "url": "./data/news-images/302e7e50c4412456d00d5836.jpg",
-        "page": "https://pixabay.com/photos/nature-industry-sunrise-trees-9448741/",
-        "author": "Tho-Ge"
-      }
-    },
-    {
-      "id": "eb22ac03cc6e65cdda",
-      "title_original": "BC autoriza Foxbit a funcionar como distribuidora e Binance Brasil a operar no câmbio - Valor Econômico",
-      "title_pt": "BC autoriza Foxbit a funcionar como distribuidora e Binance Brasil a operar no câmbio - Valor Econômico",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Valor Econômico",
-      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQbmlrRlpxZllJUUw2QmRBOTVON1AzN3RvUllVQnA1bVhRSGhvN2FUazd1UGNnMDFOQlA3dGs3ak0wVzBSYWM3Vkd5QzA1emtRRWhjZlY2VVRRS0tFY3hiaXh3azdlOHcwZVpIVEdXRkpzT0FBWGRaWDNRaDBUaEVRbFJnbUwxeEl5UGRjNng1MWZiZWJXRE0tYjFfQTNfT1laQk1VLTFhRzVMU3hPRzZtay1QOEVZNk9kU2dMbTBSZVFpeW5iR21PYWVxY3BhbGRCdDlPUDNDMDY3NF9KSktuQmF3REdNazMxR2Vv0gH6AUFVX3lxTE9EdUpkanMtamxjX05SdWNtRUJWQjd1enRlMjhXMkhtS29VMGdxTVB2R3Z5NndWUlp3ZjBvTWdWSVFRTWRCOEhCcW13LWtISVM3RFBwYUcyRTBrMEVyQTJhRFJlS2FKUWRMUjBjckdsMGFvR1ZORy10QnRJMDZBZXdNUFdVbjlDb2JRY3lLNE5lYVVjTFkyT1dqOVV5dWttS09tM2s0Yk9nMGREdC1Wa2dWZlBNaGdjSkVNZFVtN1FaTWpqM29ZNGRUME5wakpoUE5NMXFDZkpfaDRMMWRNNWx5Z3FJU0FqeE1jaVhxX3hDV0hBRHFvUmRzR2c?oc=5",
-      "published_at": "2026-11-24T18:14:48+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Câmbio",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: câmbio",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "bitcoin, table, courses, finance, virtual, crypto, currency, money, coin, computer, screen, falling, increasing, bitcoin, bitcoin, bitcoin, bitcoin, crypto, crypto, crypto, crypto, crypto",
-        "url": "./data/news-images/de6dd950034e2368c3f45e5b.jpg",
-        "page": "https://pixabay.com/photos/bitcoin-table-courses-finance-4481815/",
-        "author": "RoyBuri"
-      }
-    },
-    {
-      "id": "1ebece951938f6f7ca",
-      "title_original": "Plantio de soja chega a 82,9% no Brasil; estado brasileiro já finaliza semeadura da safra; saiba qual - Canal Rural",
-      "title_pt": "Plantio de soja chega a 82,9% no Brasil; estado brasileiro já finaliza semeadura da safra; saiba qual - Canal Rural",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Canal Rural",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxORzlkdVdfbGlEZDhLWUpNU2FrdHdmN0VyNXJmVnR1SkZJR2cyU3NidnVpQXNsejVqaHZldDB2dk5PVXB6UFlndzR6LW85bGRQaFNxT3lvODdTckFiaFRIVzgxLUNQTmwxa1l4SVdqWjgwX0NjYmlzY0NJVWlkdUFVek93WWpIWC02MFVKQUR5cEc1cGJ2dlVoajg4N2xUbXg4azJIWWZOMU1FeExET2dwbUR3ODJiNlB2MjM1T2I0ZHFsV0QwVHdvSGp3UlA5RXNoRXhwbkxWNTdZRnNzRDFPbzFGeVNzcVBMNWwzcm9oY1lGZw?oc=5",
-      "published_at": "2026-11-24T18:04:15+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Soja",
-      "commodities": [
-        "Soja"
-      ],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: safra",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "url": "./data/news-images/2cc1c62717c0340cf236444f.jpg",
-        "page": "https://pixabay.com/photos/green-leaves-vine-garden-10572101/",
-        "author": "Designmine99"
-      }
-    },
-    {
       "id": "1b8f188d4e93c41ccd",
       "title_original": "Medida de la Unión Europea: la Argentina realizó más de 50 gestiones contra una norma que impacta en las exportaciones - La Nación",
       "title_pt": "Medida da União Europeia: a Argentina realizou mais de 50 diligências contra uma norma que impacta as exportações - La Nación",
@@ -5549,7 +5688,7 @@
       "source": "La Nación",
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPVTlWLW1oMU9PbWxfU1M1czZzdEtUNWVoUkgyaWZPS0hzQ0FQaXVGTjh4eFFxWE1SRW41OFo5Q2w2TnE2X0pIQ2dFSlg3ZnNZZ0lTVlk3eXljX0lGRnNoeXV1TXpkeVU5c2tHTTh2d2dWeDlrM0dHaG5wUGNjeDFmNDgwVi1qdXZSRW91bGkxQkVaT0lCQWRxTVlONDdnOUNEdVd3bTg0WTlVUDVXSC01bkpvSWs5NWxPMEpvZlhoVFhKZ190YmFtZjBuSUtzU2hfZGYwTWZnU05vX0xpeEhJdHFWbXFhb1FaVV8w?oc=5",
       "published_at": "2026-11-24T17:48:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Argentina"
       ],
@@ -5570,93 +5709,6 @@
       }
     },
     {
-      "id": "2de129ff53bf2a55ea",
-      "title_original": "Santas and a polar bear emerge from washed-up container on Bulgarian beach - Reuters",
-      "title_pt": "Papais Noel e um urso polar emergem do recipiente lavado na praia búlgara - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNb3RDWkpBWEVPQjc0MElRMEhEd3RHeXJSX29ldlJMVGdURmxsQmtKYmNsbm5sSDhfUmNHSlE3OWs3RXczbVZlQmJJa21mYUdZZmRFRVJPMXpEMEN4N3hkS0w3U0s5em9hY2RpckdIYlpzbUlSbWoyVWwydF82anhWcVFtZlhHOFQ1akd6enZVWFZSbDF6MHVlV0VFSHd2VGJRbllqdA?oc=5",
-      "published_at": "2026-11-24T17:22:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Logística",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "tanker, vessel, transport, industry, ship, port, raid",
-        "url": "./data/news-images/eebe91437df5651d62913b37.jpg",
-        "page": "https://pixabay.com/photos/tanker-vessel-transport-industry-6816030/",
-        "author": "zzkonst"
-      }
-    },
-    {
-      "id": "de1a660c29e7b2b26c",
-      "title_original": "Danaos Q3 Earnings Call Highlights - TradingView",
-      "title_pt": "Danos Q3 ganha destaques de chamada - TradingView",
-      "summary_pt": null,
-      "source": "TradingView",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVk9Ra3JQcllnSnpEdUFpcGdhLVNISUhFdVFhc004WlRCd1hIM1dGVm5JQzlPSTlUaC1oUnlBZUhtUkdQWkF1NDR1RE5jT1lJSW9XaVdIbHZSRERIWFBHdUtmazlPcS1qd0I3a0dnUWNiSDNDaFJxdVI4b3VMSEUwazczcGlzdWdyUjFRTFVkMEh5WmhBR3NxRThzWQ?oc=5",
-      "published_at": "2026-11-24T17:16:04+00:00",
-      "collected_at": "2026-11-25T19:26:58.716651+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Logística",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "ship, waters, sea, transport system, industry, oil tanker, coast, nautical, port, alhani zueitina, north sea, nature, jade bay, tanker bridge, delete bridge, by the sea, jade weser port",
-        "url": "./data/news-images/a7ef97d7f7a97d783c59432d.jpg",
-        "page": "https://pixabay.com/photos/ship-waters-sea-transport-system-3157954/",
-        "author": "AntjeBartholdi"
-      }
-    },
-    {
-      "id": "64ae6010b61be8fb55",
-      "title_original": "Global Oil Output to Return to Pre-Iran War Level by Year’s End, US EIA Says - EnergyNow.com",
-      "title_pt": "Saída global de petróleo para retornar ao nível de guerra pré-Iran até o final do ano, EUA EIA diz - EnergyNow.com",
-      "summary_pt": null,
-      "source": "EnergyNow.com",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNFA1a0JOZkNidjVKMUdMeFhSZ2dCTFpYbzlER0pmZGRWZUtjMkEtLVVTOUZHSkFwbFQ3cUV5WDNsSldBVVdBdlVqYXpzWllJSTJqNmNVTlpsRVZsU3lOdlNFaE9ZcDVDUHdvdkpjSTl1OFZhTEpmT2hZUGg5cVZ3blpSUFRsODROR3p0TmlnM0habkI3dHZsRm82VVoxY2NOQ20xYjNLTDY?oc=5",
-      "published_at": "2026-11-24T16:45:18+00:00",
-      "collected_at": "2026-11-25T19:26:58.716651+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Petróleo",
-      "commodities": [
-        "Petróleo"
-      ],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "industrial plant, rain, night, nature, lights, mist",
-        "url": "./data/news-images/38f7a4422a878954888968ca.jpg",
-        "page": "https://pixabay.com/photos/industrial-plant-rain-night-lights-7527754/",
-        "author": "tasukaran"
-      }
-    },
-    {
       "id": "1e705bad92376b4a34",
       "title_original": "India: Oilseeds and Products Update - USDA Foreign Agricultural Service (.gov)",
       "title_pt": "Índia: Atualização de sementes oleaginosas e produtos - USDA Foreign Agricultural Service (.gov)",
@@ -5665,7 +5717,7 @@
       "source": "USDA Foreign Agricultural Service (.gov)",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOVGpxT1Q3aXBYN0Zkc2VWeDZ3MXktbjUtbi1jZXdLNWxDMjlFdzNuVXgwQmNLN3V5UllkeFlZZG1RVHpTNGloOVdlc3BHLUxIMHdyZXlyZFlxSHM2Y2NpMTlubTBwdHBxSVByMUd2aHJfYjQxR3RFS25yc0c1elVqWWRPUQ?oc=5",
       "published_at": "2026-11-24T15:01:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Índia",
         "Estados Unidos"
@@ -5696,7 +5748,7 @@
       "source": "USDA Foreign Agricultural Service (.gov)",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQeWR2SE1DdGN6TFdCeVpJa0JqYm9hUGE2YTQtRk1ZQV9aYVVsQVduclFWQ285dTI2cER0UUdXY2Jvc09ieTIzVE40d05VanpSVzhQXzZjejQtaWpsdkN5X0M3WWZKb0xseHNDUk5sTmZ3TG9aZ2thdnY5dFg2NXE0S3BscVRyMy1FbU8wSEZ4R1NsbXVPaUs4MVVwWDJHSDlrVWRhRXZLY01vMWNhQlNXTDBqSjU1aHVaYUE?oc=5",
       "published_at": "2026-11-24T08:00:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Estados Unidos"
       ],
@@ -5786,7 +5838,7 @@
       "source": "www.gov.br",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcUpNMzAyeUNGZGJZV3pkWVhES2NZSktjbUhTc195TURjTmpMbE9XZ2FPcVJQMTZJc2xnTTJHUGF2bXJ1RmVKZ2dVcFMyb01QaE1kVm0tMEhhWGNZNVFrWHZmaWVLblpuSXBJamkyZ0d2TWNzUjRNUTFDTXpVSmVmcWc1bVBkQnFEQWpiUTRhNTYyQXZxNjBEU3hWZVBQN1UycFdDWkRSZXVuXzZUdkdVdVdkNnA4UVdtMklxRmpLVVhqQQ?oc=5",
       "published_at": "2026-11-19T17:35:27+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -5815,7 +5867,7 @@
       "source": "Planeta Campo",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdFpxTThkaWtEYm5naTVDSFFjOUlQLTk2NklJV3FPYzFBSWRVQ0xrRWZDYWpHbzZXX1NoVDFyd2hfa1J1eXlud3lmMHZYSlVSZlhseEN3WWJCbUJvNHBtd3llWXhjZC13VXZDTWMxQVV6QV9zREpGQnpIMFhZUW51ZS1uX3NKWF9nbmdwaGZDUTdYb1NKR2JSOEZINVIxeUt2STE1R0s3amt4ZjByamFjUHRmWmhMX3R4bnctc3NEN0RYX0VWUUo4NUdWV1hhRXJzb0t2eQ?oc=5",
       "published_at": "2026-11-17T08:00:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -5844,7 +5896,7 @@
       "source": "Planeta Campo",
       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNMkRQMlRLalhtVU5oS25QWndfYkhtYUhnR0VXWmU1RnB6QnRKRDVTeW9tdW1OcWpodW8wdHpteVRaMzF4X0NHUlhkbUdudzlRVmdPWkVoQk4zZ2VremdqVjYxZE01bGZGSWhsMXFhbTEwWmh1XzRKZWtfdTZkejFuX1pabjlKNjZRME9pLWwySVJlWDRjZnQ0cjRkREx4dHhQQ0N2bDd1cXpCU0ZLSnpDakd0ZzhiTUVfRFljQXl2eFh4VTRLcHk0YkxIcWN0M0JJN2psQ0twektwNXhJb2VQaUt3OUdQZw?oc=5",
       "published_at": "2026-11-16T22:01:36+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Global"
       ],
@@ -5900,7 +5952,7 @@
       "source": "Argentina.gob.ar",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNSWl4TEIxNGdSN2Q4cWFPLXcxamYxekNjMDk4ZE44cUF5SVJwWWpQTVhYbk9XRjJIM2NhTjJNYlJyNXAzbThXN1ZZZVdNVE16OG9HZ2lmaUFXeVpYTFhIUlMxa0dZd0FkYUl0cGNWT3JLV2x1Y2pUSjZrbE9BcExic0dWWXR3UnVaODVTQzVISVRCcWtDVlBvclRsVTFxWkJ1QjJfMld3ODBrM2NpakJKR0oxWmltMHJORGNhR050WGVWUQ?oc=5",
       "published_at": "2026-11-13T11:29:18+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Argentina"
       ],
@@ -5930,7 +5982,7 @@
       "source": "Argentina.gob.ar",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUFZSLXljSEthcDhJa3lGMWdCWHIyVXdkbTRDTUJwcVNBTXVkai12Q09kc0tXZzRKbTFXSERDSGhkWmw0d2QzcUEzMWJ6WUNBeE96ZDd6R3FuSmN4TjR1ZXNjNHFPRi1HbnJ3RC0yZ1MybGF0bDB5c3pFNTFaNnFVS3dwRW5tcUJFeEFkY01sRTNXbUFGRFJwa2o4c3FFZTZSQnpBT094cnphUl9ESE5mWlE3TmY3SF9IdU9VX2g5R3dWUQ?oc=5",
       "published_at": "2026-11-05T08:00:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
+      "collected_at": "2026-11-27T23:34:33.777167+00:00",
       "regions": [
         "Argentina"
       ],
@@ -5949,36 +6001,6 @@
         "url": "./data/news-images/6b5020d2703c441dd955bc81.jpg",
         "page": "https://pixabay.com/photos/mountains-lake-lagoon-glacier-6318080/",
         "author": "jawajeziorski"
-      }
-    },
-    {
-      "id": "979b8e2adffd3da896",
-      "title_original": "Más de 50 productos argentinos ocupan los primeros puestos como exportadores mundiales - Argentina.gob.ar",
-      "title_pt": "Mais de 50 produtos argentinos ocupam os primeiros postos como exportadores mundiais - Argentina.gob.ar",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Argentina.gob.ar",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPM0ZpbWNlX3lGNW04d242R01LdmNpOURWci1zaThZQ3M2VFUybzZZa2lUeFhZeTVsOHdGeHBKRjZpVEFHaU1zZ0xteWZDdzBKejU4blRkcF81MnpNUjZJaFo3RkF4WFZPNDM5c3p5NFdJdzJaNEJNRE5lcFNCT0ZiSjhzYUptb1NsNFNmUGlFcnhDeWFNRDRzd1BTRTlycXRoV2NGVmFlYmxnWDRRVGx0UzdpS21QMEwydkVzUkFnVFlQQQ?oc=5",
-      "published_at": "2026-11-02T08:00:00+00:00",
-      "collected_at": "2026-11-27T12:46:25.005882+00:00",
-      "regions": [
-        "Argentina"
-      ],
-      "category": "Comércio exterior",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: export",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "es",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": "Argentina",
-        "tags": "street, highway, city, traffic, travel, buenos aires, buenos aires, buenos aires, buenos aires, buenos aires, buenos aires, Argentina, Buenos Aires",
-        "url": "./data/news-images/35dafad64800646a9c21e11a.jpg",
-        "page": "https://pixabay.com/photos/street-highway-city-traffic-travel-3242215/",
-        "author": "Lernestorod"
       }
     }
   ]
