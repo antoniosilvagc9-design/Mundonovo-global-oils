@@ -1,6 +1,24 @@
 [
   {
     "ids": [
+      "565d5f2b1f7da9b2a6",
+      "4a9a0873beb5b7f14d",
+      "078917993c121c7212"
+    ],
+    "terms": [
+      "trabuco",
+      "fazenda"
+    ],
+    "title": "Luiz Carlos Trabuco aceita convite para assumir a Fazenda em 2027",
+    "fact": "Planalto confirmou a escolha em 26/11. O dólar comercial fechou a R$ 5,744 (-1,25%) e o Ibovespa subiu 6,07% no dia, segundo a Agência Brasil.",
+    "watch": "Monitorar anúncios fiscais, juros e câmbio efetivo das importações; a reação diária não garante novas quedas do dólar.",
+    "source": "Agência Brasil",
+    "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/trabuco-aceita-convite-de-lula-para-comandar-fazenda-diz-planalto",
+    "date": "2026-11-26T23:14:00Z",
+    "priority": 0
+  },
+  {
+    "ids": [
       "0d4a8a079b0c89adc7"
     ],
     "terms": [
