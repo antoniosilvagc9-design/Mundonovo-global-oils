@@ -109,7 +109,7 @@ ECONOMY_QUERIES={
  "general":["Sao Paulo skyline","business meeting office","Brazil commercial buildings"],
 }
 def economy_theme(item):
- title=(item.get("title_original","")+" "+item.get("title_pt","")).lower()
+ title=((item.get("title_original") or "")+" "+(item.get("title_pt") or "")).lower()
  for theme,pattern in [
   ("fiscal",r"trabuco|fazenda|fiscal|tribut|congresso|d[ií]vida|governo"),
   ("rates",r"selic|copom|juros|central bank|banco central|federal reserve"),
