@@ -1,97 +1,68 @@
 {
-  "updated_at": "2026-11-26T23:49:41.831634+00:00",
+  "updated_at": "2026-11-27T23:26:33.795113+00:00",
   "source": "Finnhub / TradingView (gráficos)",
   "coverage": "45 ações monitoradas; últimos preços disponíveis, não ranking mundial",
-  "commodity-down": [
-    {
-      "name": "MPC",
-      "tv": "NYSE:MPC",
-      "price": 346.27,
-      "change": -2.503097195630155,
-      "timestamp": 1795640400
-    },
-    {
-      "name": "VLO",
-      "tv": "NYSE:VLO",
-      "price": 323.0,
-      "change": -0.5143684356423539,
-      "timestamp": 1795640400
-    },
-    {
-      "name": "PSX",
-      "tv": "NYSE:PSX",
-      "price": 236.08,
-      "change": -0.36716606879086955,
-      "timestamp": 1795640400
-    }
-  ],
+  "commodity-down": [],
   "commodity-up": [
     {
-      "name": "BG",
-      "tv": "NYSE:BG",
-      "price": 88.15,
-      "change": 4.865572210325952,
-      "timestamp": 1795640400
+      "name": "NEM",
+      "tv": "NYSE:NEM",
+      "price": 106.87,
+      "change": 5.352917981072558,
+      "timestamp": 1795813200
     },
     {
       "name": "VALE",
       "tv": "NYSE:VALE",
-      "price": 9.81,
-      "change": 4.695837780149437,
-      "timestamp": 1795640400
+      "price": 10.27,
+      "change": 4.689092762487257,
+      "timestamp": 1795813200
     },
     {
-      "name": "DE",
-      "tv": "NYSE:DE",
-      "price": 641.02,
-      "change": 4.441475495307601,
-      "timestamp": 1795640400
+      "name": "FCX",
+      "tv": "NYSE:FCX",
+      "price": 50.77,
+      "change": 4.572605561277054,
+      "timestamp": 1795813200
     }
   ],
   "general-down": [
     {
-      "name": "ORCL",
-      "tv": "NYSE:ORCL",
-      "price": 103.88,
-      "change": -5.132420091324208,
-      "timestamp": 1795640400
+      "name": "MCD",
+      "tv": "NYSE:MCD",
+      "price": 282.62,
+      "change": -0.3104056437389757,
+      "timestamp": 1795813200
     },
     {
-      "name": "NVDA",
-      "tv": "NASDAQ:NVDA",
-      "price": 149.3,
-      "change": -3.9129875144806148,
-      "timestamp": 1795640400
-    },
-    {
-      "name": "AMZN",
-      "tv": "NASDAQ:AMZN",
-      "price": 244.43,
-      "change": -3.1154623647389856,
-      "timestamp": 1795640400
+      "name": "KO",
+      "tv": "NYSE:KO",
+      "price": 97.4,
+      "change": -0.19469207910646213,
+      "timestamp": 1795813200
     }
   ],
   "general-up": [
     {
-      "name": "BG",
-      "tv": "NYSE:BG",
-      "price": 88.15,
-      "change": 4.865572210325952,
-      "timestamp": 1795640400
+      "name": "INTC",
+      "tv": "NASDAQ:INTC",
+      "price": 57.4,
+      "change": 5.379107765742619,
+      "timestamp": 1795813200
     },
     {
-      "name": "VALE",
-      "tv": "NYSE:VALE",
-      "price": 9.81,
-      "change": 4.695837780149437,
-      "timestamp": 1795640400
+      "name": "NEM",
+      "tv": "NYSE:NEM",
+      "price": 106.87,
+      "change": 5.352917981072558,
+      "timestamp": 1795813200
     },
     {
-      "name": "DE",
-      "tv": "NYSE:DE",
-      "price": 641.02,
-      "change": 4.441475495307601,
-      "timestamp": 1795640400
+      "name": "TSLA",
+      "tv": "NASDAQ:TSLA",
+      "price": 400.0,
+      "change": 5.224391013837004,
+      "timestamp": 1795813200
     }
   ]
 }
