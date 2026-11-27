@@ -99,6 +99,37 @@ def photo_identity(photo, category):
  if maritime and (not re.search(r"\btanker\b",description) or re.search(r"\b(truck|aircraft|plane|firefighter)\b",description)):return None
  return match.group(1)
 
+ECONOMY_QUERIES={
+ "fiscal":["Brasilia congress architecture","Brasilia government buildings","public finance documents"],
+ "markets":["stock exchange trading screen","financial market chart","business district Sao Paulo"],
+ "rates":["central bank building","financial calculator documents","bank office"],
+ "prices":["supermarket shopping groceries","Brazil retail market","shopping basket"],
+ "trade":["Brazil industrial factory","Brazil port aerial","warehouse logistics"],
+ "currency":["currency exchange office","US dollar banknotes","Brazilian real banknotes"],
+ "general":["Sao Paulo skyline","business meeting office","Brazil commercial buildings"],
+}
+def economy_theme(item):
+ title=(item.get("title_original","")+" "+item.get("title_pt","")).lower()
+ for theme,pattern in [
+  ("fiscal",r"trabuco|fazenda|fiscal|tribut|congresso|d[ií]vida|governo"),
+  ("rates",r"selic|copom|juros|central bank|banco central|federal reserve"),
+  ("prices",r"ipca|infla|pre[cç]os|consumo"),
+  ("markets",r"ibovespa|bolsa|a[cç][oõ]es|investiment"),
+  ("trade",r"export|import|ind[uú]stria|com[eé]rcio|pib"),
+  ("currency",r"d[oó]lar|c[aâ]mbio|currency|exchange rate")]:
+  if re.search(pattern,title):return theme
+ return "general"
+
+def economy_visual(photo):
+ s=(photo.get("page","")+" "+photo.get("tags","")).lower()
+ if re.search(r"banknote|ballots|brazilian money|brazilian real|currency|money|note",s):return "money"
+ if re.search(r"chart|graph|trading screen|stock market",s):return "chart"
+ if re.search(r"building|architecture|skyline|city|congress",s):return "architecture"
+ if re.search(r"office|meeting|business people",s):return "office"
+ if re.search(r"supermarket|shopping|groceries",s):return "retail"
+ if re.search(r"factory|industrial|warehouse|port",s):return "industry"
+ return "other"
+
 def pixabay_images(category, api_key):
  if not api_key:
   return []
@@ -250,11 +281,21 @@ def main():
   previous={n["id"]:n.get("image") for n in json.loads(OUT.read_text(encoding="utf-8"))["news"]}
  except (OSError,ValueError,KeyError,TypeError): pass
  identities=set(); digests=set(); used=set(); pools={}; attempts=0; count=0; stopped=False; failures=0
+ economy_counts={}; economy_authors={}; theme_counts={}
+ economy_total=sum(n["category"]=="Economia Brasileira" for n in ordered)
+ visual_limit=max(2,(economy_total+5)//6)
+ def economy_allowed(photo):
+  v=economy_visual(photo); a=photo.get("author","")
+  return economy_counts.get(v,0)<visual_limit and economy_authors.get(a,0)<max(2,(economy_total+9)//10)
+ def economy_record(photo):
+  v=economy_visual(photo); a=photo.get("author","")
+  economy_counts[v]=economy_counts.get(v,0)+1; economy_authors[a]=economy_authors.get(a,0)+1
  # Preserve existing assignments before allocating new photographs.
  for item in ordered:
   item.pop("image",None)
   photo=previous.get(item["id"])
   if not isinstance(photo,dict): continue
+  if item["category"]=="Economia Brasileira" and api_key and not economy_allowed(photo):continue
   identity=photo_identity(photo,item["category"])
   if not identity or identity in identities:continue
   url=photo.get("url","")
@@ -266,13 +307,24 @@ def main():
    if digest in digests:continue
    digests.add(digest); identities.add(identity)
    item["image"]=dict(photo,url=url); used.add(filename); count+=1
+   if item["category"]=="Economia Brasileira":economy_record(photo)
  for item in ordered:
   if "image" in item or stopped or not api_key: continue
   category=item["category"]
   country=COUNTRY_PHOTOS.get(item["id"])
   query=country[1] if country else category
-  if query not in pools:pools[query]=pixabay_images(query,api_key)
-  for photo in pools[query]:
+  if category=="Economia Brasileira":
+   theme=economy_theme(item); queries=ECONOMY_QUERIES[theme]; offset=theme_counts.get(theme,0)%len(queries); theme_counts[theme]=theme_counts.get(theme,0)+1
+   queries=queries[offset:]+queries[:offset]
+  else:queries=[query]
+  candidates=[]
+  for query in queries:
+   if query not in pools:pools[query]=pixabay_images(query,api_key)
+   candidates.extend(pools[query])
+  if category=="Economia Brasileira":
+   candidates.sort(key=lambda p:(economy_counts.get(economy_visual(p),0),economy_authors.get(p.get("author",""),0)))
+  for photo in candidates:
+   if category=="Economia Brasileira" and not economy_allowed(photo):continue
    if country:
     if not re.search(country[2],photo["page"]+" "+photo.get("tags",""),re.I):continue
     photo=dict(photo,illustrative_country=country[0])
@@ -296,6 +348,7 @@ def main():
     if digest in digests:continue
     identities.add(identity); digests.add(digest)
     item["image"]={"illustrative_country":photo.get("illustrative_country"),"tags":photo.get("tags",""),"url":base+filename,"page":photo["page"],"author":photo["author"]}
+    if category=="Economia Brasileira":economy_record(photo)
     count+=1; failures=0; break
    except urllib.error.HTTPError as exc:
     print("Falha no download: HTTP",exc.code); failures+=1
