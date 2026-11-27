@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-27T10:27:21.568908+00:00",
+  "updated_at_utc": "2026-11-27T10:47:58.014842+00:00",
   "feed": "Google News RSS — manchetes e metadados de terceiros",
   "limitations": "Manchetes traduzidas automaticamente quando disponível; original preservado; resumo e análise não gerados sem acesso ao texto. Classificação heurística, não avaliação factual do impacto.",
   "errors": [],
@@ -73,7 +73,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1naFBaODVvVW45NWlPNDZJZjc4WEpETWozS2RJVFpYZlN4SVMycG1ha1Y0SF9xd1ZRQk9hQV8wV2s1WmtmVWxMWWQ5Y3BRU24t?oc=5",
       "published_at": "2026-11-27T08:47:55+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Malásia",
         "Indonésia"
@@ -248,15 +248,15 @@
       }
     },
     {
-      "id": "4a9a0873beb5b7f14d",
-      "title_original": "Trabuco, do Bradesco, é escolhido para o Ministério da Fazenda - Valor Econômico",
-      "title_pt": "Trabuco, do Bradesco, é escolhido para o Ministério da Fazenda - Valor Econômico",
+      "id": "d7f77ab235efdd99c3",
+      "title_original": "Um ‘filósofo desempregado’, banqueiro e, agora, futuro ministro da Fazenda de Lula - Valor Econômico",
+      "title_pt": "Um ‘filósofo desempregado’, banqueiro e, agora, futuro ministro da Fazenda de Lula - Valor Econômico",
       "summary_pt": null,
       "summary_original": null,
       "source": "Valor Econômico",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVldTT3VQMEY1RDJKa05ydjVIaVBhWlNRZE1EdThzcl9fQnVBZks3ZS1ZWjAxTGFXOGR4YXozTjQ4VHhaZmhVUVh2MjhmVE8tWW9yWDFZakpwTnU5VVJ2NEJaSnQyOGY3a3JQWERxYTlwalVhYXBwRXViYlB0aWZ5SHpyTTlDOG1nX19jSFZhQnNzZjY3d2lOU0JObWJLNkhURVMwQTJuRno0c19YOHRnLW5HcEV3U1hRM2fSAcgBQVVfeXFMUHBwdjJtLWR6dFRPaWtzSWpFLUNBTjlCVDJ1eTJRallaUENjbnU0LWoxZldPUUcyWXFxdmZNWkIxb3Z4Vl80aVItWVBwbmJGdjBzaEpySjJ4Qnk4LWQzcVBfQjE3cHhPYkYwNzVqRUtLMFgzZDVoVWR1RXQ2ZXJFY25SYmRLV2ZKUkVaZGlTQ05HU2R0ZkVqTmhPN2VpNHc4Q2ZjQ2hybTNTR2tvM3NWU093TXY5R2xmYThpc2xYOGZreG9aR3BMZng?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRmVuMjZBWEkyNGJCc3AzV1h3UGc2Yk56aFlMWWwwN1VLazVrQUNheWNWUGhfLW9SazF0MGxCYzdNLVhWUzNhcWU3bXFVWkY2VTJCVVFBRFBfSEN4NjNDaG9neDFkY3BkOWFsVDdWblJfYmt0Z3BrSS1LbC1feWR1TmNwRFZnc2xDT213Z2pJcUN4eHAyeXBMSFBtODRxbDRFYXFaOEZKNl9zSEt0ck1wUzF6eUtRZE1MOW1rUWJNclpUQ3dnS3BrM0tFYmllZndi0gHfAUFVX3lxTE5HVWRia1F3SnVsM24yNDFCZ2VieUNDeVd6ZzVmT05ibE40VmhrRWtad2RuR0tZZG1KSUhZVmFOUzlEUk1vTFczS3BzbFNkd2RjTDVFT3M1WHpJZFNad3hRejk3RGE1TzJLSm9ERHk2bEJfZEhsb25BSmxvTTZxQlR6UUtMRFFxYTdfREwxQndDZm5WTzA0TEFDZGFQd2tTb1ozZ2lZZDdoM0VXY3V4RnN3U2k0WWNqRWdiQTRQTEItVUtCY2xMdDNLM3VKY2lHUG9sYmZnRlBXaUwtV1plN0k?oc=5",
       "published_at": "2026-11-27T08:00:01+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Brasil"
       ],
@@ -271,10 +271,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "god, brazilian money, ballots, brazil, faith, religion, wage, wage, wage, wage, wage, wage",
-        "url": "./data/news-images/99151d6bd4adacc84b355b33.jpg",
-        "page": "https://pixabay.com/photos/god-brazilian-money-ballots-brazil-3114511/",
-        "author": "Pedrosa_picture"
+        "tags": "national congress, brasilia, building, architecture, facade, exterior, modern, pond, senate, chamber of deputies, brazil, brasilia, brasilia, brasilia, brasilia, brasilia",
+        "url": "./data/news-images/797cc047094c02f14cee15f7.jpg",
+        "page": "https://pixabay.com/photos/national-congress-brasilia-building-5991196/",
+        "author": "renatolaky"
       }
     },
     {
@@ -308,6 +308,36 @@
       }
     },
     {
+      "id": "4a9a0873beb5b7f14d",
+      "title_original": "Trabuco, do Bradesco, é escolhido para o Ministério da Fazenda - Valor Econômico",
+      "title_pt": "Trabuco, do Bradesco, é escolhido para o Ministério da Fazenda - Valor Econômico",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Valor Econômico",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVldTT3VQMEY1RDJKa05ydjVIaVBhWlNRZE1EdThzcl9fQnVBZks3ZS1ZWjAxTGFXOGR4YXozTjQ4VHhaZmhVUVh2MjhmVE8tWW9yWDFZakpwTnU5VVJ2NEJaSnQyOGY3a3JQWERxYTlwalVhYXBwRXViYlB0aWZ5SHpyTTlDOG1nX19jSFZhQnNzZjY3d2lOU0JObWJLNkhURVMwQTJuRno0c19YOHRnLW5HcEV3U1hRM2fSAcgBQVVfeXFMUHBwdjJtLWR6dFRPaWtzSWpFLUNBTjlCVDJ1eTJRallaUENjbnU0LWoxZldPUUcyWXFxdmZNWkIxb3Z4Vl80aVItWVBwbmJGdjBzaEpySjJ4Qnk4LWQzcVBfQjE3cHhPYkYwNzVqRUtLMFgzZDVoVWR1RXQ2ZXJFY25SYmRLV2ZKUkVaZGlTQ05HU2R0ZkVqTmhPN2VpNHc4Q2ZjQ2hybTNTR2tvM3NWU093TXY5R2xmYThpc2xYOGZreG9aR3BMZng?oc=5",
+      "published_at": "2026-11-27T08:00:01+00:00",
+      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "pt",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "god, brazilian money, ballots, brazil, faith, religion, wage, wage, wage, wage, wage, wage",
+        "url": "./data/news-images/99151d6bd4adacc84b355b33.jpg",
+        "page": "https://pixabay.com/photos/god-brazilian-money-ballots-brazil-3114511/",
+        "author": "Pedrosa_picture"
+      }
+    },
+    {
       "id": "d316ff6c9c2d8402fc",
       "title_original": "Malaysian palm oil rises on Dalian strength, eyes weekly gain - The Edge Malaysia",
       "title_pt": "Óleo de palma malaio aumenta na força Dalian, ganho semanal de olhos - The Edge Malaysia",
@@ -316,7 +346,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE92Um9aSDNiSFc1ZHQyd1VDTkNnQ3JrV0FIQ0RNQ1hOZXRKNHZIMW1HTUZJZmNVazVZUTZvM1REVlF1dWdpd0pacm5fdW5wZUdM?oc=5",
       "published_at": "2026-11-27T07:33:52+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Malásia"
       ],
@@ -340,6 +370,36 @@
       }
     },
     {
+      "id": "d3050bb2657e548e9d",
+      "title_original": "Indian firms utilising only 20%-30% of free trade agreement benefits, RBI governor says - Reuters",
+      "title_pt": "Empresas indianas que utilizam apenas 20%-30% dos benefícios do acordo de comércio livre, diz governador do RBI - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdFhhQzVlSnZ0TUtmdUY5WUhtWHd3R1kyTXpLZTk2XzFINUFmYWlKakpFcmZsS21GNEdKd0VUMTVReHZmR0xnM2dxRjk3aXA3U0lXX3F1cG55REhGMGd2NVJzUzFkNDBKQmJOTENiWlJ1S2FxMFE2QjZhSEpyeWhKay1WeUNGQnB3NFhQUy1qdjJ4dmNqWkNjbUVqUWxsSUVtSTJrWEw0Y0hzQkxFYUxTU05FNUd3NjAtNENwVUFvOVZidw?oc=5",
+      "published_at": "2026-11-27T07:18:00+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
+      "regions": [
+        "Índia"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "gas tanker, ship, sea, gas carrier, maritime, nautical, shipping, nature, ocean",
+        "url": "./data/news-images/a80ef938445d922c007facf3.jpg",
+        "page": "https://pixabay.com/photos/gas-tanker-ship-sea-gas-carrier-6367981/",
+        "author": "Gaz_Chapp"
+      }
+    },
+    {
       "id": "71b3479585ae94cea4",
       "title_original": "India-US trade deal is nearing completion, minister says - Reuters",
       "title_pt": "India-US negócio comercial está se aproximando de conclusão, ministro diz - Reuters",
@@ -348,7 +408,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNMkR3N0t3ZmV1SDk5LWNGa3hCcXVleWpPVFpORzVUZnUtYUJoUXQ2eFEzN3ZrQjcxMHhCaXk0NzY4M2NkSFNic1Q2aGJYZlZoYnFlSG5iU0NQX1dUNWZzci1xTU10bm5UbGRYSWkzdno1c3dDRlpZWjVxNjRaWkF5ZzlJdGxsUlJpWUFTbDZCN0d4bFlqN3NNOG4xdy1zZy05TmxNZTlR?oc=5",
       "published_at": "2026-11-27T05:21:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Índia"
       ],
@@ -409,7 +469,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOYW55b1BZTkM4emFaZmljMEIzZlBhd2duLWJnRlpMaVA1UnBMaXpEQTdYU0JQUF93QWRkMEV0ZHlaUFhJM3JwTkVLSFNQcDhJSW43VEJ3ME9uQmVvaXpaVkV6eG1CWnBISXFncTVTQjI0NElBcUZDTXlNZEw0S0RCSGxFa25EX29sYzJVZHJmREFnckNW?oc=5",
       "published_at": "2026-11-27T03:28:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -461,6 +521,36 @@
       }
     },
     {
+      "id": "efe1c5fed376309128",
+      "title_original": "Rupee rally takes a hit as AI trade revival dents shares, currency sees weekly dip - Reuters",
+      "title_pt": "Rali Rupee leva um golpe como AI reavivamento comercial denta ações, moeda vê mergulho semanal - Reuters",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTVpnbGF5MDlLb2hLcjBEWnM2ajc3TkQ0R0tmYy1ZV2lMU2NpeEMtdG95djVVcDVFY3dZMmxRSjFPT19sWDJNeDNCcTJyLVJYelprdFNIdkNOQTV0NG80VjV3bTVkYXhBb3JWY2ZydEJsbFVMUll0Q3lkZVAyWWkwY0NNV3lVcll6YzVqcDU2SGZma0c4cm5WR2ZSLVlTekx6LUgwUGlWTWNuMlBXeEhrQTIza3Q4TTBC?oc=5",
+      "published_at": "2026-11-27T02:47:00+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
+      "regions": [
+        "Global"
+      ],
+      "category": "Câmbio",
+      "commodities": [],
+      "impact": "Baixo",
+      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "europe, pay, usa, banknote, business, cool backgrounds, money, full hd wallpaper, windows wallpaper, mac wallpaper, free background, wallpaper hd, rate, hd wallpaper, bill, dollar, cash, finance, currency, american, us dollars, texture, background, beautiful wallpaper, pattern, european, market, euro, free wallpaper, 4k wallpaper 1920x1080, brown business, brown money, brown texture, brown finance, desktop backgrounds, brown pattern, brown company, wallpaper 4k, 4k wallpaper, laptop wallpaper, brown market",
+        "url": "./data/news-images/4617689ad52d72c6f2fd0373.jpg",
+        "page": "https://pixabay.com/photos/europe-pay-usa-banknote-business-69527/",
+        "author": "PublicDomainPictures"
+      }
+    },
+    {
       "id": "5dba32bf60489f79c1",
       "title_original": "Dollar set for flat week as haven bids counter yields - Reuters",
       "title_pt": "Dólar definido para semana plana como paraíso licita contra-rendas - Reuters",
@@ -469,7 +559,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWkt5OU9rSlNUam1waVVQSzc0cWNjMWk3N0xXSnk5Q1p4UlVHSG5JdGpkZGxVLWI5bW9QOVUwMGRsOExnNkc1VkZWUHllWWQxOV9QX0xTLUVxbGcxOFV3NHQxUnpUQUJRTFh6aXZ6MlpOb3d0eHRucTNQOERjNHlfS01YTlk3dTBwX2ZfWVFjdER1Tkl5V0NDODlzclpSckpUT3c?oc=5",
       "published_at": "2026-11-27T01:03:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -521,36 +611,6 @@
       }
     },
     {
-      "id": "565d5f2b1f7da9b2a6",
-      "title_original": "Trabuco aceita convite de Lula para comandar Ministério da Fazenda - Agência Brasil",
-      "title_pt": "Luiz Carlos Trabuco aceita convite de Lula para comandar o Ministério da Fazenda",
-      "summary_pt": "O Planalto confirmou que o presidente do conselho do Bradesco aceitou assumir a Fazenda em 2027. No dia 26/11, o dólar comercial recuou 1,25%, para R$ 5,744, e o Ibovespa avançou 6,07%.",
-      "summary_original": null,
-      "source": "Agência Brasil",
-      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/trabuco-aceita-convite-de-lula-para-comandar-fazenda-diz-planalto",
-      "published_at": "2026-11-26T23:14:00Z",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Economia Brasileira",
-      "commodities": [],
-      "impact": "Alto",
-      "impact_reason": "Reação cambial observada no dia do anúncio; não implica causalidade exclusiva.",
-      "context_confirmed": "Confirmação do Planalto reportada pela Agência Brasil e Reuters em 26/11.",
-      "commercial_analysis": "A valorização do real pode reduzir custos de importação em dólares; acompanhar política fiscal, juros e câmbio efetivo.",
-      "verification": "Conteúdo consultado na Agência Brasil e corroborado pela Reuters",
-      "language": "pt",
-      "source_type": "Agência Brasil — publicação direta",
-      "image": {
-        "illustrative_country": null,
-        "tags": "ballots, money, real, note, brazilian currency, brazil, fifty reals, currency, income, wage, finances, brazilian reais, one hundred reais, ten reais, money image, money picture, five reais",
-        "url": "./data/news-images/622aca12da197b1dc2e4a7ef.jpg",
-        "page": "https://pixabay.com/photos/ballots-money-real-note-1195046/",
-        "author": "joelfotos"
-      }
-    },
-    {
       "id": "a5b974dfb48bb8c3d3",
       "title_original": "Para Anbima, Trabuco na Fazenda mostra comprometimento do governo com gestão econômica competente - Valor Econômico",
       "title_pt": "Para Anbima, Trabuco na Fazenda mostra comprometimento do governo com gestão econômica competente - Valor Econômico",
@@ -574,10 +634,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "ballots, money, real, note, brazilian currency, brazil, fifty reals, currency, income, wage, finances, brazilian reais, one hundred reais, ten reais, money image, money picture, five reais",
-        "url": "./data/news-images/881afd67fa24c0bb9bb2e736.jpg",
-        "page": "https://pixabay.com/photos/ballots-money-real-note-1194990/",
-        "author": "joelfotos"
+        "tags": "classroom, business meeting, parliament of europe, business, people, meeting, education, seminar, office, group, learning, team, discussion, communication, university, teamwork, women, studying, college, conference, training, working, strategy, ethnic, corporate, professional, whiteboard, room, brown business, brown office, brown work, brown education, brown meeting, brown team, brown learning, brown training, brown study, brown classroom, brown community, brown room, brown communication, brown group, brown conference, brown studying, brown teamwork, business meeting, meeting, office, university, university, teamwork, college, college, college, college, college, conference, room",
+        "url": "./data/news-images/d6b7a32439f33c97c608d8dc.jpg",
+        "page": "https://pixabay.com/photos/classroom-business-meeting-663437/",
+        "author": "mikilnarayani"
       }
     },
     {
@@ -604,10 +664,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "money, note, real, fifty reals, brazilian currency, brazil, economy, wage, thirteenth, ballot",
-        "url": "./data/news-images/861865f3d68f72759e851806.jpg",
-        "page": "https://pixabay.com/photos/money-note-real-fifty-reals-637767/",
-        "author": "Gadini"
+        "tags": "accounting, report, credit card, payment, charge, calculator, pen, math, finance, commerce, percentage, tax, refund, documents, business, insurance, accounting, accounting, accounting, accounting, accounting, report, payment, calculator, math, math, math, finance, tax, tax, refund, insurance, insurance",
+        "url": "./data/news-images/009977df5975d084b81891cb.jpg",
+        "page": "https://pixabay.com/photos/accounting-report-credit-card-761599/",
+        "author": "777546"
       }
     },
     {
@@ -634,10 +694,40 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "ballots, money, real, note, brazilian currency, brazil, fifty reals, currency, income, wage, finances, brazilian reais, one hundred reais, ten reais, money image, money picture, five reais, money, money, brazilian currency, brazil, wage, wage, wage, wage, wage, money image",
-        "url": "./data/news-images/1db4e0ba35c3c05552d2dd06.jpg",
-        "page": "https://pixabay.com/photos/ballots-money-real-note-1195057/",
-        "author": "joelfotos"
+        "tags": "the sun rising, brasilia, capital, brazil, horizon, landscape, summer, national congress, 4k, lommiz rodrigues, structure, building, brasilia, brasilia, brasilia, brasilia, brasilia",
+        "url": "./data/news-images/bb2c0ed4ca64e9a8fc3b618c.jpg",
+        "page": "https://pixabay.com/photos/the-sun-rising-brasilia-capital-4471884/",
+        "author": "Lommiz"
+      }
+    },
+    {
+      "id": "565d5f2b1f7da9b2a6",
+      "title_original": "Trabuco aceita convite de Lula para comandar Ministério da Fazenda - Agência Brasil",
+      "title_pt": "Trabuco aceita convite de Lula para comandar Ministério da Fazenda - Agência Brasil",
+      "summary_pt": "O Planalto confirmou que o presidente do conselho do Bradesco aceitou assumir a Fazenda em 2027. No dia 26/11, o dólar comercial recuou 1,25%, para R$ 5,744, e o Ibovespa avançou 6,07%.",
+      "summary_original": null,
+      "source": "Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/trabuco-aceita-convite-de-lula-para-comandar-fazenda-diz-planalto",
+      "published_at": "2026-11-26T23:14:00Z",
+      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "regions": [
+        "Brasil"
+      ],
+      "category": "Economia Brasileira",
+      "commodities": [],
+      "impact": "Alto",
+      "impact_reason": "Reação cambial observada no dia do anúncio; não implica causalidade exclusiva.",
+      "context_confirmed": "Confirmação do Planalto reportada pela Agência Brasil e Reuters em 26/11.",
+      "commercial_analysis": "A valorização do real pode reduzir custos de importação em dólares; acompanhar política fiscal, juros e câmbio efetivo.",
+      "verification": "Conteúdo consultado na Agência Brasil e corroborado pela Reuters",
+      "language": "pt",
+      "source_type": "Agência Brasil — publicação direta",
+      "image": {
+        "illustrative_country": null,
+        "tags": "brasilia, pgr, reflection, brasilia, brasilia, brasilia, brasilia, brasilia",
+        "url": "./data/news-images/07f45d54634830d6feb5d7f1.jpg",
+        "page": "https://pixabay.com/photos/brasilia-pgr-reflection-2447958/",
+        "author": "daherjr"
       }
     },
     {
@@ -664,10 +754,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "ballots, money, real, note, brazilian currency, brazil, fifty reals, currency, income, wage, finances, brazilian reais, one hundred reais, ten reais, money image, money picture, five reais, free money pictures, money, money, money, money, money, money image",
-        "url": "./data/news-images/894d197eaa9cecafff9131c5.jpg",
-        "page": "https://pixabay.com/photos/ballots-money-real-note-1195050/",
-        "author": "joelfotos"
+        "tags": "calculator, calculation, insurance, finance, accounting, pen, fountain pen, investment, office, work, taxes, calculator, insurance, insurance, finance, finance, finance, finance, finance, accounting, accounting, accounting, investment, taxes",
+        "url": "./data/news-images/67790084c81a30f137a6bef8.jpg",
+        "page": "https://pixabay.com/photos/calculator-calculation-insurance-385506/",
+        "author": "stevepb"
       }
     },
     {
@@ -694,10 +784,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "ballots, money, real, note, brazilian currency, brazil, fifty reals, currency, income, wage, finances, brazilian reais, one hundred reais, ten reais, money image, money picture, five reais, free photo",
-        "url": "./data/news-images/69ed50d8e724ca6f3f327ff1.jpg",
-        "page": "https://pixabay.com/photos/ballots-money-real-note-1195060/",
-        "author": "joelfotos"
+        "tags": "szechenyi chain bridge, suspension bridge, landmark, historic, river, budapest, hungary, panorama, city, urban, buildings, cityscape, lights, night, bridge, illuminated, reflection, city lights, night photography, budapest, budapest, budapest, budapest, budapest, hungary, city, bridge, Hungary, Budapest",
+        "url": "./data/news-images/074cc61d78cc3f608527a8b4.jpg",
+        "page": "https://pixabay.com/photos/szechenyi-chain-bridge-1758196/",
+        "author": "12019"
       }
     },
     {
@@ -724,10 +814,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "money, real, brazil money, grades, ballots, economy, brazilian currency, currency, fifty reals, brazil, one hundred reais, money bills",
-        "url": "./data/news-images/0c00d115f9cbb94f55151753.jpg",
-        "page": "https://pixabay.com/photos/money-real-brazil-money-grades-1194986/",
-        "author": "joelfotos"
+        "tags": "supermarket, stalls, coolers, market, food, fresh, shop, organic, vegetable, healthy, grocery, store, fruit, ripe, yellow, freshness, marketplace, hypermarket, colorful, stand, consumer, nutrition, brown food, brown shopping, brown vegetables, brown healthy, brown shop, brown fruits, brown grocery, brown color, brown nutrition, brown groceries, brown market, supermarket, supermarket, supermarket, supermarket, supermarket, market, market, market, food, shop, grocery, grocery, store",
+        "url": "./data/news-images/e0f371327fc71151dba8168b.jpg",
+        "page": "https://pixabay.com/photos/supermarket-stalls-coolers-market-949913/",
+        "author": "ElasticComputeFarm"
       }
     },
     {
@@ -754,10 +844,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "ballots, money, real, note, brazilian currency, brazil, fifty reals, currency, income, wage, finances, brazilian reais, one hundred reais, ten reais, money image, money picture, five reais, money, money, money, money, money, brazilian currency, brazil, brazil, brazil, currency, income, income, income, wage, money image",
-        "url": "./data/news-images/b994703427b07ec7eb55f211.jpg",
-        "page": "https://pixabay.com/photos/ballots-money-real-note-1195047/",
-        "author": "joelfotos"
+        "tags": "laptop, technology, electronic, digital, portable, connection, network, screen, keyboard, laptop, laptop, laptop, laptop, laptop, digital, network, network, keyboard",
+        "url": "./data/news-images/077acb9b19f37763b4be782c.jpg",
+        "page": "https://pixabay.com/photos/laptop-technology-electronic-6856557/",
+        "author": "LUNEMax"
       }
     },
     {
@@ -784,10 +874,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "ballots, money, real, note, brazilian currency, brazil, fifty reals, currency, income, wage, finances, brazilian reais, one hundred reais, ten reais, money image, money picture, five reais",
-        "url": "./data/news-images/a391cf2d82c517a98c9ef297.jpg",
-        "page": "https://pixabay.com/photos/ballots-money-real-note-1195000/",
-        "author": "joelfotos"
+        "tags": "architecture, brasilia, modern architecture, niemeyer, urban landscape, tourist spot, buildings, brazil, urban, landscaping, brasilia, brasilia, brasilia, brasilia, brasilia",
+        "url": "./data/news-images/b7769c4362a64619f3d34cd6.jpg",
+        "page": "https://pixabay.com/photos/architecture-brasilia-2725958/",
+        "author": "evandroarquitetura"
       }
     },
     {
@@ -814,10 +904,43 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "coin, coins, money, employment, cost, pay, receive, businesses, business, brown business, brown money, coin, coin, coins, money, money, employment, employment, employment, employment, employment, cost, receive",
-        "url": "./data/news-images/2a3d4a80aa7481df2d65446b.jpg",
-        "page": "https://pixabay.com/photos/coin-coins-money-employment-cost-2317/",
-        "author": "PublicDomainPictures"
+        "tags": "analysis, analytics, business, charts, computer, concept, data, desk, device, diagram, digital, documents, graphs, information, investment, job, management, marketing, modern, office, report, business, business, data, data, data, data, data, information, investment, investment, management, marketing, marketing, marketing, report, report, report",
+        "url": "./data/news-images/06e0099010098584024f0109.jpg",
+        "page": "https://pixabay.com/photos/analysis-analytics-business-charts-1841158/",
+        "author": "Pexels"
+      }
+    },
+    {
+      "id": "e58b954955c89cec44",
+      "title_original": "Palm oil rises on Indonesia's proposed new export charge - The Edge Malaysia",
+      "title_pt": "O óleo de palma aumenta com a nova taxa de exportação proposta pela Indonésia - The Edge Malaysia",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "The Edge Malaysia",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5STzhZMTFCRU5KSXdTTF9tdGdfVDdhVThmU2tsc3NuVzJMS2VJN3VNbEhhNzNwTWFOSzdBcDQ1N2lWbWF2TTNRcktXeEhVd3N2?oc=5",
+      "published_at": "2026-11-26T20:59:41+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
+      "regions": [
+        "Malásia",
+        "Indonésia"
+      ],
+      "category": "Óleo de palma",
+      "commodities": [
+        "Óleo de palma"
+      ],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: export",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "cycling, farm, oil plum, gray farm, Senai, Johor, Malaysia",
+        "url": "./data/news-images/a9c2dc86ca599a48c85fe008.jpg",
+        "page": "https://pixabay.com/photos/cycling-farm-oil-plum-gray-farm-2104784/",
+        "author": "chiliapi"
       }
     },
     {
@@ -844,10 +967,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "ballots, money, real, note, brazilian currency, brazil, fifty reals, currency, income, wage, finances, brazilian reais, one hundred reais, ten reais, money image, money picture, five reais",
-        "url": "./data/news-images/1dc510287b9915494cda4587.jpg",
-        "page": "https://pixabay.com/photos/ballots-money-real-note-1194989/",
-        "author": "joelfotos"
+        "tags": "backflip, parkour, parkouring, back flip, jumper, gopro, jump, nature, brasilia, performance, grass, blue grass, gray grass",
+        "url": "./data/news-images/b34ce95a7908e901cf31af73.jpg",
+        "page": "https://pixabay.com/photos/backflip-parkour-parkouring-345027/",
+        "author": "farioff"
       }
     },
     {
@@ -874,10 +997,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "ballots, money, real, note, brazilian currency, brazil, fifty reals, currency, income, wage, finances, brazilian reais, one hundred reais, ten reais, money image, money picture, five reais, brazil, brazil, brazil, wage, wage, wage, wage, wage",
-        "url": "./data/news-images/1da34eb59769d61ce25c479c.jpg",
-        "page": "https://pixabay.com/photos/ballots-money-real-note-1195036/",
-        "author": "joelfotos"
+        "tags": "time, clock, hour, minutes, hours, second, age, minute, business, businessman, watches, symmetrical, different, schedule, schedules, planning, meeting, dates, relativity, figures, rows, five, differences, time, schedule, schedule, schedule, schedule, schedule, schedules, relativity, five, five",
+        "url": "./data/news-images/72ce4652904310e7a9ffcc8f.jpg",
+        "page": "https://pixabay.com/photos/time-clock-hour-minutes-hours-4484398/",
+        "author": "Nickbar"
       }
     },
     {
@@ -905,10 +1028,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "euro, dollar, european union, usa, currency, the crisis, business, bank, paper, cash, money, invest, credits, trade, economy, payment, federal reserve system, european union, european union, european union, european union, european union, money, economy, economy",
-        "url": "./data/news-images/52326c66792e11e74260062c.jpg",
-        "page": "https://pixabay.com/photos/euro-dollar-european-union-usa-1974712/",
-        "author": "NikolayFrolochkin"
+        "tags": "audit, auditor, analysis, examination, document, accounting, verify, review, investigation, magnifying, glass, inspection, financial, annual, report, statement, business, finance, calculator, pen, paper, gray business, gray paper, gray finance, gray zoom, gray glass, gray company, gray glasses, gray document, gray accounting, audit, audit, audit, audit, audit, accounting, accounting",
+        "url": "./data/news-images/0c689aa53c55841940e412d8.jpg",
+        "page": "https://pixabay.com/photos/audit-auditor-analysis-examination-4190944/",
+        "author": "Tumisu"
       }
     },
     {
@@ -935,10 +1058,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "ballots, money, real, note, brazilian currency, brazil, fifty reals, currency, income, wage, finances, brazilian reais, one hundred reais, ten reais, money image, money picture, five reais, values",
-        "url": "./data/news-images/f8498aa537a3820e4911b349.jpg",
-        "page": "https://pixabay.com/photos/ballots-money-real-note-1195084/",
-        "author": "joelfotos"
+        "tags": "south station, covered market, market, halls, shopping, business, restaurants, shops, establishments, dining, france, market, market, market, market, shopping, shopping, shopping, shopping, shopping, business, restaurants, france",
+        "url": "./data/news-images/2a9552a9a11d76d38424fee2.jpg",
+        "page": "https://pixabay.com/photos/south-station-covered-market-market-4927286/",
+        "author": "Ludo-Photos"
       }
     },
     {
@@ -965,10 +1088,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "ballots, money, real, note, brazilian currency, brazil, fifty reals, currency, income, wage, finances, brazilian reais, one hundred reais, ten reais, money image, money picture, five reais, ballot",
-        "url": "./data/news-images/4d3a76b7506c33389781402e.jpg",
-        "page": "https://pixabay.com/photos/ballots-money-real-note-1195040/",
-        "author": "joelfotos"
+        "tags": "parliament, building, illuminated, nature, architecture, budapest, city, night sky, hungary, river, night, urban, danube, cityscape, landmark, evening, europe, sky, capital",
+        "url": "./data/news-images/08d261d4d64fe6de92a7433e.jpg",
+        "page": "https://pixabay.com/photos/parliament-building-illuminated-5960363/",
+        "author": "bubbiomarco"
       }
     },
     {
@@ -980,7 +1103,7 @@
       "source": "China Daily",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOM0RJNnBOWmNYT2RnR1oxZUwxeWNnc1E3dVcwSzd1QmdQRFprc2hVVTFQdlY2N2x6RmZvVE1WS3lPbTFWY3g4WlVhWWdRZkdmY3RzVU1mRTVsQWNtd1NuRGRnZ1FiSFlnUHROWmZWOWRiSVVVc09qUnpTWFpLUVVlcWJHbG9kM2xBeFh2X2w0ZG9meGV6N1lyZg?oc=5",
       "published_at": "2026-11-26T18:39:41+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "China"
       ],
@@ -1025,10 +1148,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "currency, money, brazil",
-        "url": "./data/news-images/828c7b09daf74ec355bc569e.jpg",
-        "page": "https://pixabay.com/photos/currency-money-brazil-2460838/",
-        "author": "Pixzito"
+        "tags": "oscar niemeyer, unb, university, brasilia, oscar niemeyer, unb, brasilia, brasilia, brasilia, brasilia, brasilia",
+        "url": "./data/news-images/298662826fa802ab0b6867a9.jpg",
+        "page": "https://pixabay.com/photos/oscar-niemeyer-unb-university-2773253/",
+        "author": "Otavio_Souza"
       }
     },
     {
@@ -1040,7 +1163,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUUc4WG9ENXhCb3pYbkROeHlGUFFQRWVhYzFienJfUDJxSmdJbUsxYjMyVldjMm44ZFNrWW1IVmhvUVBDd3d0ek1fSUpySzgzc19sdE5iZkNBRU5NdmVzaWdRUExsU2pmRVFpbnJBakI3eVdjalhNanVEa3RUZmg0cW5USEE4cWo1Z1psb3otY05ScUpJcG13X1NuSWdfQU1uY0EzTTB3?oc=5",
       "published_at": "2026-11-26T17:45:38+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1070,7 +1193,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWDAyOS03ZTA0ZzRTRmR6d2diZDJ5X0V0ejhjSlg1MzhMaTlCNU1LNTBCYVlJS2VhVV9USmNxYnNGYk9CaTdYckN1NVBZLWNKQm9BYXB5SEpNYVMyN3hzbFRjaExPY3piakNDakM1Qm1NSDJ1MFJLZzF3NGN5TFVCYThrYmNzZFhyVzN1bVBhaXh6a2t4cUxNQzBGUnpWVVFxb1l2cFR5WE1UZ0tvUEpDcw?oc=5",
       "published_at": "2026-11-26T17:43:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1115,10 +1238,40 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "brazil, real, reais, money, currency, coins, ticket, tickets, brazilian",
-        "url": "./data/news-images/a1894e912cd070752ef5cbb2.jpg",
-        "page": "https://pixabay.com/photos/brazil-real-reais-money-currency-4313530/",
-        "author": "elluisx"
+        "tags": "child, girl, cute, kid, young, childhood, portrait, summer, bіla vodi, nature, ukraine, tsikavo",
+        "url": "./data/news-images/6af70f591bb859c9092e93ad.jpg",
+        "page": "https://pixabay.com/photos/child-girl-cute-kid-young-7317938/",
+        "author": "SEASON-V"
+      }
+    },
+    {
+      "id": "4de9dcde8fbaf5ee9d",
+      "title_original": "China opposes proposed US tariffs - China Daily Global Edition",
+      "title_pt": "China se opõe às tarifas dos EUA propostas - China Daily Global Edition",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "China Daily Global Edition",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVU1rTi1CMkNLRk1wWWR1QU5SM29kU2FrNE1zN2xEQjRxcGp3d3hpalhUOG14N3RDV200MnlUcmI3dDJVTl9lTDVOZHFsT0t5c0hLbzktaU9sblE4dE83TTdVNHhCU2R5MVZrRVFJc1h5bVpTczROT1dNalBfVjdDcGln?oc=5",
+      "published_at": "2026-11-26T17:28:09+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
+      "regions": [
+        "China"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: tariff",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "ship, wallpaper hd, nature, free background, windows wallpaper, tanker, north sea, beautiful nature, hd wallpaper, laptop wallpaper, mac wallpaper, water, wallpaper 4k, sea, cool backgrounds, nature background, 4k wallpaper 1920x1080, free wallpaper, nature wallpaper, heaven, full hd wallpaper, lake, maritime, boat, port, storm, 4k wallpaper, beautiful wallpaper, desktop backgrounds, dark clouds, cuxhaven, wallpaper, flock of birds, meadow",
+        "url": "./data/news-images/b303af2602e8b32430b5fac6.jpg",
+        "page": "https://pixabay.com/photos/ship-tanker-north-sea-water-sea-3611262/",
+        "author": "2780243"
       }
     },
     {
@@ -1145,10 +1298,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "brazilian banknotes, fifty real notes, banknotes, brazil, currency, paper money, money, back, seem, currency of brazil, jaguar, brl, banco central do brasil, cinquenta reais, beige, detail, cutout, brl, brl, brl, brl, brl",
-        "url": "./data/news-images/ea4a5cf7f77a454ddc26a637.jpg",
-        "page": "https://pixabay.com/photos/brazilian-banknotes-fifty-real-notes-1139095/",
-        "author": "ASSY"
+        "tags": "accountant, accounting, adviser, advisor, arithmetic, assets, banking, bills, business, businessman, calculation, calculator, closeup, college, commerce, contract, deadline, dealing, deals, economics, engineer, estimate, exams, finance, financial, funding, homework, income, investment, macro, mathematics, office, paperwork, pen, professional, revise, savings, science, secretarial, study, tax, transaction, university, work, accounting, calculator, calculator, calculator, calculator, calculator, estimate, finance, tax, tax, tax",
+        "url": "./data/news-images/551f8c62bb00e66cbbb12ea0.jpg",
+        "page": "https://pixabay.com/photos/accountant-accounting-adviser-1238598/",
+        "author": "Shutterbug26"
       }
     },
     {
@@ -1160,7 +1313,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPaHhmUFduZ0tRbWFBQ2xIRmtIZDU0S012anU5bEx3SGVzOXVmV1JkNGxIZkNXV0RYTWJlNEVqUTFoS0tnQ1QtcXI0bVlJT25XQ1Y4TFZvczVTbTFPWTc3eUF6MzF6M0swR3JYTGR0ZjNwZVhhb2dWUjNBSjBod1ZfWU4zajFXMnBYUU1YY3pNQXNDWlRQa2VILWVJc25tcnJpV3ljRW95RjViUXM?oc=5",
       "published_at": "2026-11-26T17:09:43+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1190,7 +1343,7 @@
       "source": "Canal Rural",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNUUJCRUc4YXNpV3ZDRzJXVnRQRUptVXM2WXVCNkhQaTBHRnF6RC1CZHFFZF9aelRja1g5TDdKWHZEVm5BU0Q0SUxyNFpPMWNmTHhBX3VzU0tCWHowTHJYUVFPOENpSFoxVU9rak9XTURLaTliUnYtbkdSWDRWbG5uYkNvVDhBRnFCQlhWS05Nc1lhSEdpMjNhclRLU21WZ200SkpKTU1vSGRuY3BWS3VrbmJPdkhTZ3VkSUN3ZXlMcDBnQVo5aDlZdg?oc=5",
       "published_at": "2026-11-26T15:21:41+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1222,7 +1375,7 @@
       "source": "Valor Econômico",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaVpiVXdMSGRXb1BYb2hEMGxfbmpxdXFIdkFQQmlDWVpYUUZlYXp3d3BkXzd2MTUyY2xrN2VnR2ZEdlFZc1VxUzJXa1dONmYxTnFoMGk0VGFucWY2YnFkY2luSUNGZE1OTVpIdkxWVkx3eG0zbWxHa2gxanpaT19oUE9KQlFKbjRNSmU3cDNRaFh6MmFKR21RZjVOXy14NEpyTFNVRTNrTTVkY1lXSDktSGYzNVA5OFkxckkyWGJuWUUzYWxyeU9GMk9B?oc=5",
       "published_at": "2026-11-26T15:19:41+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1299,10 +1452,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "money, coin, investment, business, finance, bank, currency, loan, cash, mortgage, banking, wealth, value, buy, savings, success, growth, invest, economy, credit, market, payment, deposit, debt, money, money, money, money, money, business, finance",
-        "url": "./data/news-images/85501f8925e6988361f23d48.jpg",
-        "page": "https://pixabay.com/photos/money-coin-investment-business-2724241/",
-        "author": "nattanan23"
+        "tags": "hamster shopping, covid-19, hamster buying, purchasing, basket, hamster, forage, to buy, shopping basket, panic, emergency, hoard, fear, virus, corona, covid19, panic buying, self-preservation, selfishness, hamster, hamster, hamster, hamster, hamster",
+        "url": "./data/news-images/29aecd74a7db13ba06397fe6.jpg",
+        "page": "https://pixabay.com/photos/hamster-shopping-covid-19-4940922/",
+        "author": "pixel2013"
       }
     },
     {
@@ -1329,10 +1482,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "money, coins, stack, stacked coins, loose change, growing money, money tower, euro, currency, cash, metal money, finance, silver, wealth, prosperity, concept, idea, money, money, money, money, money",
-        "url": "./data/news-images/a379a0698651ae26884a7dad.jpg",
-        "page": "https://pixabay.com/photos/money-coins-stack-stacked-coins-2180330/",
-        "author": "kschneider2991"
+        "tags": "bananas, fruits, food, grocery store, supermarket, shopping, produce, organic, grocery shopping, fruit stand, yellow bananas, bananas, bananas, bananas, bananas, grocery store, grocery store, grocery store, supermarket, supermarket, supermarket, supermarket, supermarket, shopping, shopping, shopping, shopping",
+        "url": "./data/news-images/a7b510195f911dc50a5f3fad.jpg",
+        "page": "https://pixabay.com/photos/bananas-fruits-food-grocery-store-698608/",
+        "author": "StockSnap"
       }
     },
     {
@@ -1344,7 +1497,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPazJOREJoNmhjSkxHQmw4R09UTUluX0tONmFncWhCS2g0bkxDckl5bDlyZzhOLUgxeDBhMHMzYzFPR1c2dGFGS2ZhZTNCQnpfNk9qZHB3OXlVNUFmbmpIMkhkMkhfVC1vLUNwOGZTVVpieGlwVnR3YnVKMVMtTUlyREtDWmdlN29sbkE?oc=5",
       "published_at": "2026-11-26T13:36:28+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1374,7 +1527,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdVdRWHdFWmhsVnBsWXd0RE5sdWtTTDlJN2lXSkxLTnhWVk5nR0RRSkN6cHVZV0pKZ2ozcWM3dUxCNVZUWDdENUpBOENveTROOUxudGpHNlk1Ny1jeTZSLTdINmdlWTJLVm9HWXZ2UU9RbGFaLV90UkFBZl9TLTByblUtMVQ0UTlO?oc=5",
       "published_at": "2026-11-26T13:04:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1420,10 +1573,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "money, dinero, peso, currency, cash, mexican, mxn, 500, 50, 20, dollar, 100, exchange, peso, peso, peso, peso, peso",
-        "url": "./data/news-images/5436eb68d1922c78f1b463b3.jpg",
-        "page": "https://pixabay.com/photos/money-dinero-peso-currency-cash-960171/",
-        "author": "emiliomeza0"
+        "tags": "the president of the united states, barack obama, greet, from left to right, chaka fattah, senator patrick leahy, beautiful wallpaper, danny k davis, free background, state of the union speech, january 25, 2011, washington, 4k wallpaper, wallpaper hd, capitol, house of representatives, hd wallpaper, senate, official photo, by pete souza, cool backgrounds, american photojournalist, desktop backgrounds, free wallpaper, chief photographer, white house, 4k wallpaper 1920x1080, since the investiture, mac wallpaper, windows wallpaper, wallpaper 4k, laptop wallpaper, by barack obama, full hd wallpaper, wallpaper",
+        "url": "./data/news-images/e4c61cf86a4a312caea5483d.jpg",
+        "page": "https://pixabay.com/photos/the-president-of-the-united-states-1174503/",
+        "author": "janeb13"
       }
     },
     {
@@ -1435,7 +1588,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYlR6OVYzNjI0N0hVQ2FsMVFSWU13djRFWmZDLUFQSUNoOFdWZ2RSdlZuLVZvbjc3bDlwWGlrN3NLMnktVFQtTndObHZZQVBFTjRGSkY0SmJVSkVteFYyY2RXRDNfRkdlQ1VNVWtkbjBQZmgtbXhpYTFXOElWeDYxNVlHdUlwVnhDV28xZlJoSC1GQ0tjcGRvXzZjNnpvZ2l4SHNqS1pLaFpaUQ?oc=5",
       "published_at": "2026-11-26T12:30:05+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1465,7 +1618,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQV3BlMEIyV0IyWU0zTE1xSllodC1Lc1E0VThIaGIxanBOX29CZ1c0alNwOFFXS2VCUWlhTUd4Ylp3TXIyOTZCOVYxMFVYazlPZmd1XzJvdWJkczkzLVl3MkJjMXA0SHNDNnAtMmMxTHplRnRLVTJCdnZQVzNfcVZyODlCQzZPZk02YUd5RDR2bExtdw?oc=5",
       "published_at": "2026-11-26T12:25:47+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1495,7 +1648,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa1dDUndpMmlsYmhnUEFHMXgwYnVzeDZmYjFLVkpPdkp5aHJGaUUydnZVMlhEbnNyaWpISDVRTjJ0S0w0MU04bWpwQk1Jc0pIZ3lxZE5ETVlWenV1dDZRaDBfV2tWQ3ZmTjN2VDI3RzZ4dmxFWFN4bFBwQTRaNk1rQWNzWlI1YzRmd1I5YkVLX09vZHdYdlRyWF85N0RORlZRVFpxamRzQnNlNFNJcVBF?oc=5",
       "published_at": "2026-11-26T11:26:02+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1525,7 +1678,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNazJTSjI3dk40ZnhoM2ZJR2N2eXp0NUFoaWUxNUI4NW9wV19YWEtpd24tS0t5YnFHV2YzSkRmSXdiTnR6cjRuMTROY1d1VlQ2NUR3UjNNMUJkeU5XQVBOeUQ1VnVTQmtQU3BVOUNndHdyeUhvWDcxdmRHMGtheVJCREs4UzdCWS1VVDQwcmdQYWtILXltMHRhN1UxeTVtdGhuMFhpemlOdDRkLTB5?oc=5",
       "published_at": "2026-11-26T11:10:56+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Índia"
       ],
@@ -1555,7 +1708,7 @@
       "source": "European Commission",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5EMGlvbnZobTVQRnRvVU5EZWcxQWdlRmFMZkxlMzFHei1VLWUyV1RqODVubWZuOElmSWg4a0dHRy1XRFF6Mjh4a2NDY0psNjRXRHZlOHFsSHAtWVhTZmk1amhtWnI3TF9CcGN6S0NOSWc3czJ0NEE5LW1NR0JnZw?oc=5",
       "published_at": "2026-11-26T10:08:13+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "China",
         "União Europeia"
@@ -1601,10 +1754,40 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "coins, banknotes, money, currency, finance, cash, business, economics, banking, bank, wealth, earnings, capital, savings, payment, investment, economy, financial, profit, earn, invest, accounting, save, funds, income, commerce, assets, costs, expense, thrift, money, money, money, money, money, bank",
-        "url": "./data/news-images/b18a4d5ff095ae3842446c93.jpg",
-        "page": "https://pixabay.com/photos/coins-banknotes-money-currency-1726618/",
-        "author": "stevepb"
+        "tags": "itamarati, brasilia, brazil, water, sun, landscape, sky, niemeyer, palace, garden, burle marx, power, world, architecture, minimalism, brasilia, brasilia, brasilia, brasilia, brasilia",
+        "url": "./data/news-images/6c7f174c94c41265f5eb4626.jpg",
+        "page": "https://pixabay.com/photos/itamarati-brasilia-brazil-water-3403553/",
+        "author": "franciscodomingosipe"
+      }
+    },
+    {
+      "id": "9c57bf7fbd280d8c5c",
+      "title_original": "China firmly opposes proposed US Section 301 tariffs - China Daily",
+      "title_pt": "China opõe-se firmemente à proposta de tarifas US Secção 301 - China Daily",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "China Daily",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBBSDNfNVNSREFPLUF2eEpCNTFHYUdRWDZFZHdNa1dQY3hCazdtTXZzOGNOVTE2ZlMyZUpMVDZIOG5qNnBWQXRPaEJYb1k2WEg0WXpKU24wbGRWZjRKRHVkSFhXYXczSXdfWFItTTdOdnBiWnBQdzFEOEFqZk8yQQ?oc=5",
+      "published_at": "2026-11-26T08:18:45+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
+      "regions": [
+        "China"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: tariff",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "cargo, ship, tanker, shipping, tanker, tanker, tanker, tanker, tanker",
+        "url": "./data/news-images/e3480b455bdda100f5367bea.jpg",
+        "page": "https://pixabay.com/photos/cargo-ship-tanker-shipping-572997/",
+        "author": "jaslagman0"
       }
     },
     {
@@ -1632,10 +1815,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "europe, pay, wallpaper 4k, 4k wallpaper, usa, banknote, business, mac wallpaper, money, rate, bill, dollar, cash, finance, full hd wallpaper, currency, american, us dollars, texture, background, pattern, windows wallpaper, european, cool backgrounds, 4k wallpaper 1920x1080, market, euro, brown business, brown money, beautiful wallpaper, hd wallpaper, free wallpaper, brown finance, laptop wallpaper, wallpaper hd, desktop backgrounds, brown company, free background, brown market",
-        "url": "./data/news-images/3047d4294491447e62f24efe.jpg",
-        "page": "https://pixabay.com/photos/europe-pay-usa-banknote-business-69526/",
-        "author": "PublicDomainPictures"
+        "tags": "man, couple, shop keeper, night shop, night, bureau de change, london, shop keeper, shop keeper, shop keeper, shop keeper, shop keeper",
+        "url": "./data/news-images/8c7b1886af585a1d2826c0f2.jpg",
+        "page": "https://pixabay.com/photos/man-couple-shop-keeper-night-shop-6905811/",
+        "author": "TheOtherKev"
       }
     },
     {
@@ -1662,10 +1845,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "dollars, currency, money, us dollars, franklin, benjamin franklin, banknote, finance, wealth, bills, cash, savings, money, money, money, money, money",
-        "url": "./data/news-images/dd406c75341abb5586b71903.jpg",
-        "page": "https://pixabay.com/photos/dollars-currency-money-us-dollars-499481/",
-        "author": "geralt"
+        "tags": "financial, analytics, blur, business, close-up, document, focus, graphs, paper, work, analysis, chart, economy, finance, investment, office, plan, report, strategy, success, studying, wealth, stock, statistic, consultancy, trade, working, economy, finance, investment, report, report, report, report, report",
+        "url": "./data/news-images/e74d020cf3bd81a3f6ec475e.jpg",
+        "page": "https://pixabay.com/photos/financial-analytics-blur-business-2860753/",
+        "author": "6689062"
       }
     },
     {
@@ -1692,10 +1875,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "money, profit, finance, business, return, yield, financial, cash, currency, investment, banking, wealth, coin, economy, success, loan, salary, rich, credit, payment, savings, save, deposit, growth, income",
-        "url": "./data/news-images/7833b95b68011d7c1c4007a6.jpg",
-        "page": "https://pixabay.com/photos/money-profit-finance-business-2696219/",
-        "author": "nattanan23"
+        "tags": "calculator, paperclip, ballpoint pen, office, radhakrishnan, solar calculator, calculate, how to calculate, calculation, business, business plan, black, white, stationery, school, close up, macro, macro shot, datailaufnahme, calculator, calculator, calculator, calculator, calculator, business, business plan, stationery",
+        "url": "./data/news-images/dce3d28156fda305f11eccbb.jpg",
+        "page": "https://pixabay.com/photos/calculator-paperclip-ballpoint-pen-178127/",
+        "author": "AlexanderStein"
       }
     },
     {
@@ -1722,10 +1905,40 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "money, profit, finance, business, return, yield, financial, cash, currency, bank, investment, banking, wealth, coin, economy, success, loan, exchange, credit, deposit, growth, income, accounting, money, money, money, money, money, finance, business",
-        "url": "./data/news-images/eb0a8870e389eb773ceb9f7d.jpg",
-        "page": "https://pixabay.com/photos/money-profit-finance-business-2696228/",
-        "author": "nattanan23"
+        "tags": "passport, map, world, trip, world map, tourism, vacation, travel, planning, camera",
+        "url": "./data/news-images/be4a2794c5007c4f17523ceb.jpg",
+        "page": "https://pixabay.com/photos/passport-map-world-trip-tourism-2714675/",
+        "author": "Pamjpat"
+      }
+    },
+    {
+      "id": "d76d16c9ce431c5fb2",
+      "title_original": "China firmly opposes US additional tariffs on China, other economies: commerce ministry - China Daily",
+      "title_pt": "China se opõe firmemente aos EUA tarifas adicionais sobre a China, outras economias: ministério do comércio - China Daily",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "China Daily",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9UNXBCdEt0UUMwc29VdWxqR0JhR0dqaVp3UnYybFRqT0FpVi00ZEY4XzhfNzdyYmVPejZXWHFuSW5kcFVNcUNGeUMzR0xpMVAxbkJyRmU5aDZKRURUNDlzLUNuUVRfX1RzYmU5VFdmcEU1bmJXSFJCZGRXcG1WZw?oc=5",
+      "published_at": "2026-11-26T07:33:47+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
+      "regions": [
+        "China"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: tariff",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "ship, mac wallpaper, tanker, hd wallpaper, north sea, water, free wallpaper, desktop backgrounds, sea, wallpaper hd, 4k wallpaper 1920x1080, beautiful wallpaper, 4k wallpaper, laptop wallpaper, heaven, lake, wallpaper 4k, maritime, boat, port, free background, beautiful nature, storm, dark clouds, cuxhaven, nature, cool backgrounds, full hd wallpaper, nature wallpaper, windows wallpaper, nature background, wallpaper, flock of birds, meadow",
+        "url": "./data/news-images/a0dde0172f19ad06513b6044.jpg",
+        "page": "https://pixabay.com/photos/ship-tanker-north-sea-water-sea-3611259/",
+        "author": "2780243"
       }
     },
     {
@@ -1737,7 +1950,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE42YUZwSm1FSzNvY1NNVUlrTVZtMC13X09aS3BmSHRpYkd5b0poVFZzRzJYWi1GeVdEbEUzSl9GOXF5RlVmNVhiaWVjOFBLYkJ6?oc=5",
       "published_at": "2026-11-26T07:14:37+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Malásia",
         "Indonésia"
@@ -1770,7 +1983,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOaUdXQjZTRVJvNzVESnNzMlpfZmxhTEgweFZsUHRZRTVLa29xcENmUjJaUUNjWExsaVNTREJqNlNwSFZzNXFuRUFqSlpRam4tZkZHWXEwZXQ5VlhPVFJzcmNnZEw5a3N2ZVBndnpnNzhiN1Y1NkRtU1M5WE05UmRFcGMzUVk0NXYyRTVpM05MOUhISDhmb3BPTERXcmNHWE9zc2dR?oc=5",
       "published_at": "2026-11-26T07:03:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "China"
       ],
@@ -1792,39 +2005,6 @@
       }
     },
     {
-      "id": "e58b954955c89cec44",
-      "title_original": "Palm oil rises on Indonesia's proposed new export charge - The Edge Malaysia",
-      "title_pt": "O óleo de palma aumenta com a nova taxa de exportação proposta pela Indonésia - The Edge Malaysia",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "The Edge Malaysia",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5STzhZMTFCRU5KSXdTTF9tdGdfVDdhVThmU2tsc3NuVzJMS2VJN3VNbEhhNzNwTWFOSzdBcDQ1N2lWbWF2TTNRcktXeEhVd3N2?oc=5",
-      "published_at": "2026-11-26T05:50:02+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Malásia",
-        "Indonésia"
-      ],
-      "category": "Óleo de palma",
-      "commodities": [
-        "Óleo de palma"
-      ],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: export",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "cycling, farm, oil plum, gray farm, Senai, Johor, Malaysia",
-        "url": "./data/news-images/a9c2dc86ca599a48c85fe008.jpg",
-        "page": "https://pixabay.com/photos/cycling-farm-oil-plum-gray-farm-2104784/",
-        "author": "chiliapi"
-      }
-    },
-    {
       "id": "07d16c753c83504738",
       "title_original": "Singapore 'very disappointed' over new tariffs, urges US to reconsider - Reuters",
       "title_pt": "Singapura «muito desapontada» com novas tarifas, insta os EUA a reconsiderar - Reuters",
@@ -1833,7 +2013,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVTBhUG5wa3oyMWZJSVhaWlo3V0hiVjlsUlN6bXRXTVdpUmVlaWFzSkFOVEF0UEc4cTJESV9CVDZiSzdvVV9tS2JOQVU0X3BPdDdXejYzM2VPWnF6UjNLMmI4ZndCa2w2WXdwTVRQaGFSZ0pfY3FFdXRhMllLVVowdWJIblU3dEUtZi1XU0Jrc1J2NS10LUFLTnNZS0o0bnB6eGlRSGVLWHJnV08xem9YV1FNMA?oc=5",
       "published_at": "2026-11-26T04:11:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1863,7 +2043,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWHpfX3p2RFoxU2l0SGZVbVdSejdGYkc0NFpERWlxVEtab0pQbGd1NUtqQ3c0cXprdWItUF9fRmVVVElET3BNbklnbElwaC1UZ0xoNnd4dE9Wb2dFVDFGN2JyQ3YyUVhfTWxsNGFWNFNURG5kX1pMdVBtb2QyLXFMaXZPM0ZPdGdud1hWdHFuTEpNQXBtdUh6RmpWcW1jelhTU0JHdmp3dWphb0hB?oc=5",
       "published_at": "2026-11-26T03:08:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1895,7 +2075,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQdTBpdWE3OHFzWWtzUUpIUHNYdzZVNUtiTjg5SVZndWxPQjE5VjUtUXA0Qk9KbmtFTVBIM2tqcUp5djQxczctUUVvcWFUaGFOYTZjNkZqVzNKcm9YbW1RaTdfc1ZjZDZCSnAzODhwUjRQeUV0eXlJRjAzV1pKb3ExS0dtMzRRRmdnUVVzS2lvcUdSeVZ5dmJoX2NYWnpfczZJN05LcW5ldlFZNEp0SjVqWU1UQkJ0dExPUjFN?oc=5",
       "published_at": "2026-11-26T03:06:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1925,7 +2105,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcVVHMmNCU2duUTNWNkVyNzMzUmhKMWxJZExIQVJwc1hhcDlMNS1KUzYxMnFjc3dGeTViMGg1YmhJUGhjR3REQjRqbks5cTMzMmVpaWtyWHhCOHo0YVg5ZHNfYkJ1NmgtMWxZRU1ib0pUejloVVExcmxqeGJXZ1NQNTJ4YTc5WWEzN3BOaFpnNVIxTk1Gc1ZLbE1PNjQ4c2dmS2Yw?oc=5",
       "published_at": "2026-11-26T02:38:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -1957,7 +2137,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQeGRxVzhWY18xWGQzRlVEbmZBbU9lcnR5WEpveVIybFY3X0I5bVNXN2Q2NWZUTUl6eGJYQUZoeHEwSFJqYzhGZDV4Yk9OV29Qc0dXSXFEbm9PY09FQlhNWVlQb2ZEN0FlelZvQVJyT2N3WU42X3phd3ZYVVczQ0RORDFwaW5vd0NxTnozeEpYU3VIVF9NcGtGYng0VWRnT0hk?oc=5",
       "published_at": "2026-11-26T01:44:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -2032,10 +2212,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "coins, currency, investment, insurance, cash, banking, financial, business, money, success, save money concept, save money, savings, stack of money, investment concept, commerce, money background, pen, biro, ballpoint, finance, office, economy, tax, investment, insurance, insurance, insurance, money, money, money, money, money, money background, finance, economy, tax, tax, tax",
-        "url": "./data/news-images/cd4e92e8fd55f415e16b4471.jpg",
-        "page": "https://pixabay.com/photos/coins-currency-investment-insurance-948603/",
-        "author": "stevepb"
+        "tags": "construction estimate, estimating services, construction",
+        "url": "./data/news-images/cf9e03ae4652afc03dc6a950.jpg",
+        "page": "https://pixabay.com/photos/construction-estimate-9894137/",
+        "author": "constructionestimate"
       }
     },
     {
@@ -2047,7 +2227,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPS0FSUjN0THdiZzJpSzctaWg1Vks2dVhSTlNVWTJuZElHcEQ5WGNUX3BVWUgxVmdESnJ5WHExUFloSUlWQTdtZ0g4UEtLTUwzczE4bHB1V3lEczBpcE9qeE5aZjZJZ1lXeGlGQTh0NDM1WnlFTjlONFRGd3ViTHJzMEQxOGhkMUZpUmxBd1A0WE1TdTFmTDhJdFVBQ05kY2dHNDZkWURzc2s2MXFnRTUyNTgwZllaTFhSdVpFQjl3?oc=5",
       "published_at": "2026-11-26T00:30:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -2077,7 +2257,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNRFVsTjFROGtER0loSkZOcnF2NDRLUWFmcjBHZ01ybE51N19idjFFMXI1dnFqZ21JYS1HVVpicTJ1V1RfVU4zd3pkVEZMWHdqMUJWRENOQWJ2VjFqT1Y3WS0xYTV3bzd2RnRraFhtOVpzVE9yYThzdV9tdWxJbUpjNzFraw?oc=5",
       "published_at": "2026-11-26T00:28:43+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -2106,7 +2286,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNTGZ4TFg5REgyY0VnandHQjZIMFN1cnNBOEJVQTBDaU1IWDFLVUxmdHFTXzRLVnVKc3pHd3lTYk9lRHZBOWV1Skd5V0VzVU05ZDRjZXdZekl5cWFneWI2b3ptS09taEhjNzZIcGhuWVdydDk5cnpkcElkMUdTZkJjTjROT09sOG5adVUxNVpNeGp5UmxaaHl2bzh6TklXMlp2eVQyVW9idi1QV25LcnpIeFBjMEF4RzNNbkNIU3JOUlN6WWVqSjRtTlFZMA?oc=5",
       "published_at": "2026-11-25T23:42:10+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Brasil"
       ],
@@ -2136,7 +2316,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNOUJSZDlKMEI2OHVpZjlzVFhrbXlSVFpZRHFCMWFSSVVHRmZhcG9WVHlObTdFVGhUdjROUmRCYWYyRmFMQjNaMTlsOEktdVcyYlR6YjlMQUtiTXhPRm8wSTVRWGNLbllNVTVxR3VocFcxa1ZEQlZyeEpOTXk2ZUdENjczRl9zYnA4ODJQaEM4eHo4ZnNZdWZGOGdneVZ0ZjFDMGc?oc=5",
       "published_at": "2026-11-25T23:41:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -2165,7 +2345,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUGF3UXNuQWFId2NPaERJLTVlLUhkQlp0WGpPNWRaamVTN3BmVFc5YkY3NVkzNHhJLUx6aTN4c2hZVnRucS13S1hMVlJWMEhzNllrYjJDSzczMndmRm5EeUhreW1qb0dpUG1HdTBrdnUtdGRLdFRVaDBWcFFEOXBsZ3gxMXlMNjJFbWk4ZzVtYXF3bWF2Z2NzZ3dTMmE5THV4VGdnRw?oc=5",
       "published_at": "2026-11-25T23:31:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -2209,10 +2389,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "hourglass, money, time, investment, currency, finance, economic, risk, cash, business, economy, wealth, savings, investing, financing, banking, growth, profit, income, return on investment, revenue, strategy, patience, patient, wait, time value of money, time is money, invest, interest, investor, earnings, deposit, coin, save, asset, planning, time management, money, money, investment, investment, patience, patience, patience, patience, patience, investor, time management",
-        "url": "./data/news-images/6b5fce7f00c8ceb83d935adb.jpg",
-        "page": "https://pixabay.com/photos/hourglass-money-time-investment-1703349/",
-        "author": "stevepb"
+        "tags": "modern technologies, marketing, business analyst, manager's desk, tablet, charts, analysis, report, internet, business plans, investments, galaxy tab, samsung, google, adwords, marketing, analysis, report, report, report, report, report, google",
+        "url": "./data/news-images/28efa8095d386f01aab17594.jpg",
+        "page": "https://pixabay.com/photos/modern-technologies-marketing-1263422/",
+        "author": "AS_Photography"
       }
     },
     {
@@ -2224,7 +2404,7 @@
       "source": "Valor Econômico",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNT1pWMUk5N2FRMmIwZmFwR2wzeER5ZVJZaEItUXpRYU1NU3RHUXo0aFBJTHRBeGw3VG1MbkNTNkxMT25CdnhnSjRUeHgyc2JIeVFjM1NncEtIVHgyeldGc3JPOG4wSklEQmtsSHFYQURuQUZsOFp2a1U1ZHFoTTlEQV9kblpVeVFsVWVGV2c2U25nYk1tN3pRdjk1NEJTQnZJYWltcExwcno0Y0tvTHBwZTRxQVpueHZqR0JMWjVqZ0lENEdFbmNTT0ZiZUY4TFRiWFNz0gHiAUFVX3lxTE44N3VpTGZoVUtjOVFzd2hoUFFwYXowOHd2RjdndllJX3ZPLUx2TzVjV3RueXlLVlItX0dzTFBBcGMwUVNiSnRYY0xueUwtSjVrRllhNC1yTGozNnlnanFmeFBjZDN2NTNCR3J1YUZPV3R1TWZwck53Wjd4Zk83VExEcEhPSk52ay1ORUU4cU5DNFhlLTFlN2IzMlo2MGxaRWpORnFCelBoNVJDMEdia0VKbHNTcFFNQjl0eGpFb0NQMWx1eHpFV0RsUTJmejlKSHFCOFNsRFk1QTdveTJNSnBybnc?oc=5",
       "published_at": "2026-11-25T22:23:38+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -2340,7 +2520,7 @@
       "source": "Canal Rural",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQZnFYWG91X1RqNkk5Qm5jYzVJdHVaX2ZSbVExQWtRM3NDcmdwMi1INTh0dTc5b2xlMXU1QnpDYzkyMkUyRE1qMEZ3dDV0aTQzX1A1VWViVURXZFE3azcyX3JkMG5qTlFXYkdUdlpBb3VNUl9UU2pHdG5CQUpJXzZPb2YtSC1ncVJKR3g1cXdLMTdYTy12SDdKRFNYNVZsYXBxVkwzQVgxWlg5RUwyc3BYQkUwRWRPdTVFRFdydFBzcXNKSnlmWF8yYmZsMVRjaV9Cc1NzMQ?oc=5",
       "published_at": "2026-11-25T21:21:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -2372,7 +2552,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVGl4Nzdfc01ReTB5TnAxUkVLTXlaRVFvbGM5aTZDOEtVUXlrVDQtMHJwcWh2WldoMnVyb0QxU1pEQUoyN09sNU1SZXR3NVUzdTZXeWpkdGNTZW95MUtmdjV3dWFxTEZsRW5WUlF1djVTTWZxUGVxcHhPNEptMnBEcmZ0MURhX0JxTDFqc19HblpWd2hLSEs5SXRYTXB6bzFwNzZqOUFTc1ZOM3ItVDFZWmM2a0R5YkxsdnlsMTZWQ1ZEUQ?oc=5",
       "published_at": "2026-11-25T20:57:17+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -2402,7 +2582,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZGd2TDZySmQ2VXE4QUhfUG1OOGU3S3l4eWVDMGFKLWNVRlp1dE1zYnNmOUNYTGpQeGZtS3RrWC11R0x0aEo2YnBsU2Y1NTEwT2V2eF9fQmhfLXc1ekFmajRGUWg0NVZheFBtUy15RWd6NkpsZzFSZTY1M1FIYjI5b2htVWVYemdvRDQyTUFQbw?oc=5",
       "published_at": "2026-11-25T20:50:19+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -2446,10 +2626,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "money, cash, dollars, finance, greenback, usd, bank, bank notes, money, money, money, money, money",
-        "url": "./data/news-images/eb027a3f62accb3401dbef6a.jpg",
-        "page": "https://pixabay.com/photos/money-cash-dollars-finance-7881948/",
-        "author": "Barta4"
+        "tags": "parliament, building, architecture, illuminated, budapest, hungarian parliament, danube, river, night, hungary, city, budapest, budapest, budapest, budapest, budapest, hungary",
+        "url": "./data/news-images/efbc99a8772acbac6f6c994d.jpg",
+        "page": "https://pixabay.com/photos/parliament-building-architecture-1440679/",
+        "author": "Walkerssk"
       }
     },
     {
@@ -2477,10 +2657,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "banknotes, us-dollar, dollar, finance, funds, currency, seem, financial world, dollar sign, finance dollars, paper money, dollar, dollar, dollar, dollar, dollar, dollar sign, dollar sign",
-        "url": "./data/news-images/a64f9a73a3e2266ec0f55dc3.jpg",
-        "page": "https://pixabay.com/photos/banknotes-us-dollar-dollar-finance-946395/",
-        "author": "TBIT"
+        "tags": "paying, cash, transaction, payment, green, wallet, russia, moscow, italian food, food, pay, woman, female, girl, customer, retail, consumerism, consumer, sale, buy, young, buyer, shopper, purchasing, friends, woman shopping, food cart, russian rubles, russian roubles, paying, paying, cash, payment, wallet, wallet, pay, pay, pay, customer, customer, customer, customer, customer, retail, consumer, consumer, consumer, buy, buy, buyer, shopper",
+        "url": "./data/news-images/7744adf8674cccb46f9bfb83.jpg",
+        "page": "https://pixabay.com/photos/paying-cash-transaction-payment-1438142/",
+        "author": "1139623"
       }
     },
     {
@@ -2535,10 +2715,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "money, cash, bills, currency, bank notes, euro, wealth, money, money, money, money, money",
-        "url": "./data/news-images/d4b241d49a62dc6549f76960.jpg",
-        "page": "https://pixabay.com/photos/money-cash-bills-currency-496229/",
-        "author": "angelolucas"
+        "tags": "files, paper, office, paperwork, stack, work, data, folders, pile, organize, storage, archive, documentation, catalog, monochrome, black and white, files, files, files, paper, paper, paper, paper, paper, office, office, paperwork, paperwork, paperwork, paperwork, work, data, data, data, data, Cambridge, United Kingdom, England",
+        "url": "./data/news-images/75eac2f5d4135f84634ea644.jpg",
+        "page": "https://pixabay.com/photos/files-paper-office-paperwork-stack-1614223/",
+        "author": "myrfa"
       }
     },
     {
@@ -2550,7 +2730,7 @@
       "source": "www.gov.br",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQaXlWdjRpVExzOW96akNSajI1NHpUWmdSWkVqeXFxVUtYNnhmVTl4RHV6VktLMXNyOWdWSVBxSjdULURUTFc1YnNPZ05DRUdNbGk3TXlGOC1BUzJ1WFV5MF9tV0hwYk9rLVVGLTg2R256V0lTc3dRblN2RWZTZE5uNzUzc3ZBTkFMc1pNR1dUNENYMXJ2Z2xUc0FZYkZYQkgzNUZnQW1TM2htNlE?oc=5",
       "published_at": "2026-11-25T19:35:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -2595,10 +2775,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "bank notes, dollar, us dollars, usd, money, funds, bills, paper money, finance, currency, money, money, money, money, money",
-        "url": "./data/news-images/9a346e3bbea227e37bd00d90.jpg",
-        "page": "https://pixabay.com/photos/bank-notes-dollar-us-dollars-usd-941246/",
-        "author": "TBIT"
+        "tags": "merry christmas, boarding pass, travel, airport, luggage, flight, plane, tourism, suitcase, departure, aircraft, trip, journey, passport, transport, flying, vacation, business, arrival",
+        "url": "./data/news-images/ba358f08ef7917f099d195a8.jpg",
+        "page": "https://pixabay.com/photos/merry-christmas-boarding-pass-travel-5219496/",
+        "author": "JoshuaWoroniecki"
       }
     },
     {
@@ -2625,10 +2805,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "banknotes, currency, finance, euro, investment, inflation, loan, corruption, bribes, money, wealth, cash, business, savings, euro, money, money, money, money, money",
-        "url": "./data/news-images/349043edaec7b08a907946e2.jpg",
-        "page": "https://pixabay.com/photos/banknotes-currency-finance-euro-7850299/",
-        "author": "fotoblend"
+        "tags": "river, city, budapest, hungary, parliament, architecture, urban, lights, night",
+        "url": "./data/news-images/1d9bb6d553045b996046c134.jpg",
+        "page": "https://pixabay.com/photos/river-city-budapest-hungary-9010602/",
+        "author": "pierre9x6"
       }
     },
     {
@@ -2668,7 +2848,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQRmdGMDdiZVhMaEZiM2hLVlNhdXQzZkM1b2F5NXFYaWZzbC1mX25kLU56ZThrNjFmZ2JVMW9fbjJhbUMwMXdzN3JLYXAyNE02a0FqclFyblhxZmxfbWRLVlQ5OFdoQkdmNEF1ZTlZUzRVVkkxQm14eDY0R1ZtUXJpRWhaNDE5c1hOM3pUYUhiRmJ1NnlTaGVrQk9uNGwwU2w5UmliTkRpZGQ?oc=5",
       "published_at": "2026-11-25T18:26:10+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Índia"
       ],
@@ -2712,10 +2892,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "money, cash, czech crowns, banknotes, finance, europe, investment, crown, czechia, money, money, finance, finance, finance, finance, finance",
-        "url": "./data/news-images/aeaf8efc1e9b121dd4235b40.jpg",
-        "page": "https://pixabay.com/photos/money-cash-czech-crowns-banknotes-8033100/",
-        "author": "vjkombajn"
+        "tags": "ai generated, people, crowd, white house, poverty, america, washington dc, inflation, unemployment, revolt, elections, politicians, government, unemployment, unemployment, unemployment, unemployment, unemployment",
+        "url": "./data/news-images/aab1610a48a951c14fd1d980.jpg",
+        "page": "https://pixabay.com/photos/ai-generated-people-crowd-8458708/",
+        "author": "machinecode"
       }
     },
     {
@@ -2742,10 +2922,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "hand, keep, finger, euro, coin, money, currency, finance, donation, presentation, euro, euro, euro, coin, coin, coin, money, donation, donation, donation, donation, donation",
-        "url": "./data/news-images/7a76df828657e401251e986a.jpg",
-        "page": "https://pixabay.com/photos/hand-keep-finger-euro-coin-money-517114/",
-        "author": "geralt"
+        "tags": "girl, shop, souvenirs, woman, shelf, work, shopping, spain, searching, atmosphere, shop, shop, shopping, shopping, shopping, shopping, shopping",
+        "url": "./data/news-images/bb55f37e597a68b071bffe4b.jpg",
+        "page": "https://pixabay.com/photos/girl-shop-souvenirs-woman-shelf-4181395/",
+        "author": "kasjanf"
       }
     },
     {
@@ -2860,10 +3040,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "dirham, moroccan currency, banknote, money, cash, 20 dirham, al-magrib, bank of morocco, finance, paper money, note, capital, arabic, money, money, money, money, money",
-        "url": "./data/news-images/3cffc68aeda33011239a2324.jpg",
-        "page": "https://pixabay.com/photos/dirham-moroccan-currency-banknote-3479568/",
-        "author": "MabelAmber"
+        "tags": "right, advocacy, lex, attorney, jura, justice, the regulation, bookshelf, paragraph, cool, law, symbol, goddess, justitia, the court, the case-law, woman, europe, bronze, the fair, business, horizontal, jus, statue, female, attorney, law, law, law, law, law",
+        "url": "./data/news-images/518465d5679f3f6f0f756655.jpg",
+        "page": "https://pixabay.com/photos/right-advocacy-lex-attorney-jura-4703934/",
+        "author": "advogadoaguilar"
       }
     },
     {
@@ -2932,7 +3112,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUmZkWG52MVRvamtENGF3YmViWno3ckhhV1JIeFBzcnVTeG5ueG55S0M1amhYa1c3U1NVUldNV3c3UTRzTG9lcnVsUmJoYzV2ckJsY2c2cmtFdFlLckpLRk91NTdnSEtJQ3lDSVlYNzEwdklnUkFvb1R6dUpZLWV2TnM5d0dldC00NnBCWkZ1RVRjQ0NqMFA2OEp2SThlVlQ5OXZNbDVHN2tLVjFjbmJhSHlPUGZCSXR0aUxLZGQ3RjZIdWlwOElBWmZPUQ?oc=5",
       "published_at": "2026-11-25T14:18:48+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -2963,7 +3143,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcjh3N19UdkU4bXQ1WExkUGtVTF96Vnh1MmpOUkdJcTczMkhwOFpiYUFFYVNnRUpwcmdQNjRhT01md1lnR2xXNDlVb003aGk3SEZiczYyVjlGMTFLcGhJQ0o4WHRoT3JlWS1MTl9PYUtrR1g0emFESG51WGgzVHhvc1lRMnhNZ1NXejBsTDkxMTFhREVRZ1E0Y2NMeDllT2FVS0E?oc=5",
       "published_at": "2026-11-25T14:08:58+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -3021,7 +3201,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5zWWNLQ0JuS3RPdklhUi0zSU5xc0FaTXppOWxRLVA4VkpRRUFqRmJKbVNCT2V3ajdyMkFEX21lalZpZU5wZ0NIQ0ZxOE40ZDFs?oc=5",
       "published_at": "2026-11-25T14:03:12+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Malásia"
       ],
@@ -3067,10 +3247,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "money, cash, finance, business, banknotes, currency, wealth, investment, bill",
-        "url": "./data/news-images/a9ff14c9d43534d975523ac7.jpg",
-        "page": "https://pixabay.com/photos/money-cash-finance-business-6978773/",
-        "author": "Byszek"
+        "tags": "purchasing, online, shopping, shopping cart, shopping basket, screen, customer, woman, pleasure, shopping venture, to buy, market",
+        "url": "./data/news-images/2b9777b999afc93058b5d4e9.jpg",
+        "page": "https://pixabay.com/photos/purchasing-online-shopping-3480209/",
+        "author": "geralt"
       }
     },
     {
@@ -3111,7 +3291,7 @@
       "source": "Business Standard",
       "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOM2czVEU0M2wyQUJvQ3pDOHA1LWpPREhqNGVoT0h4SzU0QXRiQ25Cd3FOckp3UVFzeXZwSWN3RTFfUnZYZGhVaVR0WVd0UF9WX3FqUGJRdUVSUThtOW44bWdPb0tUeTRicjlGNTlGZG1ab3Bpa00zTW53bkhUa3F0bUphZERMZWNoZXpTU0JBb1NJbjVCWjdYOUNkVjUtNU9lTC13SVFieFJpaThKTTN3anNNcG9xd0FiNmI3aGsydGdUbmgydmZleEwtR1EtVGcyTXFidlcwcUxOTWlzV3pDY0tfeXdJMXlEYi1TVXlIMlJpd9IB9wFBVV95cUxORVVPUHFTd21wSzNmeU81bnZpOVVsOTNEa3pLQ0lIT1NieC01Rm5MWUVsYkw3X0NyQi03X3kwSkNyMHAxTlhveTdoVGg0cGRyWTdJMDA4TXdyZFpxdE81ckdqMzBYaE5GdHNVc2hNWDM0NHNoeW5sNXRUbzhJUDNiT3dPbDBXMWpaU2kzanB0c2ZNU2tqeTZLZ3c5YzF0TGN3akdNLTl4T244aDNFQm9QTng1UGxFWWlPMV9IWDg2LWluc3FELW1fS2pKRFNKMEVSTWF1UFdGeGg1Y1QzLXlwQ3BKSmpGNEtBQUJzaDVock5Sd2R2VUJz?oc=5",
       "published_at": "2026-11-25T13:40:20+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -3141,7 +3321,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZ0IxclpHN1hmaHhKSk1TQmpLeHhYNjJPMHlNVl9LN3RUaGc3d0NjSmV6OC01Q2hfdmR4eVZkZUtkbFNOZGljRmFrM3Z5RVZwa1VDQy1paVNCM042ODg3d3poTWRnSy1QMUYyWjVnbVg1SVo5QnpLZ1lBRTAtRkZNb1g4OEVxbE9QVUQ3eDU5dXRiQkZfc3U3aklUWGtlSm1zTUVLMjVVb1hUWnRqVVBETUMxRWZuTFE?oc=5",
       "published_at": "2026-11-25T13:33:43+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -3234,7 +3414,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOcjZ1MUw5RG5fdk0tUjNTRFNIRzl5amR0VklFSzdTOUlUS2hxNWk5aV9xcm5VWmQtZGRkdXVKMWZ3Um5qZHluSFp4MGNIdHNETlZPck1RcmJmUC1oZHFtWFdYT29PbkdjUU1IbjQyWE9GRFJZdXFwTVFRMEtDcl81bXpDS3RHSHNka3VSbGlHNmNFV09uMTE1aExBRVkxUldZUmpwX3hYdGduS1BJcW1QRlY4ZjdyYkZyWTI0dVBB?oc=5",
       "published_at": "2026-11-25T13:15:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -3306,10 +3486,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "euro, coin, currency, europe, money, wealth, business, finance, profit, revenue, bank, deposit, incentive, investments, euro, euro, euro, euro, euro, coin, coin",
-        "url": "./data/news-images/88b04026321ca1afcedf0d10.jpg",
-        "page": "https://pixabay.com/photos/euro-coin-currency-europe-money-400249/",
-        "author": "stux"
+        "tags": "meeting, business, office, team, conference, group, colleagues, people, teamwork, computer, network, technology, working, consulting, laptop, writing, brainstorming",
+        "url": "./data/news-images/6167c011d2337a705503b997.jpg",
+        "page": "https://pixabay.com/photos/meeting-business-office-team-9498211/",
+        "author": "Eren098566"
       }
     },
     {
@@ -3321,7 +3501,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9uS01FTmpCQi1TRnBkNzNwdVdEcGEzNDdhdlFLaFRqdVowSkEwMVd2dUVRa3VRaTMwNjFKMURWTi01TGFGbWpjUk44cjhvam0y?oc=5",
       "published_at": "2026-11-25T12:37:19+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Malásia",
         "Indonésia"
@@ -3395,10 +3575,70 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "coins, money, banknotes, currency, gold",
-        "url": "./data/news-images/69ae051aa2bdd7dea0c5d466.jpg",
-        "page": "https://pixabay.com/photos/coins-money-banknotes-currency-7007802/",
-        "author": "gosiak1980"
+        "tags": "villa, pond, casa de mateus, reflection, portugal, villa, villa, villa, villa, villa, portugal, portugal, Vila Real, Vila Real District, Portugal",
+        "url": "./data/news-images/e8c7203e1dc28873839e9b4d.jpg",
+        "page": "https://pixabay.com/photos/villa-pond-casa-de-mateus-4612582/",
+        "author": "DerWeg"
+      }
+    },
+    {
+      "id": "94b315cd1f20a517a0",
+      "title_original": "'Overcapacity' tariff is political manipulation: China Daily editorial - China Daily Global Edition",
+      "title_pt": "Tarifa \"sobrecapacidade\" é manipulação política: China Editorial diário - China Daily Global Edition",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "China Daily Global Edition",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUGVnTG14Zjk1S2pjVXh1SEsxT0NLQUZTbkRieWgzSHpmaDlyLXpBb1U0WmY1T2czYXpZQnZ4RzIyVGxkWllSYUdRU1FoVXlFOExDcm1rVjFqc29MSVB0R09tUzhiUTNRbW1OX2pTWDNiVFZaN012cUwzWi1jb2pvVGpn?oc=5",
+      "published_at": "2026-11-25T12:25:27+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
+      "regions": [
+        "China"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: tariff",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "lock system, lock, the passage of the gateway, motor tanker, cargo ship, invest, moored, rhine, rhine shipping, mooring, mineral oil transport, birsfelden, waters, transport system, ship, port",
+        "url": "./data/news-images/01b0b112d418e53ad352cfdb.jpg",
+        "page": "https://pixabay.com/photos/lock-system-lock-3140176/",
+        "author": "adege"
+      }
+    },
+    {
+      "id": "226274fea9a5fcc4f3",
+      "title_original": "'Overcapacity' tariff is political manipulation: China Daily editorial - China Daily",
+      "title_pt": "Tarifa \"sobrecapacidade\" é manipulação política: China Editorial diário - China Daily",
+      "summary_pt": null,
+      "summary_original": null,
+      "source": "China Daily",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5PQks0RWd2V3JPTk9WY1dvS0k5ck5WRUE3OTdGZldRWVBRaU5MRnFxdWZPTTlHSkZSWjFwSTFpaUg5V1dSeHIyS2xnWW1WTVJoZnZVRjNjeUwtTndhcVY4MUNhams3MW1YRm1YR0RyNFdFRmR2SFFGTGRKSkR1QQ?oc=5",
+      "published_at": "2026-11-25T12:25:27+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
+      "regions": [
+        "China"
+      ],
+      "category": "Comércio exterior",
+      "commodities": [],
+      "impact": "Médio",
+      "impact_reason": "A manchete menciona fatores de mercado: tariff",
+      "context_confirmed": null,
+      "commercial_analysis": null,
+      "verification": "Metadados RSS; conteúdo integral não verificado",
+      "language": "en",
+      "source_type": "Google News RSS (agregador)",
+      "image": {
+        "illustrative_country": null,
+        "tags": "rhine, industry, factory, ship, refinery, oil, tanker, tank, transport, towers, tube, factory, factory, refinery, refinery, refinery, refinery, refinery, tanker",
+        "url": "./data/news-images/1ebad6e12a32f5b85e5aa7ee.jpg",
+        "page": "https://pixabay.com/photos/rhine-industry-factory-ship-5385905/",
+        "author": "Tho-Ge"
       }
     },
     {
@@ -3410,7 +3650,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNklFaE54bEV6OGdKT29ScUxHUlZwRDNyREJ0MzBSZzZGdnptTkVxaXNHeWx2WjFWYVMzMzdMeU92dC1PVmYyZ1BTT3lCTWVRVnJ5ODFEb0NXYWpDd1ZQUlg4bkZ5QVAyck9KQUhMbldjY2FqMmtsZGs3MTFUY0xLZm9wMWRRTFAyS3VvZUZ6Wnk0VzlxTjR3VS1GSkJ1S3VCU2xmZ09FX1E5dUVjTUhfR21wMG1pcktxdGc?oc=5",
       "published_at": "2026-11-25T12:07:49+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -3439,7 +3679,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5DbmpGNXhDSkFYejJxV3lfTmtMZ2R2MXJIYzVTQ29yY3Z1a2I1cU5ablMwVDNkSFliTDN3QW04QTRta1FsVjlvWDU0WGNpNWVv?oc=5",
       "published_at": "2026-11-25T12:00:20+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Malásia"
       ],
@@ -3469,7 +3709,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTzdrbThVSVJPbGJhMzJuU1EzY194YTh4WmZScXNHZTVqcUt6QlBua2k2VTRmN3RmRTFSc3ctVGo4MkhoTjZ0QTB1cWpCa2xad0hzNjgyMV9NTzR0QW01T0hGYzhaV3dIME5fN0FGWUVoUnJhLVFTdkl0R09fc2RTOHF1R2t4Y3pFeG9pZHhwLTB0T0lscmVR?oc=5",
       "published_at": "2026-11-25T11:34:23+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -3499,7 +3739,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQaVAwTDNCV1BtTUJJbFJiTlJfT1FteGFhWUFiSmlmZVhMWUpXcGlMWVl4RkxQd0p3ZUtnekU3Sk0yZW1RWTJrUzZmQVVpeF9vMWVDTnBTdnZHaExEcmJKT0JFTlhkLTZDcDFRaHlnQVRqb2FJNmYwMkF2U2pkR0VfTzVjSUFXbEZ4cmxaWVhiSm90dFZVUmo0QWF0Z04tcktN?oc=5",
       "published_at": "2026-11-25T11:07:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -3529,7 +3769,7 @@
       "source": "European Commission",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5ZZHF2VTFTYlJiR0hQNmVkYkRXYjlzU2dEbGc4WFRmSldwX3ItbU1lTndhc044NTV3OGcyTWJFb1ZrZEEyaW1ZMVBfU053Mm9zU3FMc0g1ZjFoTDhyY2JSbnF4N093WkpGbHkxcTI2ZUkzREgwODU1ZUpBQkFNdw?oc=5",
       "published_at": "2026-11-25T10:04:53+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "União Europeia"
       ],
@@ -3573,10 +3813,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "cents, coins, currency, cash, money, wealth, finance, loose change, coins, money, money, money, money, money",
-        "url": "./data/news-images/3cc8c3e10de3b40793f0469d.jpg",
-        "page": "https://pixabay.com/photos/cents-coins-currency-cash-money-400275/",
-        "author": "stux"
+        "tags": "bundestag, german flag, parliament, federal election, germany, capital city, flag, nature, architecture, banner, building, government district, berlin, government, germany flag, city, politics, government building, german, flutter, clouds, facade, story, sightseeing",
+        "url": "./data/news-images/3c16233056703a12cd5898a9.jpg",
+        "page": "https://pixabay.com/photos/bundestag-german-flag-parliament-2463236/",
+        "author": "Felix-Mittermeier"
       }
     },
     {
@@ -3631,10 +3871,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "coins, currency, euros, money, wealth, finance, loose change, coins, money, money, money, money, money, finance",
-        "url": "./data/news-images/56fa2f6da452408efe76f240.jpg",
-        "page": "https://pixabay.com/photos/coins-currency-euros-money-wealth-400286/",
-        "author": "stux"
+        "tags": "real estate, homeownership, homebuying, home, house, mortgage, investment, property, home insurance, home loan, apartment, housing, concept, real estate, real estate, real estate, real estate, real estate, mortgage, property",
+        "url": "./data/news-images/a2507b020c4617865e07cad9.jpg",
+        "page": "https://pixabay.com/photos/real-estate-homeownership-homebuying-6688945/",
+        "author": "OleksandrPidvalnyi"
       }
     },
     {
@@ -3661,10 +3901,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "cent, 50, euro, coin, currency, europe, icon, money, symbol, wealth, business, finance, profit, revenue, bank, deposit, incentive, investment, isolated, euro, euro, coin, coin, coin, coin, coin, money, money, money, money",
-        "url": "./data/news-images/bc2e38b611ca40da9eb6701d.jpg",
-        "page": "https://pixabay.com/photos/cent-50-euro-coin-currency-europe-400248/",
-        "author": "stux"
+        "tags": "student, woman, startup, business, people, students, office, strategy, work, technology, company, corporate, communication, young, plan, marketing, computer, design, professional, planning, internet, project, laptop, presentation, web, display, monitor, women, girls, screen, digital, electronic, pc, modern, student, student, business, business, students, office, office, marketing, marketing, computer, computer, computer, computer, internet, laptop, laptop, laptop, laptop, laptop, web, women",
+        "url": "./data/news-images/a9918a9965c3c4d288635d19.jpg",
+        "page": "https://pixabay.com/photos/student-woman-startup-business-849821/",
+        "author": "StartupStockPhotos"
       }
     },
     {
@@ -3720,10 +3960,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "cent, euro, coin, currency, europe, money, wealth, business, finance, profit, revenue, bank, deposit, incentive, investments, cent, cent, coin, coin, coin, coin, coin",
-        "url": "./data/news-images/4879d1af5969e1b8be10ee87.jpg",
-        "page": "https://pixabay.com/photos/cent-euro-coin-currency-europe-400242/",
-        "author": "stux"
+        "tags": "temple, pattaya, thailand, sanctuary of truth, architecture, religion, wood carving, hinduism, buddhism, tourism, asian, wooden, travel, thai culture, tourist attraction, travel photography, cultural heritage, holiday, exterior, tourist destination, sculpture",
+        "url": "./data/news-images/43b570a323c8ef8fddeefe41.jpg",
+        "page": "https://pixabay.com/photos/temple-pattaya-thailand-10236306/",
+        "author": "KirandeepSingh1971"
       }
     },
     {
@@ -3750,10 +3990,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "bitcoin, cryptocurrency, digital, money, electronic, coin, virtual, cash, payment, currency, global, cryptography, bitcoin, bitcoin, bitcoin, bitcoin, bitcoin, cryptocurrency, money, money",
-        "url": "./data/news-images/986f09dc1847d14b9f3ed579.jpg",
-        "page": "https://pixabay.com/photos/bitcoin-cryptocurrency-digital-2007769/",
-        "author": "MichaelWuensch"
+        "tags": "archive, boxes, shelf, folders, documents, data, storage, rack, row, stock, business, warehouse, depth of field, archive, data, storage, warehouse, warehouse, warehouse, warehouse, warehouse",
+        "url": "./data/news-images/653be89708b5d773c8384f30.jpg",
+        "page": "https://pixabay.com/photos/archive-boxes-shelf-folders-1850170/",
+        "author": "Pexels"
       }
     },
     {
@@ -3780,10 +4020,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "clock, money, growth, grow, time, time management, financial management, concept, idea, finance, business, success, financial, cash, currency, investment, banking, wealth, coins, economy, loan, profit, salary, credit, payment, savings, save, deposit, stack, symbol, income, accounting, clock, clock, clock, clock, money, money, money, money, time, time, time, time, time, time management",
-        "url": "./data/news-images/cdef9b9934a4ea34a07b671f.jpg",
-        "page": "https://pixabay.com/photos/clock-money-growth-grow-time-2696234/",
-        "author": "nattanan23"
+        "tags": "finance, bank, banking, business, financial, loan, credit, profit, investment, uae, dubai, blue business, blue finance, blue bank, blue company, finance, bank, loan, loan, loan, loan, loan, investment, investment",
+        "url": "./data/news-images/b4744b69a9c2d5bf4da7ce30.jpg",
+        "page": "https://pixabay.com/photos/finance-bank-banking-business-4858797/",
+        "author": "ccfb"
       }
     },
     {
@@ -3810,10 +4050,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "coins, calculator, budget, household budget, money, cash, currency, saving, accounting, market, calculation, earning, planning, income, finance, shopping, cost of living, inflation, spending, financial planning, save money concept, business, save money, saving money, food shopping, thrift, balance, careful, manage, budget, budget, budget, money, money, inflation, inflation, inflation, inflation, inflation",
-        "url": "./data/news-images/cf0fddf546444487d66aa04e.jpg",
-        "page": "https://pixabay.com/photos/coins-calculator-budget-1015125/",
-        "author": "stevepb"
+        "tags": "hungary, budapest, danube, city, building, architecture, nature, river, water, sights",
+        "url": "./data/news-images/c2813400277598e9a066b408.jpg",
+        "page": "https://pixabay.com/photos/hungary-budapest-danube-city-4544781/",
+        "author": "JStolp"
       }
     },
     {
@@ -3910,7 +4150,7 @@
       "source": "The Edge Malaysia",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1tdEtzQUdLb20zUUJsTGhfR1dOVWc4UjJaQ3JWRm5MUmpXMjNBaWdMS3JOemdydzlOSnFqaFVpQXItXzNJbm5kVG4yYjd5eXJ5?oc=5",
       "published_at": "2026-11-25T03:25:53+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Malásia"
       ],
@@ -4043,10 +4283,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "coins, currency, investment, insurance, cash, banking, financial, business, money, success, save money concept, save money, savings, stack of money, investment concept, commerce, mortgage, finance, invest, wealth, compound interest, time value of money, long term investment, accounting, earnings, growth, interest, investing, pension, goals, time management, investment, insurance, money, money, money, money, money, pension",
-        "url": "./data/news-images/e67ccd35f7e4ec9184194a1c.jpg",
-        "page": "https://pixabay.com/photos/coins-currency-investment-insurance-1523383/",
-        "author": "stevepb"
+        "tags": "tenement, helsinki, embassy, iceland, the window, flag, windowsill, elevation, plaster, monument, city, pane, appearance, building, cities, prospects, downtown, historic, facade, construction, architecture, wall, historic building, streedskape, street photography, helsinki, helsinki, helsinki, helsinki, helsinki",
+        "url": "./data/news-images/b98d33d48cb6af1931ceee24.jpg",
+        "page": "https://pixabay.com/photos/tenement-helsinki-embassy-iceland-4695651/",
+        "author": "pasja1000"
       }
     },
     {
@@ -4058,7 +4298,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbmE5cEFGWGFLVzVEUlVvWlE5NzJaT2p0MTUxclgxejJ2ZHJPbTQ5d1BLNzh6R2tFb251aWQ4dHBUTDRtaTlETkVick9uV1hKVkdZSjNPbFk5M2NBd1oxQXptdzAtLS1zVzlidDBDVXBmWFAyVnRzMGRmZHNGZVk4T3Y1aV9ycGZFcWxGejZ0T29BbG9EUks5QjZ0bzFVRG05YlVQemt4UDdDSEY5cUZrYzNsSU9VMGVX?oc=5",
       "published_at": "2026-11-25T02:42:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4087,7 +4327,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNclBMcW9VZGdZQW03OUFPS2J0VWdzbWNrNFYwUnREMVRSTG0xd0poeG1oLUpUNmxVd1lNWnBVbDQySWRQQkRjeDhKR1o3QkMxQWNEbmQ0MGhPT2t4N0lneHQ2UWJUX1lGN2NOSGlsU2k0OUNNZXFBMk1RbDcxSEotaE9TdGRKbDVOejN2XzktSjctOFVTUHlwaU9PMVo5NWQ0NjAzSTFDZmVpYmE0ZlpvSg?oc=5",
       "published_at": "2026-11-25T02:29:00+00:00",
-      "collected_at": "2026-11-27T01:49:24.153779+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4130,10 +4370,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "dollar, flying, concept, business, money, cash, currency, success, finance, wealth, bank, investment, banking, rain, sign, design, falling, paper, white, financial, symbol, bill, fly, rich, economy, banknote, profit, market, savings, growth, management, stock, trade, accounting, cost, rate, commercial, funding, sell, earning, marketing, nature, funds, green business, green money, green rain, green paper, green marketing, green finance, green bank, green growth, green design, green company, green economy, green accounting, green management, green market",
-        "url": "./data/news-images/108b17e13fe7cfdac5556193.jpg",
-        "page": "https://pixabay.com/photos/dollar-flying-concept-business-2891817/",
-        "author": "QuinceCreative"
+        "tags": "shopping carts, grocery, shopping, grocery shopping, grocery carts, supermarket, trolleys, transport, grocery store, metal, steel, shopping, shopping, shopping, shopping, shopping, supermarket, supermarket, steel",
+        "url": "./data/news-images/9edfdb84b5a47777b4a2f50a.jpg",
+        "page": "https://pixabay.com/photos/shopping-carts-grocery-shopping-1275480/",
+        "author": "652234"
       }
     },
     {
@@ -4145,7 +4385,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUUFucHFRbGxzR3laOUhHVU5fQ215SV82VkdMcExqZy1DMmpLalE4RHkyUDgyaEVLQmhVQ3l1VFZXcUV2ZV9UQmlqX1p2X09UbjlfbzlTY1EwUld2Z2dFV0d3cTI0bDlUejkxbFRsczJ5Q2ZmdXVaTkNNTXNKLUZkYkxLVVhFejU1VjdVTXp4d3ctRmc2NWhDbFdJV1NDRTE4UFQzOGQ4eXI4bXdjLWJB?oc=5",
       "published_at": "2026-11-25T01:19:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4204,7 +4444,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWk01SnRnY1hzWHBOdlQ5eGdldmlIQkd5QUM4SFJ5S3Z5YWtVQnlYWVp3LXlqajM1QTA5UTBBSFNrOFdjVGdWME54WUJYdFRGUXJDYlVmUDFETjlITTZtYkFiWW9IcU9sVTM0R0otbjlmMXNCdC1HSEVNOXJMaDlIMC1YUnFBUDZNMXh6RlRwMVM5MDFRTy1YQXc3U21zYU0?oc=5",
       "published_at": "2026-11-25T01:17:55+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4247,10 +4487,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "euro, coins, currency, cent, euro cent, money, finance, savings, wealth, income, budget, ten, twenty, cash, credit, golden, financial, europe, money, money, money, money, money",
-        "url": "./data/news-images/7ed6c2a1022856d65f9daa76.jpg",
-        "page": "https://pixabay.com/photos/euro-coins-currency-cent-euro-cent-1353420/",
-        "author": "image4you"
+        "tags": "woman, face mask, market, hijab, people, store, grocery, shopping, farmers market, buying, customers, market, market, market, market, hijab, hijab, hijab, hijab, store, store, grocery, grocery, grocery, grocery, shopping, shopping, shopping, shopping, shopping, farmers market, buying, customers",
+        "url": "./data/news-images/ff1e647d8d03792e122c24e1.jpg",
+        "page": "https://pixabay.com/photos/woman-face-mask-market-hijab-5632026/",
+        "author": "Antonio_Cansino"
       }
     },
     {
@@ -4321,7 +4561,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVGQ3cVhHXzJBLXEybDVWX21xeWcxbUVEOHA1ZV9IU0lacEM2a3dKbmFLSGk2Y1MwLXk0OVFzWV8yT1JNQ3FnX3hWNGxidEZvbDZwTl8tdjNoUDV6MU45ZnJSa3lSMnZJNXdwWk5VRUFOYzJlTk11TmZaS1hocXhPVUE4bw?oc=5",
       "published_at": "2026-11-24T23:33:16+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4364,10 +4604,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "dollar, money, cash, business, currency, finance, the crisis, income, rich, bank, bill, wealth, bank note, federal reserve system, dollar, money, money, money, money, money",
-        "url": "./data/news-images/0e1e489a65782c4461ab2e6d.jpg",
-        "page": "https://pixabay.com/photos/dollar-money-cash-business-1362244/",
-        "author": "NikolayFrolochkin"
+        "tags": "bookkeeper, accountant, office, coffee, calculator, keyboard, pen, usb drive, invoice, company, paperwork, administration, accounting, work, desk, profit, paper, mouse, document, financial, finance, business, accountant, invoice, invoice, invoice, administration, administration, administration, administration, administration, accounting, accounting, accounting",
+        "url": "./data/news-images/b24832edbdb7851fd5a3584c.jpg",
+        "page": "https://pixabay.com/photos/bookkeeper-accountant-office-coffee-1016299/",
+        "author": "cloudhoreca"
       }
     },
     {
@@ -4379,7 +4619,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNbWJabUYzSzl1Mm9ZYllmYkZ5aUdXOWFoU0NDdGRUbmFGNDhWOVc5VDc2N09hazhJc24tZUJiXzR0dkMyZU9lYXY3cl9jQ0NhQ2xNTU8zSmlRdE9CbjR2dGlTVUZ5WTB2YjZraVpXMklycEI0U19EcWFEU3dhUUQ4dXpON1FRTm9wT1NVWDhGTUtZRTdNNTVrTFhERjBZSHRFV0NsNmZ1eXRCeXo0SGNvSHJyeVcxdmI3RkdBZHdEelpVZEk?oc=5",
       "published_at": "2026-11-24T22:36:20+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4436,7 +4676,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNVG1zbDJSYngzOXYyX0pnWnBSUFB6Q0FYVzBkUzNtSVpRQm9ZZEY1S3VtMFJFWHVVbjFqQ29aeXhILVNwekVkX0Y1SUp1T3lUZXFCY2hOVWd1YWhVZVBVRFhoeWF2Y01jUkFGQTl0LWRsWUVNZU0xSGJsTE5hVjlOMm1KOVBOVlJtSGcwYm1zV3d2OE52VHJ1ZEFNeXdQRjhPTGhLMmRDNk14QVo4UHg1THdEQ2xMekJ2ZzJxXw?oc=5",
       "published_at": "2026-11-24T22:11:43+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4508,10 +4748,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "savings, budget, investment, money, finance, business, financial, cash, income, economy, tax, planning, calculator, save, currency, wealth, accounting, calculate, expenses, banking, cost, stress, debt, stressed, crisis, squeeze, clamp down, tight, vernier, coins, budget, budget, budget, budget, budget, tax, tax, accounting, cost, cost, debt, debt",
-        "url": "./data/news-images/b631b01d2ad355f65abfc536.jpg",
-        "page": "https://pixabay.com/photos/savings-budget-investment-money-2789112/",
-        "author": "stevepb"
+        "tags": "barack obama, windows wallpaper, hd wallpaper, free wallpaper, official portrait, president of the united states, wallpaper hd, 4k wallpaper 1920x1080, america, free background, washington, beautiful wallpaper, mac wallpaper, official photo, cool backgrounds, desktop backgrounds, speech, conference, laptop wallpaper, united states flag, full hd wallpaper, us, wallpaper 4k, usa, american, 4k wallpaper, man, person, wallpaper",
+        "url": "./data/news-images/f9dce2d34cb36289d1fb4065.jpg",
+        "page": "https://pixabay.com/photos/barack-obama-official-portrait-1174489/",
+        "author": "janeb13"
       }
     },
     {
@@ -4523,7 +4763,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLXlYaTU4SDlDWXJSNGFNN1FFaGZSZzcxY3NnM0VEd0ZhbThkT1d5UDBsLTRfLXAzSmk5MUxpUGdMY1BrakhsbndpV2pycnpsblZaX0E0V2JpTExxam5VWW0xcUV4RFNabTk3bk51QmwyQjd4bHZEdFI2ZTFMeVpPWmVpc1RFaXFtRHZMWHdPaXNTWE9PQ253S1M5eFFaZHF1UE01SFZJbGtkdGNZWngwUVgxLVpNSGpaQ1JyeExYRlUxc3h3?oc=5",
       "published_at": "2026-11-24T20:53:59+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4551,7 +4791,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcWhsZ000UTV1SjF3ak9ONXpxUy1JWUFjM2wtMWZTQ3dqOVhZNDBKRHFQVkFlYjZaVWRjWXFoSUY3Ry1JN1ozRk9TQTQ3R2ZFV2ZVQUx6MjF5endGeUptTU5OakRMNlVjb01qWi0ySHItb1dEUFJDc3kxNTJ0akJfbXBlSVZMdkdwb2p1b3BHWnh3aW5scllxRVg2M3BFSHc?oc=5",
       "published_at": "2026-11-24T20:40:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4595,10 +4835,10 @@
       "source_type": "Google News RSS (agregador)",
       "image": {
         "illustrative_country": null,
-        "tags": "euro, seem, money, finance, piggy bank, save up, cent, coins, computer, taxes, calculator, euro, money, money, money, money, money, finance, calculator",
-        "url": "./data/news-images/971f6481fefca4a89592c0b5.jpg",
-        "page": "https://pixabay.com/photos/euro-seem-money-finance-piggy-bank-870757/",
-        "author": "Bru-nO"
+        "tags": "federal chancellery, federal government, nature, government, berlin, building, architecture, government district, germany, sunset, dusk, Berlin, Germany",
+        "url": "./data/news-images/32c817bbf53cb6db6239b843.jpg",
+        "page": "https://pixabay.com/photos/federal-chancellery-637999/",
+        "author": "LoboStudioHamburg"
       }
     },
     {
@@ -4640,7 +4880,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZnA4Z09LNE81VEdjeHA3QmgzbXQ2ZGRtOEMwQUpRYTA5UUN6WnNvN0dlS0p6LW9saDNRUzVodE9OdnREMThQOHhYTzNWdUhnb291VHZkRW1IZHE4akJpRDE5OGtMM2FiTUNUN0RwYmRJcVlDNTc5TW11NWF6VzB1RmF3bnNUVkpNbldqZ3VQSTc5TVlweFQzaXhDUWZsdkNXaDZ1T0tTODdyR0I4RFZBOVBZdzU?oc=5",
       "published_at": "2026-11-24T19:32:02+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4698,7 +4938,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWkIyNDFsT2dsN05tM0U4NFZjRU9IZG1Bemx1b2hqOXFneHV3bDBnY0gzc3drRkxjY0JqWVdPTW8xR29QUy1wczZRM0FaemMzMEk3X2I5Wlp5elVhS0dTb2tIMFJ3VlZ3a0dNelRZYWFpeVA0THA3UDkwMGVtd1BZMENTbEZ6alRuR3pnNnI0TGdMWjZ3VVBmb2lDZHd4ckJwVzJRTk1veERGQQ?oc=5",
       "published_at": "2026-11-24T18:46:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4727,7 +4967,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQZDlBeGxKNEloWTJLaTdNQjFFSkQyZWx3VjBqMzNpQVFoMjF5c1BkaEpCYkNhV2NCZmNXN1hPM2ZHVzdJN2I2aUpLd0ZSSnhLd3JWOHJJVTEyWG1ZTDdhOXJvNGtybnRkMU9yMDlJWE44eVhFNGZjbTlwMDFwQURSLW94U21XS3VqUDFWWFAzM2FLV2ZXdTNPa3djTzBPbDl5WVBUeVdUSXdWVDh4eE5acHppbzdvTjVtbEZORkh2TVFkR1M1T1E?oc=5",
       "published_at": "2026-11-24T18:41:43+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -4757,7 +4997,7 @@
       "source": "Canal Rural",
       "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxORzlkdVdfbGlEZDhLWUpNU2FrdHdmN0VyNXJmVnR1SkZJR2cyU3NidnVpQXNsejVqaHZldDB2dk5PVXB6UFlndzR6LW85bGRQaFNxT3lvODdTckFiaFRIVzgxLUNQTmwxa1l4SVdqWjgwX0NjYmlzY0NJVWlkdUFVek93WWpIWC02MFVKQUR5cEc1cGJ2dlVoajg4N2xUbXg4azJIWWZOMU1FeExET2dwbUR3ODJiNlB2MjM1T2I0ZHFsV0QwVHdvSGp3UlA5RXNoRXhwbkxWNTdZRnNzRDFPbzFGeVNzcVBMNWwzcm9oY1lGZw?oc=5",
       "published_at": "2026-11-24T18:04:15+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Brasil"
       ],
@@ -4787,7 +5027,7 @@
       "source": "La Nación",
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPVTlWLW1oMU9PbWxfU1M1czZzdEtUNWVoUkgyaWZPS0hzQ0FQaXVGTjh4eFFxWE1SRW41OFo5Q2w2TnE2X0pIQ2dFSlg3ZnNZZ0lTVlk3eXljX0lGRnNoeXV1TXpkeVU5c2tHTTh2d2dWeDlrM0dHaG5wUGNjeDFmNDgwVi1qdXZSRW91bGkxQkVaT0lCQWRxTVlONDdnOUNEdVd3bTg0WTlVUDVXSC01bkpvSWs5NWxPMEpvZlhoVFhKZ190YmFtZjBuSUtzU2hfZGYwTWZnU05vX0xpeEhJdHFWbXFhb1FaVV8w?oc=5",
       "published_at": "2026-11-24T17:48:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Argentina"
       ],
@@ -4816,7 +5056,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNb3RDWkpBWEVPQjc0MElRMEhEd3RHeXJSX29ldlJMVGdURmxsQmtKYmNsbm5sSDhfUmNHSlE3OWs3RXczbVZlQmJJa21mYUdZZmRFRVJPMXpEMEN4N3hkS0w3U0s5em9hY2RpckdIYlpzbUlSbWoyVWwydF82anhWcVFtZlhHOFQ1akd6enZVWFZSbDF6MHVlV0VFSHd2VGJRbllqdA?oc=5",
       "published_at": "2026-11-24T17:22:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -5079,7 +5319,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRzh1aTVFYlpJNW53akl0dTZtUEF6WGtkOTdKN2kzWEpKRktCYktOVTM5YkljRUxFZUkxYmlFQTJ4c2xpM3E4NWlYUVNVbXBEWEFHMjFjdTJrTzlkekF5Zl9ONlJWUTZxbVBTd2x4UTdVUVZnR0VQQ3VzR1hCV3EzOEtlODIwRTZiSmZFd2tpZDJHYWJDLVhfck9mMXRPd2lXX1BSZA?oc=5",
       "published_at": "2026-11-24T15:22:54+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -5166,7 +5406,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOT2otaUM0a09JTlpaVGx6ek9ySzBBRW5seUhvMldlc2tmN0ZxczExZFhNTTlzeGJXa2dUbHE3R3J5c19xWEIyUGRnZjZaZWxMaE55TzZrR1VGNG0ycVBWUm5wYlE4QlNKQjRtQVpFWUFRY3ZLMXg3Rkg4RXpsYnZESG56U0E1UFo3LWR5RkhPYURibk1Ga3d6bG9wV3RZb3FRMldxZ1plRl9nSHBnZEdRMUlteEVfZ3RPaGVGSG94Ujk?oc=5",
       "published_at": "2026-11-24T15:03:43+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "China"
       ],
@@ -5195,7 +5435,7 @@
       "source": "USDA Foreign Agricultural Service (.gov)",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOVGpxT1Q3aXBYN0Zkc2VWeDZ3MXktbjUtbi1jZXdLNWxDMjlFdzNuVXgwQmNLN3V5UllkeFlZZG1RVHpTNGloOVdlc3BHLUxIMHdyZXlyZFlxSHM2Y2NpMTlubTBwdHBxSVByMUd2aHJfYjQxR3RFS25yc0c1elVqWWRPUQ?oc=5",
       "published_at": "2026-11-24T15:01:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Índia",
         "Estados Unidos"
@@ -5226,7 +5466,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPckRyU2g2M08tN1IyMGlVTkhPcnYxVkpQRjR6Ymw3ck5sWW03ZVpEcmxsT1E5YTczaWZvRS1Ea09HWVB5cTFFMEI3TXZQOFlGaFpVd0ZRa0NmV2w5T2otX1NpSzFrT0xRQ3hLQmEzdzA4dERMbm8wazRjbHZXY2t0N1VkcTAwNHc4X3R3ZTlndFE4NHBrRW1qV1RNa1J6RmVaMGJZQmhaWmVVNXc?oc=5",
       "published_at": "2026-11-24T14:52:50+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "China"
       ],
@@ -5314,7 +5554,7 @@
       "source": "Canal Rural",
       "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPZjVVcGVONHBHZEU2Zk9fakRsYXluVDNGeThFV3FDNTFhV09CTXpTYnBRWTVUR09oekp1eUJackdtY2Jod1IyVXNsRl9ZaUZveE9PX2VvVDdHU3NsaUxVOE82cXNRZ18xekhBQWszVWExTVBTd254WHJjWUlmY1BiTlhKeUQ5aDg2OWNmTmgzS3NSdHZTclFfRVl5ckFJQmtoc0ZVdnNEM2Y3Z1ZPTS1PeHJYaWN4TWJQMkdYaTVoOFZfSjZERnQ5NkJWNUlSTjJIUWw4SVVwalpUdkhsbk5OUFN2VGMwY3dSN0hVTDczQWIzbThkYVVXN2tlc3UxUzg?oc=5",
       "published_at": "2026-11-24T14:27:22+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -5401,7 +5641,7 @@
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVzZpMHFTclFHbWV5MGFQbmJCOHhtaS02NUQyVmFmU09tZHVJRXZCeHRNWTFNQ0hVenFvQ1JnS2p0aHd0LVFjRE5KTi0tQkVZdElhcko2YXRmWnpkbGtkc0lJX0JjVGtXSE1TbWwyVklTcHVrSWNaTExxT1hYV3JEdG92Ny03TEFNWEJ0Q1hIY2lReVVlZHhkRS0zUUlkZkFiTHhiV0UwVF9RMVdxS2RlS1pseXBJQ3ZwaDBqak5zd29Hd3NGYW5nNUVfZERkR0pI?oc=5",
       "published_at": "2026-11-24T12:11:47+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -5424,213 +5664,6 @@
       }
     },
     {
-      "id": "074eb48143e28eb779",
-      "title_original": "Câmara aprova ajuste fiscal sem alterações; projeto segue para sanção - Agência Brasil",
-      "title_pt": "Câmara aprova ajuste fiscal sem alterações; projeto segue para sanção - Agência Brasil",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Agência Brasil",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNTXpEYW9aNk1rTWYwaW81aFFuSHE5NG9sWk1BNGJpdXBTaGFMcWp1dFJ2ZWJJcmpMNWR5a1Z6eW1tZ1c3dklGb2lwTlhJUWFSY2NJOENGdGhxYndTcW9mSnFPYlNIaTBVUU9obVRlQU0xUWN5clkwUExMRy00Y2RleURhVUlodWhCeGpVV2hFbXNQbHpGaE9DcUlITVJkdExLU01FbTJyeWFPZGJ0R2tTV2tXdnZJUHNSMFl2eGh3dW96c2pK?oc=5",
-      "published_at": "2026-11-24T11:22:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Brasil"
-      ],
-      "category": "Economia Brasileira",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "illustrative_country": null,
-        "tags": "money, grow, interest, save, invest, shares, funds, the bank, finance, banknotes, financial, savings account, bank account, money, money, money, money, money",
-        "url": "./data/news-images/17d9076f27e12398877967a6.jpg",
-        "page": "https://pixabay.com/photos/money-grow-interest-save-invest-1604921/",
-        "author": "TheDigitalWay"
-      }
-    },
-    {
-      "id": "fa62f31416c685300e",
-      "title_original": "Hungary, Ukraine make 'fresh start' as Magyar visit kickstarts trade talks - Reuters",
-      "title_pt": "Hungria, Ucrânia fazem \"novo começo\" quando a visita de Magyar inicia negociações comerciais - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjc0WEhBdUdQN1JVNUExSXFCNkpwMktDM1BRamc5bHVINzdzckl0bzIyS1RvZUktLUtwOWJNVk4xV2piVjNYejFYTkNYanNQQUZOZmNfWDFxcThpU2NBODFxamx6TXN3V3drYm5BNGJydEZDd1FxbUg0REctb0VTMGtWaFNBSG9QVklwb2pxVGRjeGhwSERvZ0x2UWhmMTROaHlDMVB4cTkxcUt3N2c?oc=5",
-      "published_at": "2026-11-24T10:15:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Comércio exterior",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "gas tanker, ship, sea, gas carrier, maritime, nautical, shipping, nature, ocean",
-        "url": "./data/news-images/a80ef938445d922c007facf3.jpg",
-        "page": "https://pixabay.com/photos/gas-tanker-ship-sea-gas-carrier-6367981/",
-        "author": "Gaz_Chapp"
-      }
-    },
-    {
-      "id": "650ab991d1fb69b707",
-      "title_original": "Mercado vê primeiros sinais de reação do governo após dólar tocar os R$ 6 - Valor Econômico",
-      "title_pt": "Mercado vê primeiros sinais de reação do governo após dólar tocar os R$ 6 - Valor Econômico",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Valor Econômico",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQdHF6YWZOWl8xTHhNd3pGX1lQZ1p5VkZEVzZhd0ZkLXlmU0dzR3VGQVFoa1doTXVhd0hrbU5jWk9QRlZqdnB3aFo1cnN5UUhOSGVGeXRKM1hob0E2LXpER3pIenZjU2RsNHpuWV8zcjFrb0c0bjk4MmFUX1Vtcm1jLVJXSGx4V1FTQllYWDVGSnVBZ0wxcHpiWHk4U0I3ZkVRcWVLclpUVHJ0TVRIeVVPdkpaaF9kcm5TdTdDTDRxWkpieTRYSUhERy1fOTM2dG92eUVfQVprZkRqeVFi0gHcAUFVX3lxTFB0cXphZk5aXzFMeE13ekZfWVBnWnlWRkRXNmF3RmQteWZTR3NHdUZBUWhrV2hNdWF3SGttTmNaT1BGVmp2cHdoWjVyc3lRSE5IZUZ5dEozWGhvQTYtekRHekh6dmNTZGw0em5ZXzNyMWtvRzRuOTgyYVRfVW1ybWMtUldIbHhXUVNCWVhYNUZKdUFnTDFwemJYeThTQjdmRVFxZUtyWlRUcnRNVEh5VU92SlpoX2RyblN1N0NMNHFaSmJ5NFhJSERHLV85MzZ0b3Z5RV9BWmtmRGp5UWI?oc=5",
-      "published_at": "2026-11-24T10:00:00+00:00",
-      "collected_at": "2026-11-27T01:49:24.153779+00:00",
-      "regions": [
-        "Brasil",
-        "Global"
-      ],
-      "category": "Economia Brasileira",
-      "commodities": [],
-      "impact": "Baixo",
-      "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "pt",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "url": "./data/news-images/082618512c9df0dc223d54b6.jpg",
-        "page": "https://pixabay.com/photos/mixture-currencies-finance-business-69523/",
-        "author": "PublicDomainPictures"
-      }
-    },
-    {
-      "id": "1fac7b2f370c8ba68a",
-      "title_original": "China, India set for record Russian oil imports in 2026, but demand seen peaking - The Economic Times",
-      "title_pt": "China, Índia estabeleceu para registro importações de petróleo russo em 2026, mas a demanda viu pico - The Economic Times",
-      "summary_pt": null,
-      "source": "The Economic Times",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOLTY0RDRPRkxLN1A0aFBKVmFyQnNPWW9TT3NjMThISGN2dmY3TjVpN2tZcEVwMmxsN00tYXB6TjN5UnR2akJCbFVNUmRJMnBUNlluZ0FPMHczR19CM1MxMmhPdEZxQ1FPTDlKZm9Yek1IaVhndHRVT2t3T1FNUUtUTWQ1NS1pbnBHcWtnbERnRWFvLXBRdm43VWlqMGV5UWU1ZFhnNnN2a3J4emNPSk5rb3hJRlJDT1VrZHctZ3B3d2sxYmdsaGhfLXhfVUdFZ18wRGU0THR1anJ5YzJ6RVE1R3NKdnRMWkYtZGZMVNIB8gFBVV95cUxPMWk4clZOeVJ3eTVlX1ZCQUc4clFJUGNRM01nYkI2b3NRUEZ2UW9WVGNyNFNueExnVUtEM1ViMVE1d2ZKblhmU0tVOG8xOGZnek56Rm8yV0JFWHZlanNUNzcxM3R2cjNQVW5VUmlHX0RzMG9senBJc3J5QXFuMnJkN3FKRzBORm9fZmtySUprRjU4andtUVUtQ0drdTltUVExUU1NakdpanY3M3RsMjRWbnlnX214MkVqcUF6ODlJRjhZa2h4NXA1cFNTZi1yRnV2ZkZRb1Q0TUJFdnBDSEk0Z0c1elVabUc5Y0tET2oyaC1pZw?oc=5",
-      "published_at": "2026-11-24T09:17:42+00:00",
-      "collected_at": "2026-11-25T19:26:58.716651+00:00",
-      "regions": [
-        "China",
-        "Índia"
-      ],
-      "category": "Comércio exterior",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: import, demand",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "ship, wallpaper hd, nature, free background, windows wallpaper, tanker, north sea, beautiful nature, hd wallpaper, laptop wallpaper, mac wallpaper, water, wallpaper 4k, sea, cool backgrounds, nature background, 4k wallpaper 1920x1080, free wallpaper, nature wallpaper, heaven, full hd wallpaper, lake, maritime, boat, port, storm, 4k wallpaper, beautiful wallpaper, desktop backgrounds, dark clouds, cuxhaven, wallpaper, flock of birds, meadow",
-        "url": "./data/news-images/b303af2602e8b32430b5fac6.jpg",
-        "page": "https://pixabay.com/photos/ship-tanker-north-sea-water-sea-3611262/",
-        "author": "2780243"
-      }
-    },
-    {
-      "id": "8fa540508699759eb8",
-      "title_original": "China, India set for record Russian oil imports in 2026, but demand seen peaking - Reuters",
-      "title_pt": "China, Índia estabeleceu para registro importações de petróleo russo em 2026, mas a demanda viu pico - Reuters",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZEl6LThLbVZLWTlSU3lNdHJLa2dnanBPQjdqRGdaeDd2bGU4VmpzVnRRZ1VETzdRelFLWnI0QVVkUE0tUUE0TDkyR2lpcEMzUGNFS09iWW1LREpvOHJkb25Fdkd2MWFSYWZQRkwwbGpQR21sYkxvRXI5ZHBJTGcxTzVDdGNWdjktUFQ2OTRsYmlUSEkyRU5qUWJKeTNkbF9FX2dYNTJsdXN1RlBsVDZVc3EzUGxOeFNZNm53?oc=5",
-      "published_at": "2026-11-24T09:05:44+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "China",
-        "Índia"
-      ],
-      "category": "Comércio exterior",
-      "commodities": [],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: import, demand",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "cargo, ship, tanker, shipping, tanker, tanker, tanker, tanker, tanker",
-        "url": "./data/news-images/e3480b455bdda100f5367bea.jpg",
-        "page": "https://pixabay.com/photos/cargo-ship-tanker-shipping-572997/",
-        "author": "jaslagman0"
-      }
-    },
-    {
-      "id": "ce213bc5eb7453bd45",
-      "title_original": "Brent Holds Near $92.88 as IEA Forecasts Oil Surplus in Q4 - JournalArta",
-      "title_pt": "Brent detém perto de US $ 92,88 como previsões da IEA Oil Explus em Q4 - JournalArta",
-      "summary_pt": null,
-      "source": "JournalArta",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNY0Q0aHZRbk93N2poVlRWcWN5emtkR1lwSTJVaTlIamNmcGRPbGlhRTFGVmtLOGJleUdtWWV0ci1HeDVsVTlYMnVScVZMWmxoVmtsaWVOekRNUFNWaVdpN2x6ZW9ncFlXb3dxZ2NkaDZkY3VxX1ltQWhfa1M1bWItTDBBUUlQSzRPaExsbEpoQnl1NGY1ZTlHVg?oc=5",
-      "published_at": "2026-11-24T08:25:12+00:00",
-      "collected_at": "2026-11-25T19:26:58.716651+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Petróleo",
-      "commodities": [
-        "Petróleo"
-      ],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: forecast",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "factory, industrial, manufacturer, production plant, site, manufacturer, manufacturer, manufacturer, manufacturer, manufacturer",
-        "url": "./data/news-images/c2b5ef78f41eaf79864d2a1d.jpg",
-        "page": "https://pixabay.com/photos/factory-industrial-manufacturer-6529742/",
-        "author": "tasukaran"
-      }
-    },
-    {
-      "id": "d8506d175a9dc3f2e5",
-      "title_original": "Crude Oil Outlook Turns Bearish as Markets Price In the 2027 Supply Glut - FXEmpire",
-      "title_pt": "Crude Oil Outlook vira Bearish como preço de mercado No 2027 fornecimento de glúten - FXEmpire",
-      "summary_pt": null,
-      "source": "FXEmpire",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPQk1iLThCd09vNjJEdS1aVzV2RHhLNG1MQzc0Z0Z5QU9nSFNhTi10Ym9feGc1ODFQbE4zcW1YVk5QSngtMGU4ZUJnRTlXbkNnVWY3NWdCWTB5MVdJS0hoZ3hyaXQ3blBJbGJxS1JsMmJTMm5USGxvN3A3NDZXeHhWcHR2b21lcHBlRFgyWkJmM2QzSXhNX1c1UHd0Z3ZZbEo4dFBuMTN0M2ZaMkpEMmxUeGF5UTBYWHIzVXBOZnQxVms?oc=5",
-      "published_at": "2026-11-24T08:08:53+00:00",
-      "collected_at": "2026-11-25T19:26:58.716651+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Petróleo",
-      "commodities": [
-        "Petróleo"
-      ],
-      "impact": "Médio",
-      "impact_reason": "A manchete menciona fatores de mercado: price",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "ölpferd, oil pump, support financially, crude oil, fuel, industry, oil, energy, power, equipment, technology, oilfield, environment, hdr, high dynamic range, contrast, crude oil, crude oil, crude oil, crude oil, crude oil",
-        "url": "./data/news-images/4726351a306c38b80aec8677.jpg",
-        "page": "https://pixabay.com/photos/%C3%B6lpferd-oil-pump-support-financially-3807680/",
-        "author": "distelAPPArath"
-      }
-    },
-    {
       "id": "6a4e824cb0b828408f",
       "title_original": "Report Name: Oilseeds and Products Update - USDA Foreign Agricultural Service (.gov)",
       "title_pt": "Nome do relatório: Atualização de sementes oleaginosas e produtos - USDA Foreign Agricultural Service (.gov)",
@@ -5639,7 +5672,7 @@
       "source": "USDA Foreign Agricultural Service (.gov)",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQeWR2SE1DdGN6TFdCeVpJa0JqYm9hUGE2YTQtRk1ZQV9aYVVsQVduclFWQ285dTI2cER0UUdXY2Jvc09ieTIzVE40d05VanpSVzhQXzZjejQtaWpsdkN5X0M3WWZKb0xseHNDUk5sTmZ3TG9aZ2thdnY5dFg2NXE0S3BscVRyMy1FbU8wSEZ4R1NsbXVPaUs4MVVwWDJHSDlrVWRhRXZLY01vMWNhQlNXTDBqSjU1aHVaYUE?oc=5",
       "published_at": "2026-11-24T08:00:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Estados Unidos"
       ],
@@ -5729,7 +5762,7 @@
       "source": "www.gov.br",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcUpNMzAyeUNGZGJZV3pkWVhES2NZSktjbUhTc195TURjTmpMbE9XZ2FPcVJQMTZJc2xnTTJHUGF2bXJ1RmVKZ2dVcFMyb01QaE1kVm0tMEhhWGNZNVFrWHZmaWVLblpuSXBJamkyZ0d2TWNzUjRNUTFDTXpVSmVmcWc1bVBkQnFEQWpiUTRhNTYyQXZxNjBEU3hWZVBQN1UycFdDWkRSZXVuXzZUdkdVdVdkNnA4UVdtMklxRmpLVVhqQQ?oc=5",
       "published_at": "2026-11-19T17:35:27+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -5758,7 +5791,7 @@
       "source": "Planeta Campo",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdFpxTThkaWtEYm5naTVDSFFjOUlQLTk2NklJV3FPYzFBSWRVQ0xrRWZDYWpHbzZXX1NoVDFyd2hfa1J1eXlud3lmMHZYSlVSZlhseEN3WWJCbUJvNHBtd3llWXhjZC13VXZDTWMxQVV6QV9zREpGQnpIMFhZUW51ZS1uX3NKWF9nbmdwaGZDUTdYb1NKR2JSOEZINVIxeUt2STE1R0s3amt4ZjByamFjUHRmWmhMX3R4bnctc3NEN0RYX0VWUUo4NUdWV1hhRXJzb0t2eQ?oc=5",
       "published_at": "2026-11-17T08:00:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -5787,7 +5820,7 @@
       "source": "Planeta Campo",
       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNMkRQMlRLalhtVU5oS25QWndfYkhtYUhnR0VXWmU1RnB6QnRKRDVTeW9tdW1OcWpodW8wdHpteVRaMzF4X0NHUlhkbUdudzlRVmdPWkVoQk4zZ2VremdqVjYxZE01bGZGSWhsMXFhbTEwWmh1XzRKZWtfdTZkejFuX1pabjlKNjZRME9pLWwySVJlWDRjZnQ0cjRkREx4dHhQQ0N2bDd1cXpCU0ZLSnpDakd0ZzhiTUVfRFljQXl2eFh4VTRLcHk0YkxIcWN0M0JJN2psQ0twektwNXhJb2VQaUt3OUdQZw?oc=5",
       "published_at": "2026-11-16T22:01:36+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Global"
       ],
@@ -5843,7 +5876,7 @@
       "source": "Argentina.gob.ar",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNSWl4TEIxNGdSN2Q4cWFPLXcxamYxekNjMDk4ZE44cUF5SVJwWWpQTVhYbk9XRjJIM2NhTjJNYlJyNXAzbThXN1ZZZVdNVE16OG9HZ2lmaUFXeVpYTFhIUlMxa0dZd0FkYUl0cGNWT3JLV2x1Y2pUSjZrbE9BcExic0dWWXR3UnVaODVTQzVISVRCcWtDVlBvclRsVTFxWkJ1QjJfMld3ODBrM2NpakJKR0oxWmltMHJORGNhR050WGVWUQ?oc=5",
       "published_at": "2026-11-13T11:29:18+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Argentina"
       ],
@@ -5865,35 +5898,6 @@
       }
     },
     {
-      "id": "3f9b02297b88a72212",
-      "title_original": "Government studies raw material sufficiency for B50 in 2027 - ANTARA News",
-      "title_pt": "Governo estuda suficiência de matéria-prima para B50 em 2027 - ANTARA News",
-      "summary_pt": null,
-      "summary_original": null,
-      "source": "ANTARA News",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQOV9OeHFBazJ5T0pKSTFzYkFfNEI4LWFBU3dsTXZmT0VObTBycW5Oei03bHFOZzd4WGRxV01kSUlTQTRxOUlXR0otQWZya0lGa09MSXBROXBRZk8yX2Y5aHI1Nkp5OEg0b2pZODljcFljVUd4eGl2am9XMk9MXy1JdHVrYllvSVdsb1JTLVJYY1B2dWMtTTk0dU5CLS1QZ9IBowFBVV95cUxNbFVwQVBTcUE2bG9RaVN5Mng4U01CdG1SRU9abkdxYkoycXl6NHNsZS1XdmpmaXFuQzdZTlVuNUFZb3B4WnJBckEybUMyZkhrdzh1R3phYW9PRHRYUHNqcVZjSHQ2WGJnaWtBMXpLNDFxNTlJaXJuSXd2YUhPaUpZQWZtTkk5eGJyWmdWbDlDRHBBd29ibkxUd3hwRUFXZkJINzFN?oc=5",
-      "published_at": "2026-11-13T08:00:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
-      "regions": [
-        "Global"
-      ],
-      "category": "Biodiesel",
-      "commodities": [],
-      "impact": "Alto",
-      "impact_reason": "Termo de possível impacto elevado na manchete: b50",
-      "context_confirmed": null,
-      "commercial_analysis": null,
-      "verification": "Metadados RSS; conteúdo integral não verificado",
-      "language": "en",
-      "source_type": "Google News RSS (agregador)",
-      "image": {
-        "tags": "cane field, the sugar cane-of-sugar, crop, agricultural, farm, combine, harvest, brazil, goias, agriculture, ground, harvester, machining, ground, ground, ground, ground, ground",
-        "url": "./data/news-images/04c195c8dbc7ea100e5263ba.jpg",
-        "page": "https://pixabay.com/photos/cane-field-the-sugar-cane-of-sugar-4362528/",
-        "author": "joaolimafotografias"
-      }
-    },
-    {
       "id": "a256550742d83a3538",
       "title_original": "Las exportaciones equinas crecieron 14% interanualmente en los primeros 9 meses del año - Argentina.gob.ar",
       "title_pt": "As exportações equinas cresceram 14% homólogamente nos primeiros 9 meses do ano. - Argentina.gob.ar",
@@ -5902,7 +5906,7 @@
       "source": "Argentina.gob.ar",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUFZSLXljSEthcDhJa3lGMWdCWHIyVXdkbTRDTUJwcVNBTXVkai12Q09kc0tXZzRKbTFXSERDSGhkWmw0d2QzcUEzMWJ6WUNBeE96ZDd6R3FuSmN4TjR1ZXNjNHFPRi1HbnJ3RC0yZ1MybGF0bDB5c3pFNTFaNnFVS3dwRW5tcUJFeEFkY01sRTNXbUFGRFJwa2o4c3FFZTZSQnpBT094cnphUl9ESE5mWlE3TmY3SF9IdU9VX2g5R3dWUQ?oc=5",
       "published_at": "2026-11-05T08:00:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Argentina"
       ],
@@ -5932,7 +5936,7 @@
       "source": "Argentina.gob.ar",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPM0ZpbWNlX3lGNW04d242R01LdmNpOURWci1zaThZQ3M2VFUybzZZa2lUeFhZeTVsOHdGeHBKRjZpVEFHaU1zZ0xteWZDdzBKejU4blRkcF81MnpNUjZJaFo3RkF4WFZPNDM5c3p5NFdJdzJaNEJNRE5lcFNCT0ZiSjhzYUptb1NsNFNmUGlFcnhDeWFNRDRzd1BTRTlycXRoV2NGVmFlYmxnWDRRVGx0UzdpS21QMEwydkVzUkFnVFlQQQ?oc=5",
       "published_at": "2026-11-02T08:00:00+00:00",
-      "collected_at": "2026-11-27T10:27:21.568908+00:00",
+      "collected_at": "2026-11-27T10:47:58.014842+00:00",
       "regions": [
         "Argentina"
       ],
