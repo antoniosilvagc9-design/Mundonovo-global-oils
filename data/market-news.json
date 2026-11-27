@@ -15,9 +15,10 @@
       "published_at": "2026-11-26T20:14:19+00:00",
       "collected_at": "2026-11-27T01:49:24.153779+00:00",
       "regions": [
+        "Brasil",
         "Global"
       ],
-      "category": "Câmbio",
+      "category": "Economia Brasileira",
       "commodities": [],
       "impact": "Baixo",
       "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
@@ -823,7 +824,7 @@
       "regions": [
         "Brasil"
       ],
-      "category": "Câmbio",
+      "category": "Economia Brasileira",
       "commodities": [],
       "impact": "Baixo",
       "impact_reason": "Monitoramento informativo; impacto econômico não confirmado",
