@@ -8,6 +8,9 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/"data"/"market-news.json"
 NOW=dt.datetime.now(dt.timezone.utc)
 TOPICS=[
+ ("Economia Brasileira","(Fazenda OR Copom OR Selic OR IPCA OR PIB OR risco fiscal OR dívida pública OR dólar) (site:agenciabrasil.ebc.com.br OR site:gov.br OR site:bcb.gov.br OR site:ibge.gov.br OR site:valor.globo.com)","pt"),
+ ("Economia Brasileira","Brazil (real OR fiscal OR central bank OR finance minister OR inflation OR interest rates) (site:reuters.com OR site:imf.org)","en"),
+ ("Economia Brasileira","(Federal Reserve OR Fed OR juros americanos) (dólar OR real OR Brasil) (site:agenciabrasil.ebc.com.br OR site:valor.globo.com)","pt"),
  ("Óleo de palma","palm oil (MPOB OR Malaysia OR Bursa Malaysia) (site:bernama.com OR site:theedgemalaysia.com OR site:mpob.gov.my)","en"),
  ("Óleo de palma","palm oil (Indonesia OR China OR India) (site:reuters.com OR site:antaranews.com OR site:business-standard.com)","en"),
  ("Soja","soybeans OR soybean oil (site:reuters.com OR site:usda.gov OR site:ams.usda.gov)","en"),
@@ -36,6 +39,7 @@ MED += ["exportação","importação","estoque","safra","preço","juros","câmbi
 LOCALES={"en":"hl=en-US&gl=US&ceid=US:en","es":"hl=es-419&gl=AR&ceid=AR:es-419","pt":"hl=pt-BR&gl=BR&ceid=BR:pt-419"}
 
 MARKET_TERMS={
+ "Economia Brasileira":r"fazenda|copom|selic|ipca|\\bpib\\b|infla[cç][aã]o|fiscal|d[ií]vida p[uú]blica|d[oó]lar|c[aâ]mbio|juros|banco central|balan[cç]a comercial|reforma tribut[aá]ria|finance minister|central bank|inflation|interest rates|brazilian real",
  "Óleo de palma":r"palm oil|oil palm|óleo de palma|azeite de dendê|\bdendê\b|\bcpo\b|\bmpob\b",
  "Soja":r"\bsoja\b|\bsoy\b|soybeans?|soybean oil|aceite de soja|oleaginosas|oilseeds",
  "Biodiesel":r"biodiesel|biofuels?|biocombust[ií]ve(?:l|is)|biocombustibles?|\bb40\b|\bb50\b",
@@ -65,6 +69,7 @@ def parse_date(raw):
  except (TypeError,ValueError,OverflowError):return None
 # Pixabay: busca imagens temáticas; a chave fica apenas no GitHub Actions.
 PIXABAY_TERMS={
+ "Economia Brasileira":"Brazil finance economy currency",
  "Óleo de palma":"oil palm plantation",
  "Soja":"soybean field",
  "Biodiesel":"biofuel agriculture",
@@ -201,7 +206,9 @@ def main():
     "regions":regions or ["Global"],"category":category,"commodities":[category] if category in ("Óleo de palma","Soja","Petróleo") else [],
     "impact":impact,"impact_reason":reason,"context_confirmed":None,"commercial_analysis":None,
     "verification":"Metadados RSS; conteúdo integral não verificado","language":language,"source_type":"Google News RSS (agregador)"}
-   if key not in items or pub>dt.datetime.fromisoformat(items[key]["published_at"]):items[key]=obj
+   if category=="Economia Brasileira":
+    obj["regions"]=list(dict.fromkeys(["Brasil",*regions]))
+   if key not in items or (items[key]["category"]!="Economia Brasileira" and (category=="Economia Brasileira" or pub>dt.datetime.fromisoformat(items[key]["published_at"]))):items[key]=obj
  try:
   archive=json.loads(OUT.read_text(encoding="utf-8")).get("news",[])
  except (OSError,ValueError,TypeError):
@@ -209,7 +216,9 @@ def main():
  cutoff=(NOW-dt.timedelta(days=30)).isoformat()
  for article in archive:
   if article.get("published_at","")>=cutoff and article.get("id"):
-   items.setdefault(article["id"],article)
+   if article["id"] in items and items[article["id"]]["category"]=="Economia Brasileira":
+    items[article["id"]]=dict(article,category="Economia Brasileira",regions=list(dict.fromkeys(["Brasil",*article.get("regions",[])])))
+   else:items.setdefault(article["id"],article)
  ranked=sorted(items.values(),key=lambda article:article["published_at"],reverse=True)
  reserved={}
  groups=[
