@@ -24,6 +24,23 @@ main>header.contracts-hero{box-sizing:border-box;min-height:250px;padding:28px 3
 .workspace-credits{font-size:10px;color:#999;margin-top:12px}.workspace-credits summary{cursor:pointer}.workspace-credits p{line-height:1.6}
 @media(max-width:560px){#workspace{padding:14px}#panel{padding:14px}.workspace-card-grid{grid-template-columns:1fr;gap:12px}.workspace-card-image{height:155px}#workspace .workspace-card{min-height:240px}}
 @media(prefers-reduced-motion:reduce){#workspace .workspace-card,.workspace-card-image img{transition:none;transform:none!important}}
+</style><style id="contracts-full-width">
+main{width:100%;max-width:none;margin:0 auto;padding:clamp(16px,1.8vw,32px)}
+main>header.contracts-hero{min-height:clamp(220px,19vw,340px);padding:clamp(24px,3vw,52px);background-position:center 54%}
+.contracts-hero>h1{font-size:clamp(28px,3.2vw,52px)}
+#login,#mfa{max-width:620px;margin:0 auto 24px}
+#panel{width:100%;min-width:0;padding:clamp(16px,1.6vw,28px)}
+#workspace{padding:clamp(16px,1.5vw,26px);min-width:0}
+.workspace-card-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.25vw,24px)}
+#workspace .workspace-card{min-height:clamp(285px,21vw,410px)}
+.workspace-card-image{height:clamp(155px,12.5vw,245px)}
+.workspace-card-body{padding:6px clamp(14px,1.2vw,22px) 20px;gap:9px}
+.workspace-card-title{font-size:clamp(16px,1.35vw,23px)}
+.workspace-card-description{font-size:clamp(13px,1vw,16px)}
+.workspace-card-kicker,.workspace-card-action{font-size:12px}
+#workspaceContent{min-width:0;max-width:100%}
+@media(max-width:1100px){.workspace-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.workspace-card-image{height:clamp(160px,21vw,240px)}}
+@media(max-width:560px){main{padding:12px}main>header.contracts-hero{padding:22px 18px;min-height:210px}#panel,#workspace{padding:14px}.workspace-card-grid{grid-template-columns:1fr}.workspace-card-image{height:180px}#workspace .workspace-card{min-height:260px}.workspace-card-title{font-size:18px}}
 </style></head><body><main><header class="contracts-hero"><a href="./">← CENTRAL DE INTELIGÊNCIA</a><p class="kicker">09 / CONTRATOS</p><h1>CENTRAL DE CONTRATOS</h1><p class="muted">Mundo Novo Trade · Ambiente de homologação</p></header>
 <section id="login"><h2>Acesso autorizado</h2><p class="muted">Entre com seu usuário e senha. A segunda etapa exige o Google Authenticator já cadastrado.</p><form id="loginForm"><label for="user">Usuário</label><input id="user" autocomplete="username" required maxlength="254"><label for="password">Senha</label><input id="password" type="password" autocomplete="current-password" required maxlength="1024"><button type="submit">ACESSAR</button></form></section>
 <section id="mfa" hidden><h2>Verificação em duas etapas</h2><form id="mfaForm"><label for="code">Código de seis dígitos</label><input id="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required><button type="submit">VALIDAR ACESSO</button></form><button class="secondary" id="cancel">Cancelar</button></section>
