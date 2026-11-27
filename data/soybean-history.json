@@ -6,23 +6,19 @@
   "instrument": "Futuro contínuo de soja (vencimento pode mudar por rolagem)",
   "price_type": "Fechamento diário indicativo; não settlement oficial",
   "unit": "centavos de USD/bushel",
-  "updated_at_utc": "2026-11-27T00:02:30.067403+00:00",
+  "updated_at_utc": "2026-11-27T19:12:08.097907+00:00",
   "latest": {
-    "date": "2026-11-25",
-    "value": 1244.0
+    "date": "2026-11-27",
+    "value": 1266.25
   },
   "baseline_30d": {
     "date": "2026-10-28",
     "value": 1224.5
   },
   "target_30d": "2026-10-28",
-  "change_30d_absolute": 19.5,
-  "change_30d_percent": 1.5925,
+  "change_30d_absolute": 41.75,
+  "change_30d_percent": 3.4096,
   "last_three": [
-    {
-      "date": "2026-11-23",
-      "value": 1228.75
-    },
     {
       "date": "2026-11-24",
       "value": 1234.0
@@ -30,16 +26,13 @@
     {
       "date": "2026-11-25",
       "value": 1244.0
+    },
+    {
+      "date": "2026-11-27",
+      "value": 1266.25
     }
   ],
   "converted_last_three": [
-    {
-      "date": "2026-11-23",
-      "value": 1228.75,
-      "brl_per_60kg_bag": 161.7448,
-      "ptax_date": "2026-11-23",
-      "ptax_brl_usd": 5.9708
-    },
     {
       "date": "2026-11-24",
       "value": 1234.0,
@@ -53,6 +46,13 @@
       "brl_per_60kg_bag": 161.3305,
       "ptax_date": "2026-11-25",
       "ptax_brl_usd": 5.8825
+    },
+    {
+      "date": "2026-11-27",
+      "value": 1266.25,
+      "brl_per_60kg_bag": 154.7386,
+      "ptax_date": "2026-11-27",
+      "ptax_brl_usd": 5.543
     }
   ],
   "converted_baseline_30d": {
@@ -63,12 +63,12 @@
     "ptax_brl_usd": 5.342
   },
   "converted_latest": {
-    "date": "2026-11-25",
-    "value": 1244.0,
-    "brl_per_60kg_bag": 161.3305,
-    "ptax_date": "2026-11-25",
-    "ptax_brl_usd": 5.8825
+    "date": "2026-11-27",
+    "value": 1266.25,
+    "brl_per_60kg_bag": 154.7386,
+    "ptax_date": "2026-11-27",
+    "ptax_brl_usd": 5.543
   },
-  "average_last_three_brl_per_60kg_bag": 160.8078,
+  "average_last_three_brl_per_60kg_bag": 158.4724,
   "conversion_method": "CBOT US¢/bushel / 100 × (60 / 27.2155422) × PTAX venda BRL/USD na data ou último pregão anterior (até 5 dias)"
 }
