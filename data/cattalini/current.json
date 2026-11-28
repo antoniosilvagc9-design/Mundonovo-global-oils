@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T18:04:19.983223-03:00",
+  "updated_at": "2026-11-28T00:15:27.603681-03:00",
   "source": "http://www.unisolution.com.br/Clientes/Cattalini/CliCattaLineUp.asp",
   "rows": [
     {
@@ -661,7 +661,7 @@
       "Produto": "OLEO DE SOJA BRUTO DEGOMA",
       "Quantidade": 30830000,
       "Unidade": "KG",
-      "Status": "ETA / Previsão",
+      "Status": "NOR",
       "Observações": "Calado de saída 10,25m",
       "Tipo Oper.": "Exportação",
       "Tipo de Operação": "EXPORTAÇÃO",
