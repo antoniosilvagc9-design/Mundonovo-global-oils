@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-28T00:15:27.603681-03:00",
+  "updated_at": "2026-11-28T09:52:43.909377-03:00",
   "source": "http://www.unisolution.com.br/Clientes/Cattalini/CliCattaLineUp.asp",
   "rows": [
     {
@@ -13,7 +13,7 @@
       "Produto": "OLEO DIESEL S10",
       "Quantidade": 6881000,
       "Unidade": "KG",
-      "Status": "",
+      "Status": "Atracação",
       "Observações": "",
       "Tipo Oper.": "CBD",
       "Tipo de Operação": "CABOTAGEM",
@@ -31,7 +31,7 @@
       "Produto": "OLEO DIESEL S10",
       "Quantidade": 15507000,
       "Unidade": "LT",
-      "Status": "",
+      "Status": "Atracação",
       "Observações": "",
       "Tipo Oper.": "CBD",
       "Tipo de Operação": "CABOTAGEM",
@@ -49,7 +49,7 @@
       "Produto": "OLEO DIESEL S10",
       "Quantidade": 25000000,
       "Unidade": "KG",
-      "Status": "",
+      "Status": "Atracação",
       "Observações": "",
       "Tipo Oper.": "Importacao",
       "Tipo de Operação": "IMPORTAÇÃO",
@@ -67,7 +67,7 @@
       "Produto": "TBN",
       "Quantidade": 1,
       "Unidade": "LT",
-      "Status": "",
+      "Status": "Atracação",
       "Observações": "",
       "Tipo Oper.": "CBD",
       "Tipo de Operação": "CABOTAGEM",
