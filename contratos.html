@@ -65,6 +65,32 @@ main>header.contracts-hero{height:154px;min-height:154px;box-sizing:border-box;p
 .module-empty{border-left:3px solid #d4af37;padding:12px;color:#b8bcb5;background:#121411}
 #workspaceContent th{color:#d4af37;white-space:nowrap}#workspaceContent td button{margin:0;padding:8px 12px;font-size:12px}
 @media(max-width:560px){.module-form{grid-template-columns:1fr}.module-bar{grid-template-columns:57px minmax(0,1fr) 90px;gap:6px}.module-box{padding:12px}}
+</style><style id="archive-intelligence-v3">
+.archive-charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0}
+.archive-chart{min-width:0;margin:0;padding:18px;background:#0c0e0d;border:1px solid #65542c;border-radius:12px}
+.archive-chart h3{color:#b6ff00;font-size:16px;margin:0 0 5px}
+.archive-chart small{display:block;margin-bottom:12px}
+.archive-chart:hover{box-shadow:inset 0 0 28px rgba(212,175,55,.13);border-color:#d4af37}
+.archive-bars{display:grid;gap:6px}
+.archive-bar{display:grid!important;grid-template-columns:minmax(74px,1fr) minmax(40px,1.6fr) 42px;align-items:center;gap:9px;width:100%;margin:0!important;padding:7px 6px!important;background:transparent!important;color:#eee!important;font-size:12px!important;text-align:left;border:1px solid transparent!important;min-width:0}
+.archive-bar:hover,.archive-bar[aria-pressed=true]{border-color:#d4af37!important;background:linear-gradient(90deg,#d4af3726,transparent 65%)!important}
+.archive-bar span:first-child{overflow-wrap:anywhere}.archive-bar strong{text-align:right;font-variant-numeric:tabular-nums}
+.archive-bar-track{height:15px;background:#202420;border-radius:4px;overflow:hidden}
+.archive-bar-track i{display:block;height:100%;background:linear-gradient(90deg,#768f28,#b6ff00);border-radius:3px}
+.archive-donut-layout{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.archive-donut{width:150px;height:150px;display:grid;place-items:center;border-radius:50%;flex:none}
+.archive-donut-center{width:108px;height:108px;background:#0c0e0d;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.archive-donut-center strong{font-size:30px;color:#fff}
+.archive-legend{flex:1;min-width:130px}.archive-legend .archive-bar{grid-template-columns:minmax(65px,1fr) 1fr 42px}
+.archive-summary{border-color:#d4af37;box-shadow:inset 0 0 35px #d4af3712;scroll-margin-top:12px}
+.archive-summary h3{color:#b6ff00}
+.archive-summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px;margin:14px 0}
+.archive-field{padding:10px;border:1px solid #38382c;border-radius:8px;background:#0b0d0b;overflow-wrap:anywhere}
+.archive-field small{display:block;margin-bottom:5px;color:#b8bcb5}.archive-field strong{font-size:14px}
+.archive-filter-state{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0;color:#d4af37;font-size:13px}
+.archive-kpis .module-kpi{cursor:default}.archive-kpis button.module-kpi{margin:0;text-align:left;color:#fff;font:inherit;cursor:pointer}.archive-kpis button.module-kpi:hover,.archive-kpis button[aria-pressed=true]{border-color:#d4af37;box-shadow:inset 0 0 24px #d4af3728}
+.archive-notes{font-size:12px;color:#b8bcb5;line-height:1.5}
+@media(max-width:780px){.archive-charts{grid-template-columns:1fr}.archive-chart{padding:14px}}
 </style></head><body><main><header class="contracts-hero"><a href="./">← CENTRAL DE INTELIGÊNCIA</a><p class="kicker">09 / CONTRATOS</p><h1>CENTRAL DE CONTRATOS</h1><p class="muted">Mundo Novo Trade · Ambiente de homologação</p></header>
 <section id="login"><h2>Acesso autorizado</h2><p class="muted">Entre com seu usuário e senha. A segunda etapa exige o Google Authenticator. No primeiro acesso, configure sua chave individual.</p><form id="loginForm"><label for="user">Usuário</label><input id="user" autocomplete="username" required maxlength="254"><label for="password">Senha</label><input id="password" type="password" autocomplete="current-password" required maxlength="1024"><button type="submit">ACESSAR</button></form></section>
 <section id="mfa" hidden><h2>Verificação em duas etapas</h2><p id="mfaPending" hidden>Configuração pendente. Use o código atual da conta Mundo Novo que você adicionou ao Google Authenticator. Se não salvou a chave, solicite uma nova configuração ao administrador.</p><div id="mfaSetup" hidden><p>Primeiro acesso: no Google Authenticator, adicione uma conta usando a opção de inserir chave de configuração. Escolha o tipo baseado no tempo.</p><label for="mfaSecret">Chave de configuração individual</label><input id="mfaSecret" readonly autocomplete="off" spellcheck="false"><p class="muted">Não compartilhe esta chave. Informe abaixo o código de seis dígitos gerado pelo aplicativo.</p></div><form id="mfaForm"><label for="code">Código de seis dígitos</label><input id="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required><button type="submit">VALIDAR ACESSO</button></form><button class="secondary" id="cancel">Cancelar</button></section>
@@ -124,14 +150,55 @@ function pager(target,rows,headers,map,page,setPage){const size=20,total=Math.ma
 function dateLabel(x){if(!x)return '—';const d=new Date(x);return Number.isFinite(d.getTime())?d.toLocaleDateString('pt-BR'):'—'}
 function fileSize(x){const n=Number(x);return Number.isFinite(n)&&n>=0?(n>=1048576?(n/1048576).toLocaleString('pt-BR',{maximumFractionDigits:1})+' MB':Math.round(n/1024)+' KB'):'—'}
 async function memberRole(){const rows=await records('contract_members','select=role&limit=1');return rows[0]?.role||''}
+
+const archiveKinds={contract:'Contrato',amendment:'Aditivo',termination:'Distrato',model:'Modelo',other:'Outro'};
+const archiveProducts=['RBDPKS','RBDPKO','RBDKO','RBDPO','RBDPS','RBDP','PKS','PKO','RPS','PO MB','PO','PS'];
+const archiveNames=['YAS Comercio (Aboissa)','Agromartins','Agrobrasil','Cargill','Celena','Propalma','Taua','Xhara','Brejeiro','Dekel','Cencoprod','Guarani','Durli'];
+function archiveIndex(row){
+ const title=String(row.filename||'').replace(/\.(pdf|docx)$/i,'').replace(/_/g,' ').replace(/\s+/g,' ').trim();
+ const t=norm(title),kind=/\bdistrato\b/.test(t)?'termination':/\baditivo\b/.test(t)?'amendment':row.file_type==='docx'&&(/modelo|rev\s*00|f\.com/.test(t))?'model':/\bcontrato\b/.test(t)?'contract':'other';
+ const number=kind==='model'?'':title.match(/\bn(?:[º°o.]|\s)*\s*(\d{1,8})\b/i)?.[1]||'';
+ const products=archiveProducts.filter(p=>new RegExp('\\b'+p.replace(/ /g,'\\s+')+'\\b','i').test(title));
+ if(/\boleo de palmiste\b/.test(t)&&!products.includes('PKO'))products.push('Óleo de palmiste');
+ const names=archiveNames.filter(n=>norm(title).includes(norm(n)));
+ const volume=title.match(/\b(\d+(?:[.,]\d+)*)\s*(?:tons?|toneladas?|mt)\b/i);
+ const months=['janeiro','fevereiro','marco','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'].filter(m=>new RegExp('\\b'+m+'\\b').test(t));
+ const years=[...new Set(title.match(/\b20\d{2}\b/g)||[])];
+ return {...row,title,kind,number,products,names,volumeText:volume?volume[0]:'',period:months.length?months.map(m=>m==='marco'?'março':m).join(', ')+(years.length?' '+years.join('/'):''):'',year:years.length===1?years[0]:'',cancelled:/\bcancelad[oa]\b/.test(t)};
+}
+function archiveCount(rows,values){const m=new Map();for(const row of rows){for(const value of new Set(values(row))){if(value)m.set(value,(m.get(value)||0)+1)}}return [...m.entries()].sort((a,b)=>b[1]-a[1]||String(a[0]).localeCompare(String(b[0]),'pt-BR'))}
+function archiveBars(target,items,selected,onSelect,maxItems=10){const wrap=block('archive-bars'),max=Math.max(1,...items.map(x=>x[1]));for(const [key,label,n] of items.slice(0,maxItems)){const b=action('',()=>onSelect(key));b.className='archive-bar';b.setAttribute('aria-pressed',String(selected===key));b.title=label+': '+n+' arquivo(s)';const track=block('archive-bar-track'),fill=element('i');fill.style.width=(Math.max(0,n)/Math.max(1,...items.map(x=>x[2]))*100)+'%';track.append(fill);b.append(element('span',label),track,element('strong',num(n)));wrap.append(b)}target.append(wrap);if(!items.length)empty(target,'Nenhum dado disponível para esta seleção.')}
 $('archive').onclick=()=>run(async()=>{
- workspaceReset('ACERVO HISTÓRICO','Carregando acervo privado…');await renew();
+ workspaceReset('ACERVO HISTÓRICO','Carregando inteligência documental…');await renew();
  archiveRows=await records('contract_archive','select=id,filename,file_type,storage_path,file_size,imported_at&order=filename.asc&limit=1000');
- const data=archiveRows,root=rootContent();$('workspaceNotice').textContent='Documentos originais em armazenamento privado. A pesquisa é pelo nome do arquivo.';
- kpis(root,[['ARQUIVOS',num(data.length),'Registros carregados'],['PDF',num(data.filter(x=>x.file_type==='pdf').length),'Documentos históricos'],['WORD',num(data.filter(x=>x.file_type==='docx').length),'Documentos editáveis']]);
- const filters=block('module-filters'),[ql,q]=inputControl('Buscar documento','search','Nome, cliente ou produto no arquivo'),[fl,f]=selectControl('Formato',[['','Todos'],['pdf','PDF'],['docx','Word']]),[sl,sort]=selectControl('Ordenação',[['name','Nome A–Z'],['recent','Importação mais recente']]);filters.append(ql,fl,sl);root.append(filters);const list=block('module-box');root.append(list);let page=0;
- function render(){list.replaceChildren();const found=data.filter(x=>(!f.value||x.file_type===f.value)&&norm(x.filename).includes(norm(q.value.trim()))).sort((a,b)=>sort.value==='recent'?String(b.imported_at).localeCompare(String(a.imported_at)):String(a.filename).localeCompare(String(b.filename),'pt-BR'));list.append(element('h3',found.length+' documento(s) encontrado(s)'));pager(list,found,['Documento','Formato','Tamanho','Importação','Arquivo'],row=>[row.filename,row.file_type.toUpperCase(),fileSize(row.file_size),dateLabel(row.imported_at),action('BAIXAR',()=>run(()=>archiveDownload(row)))],page,p=>{page=p;render()})}
- q.oninput=f.onchange=sort.onchange=()=>{page=0;render()};render();
+ const data=archiveRows.map(archiveIndex),root=rootContent();$('workspaceNotice').textContent='Inteligência documental • clique nos gráficos para cruzar filtros e no documento para consultar seu resumo.';
+ const filters=block('module-filters'),[ql,q]=inputControl('Busca inteligente','search','Número, nome, produto ou arquivo'),[fl,f]=selectControl('Formato',[['','Todos'],['pdf','PDF'],['docx','Word']]),[kl,k]=selectControl('Tipo de documento',[['','Todos'],...Object.entries(archiveKinds)]),[yl,y]=selectControl('Ano citado no nome',[['','Todos'],...[...new Set(data.map(x=>x.year).filter(Boolean))].sort().map(x=>[x,x]),['unknown','Não informado']]),[sl,sort]=selectControl('Ordenar',[['name','Nome A–Z'],['number','Número citado'],['recent','Importação recente']]);
+ filters.append(ql,fl,kl,yl,sl);root.append(filters);
+ const state=block('archive-filter-state'),metrics=block('archive-kpis'),charts=block('archive-charts'),note=block('archive-notes','Os números, produtos, parceiros e períodos indicados são pistas do nome do arquivo, não dados jurídicos validados. A contagem é de arquivos: aditivos, modelos e cópias não equivalem a novos contratos. Valores, volumes consolidados e assinaturas aguardam leitura e conciliação dos documentos.'),detail=box('Resumo do documento'),list=box('Documentos do acervo');
+ detail.classList.add('archive-summary');detail.hidden=true;root.append(state,metrics,charts,note,detail,list);
+ let page=0,chosen=null,product='',partner='',period='';
+ const clearFilters=()=>{q.value=f.value=k.value=y.value=product=partner=period='';page=0;chosen=null;render()};
+ function filtered(skip=''){return data.filter(x=>(skip==='format'||!f.value||x.file_type===f.value)&&(skip==='kind'||!k.value||x.kind===k.value)&&(skip==='year'||!y.value||(y.value==='unknown'?!x.year:x.year===y.value))&&(skip==='product'||!product||(product==='unknown'?!x.products.length:x.products.includes(product)))&&(skip==='partner'||!partner||(partner==='unknown'?!x.names.length:x.names.includes(partner)))&&(skip==='period'||!period||String(x.imported_at||'').slice(0,7)===period)&&(!q.value.trim()||norm([x.title,x.number,...x.names,...x.products,x.period].join(' ')).includes(norm(q.value.trim()))))}
+ function toggle(field,value){if(field==='format')f.value=f.value===value?'':value;else if(field==='kind')k.value=k.value===value?'':value;else if(field==='year')y.value=y.value===value?'':value;else if(field==='product')product=product===value?'':value;else if(field==='partner')partner=partner===value?'':value;else if(field==='period')period=period===value?'':value;page=0;chosen=null;render()}
+ function chart(title,subtitle){const c=block('archive-chart');c.append(element('h3',title),element('small',subtitle));charts.append(c);return c}
+ function renderDetail(row){detail.replaceChildren();detail.hidden=!row;if(!row)return;const header=block('module-pagination');header.append(element('h3',row.number?'Documento · Nº '+row.number:'Resumo do documento'),action('FECHAR',()=>{chosen=null;detail.hidden=true;detail.replaceChildren()}));detail.append(header,element('p',row.title),block('archive-notes','Prévia baseada no nome e nos metadados do arquivo. Confirme os campos no documento original.'));
+ const fields=[['Número citado',row.number||'Não identificado'],['Tipo',archiveKinds[row.kind]],['Nomes citados',row.names.join(' · ')||'Não identificado'],['Produto citado',row.products.join(' · ')||'Não identificado'],['Quantidade citada',row.volumeText||'Não identificada'],['Período citado',row.period||row.year||'Não identificado'],['Indicação de cancelamento',row.cancelled?'Mencionado no nome':'Não verificada'],['Valor / preço','A extrair do documento'],['Data de emissão / assinatura','A verificar'],['Condição de pagamento / entrega','A verificar'],['Formato',row.file_type.toUpperCase()],['Tamanho / importação',fileSize(row.file_size)+' · '+dateLabel(row.imported_at)]];
+ const g=block('archive-summary-grid');for(const [label,value] of fields){const cell=block('archive-field');cell.append(element('small',label),element('strong',value));g.append(cell)}detail.append(g,action('BAIXAR DOCUMENTO ORIGINAL',()=>run(()=>archiveDownload(row)),false));}
+ function render(){const rows=filtered();state.replaceChildren(element('span',rows.length+' de '+data.length+' arquivos · '+[f.value&&f.value.toUpperCase(),k.value&&archiveKinds[k.value],y.value&&(y.value==='unknown'?'Ano não informado':y.value),product&&(product==='unknown'?'Produto não identificado':product),partner&&(partner==='unknown'?'Nome não identificado':partner),period&&'Importação '+period].filter(Boolean).join(' · ')),action('LIMPAR FILTROS',clearFilters));metrics.replaceChildren();const g=block('module-grid');metrics.append(g);
+ function metric(label,value,description,field,key){const c=field?action('',()=>toggle(field,key)):block('module-kpi');c.className='module-kpi';if(field)c.setAttribute('aria-pressed',String((field==='format'?f.value:k.value)===key));c.append(element('small',label),element('strong',num(value)),element('small',description));g.append(c)}
+ metric('ARQUIVOS',rows.length,'Seleção atual');metric('CONTRATOS · ARQUIVOS',rows.filter(x=>x.kind==='contract').length,'Não deduplicados','kind','contract');metric('ADITIVOS',rows.filter(x=>x.kind==='amendment').length,'Arquivos','kind','amendment');metric('PDF',rows.filter(x=>x.file_type==='pdf').length,'Clique para filtrar','format','pdf');metric('WORD',rows.filter(x=>x.file_type==='docx').length,'Clique para filtrar','format','docx');metric('NÚMEROS IDENTIFICADOS',rows.filter(x=>x.number).length,'Extraídos do nome');
+ charts.replaceChildren();
+ const formats=filtered('format'),pdf=formats.filter(x=>x.file_type==='pdf').length,word=formats.filter(x=>x.file_type==='docx').length,total=pdf+word,degree=total?pdf/total*360:0;
+ const donutChart=chart('01 · Distribuição de formatos','PDF × Word · clique na legenda'),layout=block('archive-donut-layout'),donut=block('archive-donut'),center=block('archive-donut-center'),legend=block('archive-legend');donut.style.background=total?'conic-gradient(#b6ff00 0deg '+degree+'deg,#d4af37 '+degree+'deg 360deg)':'#292c28';center.append(element('strong',num(total)),element('small','Arquivos'));donut.append(center);archiveBars(legend,[['pdf','PDF',pdf],['docx','WORD',word]],f.value,v=>toggle('format',v));layout.append(donut,legend);donutChart.append(layout);
+ const kinds=archiveCount(filtered('kind'),x=>[x.kind]);archiveBars(chart('02 · Natureza documental','Contratos, aditivos, distratos e modelos'),kinds.map(([key,n])=>[key,archiveKinds[key],n]),k.value,v=>toggle('kind',v));
+ const names=archiveCount(filtered('partner'),x=>x.names.length?x.names:['unknown']);archiveBars(chart('03 · Nomes mais citados','Ranking de menções nos nomes dos arquivos · não define cliente ou fornecedor'),names.map(([key,n])=>[key,key==='unknown'?'Não identificado':key,n]),partner,v=>toggle('partner',v),12);
+ const products=archiveCount(filtered('product'),x=>x.products.length?x.products:['unknown']);archiveBars(chart('04 · Produtos citados','Siglas e nomes presentes nos arquivos · não é volume contratado'),products.map(([key,n])=>[key,key==='unknown'?'Não identificado':key,n]),product,v=>toggle('product',v),12);
+ const years=archiveCount(filtered('year'),x=>[x.year||'unknown']);archiveBars(chart('05 · Anos mencionados','Ano escrito no nome · não é data de emissão'),years.map(([key,n])=>[key,key==='unknown'?'Não informado':key,n]),y.value,v=>toggle('year',v));
+ const imports=archiveCount(filtered('period'),x=>[String(x.imported_at||'').slice(0,7)]).sort((a,b)=>b[0].localeCompare(a[0]));archiveBars(chart('06 · Histórico de importação','Mês de entrada no acervo privado'),imports.map(([key,n])=>[key,key,n]),period,v=>toggle('period',v),12);
+ const sorted=[...rows].sort((a,b)=>sort.value==='recent'?String(b.imported_at).localeCompare(String(a.imported_at)):sort.value==='number'?(Number(a.number||Infinity)-Number(b.number||Infinity)||a.title.localeCompare(b.title,'pt-BR')):a.title.localeCompare(b.title,'pt-BR'));
+ list.replaceChildren(element('h3','Documentos · '+sorted.length));pager(list,sorted,['Nº citado','Documento','Nomes citados','Produto citado','Tipo','Resumo'],x=>[x.number||'—',x.title,x.names.join(' · ')||'—',x.products.join(' · ')||'—',archiveKinds[x.kind],action('VER RESUMO',()=>{chosen=x.id;renderDetail(x);detail.scrollIntoView({block:'start',behavior:'smooth'})})],page,i=>{page=i;render()});renderDetail(rows.find(x=>x.id===chosen));
+ }
+ q.oninput=f.onchange=k.onchange=y.onchange=sort.onchange=()=>{page=0;chosen=null;render()};render();
 });
 $('dashboard').onclick=()=>run(async()=>{
  workspaceReset('DASHBOARD MENSAL','Consultando vendas estruturadas…');await renew();
